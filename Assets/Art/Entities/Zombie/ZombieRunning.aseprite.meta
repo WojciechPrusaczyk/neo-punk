@@ -1,0 +1,447 @@
+fileFormatVersion: 2
+guid: 2b871dfeb2b7c7541bd553784b73e718
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ZombieRunning_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.107142866}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 66
+      width: 24
+      height: 56
+    spriteID: cf13b0cbf52215d48ae020fc2a880b20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 40, y: 66}
+  - name: ZombieRunning_Frame_1
+    originalName: 
+    pivot: {x: 0.39285716, y: -0.10909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 28
+      height: 55
+    spriteID: f91a20fe55448b84cb9039516e82c31d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 68}
+  - name: ZombieRunning_Frame_2
+    originalName: 
+    pivot: {x: 0.39285716, y: -0.08928572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 28
+      height: 56
+    spriteID: 65fe402188052554897cae3f76ed9dd9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ZombieRunning_Frame_3
+    originalName: 
+    pivot: {x: 0.32, y: -0.12962963}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 4
+      width: 25
+      height: 54
+    spriteID: cea363eb32859cb44b34915369f72b9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 40, y: 4}
+  - name: ZombieRunning_Frame_4
+    originalName: 
+    pivot: {x: 0.4074074, y: -0.11320755}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 131
+      width: 27
+      height: 53
+    spriteID: 55ed17e6db53994469282408d8cd35d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 131}
+  - name: ZombieRunning_Frame_5
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.11320755}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 192
+      width: 26
+      height: 53
+    spriteID: a18eace1ef710ef4f95446ee692b9076
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 192}
+  - name: ZombieRunning_Frame_6
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 193
+      width: 23
+      height: 54
+    spriteID: af47b77733f8713438ad51adb4b2a706
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 40, y: 193}
+  - name: ZombieRunning_Frame_7
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.10909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 4
+      width: 21
+      height: 55
+    spriteID: 922421ac260a9b046a946f2367b8fcca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 4}
+  - name: ZombieRunning_Frame_8
+    originalName: 
+    pivot: {x: 0.40909094, y: -0.10909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 4
+      width: 22
+      height: 55
+    spriteID: 44971dff6d453394aaf2aade2baa9e4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 4}
+  - name: ZombieRunning_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.10909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 67
+      width: 22
+      height: 55
+    spriteID: c412f5396fd361c4baa6bd4b168f66f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 67}
+  - name: ZombieRunning_Frame_10
+    originalName: 
+    pivot: {x: 0.47826087, y: -0.10909091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 40
+      y: 130
+      width: 23
+      height: 55
+    spriteID: e1a00d1c10dd370489ea22874bf417bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 40, y: 130}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1454091213
+    name: ZombieRunning
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ZombieRunning_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 6
+        width: 24
+        height: 56
+      spriteId: cf13b0cbf52215d48ae020fc2a880b20
+    - name: ZombieRunning_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 21
+        y: 6
+        width: 28
+        height: 55
+      spriteId: f91a20fe55448b84cb9039516e82c31d
+    - name: ZombieRunning_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 21
+        y: 5
+        width: 28
+        height: 56
+      spriteId: 65fe402188052554897cae3f76ed9dd9
+    - name: ZombieRunning_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 7
+        width: 25
+        height: 54
+      spriteId: cea363eb32859cb44b34915369f72b9d
+    - name: ZombieRunning_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 21
+        y: 6
+        width: 27
+        height: 53
+      spriteId: 55ed17e6db53994469282408d8cd35d4
+    - name: ZombieRunning_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 21
+        y: 6
+        width: 26
+        height: 53
+      spriteId: a18eace1ef710ef4f95446ee692b9076
+    - name: ZombieRunning_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 22
+        y: 6
+        width: 23
+        height: 54
+      spriteId: af47b77733f8713438ad51adb4b2a706
+    - name: ZombieRunning_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 23
+        y: 6
+        width: 21
+        height: 55
+      spriteId: 922421ac260a9b046a946f2367b8fcca
+    - name: ZombieRunning_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 23
+        y: 6
+        width: 22
+        height: 55
+      spriteId: 44971dff6d453394aaf2aade2baa9e4f
+    - name: ZombieRunning_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 21
+        y: 6
+        width: 22
+        height: 55
+      spriteId: c412f5396fd361c4baa6bd4b168f66f5
+    - name: ZombieRunning_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 21
+        y: 6
+        width: 23
+        height: 55
+      spriteId: e1a00d1c10dd370489ea22874bf417bd
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
