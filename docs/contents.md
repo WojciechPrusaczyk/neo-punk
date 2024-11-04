@@ -3,9 +3,13 @@
 ## Scripts
 
 - **System**
-    - [InputManager]()
+    - [InputManager](scripts/System/InputManager.md)
+    - [Tooltips](scripts/System/Tooltips.md)
+    - [LootTable](scripts/System/LootTable.md)
+    - Tooltips
+      - [TooltipsController](scripts/System/Tooltips/TooltipsController.md)
+      - [TooltipsTrigger](scripts/System/Tooltips/TooltipsTrigger.md)
 - **UI**
-    - [Tooltips](scripts/tooltips.md)
 
 ## World
 
