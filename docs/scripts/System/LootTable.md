@@ -12,10 +12,6 @@ Klasa ta zarządza logiką losowego generowania łupów dla obiektu, do którego
 ### Skrypty powiązane i wymagane komponenty
 Klasa `LootTable` wykorzystuje komponent `ScriptableObjectManager`, który powinien być zdefiniowany na scenie pod nazwą `"ScriptableObjectManager"`. Skrypt wymaga również dostępu do zasobów prefabów w katalogu `Resources/Items/Prefabs`, skąd ładuje obiekty do gry.
 
-### Publiczne pola
-
-Brak publicznych pól w klasie `LootTable`. Lista przedmiotów jest ustawiana jako prywatna (`private`) i opatrzona atrybutem `SerializeField` w celu konfiguracji w Unity Inspector.
-
 ### Metody
 
 #### `void DropLoot()`

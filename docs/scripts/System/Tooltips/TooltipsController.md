@@ -7,7 +7,7 @@ Klasa `TooltipsController` znajduje się w [`Assets/Code/Scripts/System/Tooltips
 ### Klasa `Tooltip`
 - Klasa `Tooltip` przechowuje dane dla pojedynczej podpowiedzi, umożliwiając konfigurację obrazu oraz tekstu podpowiedzi.
 - **Pola publiczne**:
-    - `Sprite image` - obrazek wyświetlany w podpowiedzi (może być `null`).
+    - `Sprite image` - obrazek wyświetlany w podpowiedzi.
     - `string text` - tekst podpowiedzi, wyświetlany pod obrazem; obsługuje różne formatowanie poprzez `TextArea`.
     - `bool wasTooltipShown` - określa, czy dana podpowiedź została już wyświetlona. Po pierwszym wyświetleniu jest ustawiane na `true`.
 

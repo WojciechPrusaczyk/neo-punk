@@ -1,4 +1,4 @@
-﻿[Go back to contents](../../contents.md)
+﻿[Go back to contents](../../../contents.md)
 
 ### TooltipsController
 **Lokalizacja:** [`Assets/Scripts/System/Tooltips/TooltipsController.cs`](../../../Assets/Code/Scripts/System/Tooltips/TooltipsController.cs)
@@ -6,7 +6,7 @@
 Klasa `TooltipsController` to komponent interfejsu użytkownika, który zarządza wyświetlaniem podpowiedzi w grze. Klasa zawiera dodatkową wbudowaną klasę `Tooltip`, służącą do serializacji danych podpowiedzi.
 
 ### Konfiguracja Canvasu dla Podpowiedzi
-Główny obiekt `TooltipsController` powinien znajdować się w scenie pod adresem `Scene/UserInterface/Tooltips`. Ten obiekt powinien być typu `Canvas` i zawierać przygotowany układ UI do wyświetlania danych podpowiedzi.
+Główny obiekt `TooltipsController` powinien znajdować się w scenie pod obiektem UI `UserInterface/Tooltips`. Ten obiekt powinien być typu `Canvas` i zawierać przygotowany układ UI do wyświetlania danych podpowiedzi.
 
 ### Struktura Danych Podpowiedzi
 `TooltipsController` zarządza listą podpowiedzi, gdzie każda z nich zawiera tekstowy opis oraz opcjonalny obrazek. Aby dodać nową podpowiedź, utwórz opis oraz przypisz odpowiedni obrazek.
