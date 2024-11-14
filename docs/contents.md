@@ -5,6 +5,8 @@
 - **Entities**
     - [EntityStatus](scripts/Entities/EntityStatus.md)
     - [PlayerDetector](scripts/Entities/PlayerDetector.md)
+    - Dragonfly
+        - [DragonflyBehaviour](scripts/Entities/Dragonfly/DragonflyBehaviour.md)
     - Player
         - [FloorDetector](scripts/Entities/Player/FloorDetector.md)
         - [HealthBarController](scripts/Entities/Player/HealthBarController.md)
@@ -16,6 +18,11 @@
     - [ItemData](scripts/Items/ItemData.md)
     - [ItemObject](scripts/Items/ItemObject.md)
     - [ScriptableObjectManager](scripts/Items/ScriptableObjectManager.md)
+- **Objects**
+    - [AirVentBehaviour](scripts/Objects/AirVentBehaviour.md)
+    - [BulletBehaviour](scripts/Objects/BulletBehaviour.md)
+    - [ComputerController](scripts/Objects/ComputerController.md)
+    - [DoorBehaviour](scripts/Objects/DoorBehaviour.md)
 - **System**
     - [InputManager](scripts/System/InputManager.md)
     - [LootTable](scripts/System/LootTable.md)
