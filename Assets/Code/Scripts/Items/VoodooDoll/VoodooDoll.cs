@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "VoodooDoll", menuName = "NeoPunk/Items/VoodooDoll", order = 2)]
 public class VoodooDoll : ItemData
 {
+    public float defenceIncreasePercentage = 0.4f;
+    public float effectDuration = 10.0f;
     private void OnEnable()
     {
         currentCooldown = 0;
@@ -15,7 +17,7 @@ public class VoodooDoll : ItemData
     {
         currentCooldown = 0;
         VoodooDollAbilities abilities = new VoodooDollAbilities();
-        abilities.Initialize(0.4f, 10f);
+        abilities.Initialize(defenceIncreasePercentage, effectDuration);
         itemAbility = abilities;
 
         itemName = "Voodoo Doll";

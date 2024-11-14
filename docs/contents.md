@@ -2,6 +2,8 @@
 
 ## Scripts
 
+---
+
 - **Entities**
     - [EntityStatus](scripts/Entities/EntityStatus.md)
     - [PlayerDetector](scripts/Entities/PlayerDetector.md)
@@ -14,15 +16,28 @@
         - [ItemsHandler](scripts/Entities/Player/ItemsHandler.md)
         - [Player](scripts/Entities/Player/Player.md)
         - [PlayerInventory](scripts/Entities/Player/PlayerInventory.md)
+---
 - **Items**
     - [ItemData](scripts/Items/ItemData.md)
     - [ItemObject](scripts/Items/ItemObject.md)
     - [ScriptableObjectManager](scripts/Items/ScriptableObjectManager.md)
+    - DemonBell
+        - [DemonBell](scripts/Items/DemonBell/DemonBell.md)
+        - [DemonBellAbilities](scripts/Items/DemonBell/DemonBellAbilities.md)
+    - HandsWiring
+        - [ExplosionCollisionHandler](scripts/Items/HandsWiring/ExplosionCollisionHandler.md)
+        - [HandsWiring](scripts/Items/HandsWiring/HandsWiring.md)
+        - [HandsWiringAbilities](scripts/Items/HandsWiring/HandsWiringAbilities.md)
+    - VoodooDoll
+        - [VoodooDoll](scripts/Items/VoodooDoll/VoodooDoll.md)
+        - [VoodooDollAbilities](scripts/Items/VoodooDoll/VoodooDollAbilities.md)
+---
 - **Objects**
     - [AirVentBehaviour](scripts/Objects/AirVentBehaviour.md)
     - [BulletBehaviour](scripts/Objects/BulletBehaviour.md)
     - [ComputerController](scripts/Objects/ComputerController.md)
     - [DoorBehaviour](scripts/Objects/DoorBehaviour.md)
+---
 - **System**
     - [InputManager](scripts/System/InputManager.md)
     - [LootTable](scripts/System/LootTable.md)
@@ -30,8 +45,10 @@
         - [TooltipsController](scripts/System/Tooltips/TooltipsController.md)
         - [TooltipsTrigger](scripts/System/Tooltips/TooltipsTrigger.md)
         - [Tooltips](scripts/System/Tooltips/Tooltips.md)
+---
 - **UserInterface**
     - [PauseMenuBehaviour](scripts/UserInterface/PauseMenuBehaviour.md)
+---
 
 ## World
 
