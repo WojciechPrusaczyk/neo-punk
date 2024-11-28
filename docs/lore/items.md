@@ -1,4 +1,4 @@
-﻿[Go back to contents](../contents.md)
+﻿[Go back to code contents](../codeContents.md)
 ### VoodooDoll / Lalka woodoo
 **Użycie:** zwiększa obrażenia o 40% na 10s.  
 **Zdolność pasywna:** Lalka zbiera na sobie igły, max 3.   

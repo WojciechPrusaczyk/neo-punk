@@ -1,4 +1,4 @@
-﻿[Go back to contents](../../../contents.md)
+﻿[Go back to code contents](../../../codeContents.md)
 
 ### TooltipsController
 **Lokalizacja:** [`Assets/Scripts/System/Tooltips/TooltipsController.cs`](../../../Assets/Code/Scripts/System/Tooltips/TooltipsController.cs)

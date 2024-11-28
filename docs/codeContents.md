@@ -49,8 +49,3 @@
 - **UserInterface**
     - [PauseMenuBehaviour](scripts/UserInterface/PauseMenuBehaviour.md)
 ---
-
-## World
-
-- [Lore](world/lore.md)
-- [Items](world/items.md)

@@ -1,4 +1,4 @@
-﻿[Go back to contents](../../../contents.md)
+﻿[Go back to code contents](../../../codeContents.md)
 
 Klasa `TooltipsController` znajduje się w [`Assets/Code/Scripts/System/Tooltips/TooltipsController.cs`](../../../../Assets/Code/Scripts/System/Tooltips/TooltipsController.cs)
 

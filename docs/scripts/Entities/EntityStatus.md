@@ -1,4 +1,4 @@
-﻿[Go back to contents](../../contents.md)
+﻿[Go back to code contents](../../codeContents.md)
 
 ### EntityStatus
 

@@ -5,6 +5,12 @@ Gra napisana w środowisku __Unity__, korzystając z __C#__, oraz silnika __2D__
 __Przygodowa Gra Akcji__ osadzona w nieco pomieszanym świecie z Futurystycznym klimatem pomieszanym z krwawymi bestiami i widmem apokalipsy.
 Gra będzie charakteryzować się nieszablonowym podejściem do gameplayu, jednak z kilkoma utartymi mechanikami.
 
+## [Dokumentacja kodu](docs/codeContents.md)
+Opis poszczególnych klas, ich metod i pól.
+
+## [Historia](docs/loreContents.md)
+Historia świata przedstawionego, główne postacie, linia fabularna.
+
 ## Gameplay:
 Gracz dzierży jedną główną broń, jednak może zmieniać jej typ obrażeń w zależności od buildu i preferencji (**Flame**, **Storm**, **Water**, **Air**, **Bloody**, **Normal**).  
 Dodatkowo będzie kładzony nacisk na zbieranie losowych przedmiotów z pasywnymi i aktywnymi umiejętnościami definiującymi styl gry.  
@@ -52,5 +58,3 @@ W grze będzie zawarta mechanika **"gnojenia gracza"**:
 
 Przeciwnicy będą rozstawieni po mapie ręcznie, ale także będą się spawnować podczas "inwazji".  
 Czyli opcjonalnej areny gdzie gracz walczy z falami przciwników. Będą one ułożone tak by były rzadkie(ale nie za bardzo) i dropiły przedmnioty po pokonaniu inwazji.
-
-## [Dokumentacja](docs/contents.md)
