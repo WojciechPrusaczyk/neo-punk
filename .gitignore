@@ -35,7 +35,6 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.sln
 *.suo
 *.tmp
 *.user
@@ -74,3 +73,17 @@ crashlytics-build.properties
 
 # Build file
 Build.zip
+
+# Visual studio files
+# 2008
+*.suo
+*.user
+*.ncb
+Debug/
+Release/
+CodeAnalyst/
+
+# 2010
+ipch/
+*.sdf
+*.opensdf
