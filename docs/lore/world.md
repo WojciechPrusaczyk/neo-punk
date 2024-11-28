@@ -31,7 +31,7 @@ Potwory te polują na ludzi, niszcząc jednocześnie ciało i duszę z pomocą s
 Wspomniane elektroniczne elementy zostaną odkryte w trakcie historii.
 
 Często osoby, które przeżyły atak stworów, stają się pustą powłoką bez świadomości, które potrafi się zachowywać w zróżnicowany sposób.
-Niektórzy atakują innych pod wpływem przypływów agresji,
+Niektórzy atakują innych ludzi pod wpływem przypływów agresji,
 inni natomiast po prostu włóczą się po ciężko dostępnych zakamarkach miasta szukając jakiegokolwiek pożywienia w postaci szczurów, czy śmieci.
 
 # Technologia uśmiercenia ciała
