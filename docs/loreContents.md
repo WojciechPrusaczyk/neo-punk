@@ -4,3 +4,4 @@
 - [Świat przedstawiony](lore/world.md)
 - [Główny bohater](lore/mainCharacter.md)
 - [Główny linia fabularna](lore/mainPlotLine.md)
+- [Przeciwnicy](lore/enemies.md)
