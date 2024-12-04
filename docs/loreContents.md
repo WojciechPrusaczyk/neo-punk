@@ -1,4 +1,4 @@
-﻿[Go back to Readme](../readme.md)
+﻿[Go back to Readme](https://github.com/WojciechPrusaczyk/neo-punk/tree/main?tab=readme-ov-file#historia)
 
 ## Lore
 - [Świat przedstawiony](lore/world.md)
