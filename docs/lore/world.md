@@ -8,7 +8,7 @@ Całość gry odbywa się w jednym mieście.
 
 ### Przymusowa eutanazja
 Przez ludzkie działania, oraz niską demografię ilość ludzi drastycznie się skurczyła,  
-a żeby oszczędzić ograniczone zasoby starsi ludzie po osiągnięciu ustalonego przez rząd wieku około 50 lat są przymusowo uśmiercani.  
+a żeby oszczędzić ograniczone zasoby starsi ludzie po osiągnięciu ustalonego przez rząd wieku około 60 lat są przymusowo uśmiercani.  
 Dodatkowo przymuszonej eutanazji są poddawane dzieci rodzin z wyższych poziomów miasta, które urodziły się niechciane, z defektami, czy uznane za nieidealne.
 
 ### Miasta
@@ -55,32 +55,20 @@ Jednakże stopniowo odzyskuje zaufanie pomagając ludziom podnieść się z wspo
 Pomaga tym którzy stracili części ciała, uzupełniając ubytki częściami mechanicznymi i elektronicznymi,  
 w zamian żądając pracy na rzecz organizacji.
 
-# Shiverns
+### Technologia uśmiercenia ciała
+Technologia ta polega procesie eutanazji, który uśmierca ciało, ale nie dusze, która jest umieszczana w specjalnym miejscu, które ma służyć stworzeniu zbiorowej świadomości.
 
-**Shiverns** - nazwa inspirowana słowem "Shivers", czyli dreszcze.
-Nazwa ta odnosi się do wywołujących dreszcze dźwięków które wydają nadchodzące stwory.  
-Dźwięki wywołują uderzając twardymi częsciami ciała o podłoże, lub cicho pomrukując.
-
-5 lat po przygarnięciu chłopaka do yakuzy zaczynają się stopniowo pojawiać się potwory w ciemnych uliczkach i wąskich zakamarkach.
-Potwory te polują na ludzi, niszcząc jednocześnie ciało i duszę z pomocą słabo widocznych w ciele dziwnych elektronicznych elementów.
-Wspomniane elektroniczne elementy zostaną odkryte w trakcie historii.
-
-Często osoby, które przeżyły atak stworów, stają się pustą powłoką bez świadomości, które potrafi się zachowywać w zróżnicowany sposób.
-Niektórzy atakują innych ludzi pod wpływem przypływów agresji,
-inni natomiast po prostu włóczą się po ciężko dostępnych zakamarkach miasta szukając jakiegokolwiek pożywienia w postaci szczurów, czy śmieci.
-
-# Technologia uśmiercenia ciała
-Technologia ta polega na uśmierceniu ciała, ale nie duszy, która w domyśle ma być umieszczana w specjalnym miejscu, które ma służyć stworzeniu zbiorowej świadomości.
 Jednak ludzie poddawani eutanazji są uśmiercani w taki sposób że ich dusza jest niszczona przez ten system, a przynajmniej tak miało być, gdyż system niedokładnie niszczył dusze.  
-Były one  poddawane niesamowitemu cierpieniu, po czym porzucane jak śmieci.  
-Dusze te same utworzyły pewien rodzaj wspólnej zbiorowej świadomości (posiada ona moc zbliżoną do boskiej) opartej na porzuconych resztkach dusz,  
-które chcą poprzez demony zemścić się na ludzkości, która sprawiła uśmierconym niewyobrażalne cierpienia.  
-Kumulacja demonów następuje na pustkowiu poza miastem, gdzie były wyrzucane resztki dusz i ciał, które zaczęły żyć tam własnym życiem i świadomością.
+Były one  poddawane niesamowitemu cierpieniu, po czym porzucane jak śmieci na wysypiskach poza miastem.  
+Dusze te same utworzyły pewien rodzaj wspólnej zbiorowej świadomości opartej na porzuconych resztkach dusz i odpadów,  
+które łączą się ze sobą tworząc stwory polujące na ludzi.  
 
-Ważnym faktem jest także opracowanie technologii, która w trakcie trwania opowieści była rozwijana.  
-Technologia ta pozwalała na materializowanie duszy w postaci maziowatej niebieskiej substancji, która w domyśle miała być rozpusczona w specjalnym płynie łączącą dusze w zbiorową świadomość.  
-Natomiast porzucone i podnisczone dusze zaczęły się łączyć z krwią i odpadkami porzuconych ludzi na pustkowiu, tworząc w ten sposób własną, krawą zbiorową świadomość.  
-W ten sposób zaczęły powstawać demony.
+**Ważne!**  
+[Dreszcze](./enemies.md) są także są wykorzystywane przez rząd, który często je wyłapuje, by poddać utylizacji łącząc je z tworzoną przez ludzi zbiorową świadomością.
+Łapaniem ich zajmują się wykwalifikowane do tego zadania elitarne jednostki, które działają w cieniu, ukrywając swoje działania.
+Stwory te jednak wciąż są na rękę siłom rządowym, gdyż polując na ludzi wydobywają z nich części ich świadomości wraz z częściami ciał.
+Jednakże dreszcze mają bardzo podobny cel do rządu, czyli zbieranie ludzi, aby zasymilować ich z własną świadomością, tym samym wzmacniając się.
 
-Dusza podczas jej niszczenia jest przeistaczana w czarną maź która ma w sobie zapisane informacje.  
+Dusza po jej zniszczeniu przeistacza się w czarną maź która ma w sobie zapisane informacje.  
 Te informacje są losowymi fragmentami oryginalnej duszy uśmiercanego człowieka.
+Części których nie udało się wyodrębnić jest porzucana wraz z resztkami ciała poza miastem.
