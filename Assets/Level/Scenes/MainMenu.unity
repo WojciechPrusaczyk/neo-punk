@@ -523,6 +523,7 @@ MonoBehaviour:
   musicList:
   - {fileID: 8300000, guid: 9ea0ba94d37e8ab4db21e69e9b622a67, type: 3}
   - {fileID: 8300000, guid: e082466aa820a254791946942d013a9e, type: 3}
+  audioChangeForce: 0.0179
 --- !u!1 &1201617106
 GameObject:
   m_ObjectHideFlags: 0
