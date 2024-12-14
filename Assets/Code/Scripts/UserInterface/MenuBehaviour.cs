@@ -27,11 +27,17 @@ public class MenuBehaviour : MonoBehaviour
         {
             Debug.LogError("Not found animator component in MenuBehaviour.");
         }
+
+        var musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+        musicManager.PlaySong(0);
+        musicManager.QueueSong(1);
     }
 
     public void LoadGame()
     {
         SceneManager.LoadScene("InitialLevel");
+        var musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+        musicManager.PlaySong(1);
     }
 
     public void QuitGame()
