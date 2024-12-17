@@ -74,50 +74,51 @@ public class Player : MonoBehaviour
         swordHitbox = transform.Find("SwordHitbox").gameObject;
         animator = GetComponent<Animator>();
 
-        pauseMenu = GameObject.Find("Pause Menu Interface").GetComponent<PauseMenuBehaviour>();
+        // pauseMenu = GameObject.Find("Pause Menu Interface").GetComponent<PauseMenuBehaviour>();
 
-        elementalIconComponent = GameObject.Find("UserInterface").transform.Find("Main User Interface").transform
-            .Find("Elemental").transform.Find("ElementalIcon").gameObject.GetComponent<Image>();
-        if (elementalIconComponent == null)
-        {
-            Debug.LogError("ElementalIconComponent nie został znaleziony w Start().");
-        }
+        // elementalIconComponent = GameObject.Find("UserInterface").transform.Find("Main User Interface").transform
+        //     .Find("Elemental").transform.Find("ElementalIcon").gameObject.GetComponent<Image>();
+        // if (elementalIconComponent == null)
+        // {
+        //     Debug.LogError("ElementalIconComponent nie został znaleziony w Start().");
+        // }
     }
 
 
     private void Update()
     {
-        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0) && 0 == Mathf.Abs(playerBody.velocity.y);
+        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0) && Mathf.Abs(playerBody.velocity.y) < 0.01f;
 
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
          */
-        if (isGrounded)
-        {
-            lastSafePosition = gameObject.transform.position;
-        }
-        else
-        {
-            if (gameObject.transform.position.y <= playerVoidLevel)
-            {
-                lastSafePosition.y += 2.0f;
-                gameObject.transform.position = lastSafePosition;
-            }
-        }
+        // if (isGrounded)
+        // {
+        //     lastSafePosition = gameObject.transform.position;
+        // }
+        // else
+        // {
+        //     if (gameObject.transform.position.y <= playerVoidLevel)
+        //     {
+        //         lastSafePosition.y += 2.0f;
+        //         playerBody.MovePosition(lastSafePosition);
+        //         playerBody.velocity = Vector2.zero; // Reset prędkości
+        //     }
+        // }
 
         float horizontalInput = Input.GetAxis("Horizontal");
 
         /*
          * Przesyłanie odpowiednich zmiennych do animatora
          */
-        animator.SetFloat("PlayerSpeed", Mathf.Abs(playerBody.velocity.x));
-        animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
-        animator.SetInteger("PlayerAttackState", attackState);
-        animator.SetBool("IsPlayerAttacking", isAttacking);
-        animator.SetBool("IsGrounded", isGrounded);
-        animator.SetBool("IsChargingAttack", isChargingAttack);
-        animator.SetFloat("ChargingTime", keyHoldTime);
-        animator.SetBool("IsBlocking", isBlocking);
+        // animator.SetFloat("PlayerSpeed", Mathf.Abs(playerBody.velocity.x));
+        // animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
+        // animator.SetInteger("PlayerAttackState", attackState);
+        // animator.SetBool("IsPlayerAttacking", isAttacking);
+        // animator.SetBool("IsGrounded", isGrounded);
+        // animator.SetBool("IsChargingAttack", isChargingAttack);
+        // animator.SetFloat("ChargingTime", keyHoldTime);
+        // animator.SetBool("IsBlocking", isBlocking);
 
         /*
          * Blokowanie chodzenia do tyłu, gdy gracz atakuje, lub blokuje
@@ -163,8 +164,8 @@ public class Player : MonoBehaviour
         /*
          * skakanie
          */
-        if ((Input.GetKeyDown(InputManager.PadButtonJump) || Input.GetButtonDown(InputManager.PadButtonJump)) &&
-            !isAttacking && !isBlocking)
+        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetButtonDown(InputManager.PadButtonJump)) &&
+            !isAttacking && !isBlocking && isGrounded)
         {
             Jump();
         }
@@ -189,15 +190,15 @@ public class Player : MonoBehaviour
         /*
          * Atak, oraz charge attack
          */
-        if (!playerEq.isEquipmentShown && Input.GetKey(InputManager.AttackKey) && !isAttacking && !isBlocking &&
-            !pauseMenu.IsGamePaused)
-        {
-            if (keyHoldTime < holdTimeThreshold)
-            {
-                keyHoldTime += Time.deltaTime;
-                isChargingAttack = true;
-            }
-        }
+        // if (!playerEq.isEquipmentShown && Input.GetKey(InputManager.AttackKey) && !isAttacking && !isBlocking &&
+        //     !pauseMenu.IsGamePaused)
+        // {
+        //     if (keyHoldTime < holdTimeThreshold)
+        //     {
+        //         keyHoldTime += Time.deltaTime;
+        //         isChargingAttack = true;
+        //     }
+        // }
 
         if (isChargingAttack)
         {
@@ -205,62 +206,62 @@ public class Player : MonoBehaviour
         }
 
 
-        if (!playerEq.isEquipmentShown && Input.GetKeyUp(InputManager.AttackKey) && !pauseMenu.IsGamePaused)
-        {
-            if (isChargingAttack)
-            {
-                if (keyHoldTime >= holdTimeThreshold)
-                {
-                    PerformChargeAttack();
-                }
-                else
-                {
-                    // Rozpocznij atak od początku sekwencji
-                    StartAttack();
-                }
-            }
-            else if (isGrounded && isAttacking)
-            {
-                // Gracz kontynuuje sekwencję ataku
-                ContinueAttack();
-            }
-
-            isChargingAttack = false;
-            keyHoldTime = 0.0f;
-        }
-
-        if (!playerEq.isEquipmentShown && canBlock)
-        {
-            /*
-             * Parowanie
-             */
-            if (!isAttacking && !isChargingAttack && Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
-            {
-                isParrying = true;
-                StartCoroutine(Parry());
-            }
-
-            /*
-             * Blokowanie
-             */
-            if (Input.GetKey(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
-            {
-                isBlocking = true;
-                canBlock = false;
-                StartCoroutine(EnableBlockingAfterDuration(cooldownBetweenBlocks));
-            }
-            else isBlocking = false;
-
-            /*
-             * Przełączanie animacji blokowania
-             */
-            if (Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused) animator.Play("blockAttack");
-        }
+        // if (!playerEq.isEquipmentShown && Input.GetKeyUp(InputManager.AttackKey) && !pauseMenu.IsGamePaused)
+        // {
+        //     if (isChargingAttack)
+        //     {
+        //         if (keyHoldTime >= holdTimeThreshold)
+        //         {
+        //             PerformChargeAttack();
+        //         }
+        //         else
+        //         {
+        //             // Rozpocznij atak od początku sekwencji
+        //             StartAttack();
+        //         }
+        //     }
+        //     else if (isGrounded && isAttacking)
+        //     {
+        //         // Gracz kontynuuje sekwencję ataku
+        //         ContinueAttack();
+        //     }
+        //
+        //     isChargingAttack = false;
+        //     keyHoldTime = 0.0f;
+        // }
+        //
+        // if (!playerEq.isEquipmentShown && canBlock)
+        // {
+        //     /*
+        //      * Parowanie
+        //      */
+        //     if (!isAttacking && !isChargingAttack && Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
+        //     {
+        //         isParrying = true;
+        //         StartCoroutine(Parry());
+        //     }
+        //
+        //     /*
+        //      * Blokowanie
+        //      */
+        //     if (Input.GetKey(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
+        //     {
+        //         isBlocking = true;
+        //         canBlock = false;
+        //         StartCoroutine(EnableBlockingAfterDuration(cooldownBetweenBlocks));
+        //     }
+        //     else isBlocking = false;
+        //
+        //     /*
+        //      * Przełączanie animacji blokowania
+        //      */
+        //     if (Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused) animator.Play("blockAttack");
+        // }
 
         /*
          * Przejście przez podłoże
          */
-        if (!playerEq.isEquipmentShown && FloorDetector.isFloorPassable && isGrounded &&
+        if (FloorDetector.isFloorPassable && isGrounded &&
             Input.GetKeyDown(InputManager.MoveDownKey))
         {
             DisableCollisionForDuration(0.3f);
@@ -279,7 +280,7 @@ public class Player : MonoBehaviour
         Vector2 jumpVector = new Vector2(0, jumpForce * 10);
         float playerBodyVelocity = playerBody.GetPointVelocity(jumpVector).y;
 
-        if (playerBodyVelocity == 0 && !playerEq.isEquipmentShown) // Sprawdzamy, czy postać jest na ziemi
+        if (playerBodyVelocity < 0.01f) // Sprawdzamy, czy postać jest na ziemi
         {
             playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
         }
@@ -308,13 +309,13 @@ public class Player : MonoBehaviour
 
     private void DisableCollisionForDuration(float duration)
     {
-        if (!playerEq.isPickingItem)
-        {
+        // if (!playerEq.isPickingItem)
+        // {
             ignoredObject = FloorDetector.collidingObject.GetComponent<Collider2D>();
 
             Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ignoredObject, true);
             Invoke("EnableCollision", duration);
-        }
+        // }
     }
 
     // Włączenie kolizji ponownie.
