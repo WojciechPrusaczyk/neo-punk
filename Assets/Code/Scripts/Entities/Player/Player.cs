@@ -169,7 +169,7 @@ public class Player : MonoBehaviour
         /*
          * skakanie
          */
-        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetButtonDown(InputManager.PadButtonJump)) &&
+        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
             !isAttacking && !isBlocking && isGrounded)
         {
             _soundManager.PlaySound(0);
