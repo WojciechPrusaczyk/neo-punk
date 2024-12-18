@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
     private Image elementalIconComponent;
     public Vector3 lastSafePosition;
     public float playerVoidLevel;
+    private SoundManager _soundManager;
 
 
     private void Start()
@@ -84,6 +85,10 @@ public class Player : MonoBehaviour
         // }
     }
 
+    private void Awake()
+    {
+        _soundManager = GetComponent<SoundManager>();
+    }
 
     private void Update()
     {
@@ -167,6 +172,7 @@ public class Player : MonoBehaviour
         if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetButtonDown(InputManager.PadButtonJump)) &&
             !isAttacking && !isBlocking && isGrounded)
         {
+            _soundManager.PlaySound(0);
             Jump();
         }
 
