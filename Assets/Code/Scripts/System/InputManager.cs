@@ -24,20 +24,44 @@ public static class InputManager
     /*
      * kontrolki dla padów
      */
-    public static string PadButtonAttack { get; private set; } = "Fire1"; // Przycisk ataku na padzie (domyślnie "Fire1")
-    public static string PadButtonJump { get; private set; } = "Jump"; // Przycisk skoku na padzie (domyślnie "Jump")
-    public static string AltPadButtonJump { get; private set; } = "Jump"; // Przycisk skoku na padzie (domyślnie "Jump")
-    public static string PadButtonBlock { get; private set; } = "Block"; // Przycisk blokowania na padzie (domyślnie "Block")
-    public static string PadButtonInteract { get; private set; } = "Interact"; // Przycisk interakcji na padzie (domyślnie "Interact")
-    public static string PadButtonInventoryMenu { get; private set; } = "InventoryMenu"; // Przycisk otwarcia menu przedmiotów na padzie (domyślnie "InventoryMenu")
-    public static string PadButtonPauseMenu { get; private set; } = "PauseMenu"; // Przycisk otwarcia menu pauzy na padzie (domyślnie "PauseMenu")
-    public static string PadButtonItem1 { get; private set; } = "Item1"; // Przycisk używania przedmiotu 1 na padzie (domyślnie "Item1")
-    public static string PadButtonItem2 { get; private set; } = "Item2"; // Przycisk używania przedmiotu 2 na padzie (domyślnie "Item2")
-    public static string PadButtonItem3 { get; private set; } = "Item3"; // Przycisk używania przedmiotu 3 na padzie (domyślnie "Item3")
-    public static string PadButtonItem4 { get; private set; } = "Item4"; // Przycisk używania przedmiotu 4 na padzie (domyślnie "Item4")
-    public static string PadButtonDodge { get; private set; } = "Dodge"; // Przycisk uniku na padzie (domyślnie "Dodge")
-    public static string PadMoveDownKey { get; private set; } = "Down"; // Klawisz poruszania się w dół (domyślnie S)
+    // Przycisk ataku na padzie (domyślnie Fire1 -> JoystickButton0 - A)
+    public static KeyCode PadButtonAttack { get; private set; } = KeyCode.JoystickButton0;
 
+    // Przycisk skoku na padzie (domyślnie JoystickButton1 - B)
+    public static KeyCode PadButtonJump { get; private set; } = KeyCode.JoystickButton1;
+
+    // Alternatywny przycisk skoku na padzie (np. dodatkowy mapping)
+    public static KeyCode AltPadButtonJump { get; private set; } = KeyCode.JoystickButton1;
+
+    // Przycisk blokowania na padzie (domyślnie JoystickButton2 - X)
+    public static KeyCode PadButtonBlock { get; private set; } = KeyCode.JoystickButton2;
+
+    // Przycisk interakcji na padzie (domyślnie JoystickButton3 - Y)
+    public static KeyCode PadButtonInteract { get; private set; } = KeyCode.JoystickButton3;
+
+    // Przycisk otwarcia menu przedmiotów na padzie (domyślnie JoystickButton7 - Start)
+    public static KeyCode PadButtonInventoryMenu { get; private set; } = KeyCode.JoystickButton7;
+
+    // Przycisk otwarcia menu pauzy na padzie (domyślnie JoystickButton6 - Back)
+    public static KeyCode PadButtonPauseMenu { get; private set; } = KeyCode.JoystickButton6;
+
+    // Przycisk używania przedmiotu 1 na padzie (domyślnie JoystickButton4 - LB)
+    public static KeyCode PadButtonItem1 { get; private set; } = KeyCode.JoystickButton4;
+
+    // Przycisk używania przedmiotu 2 na padzie (domyślnie JoystickButton5 - RB)
+    public static KeyCode PadButtonItem2 { get; private set; } = KeyCode.JoystickButton5;
+
+    // Przycisk używania przedmiotu 3 na padzie (domyślnie JoystickButton8 - L3)
+    public static KeyCode PadButtonItem3 { get; private set; } = KeyCode.JoystickButton8;
+
+    // Przycisk używania przedmiotu 4 na padzie (domyślnie JoystickButton9 - R3)
+    public static KeyCode PadButtonItem4 { get; private set; } = KeyCode.JoystickButton9;
+
+    // Przycisk uniku na padzie (domyślnie JoystickButton4 - LB)
+    public static KeyCode PadButtonDodge { get; private set; } = KeyCode.JoystickButton4;
+
+    // Klawisz poruszania się w dół (Joystick Axis lub dodatkowy mapping, domyślnie Down na padzie)
+    public static KeyCode PadMoveDownKey { get; private set; } = KeyCode.JoystickButton10; // Placeholder
     
     /*
      * Metody do zmiany przycisków
@@ -121,67 +145,67 @@ public static class InputManager
      * Zmiana kontrolek dla padów:
      */
 
-    public static void ChangePadButtonJump(string newButton)
+    public static void ChangePadButtonJump(KeyCode newButton)
     {
         PadButtonJump = newButton;
     }
 
-    public static void ChangePadAltButtonJump(string newButton)
+    public static void ChangePadAltButtonJump(KeyCode newButton)
     {
         AltPadButtonJump = newButton;
     }
 
-    public static void ChangePadButtonBlock(string newButton)
+    public static void ChangePadButtonBlock(KeyCode newButton)
     {
         PadButtonBlock = newButton;
     }
 
-    public static void ChangePadButtonInteract(string newButton)
+    public static void ChangePadButtonInteract(KeyCode newButton)
     {
         PadButtonInteract = newButton;
     }
 
-    public static void ChangePadButtonInventoryMenu(string newButton)
+    public static void ChangePadButtonInventoryMenu(KeyCode newButton)
     {
         PadButtonInventoryMenu = newButton;
     }
 
-    public static void ChangePadButtonAttack(string newButton)
+    public static void ChangePadButtonAttack(KeyCode newButton)
     {
         PadButtonAttack = newButton;
     }
     
-    public static void ChangePadButtonPauseMenu(string newButton)
+    public static void ChangePadButtonPauseMenu(KeyCode newButton)
     {
         PadButtonPauseMenu = newButton;
     }
 
-    public static void ChangePadButtonItem1(string newButton)
+    public static void ChangePadButtonItem1(KeyCode newButton)
     {
         PadButtonItem1 = newButton;
     }
 
-    public static void ChangePadButtonItem2(string newButton)
+    public static void ChangePadButtonItem2(KeyCode newButton)
     {
         PadButtonItem2 = newButton;
     }
 
-    public static void ChangePadButtonItem3(string newButton)
+    public static void ChangePadButtonItem3(KeyCode newButton)
     {
         PadButtonItem3 = newButton;
     }
 
-    public static void ChangePadButtonItem4(string newButton)
+    public static void ChangePadButtonItem4(KeyCode newButton)
     {
         PadButtonItem4 = newButton;
     }
     
-    public static void ChangePadButtonDodge(string newButton)
+    public static void ChangePadButtonDodge(KeyCode newButton)
     {
         PadButtonDodge = newButton;
     }
     
-    public static void ChangePadButtonMoveDown(string newKey)
+    public static void ChangePadButtonMoveDown(KeyCode newKey)
     {
         PadMoveDownKey = newKey;
     }
