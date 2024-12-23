@@ -8,33 +8,41 @@ public class WanderingEnemy : MonoBehaviour
         Wandering,
         Chasing,
     }
-    [Header("Enemy variables")] 
-    public float jumpForce = 6f;
-
-    public float playerDetectionRange = 10f;
+    [Header("Enemy Transforms")] 
     public Transform targetA;
     public Transform targetB;
     public Transform targetPoint;
-    public EnemyState state;
-
     public Transform eyes;
-    /*
-     * Zmienne lokalne
-     */
+    public Transform maxJumpHeight;
+    public Transform floor;
+    
     private Transform playerPosition;
-    private Rigidbody2D rb;
-    private CircleCollider2D circle;
+
+    [Header("Enemy variables")] 
+    public float obstacleDetectionDistance = 1f; // Distance to detect obstacles   
+
+    public float chaseSpeedMultiplier = 2f;
+    public float playerDetectionRange = 10f;
+    public EnemyState state;
+    
+    [Header("Enemy Scripts")] 
     [SerializeField]
     private EntityStatus enemyStatus;
     [SerializeField]
     private FloorDetector floorDetector;
-
+    
+    [Header("Misc")] 
     [SerializeField] 
     private Vector2 direction;
     [SerializeField]
     private float distanceToPlayer;
+    /*
+     * Zmienne lokalne
+     */
+    private Rigidbody2D rb;
+    private CircleCollider2D circle;
+
     
-    private float obstacleDetectionDistance = 1f; // Distance to detect obstacles
     private LayerMask obstacleLayer;
     private float jumpCooldown = 1f;
     private float lastJumpTime;
@@ -71,6 +79,16 @@ public class WanderingEnemy : MonoBehaviour
 
     private void Wander()
     {
+        state = EnemyState.Wandering;
+        if (IsObstacleAhead() && canJumpOverWall() && floorDetector.isPlayerNearGround)
+        {
+            Jump();
+        }
+
+        if (IsObstacleAhead())
+        {
+            return;
+        }
         direction = (targetPoint.position - transform.position).normalized; // Get direction
         rb.velocity = new Vector2(direction.x * enemyStatus.MovementSpeed * Time.deltaTime, rb.velocity.y); // Apply velocity
 
@@ -84,16 +102,22 @@ public class WanderingEnemy : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (IsObstacleAhead() && floorDetector.isPlayerNearGround)
+        state = EnemyState.Chasing;
+        if (IsObstacleAhead() && canJumpOverWall() && floorDetector.isPlayerNearGround)
         {
             Jump();
+        }
+
+        if (IsObstacleAhead())
+        {
+            return;
         }
         Vector2 difference = playerPosition.position - transform.position;
         Vector2 diffNormalized = difference.normalized;
 
         direction = new Vector2(Mathf.Round(diffNormalized.x), Mathf.Round(diffNormalized.y));
 
-        float xMovement = direction.x * enemyStatus.MovementSpeed * Time.deltaTime;
+        float xMovement = direction.x * enemyStatus.MovementSpeed * Time.deltaTime * chaseSpeedMultiplier;
             
         rb.velocity = new Vector2(xMovement, rb.velocity.y);
     }
@@ -117,31 +141,45 @@ public class WanderingEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            CustomTags tags = hit.collider.gameObject.GetComponent<CustomTags>();
-            if (tags == null)
-            {
-                return false;
-            }
-            if (tags.HasTag("Wall"))
+            if (hit.collider.CompareTag("impassableFloor"))
             {
                 return true;
             }
+            return false;
         }
-
         return false;
     }
     
     private void Jump()
-    {if (Time.time >= lastJumpTime + jumpCooldown)
+    {
+        float gravity = Mathf.Abs(Physics2D.gravity.y * rb.gravityScale);
+        float yDistance = Mathf.Abs(maxJumpHeight.position.y - floor.position.y);
+        float initialVelocity = Mathf.Sqrt(2 * gravity * yDistance * 1.2f);
+
+        // Apply the force
+        rb.velocity = new Vector2(rb.velocity.x, initialVelocity);
+    }
+
+    private bool canJumpOverWall()
+    {
+        Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
+        RaycastHit2D hit = Physics2D.Raycast(maxJumpHeight.position, rayDirection, obstacleDetectionDistance  * 2f);
+        if (hit.collider != null)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            lastJumpTime = Time.time;
+            if (hit.collider.CompareTag("impassableFloor"))
+            {
+                return false;
+            }
+            return true;
         }
+        return true;
     }
 
     private void OnDrawGizmos()
     {
         Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
         Debug.DrawRay(eyes.position, rayDirection * obstacleDetectionDistance, Color.red);
+        
+        Debug.DrawRay(maxJumpHeight.position, rayDirection * obstacleDetectionDistance * 2f, Color.green);
     }
 }

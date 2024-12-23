@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 650545776824166845}
   m_Layer: 0
-  m_Name: Target2
+  m_Name: TargetB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9171408562872780842}
   m_Layer: 0
-  m_Name: Target1
+  m_Name: TargetA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +126,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6843363596781238617}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2512147137185325598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425551666290962134}
+  m_Layer: 0
+  m_Name: MaxHeightTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425551666290962134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512147137185325598}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8189039760875755994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3512639872417415216
 GameObject:
@@ -163,6 +194,8 @@ Transform:
   m_Children:
   - {fileID: 8145544607629667916}
   - {fileID: 2499983004787996314}
+  - {fileID: 1425551666290962134}
+  - {fileID: 6703536393964507237}
   m_Father: {fileID: 6843363596781238617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2684891838077875134
@@ -294,13 +327,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cabec4eca03f324caa7a553d9e88b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 15
-  playerDetectionRange: 20
   targetA: {fileID: 9171408562872780842}
   targetB: {fileID: 650545776824166845}
   targetPoint: {fileID: 0}
-  state: 0
   eyes: {fileID: 2499983004787996314}
+  maxJumpHeight: {fileID: 1425551666290962134}
+  floor: {fileID: 6703536393964507237}
+  obstacleDetectionDistance: 1
+  chaseSpeedMultiplier: 2
+  playerDetectionRange: 20
+  state: 0
   enemyStatus: {fileID: 821905335106443452}
   floorDetector: {fileID: 3278754162445553048}
   direction: {x: 0, y: 0}
@@ -428,5 +464,36 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.566591, y: 0.16055042}
+  m_Size: {x: 0.31, y: 0.12}
   m_EdgeRadius: 0
+--- !u!1 &9076103183883248397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6703536393964507237}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6703536393964507237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076103183883248397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8189039760875755994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

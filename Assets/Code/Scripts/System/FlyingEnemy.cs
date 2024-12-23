@@ -7,29 +7,35 @@ public class FlyingEnemy : MonoBehaviour
         Wandering,
         Chasing,
     }
-    [Header("Enemy variables")] 
+    [Header("Enemy Transforms")] 
     public Transform offsetTransform;    
-    
-    public float playerDetectionRange = 10f;
     public Transform targetA;
     public Transform targetB;
     public Transform targetPoint;
-    public EnemyState state;
     public Transform eyes;
     
     private Transform playerPosition;
-    private float xOffset;
-    private Rigidbody2D rb;
-    private CircleCollider2D circle;
+
+    [Header("Enemy variables")] 
+    public float playerDetectionRange = 10f;
+    public EnemyState state;
+    
+    [Header("Enemy Scripts")] 
     [SerializeField]
     private EntityStatus enemyStatus;
     [SerializeField]
     private FloorDetector floorDetector;
-
+    
+    [Header("Misc")] 
+    
     [SerializeField] 
     private Vector2 direction;
     [SerializeField]
     private float distanceToPlayer;
+    private float xOffset;
+    private Rigidbody2D rb;
+    private CircleCollider2D circle;
+
     
     private float obstacleDetectionDistance = 1f; // Distance to detect obstacles
     private LayerMask obstacleLayer;
@@ -48,7 +54,6 @@ public class FlyingEnemy : MonoBehaviour
     
     private void Update()
     {
-        Debug.Log(rb.velocity.x);
         distanceToPlayer = Vector2.Distance(playerPosition.position, transform.position);
         CheckForDirection();
         if (distanceToPlayer > playerDetectionRange)
@@ -68,7 +73,6 @@ public class FlyingEnemy : MonoBehaviour
 
     private void Wander()
     {
-        
         direction = (targetPoint.position - transform.position).normalized; // Get direction
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, enemyStatus.MovementSpeed * Time.deltaTime);
 
@@ -97,15 +101,39 @@ public class FlyingEnemy : MonoBehaviour
     
     private void ChasePlayer()
     {
-        Vector2 difference = playerPosition.position - transform.position;
+        direction = (playerPosition.position - transform.position).normalized; // Get direction
+        Vector3 targetPosition = playerPosition.position - offsetTransform.localPosition;
+
+        Vector2 difference = targetPosition - transform.position;
         Vector2 diffNormalized = difference.normalized;
 
-        direction = new Vector2(Mathf.Round(diffNormalized.x), Mathf.Round(diffNormalized.y));
-        
-        Vector3 targetPosition = playerPosition.position - offsetTransform.localPosition;
-        // Move towards the target position
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, enemyStatus.MovementSpeed * Time.deltaTime);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, diffNormalized, obstacleDetectionDistance);
 
+        if (IsObstacleAhead())
+        {
+            Vector2 avoidanceDirection = new Vector2(diffNormalized.x, -1).normalized;
+            rb.velocity = avoidanceDirection * enemyStatus.MovementSpeed;
+        }
+        else
+        {
+            rb.velocity = diffNormalized * enemyStatus.MovementSpeed;
+        }
+    }
+    
+    private bool IsObstacleAhead()
+    {
+        Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
+        RaycastHit2D hit = Physics2D.Raycast(eyes.position, rayDirection, obstacleDetectionDistance);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("impassableFloor"))
+            {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
     
     private void OnDrawGizmos()
