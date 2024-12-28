@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         boxCollider = GetComponent<CapsuleCollider2D>();
         playerStatus = GetComponent<EntityStatus>();
         swordHitbox = transform.Find("SwordHitbox").gameObject;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         // pauseMenu = GameObject.Find("Pause Menu Interface").GetComponent<PauseMenuBehaviour>();
 
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
         // animator.SetBool("IsGrounded", isGrounded);
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
-        // animator.SetBool("IsBlocking", isBlocking);
+        animator.SetBool("IsBlocking", isBlocking);
 
         /*
          * Blokowanie chodzenia do tyłu, gdy gracz atakuje, lub blokuje
@@ -236,33 +236,33 @@ public class Player : MonoBehaviour
         //     keyHoldTime = 0.0f;
         // }
         //
-        // if (!playerEq.isEquipmentShown && canBlock)
-        // {
-        //     /*
-        //      * Parowanie
-        //      */
-        //     if (!isAttacking && !isChargingAttack && Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
-        //     {
-        //         isParrying = true;
-        //         StartCoroutine(Parry());
-        //     }
-        //
-        //     /*
-        //      * Blokowanie
-        //      */
-        //     if (Input.GetKey(InputManager.BlockKey) && !pauseMenu.IsGamePaused)
-        //     {
-        //         isBlocking = true;
-        //         canBlock = false;
-        //         StartCoroutine(EnableBlockingAfterDuration(cooldownBetweenBlocks));
-        //     }
-        //     else isBlocking = false;
-        //
-        //     /*
-        //      * Przełączanie animacji blokowania
-        //      */
-        //     if (Input.GetKeyDown(InputManager.BlockKey) && !pauseMenu.IsGamePaused) animator.Play("blockAttack");
-        // }
+        if (canBlock)
+        {
+            /*
+             * Parowanie
+             */
+            if (!isAttacking && !isChargingAttack && Input.GetKeyDown(InputManager.BlockKey))
+            {
+                isParrying = true;
+                StartCoroutine(Parry());
+            }
+        
+            /*
+             * Blokowanie
+             */
+            if (Input.GetKey(InputManager.BlockKey))
+            {
+                isBlocking = true;
+                canBlock = false;
+                StartCoroutine(EnableBlockingAfterDuration(cooldownBetweenBlocks));
+            }
+            else isBlocking = false;
+        
+            /*
+             * Przełączanie animacji blokowania
+             */
+            if (Input.GetKeyDown(InputManager.BlockKey)) animator.Play("blockAttack");
+        }
 
         /*
          * Przejście przez podłoże
