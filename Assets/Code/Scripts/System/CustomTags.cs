@@ -53,9 +53,14 @@ public class CustomTags : MonoBehaviour
         tags.Clear();
     }
 
-    private void OnValidate()
-    {
-        HashSet<string> uniqueTags = new HashSet<string>(tags);
-        tags = new List<string>(uniqueTags);
-    }
+    // private void OnValidate()
+    // {
+    //     if (tags == null) return;
+    //
+    //     HashSet<string> uniqueTags = new HashSet<string>(tags);
+    //     if (uniqueTags.Count != tags.Count)
+    //     {
+    //         tags = new List<string>(uniqueTags);
+    //     }
+    // }
 }

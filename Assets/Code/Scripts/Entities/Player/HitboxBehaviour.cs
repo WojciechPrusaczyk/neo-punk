@@ -15,7 +15,6 @@ public class HitboxBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("dodano!");
         if (playerEntityStatus && collision.CompareTag("Enemy"))
         {
             playerEntityStatus.detectedTargets.Add(collision.gameObject);
@@ -24,7 +23,6 @@ public class HitboxBehaviour : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("usunięto!");
         if (playerEntityStatus && collision.CompareTag("Enemy"))
         {
             playerEntityStatus.detectedTargets.Remove(collision.gameObject);

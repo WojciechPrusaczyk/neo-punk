@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6083238755066574466}
   - component: {fileID: 1395069664761461441}
   - component: {fileID: 3196496781066106103}
+  - component: {fileID: 2003166830280569305}
+  - component: {fileID: 7077660783316475836}
   m_Layer: 0
   m_Name: FloorDetector
   m_TagString: Untagged
@@ -94,6 +96,153 @@ MonoBehaviour:
   isPlayerNearGround: 0
   isFloorPassable: 0
   collidingObject: {fileID: 0}
+--- !u!114 &2003166830280569305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248721615574369215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f4b0f0af6a4be4893b54731f50812f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTypes:
+  - name: default
+    effectVariants:
+    - {fileID: 8300000, guid: a69a82a1066bcf84681f32b2528b959a, type: 3}
+    - {fileID: 8300000, guid: 32ad1bd0166cb654d915e6b773670698, type: 3}
+    - {fileID: 8300000, guid: ffbde3c68dcaafa4f8664aa0fa5ee64e, type: 3}
+    - {fileID: 8300000, guid: 2ba55c4ea5390f04c8ae27c899f259b4, type: 3}
+  - name: metal
+    effectVariants:
+    - {fileID: 8300000, guid: 0c3da9cc27beaa646b9dd62261cdb007, type: 3}
+    - {fileID: 8300000, guid: 10ce18818e107234b98cb2c3016f568c, type: 3}
+    - {fileID: 8300000, guid: 2d737467bc72abc4b8001c729fb6baba, type: 3}
+  - name: concrete
+    effectVariants:
+    - {fileID: 8300000, guid: 594ed25a1493d3544915272ca9ae937b, type: 3}
+    - {fileID: 8300000, guid: e8cb441de51be864aa0db0d1ebc2edc2, type: 3}
+  - name: glass
+    effectVariants:
+    - {fileID: 8300000, guid: 4e741822b2ef32746bbf44ef1f4ffdcd, type: 3}
+    - {fileID: 8300000, guid: e4b449c797fbac14f90c45502f92ebdb, type: 3}
+  - name: ground
+    effectVariants:
+    - {fileID: 8300000, guid: 8a72953c11b30a5449c0fc9dddb0e94c, type: 3}
+    - {fileID: 8300000, guid: 7c66d6e4b0150704f97e3a250df7572e, type: 3}
+  - name: metalFloor
+    effectVariants:
+    - {fileID: 8300000, guid: a949a7268b6a80a4187404e38824f27a, type: 3}
+    - {fileID: 8300000, guid: efaa5df6286e009459992064690433ac, type: 3}
+  - name: wood
+    effectVariants:
+    - {fileID: 8300000, guid: 84824a9e41dfe5a43a84b4f7d8109127, type: 3}
+    - {fileID: 8300000, guid: 39fddf35702b2294ca18d32eb89b4cab, type: 3}
+  - name: woodTough
+    effectVariants:
+    - {fileID: 8300000, guid: 332e28328d81a4749bae7c92237cc22b, type: 3}
+    - {fileID: 8300000, guid: 6bda56024491aeb4ca7b184d1a24def5, type: 3}
+  pauseBetweenSteps: 1
+  emitterEntity: {fileID: 2346750993095654509}
+--- !u!82 &7077660783316475836
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248721615574369215}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1445816640091238792
 GameObject:
   m_ObjectHideFlags: 0
