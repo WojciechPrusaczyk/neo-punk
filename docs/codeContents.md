@@ -48,4 +48,7 @@
 ---
 - **UserInterface**
     - [PauseMenuBehaviour](scripts/UserInterface/PauseMenuBehaviour.md)
+    - Dialog
+        - [DialogData](scripts/UserInterface/Dialog/DialogData.md)
+        - [DialogScript](scripts/UserInterface/Dialog/DialogScript.md)
 ---
