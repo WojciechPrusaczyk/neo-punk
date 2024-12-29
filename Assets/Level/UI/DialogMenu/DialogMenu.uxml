@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/DialogMenu/dialog-menu.uss?fileID=7433441132597879392&amp;guid=ae72f9b205b38f5409ce494dd73b893c&amp;type=3#dialog-menu" />
+    <ui:VisualElement name="Top" style="flex-grow: 1; bottom: auto; height: 33%;" />
+    <ui:VisualElement name="Bot" style="flex-grow: 1; top: auto; height: 77%; align-items: auto; flex-direction: row;">
+        <ui:VisualElement name="Pictures" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">
+            <ui:VisualElement name="CharacterOnePicture" style="flex-grow: 1; align-self: flex-start; width: 25%; justify-content: flex-start; align-items: auto; height: 100%; background-color: rgba(0, 0, 0, 0); background-image: none; -unity-background-scale-mode: stretch-to-fill; -unity-background-image-tint-color: rgb(255, 255, 255); transform-origin: right bottom; scale: 1 1; position: absolute;" />
+            <ui:VisualElement name="CharacterTwoPicture" style="flex-grow: 1; width: 25%; align-self: flex-end; height: 100%; align-items: auto; position: absolute; color: rgba(255, 255, 255, 0); background-color: rgba(0, 0, 0, 0); background-image: none; -unity-background-image-tint-color: rgb(255, 255, 255); scale: 1 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Left" style="flex-grow: 1; height: 100%; width: auto;" />
+        <ui:VisualElement name="Middle" style="flex-grow: 1; height: 100%; width: 45%;">
+            <ui:VisualElement name="CharacterName" style="flex-grow: 1; width: 100%; flex-direction: row; align-self: flex-end; align-items: flex-end; height: 50%;">
+                <ui:VisualElement name="CharacterOneName" style="flex-grow: 1; align-self: auto; width: 50%; height: 20px; justify-content: flex-start; align-items: flex-start;">
+                    <ui:Label text="Character 1" name="CharacterName1" class="character_name_inactive character_name_active" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(255, 0, 0); -unity-text-align: upper-center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CharacterTwoName" style="flex-grow: 1; align-self: flex-end; width: 50%; height: 20px; align-items: flex-end;">
+                    <ui:Label text="Character 2" name="CharacterName2" class="character_name_inactive character_name_active" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(255, 0, 0); -unity-text-align: upper-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="DialogText" class="dialog" style="flex-grow: 1; justify-content: flex-start; align-self: flex-start; -unity-text-align: upper-center; width: 100%; align-items: auto; height: 50%; padding-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; flex-direction: column; opacity: 1; background-color: rgb(255, 255, 255); flex-wrap: wrap;">
+                <ui:Label text="Probny tekst" name="DialogText" class="dialog_text" style="width: 100%; height: 100%; align-items: auto; align-self: center; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-align: upper-left; background-color: rgba(255, 255, 255, 0); flex-wrap: nowrap; white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Right" style="flex-grow: 1; height: 100%; width: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

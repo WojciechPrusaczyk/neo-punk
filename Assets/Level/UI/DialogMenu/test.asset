@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e33674b8855161459b9ce83b950d3ce, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  characterOneName: test1
+  characterOnePicture: {fileID: 1916595133319455061, guid: 33cc1d23cacf87f41b1de7333be7c591, type: 3}
+  characterTwoName: test2
+  characterTwoPicture: {fileID: -1808731167678956439, guid: 4bb4cf820aeb66942af21ae880d72d06, type: 3}
+  lines:
+  - speakerName: 0
+    text: "Id\u0119 do kibla Od rana jak zawsze A z kibla wychodzi Jaka\u015B wielka
+      g\u0142owa Szyja d\u0142uga"
+  - speakerName: 1
+    text: "Jakbym widzia\u0142 \u017Cyraf\u0119 Rozgl\u0105dam si\u0119 I my\u015Bl\u0119
+      gdzie tu si\u0119 schowa\u0107 Nagle wychodzi typ z kamer\u0105 (ej) M\xF3wi
+      \u017Ce zacz\u0119\u0142a si\u0119 wojna (co?) Ja z niedowierzaniem wygl\u0105dam
+      zza okna A tam ju\u017C rozbrajana jest bomba"
