@@ -15,12 +15,13 @@ public class PlayerDetector : MonoBehaviour
         GameObject collidingObject = collision.gameObject;
         if (collision.CompareTag("Player"))
         {
-            parentEntity.GetComponent<EntityStatus>().detectedTarget = collidingObject;
+            parentEntity.GetComponent<EntityStatus>().detectedTargets.Add(collidingObject);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        parentEntity.GetComponent<EntityStatus>().detectedTarget = null;
+        GameObject collidingObject = collision.gameObject;
+        parentEntity.GetComponent<EntityStatus>().detectedTargets.Remove(collidingObject);
     }
 }

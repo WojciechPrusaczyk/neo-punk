@@ -77,9 +77,9 @@ public class DragonflyBehavior : MonoBehaviour
             if (currentSpeed > 0) entityStatus.isFacedRight = true; 
             else if (currentSpeed < 0) entityStatus.isFacedRight = false;
         }
-        else if (isPlayerInAttackRange && null != entityStatus.detectedTarget)
+        else if (isPlayerInAttackRange && entityStatus.detectedTargets.Count > 0 && null != entityStatus.detectedTargets[0])
         {
-            entityStatus.isFacedRight = !(entityStatus.detectedTarget.transform.position.x < gameObject.transform.position.x);
+            entityStatus.isFacedRight = !(entityStatus.detectedTargets[0].transform.position.x < gameObject.transform.position.x);
         }
 
         /*
@@ -101,9 +101,9 @@ public class DragonflyBehavior : MonoBehaviour
         /*
          * Atak podstawowy na gracza
          */
-        if (isChasingPlayer && entityStatus.detectedTarget )
+        if (isChasingPlayer && entityStatus.detectedTargets.Count > 0 )
         {
-            distanceToPlayer = Vector3.Distance(transform.position, entityStatus.detectedTarget.transform.position);
+            distanceToPlayer = Vector3.Distance(transform.position, entityStatus.detectedTargets[0].transform.position);
             isPlayerInAttackRange = ( distanceToPlayer <= entityStatus.attackRange );
             
             // Atak na gracza
@@ -117,12 +117,12 @@ public class DragonflyBehavior : MonoBehaviour
         /*
          * Raycast
          */
-        if (entityStatus.detectedTarget)
+        if (entityStatus.detectedTargets.Count > 0)
         {
             Vector2 raycastOrigin = transform.position;
 
             // Pozycja gracza
-            Vector2 playerPosition = entityStatus.detectedTarget.transform.position;
+            Vector2 playerPosition = entityStatus.detectedTargets[0].transform.position;
 
             // Kierunek raycasta od obiektu do gracza
             Vector2 raycastDirection =  playerPosition - raycastOrigin;
@@ -153,7 +153,7 @@ public class DragonflyBehavior : MonoBehaviour
     void PerformShoot()
     {
         // Oblicz wektor kierunku od punktu strzału do pozycji gracza
-        Vector3 shootDirection = (entityStatus.detectedTarget.transform.position - shootingPoint.position).normalized;
+        Vector3 shootDirection = (entityStatus.detectedTargets[0].transform.position - shootingPoint.position).normalized;
 
         // Utwórz nowy pocisk z prefabrykatu, oraz wprowadź do niego dane o strzelcu
         GameObject projectile = Instantiate(projectilePrefab, shootingPoint.position, Quaternion.identity);
@@ -177,7 +177,7 @@ public class DragonflyBehavior : MonoBehaviour
     
     private IEnumerator PerformAttack()
     {
-        while (isPlayerInAttackRange && entityStatus.detectedTarget)
+        while (isPlayerInAttackRange && entityStatus.detectedTargets[0])
         {
             isAttacking = true;
             canAttack = true;
@@ -200,7 +200,7 @@ public class DragonflyBehavior : MonoBehaviour
         }
         
         // Niezakłócony ruch dopóki nie wykryto gracza
-        if ( ( !didRaycastFoundPlayer && entityStatus.detectedTarget) || ( !entityStatus.detectedTarget && !entityStatus.detectedTarget ) )
+        if ( ( !didRaycastFoundPlayer && entityStatus.detectedTargets.Count > 0) || ( !(entityStatus.detectedTargets.Count > 0) ) )
         {
             isChasingPlayer = false;
             distanceToPlayer = 0;
@@ -225,7 +225,7 @@ public class DragonflyBehavior : MonoBehaviour
         {
             // Ruch po wykryciu gracza
             isChasingPlayer = true;
-            playerVector3 = entityStatus.detectedTarget.transform.position;
+            playerVector3 = entityStatus.detectedTargets[0].transform.position;
             var position = transform.position;
             position = Vector3.MoveTowards(position, new Vector3(playerVector3.x, playerVector3.y, position.z), EntitySpeed * Time.deltaTime);
             transform.position = position;

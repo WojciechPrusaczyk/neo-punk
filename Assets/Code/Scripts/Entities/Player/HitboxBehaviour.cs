@@ -6,18 +6,28 @@ using UnityEngine;
 
 public class HitboxBehaviour : MonoBehaviour
 {
-    public GameObject collidingEnemyObject;
+    public EntityStatus playerEntityStatus;
+
+    private void Awake()
+    {
+        playerEntityStatus = GetComponentInParent<EntityStatus>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        Debug.Log("dodano!");
+        if (playerEntityStatus && collision.CompareTag("Enemy"))
         {
-            collidingEnemyObject = collision.gameObject;
+            playerEntityStatus.detectedTargets.Add(collision.gameObject);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collidingEnemyObject = null;
+        Debug.Log("usunięto!");
+        if (playerEntityStatus && collision.CompareTag("Enemy"))
+        {
+            playerEntityStatus.detectedTargets.Remove(collision.gameObject);
+        }
     }
 }

@@ -330,7 +330,7 @@ MonoBehaviour:
   MovementSpeed: 10
   isFacedRight: 1
   isEnemy: 0
-  detectedTarget: {fileID: 0}
+  detectedTargets: []
   attackRange: 0
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
@@ -486,6 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4951977807318945459}
   - component: {fileID: 1151884988469273626}
+  - component: {fileID: 7725505690995258429}
   m_Layer: 0
   m_Name: SwordHitbox
   m_TagString: Untagged
@@ -538,7 +539,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -554,3 +555,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &7725505690995258429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563626031184432855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ca50ffd386bc54a8434ee3daf7186e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEntityStatus: {fileID: 0}

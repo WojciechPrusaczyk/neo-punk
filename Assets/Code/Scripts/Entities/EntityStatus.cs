@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using Unity.Collections;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class EntityStatus : MonoBehaviour
     public float MovementSpeed = 0;
     public bool isFacedRight = true;
     public bool isEnemy = false;
-    public GameObject detectedTarget;
+    public List<GameObject> detectedTargets;
     public float attackRange;
     public Color lightDamageColor;
     public Color heavyDamageColor;

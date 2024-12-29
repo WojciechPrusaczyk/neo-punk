@@ -152,19 +152,19 @@ public class Player : MonoBehaviour
         /*
          * Nieznaczne wydłużanie hitboxa ataków podczas biegu
          */
-        if ((Mathf.Abs(playerBody.velocity.x) >= playerStatus.GetMovementSpeed()) ||
-            (horizontalInput != 0 && isChargingAttack))
-        {
-            BoxCollider2D swordCollider = swordHitbox.GetComponent<BoxCollider2D>();
-            swordCollider.size = new Vector2(playerStatus.attackRange * 1.5f, 0.3f);
-            swordCollider.offset = new Vector2(playerStatus.attackRange, 0f);
-        }
-        else
-        {
-            BoxCollider2D swordCollider = swordHitbox.GetComponent<BoxCollider2D>();
-            swordCollider.size = new Vector2(playerStatus.attackRange, 0.3f);
-            swordCollider.offset = new Vector2(playerStatus.attackRange / 2, 0f);
-        }
+        // if ((Mathf.Abs(playerBody.velocity.x) >= playerStatus.GetMovementSpeed()) ||
+        //     (horizontalInput != 0 && isChargingAttack))
+        // {
+        //     BoxCollider2D swordCollider = swordHitbox.GetComponent<BoxCollider2D>();
+        //     swordCollider.size = new Vector2(playerStatus.attackRange * 1.5f, 0.3f);
+        //     swordCollider.offset = new Vector2(playerStatus.attackRange, 0f);
+        // }
+        // else
+        // {
+        //     BoxCollider2D swordCollider = swordHitbox.GetComponent<BoxCollider2D>();
+        //     swordCollider.size = new Vector2(playerStatus.attackRange, 0.3f);
+        //     swordCollider.offset = new Vector2(playerStatus.attackRange / 2, 0f);
+        // }
 
         /*
          * skakanie
@@ -334,12 +334,16 @@ public class Player : MonoBehaviour
     private void DealDamage(float damageToDeal)
     {
         // sprawdzanie czy gracz atakuje przeciwnika
-        GameObject collidingObject = swordHitbox.gameObject.GetComponent<HitboxBehaviour>().collidingEnemyObject;
-        if (collidingObject)
+        List<GameObject> collidingObjects = gameObject.GetComponent<EntityStatus>().detectedTargets;
+        
+        if (collidingObjects.Count > 0)
         {
-            // zadawanie obrażeń
-            collidingObject.GetComponent<EntityStatus>().DealDamage(damageToDeal);
-            swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
+            foreach (var entity in collidingObjects)
+            {
+                // zadawanie obrażeń
+                entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
+                // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
+            }
         }
     }
 

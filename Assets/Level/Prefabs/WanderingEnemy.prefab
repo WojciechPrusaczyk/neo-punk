@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 821905335106443452}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   MovementSpeed: 500
   isFacedRight: 1
   isEnemy: 0
-  detectedTarget: {fileID: 0}
+  detectedTargets: []
   attackRange: 3
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
