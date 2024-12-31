@@ -26,6 +26,7 @@ public class EntityStatus : MonoBehaviour
     public Color heavyDamageColor;
     public Color deathColor;
     public GameObject healthBar;
+    public bool isAlerted;
 
     private GameObject mainUserInterface;
     private SpriteRenderer spriteRenderer;
@@ -388,5 +389,15 @@ public class EntityStatus : MonoBehaviour
     public float GetMovementSpeed()
     {
         return this.MovementSpeed;
+    }
+
+    public void SetIsAlerted(bool IsAlerted)
+    {
+        this.isAlerted = IsAlerted;
+    }
+
+    public bool GetIsAlerted()
+    {
+        return this.isAlerted;
     }
 }
