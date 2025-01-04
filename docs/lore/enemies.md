@@ -5,8 +5,8 @@
 ### Shiverns - Dreszcze
 
 **Shiverns** - nazwa inspirowana słowem "Shivers", czyli dreszcze.
-Nazwa ta odnosi się do wywołujących dreszcze dźwięków które wydają nadchodzące stwory.  
-Dźwięki wywołują uderzając twardymi częsciami ciała o podłoże, lub cicho pomrukując.
+Nazwa ta odnosi się do wywołujących dreszcze dźwięków, które wydają nadchodzące stwory.  
+Dźwięki wywołują, uderzając twardymi częściami ciała o podłoże lub cicho pomrukując.
 
 5 lat po przygarnięciu chłopaka do yakuzy zaczynają się stopniowo pojawiać się potwory w ciemnych uliczkach i wąskich zakamarkach.
 Potwory te polują na ludzi, niszcząc jednocześnie ciało i duszę z pomocą słabo widocznych w ciele dziwnych elektronicznych elementów.

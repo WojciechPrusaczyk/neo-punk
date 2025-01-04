@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6843363596781238617}
   m_Layer: 0
-  m_Name: WanderingEnemy
+  m_Name: Shivern dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 3281862635002344801}
   - component: {fileID: 1493955024642417546}
   - component: {fileID: 821905335106443452}
+  - component: {fileID: 6825586211670165422}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8a85fa32ef9944b3b97327b4291f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityName: 
+  entityName: Shivern dog
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
@@ -371,7 +372,30 @@ MonoBehaviour:
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
   healthBar: {fileID: 0}
+  isAlerted: 0
   incomingDamagePercent: 1
+--- !u!95 &6825586211670165422
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3512639872417415216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7cf416ece14481e4795eeb27057fb46d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8842277053671529486
 GameObject:
   m_ObjectHideFlags: 0

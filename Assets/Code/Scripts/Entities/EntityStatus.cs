@@ -16,10 +16,11 @@ public class EntityStatus : MonoBehaviour
     public float entityMaxHelath = 100.0f;
     public int droppedXp = 0;
     public int gold = 0;
-    public float AttackDamage = 0;
-    public float MovementSpeed = 0;
+    public float AttackDamage = 10.0f;
+    public float MovementSpeed = 5.0f;
     public bool isFacedRight = true;
     public bool isEnemy = false;
+    public float deathAnimationLength = 1.0f;
     public List<GameObject> detectedTargets;
     public float attackRange;
     public Color lightDamageColor;
@@ -46,8 +47,8 @@ public class EntityStatus : MonoBehaviour
     {
         mainUserInterface = GameObject.Find("Main User Interface");
         player = GameObject.Find("Player");
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        lootTable = gameObject.GetComponent<LootTable>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        lootTable = GetComponent<LootTable>();
         //missionTracker = player.GetComponent<MissionTracker>();
 
         BaseAttackDamage = AttackDamage;
@@ -234,7 +235,7 @@ public class EntityStatus : MonoBehaviour
     void DeathEvent()
     {
         //if (null != missionTracker) missionTracker.AddTakedown();
-        lootTable.DropLoot();
+        // lootTable.DropLoot();
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
     }
@@ -252,6 +253,7 @@ public class EntityStatus : MonoBehaviour
     
     void GettingDamageEvent( float damage)
     {
+        Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);
             
         if (damage >= ( GetHp() / 2 ) ) StartCoroutine(ChangeColorForInterval(heavyDamageColor, 0.05f));
@@ -309,16 +311,16 @@ public class EntityStatus : MonoBehaviour
     
     private IEnumerator DeathAnimation(Color color, float duration)
     {
-        if (spriteRenderer)
+        if (spriteRenderer && entityHealthPoints > 0)
         {
             spriteRenderer.color = color;
             yield return new WaitForSeconds(duration);
             spriteRenderer.color = Color.white;
+            var entityAnimator = gameObject.GetComponentInChildren<Animator>();
+            SetHp(0);
+            entityAnimator.SetTrigger("HasDied");
+            yield return new WaitForSeconds(deathAnimationLength);
             Destroy(gameObject);
-        }
-        else
-        {
-            Debug.Log("Nie wykryto spriteRenderer");
         }
     }
     

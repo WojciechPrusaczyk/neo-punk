@@ -1,0 +1,2382 @@
+fileFormatVersion: 2
+guid: aaa1a40c5ab03df448919fb48616d539
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Breath_idle(done)
+    second: {fileID: 7400000, guid: 2f500a7842ec3714a98bada3f74c81d8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: fae21ff51a457ce4ab6a4c1ac18048bc, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Eating
+    second: {fileID: 7400000, guid: cfc404337664f63459bb5653fc0171c2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack1_bite(done)
+    second: {fileID: 7400000, guid: 42f64b66ed1ee464e99333859ca7a552, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack2_swipe
+    second: {fileID: 7400000, guid: a8173ade448e42047b12e145856632f3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: base
+    second: {fileID: 7400000, guid: afb7b315de5593544a648eafd60cc10d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: run(done)
+    second: {fileID: 7400000, guid: 97c2bc3059fd10048adc2c478056091b, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638715997510658199
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Dog1~~anims_Frame_0
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 461
+      width: 51
+      height: 42
+    spriteID: 7c961211a922ad44cb6f71ea43e86283
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 461}
+  - name: Dog1~~anims_Frame_1
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 511
+      width: 51
+      height: 42
+    spriteID: b17fc50b75127b241ab7a8b348e982d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 511}
+  - name: Dog1~~anims_Frame_2
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 561
+      width: 51
+      height: 42
+    spriteID: 42d74362e8fcf3c44a205ac88e5aac55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 561}
+  - name: Dog1~~anims_Frame_3
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 204
+      width: 51
+      height: 43
+    spriteID: 5d0fbb2480b575a4b946fdb67b6c4a47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 204}
+  - name: Dog1~~anims_Frame_4
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 255
+      width: 51
+      height: 43
+    spriteID: ba13972c2bced6c45b809e53b1bb37eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 255}
+  - name: Dog1~~anims_Frame_5
+    originalName: 
+    pivot: {x: 0.48, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 179
+      width: 50
+      height: 42
+    spriteID: 14d46d90b66cb0c4093cf3eabc44553f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 179}
+  - name: Dog1~~anims_Frame_6
+    originalName: 
+    pivot: {x: 0.48, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 229
+      width: 50
+      height: 42
+    spriteID: 1262d93cbebbef8428ea200126e7fe2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 229}
+  - name: Dog1~~anims_Frame_7
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 49
+      height: 41
+    spriteID: daf3c56fa4824f44f91ca90af10d08a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+  - name: Dog1~~anims_Frame_8
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 677
+      width: 49
+      height: 41
+    spriteID: 59d1ee6a6da65be4897dcd19d98e7673
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 677}
+  - name: Dog1~~anims_Frame_9
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 475
+      width: 49
+      height: 40
+    spriteID: 54431f2aa46802b48aebed2d222fd562
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 475}
+  - name: Dog1~~anims_Frame_10
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 523
+      width: 49
+      height: 40
+    spriteID: 082b33ccf0daaed489fb007060be0c0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 523}
+  - name: Dog1~~anims_Frame_11
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 571
+      width: 49
+      height: 40
+    spriteID: 9085591cbaa386f4e83f30bf1b239b70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 571}
+  - name: Dog1~~anims_Frame_12
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 619
+      width: 49
+      height: 40
+    spriteID: c556152a870901e4fbf03f56780e64e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 619}
+  - name: Dog1~~anims_Frame_13
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 667
+      width: 49
+      height: 40
+    spriteID: 268fb93c13c19be45816665c4257d6c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 667}
+  - name: Dog1~~anims_Frame_14
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 715
+      width: 49
+      height: 40
+    spriteID: 9bff4eedd6cf4ef4a878faceaee24ca1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 715}
+  - name: Dog1~~anims_Frame_15
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 726
+      width: 49
+      height: 41
+    spriteID: 0c5f2ca8342a4684aa99157e4ec95a93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 726}
+  - name: Dog1~~anims_Frame_16
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 775
+      width: 49
+      height: 41
+    spriteID: a947c0740ff60164dacf8f444f157b5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 775}
+  - name: Dog1~~anims_Frame_17
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 824
+      width: 49
+      height: 41
+    spriteID: fa154a7036c69414f88e50f6dbceed1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 824}
+  - name: Dog1~~anims_Frame_18
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 873
+      width: 49
+      height: 41
+    spriteID: f4574dd8fab989c4fa238f31a3d2a612
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 873}
+  - name: Dog1~~anims_Frame_19
+    originalName: 
+    pivot: {x: 0.48, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 279
+      width: 50
+      height: 42
+    spriteID: 9ce2c5cf174edb74ba41aac2596f53de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 279}
+  - name: Dog1~~anims_Frame_20
+    originalName: 
+    pivot: {x: 0.48, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 329
+      width: 50
+      height: 42
+    spriteID: ca0c3421d7a99dd49b3422ce6fd82764
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 329}
+  - name: Dog1~~anims_Frame_21
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 306
+      width: 51
+      height: 43
+    spriteID: 739ea4a9b19bc534ba40601a1beb20d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 306}
+  - name: Dog1~~anims_Frame_22
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 357
+      width: 51
+      height: 43
+    spriteID: 2d38c8cdd41215e469c7d64207a84dcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 357}
+  - name: Dog1~~anims_Frame_23
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 611
+      width: 51
+      height: 42
+    spriteID: 993f4ded35479dc44815bc0232621a7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 611}
+  - name: Dog1~~anims_Frame_24
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 661
+      width: 51
+      height: 42
+    spriteID: 78ba6e0aefcd905489a8c7a77289f132
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 661}
+  - name: Dog1~~anims_Frame_25
+    originalName: 
+    pivot: {x: 0.44444448, y: -0.6969697}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 177
+      width: 63
+      height: 33
+    spriteID: b07c47566ba3b02489f31f79813ce052
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 177}
+  - name: Dog1~~anims_Frame_26
+    originalName: 
+    pivot: {x: 0.44262296, y: -0.7741935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 912
+      width: 61
+      height: 31
+    spriteID: a94ae235a9f0a804d9f6b0e730421e1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 912}
+  - name: Dog1~~anims_Frame_27
+    originalName: 
+    pivot: {x: 0.46153846, y: -0.75757575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 51
+      width: 65
+      height: 33
+    spriteID: 14b369d248068c34e94c80366079efd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 51}
+  - name: Dog1~~anims_Frame_28
+    originalName: 
+    pivot: {x: 0.44615382, y: -0.53846157}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 4
+      width: 65
+      height: 39
+    spriteID: 22edbadc5bf23c44cae62dc922a382a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 4}
+  - name: Dog1~~anims_Frame_29
+    originalName: 
+    pivot: {x: 0.44615382, y: -0.84375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 137
+      width: 65
+      height: 32
+    spriteID: cc23874f67ebec747b25063dc4c66326
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 137}
+  - name: Dog1~~anims_Frame_30
+    originalName: 
+    pivot: {x: 0.44444448, y: -0.64705884}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 711
+      width: 63
+      height: 34
+    spriteID: c6a39c19043effd4097c2d1eba37999b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 711}
+  - name: Dog1~~anims_Frame_31
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 753
+      width: 51
+      height: 42
+    spriteID: d884cf3f1ff42544c8960462f2c58362
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 753}
+  - name: Dog1~~anims_Frame_32
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 803
+      width: 51
+      height: 42
+    spriteID: 520138569d800df49a57bdadd0d934b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 803}
+  - name: Dog1~~anims_Frame_33
+    originalName: 
+    pivot: {x: 0.4791667, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 379
+      width: 48
+      height: 43
+    spriteID: d34b53cba9f0de34eacd8b40b4507ae3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 379}
+  - name: Dog1~~anims_Frame_34
+    originalName: 
+    pivot: {x: 0.4791667, y: -0.48837212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 430
+      width: 48
+      height: 43
+    spriteID: 97dcf418f50254148a75804172bda416
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 430}
+  - name: Dog1~~anims_Frame_35
+    originalName: 
+    pivot: {x: 0.4545455, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 267
+      width: 44
+      height: 45
+    spriteID: 7b0fb8167db89ce4b978578b1ae4df59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 267}
+  - name: Dog1~~anims_Frame_36
+    originalName: 
+    pivot: {x: 0.4545455, y: -0.4666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 320
+      width: 44
+      height: 45
+    spriteID: c8b889acbcdc5a04792f5cc9b5d68bb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 320}
+  - name: Dog1~~anims_Frame_37
+    originalName: 
+    pivot: {x: 0.4888889, y: -0.47727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 373
+      width: 45
+      height: 44
+    spriteID: beeb018c79846ba4283c9bf9e3103464
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 373}
+  - name: Dog1~~anims_Frame_38
+    originalName: 
+    pivot: {x: 0.53968257, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 4
+      width: 63
+      height: 42
+    spriteID: bf81951b49294bc47b9ec58e4741472e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 4}
+  - name: Dog1~~anims_Frame_39
+    originalName: 
+    pivot: {x: 0.53225803, y: -0.55263156}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 102
+      width: 62
+      height: 38
+    spriteID: 4e2a21dfcc65dc54288bd7abbee5e793
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 102}
+  - name: Dog1~~anims_Frame_40
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.5675675}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 92
+      width: 57
+      height: 37
+    spriteID: b25a065eb64cdc2438b5dd20a21a2b4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 92}
+  - name: Dog1~~anims_Frame_41
+    originalName: 
+    pivot: {x: 0.5084746, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 54
+      width: 59
+      height: 40
+    spriteID: be07a21bd3c890a4e8ab2cfb01e0b53e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 54}
+  - name: Dog1~~anims_Frame_42
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 853
+      width: 51
+      height: 42
+    spriteID: f26f239c65bd61d409ff29594acfa7c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 853}
+  - name: Dog1~~anims_Frame_43
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 903
+      width: 51
+      height: 42
+    spriteID: db2ca0a229c2f214aa927599fa1f7099
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 903}
+  - name: Dog1~~anims_Frame_44
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.52500004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 763
+      width: 49
+      height: 40
+    spriteID: 7662f0d74176f5e4d8f41a1a4aaed037
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 763}
+  - name: Dog1~~anims_Frame_45
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 922
+      width: 49
+      height: 41
+    spriteID: 420798945456b354aa5994d2702afbed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 922}
+  - name: Dog1~~anims_Frame_46
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 481
+      width: 50
+      height: 41
+    spriteID: 2172badae65666141aa0a82ae986917c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 481}
+  - name: Dog1~~anims_Frame_47
+    originalName: 
+    pivot: {x: 0.46808508, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 811
+      width: 47
+      height: 41
+    spriteID: f893053ab58243048b344cedda0eb86e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 811}
+  - name: Dog1~~anims_Frame_48
+    originalName: 
+    pivot: {x: 0.46511632, y: -0.47727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 860
+      width: 43
+      height: 44
+    spriteID: 7d4024f3c3b55c84c97d8ef4bbbf33f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 860}
+  - name: Dog1~~anims_Frame_49
+    originalName: 
+    pivot: {x: 0.4761905, y: -0.47727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 951
+      width: 42
+      height: 44
+    spriteID: e75cc682a170cd141b86e7da666fa705
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 951}
+  - name: Dog1~~anims_Frame_50
+    originalName: 
+    pivot: {x: 0.509434, y: -0.5882353}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 62
+      width: 53
+      height: 34
+    spriteID: 53211f56050074c43be7129ecb2e62c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 62}
+  - name: Dog1~~anims_Frame_51
+    originalName: 
+    pivot: {x: 0.45098042, y: -0.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 104
+      width: 51
+      height: 30
+    spriteID: b625ee18ab22b974b959b81ab7cf7e02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 104}
+  - name: Dog1~~anims_Frame_52
+    originalName: 
+    pivot: {x: 0.4375, y: -0.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 180
+      width: 48
+      height: 30
+    spriteID: d73a5af44a761c04a81194ead12ca994
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 180}
+  - name: Dog1~~anims_Frame_53
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 142
+      width: 49
+      height: 30
+    spriteID: 2f169b2468f90f44394f909ad8dd75ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 142}
+  - name: Dog1~~anims_Frame_54
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 953
+      width: 51
+      height: 42
+    spriteID: 2af48c6c9b31dec43a75e451f9f194b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 953}
+  - name: Dog1~~anims_Frame_55
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 218
+      width: 46
+      height: 27
+    spriteID: d56737e7fab94f641bceefcc0e8a1219
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 218}
+  - name: Dog1~~anims_Frame_56
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 253
+      width: 46
+      height: 27
+    spriteID: 3aeb4d1113af1aa42b712d7193b0383c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 253}
+  - name: Dog1~~anims_Frame_57
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 358
+      width: 45
+      height: 27
+    spriteID: 71b27586bc8277e4ebf5311592241a8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 358}
+  - name: Dog1~~anims_Frame_58
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 393
+      width: 45
+      height: 27
+    spriteID: 93f0a14163f7af844b72ab1514eb21b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 393}
+  - name: Dog1~~anims_Frame_59
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 428
+      width: 45
+      height: 27
+    spriteID: 473d1ab1d03d22a4daa5ab513d7292c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 428}
+  - name: Dog1~~anims_Frame_60
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 463
+      width: 45
+      height: 27
+    spriteID: 410f11ff76146754db746d5ea1ce1268
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 463}
+  - name: Dog1~~anims_Frame_61
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 288
+      width: 46
+      height: 27
+    spriteID: 32b757d5dd258584e91d8000e8bbfe26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 288}
+  - name: Dog1~~anims_Frame_62
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.7037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 323
+      width: 46
+      height: 27
+    spriteID: 4f8d3471f3e54514bb307918b7f94ea9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 323}
+  - name: Dog1~~anims_Frame_63
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 129
+      width: 51
+      height: 42
+    spriteID: 3698efbb541f85b4ea7806794828c9a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 129}
+  - name: Dog1~~anims_Frame_64
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 530
+      width: 50
+      height: 41
+    spriteID: a3e937f81ee3caa4da2fdc4ab44ab579
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 530}
+  - name: Dog1~~anims_Frame_65
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 971
+      width: 49
+      height: 41
+    spriteID: 90ce642521ed67f45ae04da42961f236
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 971}
+  - name: Dog1~~anims_Frame_66
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 579
+      width: 50
+      height: 41
+    spriteID: 9b6deeaa1855a1a47adaa9c047f07ff8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 579}
+  - name: Dog1~~anims_Frame_67
+    originalName: 
+    pivot: {x: 0.46938777, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 218
+      width: 49
+      height: 41
+    spriteID: da909605ec530e7469608a7f277b64b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 218}
+  - name: Dog1~~anims_Frame_68
+    originalName: 
+    pivot: {x: 0.44680852, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 425
+      width: 47
+      height: 42
+    spriteID: 9d5cd60bdcb8939409f3565f0352b84f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 425}
+  - name: Dog1~~anims_Frame_69
+    originalName: 
+    pivot: {x: 0.375, y: -0.48888892}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 408
+      width: 48
+      height: 45
+    spriteID: 9619574a535c4c14497b4cb43dafa188
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 408}
+  - name: Dog1~~anims_Frame_70
+    originalName: 
+    pivot: {x: 0.2857143, y: -0.47916666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 148
+      width: 49
+      height: 48
+    spriteID: bf950190015b6504c8684da4ea1c476f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 148}
+  - name: Dog1~~anims_Frame_71
+    originalName: 
+    pivot: {x: 0.1964286, y: -0.48}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 4
+      width: 56
+      height: 50
+    spriteID: d900a953a159efc44a8b01aa559013db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 4}
+  - name: Dog1~~anims_Frame_72
+    originalName: 
+    pivot: {x: 0.12962961, y: -0.42857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 54
+      height: 56
+    spriteID: ba1f622db7c042a48a5a010d77cfed65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Dog1~~anims_Frame_73
+    originalName: 
+    pivot: {x: 0.09433964, y: -0.4716981}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 53
+      height: 53
+    spriteID: 99ceeffa9408a9a40b839d33189aa7b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 68}
+  - name: Dog1~~anims_Frame_74
+    originalName: 
+    pivot: {x: -0.8461539, y: -1.1515152}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 498
+      width: 26
+      height: 33
+    spriteID: 0471b3f9b848d7141ae3ceb2fe67c681
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 498}
+  - name: Dog1~~anims_Frame_75
+    originalName: 
+    pivot: {x: -3.3000002, y: -2.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 811
+      width: 10
+      height: 18
+    spriteID: a3db34a386f7ac241b557409d13bbcf5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 256, y: 811}
+  - name: Dog1~~anims_Frame_76
+    originalName: 
+    pivot: {x: -2.8, y: -1.516129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 251
+      y: 951
+      width: 15
+      height: 31
+    spriteID: 61f329fa9f903ce4687331f1264d2bc1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 251, y: 951}
+  - name: Dog1~~anims_Frame_77
+    originalName: 
+    pivot: {x: -3.4615386, y: -1.96}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 251
+      y: 990
+      width: 13
+      height: 25
+    spriteID: 00df1cb72af9f9640a95d087cdb48e6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 251, y: 990}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1751375309
+    name: Dog1~~anims
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Dog1~~anims_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 7c961211a922ad44cb6f71ea43e86283
+    - name: Dog1~~anims_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: b17fc50b75127b241ab7a8b348e982d2
+    - name: Dog1~~anims_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 42d74362e8fcf3c44a205ac88e5aac55
+    - name: Dog1~~anims_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 43
+      spriteId: 5d0fbb2480b575a4b946fdb67b6c4a47
+    - name: Dog1~~anims_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 43
+      spriteId: ba13972c2bced6c45b809e53b1bb37eb
+    - name: Dog1~~anims_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 24
+        y: 21
+        width: 50
+        height: 42
+      spriteId: 14d46d90b66cb0c4093cf3eabc44553f
+    - name: Dog1~~anims_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 24
+        y: 21
+        width: 50
+        height: 42
+      spriteId: 1262d93cbebbef8428ea200126e7fe2c
+    - name: Dog1~~anims_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: daf3c56fa4824f44f91ca90af10d08a0
+    - name: Dog1~~anims_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: 59d1ee6a6da65be4897dcd19d98e7673
+    - name: Dog1~~anims_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 54431f2aa46802b48aebed2d222fd562
+    - name: Dog1~~anims_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 082b33ccf0daaed489fb007060be0c0f
+    - name: Dog1~~anims_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 9085591cbaa386f4e83f30bf1b239b70
+    - name: Dog1~~anims_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: c556152a870901e4fbf03f56780e64e6
+    - name: Dog1~~anims_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 268fb93c13c19be45816665c4257d6c1
+    - name: Dog1~~anims_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 9bff4eedd6cf4ef4a878faceaee24ca1
+    - name: Dog1~~anims_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: 0c5f2ca8342a4684aa99157e4ec95a93
+    - name: Dog1~~anims_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: a947c0740ff60164dacf8f444f157b5d
+    - name: Dog1~~anims_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: fa154a7036c69414f88e50f6dbceed1b
+    - name: Dog1~~anims_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 24
+        y: 21
+        width: 49
+        height: 41
+      spriteId: f4574dd8fab989c4fa238f31a3d2a612
+    - name: Dog1~~anims_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 24
+        y: 21
+        width: 50
+        height: 42
+      spriteId: 9ce2c5cf174edb74ba41aac2596f53de
+    - name: Dog1~~anims_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 24
+        y: 21
+        width: 50
+        height: 42
+      spriteId: ca0c3421d7a99dd49b3422ce6fd82764
+    - name: Dog1~~anims_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 43
+      spriteId: 739ea4a9b19bc534ba40601a1beb20d9
+    - name: Dog1~~anims_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 43
+      spriteId: 2d38c8cdd41215e469c7d64207a84dcd
+    - name: Dog1~~anims_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 993f4ded35479dc44815bc0232621a7a
+    - name: Dog1~~anims_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 78ba6e0aefcd905489a8c7a77289f132
+    - name: Dog1~~anims_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 20
+        y: 23
+        width: 63
+        height: 33
+      spriteId: b07c47566ba3b02489f31f79813ce052
+    - name: Dog1~~anims_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 21
+        y: 24
+        width: 61
+        height: 31
+      spriteId: a94ae235a9f0a804d9f6b0e730421e1f
+    - name: Dog1~~anims_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 18
+        y: 25
+        width: 65
+        height: 33
+      spriteId: 14b369d248068c34e94c80366079efd4
+    - name: Dog1~~anims_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 19
+        y: 21
+        width: 65
+        height: 39
+      spriteId: 22edbadc5bf23c44cae62dc922a382a7
+    - name: Dog1~~anims_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 19
+        y: 27
+        width: 65
+        height: 32
+      spriteId: cc23874f67ebec747b25063dc4c66326
+    - name: Dog1~~anims_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 20
+        y: 22
+        width: 63
+        height: 34
+      spriteId: c6a39c19043effd4097c2d1eba37999b
+    - name: Dog1~~anims_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: d884cf3f1ff42544c8960462f2c58362
+    - name: Dog1~~anims_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 520138569d800df49a57bdadd0d934b8
+    - name: Dog1~~anims_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 25
+        y: 21
+        width: 48
+        height: 43
+      spriteId: d34b53cba9f0de34eacd8b40b4507ae3
+    - name: Dog1~~anims_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 25
+        y: 21
+        width: 48
+        height: 43
+      spriteId: 97dcf418f50254148a75804172bda416
+    - name: Dog1~~anims_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 28
+        y: 21
+        width: 44
+        height: 45
+      spriteId: 7b0fb8167db89ce4b978578b1ae4df59
+    - name: Dog1~~anims_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 28
+        y: 21
+        width: 44
+        height: 45
+      spriteId: c8b889acbcdc5a04792f5cc9b5d68bb0
+    - name: Dog1~~anims_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 26
+        y: 21
+        width: 45
+        height: 44
+      spriteId: beeb018c79846ba4283c9bf9e3103464
+    - name: Dog1~~anims_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 14
+        y: 21
+        width: 63
+        height: 42
+      spriteId: bf81951b49294bc47b9ec58e4741472e
+    - name: Dog1~~anims_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 15
+        y: 21
+        width: 62
+        height: 38
+      spriteId: 4e2a21dfcc65dc54288bd7abbee5e793
+    - name: Dog1~~anims_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 18
+        y: 21
+        width: 57
+        height: 37
+      spriteId: b25a065eb64cdc2438b5dd20a21a2b4b
+    - name: Dog1~~anims_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 18
+        y: 21
+        width: 59
+        height: 40
+      spriteId: be07a21bd3c890a4e8ab2cfb01e0b53e
+    - name: Dog1~~anims_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: f26f239c65bd61d409ff29594acfa7c6
+    - name: Dog1~~anims_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: db2ca0a229c2f214aa927599fa1f7099
+    - name: Dog1~~anims_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 27
+        y: 21
+        width: 49
+        height: 40
+      spriteId: 7662f0d74176f5e4d8f41a1a4aaed037
+    - name: Dog1~~anims_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 27
+        y: 21
+        width: 49
+        height: 41
+      spriteId: 420798945456b354aa5994d2702afbed
+    - name: Dog1~~anims_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 26
+        y: 21
+        width: 50
+        height: 41
+      spriteId: 2172badae65666141aa0a82ae986917c
+    - name: Dog1~~anims_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 26
+        y: 21
+        width: 47
+        height: 41
+      spriteId: f893053ab58243048b344cedda0eb86e
+    - name: Dog1~~anims_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 28
+        y: 21
+        width: 43
+        height: 44
+      spriteId: 7d4024f3c3b55c84c97d8ef4bbbf33f3
+    - name: Dog1~~anims_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 28
+        y: 21
+        width: 42
+        height: 44
+      spriteId: e75cc682a170cd141b86e7da666fa705
+    - name: Dog1~~anims_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 21
+        y: 20
+        width: 53
+        height: 34
+      spriteId: 53211f56050074c43be7129ecb2e62c7
+    - name: Dog1~~anims_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 25
+        y: 18
+        width: 51
+        height: 30
+      spriteId: b625ee18ab22b974b959b81ab7cf7e02
+    - name: Dog1~~anims_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 27
+        y: 18
+        width: 48
+        height: 30
+      spriteId: d73a5af44a761c04a81194ead12ca994
+    - name: Dog1~~anims_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 27
+        y: 18
+        width: 49
+        height: 30
+      spriteId: 2f169b2468f90f44394f909ad8dd75ed
+    - name: Dog1~~anims_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 2af48c6c9b31dec43a75e451f9f194b3
+    - name: Dog1~~anims_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 19
+        y: 19
+        width: 46
+        height: 27
+      spriteId: d56737e7fab94f641bceefcc0e8a1219
+    - name: Dog1~~anims_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 19
+        y: 19
+        width: 46
+        height: 27
+      spriteId: 3aeb4d1113af1aa42b712d7193b0383c
+    - name: Dog1~~anims_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 20
+        y: 19
+        width: 45
+        height: 27
+      spriteId: 71b27586bc8277e4ebf5311592241a8b
+    - name: Dog1~~anims_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 20
+        y: 19
+        width: 45
+        height: 27
+      spriteId: 93f0a14163f7af844b72ab1514eb21b7
+    - name: Dog1~~anims_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 20
+        y: 19
+        width: 45
+        height: 27
+      spriteId: 473d1ab1d03d22a4daa5ab513d7292c2
+    - name: Dog1~~anims_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 20
+        y: 19
+        width: 45
+        height: 27
+      spriteId: 410f11ff76146754db746d5ea1ce1268
+    - name: Dog1~~anims_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 19
+        y: 19
+        width: 46
+        height: 27
+      spriteId: 32b757d5dd258584e91d8000e8bbfe26
+    - name: Dog1~~anims_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 19
+        y: 19
+        width: 46
+        height: 27
+      spriteId: 4f8d3471f3e54514bb307918b7f94ea9
+    - name: Dog1~~anims_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 24
+        y: 21
+        width: 51
+        height: 42
+      spriteId: 3698efbb541f85b4ea7806794828c9a4
+    - name: Dog1~~anims_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 26
+        y: 21
+        width: 50
+        height: 41
+      spriteId: a3e937f81ee3caa4da2fdc4ab44ab579
+    - name: Dog1~~anims_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 27
+        y: 21
+        width: 49
+        height: 41
+      spriteId: 90ce642521ed67f45ae04da42961f236
+    - name: Dog1~~anims_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 26
+        y: 21
+        width: 50
+        height: 41
+      spriteId: 9b6deeaa1855a1a47adaa9c047f07ff8
+    - name: Dog1~~anims_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 25
+        y: 21
+        width: 49
+        height: 41
+      spriteId: da909605ec530e7469608a7f277b64b3
+    - name: Dog1~~anims_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 27
+        y: 21
+        width: 47
+        height: 42
+      spriteId: 9d5cd60bdcb8939409f3565f0352b84f
+    - name: Dog1~~anims_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 30
+        y: 22
+        width: 48
+        height: 45
+      spriteId: 9619574a535c4c14497b4cb43dafa188
+    - name: Dog1~~anims_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 34
+        y: 23
+        width: 49
+        height: 48
+      spriteId: bf950190015b6504c8684da4ea1c476f
+    - name: Dog1~~anims_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 37
+        y: 24
+        width: 56
+        height: 50
+      spriteId: d900a953a159efc44a8b01aa559013db
+    - name: Dog1~~anims_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 41
+        y: 24
+        width: 54
+        height: 56
+      spriteId: ba1f622db7c042a48a5a010d77cfed65
+    - name: Dog1~~anims_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 43
+        y: 25
+        width: 53
+        height: 53
+      spriteId: 99ceeffa9408a9a40b839d33189aa7b2
+    - name: Dog1~~anims_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 70
+        y: 38
+        width: 26
+        height: 33
+      spriteId: 0471b3f9b848d7141ae3ceb2fe67c681
+    - name: Dog1~~anims_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 81
+        y: 46
+        width: 10
+        height: 18
+      spriteId: a3db34a386f7ac241b557409d13bbcf5
+    - name: Dog1~~anims_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 90
+        y: 47
+        width: 15
+        height: 31
+      spriteId: 61f329fa9f903ce4687331f1264d2bc1
+    - name: Dog1~~anims_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 93
+        y: 49
+        width: 13
+        height: 25
+      spriteId: 00df1cb72af9f9640a95d087cdb48e6b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 1
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 96, y: 96}

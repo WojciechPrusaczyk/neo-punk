@@ -196,15 +196,14 @@ public class Player : MonoBehaviour
         /*
          * Atak, oraz charge attack
          */
-        // if (!playerEq.isEquipmentShown && Input.GetKey(InputManager.AttackKey) && !isAttacking && !isBlocking &&
-        //     !pauseMenu.IsGamePaused)
-        // {
-        //     if (keyHoldTime < holdTimeThreshold)
-        //     {
-        //         keyHoldTime += Time.deltaTime;
-        //         isChargingAttack = true;
-        //     }
-        // }
+        if (Input.GetKey(InputManager.AttackKey) && !isAttacking && !isBlocking)
+        {
+            if (keyHoldTime < holdTimeThreshold)
+            {
+                keyHoldTime += Time.deltaTime;
+                isChargingAttack = true;
+            }
+        }
 
         if (isChargingAttack)
         {
@@ -212,30 +211,30 @@ public class Player : MonoBehaviour
         }
 
 
-        // if (!playerEq.isEquipmentShown && Input.GetKeyUp(InputManager.AttackKey) && !pauseMenu.IsGamePaused)
-        // {
-        //     if (isChargingAttack)
-        //     {
-        //         if (keyHoldTime >= holdTimeThreshold)
-        //         {
-        //             PerformChargeAttack();
-        //         }
-        //         else
-        //         {
-        //             // Rozpocznij atak od początku sekwencji
-        //             StartAttack();
-        //         }
-        //     }
-        //     else if (isGrounded && isAttacking)
-        //     {
-        //         // Gracz kontynuuje sekwencję ataku
-        //         ContinueAttack();
-        //     }
-        //
-        //     isChargingAttack = false;
-        //     keyHoldTime = 0.0f;
-        // }
-        //
+        if (Input.GetKeyUp(InputManager.AttackKey))
+        {
+            if (isChargingAttack)
+            {
+                if (keyHoldTime >= holdTimeThreshold)
+                {
+                    PerformChargeAttack();
+                }
+                else
+                {
+                    // Rozpocznij atak od początku sekwencji
+                    StartAttack();
+                }
+            }
+            else if (isGrounded && isAttacking)
+            {
+                // Gracz kontynuuje sekwencję ataku
+                ContinueAttack();
+            }
+
+            isChargingAttack = false;
+            keyHoldTime = 0.0f;
+        }
+
         if (canBlock)
         {
             /*
@@ -353,7 +352,7 @@ public class Player : MonoBehaviour
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;
-        animator.Play("Attack_1");
+        // animator.Play("Attack_1");
         DealDamage(playerStatus.GetAttackDamageCount());
         movePlayerOnAttack(0.5f);
     }
@@ -380,7 +379,7 @@ public class Player : MonoBehaviour
                 // Kontynuuj sekwencję ataku
                 attackState++;
 
-                if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
+                // if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 
                 DealDamage(playerStatus.GetAttackDamageCount() * 1.2f);
                 movePlayerOnAttack(0.5f);
