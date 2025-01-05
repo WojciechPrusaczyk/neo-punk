@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,12 +60,15 @@ public class EnemyAI : MonoBehaviour
 
     public float stuckTimeLimit = 5f;
     private float stuckTimer = 0f;
-    
+
+    public bool canMove = true;
+    public bool canSeeThroughWalls = true;
 
     private Vector2 moveDirection;
     public Vector2 randomMoveTime;
     public Vector2 randomMoveInvterval;
     private bool isMoving = false;
+    
     
     
     [Header("Enemy components")]
@@ -117,7 +119,9 @@ public class EnemyAI : MonoBehaviour
     
     private void Update()
     {
-        
+        HasLineOfSight();
+        if(!canMove)
+            return;
         switch (enemyType)
         {
             case EnemyType.FlyingEnemy:
@@ -456,5 +460,41 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.DrawRay(maxJumpHeight.position, rayDirection * obstacleDetectionDistance * 2f, Color.green);
         }
+    }
+
+    public bool CanAttack()
+    {
+        if (Vector2.Distance(playerPosition.position, transform.position) < enemyStatus.attackRange)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void FreezeMovement()
+    {
+        canMove = false;
+    }
+
+    public void RestoreMovement()
+    {
+        canMove = true;
+    }
+
+    public bool HasLineOfSight()
+    {
+        Vector2 rayDirection = (playerPosition.position - eyes.position).normalized;
+        float distance = Vector2.Distance(eyes.position, playerPosition.position);
+
+        RaycastHit2D hit = Physics2D.Raycast(eyes.position, rayDirection, distance);
+        Debug.DrawLine(playerPosition.position, eyes.position, Color.red);
+
+        if (hit.collider.CompareTag("Player"))
+        {   
+            Debug.Log("Line of sight is clear");
+            return true;
+        }
+        Debug.Log($"Line of sight is blocked by {hit.collider.name}");
+        return false;
     }
 }
