@@ -58,12 +58,9 @@ public class EnemyAI : MonoBehaviour
     
     public EnemyState state;
 
-    public float stuckTimeLimit = 5f;
-    private float stuckTimer = 0f;
-
     public bool canMove = true;
-    public bool canSeeThroughWalls = true;
-
+    public bool canAttack = false;
+    
     private Vector2 moveDirection;
     public Vector2 randomMoveTime;
     public Vector2 randomMoveInvterval;
@@ -119,7 +116,8 @@ public class EnemyAI : MonoBehaviour
     
     private void Update()
     {
-        HasLineOfSight();
+        canMove = !CanAttack();
+        
         if(!canMove)
             return;
         switch (enemyType)
@@ -147,15 +145,21 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            state = EnemyState.Chasing;
-            enemyStatus.SetIsAlerted(true);
+            if (HasLineOfSight())
+            {
+                state = EnemyState.Chasing;
+                enemyStatus.SetIsAlerted(true);
 
-            playerAreaCollider.size = alertedAreaSize;
-            playerAreaCollider.offset = alertedAreaOffset;
+                playerAreaCollider.size = alertedAreaSize;
+                playerAreaCollider.offset = alertedAreaOffset;
+                
+                if(!enemyStatus.detectedTargets.Contains(other.gameObject))
+                    enemyStatus.detectedTargets.Add(other.gameObject);
+            }
         }
     }
 
@@ -168,6 +172,9 @@ public class EnemyAI : MonoBehaviour
 
             playerAreaCollider.size = idleAreaSize;
             playerAreaCollider.offset = idleAreaOffset;
+            
+            enemyStatus.detectedTargets.Remove(other.gameObject);
+
         }
     }
 
@@ -185,7 +192,7 @@ public class EnemyAI : MonoBehaviour
     private void WanderJumping()
     {
         CheckForDirectionJumpingWalking();
-        if (IsObstacleAhead() && canJumpOverWall() && floorDetector.isPlayerNearGround)
+        if (IsObstacleAhead() && CanJumpOverWall() && floorDetector.isPlayerNearGround)
         {
             Jump();
         }
@@ -215,7 +222,7 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayerJumping()
     {   
         CheckForDirectionJumpingWalking();
-        if (IsObstacleAhead() && canJumpOverWall() && floorDetector.isPlayerNearGround)
+        if (IsObstacleAhead() && CanJumpOverWall() && floorDetector.isPlayerNearGround)
         {
             Jump();
         }
@@ -296,7 +303,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
     
-    private bool canJumpOverWall()
+    private bool CanJumpOverWall()
     {
         Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
         RaycastHit2D hit = Physics2D.Raycast(maxJumpHeight.position, rayDirection, obstacleDetectionDistance);
@@ -466,6 +473,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (Vector2.Distance(playerPosition.position, transform.position) < enemyStatus.attackRange)
         {
+            FreezeMovement();
             return true;
         }
         return false;
@@ -474,6 +482,7 @@ public class EnemyAI : MonoBehaviour
     public void FreezeMovement()
     {
         canMove = false;
+        rb.velocity = Vector2.zero;
     }
 
     public void RestoreMovement()
@@ -491,10 +500,8 @@ public class EnemyAI : MonoBehaviour
 
         if (hit.collider.CompareTag("Player"))
         {   
-            Debug.Log("Line of sight is clear");
             return true;
         }
-        Debug.Log($"Line of sight is blocked by {hit.collider.name}");
         return false;
     }
 }
