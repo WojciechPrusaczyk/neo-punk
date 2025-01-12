@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 3183106833683018132}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 8777689375351150661}
   - component: {fileID: 6912230288945919038}
   - component: {fileID: 8384373457908972301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 6851569378807637484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.16, y: -1.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -492,7 +492,7 @@ MonoBehaviour:
   isEnemy: 0
   deathAnimationLength: 1
   detectedTargets: []
-  attackRange: 0
+  attackRange: 2
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
@@ -528,7 +528,8 @@ MonoBehaviour:
   obstacleDetectionDistance: 1
   chaseSpeedMultiplier: 1.2
   state: 0
-  stuckTimeLimit: 5
+  canMove: 1
+  canAttack: 0
   randomMoveTime: {x: 3, y: 4}
   randomMoveInvterval: {x: 0, y: 0}
   rb: {fileID: 4494473943123225759}
@@ -579,7 +580,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5534826209829792124}
   - component: {fileID: 1768495469965596104}
-  m_Layer: 0
+  - component: {fileID: 1996738767031890407}
+  m_Layer: 2
   m_Name: PlayerDetectionArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,3 +649,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 20, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &1996738767031890407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741740247566496919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d872edb242bee9f468f77de232c350fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 8777689375351150661}

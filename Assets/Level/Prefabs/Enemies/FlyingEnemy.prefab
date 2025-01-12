@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -124,11 +124,12 @@ MonoBehaviour:
   droppedXp: 0
   gold: 0
   AttackDamage: 0
-  MovementSpeed: 0
+  MovementSpeed: 500
   isFacedRight: 1
   isEnemy: 0
+  deathAnimationLength: 1
   detectedTargets: []
-  attackRange: 0
+  attackRange: 4
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
@@ -164,13 +165,13 @@ MonoBehaviour:
   obstacleDetectionDistance: 1
   chaseSpeedMultiplier: 1.2
   state: 0
-  stuckTimeLimit: 5
+  canMove: 1
+  canAttack: 0
   randomMoveTime: {x: 0, y: 0}
   randomMoveInvterval: {x: 0, y: 0}
-  rb: {fileID: 0}
-  circle: {fileID: 0}
+  rb: {fileID: 6927922031043409816}
+  circle: {fileID: 1267400636918580095}
   direction: {x: 0, y: 0}
-  distanceToPlayer: 0
   currentTargetIndex: 0
   player: {fileID: 0}
 --- !u!114 &1139799258521107825

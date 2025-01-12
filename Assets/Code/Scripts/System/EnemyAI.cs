@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     
     [Header("Enemy Scripts")] 
     [SerializeField]
-    private EntityStatus enemyStatus;
+    public EntityStatus enemyStatus;
     [SerializeField]
     private FloorDetector floorDetector;
 
@@ -142,39 +142,6 @@ public class EnemyAI : MonoBehaviour
                 break;
             default:
                 break;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (HasLineOfSight())
-            {
-                state = EnemyState.Chasing;
-                enemyStatus.SetIsAlerted(true);
-
-                playerAreaCollider.size = alertedAreaSize;
-                playerAreaCollider.offset = alertedAreaOffset;
-                
-                if(!enemyStatus.detectedTargets.Contains(other.gameObject))
-                    enemyStatus.detectedTargets.Add(other.gameObject);
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            state = EnemyState.Wandering;
-            enemyStatus.SetIsAlerted(false);
-
-            playerAreaCollider.size = idleAreaSize;
-            playerAreaCollider.offset = idleAreaOffset;
-            
-            enemyStatus.detectedTargets.Remove(other.gameObject);
-
         }
     }
 
@@ -374,7 +341,7 @@ public class EnemyAI : MonoBehaviour
     }
     
     private void ChasePlayerWalking()
-    {   
+    {
         CheckForDirectionJumpingWalking();
         if (IsObstacleAhead())
         {
@@ -435,8 +402,9 @@ public class EnemyAI : MonoBehaviour
 
         // Randomize a point within a circle around the enemy's current position
         Vector2 randomPoint = Random.insideUnitCircle  + (Vector2)transform.position;
+        Vector2 squashedPoint = new Vector2(randomPoint.x , randomPoint.y / 3);
         // Calculate direction to move towards the random point
-        Vector2 newDir = (randomPoint - (Vector2)transform.position).normalized;
+        Vector2 newDir = (squashedPoint - (Vector2)transform.position).normalized;
         direction = new Vector2(Mathf.Sign(newDir.x), direction.y);
 
         // Randomize move duration
@@ -494,14 +462,16 @@ public class EnemyAI : MonoBehaviour
     {
         Vector2 rayDirection = (playerPosition.position - eyes.position).normalized;
         float distance = Vector2.Distance(eyes.position, playerPosition.position);
+        int layerMask = ~(1 << LayerMask.NameToLayer("Enemy") | 1 << LayerMask.NameToLayer("Ignore Raycast"));
 
-        RaycastHit2D hit = Physics2D.Raycast(eyes.position, rayDirection, distance);
+        RaycastHit2D hit = Physics2D.Raycast(eyes.position, rayDirection, distance, layerMask);
         Debug.DrawLine(playerPosition.position, eyes.position, Color.red);
 
         if (hit.collider.CompareTag("Player"))
         {   
             return true;
         }
+        Debug.Log($"blocked by {hit.collider.name}");
         return false;
     }
 }
