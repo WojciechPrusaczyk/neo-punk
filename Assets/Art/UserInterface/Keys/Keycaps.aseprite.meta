@@ -120,27 +120,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData:
-  - name: Keycaps
-    originalName: 
-    pivot: {x: 0.504, y: -0.005747127}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 125
-      height: 348
-    spriteID: 6cb04e6ba827f274ea76a82688ec7cac
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+  animatedSpriteImportData: []
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -149,15 +129,7 @@ ScriptedImporter:
     layerFlags: 0
     layerType: 0
     blendMode: 0
-    cells:
-    - name: Keycaps
-      frameIndex: 0
-      cellRect:
-        x: 1
-        y: 2
-        width: 125
-        height: 348
-      spriteId: 6cb04e6ba827f274ea76a82688ec7cac
+    cells: []
     linkedCells: []
     parentIndex: -1
   platformSettings: []
