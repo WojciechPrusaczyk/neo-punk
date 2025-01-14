@@ -13,9 +13,17 @@ public class VerticalDoorController : MonoBehaviour
     public float OpeningSpeed = 0.5f;
     public float PauseBetweenOpeningStages = 0.1f;
 
-    private bool IsOpen;
+    public bool IsOpen;
     private bool IsPlayerNear = false;
     private bool AreDoorOpening = false;
+    private float InitialPosition;
+    private float TargetPosition;
+    private float DoorHeight;
+    private void Awake()
+    {
+        InitialPosition = DoorObject.transform.position.y;
+        DoorHeight = DoorObject.GetComponent<SpriteRenderer>().bounds.size.y;
+    }
 
     private void Update()
     {
@@ -76,20 +84,27 @@ public class VerticalDoorController : MonoBehaviour
     {
         AreDoorOpening = true;
 
-        float targetY = IsOpen ? 0 : gameObject.transform.localScale.y;
-        float startY = DoorObject.transform.position.y;
-        float direction = IsOpen ? -1 : 1;
-
-        while (Mathf.Abs(DoorObject.transform.position.y - targetY) > 0.01f)
+        if (!IsOpen)
         {
-            DoorObject.transform.position += new Vector3(0, direction * OpeningSpeed * Time.deltaTime, 0);
-
-            yield return null;
+            float targetY = InitialPosition + DoorHeight;
+            while (Mathf.Abs(DoorObject.transform.position.y - targetY) > 0.01f)
+            {
+                float newY = Mathf.MoveTowards(DoorObject.transform.position.y, targetY, OpeningSpeed * Time.deltaTime);
+                DoorObject.transform.position = new Vector3(DoorObject.transform.position.x, newY, DoorObject.transform.position.z);
+                yield return null;
+            }
         }
-
-        DoorObject.transform.position = new Vector3(DoorObject.transform.position.x, targetY, DoorObject.transform.position.z);
+        else
+        {
+            float targetY = InitialPosition;
+            while (Mathf.Abs(DoorObject.transform.position.y - targetY) > 0.01f)
+            {
+                float newY = Mathf.MoveTowards(DoorObject.transform.position.y, targetY, OpeningSpeed * Time.deltaTime);
+                DoorObject.transform.position = new Vector3(DoorObject.transform.position.x, newY, DoorObject.transform.position.z);
+                yield return null;
+            }
+        }
 
         AreDoorOpening = false;
     }
-
 }
