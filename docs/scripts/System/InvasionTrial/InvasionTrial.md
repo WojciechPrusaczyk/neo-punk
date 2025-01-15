@@ -1,5 +1,7 @@
 ﻿# Klasa InvasionTrial
 
+Klasa `Wave` znajduje się w [`Assets/Code/Scripts/System/InvasionTrial/InvasionTrial.cs`](../../../../Assets/Code/Scripts/System/InvasionTrial/InvasionTrial.cs)
+
 Klasa `InvasionTrial` obsługuje przebieg całego testu inwazji, składającego się z wielu fal przeciwników.
 
 ## Pola

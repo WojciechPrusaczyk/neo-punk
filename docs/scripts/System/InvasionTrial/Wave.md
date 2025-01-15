@@ -1,5 +1,7 @@
 ﻿# Klasa Wave
 
+Klasa `Wave` znajduje się w [`Assets/Code/Scripts/System/InvasionTrial/Wave.cs`](../../../../Assets/Code/Scripts/System/InvasionTrial/Wave.cs)
+
 Klasa `Wave` odpowiada za obsługę pojedynczej fali przeciwników w grze.
 
 ## Pola
