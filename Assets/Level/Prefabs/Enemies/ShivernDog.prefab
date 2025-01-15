@@ -162,7 +162,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.57}
+  m_Offset: {x: 0, y: -0.78}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 8384373457908972301}
   m_Layer: 6
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +401,7 @@ Transform:
   - {fileID: 5534826209829792124}
   - {fileID: 8627576042331456537}
   - {fileID: 7494973037680594706}
+  - {fileID: 7029325918103429054}
   m_Father: {fileID: 6049717235488698575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4494473943123225759
@@ -511,22 +512,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22fc3ad5c5b54224faf3fa28bbc0a7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 1
+  enemyType: 2
   enemyStatus: {fileID: 8576199259621466786}
   floorDetector: {fileID: 4801563365446903473}
   pathParent: {fileID: 6635807506861586123}
   pathPoints: []
   eyes: {fileID: 7705155575658814450}
   offSet: {fileID: 0}
-  maxJumpHeight: {fileID: 0}
+  maxJumpHeight: {fileID: 7029325918103429054}
   floor: {fileID: 7494973037680594706}
   playerAreaCollider: {fileID: 1768495469965596104}
   idleAreaOffset: {x: 11, y: 2}
   idleAreaSize: {x: 20, y: 15}
   alertedAreaOffset: {x: 10, y: 0}
   alertedAreaSize: {x: 30, y: 20}
-  obstacleDetectionDistance: 1
-  chaseSpeedMultiplier: 1.2
+  obstacleDetectionDistance: 3
+  chaseSpeedMultiplier: 1
   state: 0
   canMove: 1
   canAttack: 0
@@ -662,3 +663,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAI: {fileID: 8777689375351150661}
+--- !u!1 &8911344125293847572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7029325918103429054}
+  m_Layer: 6
+  m_Name: JumpHeight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7029325918103429054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911344125293847572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8470020549494968934}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

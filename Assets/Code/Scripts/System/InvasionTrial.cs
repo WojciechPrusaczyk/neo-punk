@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class InvasionTrial : MonoBehaviour
 {
-    public bool started = false;
+    public bool trialStarted = false;
+    public bool trialFinished = false;
 
     public List<Transform> SpawnPoints;
     [SerializeField]
     public List<Wave> waves;
+    public int currentWave = 0;
+    
+    public float durationBetweenWaves = 1f;
 
     public void StartTrial()
     {
-        if (!started)
+        if (!trialStarted)
         {
-            started = true;
+            trialStarted = true;
+            currentWave = 1;
             StartCoroutine(HandleWaves());
         }
     }
@@ -24,8 +29,14 @@ public class InvasionTrial : MonoBehaviour
         foreach (Wave wave in waves)
         {
             wave.SpawnEnemies(spawnPoints: SpawnPoints);
-            yield return new WaitForSeconds(wave.duration);
+            while (!wave.waveEnded)
+            {
+                yield return null;
+            }
+            currentWave++;
+            yield return new WaitForSeconds(durationBetweenWaves);
         }
+        trialFinished = true;
     }
 
     private void Update()
