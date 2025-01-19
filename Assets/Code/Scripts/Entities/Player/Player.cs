@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
         // animator.SetFloat("PlayerSpeed", Mathf.Abs(playerBody.velocity.x));
         // animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
         // animator.SetInteger("PlayerAttackState", attackState);
-        // animator.SetBool("IsPlayerAttacking", isAttacking);
+        animator.SetBool("IsPlayerAttacking", isAttacking);
         // animator.SetBool("IsGrounded", isGrounded);
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
@@ -352,13 +352,15 @@ public class Player : MonoBehaviour
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;
-        // animator.Play("Attack_1");
+        animator.Play("Attack_1");
         DealDamage(playerStatus.GetAttackDamageCount());
-        movePlayerOnAttack(0.5f);
+        movePlayerOnAttack(10.0f);
     }
 
     private void ContinueAttack()
     {
+        movePlayerOnAttack(4.0f);
+
         if (attackCoroutine != null)
         {
             StopCoroutine(attackCoroutine);
@@ -379,10 +381,9 @@ public class Player : MonoBehaviour
                 // Kontynuuj sekwencję ataku
                 attackState++;
 
-                // if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
+                if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 
                 DealDamage(playerStatus.GetAttackDamageCount() * 1.2f);
-                movePlayerOnAttack(0.5f);
             }
 
             // Aktualizuj czas ostatniego ataku

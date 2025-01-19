@@ -17,7 +17,7 @@ TagManager:
   - Enemy
   - Player
   - DamageCollider
-  - 
+  - LightOnly
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: LightOnly
+    uniqueID: 2763659431
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
