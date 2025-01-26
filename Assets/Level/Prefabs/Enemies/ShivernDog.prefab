@@ -487,7 +487,7 @@ MonoBehaviour:
   entityMaxHelath: 100
   droppedXp: 0
   gold: 0
-  AttackDamage: 10
+  AttackDamage: 5
   MovementSpeed: 2000
   isFacedRight: 1
   isEnemy: 0

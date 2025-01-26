@@ -83,6 +83,10 @@ public class EnemyAI : MonoBehaviour
     {
         float disableAttackRange = enemyStatus.attackRange + 1.0f;
         float distanceToPlayer = Vector2.Distance(playerPosition.position, transform.position);
+        if (enemyType == EnemyType.FlyingEnemy)
+        {
+            distanceToPlayer = Vector2.Distance(playerPosition.position, offSet.position);
+        }
 
         canAttack = distanceToPlayer < enemyStatus.attackRange;
         if(canAttack) FreezeMovement();
@@ -196,7 +200,7 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayerFlying()
     {
         CheckForDirection();
-        MoveTowardsPlayer();
+        FlyTowardsPlayer();
     }
 
     private void FollowPath()
@@ -219,15 +223,20 @@ public class EnemyAI : MonoBehaviour
         direction = new Vector2(Mathf.Round(diffNormalized.x), Mathf.Round(diffNormalized.y));
         float xMovement = direction.x * enemyStatus.MovementSpeed * Time.deltaTime * chaseSpeedMultiplier;
 
-        if (enemyType == EnemyType.FlyingEnemy)
-        {
-            float yMovement = direction.y * enemyStatus.MovementSpeed * Time.deltaTime * chaseSpeedMultiplier;
-            rb.velocity = new Vector2(xMovement, yMovement);
-        }
-        else
-        {
-            rb.velocity = new Vector2(xMovement, rb.velocity.y);
-        }
+        rb.velocity = new Vector2(xMovement, rb.velocity.y);
+        
+    }
+    private void FlyTowardsPlayer()
+    {
+        Vector2 difference = playerPosition.position - offSet.position;
+        Vector2 diffNormalized = difference.normalized;
+
+        direction = new Vector2(Mathf.Round(diffNormalized.x), Mathf.Round(diffNormalized.y));
+        float xMovement = direction.x * enemyStatus.MovementSpeed * Time.deltaTime * chaseSpeedMultiplier;
+
+        float yMovement = direction.y * enemyStatus.MovementSpeed * Time.deltaTime * chaseSpeedMultiplier;
+        rb.velocity = new Vector2(xMovement, yMovement);
+        
     }
 
     private IEnumerator RandomWandering()

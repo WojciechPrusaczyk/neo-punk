@@ -11,6 +11,7 @@ public class ShivernDog : MonoBehaviour
 	private EntityStatus _entityStatus;
     private GameObject _entityBody;
     private EnemyAI _enemyAI;
+    private GameObject _player;
 
     public void Awake()
     {
@@ -18,6 +19,7 @@ public class ShivernDog : MonoBehaviour
         _entityStatus = GetComponent<EntityStatus>();
         _enemyAI = GetComponent<EnemyAI>();
         _entityBody = gameObject.transform.Find("Graphics").transform.Find("Body").gameObject;
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -44,22 +46,37 @@ public class ShivernDog : MonoBehaviour
             _entityStatus.isFacedRight = true;
             _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
         }
-        
     }
 
     public void Attack()
     {
         if (_enemyAI.canAttack && !isAttacking)
         {
-            _animator.SetBool("isAttacking", true);
-            _animator.SetTrigger("Attack1");
-            isAttacking = true;
+            StartCoroutine(AttackCoroutine());
         }
-        else if (!_enemyAI.canAttack)
-        {
-            _animator.SetBool("isAttacking", false);
-            isAttacking = false;
-        }
+    }
+    private IEnumerator AttackCoroutine()
+    {
+        isAttacking = true;
+
+        // Trigger the attack animation
+        _animator.SetBool("isAttacking", true);
+        _animator.SetTrigger("Attack1");
+
+        yield return new WaitForSeconds(1);
+
+        DealDamage();
+
+        yield return new WaitForSeconds(0.3f);
+
+        // Reset attack state
+        _animator.SetBool("isAttacking", false);
+        isAttacking = false;
+    }
+    
+    private void DealDamage()
+    {
+        _player.GetComponent<EntityStatus>().DealDamage(_entityStatus.AttackDamage, transform.gameObject);
     }
     
 }
