@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 320ae1708d57d3946a19828425b707e2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: dragonFlyAnimations_Frame_8
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.48780486}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 446
+      y: 61
+      width: 53
+      height: 41
+    spriteID: 2ba18b1c3ca901f448a912f97487d82c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 446, y: 61}
+  - name: dragonFlyAnimations_Frame_9
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.45454547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 386
+      y: 61
+      width: 52
+      height: 44
+    spriteID: ae537cea72581fd4586f0324abbcb5b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 386, y: 61}
+  - name: dragonFlyAnimations_Frame_10
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.24}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 127
+      y: 61
+      width: 52
+      height: 50
+    spriteID: a0bf0c3af5ce82a42b8919e5c30807db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 127, y: 61}
+  - name: dragonFlyAnimations_Frame_11
+    originalName: 
+    pivot: {x: 0.4339623, y: -0.23076925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 61
+      width: 53
+      height: 52
+    spriteID: fe52172e020ceed45a8a3815084fb40d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 61}
+  - name: dragonFlyAnimations_Frame_12
+    originalName: 
+    pivot: {x: 0.4074074, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 61
+      width: 54
+      height: 51
+    spriteID: c95cf15a394a4b046aa5b26086d4a1ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 61}
+  - name: dragonFlyAnimations_Frame_13
+    originalName: 
+    pivot: {x: 0.43137255, y: -0.22}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 187
+      y: 61
+      width: 51
+      height: 50
+    spriteID: 0e8c13c409a68f945bf3c5d30314a51d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 187, y: 61}
+  - name: dragonFlyAnimations_Frame_0
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 255
+      y: 121
+      width: 53
+      height: 30
+    spriteID: 19bbddedefde8a444b1797afd4dd87e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 255, y: 121}
+  - name: dragonFlyAnimations_Frame_1
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 316
+      y: 121
+      width: 53
+      height: 30
+    spriteID: 5f0cb13f15ca9624e947e6314d09e148
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 121}
+  - name: dragonFlyAnimations_Frame_2
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 377
+      y: 121
+      width: 53
+      height: 30
+    spriteID: be986d0089aa4c241ac4219ac684d513
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 377, y: 121}
+  - name: dragonFlyAnimations_Frame_3
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 438
+      y: 121
+      width: 53
+      height: 30
+    spriteID: 0cf6a3e76c8179742966208c6d55c1b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 438, y: 121}
+  - name: dragonFlyAnimations_Frame_4
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 53
+      height: 30
+    spriteID: a7fa0fc4db7e95649a1a43227a7bad89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: dragonFlyAnimations_Frame_5
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 4
+      width: 53
+      height: 30
+    spriteID: 2d9857152d81e7b4fa018fc34b4016ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 4}
+  - name: dragonFlyAnimations_Frame_6
+    originalName: 
+    pivot: {x: 0.41509435, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 198
+      y: 4
+      width: 53
+      height: 30
+    spriteID: fee0d8976224b9541ad65b46661b754c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 198, y: 4}
+  - name: dragonFlyAnimations_Frame_7
+    originalName: 
+    pivot: {x: 0.4074074, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 193
+      y: 121
+      width: 54
+      height: 30
+    spriteID: e34e36013125f524898f6d29f620f952
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 193, y: 121}
+  - name: dragonFlyAnimations_Frame_14
+    originalName: 
+    pivot: {x: 0.44, y: -0.20754717}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 121
+      width: 50
+      height: 53
+    spriteID: 0207a88df6f72cd42b5c361e56a725ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 121}
+  - name: dragonFlyAnimations_Frame_15
+    originalName: 
+    pivot: {x: 0.4615385, y: -0.20754717}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 121
+      width: 52
+      height: 53
+    spriteID: ce52cf732a5443d4f85a4c11bbff33ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 121}
+  - name: dragonFlyAnimations_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.30612245}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 64
+      height: 49
+    spriteID: a83403c6eb913184ebf3b4ea0f0d8de9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: dragonFlyAnimations_Frame_17
+    originalName: 
+    pivot: {x: 0.50793654, y: -0.43243244}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 246
+      y: 61
+      width: 63
+      height: 37
+    spriteID: 16add166248bbbf47b994d102baa253e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 246, y: 61}
+  - name: dragonFlyAnimations_Frame_18
+    originalName: 
+    pivot: {x: 0.49180326, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 317
+      y: 61
+      width: 61
+      height: 38
+    spriteID: 5f7e896c0ac87d242a93278abd4fdc4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 317, y: 61}
+  - name: dragonFlyAnimations_Frame_19
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.083333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 121
+      width: 63
+      height: 36
+    spriteID: 2497eecc0e237d44a82d065493f4469d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 121}
+  - name: dragonFlyAnimations_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 259
+      y: 4
+      width: 64
+      height: 18
+    spriteID: b51e3c466bd72cb4dad39a218e7e6796
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 259, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -272228581
+    name: dragonFlyAnimations
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: dragonFlyAnimations_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 41
+      spriteId: 2ba18b1c3ca901f448a912f97487d82c
+    - name: dragonFlyAnimations_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 10
+        y: 20
+        width: 52
+        height: 44
+      spriteId: ae537cea72581fd4586f0324abbcb5b6
+    - name: dragonFlyAnimations_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 10
+        y: 12
+        width: 52
+        height: 50
+      spriteId: a0bf0c3af5ce82a42b8919e5c30807db
+    - name: dragonFlyAnimations_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 9
+        y: 12
+        width: 53
+        height: 52
+      spriteId: fe52172e020ceed45a8a3815084fb40d
+    - name: dragonFlyAnimations_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 10
+        y: 13
+        width: 54
+        height: 51
+      spriteId: c95cf15a394a4b046aa5b26086d4a1ef
+    - name: dragonFlyAnimations_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 10
+        y: 11
+        width: 51
+        height: 50
+      spriteId: 0e8c13c409a68f945bf3c5d30314a51d
+    - name: dragonFlyAnimations_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: 19bbddedefde8a444b1797afd4dd87e0
+    - name: dragonFlyAnimations_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: 5f0cb13f15ca9624e947e6314d09e148
+    - name: dragonFlyAnimations_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: be986d0089aa4c241ac4219ac684d513
+    - name: dragonFlyAnimations_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: 0cf6a3e76c8179742966208c6d55c1b0
+    - name: dragonFlyAnimations_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: a7fa0fc4db7e95649a1a43227a7bad89
+    - name: dragonFlyAnimations_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: 2d9857152d81e7b4fa018fc34b4016ea
+    - name: dragonFlyAnimations_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 10
+        y: 20
+        width: 53
+        height: 30
+      spriteId: fee0d8976224b9541ad65b46661b754c
+    - name: dragonFlyAnimations_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 10
+        y: 20
+        width: 54
+        height: 30
+      spriteId: e34e36013125f524898f6d29f620f952
+    - name: dragonFlyAnimations_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 10
+        y: 11
+        width: 50
+        height: 53
+      spriteId: 0207a88df6f72cd42b5c361e56a725ea
+    - name: dragonFlyAnimations_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 8
+        y: 11
+        width: 52
+        height: 53
+      spriteId: ce52cf732a5443d4f85a4c11bbff33ec
+    - name: dragonFlyAnimations_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: 15
+        width: 64
+        height: 49
+      spriteId: a83403c6eb913184ebf3b4ea0f0d8de9
+    - name: dragonFlyAnimations_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 16
+        width: 63
+        height: 37
+      spriteId: 16add166248bbbf47b994d102baa253e
+    - name: dragonFlyAnimations_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 2
+        y: 19
+        width: 61
+        height: 38
+      spriteId: 5f7e896c0ac87d242a93278abd4fdc4f
+    - name: dragonFlyAnimations_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 1
+        y: 3
+        width: 63
+        height: 36
+      spriteId: 2497eecc0e237d44a82d065493f4469d
+    - name: dragonFlyAnimations_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 0
+        width: 64
+        height: 18
+      spriteId: b51e3c466bd72cb4dad39a218e7e6796
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

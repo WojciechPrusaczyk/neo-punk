@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: 394438510452e5d468a0e4b75c216b03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6829540755434924743
+    second: dragonFlyAnimations_0
+  - first:
+      213: 113931440450191852
+    second: dragonFlyAnimations_1
+  - first:
+      213: 6135464830939358994
+    second: dragonFlyAnimations_2
+  - first:
+      213: 4810166211834467755
+    second: dragonFlyAnimations_3
+  - first:
+      213: -1597342272276662080
+    second: dragonFlyAnimations_4
+  - first:
+      213: -6079673926391262917
+    second: dragonFlyAnimations_5
+  - first:
+      213: -5944196974698948529
+    second: dragonFlyAnimations_6
+  - first:
+      213: 1582816532579121916
+    second: dragonFlyAnimations_7
+  - first:
+      213: 8953008124507995046
+    second: dragonFlyAnimations_8
+  - first:
+      213: -1177505192672405312
+    second: dragonFlyAnimations_9
+  - first:
+      213: 3702583013790853178
+    second: dragonFlyAnimations_10
+  - first:
+      213: 6717592243282336158
+    second: dragonFlyAnimations_11
+  - first:
+      213: 1460346674077363271
+    second: dragonFlyAnimations_12
+  - first:
+      213: -4661037984960860889
+    second: dragonFlyAnimations_13
+  - first:
+      213: -3506209855717126763
+    second: dragonFlyAnimations_14
+  - first:
+      213: -3411993450433730760
+    second: dragonFlyAnimations_15
+  - first:
+      213: 8143064318062873967
+    second: dragonFlyAnimations_16
+  - first:
+      213: 6636219478590553027
+    second: dragonFlyAnimations_17
+  - first:
+      213: 6959827607611080398
+    second: dragonFlyAnimations_18
+  - first:
+      213: -3988909675583918716
+    second: dragonFlyAnimations_19
+  - first:
+      213: -6152649077123192309
+    second: dragonFlyAnimations_20
+  - first:
+      213: 158525651490144781
+    second: dragonFlyAnimations_21
+  - first:
+      213: 1839644449107041219
+    second: dragonFlyAnimations_22
+  - first:
+      213: 7705846669304708486
+    second: dragonFlyAnimations_23
+  - first:
+      213: -3116661338919543415
+    second: dragonFlyAnimations_24
+  - first:
+      213: 2915117591549853414
+    second: dragonFlyAnimations_25
+  - first:
+      213: -8717253899324653647
+    second: dragonFlyAnimations_26
+  - first:
+      213: 3719286007828338551
+    second: dragonFlyAnimations_27
+  - first:
+      213: -6399249308825978658
+    second: dragonFlyAnimations_28
+  - first:
+      213: 9056802457740655687
+    second: dragonFlyAnimations_29
+  - first:
+      213: -7912451513763345766
+    second: dragonFlyAnimations_30
+  - first:
+      213: -979144163088657776
+    second: dragonFlyAnimations_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragonFlyAnimations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca60c2f12767ce50800000000000000
+      internalID: 6829540755434924743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce148cc9a04c49100800000000000000
+      internalID: 113931440450191852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217ea04b1cc852550800000000000000
+      internalID: 6135464830939358994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba5dafe2fa421c240800000000000000
+      internalID: 4810166211834467755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8fb3c9aa915d9e0800000000000000
+      internalID: -1597342272276662080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b319e3386c8a0aba0800000000000000
+      internalID: -6079673926391262917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f481e106858f18da0800000000000000
+      internalID: -5944196974698948529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa7ef0104b47f510800000000000000
+      internalID: 1582816532579121916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab3c7444797f3c70800000000000000
+      internalID: 8953008124507995046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c855951449a8afe0800000000000000
+      internalID: -1177505192672405312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38266842a7326330800000000000000
+      internalID: 3702583013790853178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9953cecd8ea93d50800000000000000
+      internalID: 6717592243282336158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ced451091344410800000000000000
+      internalID: 1460346674077363271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d2ecdd5aaa05fb0800000000000000
+      internalID: -4661037984960860889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59dc10286b0775fc0800000000000000
+      internalID: -3506209855717126763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlyAnimations_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83720fac80a26a0d0800000000000000
+      internalID: -3411993450433730760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 47d333207b8dcda47baf0bca05928427
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dragonFlyAnimations_0: 6829540755434924743
+      dragonFlyAnimations_1: 113931440450191852
+      dragonFlyAnimations_10: 3702583013790853178
+      dragonFlyAnimations_11: 6717592243282336158
+      dragonFlyAnimations_12: 1460346674077363271
+      dragonFlyAnimations_13: -4661037984960860889
+      dragonFlyAnimations_14: -3506209855717126763
+      dragonFlyAnimations_15: -3411993450433730760
+      dragonFlyAnimations_2: 6135464830939358994
+      dragonFlyAnimations_3: 4810166211834467755
+      dragonFlyAnimations_4: -1597342272276662080
+      dragonFlyAnimations_5: -6079673926391262917
+      dragonFlyAnimations_6: -5944196974698948529
+      dragonFlyAnimations_7: 1582816532579121916
+      dragonFlyAnimations_8: 8953008124507995046
+      dragonFlyAnimations_9: -1177505192672405312
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

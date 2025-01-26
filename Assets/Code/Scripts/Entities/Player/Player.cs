@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     private CapsuleCollider2D boxCollider;
     private GameObject swordHitbox;
     private Vector3 previousPosition;
-    private float attackTimeout = 0.6f; // Czas na zakończenie sekwencji ataku
+    private float attackTimeout = 1.0f; // Czas na zakończenie sekwencji ataku
     private float lastAttackTime = 0; // aktualny pomiędzy atakami
     private float attackCooldown = 0.3f; // cooldown ponmiędzy atakami
     private Coroutine attackCoroutine;
@@ -128,9 +128,12 @@ public class Player : MonoBehaviour
         /*
          * Blokowanie chodzenia do tyłu, gdy gracz atakuje, lub blokuje
          */
-        if (isAttacking &&
-            ((horizontalInput < 0 && playerStatus.isFacedRight) ||
-             (horizontalInput > 0 && !playerStatus.isFacedRight)))
+        // if (isAttacking &&
+        //     ((horizontalInput < 0 && playerStatus.isFacedRight) ||
+        //      (horizontalInput > 0 && !playerStatus.isFacedRight)))
+        // {
+        // else if (isBlocking) horizontalInput = 0;
+        if (isAttacking)
         {
             horizontalInput = 0;
         }
@@ -352,14 +355,13 @@ public class Player : MonoBehaviour
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;
+        movePlayerOnAttack(3.0f);
         animator.Play("Attack_1");
         DealDamage(playerStatus.GetAttackDamageCount());
-        movePlayerOnAttack(10.0f);
     }
 
     private void ContinueAttack()
     {
-        movePlayerOnAttack(4.0f);
 
         if (attackCoroutine != null)
         {
@@ -371,19 +373,24 @@ public class Player : MonoBehaviour
         // Sprawdź, czy minęło wystarczająco dużo czasu między atakami
         if (Time.time - lastAttackTime >= attackCooldown)
         {
+            movePlayerOnAttack(3.0f);
             if (attackState == 3)
             {
                 // Gracz zaczyna nową sekwencję ataku
                 attackState = 1;
+                animator.Play("Attack_1");
+                DealDamage(playerStatus.GetAttackDamageCount());
             }
             else
             {
                 // Kontynuuj sekwencję ataku
                 attackState++;
 
+                movePlayerOnAttack(3.0f);
+
                 if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 
-                DealDamage(playerStatus.GetAttackDamageCount() * 1.2f);
+                DealDamage(playerStatus.GetAttackDamageCount());
             }
 
             // Aktualizuj czas ostatniego ataku
