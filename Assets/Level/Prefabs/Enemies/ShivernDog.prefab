@@ -487,7 +487,7 @@ MonoBehaviour:
   entityMaxHelath: 100
   droppedXp: 0
   gold: 0
-  AttackDamage: 0
+  AttackDamage: 10
   MovementSpeed: 2000
   isFacedRight: 1
   isEnemy: 0
@@ -522,22 +522,18 @@ MonoBehaviour:
   maxJumpHeight: {fileID: 7029325918103429054}
   floor: {fileID: 7494973037680594706}
   playerAreaCollider: {fileID: 1768495469965596104}
+  hitBox: {fileID: 0}
+  obstacleDetectionDistance: 3
+  chaseSpeedMultiplier: 1
   idleAreaOffset: {x: 11, y: 2}
   idleAreaSize: {x: 20, y: 15}
   alertedAreaOffset: {x: 10, y: 0}
   alertedAreaSize: {x: 30, y: 20}
-  obstacleDetectionDistance: 3
-  chaseSpeedMultiplier: 1
+  randomMoveTime: {x: 1, y: 2}
+  randomMoveInterval: {x: 0.5, y: 1}
   state: 0
   canMove: 1
   canAttack: 0
-  randomMoveTime: {x: 3, y: 4}
-  randomMoveInvterval: {x: 0, y: 0}
-  rb: {fileID: 4494473943123225759}
-  circle: {fileID: 4165580350547313471}
-  direction: {x: 0, y: 0}
-  currentTargetIndex: 0
-  player: {fileID: 0}
 --- !u!114 &6912230288945919038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEating: 0
+  isAttacking: 0
 --- !u!1 &7741740247566496919
 GameObject:
   m_ObjectHideFlags: 0

@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 6539446160186281455}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,12 +479,14 @@ MonoBehaviour:
   MovementSpeed: 10
   isFacedRight: 1
   isEnemy: 0
+  deathAnimationLength: 1
   detectedTargets: []
   attackRange: 0
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
   healthBar: {fileID: 0}
+  isAlerted: 0
   incomingDamagePercent: 1
 --- !u!50 &4337659383365769931
 Rigidbody2D:

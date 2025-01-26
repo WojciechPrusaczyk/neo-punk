@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ShivernDog : MonoBehaviour
+public class Dragonfly : MonoBehaviour
 {
-    [FormerlySerializedAs("IsEating")] public bool isEating = false;
     public bool isAttacking = false;
     private Animator _animator;
-	private EntityStatus _entityStatus;
+    private EntityStatus _entityStatus;
     private GameObject _entityBody;
     private EnemyAI _enemyAI;
 
@@ -25,23 +24,21 @@ public class ShivernDog : MonoBehaviour
     {
         float entityVelocity = GetComponent<Rigidbody2D>().velocity.x;
 
-        Attack();
+        //Attack();
 
-        _animator.SetBool("IsEating", isEating);
-        _animator.SetFloat("Velocity", entityVelocity);
 
         /*
          * Obrót srpite'a jednostki
          */
-        if (entityVelocity > 0 && _entityStatus.isFacedRight && (Time.timeScale != 0))
+        if (entityVelocity > 0 && !_entityStatus.isFacedRight && (Time.timeScale != 0))
         {
-            _entityStatus.isFacedRight = false;
+            _entityStatus.isFacedRight = true;
             _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
         }
 
-        if (entityVelocity < 0 && !_entityStatus.isFacedRight && (Time.timeScale != 0))
+        if (entityVelocity < 0 && _entityStatus.isFacedRight && (Time.timeScale != 0))
         {
-            _entityStatus.isFacedRight = true;
+            _entityStatus.isFacedRight = false;
             _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
         }
         

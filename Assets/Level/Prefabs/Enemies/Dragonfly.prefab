@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5233852431540622005}
   - component: {fileID: 5208658026229679533}
   - component: {fileID: 1139799258521107825}
+  - component: {fileID: 7554672013920220350}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 15735642140565428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.6, y: 2.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124,7 +125,7 @@ MonoBehaviour:
   droppedXp: 0
   gold: 0
   AttackDamage: 0
-  MovementSpeed: 500
+  MovementSpeed: 1000
   isFacedRight: 0
   isEnemy: 1
   deathAnimationLength: 1
@@ -158,22 +159,18 @@ MonoBehaviour:
   maxJumpHeight: {fileID: 0}
   floor: {fileID: 0}
   playerAreaCollider: {fileID: 6552410450077243689}
-  idleAreaOffset: {x: 11, y: -2}
+  hitBox: {fileID: 0}
+  obstacleDetectionDistance: 1
+  chaseSpeedMultiplier: 1.2
+  idleAreaOffset: {x: 5, y: -2}
   idleAreaSize: {x: 20, y: 15}
   alertedAreaOffset: {x: 11, y: 0}
   alertedAreaSize: {x: 30, y: 25}
-  obstacleDetectionDistance: 1
-  chaseSpeedMultiplier: 1.2
+  randomMoveTime: {x: 2, y: 3}
+  randomMoveInterval: {x: 0.6, y: 1}
   state: 0
   canMove: 1
   canAttack: 0
-  randomMoveTime: {x: 0, y: 0}
-  randomMoveInvterval: {x: 0, y: 0}
-  rb: {fileID: 6927922031043409816}
-  circle: {fileID: 1267400636918580095}
-  direction: {x: 0, y: 0}
-  currentTargetIndex: 0
-  player: {fileID: 0}
 --- !u!114 &1139799258521107825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +191,19 @@ MonoBehaviour:
   OnTagRemoved:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7554672013920220350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15735642140565428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d10e134700b414bbb35870ebbaf0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
 --- !u!1 &394498498997932825
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7459596112014954972}
   - component: {fileID: 7095842477036776155}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpotRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6981333605424198263}
   - component: {fileID: 1937561984492083327}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885174076544792119}
   - component: {fileID: 7914983738892581069}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpotLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +704,8 @@ GameObject:
   m_Component:
   - component: {fileID: 199906947420034913}
   - component: {fileID: 6552410450077243689}
-  m_Layer: 0
+  - component: {fileID: 3907929926119363994}
+  m_Layer: 2
   m_Name: PlayerDetectionArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +721,7 @@ Transform:
   m_GameObject: {fileID: 5732030912849480625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.53, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,7 +761,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 11, y: -2}
+  m_Offset: {x: 5.34, y: -2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -762,6 +773,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.99, y: 6}
   m_EdgeRadius: 0
+--- !u!114 &3907929926119363994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732030912849480625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d872edb242bee9f468f77de232c350fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 5208658026229679533}
 --- !u!1 &6395396408715519714
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3851776440845367548}
   - component: {fileID: 542560556766396693}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
