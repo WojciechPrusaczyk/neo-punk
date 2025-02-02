@@ -75,7 +75,6 @@ public class EnemyAI : MonoBehaviour
         UpdateAttackState();
 
         if (!canMove || playerPosition == null) return;
-
         HandleEnemyBehavior();
     }
 
@@ -93,7 +92,6 @@ public class EnemyAI : MonoBehaviour
         
         if (distanceToPlayer > disableAttackRange)
         {
-            RestoreMovement();
             canAttack = false;
         }
     }
@@ -321,8 +319,8 @@ public class EnemyAI : MonoBehaviour
     {
         Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
         RaycastHit2D hit = Physics2D.Raycast(eyes.position, rayDirection, obstacleDetectionDistance);
-
-        return hit.collider != null && hit.collider.CompareTag("impassableFloor");
+        
+        return hit.collider != null && hit.transform.gameObject.layer == LayerMask.NameToLayer("ImpassableWall");
     }
 
     private void OnDrawGizmos()

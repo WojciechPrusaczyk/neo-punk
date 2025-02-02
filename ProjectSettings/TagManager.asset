@@ -19,7 +19,7 @@ TagManager:
   - DamageCollider
   - LightOnly
   - ImpassableWall
-  - 
+  - Projectile
   - 
   - 
   - 

@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 213839507433032239}
   - component: {fileID: 2789245160704931270}
   - component: {fileID: 7831788010612429982}
+  - component: {fileID: 2935131348238125296}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -361,6 +362,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2935131348238125296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731637166025212283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80cadc3496a353f49a92aa324e5063cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shivernDog: {fileID: 8384373457908972301}
 --- !u!1 &6851569378807637484
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEating: 0
   isAttacking: 0
+  attackAnimations:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7741740247566496919
 GameObject:
   m_ObjectHideFlags: 0

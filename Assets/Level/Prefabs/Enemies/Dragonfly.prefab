@@ -203,6 +203,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
+  animToPlay: DragonFlyAttack
+  bulletPrefab: {fileID: 3574922348067596441, guid: 4a15eab532008f84dac044122f5fa237, type: 3}
+  bulletSpawn: {fileID: 4209835047449094207}
+  bulletSpeed: 10
 --- !u!1 &394498498997932825
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1419458996981861536, guid: e0fff40d9959ff34489f2ec829798a7f, type: 3}
+  m_Sprite: {fileID: 8173861258483142685, guid: 320ae1708d57d3946a19828425b707e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

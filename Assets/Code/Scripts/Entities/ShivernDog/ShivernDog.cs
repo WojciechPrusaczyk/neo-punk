@@ -13,6 +13,8 @@ public class ShivernDog : MonoBehaviour
     private EnemyAI _enemyAI;
     private GameObject _player;
 
+    public List<string> attackAnimations;
+
     public void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -48,35 +50,37 @@ public class ShivernDog : MonoBehaviour
         }
     }
 
+    public void LookAtPlayer()
+    {
+        if (_player.transform.position.x > transform.position.x && _entityStatus.isFacedRight)
+        {
+            _entityStatus.isFacedRight = false;
+            _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
+        }
+
+        if (_player.transform.position.x < transform.position.x && !_entityStatus.isFacedRight)
+        {
+            _entityStatus.isFacedRight = true;
+            _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
+        }
+    }
+    
     public void Attack()
     {
         if (_enemyAI.canAttack && !isAttacking)
         {
-            StartCoroutine(AttackCoroutine());
+            isAttacking = true;
+            LookAtPlayer();
+
+            string animToPlay = attackAnimations[Random.Range(0, attackAnimations.Count)];
+        
+            _animator.Play(animToPlay);
         }
     }
-    private IEnumerator AttackCoroutine()
-    {
-        isAttacking = true;
-
-        // Trigger the attack animation
-        _animator.SetBool("isAttacking", true);
-        _animator.SetTrigger("Attack1");
-
-        yield return new WaitForSeconds(1);
-
-        DealDamage();
-
-        yield return new WaitForSeconds(0.3f);
-
-        // Reset attack state
-        _animator.SetBool("isAttacking", false);
-        isAttacking = false;
-    }
     
-    private void DealDamage()
-    {
-        _player.GetComponent<EntityStatus>().DealDamage(_entityStatus.AttackDamage, transform.gameObject);
+    public void DealDamage()
+    {        
+        if(_enemyAI.canAttack)
+            _player.GetComponent<EntityStatus>().DealDamage(_entityStatus.AttackDamage, transform.gameObject);
     }
-    
 }
