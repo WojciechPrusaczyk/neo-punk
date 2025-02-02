@@ -1,0 +1,1063 @@
+fileFormatVersion: 2
+guid: f377cca7ee8d1e9489020a6e39416b15
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: bieg-21.01_Frame_0
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 117
+      height: 67
+    spriteID: 5ad4f5a88eb427f49b95cd8c80daa3dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: bieg-21.01_Frame_1
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 307
+      width: 117
+      height: 67
+    spriteID: 3888d5e95e1444f46a2d7be3842f5d9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 307}
+  - name: bieg-21.01_Frame_2
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 382
+      width: 117
+      height: 67
+    spriteID: 84091b2ad06e8004895b4574eb071cf5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 382}
+  - name: bieg-21.01_Frame_3
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 457
+      width: 117
+      height: 67
+    spriteID: 12d79dcc6738b0349885385bdce77728
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 457}
+  - name: bieg-21.01_Frame_4
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 532
+      width: 117
+      height: 67
+    spriteID: 7da29f333a0e05243b7a520784d2c714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 532}
+  - name: bieg-21.01_Frame_5
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 607
+      width: 117
+      height: 67
+    spriteID: dc35b4de1a60660479015c0142b21599
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 607}
+  - name: bieg-21.01_Frame_6
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 682
+      width: 117
+      height: 67
+    spriteID: bbedffa2082a18b41b65cc43f222fbba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 682}
+  - name: bieg-21.01_Frame_7
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 757
+      width: 117
+      height: 67
+    spriteID: 964346b43b35a44469bc2f1e422620fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 757}
+  - name: bieg-21.01_Frame_8
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 832
+      width: 117
+      height: 67
+    spriteID: 308b7c4d0961b2346bd937e15e17f4d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 832}
+  - name: bieg-21.01_Frame_9
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 907
+      width: 117
+      height: 67
+    spriteID: b337f75b692660244915f64f7d984356
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 907}
+  - name: bieg-21.01_Frame_10
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 4
+      width: 117
+      height: 67
+    spriteID: 8e4a1cd911f2912438dbfaa8aa20803c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 4}
+  - name: bieg-21.01_Frame_11
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 79
+      width: 117
+      height: 67
+    spriteID: 4cd682bc0f8bf324f82380cee92282c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 79}
+  - name: bieg-21.01_Frame_12
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 154
+      width: 117
+      height: 67
+    spriteID: 5725124b452407a4a9a2ce015be3cfd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 154}
+  - name: bieg-21.01_Frame_13
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 229
+      width: 117
+      height: 67
+    spriteID: 2875cb2f31460ea4481df08307940a7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 229}
+  - name: bieg-21.01_Frame_14
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 304
+      width: 117
+      height: 67
+    spriteID: a4f0a87e47089ec40b7377e2ca82551f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 304}
+  - name: bieg-21.01_Frame_15
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 379
+      width: 117
+      height: 67
+    spriteID: 89c034e53a80a5f449ce1b4ab5f21ea0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 379}
+  - name: bieg-21.01_Frame_16
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 454
+      width: 117
+      height: 67
+    spriteID: aa1dea3766665db4a912641d05dfe866
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 454}
+  - name: bieg-21.01_Frame_17
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 529
+      width: 117
+      height: 67
+    spriteID: cd6b2cbf35b5d3642b676e80789cc62c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 529}
+  - name: bieg-21.01_Frame_18
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 604
+      width: 117
+      height: 67
+    spriteID: 888d26e8857aace4198c63f9b18e713f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 604}
+  - name: bieg-21.01_Frame_19
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 679
+      width: 117
+      height: 67
+    spriteID: 48cd43548df04df4db1379beef021f98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 679}
+  - name: bieg-21.01_Frame_20
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 754
+      width: 117
+      height: 67
+    spriteID: db8ee2dd99d0ec1488395ff5dbc65d7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 754}
+  - name: bieg-21.01_Frame_21
+    originalName: 
+    pivot: {x: 0.54310346, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 379
+      width: 116
+      height: 67
+    spriteID: 5877f6e641a7706499c2bdcc7ef0fd9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 379}
+  - name: bieg-21.01_Frame_22
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029411767}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 117
+      height: 68
+    spriteID: d1b6317bd00b3594a8106090209bddcc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: bieg-21.01_Frame_23
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029411767}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 117
+      height: 68
+    spriteID: 13acaed10f0bbfc49b84a0b497b46646
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: bieg-21.01_Frame_24
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 829
+      width: 117
+      height: 67
+    spriteID: 3e7965dcec6ffa34093ee3b7a10159dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 829}
+  - name: bieg-21.01_Frame_25
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 904
+      width: 117
+      height: 67
+    spriteID: c3b09767ec9d8da41afbe3936d81bc1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 904}
+  - name: bieg-21.01_Frame_26
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.030769233}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 454
+      width: 117
+      height: 65
+    spriteID: 224b398e8dd27434085897ec7d877391
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 454}
+  - name: bieg-21.01_Frame_27
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029411767}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 156
+      width: 117
+      height: 68
+    spriteID: 825b8ec50a693f0419ab5d4dd941f60a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 156}
+  - name: bieg-21.01_Frame_28
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 4
+      width: 117
+      height: 67
+    spriteID: 57f5654eda4f93944bbb5080c05d988f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 4}
+  - name: bieg-21.01_Frame_29
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 79
+      width: 117
+      height: 67
+    spriteID: d4c6223feb9a8934bad9e32a1b10dd51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 79}
+  - name: bieg-21.01_Frame_30
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 154
+      width: 117
+      height: 67
+    spriteID: 9741f15b1da59e74b9738da56491bc38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 154}
+  - name: bieg-21.01_Frame_31
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 229
+      width: 117
+      height: 67
+    spriteID: fce96294670f55341a32636e04b21615
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 229}
+  - name: bieg-21.01_Frame_32
+    originalName: 
+    pivot: {x: 0.5470086, y: 0.029850747}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 304
+      width: 117
+      height: 67
+    spriteID: b9cc5ad03de1582458186b65fa98a9b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 304}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 467787804
+    name: bieg-21.01
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: bieg-21.01_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 5ad4f5a88eb427f49b95cd8c80daa3dd
+    - name: bieg-21.01_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 3888d5e95e1444f46a2d7be3842f5d9e
+    - name: bieg-21.01_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 84091b2ad06e8004895b4574eb071cf5
+    - name: bieg-21.01_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 12d79dcc6738b0349885385bdce77728
+    - name: bieg-21.01_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 7da29f333a0e05243b7a520784d2c714
+    - name: bieg-21.01_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: dc35b4de1a60660479015c0142b21599
+    - name: bieg-21.01_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: bbedffa2082a18b41b65cc43f222fbba
+    - name: bieg-21.01_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 964346b43b35a44469bc2f1e422620fb
+    - name: bieg-21.01_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 308b7c4d0961b2346bd937e15e17f4d4
+    - name: bieg-21.01_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: b337f75b692660244915f64f7d984356
+    - name: bieg-21.01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 8e4a1cd911f2912438dbfaa8aa20803c
+    - name: bieg-21.01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 4cd682bc0f8bf324f82380cee92282c0
+    - name: bieg-21.01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 5725124b452407a4a9a2ce015be3cfd3
+    - name: bieg-21.01_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 2875cb2f31460ea4481df08307940a7e
+    - name: bieg-21.01_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: a4f0a87e47089ec40b7377e2ca82551f
+    - name: bieg-21.01_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 89c034e53a80a5f449ce1b4ab5f21ea0
+    - name: bieg-21.01_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: aa1dea3766665db4a912641d05dfe866
+    - name: bieg-21.01_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: cd6b2cbf35b5d3642b676e80789cc62c
+    - name: bieg-21.01_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 888d26e8857aace4198c63f9b18e713f
+    - name: bieg-21.01_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 48cd43548df04df4db1379beef021f98
+    - name: bieg-21.01_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: db8ee2dd99d0ec1488395ff5dbc65d7c
+    - name: bieg-21.01_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 1
+        y: -2
+        width: 116
+        height: 67
+      spriteId: 5877f6e641a7706499c2bdcc7ef0fd9d
+    - name: bieg-21.01_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 68
+      spriteId: d1b6317bd00b3594a8106090209bddcc
+    - name: bieg-21.01_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 68
+      spriteId: 13acaed10f0bbfc49b84a0b497b46646
+    - name: bieg-21.01_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 3e7965dcec6ffa34093ee3b7a10159dc
+    - name: bieg-21.01_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: c3b09767ec9d8da41afbe3936d81bc1a
+    - name: bieg-21.01_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 65
+      spriteId: 224b398e8dd27434085897ec7d877391
+    - name: bieg-21.01_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 68
+      spriteId: 825b8ec50a693f0419ab5d4dd941f60a
+    - name: bieg-21.01_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 57f5654eda4f93944bbb5080c05d988f
+    - name: bieg-21.01_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: d4c6223feb9a8934bad9e32a1b10dd51
+    - name: bieg-21.01_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: 9741f15b1da59e74b9738da56491bc38
+    - name: bieg-21.01_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: fce96294670f55341a32636e04b21615
+    - name: bieg-21.01_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: -2
+        width: 117
+        height: 67
+      spriteId: b9cc5ad03de1582458186b65fa98a9b7
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 96}
