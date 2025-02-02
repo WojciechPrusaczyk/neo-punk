@@ -63,7 +63,6 @@ public class ShivernDog : MonoBehaviour
             _entityStatus.isFacedRight = true;
             _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
         }
-        
     }
     
     public void Attack()
