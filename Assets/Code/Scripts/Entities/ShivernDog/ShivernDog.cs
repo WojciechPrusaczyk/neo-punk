@@ -13,6 +13,8 @@ public class ShivernDog : MonoBehaviour
     private EnemyAI _enemyAI;
     private GameObject _player;
 
+    public List<string> attackAnimations;
+
     public void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -67,28 +69,14 @@ public class ShivernDog : MonoBehaviour
     public void Attack()
     {
         if (_enemyAI.canAttack && !isAttacking)
-        {        
+        {
+            isAttacking = true;
             LookAtPlayer();
 
-            StartCoroutine(AttackCoroutine());
-        }
-    }
-    private IEnumerator AttackCoroutine()
-    {
-        _enemyAI.FreezeMovement();
-        isAttacking = true;
-
-        // Trigger the attack animation
-        _animator.SetBool("isAttacking", true);
-        _animator.SetTrigger("Attack1");
-
-        yield return new WaitForSeconds(1f);
+            string animToPlay = attackAnimations[Random.Range(0, attackAnimations.Count)];
         
-        // Reset attack state
-        _animator.SetBool("isAttacking", false);
-        isAttacking = false;
-        _enemyAI.RestoreMovement();
-
+            _animator.Play(animToPlay);
+        }
     }
     
     public void DealDamage()
@@ -96,5 +84,4 @@ public class ShivernDog : MonoBehaviour
         if(_enemyAI.canAttack)
             _player.GetComponent<EntityStatus>().DealDamage(_entityStatus.AttackDamage, transform.gameObject);
     }
-    
 }

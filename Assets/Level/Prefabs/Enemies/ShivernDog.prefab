@@ -582,6 +582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEating: 0
   isAttacking: 0
+  attackAnimations:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7741740247566496919
 GameObject:
   m_ObjectHideFlags: 0
