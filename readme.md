@@ -58,3 +58,8 @@ W grze będzie zawarta mechanika **"gnojenia gracza"**:
 
 Przeciwnicy będą rozstawieni po mapie ręcznie, ale także będą się spawnować podczas "inwazji".  
 Czyli opcjonalnej areny gdzie gracz walczy z falami przciwników. Będą one ułożone tak by były rzadkie(ale nie za bardzo) i dropiły przedmnioty po pokonaniu inwazji.
+
+## Użyte assety:
+
+- [Edit undo](https://www.1001fonts.com/edit-undo-font.html)
+- [Keycaps](https://dreammix.itch.io/keyboard-keys-for-ui)

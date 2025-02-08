@@ -123,16 +123,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Cursor
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.516129, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 16
-    spriteID: a88698496f9089140a46f05d69e6a819
+      width: 31
+      height: 30
+    spriteID: e778adb12f2b07543b35a341be04a91a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -154,14 +154,14 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: a88698496f9089140a46f05d69e6a819
+        y: 1
+        width: 31
+        height: 30
+      spriteId: e778adb12f2b07543b35a341be04a91a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 32, y: 32}
