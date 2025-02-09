@@ -10,6 +10,7 @@ public class VerticalDoorController : MonoBehaviour
     public Sprite LockedIcon;
     public GameObject IconParent;
     public GameObject DoorObject;
+    public GameObject LightsParent;
     public float OpeningSpeed = 0.5f;
     public float PauseBetweenOpeningStages = 0.1f;
 
@@ -70,6 +71,8 @@ public class VerticalDoorController : MonoBehaviour
     {
         StartCoroutine(ToggleDoor());
 
+        LightsParent.SetActive(false);
+
         IsOpen = true;
     }
 
@@ -103,6 +106,8 @@ public class VerticalDoorController : MonoBehaviour
                 DoorObject.transform.position = new Vector3(DoorObject.transform.position.x, newY, DoorObject.transform.position.z);
                 yield return null;
             }
+
+            LightsParent.SetActive(true);
         }
 
         AreDoorOpening = false;

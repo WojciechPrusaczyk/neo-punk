@@ -20,8 +20,8 @@ TagManager:
   - LightOnly
   - ImpassableWall
   - Projectile
-  - 
-  - 
+  - PostProcessing
+  - NoLight
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NoLight
+    uniqueID: 307434635
     locked: 0
