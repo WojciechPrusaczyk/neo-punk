@@ -62,7 +62,12 @@ public class Player : MonoBehaviour
     public Vector3 lastSafePosition;
     public float playerVoidLevel;
     private SoundManager _soundManager;
-
+    
+    [Header("Stair stuff")]
+    public LayerMask stairLayer;
+    public bool onStairs = false;
+    public float stairAngle = 0f;
+    public Vector2 stairMovementMultiplier = Vector2.one;
 
     private void Start()
     {
@@ -92,7 +97,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0) && Mathf.Abs(playerBody.velocity.y) < 0.01f;
+        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f @Wojtek oby to nie bylo wazne
 
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
@@ -142,14 +147,30 @@ public class Player : MonoBehaviour
         /*
          * przemieszczanie w osi x, prędkość poruszania się zależna od tego czy gracz atakuje
          */
-        if (!isAttacking)
+        DetectStairs();
+        if (onStairs)
         {
-            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
+            if (!isAttacking)
+            {
+                playerBody.velocity = new Vector2(-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y);
+            }
+            else
+            {
+                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
+                    playerBody.velocity.y);
+            }
         }
         else
         {
-            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
-                playerBody.velocity.y);
+            if (!isAttacking)
+            {
+                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
+            }
+            else
+            {
+                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
+                    playerBody.velocity.y);
+            }
         }
 
         /*
@@ -281,6 +302,26 @@ public class Player : MonoBehaviour
         // małe okno pomiędzy parowaniami
         yield return new WaitForSeconds(duration);
         canBlock = true;
+    }
+    
+    void DetectStairs()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2f, stairLayer);
+        
+        if (hit)
+        {
+            onStairs = true;
+            Vector2 slopeNormalPerp = Vector2.Perpendicular(hit.normal);
+            stairMovementMultiplier = slopeNormalPerp.normalized;
+            stairAngle = Vector2.Angle(hit.normal, Vector2.up);
+            
+            Debug.DrawRay(hit.point, slopeNormalPerp, Color.red);
+        }
+        else
+        {
+            onStairs = false;
+            stairMovementMultiplier = Vector2.one;
+        }
     }
 
     private void Jump()
