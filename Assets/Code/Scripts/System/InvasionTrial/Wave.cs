@@ -23,6 +23,7 @@ public class Wave : MonoBehaviour
         {
             GameObject newEnemy = Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
             newEnemy.transform.parent = transform;
+            newEnemy.SetActive(true);
             newEnemy.GetComponentInChildren<EnemyAI>().state = EnemyAI.EnemyState.Chasing;
 
             yield return new WaitForSeconds(0.2f); // Delay of 0.1 seconds
