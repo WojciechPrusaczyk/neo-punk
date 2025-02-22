@@ -415,7 +415,7 @@ public class Player : MonoBehaviour
         if (Time.time - lastAttackTime >= attackCooldown)
         {
             movePlayerOnAttack(3.0f);
-            if (attackState == 3)
+            if (attackState == 4)
             {
                 // Gracz zaczyna nową sekwencję ataku
                 attackState = 1;
