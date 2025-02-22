@@ -28,16 +28,13 @@ public static class InputManager
     public static KeyCode PadButtonAttack { get; private set; } = KeyCode.JoystickButton0;
 
     // Przycisk skoku na padzie (domyślnie JoystickButton1 - B)
-    public static KeyCode PadButtonJump { get; private set; } = KeyCode.JoystickButton1;
-
-    // Alternatywny przycisk skoku na padzie (np. dodatkowy mapping)
-    public static KeyCode AltPadButtonJump { get; private set; } = KeyCode.JoystickButton1;
+    public static KeyCode PadButtonJump { get; private set; } = KeyCode.JoystickButton3;
 
     // Przycisk blokowania na padzie (domyślnie JoystickButton2 - X)
     public static KeyCode PadButtonBlock { get; private set; } = KeyCode.JoystickButton2;
 
     // Przycisk interakcji na padzie (domyślnie JoystickButton3 - Y)
-    public static KeyCode PadButtonInteract { get; private set; } = KeyCode.JoystickButton3;
+    public static KeyCode PadButtonInteract { get; private set; } = KeyCode.JoystickButton1;
 
     // Przycisk otwarcia menu przedmiotów na padzie (domyślnie JoystickButton7 - Start)
     public static KeyCode PadButtonInventoryMenu { get; private set; } = KeyCode.JoystickButton7;
@@ -58,7 +55,7 @@ public static class InputManager
     public static KeyCode PadButtonItem4 { get; private set; } = KeyCode.JoystickButton9;
 
     // Przycisk uniku na padzie (domyślnie JoystickButton4 - LB)
-    public static KeyCode PadButtonDodge { get; private set; } = KeyCode.JoystickButton4;
+    public static KeyCode PadButtonDodge { get; private set; } = KeyCode.JoystickButton2;
 
     // Klawisz poruszania się w dół (Joystick Axis lub dodatkowy mapping, domyślnie Down na padzie)
     public static KeyCode PadMoveDownKey { get; private set; } = KeyCode.JoystickButton10; // Placeholder
@@ -148,11 +145,6 @@ public static class InputManager
     public static void ChangePadButtonJump(KeyCode newButton)
     {
         PadButtonJump = newButton;
-    }
-
-    public static void ChangePadAltButtonJump(KeyCode newButton)
-    {
-        AltPadButtonJump = newButton;
     }
 
     public static void ChangePadButtonBlock(KeyCode newButton)

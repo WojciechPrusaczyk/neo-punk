@@ -28,7 +28,7 @@ public class VerticalDoorController : MonoBehaviour
 
     private void Update()
     {
-        if (IsPlayerNear && Input.GetKeyDown(InputManager.InteractKey))
+        if (IsPlayerNear && (Input.GetKeyDown(InputManager.InteractKey) || Input.GetKeyDown(InputManager.PadButtonInteract)))
         {
             if (!IsLocked && !AreDoorOpening)
             {

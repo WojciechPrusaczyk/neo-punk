@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3196496781066106103}
   - component: {fileID: 2003166830280569305}
   - component: {fileID: 7077660783316475836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4872572168833040712}
   - component: {fileID: 9030158813499328490}
   - component: {fileID: 2223494101314510815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerAppearance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 4337659383365769931}
   - component: {fileID: 3359847055958597987}
   - component: {fileID: 6539446160186281455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -449,12 +449,22 @@ MonoBehaviour:
   attackState: 0
   isAttacking: 0
   isGrounded: 0
-  parryWindow: 0
   isBlocking: 0
   isParrying: 0
   cooldownBetweenBlocks: 0
-  lastSafePosition: {x: 0, y: 0, z: 0}
+  dashDistance: 5
+  dashCooldown: 1
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 17409
   playerVoidLevel: 0
+  parryWindow: 0
+  stairLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  onStairs: 0
+  stairAngle: 0
+  stairMovementMultiplier: {x: 1, y: 1}
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +648,7 @@ GameObject:
   - component: {fileID: 4951977807318945459}
   - component: {fileID: 1151884988469273626}
   - component: {fileID: 7725505690995258429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SwordHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -27,12 +27,20 @@ public class Player : MonoBehaviour
     /*
      * Zmienne dostępne w edytorze
      */
-    [Header("Player variables")] public float jumpForce = 6f;
-
+    [Header("Player variables")]
+    public float jumpForce = 6f;
     public Animator animator;
     public int attackState = 0; // Aktualny stan ataku
     public bool isAttacking = false; // Czy trwa atak
     public bool isGrounded = false; // Czy dotyka ziemii
+    public bool isBlocking;
+    public bool isParrying;
+    public float cooldownBetweenBlocks;
+    public float dashDistance = 5f; // Maksymalny dystans dasha
+    public float dashCooldown = 1f; // Czas odnowienia dasha
+    public LayerMask obstacleLayer; // Warstwa przeszkód
+    public float playerVoidLevel; // Próg, poniżej którego dash nie działa
+
 
     /*
      * Zmienne lokalne
@@ -53,15 +61,12 @@ public class Player : MonoBehaviour
     float holdTimeThreshold = 1.7f;
     private EntityStatus playerStatus;
     [SerializeField] private float parryWindow;
-    public bool isBlocking;
-    public bool isParrying;
-    public float cooldownBetweenBlocks;
     private bool canBlock = true;
     private PauseMenuBehaviour pauseMenu;
     private Image elementalIconComponent;
-    public Vector3 lastSafePosition;
-    public float playerVoidLevel;
+    private Vector3 lastSafePosition;
     private SoundManager _soundManager;
+    private float _lastDashTime;
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -203,14 +208,14 @@ public class Player : MonoBehaviour
         /*
          * Zmiana kierunku gracza
          */
-        if (Input.GetKey(InputManager.MoveLeftKey) && playerStatus.isFacedRight && (Time.timeScale != 0) &&
+        if ((Input.GetKey(InputManager.MoveLeftKey) || Input.GetAxis("Horizontal") < 0) && playerStatus.isFacedRight && (Time.timeScale != 0) &&
             !isAttacking && !isBlocking)
         {
             playerStatus.isFacedRight = false;
             transform.Rotate(new Vector3(0f, 180f, 0f));
         }
 
-        if (Input.GetKey(InputManager.MoveRightKey) && !playerStatus.isFacedRight && (Time.timeScale != 0) &&
+        if ((Input.GetKey(InputManager.MoveRightKey) || Input.GetAxis("Horizontal") > 0) && !playerStatus.isFacedRight && (Time.timeScale != 0) &&
             !isAttacking && !isBlocking)
         {
             playerStatus.isFacedRight = true;
@@ -220,7 +225,7 @@ public class Player : MonoBehaviour
         /*
          * Atak, oraz charge attack
          */
-        if (Input.GetKey(InputManager.AttackKey) && !isAttacking && !isBlocking)
+        if ((Input.GetKey(InputManager.AttackKey) || Input.GetKey(InputManager.PadButtonAttack)) && !isAttacking && !isBlocking)
         {
             if (keyHoldTime < holdTimeThreshold)
             {
@@ -235,7 +240,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(InputManager.AttackKey))
+        if (Input.GetKeyUp(InputManager.AttackKey) || Input.GetKeyUp(InputManager.PadButtonAttack))
         {
             if (isChargingAttack)
             {
@@ -264,7 +269,7 @@ public class Player : MonoBehaviour
             /*
              * Parowanie
              */
-            if (!isAttacking && !isChargingAttack && Input.GetKeyDown(InputManager.BlockKey))
+            if (!isAttacking && !isChargingAttack && ( Input.GetKeyDown(InputManager.BlockKey) || Input.GetKeyDown(InputManager.PadButtonBlock)))
             {
                 isParrying = true;
                 StartCoroutine(Parry());
@@ -273,7 +278,7 @@ public class Player : MonoBehaviour
             /*
              * Blokowanie
              */
-            if (Input.GetKey(InputManager.BlockKey))
+            if (Input.GetKey(InputManager.BlockKey) || Input.GetKey(InputManager.PadButtonBlock))
             {
                 isBlocking = true;
                 canBlock = false;
@@ -284,16 +289,28 @@ public class Player : MonoBehaviour
             /*
              * Przełączanie animacji blokowania
              */
-            if (Input.GetKeyDown(InputManager.BlockKey)) animator.Play("blockAttack");
+            if (Input.GetKeyDown(InputManager.BlockKey) || Input.GetKeyDown(InputManager.PadButtonBlock)) animator.Play("blockAttack");
         }
 
         /*
          * Przejście przez podłoże
          */
         if (FloorDetector.isFloorPassable && isGrounded &&
-            Input.GetKeyDown(InputManager.MoveDownKey))
+            (Input.GetKeyDown(InputManager.MoveDownKey) ||
+             Input.GetAxis("Vertical") < 0 ) )
         {
             DisableCollisionForDuration(0.3f);
+        }
+
+        /*
+         * Dash
+         */
+        if (Time.time >= _lastDashTime + dashCooldown)
+        {
+            if (Input.GetKeyDown(InputManager.DodgeKey) || Input.GetKeyDown(InputManager.PadButtonInteract))
+            {
+                Dash();
+            }
         }
     }
 
@@ -486,6 +503,49 @@ public class Player : MonoBehaviour
 
             elementalIconComponent.sprite = ElementalTypes[TypeId].icon;
         }
+    }
+
+    private void Dash()
+    {
+        Vector2 dashDirection = GetDashDirection();
+        Vector2 startPosition = transform.position;
+
+        RaycastHit2D hit = Physics2D.Raycast(startPosition, dashDirection, dashDistance, obstacleLayer);
+        Vector2 targetPosition = (hit.collider != null) ? hit.point - dashDirection * 0.1f : startPosition + (dashDirection * dashDistance);
+
+        transform.position = targetPosition;
+        _lastDashTime = Time.time;
+    }
+
+    private Vector2 GetDashDirection()
+    {
+        Vector2 direction = Vector2.zero;
+
+        // Pad
+        Vector2 gamepadInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (gamepadInput.magnitude > 0.1f)
+        {
+            direction = gamepadInput.normalized;
+        }
+        else
+        {
+            // Klawiatura
+            bool up = Input.GetKey(KeyCode.W);
+            bool down = Input.GetKey(KeyCode.S);
+            bool left = Input.GetKey(KeyCode.A);
+            bool right = Input.GetKey(KeyCode.D);
+
+            if (up && right) direction = new Vector2(1, 1).normalized;
+            else if (up && left) direction = new Vector2(-1, 1).normalized;
+            else if (down && right) direction = new Vector2(1, -1).normalized;
+            else if (down && left) direction = new Vector2(-1, -1).normalized;
+            else if (up) direction = Vector2.up;
+            else if (down) direction = Vector2.down;
+            else if (left) direction = Vector2.left;
+            else if (right) direction = Vector2.right;
+        }
+
+        return direction;
     }
 }
 #if UNITY_EDITOR
