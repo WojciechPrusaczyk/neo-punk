@@ -137,11 +137,13 @@ public class EntityStatus : MonoBehaviour
 
     public void DealDamage(float damage, GameObject attackingEntity = null)
     {
-        // zawsze podawać attackingEntity, gdy przeciwnik atakuej gracza
+        // zawsze podawać attackingEntity, gdy przeciwnik atakuje gracza
+        // każde attackingEntity MUSI przy ataku mieć obliczane "isFacedRight"
         if (gameObject.CompareTag("Player"))
         {
             bool isBLocking = gameObject.GetComponent<Player>().isBlocking;
             bool isParrying = gameObject.GetComponent<Player>().isParrying;
+            GameObject playerAppearance = gameObject.transform.Find("PlayerAppearance").gameObject;
             bool isPlayerFacedToEnemy = false;
             
             if (attackingEntity)
@@ -150,13 +152,13 @@ public class EntityStatus : MonoBehaviour
                 EntityStatus enemyStatus = attackingEntity.GetComponent<EntityStatus>();
                 isPlayerFacedToEnemy = (playerStatus.isFacedRight && !enemyStatus.isFacedRight) ||
                                        (!playerStatus.isFacedRight && enemyStatus.isFacedRight);
+                Debug.Log("isPlayerFacedToEnemy: "+ isPlayerFacedToEnemy);
             }
-            /*Debug.Log(isPlayerFacedToEnemy);
-            Debug.Log(gameObject.GetComponent<EntityStatus>().isFacedRight);
-            Debug.Log(gameObject.GetComponent<EntityStatus>().isFacedRight);*/
+            // Debug.Log(isParrying);
 
             if (isParrying && isPlayerFacedToEnemy)
             {
+                Debug.Log("paruję cios");
                 // gracz sparował cios
                 float parryingDamageReduction = 0f; // 0 = 100% redukcji
                 if ( damage * parryingDamageReduction * incomingDamagePercent >= GetHp() )
@@ -172,12 +174,13 @@ public class EntityStatus : MonoBehaviour
                     GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent);
                     
                     // odgrywanie animacji po sparowaniu
-                    gameObject.GetComponent<Animator>().Play("parryAttack");
+                    playerAppearance.GetComponent<Animator>().Play("parryAttack");
                 }
                 
                 
             } else if (isBLocking && isPlayerFacedToEnemy)
             {
+                Debug.Log("blokuję cios");
                 // gracz zablokował cios
                 float blockingDamageReduction = 0.6f; // 0.6 = 40% redukji
                 if ( damage * blockingDamageReduction * incomingDamagePercent >= GetHp() )
@@ -253,7 +256,7 @@ public class EntityStatus : MonoBehaviour
     
     void GettingDamageEvent( float damage)
     {
-        Debug.Log("Zadaję obrażenia");
+        // Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);
             
         if (damage >= ( GetHp() / 2 ) ) StartCoroutine(ChangeColorForInterval(heavyDamageColor, 0.05f));

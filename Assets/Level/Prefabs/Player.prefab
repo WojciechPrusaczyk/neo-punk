@@ -458,7 +458,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 17409
   playerVoidLevel: 0
-  parryWindow: 0
+  parryWindow: 1
   stairLayer:
     serializedVersion: 2
     m_Bits: 0

@@ -362,7 +362,6 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("Jump");
         if (onStairs)
         {
             onStairs = false; // Temporarily disable stairs effect
