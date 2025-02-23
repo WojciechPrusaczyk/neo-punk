@@ -38,12 +38,4 @@ public class InvasionTrial : MonoBehaviour
         }
         trialFinished = true;
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartTrial();
-        }
-    }
 }

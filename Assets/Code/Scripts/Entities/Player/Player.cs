@@ -102,8 +102,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f @Wojtek oby to nie bylo wazne
-
+        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f; //@Wojtek oby to nie bylo wazne
+        
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
          */
@@ -152,7 +152,9 @@ public class Player : MonoBehaviour
         /*
          * przemieszczanie w osi x, prędkość poruszania się zależna od tego czy gracz atakuje
          */
+        
         DetectStairs();
+        
         if (onStairs)
         {
             if (!isAttacking)
@@ -321,35 +323,57 @@ public class Player : MonoBehaviour
         canBlock = true;
     }
     
+    
     void DetectStairs()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2f, stairLayer);
-        
-        if (hit)
+        // Array to store contact points
+        ContactPoint2D[] contacts = new ContactPoint2D[16];
+        // Get the number of contact points
+        int contactCount = boxCollider.GetContacts(contacts);
+
+        // Reset stair detection
+        onStairs = false;
+        stairMovementMultiplier = Vector2.one;
+
+        // Iterate through all contact points
+        for (int i = 0; i < contactCount; i++)
         {
-            onStairs = true;
-            Vector2 slopeNormalPerp = Vector2.Perpendicular(hit.normal);
-            stairMovementMultiplier = slopeNormalPerp.normalized;
-            stairAngle = Vector2.Angle(hit.normal, Vector2.up);
-            
-            Debug.DrawRay(hit.point, slopeNormalPerp, Color.red);
-        }
-        else
-        {
-            onStairs = false;
-            stairMovementMultiplier = Vector2.one;
+            // Check if the contact point is on the "Stairs" layer
+            if (stairLayer == (stairLayer | (1 << contacts[i].collider.gameObject.layer)))
+            {
+                // The player is on stairs
+                onStairs = true;
+
+                // Calculate the slope's perpendicular direction for movement
+                Vector2 slopeNormalPerp = Vector2.Perpendicular(contacts[i].normal).normalized;
+                stairMovementMultiplier = slopeNormalPerp;
+
+                // Calculate the angle of the slope (optional, for debugging or advanced behavior)
+                stairAngle = Vector2.Angle(contacts[i].normal, Vector2.up);
+
+                // Debug visualization
+                Debug.DrawRay(contacts[i].point, contacts[i].normal, Color.green); // Draw contact normal
+                Debug.DrawRay(contacts[i].point, slopeNormalPerp, Color.red); // Draw slope perpendicular direction
+
+                break; // Exit the loop once stairs are detected
+            }
         }
     }
 
     private void Jump()
     {
+        Debug.Log("Jump");
+        if (onStairs)
+        {
+            onStairs = false; // Temporarily disable stairs effect
+        }
         Vector2 jumpVector = new Vector2(0, jumpForce * 10);
         float playerBodyVelocity = playerBody.GetPointVelocity(jumpVector).y;
 
-        if (playerBodyVelocity < 0.01f) // Sprawdzamy, czy postać jest na ziemi
-        {
+        //if (playerBodyVelocity < 0.01f) // Sprawdzamy, czy postać jest na ziemi
+        //{
             playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
-        }
+        //}
     }
 
     private IEnumerator Parry()
