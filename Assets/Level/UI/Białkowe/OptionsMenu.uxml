@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/Bia%C5%82kowe/OptionsMenu.uss?fileID=7433441132597879392&amp;guid=a14686ca62374294ab301ddaf27cbc57&amp;type=3#OptionsMenu" />
+    <engine:VisualElement focusable="false" name="Panel" class="panel" style="flex-grow: 1; visibility: visible; overflow: hidden; position: absolute; width: 100%; height: 100%; top: 0; left: 0;" />
+    <engine:VisualElement name="VisualElement" class="menu" style="flex-grow: 1; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; width: 30%; overflow: visible; position: relative; background-image: url(&quot;project://database/Assets/Art/UserInterface/PauseMenuFrame.png?fileID=2800000&amp;guid=f6c2a54c1eeb2b04ba37da656afccaba&amp;type=3#PauseMenuFrame&quot;);">
+        <engine:VisualElement name="ButtonContainer" style="flex-grow: 1; justify-content: center;">
+            <engine:Button text="RESUME" name="resumeButton" class="default-button" />
+        </engine:VisualElement>
+        <engine:VisualElement name="ButtonContainer" style="flex-grow: 1; justify-content: center;">
+            <engine:Button text="SETTINGS" name="settingsButton" style="background-image: none;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="ButtonContainer" style="flex-grow: 1; justify-content: center;">
+            <engine:Button text="QUIT TO MENU" name="quitMenuButton" class="default-button" />
+        </engine:VisualElement>
+        <engine:VisualElement name="ButtonContainer" style="flex-grow: 1; justify-content: center;">
+            <engine:Button text="QUIT GAME" name="quitButton" class="default-button" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
