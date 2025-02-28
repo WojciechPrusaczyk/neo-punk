@@ -23,7 +23,7 @@ public class AnimationEventShivernDog : MonoBehaviour
     
     public void EndAttack()
     {
-        Debug.Log("animation end");
+        // Debug.Log("animation end");
         shivernDog.isAttacking = false;
         animator.SetBool("isAttacking", false);
         enemyAI.RestoreMovement();

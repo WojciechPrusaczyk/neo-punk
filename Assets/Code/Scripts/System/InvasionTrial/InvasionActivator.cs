@@ -22,12 +22,10 @@ public class InvasionActivator : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(InputManager.InteractKey))
         {
-            Debug.Log("not close enough");
             if (Vector2.Distance(player.transform.position, transform.position) < activationDistance)
             {
-                
                 StartTrial();
             }
         }
