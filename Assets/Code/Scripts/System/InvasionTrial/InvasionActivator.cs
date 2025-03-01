@@ -8,6 +8,7 @@ public class InvasionActivator : MonoBehaviour
     public InvasionTrial invasion;
     public GameObject player;
     public float activationDistance = 2f;
+    public Sprite activatedSprite;
 
 
     public void Start()
@@ -16,8 +17,14 @@ public class InvasionActivator : MonoBehaviour
     }
     public void StartTrial()
     {
-        Debug.Log("StartTrial");
         invasion.StartTrial();
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.Log("Sprite missing");
+            return;
+        }
+        spriteRenderer.sprite = activatedSprite;
     }
 
     private void Update()

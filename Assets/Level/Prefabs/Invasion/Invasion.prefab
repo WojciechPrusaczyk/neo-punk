@@ -48,6 +48,7 @@ MonoBehaviour:
   invasion: {fileID: 4276347696078808519}
   player: {fileID: 0}
   activationDistance: 2
+  activatedSprite: {fileID: 1148427654037608728, guid: ae4f256d6439214419620415083d02da, type: 3}
 --- !u!212 &7727974179658343275
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -7,8 +7,11 @@ public class TimeTrialActivator : MonoBehaviour
     public TimeTrial timeTrial;
     public GameObject player;
     public float activationDistance = 2f;
+    public Sprite activatedSprite;
 
+    
 
+    
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -18,6 +21,13 @@ public class TimeTrialActivator : MonoBehaviour
     public void StartTrial()
     {
         timeTrial.StartTrial();
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.Log("Sprite missing");
+            return;
+        }
+        spriteRenderer.sprite = activatedSprite;
     }
     
     
