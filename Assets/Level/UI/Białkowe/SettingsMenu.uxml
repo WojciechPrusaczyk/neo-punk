@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:ScrollView style="width: 400px; height: 300px; border: 2px solid black; padding: 10px; overflow-y: scroll;">
+        
+        <!-- Resolution Row -->
+        <ui:VisualElement class="row">
+            <ui:Label text="Resolution" class="label"/>
+            <ui:Button name="resolutionButton" text="800 x 600"/>
+        </ui:VisualElement>
+
+        <!-- Fullscreen Row -->
+        <ui:VisualElement class="row">
+            <ui:Label text="Fullscreen" class="label"/>
+            <ui:Button name="fullscreenButton" text="Off"/>
+        </ui:VisualElement>
+
+        <!-- Sound Settings -->
+        <ui:VisualElement class="row">
+            <ui:Button name="soundButton" text="Sound Settings"/>
+        </ui:VisualElement>
+
+        <!-- Reset to Default -->
+        <ui:VisualElement class="row">
+            <ui:Button name="resetButton" text="Reset to Default"/>
+        </ui:VisualElement>
+
+        <!-- Exit Button -->
+        <ui:VisualElement class="row">
+            <ui:Button name="exitButton" text="Exit"/>
+        </ui:VisualElement>
+
+    </ui:ScrollView>
+</ui:UXML>

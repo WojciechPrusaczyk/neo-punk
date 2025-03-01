@@ -1,0 +1,55 @@
+.panel {
+}
+
+.menu {
+    background-image: url("project://database/Assets/Art/UserInterface/PauseMenuFrame.png?fileID=2800000&guid=f6c2a54c1eeb2b04ba37da656afccaba&type=3#PauseMenuFrame");
+}
+
+.default-button:hover {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=2800000&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1");
+    scale: 1.1 1.1;
+}
+
+.default-button:active {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button2.png?fileID=2800000&guid=3a064b7a50dbfe74e9dda5859c98de85&type=3#button2");
+    transition-duration: 0s;
+    transition-delay: 0s;
+}
+
+.default-button {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=2800000&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(47, 47, 47, 0);
+    border-right-color: rgba(47, 47, 47, 0);
+    border-top-color: rgba(47, 47, 47, 0);
+    border-bottom-color: rgba(47, 47, 47, 0);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(147, 197, 204);
+    font-size: 32px;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.exit-button {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/iconExit1.png?fileID=2800000&guid=1c39bc4294da0204fb73219b94ba467c&type=3#iconExit1");
+    width: 50px;
+    height: 50px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    overflow: visible;
+    visibility: visible;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+}

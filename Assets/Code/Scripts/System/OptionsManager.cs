@@ -61,4 +61,38 @@ public static class OptionsManager
         if (doShowTips == 1) return true;
         return false;
     }
+    
+    /*
+     * Resoulition
+     */
+    public static void SetResoulution(int width, int height)
+    {
+        Screen.SetResolution(width, height, Screen.fullScreen);
+        PlayerPrefs.SetInt("ResoulutionWidth", width);
+        PlayerPrefs.SetInt("ResolutionHeight", height);
+        PlayerPrefs.Save();
+    }
+
+    public static Vector2 GetResoulution()
+    {
+        int width = PlayerPrefs.GetInt("ResoulutionWidth", Screen.currentResolution.width);
+        int height = PlayerPrefs.GetInt("ResoulutionHeight", Screen.currentResolution.height);
+        return new Vector2(width, height);
+    }
+
+    public static void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+        PlayerPrefs.SetInt("Fullscreen", isFullScreen ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    
+    /*
+     * Default
+     */
+    public static void ResetToDefault()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
 }
