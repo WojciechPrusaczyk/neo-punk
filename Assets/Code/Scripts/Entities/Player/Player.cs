@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
     public bool onStairs = false;
     public float stairAngle = 0f;
     public Vector2 stairMovementMultiplier = Vector2.one;
+    public bool canJump = true;
+    public bool isJumping = false;
 
     private void Start()
     {
@@ -103,6 +105,15 @@ public class Player : MonoBehaviour
     private void Update()
     {
         isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f; //@Wojtek oby to nie bylo wazne
+
+        if (playerBody.velocity.y <= 0.0f)
+        {
+            isJumping = false;
+        }
+        if (isGrounded && !isJumping)
+        {
+            canJump = true;
+        }
         
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
@@ -155,21 +166,19 @@ public class Player : MonoBehaviour
         
         DetectStairs();
         
-        if (onStairs)
+        
+        if (isGrounded && onStairs && !isJumping)
         {
-            if (!isAttacking)
-            {
-                playerBody.velocity = new Vector2(-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y);
-            }
-            else
-            {
-                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
-                    playerBody.velocity.y);
-            }
+            playerBody.velocity = new Vector2(-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
+                                                -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y);
         }
-        else
+        else if(!onStairs)
         {
-            if (!isAttacking)
+            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
+        }
+
+        /*
+         * if (!isAttacking)
             {
                 playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
             }
@@ -178,8 +187,8 @@ public class Player : MonoBehaviour
                 playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
                     playerBody.velocity.y);
             }
-        }
-
+         */
+        
         /*
          * Nieznaczne wydłużanie hitboxa ataków podczas biegu
          */
@@ -362,17 +371,17 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (onStairs)
+        if (canJump)
         {
-            onStairs = false; // Temporarily disable stairs effect
-        }
-        Vector2 jumpVector = new Vector2(0, jumpForce * 10);
-        float playerBodyVelocity = playerBody.GetPointVelocity(jumpVector).y;
-
-        //if (playerBodyVelocity < 0.01f) // Sprawdzamy, czy postać jest na ziemi
-        //{
+            canJump = false;
+            isJumping = true;
+            if (onStairs)
+            {
+                onStairs = false; // Temporarily disable stairs effect
+            }
             playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
-        //}
+
+        }
     }
 
     private IEnumerator Parry()
