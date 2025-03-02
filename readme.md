@@ -61,5 +61,5 @@ Czyli opcjonalnej areny gdzie gracz walczy z falami przciwników. Będą one uł
 
 ## Użyte assety:
 
-- [Edit undo](https://www.1001fonts.com/edit-undo-font.html)
+- [Edit undo](https://www.1001fonts.com/edit-undo-font.html)  
 - [Keycaps](https://dreammix.itch.io/keyboard-keys-for-ui)
