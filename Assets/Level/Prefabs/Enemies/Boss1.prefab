@@ -237,6 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2029872520354874801}
+  - component: {fileID: 143123317191360583}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -259,6 +260,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6056889560423545825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &143123317191360583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631169747452257322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e11a81d2e5c48c4a9abeacdc1fad9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legTarget: {fileID: 2029872520354874801}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hoverDist: 0
+  groundCheckDistance: 0
+  legMoveDist: 0
+  halfWayPoint: {x: 0, y: 0, z: 0}
+  liftDistance: 0
+  legMovementSpeed: 0
+  posIndex: 0
+  targetPoint: {x: 0, y: 0, z: 0}
+  grounded: 0
+  opposingLeg: {fileID: 5622826044034411904}
+  aud: {fileID: 0}
 --- !u!1 &1929785416636625185
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1419812507474671801}
+  - component: {fileID: 5622826044034411904}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -454,6 +483,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3470481688461729240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5622826044034411904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3032816636188619806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e11a81d2e5c48c4a9abeacdc1fad9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legTarget: {fileID: 1419812507474671801}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hoverDist: 0
+  groundCheckDistance: 0
+  legMoveDist: 0
+  halfWayPoint: {x: 0, y: 0, z: 0}
+  liftDistance: 0
+  legMovementSpeed: 0
+  posIndex: 0
+  targetPoint: {x: 0, y: 0, z: 0}
+  grounded: 0
+  opposingLeg: {fileID: 143123317191360583}
+  aud: {fileID: 0}
 --- !u!1 &3095368263460769755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1285,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6348949331207300521}
@@ -1244,6 +1300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2345586086549873819}
+  - component: {fileID: 6147074069921186807}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -1266,6 +1323,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2142889505273258232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6147074069921186807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205816825730588251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e11a81d2e5c48c4a9abeacdc1fad9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legTarget: {fileID: 2345586086549873819}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hoverDist: 0
+  groundCheckDistance: 0
+  legMoveDist: 0
+  halfWayPoint: {x: 0, y: 0, z: 0}
+  liftDistance: 0
+  legMovementSpeed: 0
+  posIndex: 0
+  targetPoint: {x: 0, y: 0, z: 0}
+  grounded: 0
+  opposingLeg: {fileID: 3707585817004815690}
+  aud: {fileID: 0}
 --- !u!1 &8401583365194466185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2443260416498463859}
+  - component: {fileID: 3707585817004815690}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -1392,3 +1477,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8015278686594403696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3707585817004815690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142188613019351300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e11a81d2e5c48c4a9abeacdc1fad9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legTarget: {fileID: 2443260416498463859}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hoverDist: 0
+  groundCheckDistance: 0
+  legMoveDist: 0
+  halfWayPoint: {x: 0, y: 0, z: 0}
+  liftDistance: 0
+  legMovementSpeed: 0
+  posIndex: 0
+  targetPoint: {x: 0, y: 0, z: 0}
+  grounded: 0
+  opposingLeg: {fileID: 6147074069921186807}
+  aud: {fileID: 0}
