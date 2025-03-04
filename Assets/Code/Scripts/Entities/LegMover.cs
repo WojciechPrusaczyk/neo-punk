@@ -1,98 +1,76 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LegMover : MonoBehaviour
 {
-    public Transform legTarget;
+    public Transform legTarget; // Cel dla solvera Fabrik
+    public Transform bodyTarget; // Punkt referencyjny na ciele
     public LayerMask groundLayer;
-    public float hoverDist;
-    public float groundCheckDistance;
-    public float legMoveDist;
-    public Vector3 halfWayPoint;
-    public float liftDistance;
+    public float hoverDist = 0.1f;
+    public float groundCheckDistance = 2f;
+    public float legMoveDist = 0.5f;
+    public float liftDistance = 0.3f;
+    public float legMovementSpeed = 5f;
 
-    public float legMovementSpeed;
-    public int posIndex;
-    public Vector3 targetPoint;
-    Vector3 oldPos;
-    public bool grounded;
-    public LegMover opposingLeg;
-    public AudioSource aud;
-    // Start is called before the first frame update
+    private Vector3 targetPoint;
+    private Vector3 oldPos;
+    private Vector3 halfWayPoint;
+    private bool isMoving = false;
+
     void Start()
     {
-
-        aud = gameObject.GetComponent<AudioSource>();
+        if (legTarget == null)
+        {
+            Debug.LogError($"{gameObject.name}: legTarget nie został przypisany!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        CheckGround();
+        // Aktualizacja pozycji targetu względem ciała
+        Vector3 desiredTargetPosition = bodyTarget.position;
 
-
-
-
-        if (Vector2.Distance(transform.position, legTarget.position) > legMoveDist && posIndex == 0 && opposingLeg.grounded == true)
+        // Sprawdzenie, czy noga powinna wykonać krok
+        if (!isMoving && Vector2.Distance(legTarget.position, desiredTargetPosition) > legMoveDist)
         {
-            oldPos = legTarget.position;
-            targetPoint = transform.position;
-            halfWayPoint = (targetPoint + legTarget.position) / 2;
-            halfWayPoint.y += liftDistance;
-            posIndex = 1;
-
-
-
-        }
-
-        else if (posIndex == 1)
-        {
-
-            legTarget.position = Vector3.Lerp(legTarget.position, halfWayPoint, legMovementSpeed * Time.deltaTime);
-
-
-
-            if (Vector2.Distance(legTarget.position, halfWayPoint) <= 0.1f)
-            {
-                posIndex = 2;
-            }
-        }
-
-        else if (posIndex == 2)
-        {
-
-            legTarget.position = Vector3.Lerp(legTarget.position, targetPoint, legMovementSpeed * Time.deltaTime);
-
-
-
-            if (aud && Vector2.Distance(legTarget.position, targetPoint) < 0.1f)
-            {
-                aud.pitch = Random.Range(1.8f, 1.9f);
-                aud.Play();
-                posIndex = 0;
-            }
-        }
-
-        if (posIndex == 0)
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
+            StartCoroutine(MoveLeg(desiredTargetPosition));
         }
     }
 
-    public void CheckGround()
+    IEnumerator MoveLeg(Vector3 newTargetPosition)
     {
-        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, Vector3.down, groundCheckDistance, groundLayer);
+        isMoving = true;
+        oldPos = legTarget.position;
+        targetPoint = FindGroundPosition(newTargetPosition);
+        halfWayPoint = (targetPoint + legTarget.position) / 2;
+        halfWayPoint.y += liftDistance;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            legTarget.position = Vector3.Lerp(oldPos, halfWayPoint, elapsedTime);
+            elapsedTime += Time.deltaTime * legMovementSpeed;
+            yield return null;
+        }
+
+        elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            legTarget.position = Vector3.Lerp(halfWayPoint, targetPoint, elapsedTime);
+            elapsedTime += Time.deltaTime * legMovementSpeed;
+            yield return null;
+        }
+
+        isMoving = false;
+    }
+
+    Vector3 FindGroundPosition(Vector3 checkPosition)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(checkPosition + Vector3.up, Vector2.down, groundCheckDistance, groundLayer);
         if (hit.collider != null)
         {
-
-            Vector3 point = hit.point; // gets the position where the leg hit something
-            point.y += hoverDist;
-            transform.position = point;
+            return hit.point + (Vector2.up * hoverDist);
         }
+        return checkPosition;
     }
 }
