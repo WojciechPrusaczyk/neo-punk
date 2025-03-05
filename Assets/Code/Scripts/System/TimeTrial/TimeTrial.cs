@@ -14,6 +14,8 @@ public class TimeTrial : MonoBehaviour
 
     public GameObject finishCollider;
     public GameObject player;
+    
+    public TimeTrialInterface timeTrialInterface;
 
 
     private void Start()
@@ -25,6 +27,9 @@ public class TimeTrial : MonoBehaviour
 
     public void StartTrial()
     {
+        
+            
+        timeTrialInterface.timeTrial = this;
         trialStarted = true;
         foreach (GameObject indicator in indicators)
         {
@@ -62,6 +67,18 @@ public class TimeTrial : MonoBehaviour
         {
             indicators.Add(child.gameObject);
             child.gameObject.SetActive(false);
+        }
+    }
+
+    public void ExitTrial()
+    {
+        Debug.Log("ExitTrial");
+        trialStarted = false;
+        trialFinished = false;
+        trialTime = 0;
+        foreach (GameObject indicator in indicators)
+        {
+            indicator.SetActive(false);
         }
     }
 }

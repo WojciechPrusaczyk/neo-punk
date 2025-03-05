@@ -1,0 +1,15 @@
+.panel {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.buttonStyle {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=1086331387851373080&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1_0");
+}
+
+.buttonStyle:hover {
+    scale: 1.05 1.05;
+}
+
+.buttonStyle:active {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button2.png?fileID=8871750365745515610&guid=3a064b7a50dbfe74e9dda5859c98de85&type=3#button2_0");
+}

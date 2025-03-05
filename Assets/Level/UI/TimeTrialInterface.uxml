@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/TimeTrialInterfaceuss.uss?fileID=7433441132597879392&amp;guid=a37ab44268314f341bd691da25b59e03&amp;type=3#TimeTrialInterfaceuss" />
+    <engine:VisualElement name="Panel" style="flex-grow: 1;">
+        <engine:Label name="timerLabel" text="1:04.54" style="-unity-text-align: upper-center; height: 28px; position: absolute; left: 0; top: 0; right: 0; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; margin-right: 33%; margin-left: 33%; margin-top: 40px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 45px; -unity-font-style: bold; color: rgb(147, 197, 204); align-items: center; justify-content: flex-end; align-self: auto; margin-bottom: 0;" />
+        <engine:Button text="Button" name="exitButton" class="backButtonStyle" style="position: absolute; top: 0; left: auto; right: 0; bottom: auto; padding-top: 20px; padding-right: 0; padding-bottom: 20px; padding-left: 20px; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px;" />
+    </engine:VisualElement>
+</engine:UXML>

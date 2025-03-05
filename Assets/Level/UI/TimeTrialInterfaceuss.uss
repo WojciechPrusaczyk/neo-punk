@@ -1,0 +1,20 @@
+.backButtonStyle {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/iconExit1.png?fileID=576150841695427650&guid=1c39bc4294da0204fb73219b94ba467c&type=3#iconExit1_0");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    color: rgba(27, 27, 27, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.backButtonStyle:hover {
+    scale: 1.05 1.05;
+}
+
+.backButtonStyle:active {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/iconExit2.png?fileID=4088345329899473221&guid=07a2daedab773684c820fc951bec5b5e&type=3#iconExit2_0");
+    background-color: rgba(0, 0, 0, 0);
+}
