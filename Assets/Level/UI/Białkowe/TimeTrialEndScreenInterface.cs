@@ -9,7 +9,7 @@ public class TimeTrialEndScreenInterface : MonoBehaviour
     private VisualElement panel;
     private Button exitButton;
     private Button repeatButton;
-    private Label timerLabel;
+    public Label timerLabel;
     private Label resultLabel;
 
     
@@ -32,24 +32,24 @@ public class TimeTrialEndScreenInterface : MonoBehaviour
         exitButton = panel.Q<Button>("ExitButton");
         repeatButton = panel.Q<Button>("RepeatButton");
         timerLabel = panel.Q<Label>("Time");
-        timerLabel = panel.Q<Label>("Result");
+        resultLabel = panel.Q<Label>("Result");
         
         
         // Przypisujemy funkcje do przycisków
-        if (exitButton != null) exitButton.clicked += () => Debug.Log("wylacz ekran wojtek");
+        if (exitButton != null) exitButton.clicked += () => this.gameObject.SetActive(false);
         if (repeatButton != null) repeatButton.clicked += () => Debug.Log("bedzie w becie");
         
-        if (timerLabel != null) timerLabel.text = timeTrial.trialTime.ToString();
+        if (timerLabel != null) timerLabel.text = "00:00.0";
         
         if (timeTrial.trialFinished)
         {
             resultLabel.text = "WIN";
-            resultLabel.style.backgroundColor = Color.green;
+            resultLabel.style.color = Color.green;
         }
         else if (timeTrial.trialFinished == false)
         {
             resultLabel.text = "FAIL";
-            resultLabel.style.backgroundColor = Color.red;
+            resultLabel.style.color = Color.red;
         }
     }
     

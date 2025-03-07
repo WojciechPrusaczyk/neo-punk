@@ -43,6 +43,7 @@ public class TimeTrialInterface : MonoBehaviour
 
     private void Update()
     {
-        timerLabel.text = timeTrial.trialTime.ToString();
+        string formatedTime = timeTrial.FormatTime(timeTrial.trialTime);
+        timerLabel.text = formatedTime;
     }
 }
