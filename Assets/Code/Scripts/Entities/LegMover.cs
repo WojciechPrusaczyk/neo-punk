@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LegMover : MonoBehaviour
@@ -11,11 +12,15 @@ public class LegMover : MonoBehaviour
     public float legMoveDist = 0.5f;
     public float liftDistance = 0.3f;
     public float legMovementSpeed = 5f;
+    public LegMover oppositeLeg; // Przeciwstawna noga
 
     private Vector3 targetPoint;
     private Vector3 oldPos;
     private Vector3 halfWayPoint;
     private bool isMoving = false;
+
+    private static List<LegMover> legs = new List<LegMover>();
+    private static LegMover lastMovedLeg = null;
 
     void Start()
     {
@@ -23,23 +28,27 @@ public class LegMover : MonoBehaviour
         {
             Debug.LogError($"{gameObject.name}: legTarget nie został przypisany!");
         }
+        legs.Add(this);
     }
 
     void Update()
     {
-        // Aktualizacja pozycji targetu względem ciała
         Vector3 desiredTargetPosition = bodyTarget.position;
 
-        // Sprawdzenie, czy noga powinna wykonać krok
         if (!isMoving && Vector2.Distance(legTarget.position, desiredTargetPosition) > legMoveDist)
         {
-            StartCoroutine(MoveLeg(desiredTargetPosition));
+            if (CanMove())
+            {
+                StartCoroutine(MoveLeg(desiredTargetPosition));
+            }
         }
     }
 
     IEnumerator MoveLeg(Vector3 newTargetPosition)
     {
         isMoving = true;
+        lastMovedLeg = this;
+
         oldPos = legTarget.position;
         targetPoint = FindGroundPosition(newTargetPosition);
         halfWayPoint = (targetPoint + legTarget.position) / 2;
@@ -72,5 +81,16 @@ public class LegMover : MonoBehaviour
             return hit.point + (Vector2.up * hoverDist);
         }
         return checkPosition;
+    }
+
+    private bool CanMove()
+    {
+        if (lastMovedLeg == null)
+            return true;
+
+        if (oppositeLeg != null && oppositeLeg.isMoving)
+            return false;
+
+        return lastMovedLeg != this;
     }
 }
