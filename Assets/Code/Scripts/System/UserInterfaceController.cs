@@ -13,8 +13,10 @@ public class UserInterfaceController : MonoBehaviour
         public KeyCode KeyboardTrigger;
         public KeyCode ControlerTrigger;
         public bool FreezeGame;
+        public bool ShowsOnTopOfMainUi;
     }
 
+    // Pierwszym elementem ui musi ZAWSZE być main ui
     [SerializeField]
     private List<Interface> Interfaces = new List<Interface>();
 
@@ -35,7 +37,6 @@ public class UserInterfaceController : MonoBehaviour
     {
         if ( !Interfaces[DefaultInterface].interfaceRoot.activeSelf && CanPlayerQuitToDefault && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)))
         {
-            Debug.Log("Click");
             ActivateInterface(DefaultInterface);
         }
         else
@@ -60,6 +61,11 @@ public class UserInterfaceController : MonoBehaviour
 
             if (interfaceObject.interfaceRoot == interfaceToActivate)
             {
+                if (Interfaces.Count > 0 && interfaceObject.ShowsOnTopOfMainUi)
+                {
+                    Interfaces[0].interfaceRoot.SetActive(true);
+                }
+
                 if (interfaceObject.FreezeGame)
                 {
                     Time.timeScale = 0;
