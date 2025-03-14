@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96956ed541ac6d44a2ef67e5ddb934f, type: 3}
+  m_Name: HomelessMan2
+  m_EditorClassIdentifier: 
+  characterOneName: Player
+  characterOnePicture: {fileID: 0}
+  characterTwoName: HomelessMan
+  characterTwoPicture: {fileID: 0}
+  lines:
+  - speakerName: 1
+    text: First and formoast we are on the turf of "Big Dilon"
+  - speakerName: 1
+    text: Disputet territory but his men stand on street corners. Watch out for him
+      and his men
+  - speakerName: 1
+    text: 'they shoot for fun and beat up good people but keep some goodies in magazines
+      and.... '
+  - speakerName: 1
+    text: tyou coullld "free" those supplies For good of the people of course
+  - speakerName: 1
+    text: In fact one magazin is just down this road.

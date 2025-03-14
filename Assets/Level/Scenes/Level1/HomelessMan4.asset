@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96956ed541ac6d44a2ef67e5ddb934f, type: 3}
+  m_Name: HomelessMan4
+  m_EditorClassIdentifier: 
+  characterOneName: Player
+  characterOnePicture: {fileID: 0}
+  characterTwoName: HomelessMan
+  characterTwoPicture: {fileID: 0}
+  lines:
+  - speakerName: 1
+    text: ok ok, good buissness on your part listen now
+  - speakerName: 1
+    text: there is broken down part of the road two alleys south from here
+  - speakerName: 1
+    text: dont go there if you value your life
+  - speakerName: 1
+    text: cuz something awfull happened round there
+  - speakerName: 1
+    text: dissapearing people, barking dogs gangs dont go there, cops dont go there
+  - speakerName: 1
+    text: 'i wouldn''t go there even for big money '
+  - speakerName: 1
+    text: road openig goes to sewers and those decrepit tunels havent seen touch
+      of help in ages
+  - speakerName: 1
+    text: bad things and bad people live there monsters all of them
+  - speakerName: 1
+    text: but if you wont listen keep this
+  - speakerName: 1
+    text: '"gives trinket that improves visibility and increase money gain"'
+  - speakerName: 1
+    text: keep it and close at that
+  - speakerName: 1
+    text: and... you know
+  - speakerName: 1
+    text: come back to chat and trade
