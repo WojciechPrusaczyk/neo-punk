@@ -8,6 +8,7 @@ public class InvasionInterface : MonoBehaviour
     private VisualElement panel;
     private Button exitButton;
     public Label WaveState;
+    public Label EnemiesState;
     
     InvasionTrial invasionTrial;
     
@@ -26,6 +27,7 @@ public class InvasionInterface : MonoBehaviour
         
         // Pobieramy referencje do przycisków z UXML
         WaveState = panel.Q<Label>("WaveState");
+        EnemiesState = panel.Q<Label>("EnemiesState");
         
         
         // Przypisujemy funkcje do przycisków

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,27 @@ public class InvasionTrial : MonoBehaviour
     public int currentWave = 0;
     
     public float durationBetweenWaves = 1f;
+    
+    public InvasionInterface invasionInterface;
+
+
+    private void Update()
+    {
+        if (trialStarted)
+        {
+            int s = waves[currentWave - 1].gameObject.transform.childCount;
+            string enemiesText = $"Enemies left: {waves[currentWave - 1].gameObject.transform.childCount} / {waves[currentWave - 1].enemies.Count}";
+            invasionInterface.EnemiesState.text = enemiesText;
+        }
+    }
 
     public void StartTrial()
     {
         if (!trialStarted)
         {
+            invasionInterface.gameObject.SetActive(true);
+            UpdateWaveState();
+            
             trialStarted = true;
             currentWave = 1;
             StartCoroutine(HandleWaves());
@@ -34,13 +51,16 @@ public class InvasionTrial : MonoBehaviour
                 yield return null;
             }
             currentWave++;
+            UpdateWaveState();
             yield return new WaitForSeconds(durationBetweenWaves);
         }
         trialFinished = true;
+        invasionInterface.gameObject.SetActive(false);
     }
     
-    public string UpdateWaveState()
+    public void UpdateWaveState()
     {
-        return $"Wave {currentWave}/{waves.Count}";
+        string waveText =  $"Wave {currentWave}/{waves.Count}";
+        invasionInterface.WaveState.text = waveText;
     }
 }
