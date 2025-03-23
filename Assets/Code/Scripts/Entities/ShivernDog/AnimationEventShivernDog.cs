@@ -7,6 +7,7 @@ public class AnimationEventShivernDog : MonoBehaviour
     public ShivernDog shivernDog;
     public Animator animator;
     public EnemyAI enemyAI;
+    public ShivernAudioController shivernAudioController;
 
     public void Attack()
     {
@@ -28,5 +29,14 @@ public class AnimationEventShivernDog : MonoBehaviour
         animator.SetBool("isAttacking", false);
         enemyAI.RestoreMovement();
     }
-    
+
+    public void PlayAttackSound()
+    {
+        shivernAudioController.PlayAttackSound();
+    }
+
+    public void PlayDeathSound()
+    {
+        shivernAudioController.PlayDeathSound();
+    }
 }

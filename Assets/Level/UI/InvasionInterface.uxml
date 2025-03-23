@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/InvasionInterfaceuss.uss?fileID=7433441132597879392&amp;guid=a27c77980ff84424e91dc9c2962169dc&amp;type=3#InvasionInterfaceuss" />
+    <engine:VisualElement name="Panel" style="flex-grow: 1;">
+        <engine:Label text="Wave 1/3" name="WaveState" style="margin-top: 20px; -unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 40px; color: rgb(160, 224, 255);" />
+    </engine:VisualElement>
+</engine:UXML>

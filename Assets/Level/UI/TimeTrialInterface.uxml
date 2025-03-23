@@ -3,5 +3,13 @@
     <engine:VisualElement name="Panel" style="flex-grow: 1;">
         <engine:Label name="timerLabel" text="1:04.54" style="-unity-text-align: upper-center; height: 28px; position: absolute; left: 0; top: 0; right: 0; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; margin-right: 33%; margin-left: 33%; margin-top: 25px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 55px; -unity-font-style: normal; color: rgb(147, 197, 204); align-items: flex-start; justify-content: flex-end; align-self: flex-start; margin-bottom: 0;" />
         <engine:Button text="Button" name="exitButton" focusable="false" class="backButtonStyle" style="position: absolute; top: 0; left: auto; right: 0; bottom: auto; padding-top: 20px; padding-right: 0; padding-bottom: 20px; padding-left: 20px; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px;" />
+        <engine:VisualElement style="flex-grow: 1; left: 0; top: 0; margin-top: 20px; margin-left: 20px;">
+            <engine:Label text="Label" name="GoldTime" class="textStyle" style="background-image: none; position: absolute; left: 20px; top: 0;" />
+            <engine:Label text="Label" name="SilverTime" class="textStyle" style="position: absolute; top: 20px; left: 20px;" />
+            <engine:Label text="Label" name="BronzeTime" class="textStyle" style="position: absolute; top: 40px; left: 20px;" />
+            <engine:VisualElement name="GoldIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/Medals.ase?fileID=-5483190359199271569&amp;guid=fa66d1b07ce3b3b46a55bfe27b9766dd&amp;type=3#Medals_0&quot;); width: 20px; height: 20px; flex-direction: column; position: absolute; left: 0; top: 5px;" />
+            <engine:VisualElement name="SilverIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/Medals.ase?fileID=-2043254815680509225&amp;guid=fa66d1b07ce3b3b46a55bfe27b9766dd&amp;type=3#Medals_1&quot;); width: 20px; height: 20px; flex-direction: column; position: absolute; left: 0; top: 25px;" />
+            <engine:VisualElement name="BronzeIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/Medals.ase?fileID=-7762088845341217879&amp;guid=fa66d1b07ce3b3b46a55bfe27b9766dd&amp;type=3#Medals_2&quot;); width: 20px; height: 20px; flex-direction: column; position: absolute; left: 0; top: 45px;" />
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

@@ -77,8 +77,11 @@ public class ShivernDog : MonoBehaviour
     }
     
     public void DealDamage()
-    {        
-        if(_enemyAI.canAttack)
+    {
+        if (_enemyAI.canAttack)
+        {
             _player.GetComponent<EntityStatus>().DealDamage(_entityStatus.AttackDamage, transform.gameObject);
+        }
+        
     }
 }

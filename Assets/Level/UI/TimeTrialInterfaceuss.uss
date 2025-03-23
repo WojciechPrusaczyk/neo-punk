@@ -18,3 +18,9 @@
     background-image: url("project://database/Assets/Art/UserInterface/Buttons/iconExit2.png?fileID=4088345329899473221&guid=07a2daedab773684c820fc951bec5b5e&type=3#iconExit2_0");
     background-color: rgba(0, 0, 0, 0);
 }
+
+.textStyle {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    -unity-background-image-tint-color: rgb(147, 197, 204);
+    color: rgb(147, 197, 204);
+}

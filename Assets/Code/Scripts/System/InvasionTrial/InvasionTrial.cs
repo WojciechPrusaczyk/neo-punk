@@ -38,4 +38,9 @@ public class InvasionTrial : MonoBehaviour
         }
         trialFinished = true;
     }
+    
+    public string UpdateWaveState()
+    {
+        return $"Wave {currentWave}/{waves.Count}";
+    }
 }

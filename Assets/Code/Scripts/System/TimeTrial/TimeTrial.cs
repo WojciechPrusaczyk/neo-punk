@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TimeTrial : MonoBehaviour
 {
+    public List<int> medalTimes;
+    
     public bool trialStarted = false;
     public bool trialFinished = false;
     

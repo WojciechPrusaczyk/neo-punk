@@ -10,6 +10,11 @@ public class TimeTrialInterface : MonoBehaviour
     private Button exitButton;
     private Label timerLabel;
 
+    public Label goldTimeLabel;
+    public Label silverTimeLabel;
+    public Label bronzeTimeLabel;
+
+
     
     public TimeTrial timeTrial;
 
@@ -30,6 +35,13 @@ public class TimeTrialInterface : MonoBehaviour
         exitButton = panel.Q<Button>("exitButton");
         timerLabel = panel.Q<Label>("timerLabel");
         
+        goldTimeLabel = panel.Q<Label>("GoldTime");
+        silverTimeLabel = panel.Q<Label>("SilverTime");
+        bronzeTimeLabel = panel.Q<Label>("BronzeTime");
+        
+        goldTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[0]);
+        silverTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[1]);
+        bronzeTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[2]);
         
         // Przypisujemy funkcje do przycisków
         if (exitButton != null) exitButton.clicked += () => timeTrial.ExitTrial();
