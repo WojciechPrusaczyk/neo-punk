@@ -1,0 +1,1007 @@
+fileFormatVersion: 2
+guid: 08ad8d45e30b46a4bbb8d7ab8c55a06f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: homelessMan_Frame_0
+    originalName: 
+    pivot: {x: 0.55357146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 56
+      height: 63
+    spriteID: 6ee4602cd4f24094481a8e263b455b83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: homelessMan_Frame_1
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 146
+      width: 55
+      height: 63
+    spriteID: 3d1181f4dcdcde64fa89c65d84df77c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 146}
+  - name: homelessMan_Frame_2
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 217
+      width: 55
+      height: 63
+    spriteID: 1c5787f494370b44ea9557a1f61abff6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 217}
+  - name: homelessMan_Frame_3
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 288
+      width: 55
+      height: 63
+    spriteID: 663a645aaef199e4bb813b90cb8f8745
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 288}
+  - name: homelessMan_Frame_4
+    originalName: 
+    pivot: {x: 0.537037, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 75
+      width: 54
+      height: 63
+    spriteID: 252b13b3775f7b24ab0ca4e8a9ad6515
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 75}
+  - name: homelessMan_Frame_5
+    originalName: 
+    pivot: {x: 0.5283019, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 217
+      width: 53
+      height: 63
+    spriteID: 6717e2c4a19b2e443973ecc2fe2b20b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 217}
+  - name: homelessMan_Frame_6
+    originalName: 
+    pivot: {x: 0.5283019, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 288
+      width: 53
+      height: 63
+    spriteID: af2c7f2e2ec137b4dabcf8ae37112cf0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 288}
+  - name: homelessMan_Frame_7
+    originalName: 
+    pivot: {x: 0.537037, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 146
+      width: 54
+      height: 63
+    spriteID: 6d727fb407f70fc428748f8dc670b6f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 146}
+  - name: homelessMan_Frame_8
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 359
+      width: 55
+      height: 63
+    spriteID: 6708e203d7002334298842c23cfe2ffd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 359}
+  - name: homelessMan_Frame_9
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 430
+      width: 55
+      height: 63
+    spriteID: fcc2954c26023d649880d4495f527412
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 430}
+  - name: homelessMan_Frame_10
+    originalName: 
+    pivot: {x: 0.5454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 4
+      width: 55
+      height: 63
+    spriteID: 3d6059afac2185b45b6192e3daa05f09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 4}
+  - name: homelessMan_Frame_11
+    originalName: 
+    pivot: {x: 0.55357146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 75
+      width: 56
+      height: 63
+    spriteID: 51fbb0ffbba8b9743a38dedf842ab3d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 75}
+  - name: homelessMan_Frame_12
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 288
+      width: 37
+      height: 63
+    spriteID: f6d4b69bc12920c4fb18cd7bb5cbf72b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 288}
+  - name: homelessMan_Frame_13
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 359
+      width: 37
+      height: 63
+    spriteID: bed8b3694125add4e9a23a99c4d3942a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 359}
+  - name: homelessMan_Frame_14
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 430
+      width: 37
+      height: 63
+    spriteID: 4ba97d1bab82bf149ac19fbc45e10f9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 430}
+  - name: homelessMan_Frame_15
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 4
+      width: 37
+      height: 63
+    spriteID: b813d05ac0ace2642942f85a7da3c444
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 4}
+  - name: homelessMan_Frame_16
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 359
+      width: 39
+      height: 63
+    spriteID: cad15f48e7e5a42489800856ce4fe167
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 359}
+  - name: homelessMan_Frame_17
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 430
+      width: 39
+      height: 63
+    spriteID: b446911c4c6dade48a8ecd53441f8ce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 430}
+  - name: homelessMan_Frame_18
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 4
+      width: 39
+      height: 63
+    spriteID: bc118c87fc44ab142a86bf3856e8ad28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 4}
+  - name: homelessMan_Frame_19
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 75
+      width: 39
+      height: 63
+    spriteID: 5cd4605931667dc4cba9d9bdad788942
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 75}
+  - name: homelessMan_Frame_20
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 146
+      width: 39
+      height: 63
+    spriteID: 0f5ae50d55288d04692e377fafbf1d06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 146}
+  - name: homelessMan_Frame_21
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 217
+      width: 39
+      height: 63
+    spriteID: 6e05f5b7214438640a6ed8fc520b7e9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 217}
+  - name: homelessMan_Frame_22
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 75
+      width: 37
+      height: 63
+    spriteID: e98d2828e6fc5b440ad6527f4d39325c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 75}
+  - name: homelessMan_Frame_23
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 146
+      width: 37
+      height: 63
+    spriteID: 43097ea4d8ca4bb49a174f2ab0f0f1b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 146}
+  - name: homelessMan_Frame_24
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 288
+      width: 37
+      height: 62
+    spriteID: 07742b96f50a49d4294c12faae43fdce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 288}
+  - name: homelessMan_Frame_25
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 358
+      width: 37
+      height: 62
+    spriteID: 4e7016fd4ea979d489b04912f4cc2a65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 358}
+  - name: homelessMan_Frame_26
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 428
+      width: 37
+      height: 62
+    spriteID: 43e56dca21a60af4bb947ca4a57ba816
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 428}
+  - name: homelessMan_Frame_27
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 4
+      width: 37
+      height: 62
+    spriteID: b5806ff8479c0744e9c1fa3c6d6eff7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 4}
+  - name: homelessMan_Frame_28
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 74
+      width: 37
+      height: 62
+    spriteID: 2d8afa8434657a64a90a16925d80fd51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 74}
+  - name: homelessMan_Frame_29
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 223
+      y: 144
+      width: 37
+      height: 62
+    spriteID: 8e5d5fbd16a387a48ba28cade69f292c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 223, y: 144}
+  - name: homelessMan_Frame_30
+    originalName: 
+    pivot: {x: 0.32432434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 178
+      y: 217
+      width: 37
+      height: 63
+    spriteID: 9ee538eb6e6f9614f87672d24324fe4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 178, y: 217}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -178623036
+    name: homelessMan
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: homelessMan_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 1
+        y: 0
+        width: 56
+        height: 63
+      spriteId: 6ee4602cd4f24094481a8e263b455b83
+    - name: homelessMan_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: 3d1181f4dcdcde64fa89c65d84df77c8
+    - name: homelessMan_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: 1c5787f494370b44ea9557a1f61abff6
+    - name: homelessMan_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: 663a645aaef199e4bb813b90cb8f8745
+    - name: homelessMan_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 3
+        y: 0
+        width: 54
+        height: 63
+      spriteId: 252b13b3775f7b24ab0ca4e8a9ad6515
+    - name: homelessMan_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 4
+        y: 0
+        width: 53
+        height: 63
+      spriteId: 6717e2c4a19b2e443973ecc2fe2b20b8
+    - name: homelessMan_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 4
+        y: 0
+        width: 53
+        height: 63
+      spriteId: af2c7f2e2ec137b4dabcf8ae37112cf0
+    - name: homelessMan_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 3
+        y: 0
+        width: 54
+        height: 63
+      spriteId: 6d727fb407f70fc428748f8dc670b6f8
+    - name: homelessMan_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: 6708e203d7002334298842c23cfe2ffd
+    - name: homelessMan_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: fcc2954c26023d649880d4495f527412
+    - name: homelessMan_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 2
+        y: 0
+        width: 55
+        height: 63
+      spriteId: 3d6059afac2185b45b6192e3daa05f09
+    - name: homelessMan_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 1
+        y: 0
+        width: 56
+        height: 63
+      spriteId: 51fbb0ffbba8b9743a38dedf842ab3d2
+    - name: homelessMan_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: f6d4b69bc12920c4fb18cd7bb5cbf72b
+    - name: homelessMan_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: bed8b3694125add4e9a23a99c4d3942a
+    - name: homelessMan_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: 4ba97d1bab82bf149ac19fbc45e10f9a
+    - name: homelessMan_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: b813d05ac0ace2642942f85a7da3c444
+    - name: homelessMan_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: cad15f48e7e5a42489800856ce4fe167
+    - name: homelessMan_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: b446911c4c6dade48a8ecd53441f8ce0
+    - name: homelessMan_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: bc118c87fc44ab142a86bf3856e8ad28
+    - name: homelessMan_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: 5cd4605931667dc4cba9d9bdad788942
+    - name: homelessMan_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: 0f5ae50d55288d04692e377fafbf1d06
+    - name: homelessMan_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 19
+        y: 0
+        width: 39
+        height: 63
+      spriteId: 6e05f5b7214438640a6ed8fc520b7e9a
+    - name: homelessMan_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: e98d2828e6fc5b440ad6527f4d39325c
+    - name: homelessMan_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: 43097ea4d8ca4bb49a174f2ab0f0f1b1
+    - name: homelessMan_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: 07742b96f50a49d4294c12faae43fdce
+    - name: homelessMan_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: 4e7016fd4ea979d489b04912f4cc2a65
+    - name: homelessMan_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: 43e56dca21a60af4bb947ca4a57ba816
+    - name: homelessMan_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: b5806ff8479c0744e9c1fa3c6d6eff7a
+    - name: homelessMan_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: 2d8afa8434657a64a90a16925d80fd51
+    - name: homelessMan_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 62
+      spriteId: 8e5d5fbd16a387a48ba28cade69f292c
+    - name: homelessMan_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 20
+        y: 0
+        width: 37
+        height: 63
+      spriteId: 9ee538eb6e6f9614f87672d24324fe4c
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
