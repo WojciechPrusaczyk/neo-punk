@@ -1,69 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PauseMenuBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private GameObject PauseUi;
-    private GameObject PauseUiCanvas;
-    private PlayerInventory PlayerInv;
+    private UserInterfaceController _userInterfaceController;
+    public GameObject userInterfaceRoot;
+    public GameObject optionsMenu;
 
-    private GameObject MainUi;
-    public bool IsGamePaused;
-    void Awake()
+    private void Awake()
     {
-        IsGamePaused = false;
-        Cursor.visible = false;
-        
-        PauseUi = gameObject;
-        PauseUiCanvas = PauseUi.transform.GetChild(0).gameObject;
-        PauseUiCanvas.SetActive(false);
-        PlayerInv = GameObject.Find("Player").GetComponent<PlayerInventory>();
-        
-        MainUi = GameObject.Find("Main User Interface");
+        _userInterfaceController = userInterfaceRoot.gameObject.GetComponent<UserInterfaceController>();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        if ( !PlayerInv.isEquipmentShown && IsGamePaused && (Input.GetKeyDown(InputManager.PauseMenuKey) || Input.GetKeyDown(KeyCode.Escape) ) )
-        {
-            buttonResume();
-        }
-        else if ( !PlayerInv.isEquipmentShown && ( Input.GetKeyDown(InputManager.PauseMenuKey) || Input.GetKeyDown(KeyCode.Escape) ) )
-        {
-            Pause();
-        }
-    }
+        // Ładujemy UXML
+        var uiDocument = GetComponent<UIDocument>();
+        var InterfaceRoot = uiDocument.rootVisualElement;
 
-    private void Pause()
-    {
-        IsGamePaused = true;
-        Cursor.visible = true;
-        MainUi.SetActive(false);
-        PauseUiCanvas.SetActive(true);
-        Time.timeScale = 0;
+        /*
+         * Przyciski menu
+         */
+        var resumeButton = InterfaceRoot.Q<Button>("resumeButton");
+        var settingsButton = InterfaceRoot.Q<Button>("settingsButton");
+        var quitMenuButton = InterfaceRoot.Q<Button>("quitMenuButton");
+        var quitButton = InterfaceRoot.Q<Button>("quitButton");
+
+        resumeButton.clicked += buttonResume;
+        settingsButton.clicked += buttonOptions;
+        quitMenuButton.clicked += buttonQuitToMenu;
+        quitButton.clicked += buttonQuitGame;
     }
 
     public void buttonResume()
     {
-        IsGamePaused = false;
-        Cursor.visible = false;
-        PauseUiCanvas.SetActive(false);
-        MainUi.SetActive(true);
-        Time.timeScale = 1;
+        _userInterfaceController.ActivateInterface(0);
     }
 
     public void buttonOptions()
     {
-        
+        _userInterfaceController.ActivateInterface(optionsMenu);
     }
 
     public void buttonQuitToMenu()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 

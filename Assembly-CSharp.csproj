@@ -79,6 +79,7 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\PauseMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDollAbilities.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\Dragonfly.cs" />
+    <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernAudioController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\PauseMenuInterface.cs" />
     <Compile Include="Assets\Code\Scripts\System\PlayerDetectionArea.cs" />
     <Compile Include="Assets\Code\Scripts\Items\DemonBell\DemonBellAbilities.cs" />
@@ -92,11 +93,13 @@
     <Compile Include="Assets\Code\Scripts\System\LootTable.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\SoundManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\AnimationEventDragonFly.cs" />
+    <Compile Include="Assets\Code\Scripts\UserInterface\OptionsMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\PlayerDetector.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\VerticalDoorController.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiringAbilities.cs" />
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsController.cs" />
+    <Compile Include="Assets\Level\UI\Białkowe\InvasionInterface.cs" />
     <Compile Include="Assets\Code\Scripts\System\InputManager.cs" />
     <Compile Include="Assets\Code\Scripts\System\InvasionTrial\Wave.cs" />
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsTrigger.cs" />
@@ -109,10 +112,12 @@
     <None Include="Assets\Level\UI\TimeTrialInterface.uxml" />
     <None Include="Assets\Level\UI\OptionsInterface.uxml" />
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uss" />
+    <None Include="Assets\Level\UI\InvasionInterfaceuss.uss" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uxml" />
     <None Include="Assets\Level\UI\TimeTrialInterfaceuss.uss" />
     <None Include="Assets\Level\UI\EquipmentInterface\Equipment.uxml" />
     <None Include="Assets\Level\UI\TimeTrialEndScreenInterfaceuss.uss" />
+    <None Include="Assets\Level\UI\InvasionInterface.uxml" />
     <None Include="Assets\Level\UI\MainUserInterface.uxml" />
     <None Include="Assets\Level\UI\OptionsInterface.uss" />
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uxml" />

@@ -14,6 +14,7 @@ public class UserInterfaceController : MonoBehaviour
         public KeyCode ControlerTrigger;
         public bool FreezeGame;
         public bool ShowsOnTopOfMainUi;
+        public bool ShowCursor = false;
     }
 
     // Pierwszym elementem ui musi ZAWSZE być main ui
@@ -66,14 +67,8 @@ public class UserInterfaceController : MonoBehaviour
                     Interfaces[0].interfaceRoot.SetActive(true);
                 }
 
-                if (interfaceObject.FreezeGame)
-                {
-                    Time.timeScale = 0;
-                }
-                else
-                {
-                    Time.timeScale = 1;
-                }
+                Cursor.visible = interfaceObject.ShowCursor;
+                Time.timeScale = interfaceObject.FreezeGame?0:1;
             }
         }
         interfaceToActivate.SetActive(!interfaceToActivate.activeSelf);

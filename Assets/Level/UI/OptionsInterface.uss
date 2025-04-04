@@ -2,4 +2,86 @@
 }
 
 .button {
+    height: 96px;
+}
+
+.tabStyle {
+    flex-grow: 1;
+    display: flex;
+    visibility: visible;
+    padding-right: 104px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+
+.tabLabelStyle {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(206, 255, 246);
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.sliderStyle {
+    height: 96px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("project://database/Assets/Art/UserInterface/Controls/suwak.png?fileID=8135970522436755835&guid=2e9e2015d5f18aa48b4bbaba8dd61ea7&type=3#suwak_0");
+    padding-left: 64px;
+    padding-top: 0;
+    padding-right: 64px;
+    padding-bottom: 0;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    max-width: 768px;
+}
+
+.sliderStyle Label {
+    position: absolute;
+    height: 32px;
+    margin-top: -32px;
+    margin-left: -32px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(206, 255, 246);
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.sliderStyle #unity-tracker {
+    display: none;
+}
+
+.sliderStyle #unity-dragger {
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: -29px;
+    background-image: url("project://database/Assets/Art/UserInterface/Controls/sliderDragger.png?fileID=680919841439448801&guid=6b14e1276e32a184b92899462934cd9e&type=3#kolko suwaka_0");
+    width: 50px;
+    height: 50px;
+}
+
+.sliderStyle #unity-drag-container {
+    height: 90%;
+}
+
+.toggleStyle #unity-checkmark {
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url("project://database/Assets/Art/UserInterface/Controls/checkbox.png?fileID=1071215165001224775&guid=2ba2e025f9cf1de408ae6b098977c3d3&type=3#checkbox1_0");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 32px;
+}
+
+.toggleStyle Label {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(206, 255, 246);
+    font-size: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.toggleStyle:checked #unity-checkmark {
+    background-image: url("project://database/Assets/Art/UserInterface/Controls/checkboxChecked.png?fileID=8758375652327186922&guid=f17d8cff33c5d3a44bc8b15b410f9521&type=3#checkboxChecked1_0");
 }

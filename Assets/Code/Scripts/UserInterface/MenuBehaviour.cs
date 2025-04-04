@@ -13,14 +13,14 @@ public class MenuBehaviour : MonoBehaviour
 
     void Awake()
     {
-        if (null != cursorTexture)
-        {
-            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-        }
-        else
-        {
-            Debug.LogError("Not found cursor texture in MenuBehaviour.");
-        }
+        // if (null != cursorTexture)
+        // {
+        //     Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        // }
+        // else
+        // {
+        //     Debug.LogError("Not found cursor texture in MenuBehaviour.");
+        // }
 
         animator = GetComponent<Animator>();
         if (null == animator)

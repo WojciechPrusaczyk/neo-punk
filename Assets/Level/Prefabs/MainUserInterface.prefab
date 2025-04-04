@@ -62,6 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3510689187541882606}
   - component: {fileID: 4824120459022450768}
+  - component: {fileID: 7967942612362911845}
   m_Layer: 0
   m_Name: OptionsInterface
   m_TagString: Untagged
@@ -104,6 +105,20 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 311dc94da1b78ea489e6ecf16508ec75, type: 3}
   m_SortingOrder: 0
+--- !u!114 &7967942612362911845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092045863778714653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3328992072b74147898a62b20f88ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInterfaceRoot: {fileID: 9043579207754872659}
+  pauseMenu: {fileID: 8179797877404052738}
 --- !u!1 &8179797877404052738
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3761885541215364213}
   - component: {fileID: 748611858412671447}
+  - component: {fileID: 6391832894735617885}
   m_Layer: 0
   m_Name: PauseMenuInterface
   m_TagString: Untagged
@@ -156,6 +172,20 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 2326501884444104ab1b06858a54c0f5, type: 3}
   m_SortingOrder: 0
+--- !u!114 &6391832894735617885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179797877404052738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421360d199673747ad3ea0b1f3e2ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInterfaceRoot: {fileID: 9043579207754872659}
+  optionsMenu: {fileID: 4092045863778714653}
 --- !u!1 &8726427451812871041
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,19 +362,23 @@ MonoBehaviour:
     ControlerTrigger: 0
     FreezeGame: 0
     ShowsOnTopOfMainUi: 0
+    ShowCursor: 0
   - interfaceRoot: {fileID: 8179797877404052738}
     KeyboardTrigger: 27
     ControlerTrigger: 337
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0
+    ShowCursor: 1
   - interfaceRoot: {fileID: 4092045863778714653}
     KeyboardTrigger: 105
     ControlerTrigger: 337
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0
+    ShowCursor: 1
   - interfaceRoot: {fileID: 3790645692831317544}
     KeyboardTrigger: 9
     ControlerTrigger: 12
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0
+    ShowCursor: 1
   DefaultInterface: 0
