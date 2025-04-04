@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class DialogScript : MonoBehaviour
 {
-    [SerializeField] private DialogData dialogData;
+    public List<DialogData> dialogs = new List<DialogData>();
+    [SerializeField] private DialogData dialogData = null;
 
     private VisualElement root;
     private VisualElement characterOnePictureElement;
@@ -81,8 +83,6 @@ public class DialogScript : MonoBehaviour
             Debug.LogError("ERROR DIALOG! NIE MA ELEMENTOW UI");
             return;
         }
-        
-        StartDialog();
     }
 
     //Funkcja do ustawiania osoby ktora teraz mowi
@@ -111,11 +111,20 @@ public class DialogScript : MonoBehaviour
     }
 
     //Wlaczenie dialogu
-    private void StartDialog()
+    private void StartDialog(int dialogIndex)
     {
+        if (dialogIndex >= 0 && dialogIndex < dialogs.Count)
+        {
+            dialogData = dialogs[dialogIndex];
+        }
+        else
+        {
+            return;
+        }
         if (dialogData.lines == null || dialogData.lines.Count == 0)
         {
             Debug.LogWarning("ERROR DIALOG! NIE MA TEKSTU");
+            dialogData = null;
             return;
         }
 
@@ -162,7 +171,7 @@ public class DialogScript : MonoBehaviour
         
         if (currentLineIndex >= dialogData.lines.Count)
         {
-            CloseUI();
+            EndDialog();
             return;
         }
         ShowLine(currentLineIndex);
@@ -181,8 +190,9 @@ public class DialogScript : MonoBehaviour
     }
     
     //Funkcja zamykania UI
-    private void CloseUI()
+    private void EndDialog()
     {
+        dialogData = null;
         var uiDocument = GetComponent<UIDocument>();
         
         if (uiDocument != null)
