@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96956ed541ac6d44a2ef67e5ddb934f, type: 3}
+  m_Name: ScaredBystander
+  m_EditorClassIdentifier: 
+  characterOneName: Player
+  characterOnePicture: {fileID: 0}
+  characterTwoName: Bystander
+  characterTwoPicture: {fileID: 0}
+  lines:
+  - speakerName: 1
+    text: "You shouldn\u2019t be here\u2026                             It\u2019s
+      still inside."
+  - speakerName: 0
+    text: What?
+  - speakerName: 1
+    text: "That thing\u2026 tall and thin            it moves like a shadow"
+  - speakerName: 1
+    text: "Grey, pale\u2026        like something half-rotten"
+  - speakerName: 0
+    text: Where is it?
+  - speakerName: 1
+    text: Back there, I've seen it grab someone            I'm getting out of there,
+      you better do to
+  - speakerName: 1
+    text: ' If you stay and hear it close, dont cry i didnt warn you'
