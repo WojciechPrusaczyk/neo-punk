@@ -110,7 +110,7 @@ public class DialogScript : MonoBehaviour
         
     }
 
-    //Wlaczenie dialogu
+    //Włączenie dialogu
     private void StartDialog(int dialogIndex)
     {
         if (dialogIndex >= 0 && dialogIndex < dialogs.Count)
@@ -199,8 +199,6 @@ public class DialogScript : MonoBehaviour
         {
             uiDocument.enabled = false; // Wyłączenie UIDocument
         }
-        
         Debug.Log("Koniec dialogu");
     }
-   
 }

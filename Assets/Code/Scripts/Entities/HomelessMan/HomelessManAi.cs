@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class HomelessManAi : MonoBehaviour
 {
-    [SerializeField] private float detectionRange = 20f;
+    [SerializeField] private float detectionRange = 10f;
+    [SerializeField] private float interactionRange = 4f;
 
     private GameObject player;
     private Animator animator;

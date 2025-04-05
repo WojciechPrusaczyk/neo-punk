@@ -65,6 +65,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a519b94faf6a7b4db0bbe456618e87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogs:
+  - {fileID: 11400000, guid: d1b57cdc5cc1a5348aae2b3235e2a12f, type: 2}
+  - {fileID: 11400000, guid: b3006758d1932e64293046ffe53fe65f, type: 2}
+  - {fileID: 11400000, guid: 64ca4fdeba891854c96641abec1d96b0, type: 2}
+  - {fileID: 11400000, guid: afd8df2592a5c4d48a49f10715ec640d, type: 2}
+  - {fileID: 11400000, guid: 38db89ce03d277a43b2f4bb32055e9a9, type: 2}
+  - {fileID: 11400000, guid: 995717ecb16e0494399e16691774c890, type: 2}
   dialogData: {fileID: 0}
 --- !u!1 &3790645692831317544
 GameObject:
