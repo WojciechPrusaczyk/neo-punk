@@ -19,27 +19,33 @@ public class DialogScript : MonoBehaviour
     
     private int currentLineIndex = 0;
 
+    private UserInterfaceController userInterfaceController;
+    public GameObject mainUserInterfaceControllerObject;
+
+    private void Awake()
+    {
+        mainUserInterfaceControllerObject = GameObject.Find("MainUserInterfaceRoot").gameObject;
+        userInterfaceController = mainUserInterfaceControllerObject.GetComponent<UserInterfaceController>();
+    }
+
     private void OnEnable()
     {
         var uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null)
         {
             Debug.LogError("ERROR DIALOG! NIE MA UIDOCUMENT");
-            return;
         }
 
         root = uiDocument.rootVisualElement;
         if (root == null)
         {
             Debug.LogError("ERROR DIALOG! NIE MA ROOT VISUALELEMENT");
-            return;
         }
 
-        
-        
-        
+        // gameObject.active = false;
+
         LoadUI();
-        
+
     }
 
     private void Update()
@@ -55,7 +61,6 @@ public class DialogScript : MonoBehaviour
             {
                 NextLine();
             }
-            
         }
     }
 
@@ -68,14 +73,14 @@ public class DialogScript : MonoBehaviour
         characterOneNameElement = root.Q<Label>("CharacterName1");
         characterTwoNameElement = root.Q<Label>("CharacterName2");
         dialogTextElement = root.Q<Label>("DialogText");
-        
-        
+
+
         characterOneNameElement.text = dialogData.characterOneName.ToString();
         characterTwoNameElement.text = dialogData.characterTwoName.ToString();
 
         characterOnePictureElement.style.backgroundImage = new StyleBackground(dialogData.characterOnePicture);
         characterTwoPictureElement.style.backgroundImage = new StyleBackground(dialogData.characterTwoPicture);
-        
+
         //Check
         if (characterOnePictureElement == null || characterTwoPictureElement == null ||
             characterOneNameElement == null || characterTwoNameElement == null || dialogTextElement == null)
@@ -111,8 +116,22 @@ public class DialogScript : MonoBehaviour
     }
 
     //Włączenie dialogu
-    private void StartDialog(int dialogIndex)
+    public void StartDialog(int dialogIndex)
     {
+        Debug.Log("Test");
+
+        if (dialogs[dialogIndex] && dialogs[dialogIndex].lines == null || dialogs[dialogIndex].lines.Count == 0)
+        {
+            Debug.LogWarning("ERROR DIALOG! NIE MA TEKSTU");
+            return;
+        }
+
+        if ( dialogs[dialogIndex] && !dialogs[dialogIndex].repeatable && dialogs[dialogIndex].hasBeenAlreadySeen)
+        {
+            Debug.LogWarning("ERROR DIALOG! HAS BEEN ALREADY SEEN");
+            return;
+        }
+
         if (dialogIndex >= 0 && dialogIndex < dialogs.Count)
         {
             dialogData = dialogs[dialogIndex];
@@ -121,16 +140,10 @@ public class DialogScript : MonoBehaviour
         {
             return;
         }
-        if (dialogData.lines == null || dialogData.lines.Count == 0)
-        {
-            Debug.LogWarning("ERROR DIALOG! NIE MA TEKSTU");
-            dialogData = null;
-            return;
-        }
 
+        userInterfaceController.ActivateInterface(4);
         ShowLine(0);
     }
-
     
     private void ShowLine(int lineIndex)
     {
@@ -175,7 +188,6 @@ public class DialogScript : MonoBehaviour
             return;
         }
         ShowLine(currentLineIndex);
-        
     }
     
     //Funkcja animacji pojawiania sie liter
@@ -184,14 +196,17 @@ public class DialogScript : MonoBehaviour
         dialogTextElement.text = "";
         foreach (char letter in textAnimation)
         {
-                    dialogTextElement.text += letter;
-                    yield return new WaitForSeconds(0.05f); //Tutaj zwieksza sie predkosc wyswietlanego tekstu
+            dialogTextElement.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f); //Tutaj zwieksza sie predkosc wyswietlanego tekstu
         }
     }
     
     //Funkcja zamykania UI
     private void EndDialog()
     {
+        userInterfaceController.ActivateInterface(0);
+
+        dialogData.hasBeenAlreadySeen = true;
         dialogData = null;
         var uiDocument = GetComponent<UIDocument>();
         

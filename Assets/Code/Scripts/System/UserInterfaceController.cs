@@ -25,7 +25,7 @@ public class UserInterfaceController : MonoBehaviour
     private int DefaultInterface = 0;
     private bool CanPlayerQuitToDefault = true;
 
-    private void Awake()
+    private void Start()
     {
         foreach (var interfaceObject in Interfaces)
         {
@@ -53,6 +53,11 @@ public class UserInterfaceController : MonoBehaviour
 
     public void ActivateInterface(GameObject interfaceToActivate)
     {
+        if (interfaceToActivate == null)
+        {
+            Debug.LogError("Provided argument to UserInterfaceController.ActivateInterface is null.");
+            return;
+        }
         foreach (var interfaceObject in Interfaces)
         {
             if (interfaceObject.interfaceRoot.activeSelf)

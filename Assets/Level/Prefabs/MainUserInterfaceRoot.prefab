@@ -73,6 +73,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38db89ce03d277a43b2f4bb32055e9a9, type: 2}
   - {fileID: 11400000, guid: 995717ecb16e0494399e16691774c890, type: 2}
   dialogData: {fileID: 0}
+  mainUserInterfaceControllerObject: {fileID: 0}
 --- !u!1 &3790645692831317544
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ GameObject:
   - component: {fileID: 5521721904183125955}
   - component: {fileID: 1997679756470280447}
   m_Layer: 0
-  m_Name: MainUserInterface
+  m_Name: MainUserInterfaceRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,4 +456,10 @@ MonoBehaviour:
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0
     ShowCursor: 1
+  - interfaceRoot: {fileID: 172582124041883943}
+    KeyboardTrigger: 9
+    ControlerTrigger: 12
+    FreezeGame: 1
+    ShowsOnTopOfMainUi: 0
+    ShowCursor: 0
   DefaultInterface: 0

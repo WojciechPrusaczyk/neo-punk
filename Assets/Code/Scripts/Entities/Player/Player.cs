@@ -236,7 +236,7 @@ public class Player : MonoBehaviour
         /*
          * Atak, oraz charge attack
          */
-        if ((Input.GetKey(InputManager.AttackKey) || Input.GetKey(InputManager.PadButtonAttack)) && !isAttacking && !isBlocking)
+        if ((Input.GetKey(InputManager.AttackKey) || Input.GetKey(InputManager.PadButtonAttack)) && !isAttacking && !isBlocking && (Time.timeScale > 0))
         {
             if (keyHoldTime < holdTimeThreshold)
             {

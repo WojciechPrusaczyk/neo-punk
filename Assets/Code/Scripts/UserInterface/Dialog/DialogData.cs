@@ -21,4 +21,6 @@ public class DialogData : ScriptableObject
     public string characterTwoName;
     public Sprite characterTwoPicture;
     public List<DialogLine> lines = new List<DialogLine>();
+    public bool repeatable = false;
+    public bool hasBeenAlreadySeen = false;
 }

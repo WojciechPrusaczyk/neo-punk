@@ -10,10 +10,20 @@ public class HomelessManAi : MonoBehaviour
     private Animator animator;
     private Transform appearanceTransform;
     private bool isWaving = false;
+    private bool isAbleToTalk = false;
+    private bool isTalking = false;
+    public GameObject tooltip;
+
+    private DialogScript dialogInterface;
+    public GameObject dialogInterfaceObject;
+    private UserInterfaceController userInterfaceController;
+    public GameObject mainUserInterfaceControllerObject;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        dialogInterface = dialogInterfaceObject.GetComponent<DialogScript>();
+        userInterfaceController = mainUserInterfaceControllerObject.GetComponent<UserInterfaceController>();
 
         if (player == null)
         {
@@ -47,17 +57,23 @@ public class HomelessManAi : MonoBehaviour
 
         // Sprawdzanie dystansu do gracza
         float distance = Vector3.Distance(transform.position, player.transform.position);
+        isAbleToTalk = Vector3.Distance(transform.position, player.transform.position) <= interactionRange;
 
-        if (distance <= detectionRange)
+        tooltip.active = isAbleToTalk;
+
+        if (isAbleToTalk && Input.GetKeyDown(InputManager.InteractKey))
         {
+            tooltip.active = false;
+            dialogInterface.StartDialog(0);
+        }
+
+        if ( distance <= detectionRange ) {
             if (!isWaving)
             {
                 animator.SetTrigger("wave");
                 isWaving = true;
             }
-        }
-        else
-        {
+        } else {
             if (isWaving)
             {
                 animator.SetTrigger("stopWaving");
