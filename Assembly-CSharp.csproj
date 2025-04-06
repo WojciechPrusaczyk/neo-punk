@@ -101,6 +101,7 @@
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiringAbilities.cs" />
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\InvasionInterface.cs" />
+    <Compile Include="Assets\Code\Scripts\System\EventFlagsSystem.cs" />
     <Compile Include="Assets\Code\Scripts\System\InputManager.cs" />
     <Compile Include="Assets\Code\Scripts\System\InvasionTrial\Wave.cs" />
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsTrigger.cs" />
@@ -123,9 +124,9 @@
     <None Include="Assets\Level\UI\MainUserInterface.uxml" />
     <None Include="Assets\Level\UI\OptionsInterface.uss" />
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uxml" />
+    <None Include="Assets\Level\UI\DialogMenu\DialogMenu.uxml" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uss" />
     <None Include="Assets\Level\UI\DialogMenu\dialog-menu.uss" />
-    <None Include="Assets\Level\UI\DialogMenu\DialogMenu.uxml" />
     <None Include="Assets\Level\UI\Białkowe\SettingsMenu.uxml" />
     <None Include="Assets\Level\UI\TimeTrialEndScreenInterface.uxml" />
     <Reference Include="UnityEngine">

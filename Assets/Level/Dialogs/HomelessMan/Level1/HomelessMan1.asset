@@ -26,4 +26,4 @@ MonoBehaviour:
   - speakerName: 1
     text: No offence but you might need advice from this old fellow.
   repeatable: 0
-  hasBeenAlreadySeen: 1
+  hasBeenAlreadySeen: 0

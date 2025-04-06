@@ -118,8 +118,6 @@ public class DialogScript : MonoBehaviour
     //Włączenie dialogu
     public void StartDialog(int dialogIndex)
     {
-        Debug.Log("Test");
-
         if (dialogs[dialogIndex] && dialogs[dialogIndex].lines == null || dialogs[dialogIndex].lines.Count == 0)
         {
             Debug.LogWarning("ERROR DIALOG! NIE MA TEKSTU");
