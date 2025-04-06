@@ -1,0 +1,1623 @@
+fileFormatVersion: 2
+guid: a97b7b734b952e54596ac68f9c966720
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: timer_chest_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 287
+      width: 28
+      height: 38
+    spriteID: e86814937cb36b544ac039c26c69e43d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 287}
+  - name: timer_chest_Frame_40
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 37
+      height: 38
+    spriteID: ad5037013149c3a4e8171ebe87bd853e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+  - name: timer_chest_Frame_41
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 188
+      width: 37
+      height: 38
+    spriteID: dc70621f0a13adf4bb87d913302995b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 188}
+  - name: timer_chest_Frame_42
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 234
+      width: 37
+      height: 38
+    spriteID: b39cb664ef0d80b4d918606fa294b6d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 234}
+  - name: timer_chest_Frame_43
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 280
+      width: 37
+      height: 38
+    spriteID: 9676fbb2878cb834d8ba73f5eb97b1fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 280}
+  - name: timer_chest_Frame_44
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 326
+      width: 37
+      height: 38
+    spriteID: 5096a745e77d9504dbac9e240d1f0c15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 326}
+  - name: timer_chest_Frame_45
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 372
+      width: 37
+      height: 38
+    spriteID: 231fe9fed3b3ef74583d6494d0755ad0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 372}
+  - name: timer_chest_Frame_46
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 418
+      width: 37
+      height: 38
+    spriteID: 437067d6a91eb784e849046677a5b5dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 418}
+  - name: timer_chest_Frame_47
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 464
+      width: 37
+      height: 38
+    spriteID: 5d0c9bd241ed51a4484319b352821c03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 464}
+  - name: timer_chest_Frame_48
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 37
+      height: 38
+    spriteID: c54b6759b4e89d949b1f9b11ad7cece3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: timer_chest_Frame_49
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 50
+      width: 37
+      height: 38
+    spriteID: 789cfa286e6ba1045be94126ffcc2138
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 50}
+  - name: timer_chest_Frame_50
+    originalName: 
+    pivot: {x: 0.39473686, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 96
+      width: 38
+      height: 38
+    spriteID: 3254bf1c8b8030048b7f7c879b58607a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 96}
+  - name: timer_chest_Frame_51
+    originalName: 
+    pivot: {x: 0.41025642, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 39
+      height: 38
+    spriteID: aebfc611c4871364a91fb849676821dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: timer_chest_Frame_52
+    originalName: 
+    pivot: {x: 0.516129, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 62
+      height: 38
+    spriteID: b20e6d0677c19e54b8875f028b85f9b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: timer_chest_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 191
+      width: 28
+      height: 40
+    spriteID: a15f313c4df700b4380a5d182a206bfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 191}
+  - name: timer_chest_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.41463414}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 96
+      width: 28
+      height: 41
+    spriteID: 58c56e2214b3e0e4e8866a6d02a1578e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 96}
+  - name: timer_chest_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 333
+      width: 28
+      height: 38
+    spriteID: 2968cb4f78355764bb1dd0960af58ad1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 333}
+  - name: timer_chest_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 371
+      width: 28
+      height: 34
+    spriteID: 2704865ba427cdd4db85a347ae513a9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 371}
+  - name: timer_chest_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.45945948}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 471
+      width: 28
+      height: 37
+    spriteID: 910f64f8fdc461e42a627c08385a571b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 471}
+  - name: timer_chest_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.45945948}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 326
+      width: 28
+      height: 37
+    spriteID: 3d7b504e092e23e438c87b382e6f8d9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 326}
+  - name: timer_chest_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 239
+      width: 28
+      height: 40
+    spriteID: e7bc2ad73638cd44aa889752a46d8deb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 239}
+  - name: timer_chest_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 379
+      width: 28
+      height: 38
+    spriteID: e42d5895764b45a4ab185d0335d848ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 379}
+  - name: timer_chest_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 425
+      width: 28
+      height: 38
+    spriteID: 540d0bb21b2cb424eafa7d9733318ac4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 425}
+  - name: timer_chest_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 4
+      width: 28
+      height: 38
+    spriteID: 7701dc2560e9f1e4d80466706dd0d8b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 4}
+  - name: timer_chest_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 50
+      width: 28
+      height: 38
+    spriteID: e9766ca879477674aaf1d463949ed760
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 50}
+  - name: timer_chest_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 96
+      width: 28
+      height: 38
+    spriteID: 5874f877a8ffc6645b031142122738eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 96}
+  - name: timer_chest_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 142
+      width: 28
+      height: 38
+    spriteID: 17b03b7cde658ea47ac4476fa3a1c4fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 142}
+  - name: timer_chest_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 188
+      width: 28
+      height: 38
+    spriteID: d7ff2b251551c4841b65f037451aa251
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 188}
+  - name: timer_chest_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 234
+      width: 28
+      height: 38
+    spriteID: 455435f24fdd1f042baf5ee25460f378
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 234}
+  - name: timer_chest_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 280
+      width: 28
+      height: 38
+    spriteID: d95857c27901adf4e8a8948bfad97544
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 280}
+  - name: timer_chest_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 326
+      width: 28
+      height: 38
+    spriteID: 0abf839b89950da468c0586bdc72251d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 326}
+  - name: timer_chest_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 372
+      width: 28
+      height: 38
+    spriteID: 40aabc9756fadca41957477d6d28064b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 372}
+  - name: timer_chest_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 418
+      width: 28
+      height: 38
+    spriteID: d473bf6d23392264792f9b81bf12b713
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 418}
+  - name: timer_chest_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 164
+      y: 464
+      width: 28
+      height: 38
+    spriteID: 1c1376fd4d749af4fa8b4029b5345a02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 164, y: 464}
+  - name: timer_chest_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 4
+      width: 28
+      height: 38
+    spriteID: b7fd2585852cccb4f8e9e6a220078126
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 4}
+  - name: timer_chest_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 50
+      width: 28
+      height: 38
+    spriteID: 890121d14a3077f4f86d5ef5bc0d74a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 50}
+  - name: timer_chest_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 96
+      width: 28
+      height: 38
+    spriteID: 36152604410e07642aefcbc5ae8de57b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 96}
+  - name: timer_chest_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 142
+      width: 28
+      height: 38
+    spriteID: 33e19e7fb2ce88b4c916f407c81e1149
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 142}
+  - name: timer_chest_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 188
+      width: 28
+      height: 38
+    spriteID: 13ea3cdd19caab34f816289c5a7a593c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 188}
+  - name: timer_chest_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 234
+      width: 28
+      height: 38
+    spriteID: b4c354ff51d0ff7419b86aa76fc9f13b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 234}
+  - name: timer_chest_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 280
+      width: 28
+      height: 38
+    spriteID: ba6c58f0994bae4448fb87845e7a6f99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 280}
+  - name: timer_chest_Frame_28
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 145
+      width: 30
+      height: 38
+    spriteID: d27ccf0c6dd9d9349bc90f6312884f53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 145}
+  - name: timer_chest_Frame_29
+    originalName: 
+    pivot: {x: 0.42424244, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 50
+      width: 33
+      height: 38
+    spriteID: bc5899a0c875e674bb4fabdb6fd781b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 50}
+  - name: timer_chest_Frame_30
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 96
+      width: 37
+      height: 38
+    spriteID: 8455c7209d995ba4a84e0457d5946e3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 96}
+  - name: timer_chest_Frame_31
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 142
+      width: 37
+      height: 38
+    spriteID: 2c2766c958d9ff444bb18d56c16098dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 142}
+  - name: timer_chest_Frame_32
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 188
+      width: 37
+      height: 38
+    spriteID: 12f0f67c06b34f64e8fd1120ab47a6ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 188}
+  - name: timer_chest_Frame_33
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 234
+      width: 37
+      height: 38
+    spriteID: fbfdbc8bfeeafa344b822b0b718a8ed7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 234}
+  - name: timer_chest_Frame_34
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 280
+      width: 37
+      height: 38
+    spriteID: cb35ae4c75f838e4c894d6bb92a94475
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 280}
+  - name: timer_chest_Frame_35
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 326
+      width: 37
+      height: 38
+    spriteID: 64c160ea762a42247b9b74db350915f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 326}
+  - name: timer_chest_Frame_36
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 372
+      width: 37
+      height: 38
+    spriteID: 5a6a1f71562f7a549b289133f4627193
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 372}
+  - name: timer_chest_Frame_37
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 418
+      width: 37
+      height: 38
+    spriteID: 5ce35dcf6d3eb8340a937a91fa2104aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 418}
+  - name: timer_chest_Frame_38
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 464
+      width: 37
+      height: 38
+    spriteID: 25c8885924eefbb448ec1ba6edd5d872
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 464}
+  - name: timer_chest_Frame_39
+    originalName: 
+    pivot: {x: 0.3783784, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 119
+      y: 4
+      width: 37
+      height: 38
+    spriteID: 72d40fd70f9634349a3c4e891446caed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 119, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1252293369
+    name: timer_chest
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: timer_chest_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: e86814937cb36b544ac039c26c69e43d
+    - name: timer_chest_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: ad5037013149c3a4e8171ebe87bd853e
+    - name: timer_chest_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: dc70621f0a13adf4bb87d913302995b2
+    - name: timer_chest_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: b39cb664ef0d80b4d918606fa294b6d7
+    - name: timer_chest_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 9676fbb2878cb834d8ba73f5eb97b1fc
+    - name: timer_chest_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 5096a745e77d9504dbac9e240d1f0c15
+    - name: timer_chest_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 231fe9fed3b3ef74583d6494d0755ad0
+    - name: timer_chest_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 437067d6a91eb784e849046677a5b5dc
+    - name: timer_chest_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 5d0c9bd241ed51a4484319b352821c03
+    - name: timer_chest_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: c54b6759b4e89d949b1f9b11ad7cece3
+    - name: timer_chest_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 789cfa286e6ba1045be94126ffcc2138
+    - name: timer_chest_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 17
+        y: 17
+        width: 38
+        height: 38
+      spriteId: 3254bf1c8b8030048b7f7c879b58607a
+    - name: timer_chest_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 16
+        y: 17
+        width: 39
+        height: 38
+      spriteId: aebfc611c4871364a91fb849676821dd
+    - name: timer_chest_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 0
+        y: 17
+        width: 62
+        height: 38
+      spriteId: b20e6d0677c19e54b8875f028b85f9b3
+    - name: timer_chest_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 40
+      spriteId: a15f313c4df700b4380a5d182a206bfd
+    - name: timer_chest_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 41
+      spriteId: 58c56e2214b3e0e4e8866a6d02a1578e
+    - name: timer_chest_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 2968cb4f78355764bb1dd0960af58ad1
+    - name: timer_chest_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 34
+      spriteId: 2704865ba427cdd4db85a347ae513a9e
+    - name: timer_chest_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 37
+      spriteId: 910f64f8fdc461e42a627c08385a571b
+    - name: timer_chest_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 37
+      spriteId: 3d7b504e092e23e438c87b382e6f8d9b
+    - name: timer_chest_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 40
+      spriteId: e7bc2ad73638cd44aa889752a46d8deb
+    - name: timer_chest_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: e42d5895764b45a4ab185d0335d848ca
+    - name: timer_chest_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 540d0bb21b2cb424eafa7d9733318ac4
+    - name: timer_chest_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 7701dc2560e9f1e4d80466706dd0d8b1
+    - name: timer_chest_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: e9766ca879477674aaf1d463949ed760
+    - name: timer_chest_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 5874f877a8ffc6645b031142122738eb
+    - name: timer_chest_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 17b03b7cde658ea47ac4476fa3a1c4fa
+    - name: timer_chest_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: d7ff2b251551c4841b65f037451aa251
+    - name: timer_chest_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 455435f24fdd1f042baf5ee25460f378
+    - name: timer_chest_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: d95857c27901adf4e8a8948bfad97544
+    - name: timer_chest_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 0abf839b89950da468c0586bdc72251d
+    - name: timer_chest_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 40aabc9756fadca41957477d6d28064b
+    - name: timer_chest_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: d473bf6d23392264792f9b81bf12b713
+    - name: timer_chest_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 1c1376fd4d749af4fa8b4029b5345a02
+    - name: timer_chest_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: b7fd2585852cccb4f8e9e6a220078126
+    - name: timer_chest_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 890121d14a3077f4f86d5ef5bc0d74a6
+    - name: timer_chest_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 36152604410e07642aefcbc5ae8de57b
+    - name: timer_chest_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 33e19e7fb2ce88b4c916f407c81e1149
+    - name: timer_chest_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: 13ea3cdd19caab34f816289c5a7a593c
+    - name: timer_chest_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: b4c354ff51d0ff7419b86aa76fc9f13b
+    - name: timer_chest_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 18
+        y: 17
+        width: 28
+        height: 38
+      spriteId: ba6c58f0994bae4448fb87845e7a6f99
+    - name: timer_chest_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 18
+        y: 17
+        width: 30
+        height: 38
+      spriteId: d27ccf0c6dd9d9349bc90f6312884f53
+    - name: timer_chest_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 18
+        y: 17
+        width: 33
+        height: 38
+      spriteId: bc5899a0c875e674bb4fabdb6fd781b7
+    - name: timer_chest_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 8455c7209d995ba4a84e0457d5946e3b
+    - name: timer_chest_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 2c2766c958d9ff444bb18d56c16098dd
+    - name: timer_chest_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 12f0f67c06b34f64e8fd1120ab47a6ab
+    - name: timer_chest_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: fbfdbc8bfeeafa344b822b0b718a8ed7
+    - name: timer_chest_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: cb35ae4c75f838e4c894d6bb92a94475
+    - name: timer_chest_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 64c160ea762a42247b9b74db350915f9
+    - name: timer_chest_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 5a6a1f71562f7a549b289133f4627193
+    - name: timer_chest_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 5ce35dcf6d3eb8340a937a91fa2104aa
+    - name: timer_chest_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 25c8885924eefbb448ec1ba6edd5d872
+    - name: timer_chest_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 18
+        y: 17
+        width: 37
+        height: 38
+      spriteId: 72d40fd70f9634349a3c4e891446caed
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
