@@ -25,5 +25,5 @@ MonoBehaviour:
     text: Buuuut you dont know your way around these parts
   - speakerName: 1
     text: No offence but you might need advice from this old fellow.
-  repeatable: 0
-  hasBeenAlreadySeen: 0
+  repeatable: 1
+  hasBeenAlreadySeen: 1
