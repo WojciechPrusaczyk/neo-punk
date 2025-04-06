@@ -1,30 +1,25 @@
-.panel {
-}
-
-.dialog {
+.picture_active {
+    transition: transform 0.3s ease, -unity-background-image-tint-color 0.3s ease;
+    transform: scale(1.05); /* lekko powiększone */
+    -unity-background-image-tint-color: rgb(255, 255, 255);
 }
 
 .picture_inactive {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    transform: scale(1.0);
-    background-color: rgba(0, 0, 0, 0);
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
-}
-
-.picture_active {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    transform: scale(1.2);
-    background-color: rgba(0, 0, 0, 0);
-    -unity-background-image-tint-color: rgb(255, 255, 255);
-}
-
-.character_name_inactive {
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+    transition: transform 0.3s ease, -unity-background-image-tint-color 0.3s ease;
+    transform: scale(0.95); /* lekko zmniejszone */
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.2); /* bardziej przygaszone */
 }
 
 .character_name_active {
-    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition: font-size 0.3s ease, translate 0.3s ease;
+    font-size: 22px;
+    translate: 10px 0;
+    color: rgb(186, 255, 249);
 }
 
-.dialog_text {
+.character_name_inactive {
+    transition: font-size 0.3s ease, translate 0.3s ease;
+    font-size: 20px;
+    translate: 0 0;
+    color: rgb(255, 249, 249);
 }

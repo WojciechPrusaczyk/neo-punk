@@ -117,6 +117,7 @@
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uss" />
     <None Include="Assets\Level\UI\InvasionInterfaceuss.uss" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uxml" />
+    <None Include="Assets\Level\UI\DialogMenu\dialog-menu.uss" />
     <None Include="Assets\Level\UI\TimeTrialInterfaceuss.uss" />
     <None Include="Assets\Level\UI\EquipmentInterface\Equipment.uxml" />
     <None Include="Assets\Level\UI\TimeTrialEndScreenInterfaceuss.uss" />
@@ -126,7 +127,6 @@
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uxml" />
     <None Include="Assets\Level\UI\DialogMenu\DialogMenu.uxml" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uss" />
-    <None Include="Assets\Level\UI\DialogMenu\dialog-menu.uss" />
     <None Include="Assets\Level\UI\Białkowe\SettingsMenu.uxml" />
     <None Include="Assets\Level\UI\TimeTrialEndScreenInterface.uxml" />
     <Reference Include="UnityEngine">

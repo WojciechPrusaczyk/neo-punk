@@ -45,3 +45,5 @@ MonoBehaviour:
     text: they will be stoping on top of block number 3  to refuel soon.
   - speakerName: 1
     text: some shady buissness   *wink*
+  repeatable: 1
+  hasBeenAlreadySeen: 0

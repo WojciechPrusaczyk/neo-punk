@@ -98,16 +98,24 @@ public class DialogScript : MonoBehaviour
             return;
         }
         
-        photoActiveElement.ClearClassList();
-        textActiveElement.ClearClassList();
-        textInactiveElement.ClearClassList();
-        photoInactiveElement.ClearClassList();
-        
+        // Reset klas
+        photoActiveElement.RemoveFromClassList("picture_inactive");
         photoActiveElement.AddToClassList("picture_active");
+
+        photoInactiveElement.RemoveFromClassList("picture_active");
+        photoInactiveElement.AddToClassList("picture_inactive");
+
+        textActiveElement.RemoveFromClassList("character_name_inactive");
         textActiveElement.AddToClassList("character_name_active");
 
-        
+        textInactiveElement.RemoveFromClassList("character_name_active");
+        textInactiveElement.AddToClassList("character_name_inactive");
+
+        // Dodanie aktywnych/nieaktywnych klas
+        photoActiveElement.AddToClassList("picture_active");
         photoInactiveElement.AddToClassList("picture_inactive");
+
+        textActiveElement.AddToClassList("character_name_active");
         textInactiveElement.AddToClassList("character_name_inactive");
         
     }
@@ -166,7 +174,7 @@ public class DialogScript : MonoBehaviour
         }
         else if (line.speakerName == Talkers.CharacterTwo)
         {
-            SetActiveCharacter(characterTwoPictureElement, characterOnePictureElement, characterTwoNameElement, characterTwoNameElement);
+            SetActiveCharacter(characterTwoPictureElement, characterOnePictureElement, characterTwoNameElement, characterOneNameElement);
         }
         else
         {
