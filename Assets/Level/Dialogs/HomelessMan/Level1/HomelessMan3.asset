@@ -19,10 +19,14 @@ MonoBehaviour:
   lines:
   - speakerName: 1
     text: Next advice ?
+  - speakerName: 0
+    text: Yea, go on
   - speakerName: 1
     text: Fine, it will be last free one tho
   - speakerName: 1
     text: Cops right... protectors of the people....
+  - speakerName: 0
+    text: Thats the idea of it right ?
   - speakerName: 1
     text: bullshit!
   - speakerName: 1

@@ -19,11 +19,15 @@ MonoBehaviour:
   lines:
   - speakerName: 1
     text: Hi there fellow you look... capeble sort
+  - speakerName: 0
+    text: Sure...
   - speakerName: 1
     text: and rich one at that
+  - speakerName: 0
+    text: Not really but go on
   - speakerName: 1
     text: Buuuut you dont know your way around these parts
   - speakerName: 1
     text: No offence but you might need advice from this old fellow.
   repeatable: 1
-  hasBeenAlreadySeen: 0
+  hasBeenAlreadySeen: 1

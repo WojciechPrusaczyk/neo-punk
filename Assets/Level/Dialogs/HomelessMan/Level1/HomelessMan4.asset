@@ -38,9 +38,13 @@ MonoBehaviour:
     text: but if you wont listen keep this
   - speakerName: 1
     text: '"gives trinket that improves visibility and increase money gain"'
+  - speakerName: 0
+    text: Thanks
   - speakerName: 1
     text: keep it and close at that
   - speakerName: 1
     text: and... you know
   - speakerName: 1
     text: come back to chat and trade
+  repeatable: 0
+  hasBeenAlreadySeen: 0

@@ -17,6 +17,8 @@ MonoBehaviour:
   characterTwoName: HomelessMan
   characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
+  - speakerName: 0
+    text: Fine, hit me with it
   - speakerName: 1
     text: First and formoast we are on the turf of "Big Dilon"
   - speakerName: 1
@@ -29,5 +31,7 @@ MonoBehaviour:
     text: tyou coullld "free" those supplies For good of the people of course
   - speakerName: 1
     text: In fact one magazin is just down this road.
+  - speakerName: 0
+    text: Interesting, i will look into it
   repeatable: 1
-  hasBeenAlreadySeen: 0
+  hasBeenAlreadySeen: 1
