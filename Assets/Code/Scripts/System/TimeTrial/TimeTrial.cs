@@ -21,8 +21,17 @@ public class TimeTrial : MonoBehaviour
     public TimeTrialEndScreenInterface timeTrialEndScreenInterface;
 
 
-    private void Start()
+    /*
+     * Event system
+     */
+    private GameObject EventsPage;
+    private EventFlagsSystem _EventsFlagsSystem;
+
+    private void Awake()
     {
+        EventsPage = GameObject.Find("EventsFlags");
+        _EventsFlagsSystem = EventsPage.GetComponent<EventFlagsSystem>();
+
         InitializeIndicators();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -66,6 +75,9 @@ public class TimeTrial : MonoBehaviour
             indicator.GetComponent<Indicator>().DeactivateIndicator();
             indicator.SetActive(false);
         }
+
+        if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
+            _EventsFlagsSystem.FinishEvent("doneFirstTimeTrial");
     }
     
     public void ExitTrial()

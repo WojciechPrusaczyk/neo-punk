@@ -17,14 +17,30 @@ public class InvasionTrial : MonoBehaviour
     
     public InvasionInterface invasionInterface;
 
+    /*
+     * Event system
+     */
+    private GameObject EventsPage;
+    private EventFlagsSystem _EventsFlagsSystem;
+
+    private void Awake()
+    {
+        EventsPage = GameObject.Find("EventsFlags");
+        _EventsFlagsSystem = EventsPage.GetComponent<EventFlagsSystem>();
+    }
 
     private void Update()
     {
         if (trialStarted)
         {
-            int s = waves[currentWave - 1].gameObject.transform.childCount;
-            string enemiesText = $"Enemies left: {waves[currentWave - 1].gameObject.transform.childCount} / {waves[currentWave - 1].enemies.Count}";
-            invasionInterface.EnemiesState.text = enemiesText;
+            int index = currentWave - 1;
+
+            if (index >= 0 && index < waves.Count)
+            {
+                int s = waves[index].gameObject.transform.childCount;
+                string enemiesText = $"Enemies left: {s} / {waves[index].enemies.Count}";
+                invasionInterface.EnemiesState.text = enemiesText;
+            }
         }
     }
 
@@ -56,6 +72,9 @@ public class InvasionTrial : MonoBehaviour
         }
         trialFinished = true;
         invasionInterface.gameObject.SetActive(false);
+
+        if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+            _EventsFlagsSystem.FinishEvent("doneFirstArena");
     }
     
     public void UpdateWaveState()
