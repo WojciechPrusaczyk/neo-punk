@@ -19,11 +19,16 @@ public class HomelessManAi : MonoBehaviour
     private UserInterfaceController userInterfaceController;
     public GameObject mainUserInterfaceControllerObject;
 
+    private GameObject EventsPage;
+    private EventFlagsSystem _EventsFlagsSystem;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         dialogInterface = dialogInterfaceObject.GetComponent<DialogScript>();
         userInterfaceController = mainUserInterfaceControllerObject.GetComponent<UserInterfaceController>();
+        EventsPage = GameObject.Find("EventsFlags");
+        _EventsFlagsSystem = EventsPage.GetComponent<EventFlagsSystem>();
 
         if (player == null)
         {
@@ -64,7 +69,8 @@ public class HomelessManAi : MonoBehaviour
         if (isAbleToTalk && Input.GetKeyDown(InputManager.InteractKey))
         {
             tooltip.active = false;
-            dialogInterface.StartDialog(0);
+
+            EnterDialog();
         }
 
         if ( distance <= detectionRange ) {
@@ -80,5 +86,25 @@ public class HomelessManAi : MonoBehaviour
                 isWaving = false;
             }
         }
+    }
+
+    private void EnterDialog()
+    {
+        tooltip.active = false;
+        animator.SetTrigger("stopWaving");
+
+        if (!_EventsFlagsSystem.IsEventDone("homelessManFirstInteraction"))
+        {
+            dialogInterface.StartDialog(0);
+            _EventsFlagsSystem.FinishEvent("homelessManFirstInteraction");
+        }
+        else if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+            dialogInterface.StartDialog(1);
+        else if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
+            dialogInterface.StartDialog(2);
+        else if (!_EventsFlagsSystem.IsEventDone("hasPaid"))
+            dialogInterface.StartDialog(3);
+        else
+            dialogInterface.StartDialog(4);
     }
 }

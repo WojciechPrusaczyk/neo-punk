@@ -30,6 +30,7 @@ public class DialogScript : MonoBehaviour
 
     private void OnEnable()
     {
+        gameObject.active = true;
         var uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null)
         {
@@ -42,10 +43,8 @@ public class DialogScript : MonoBehaviour
             Debug.LogError("ERROR DIALOG! NIE MA ROOT VISUALELEMENT");
         }
 
-        // gameObject.active = false;
 
         LoadUI();
-
     }
 
     private void Update()
@@ -63,8 +62,6 @@ public class DialogScript : MonoBehaviour
             }
         }
     }
-
-    public object Assets { get; set; }
 
     private void LoadUI()
     {
@@ -139,6 +136,8 @@ public class DialogScript : MonoBehaviour
             return;
         }
 
+        currentLineIndex = 0;
+
         userInterfaceController.ActivateInterface(4);
         ShowLine(0);
     }
@@ -206,12 +205,12 @@ public class DialogScript : MonoBehaviour
 
         dialogData.hasBeenAlreadySeen = true;
         dialogData = null;
-        var uiDocument = GetComponent<UIDocument>();
+        // var uiDocument = GetComponent<UIDocument>();
         
-        if (uiDocument != null)
-        {
-            uiDocument.enabled = false; // Wyłączenie UIDocument
-        }
-        Debug.Log("Koniec dialogu");
+        // if (uiDocument != null)
+        // {
+        //     uiDocument.enabled = false; // Wyłączenie UIDocument
+        // }
+        // Debug.Log("Koniec dialogu");
     }
 }
