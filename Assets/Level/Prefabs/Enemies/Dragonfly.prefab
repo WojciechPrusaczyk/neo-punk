@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 955157259768574124}
   - component: {fileID: 2273902834274307653}
   - component: {fileID: 3344030195786095234}
+  - component: {fileID: 6301697684937501160}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -468,6 +469,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6301697684937501160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576535623332730004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3862c0c7a44cbe044ab2dd7a0154d14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonfly: {fileID: 7554672013920220350}
+  animator: {fileID: 3344030195786095234}
+  enemyAI: {fileID: 5208658026229679533}
 --- !u!1 &721097789503219684
 GameObject:
   m_ObjectHideFlags: 0
