@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
          * Przesyłanie odpowiednich zmiennych do animatora
          */
         animator.SetFloat("PlayerSpeed", Mathf.Abs(playerBody.velocity.x));
-        // animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
+        animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
         // animator.SetInteger("PlayerAttackState", attackState);
         animator.SetBool("IsPlayerAttacking", isAttacking);
         // animator.SetBool("IsGrounded", isGrounded);

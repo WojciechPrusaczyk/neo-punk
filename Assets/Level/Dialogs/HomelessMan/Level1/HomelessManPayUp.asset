@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: HomelessManPayUp
   m_EditorClassIdentifier: 
   characterOneName: Player
-  characterOnePicture: {fileID: 0}
+  characterOnePicture: {fileID: 7485453407209300106, guid: 638941558cb038e4e8bc9d252740b76d, type: 3}
   characterTwoName: HomelessMan
-  characterTwoPicture: {fileID: 0}
+  characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
   - speakerName: 1
     text: This One will cost ya, but its a fair price i swear
+  repeatable: 0
+  hasBeenAlreadySeen: 0
