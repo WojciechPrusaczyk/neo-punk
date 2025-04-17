@@ -47,11 +47,15 @@ public class TimeTrial : MonoBehaviour
                 FinishTrial();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitTrial();
+        }
     }
 
     public void StartTrial()
     {
-        timeTrialInterface.timeTrial = this;
         trialStarted = true;
         foreach (GameObject indicator in indicators)
         {
@@ -82,18 +86,23 @@ public class TimeTrial : MonoBehaviour
     
     public void ExitTrial()
     {
+
         timeTrialInterface.gameObject.SetActive(false);
-        
+        Debug.Log("ExitTrial");
+
         timeTrialEndScreenInterface.gameObject.SetActive(true);
+        Debug.Log("ExitTrial2");
+
         timeTrialEndScreenInterface.timerLabel.text = FormatTime(trialTime);
         
-        Debug.Log("ExitTrial");
         trialStarted = false;
         trialFinished = false;
         trialTime = 0;
         foreach (GameObject indicator in indicators)
         {
+            indicator.GetComponent<Indicator>().DeactivateIndicator();
             indicator.SetActive(false);
+            
         }
     }
     public string FormatTime(float seconds)

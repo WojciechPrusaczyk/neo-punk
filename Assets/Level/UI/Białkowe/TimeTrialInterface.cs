@@ -18,7 +18,7 @@ public class TimeTrialInterface : MonoBehaviour
     
     public TimeTrial timeTrial;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         
         // Pobieramy referencję do UI Document
@@ -39,9 +39,6 @@ public class TimeTrialInterface : MonoBehaviour
         silverTimeLabel = panel.Q<Label>("SilverTime");
         bronzeTimeLabel = panel.Q<Label>("BronzeTime");
         
-        goldTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[0]);
-        silverTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[1]);
-        bronzeTimeLabel.text = timeTrial.FormatTime(timeTrial.medalTimes[2]);
         
         // Przypisujemy funkcje do przycisków
         if (exitButton != null) exitButton.clicked += () => timeTrial.ExitTrial();
