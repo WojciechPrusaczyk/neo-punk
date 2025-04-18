@@ -326,7 +326,10 @@ public class EnemyAI : MonoBehaviour
     private void OnDrawGizmos()
     {
         Vector2 rayDirection = new Vector2(Mathf.Sign(direction.x), 0);
-        Debug.DrawRay(eyes.position, rayDirection * obstacleDetectionDistance, Color.red);
+        if (eyes != null)
+        {
+            Debug.DrawRay(eyes.position, rayDirection * obstacleDetectionDistance, Color.red);
+        }
 
         if (maxJumpHeight)
         {

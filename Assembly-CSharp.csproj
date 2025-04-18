@@ -60,6 +60,7 @@
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDoll.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Player\HealthBarController.cs" />
     <Compile Include="Assets\Code\Scripts\System\CustomTags.cs" />
+    <Compile Include="Assets\Code\Scripts\Entities\Abomination\ArenaCollider.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\Dialog\DialogScript.cs" />
     <Compile Include="Assets\Code\Scripts\System\FlyingEnemy.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\BulletBehaviour.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Code\Scripts\Objects\VerticalDoorController.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiringAbilities.cs" />
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsController.cs" />
+    <Compile Include="Assets\Code\Scripts\Entities\Abomination\AbominationMovement.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\InvasionInterface.cs" />
     <Compile Include="Assets\Code\Scripts\System\EventFlagsSystem.cs" />
     <Compile Include="Assets\Code\Scripts\System\InputManager.cs" />
