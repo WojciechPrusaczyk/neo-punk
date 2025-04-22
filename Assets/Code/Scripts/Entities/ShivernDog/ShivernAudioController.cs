@@ -17,9 +17,10 @@ public class ShivernAudioController : MonoBehaviour
     public void PlayAttackSound()
     {
         //int randomIndex = Random.Range(0, 1);
-        //soundManager.PlaySound(randomIndex);
+        //soundManager.PlaySound(randomIndex, Enums.SoundType.SFX);
         if (WorldSoundFXManager.instance == null) return;
-        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogAttackSFX, AudioListener.volume, 1f);
+        float randomPitch = Random.Range(0.8f, 1.2f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogAttackSFX, Enums.SoundType.SFX, randomPitch);
     }
 
     public void PlayDeathSound()
@@ -27,13 +28,15 @@ public class ShivernAudioController : MonoBehaviour
         //int randomIndex = Random.Range(2, 3);
         //soundManager.PlaySound(randomIndex);
         if (WorldSoundFXManager.instance == null) return;
-        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogDeathSFX, AudioListener.volume, 1f);
+        float randomPitch = Random.Range(0.8f, 1.2f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogDeathSFX, Enums.SoundType.SFX, randomPitch);
     }
 
     public void PlayDamageTakenSound()
     {
         //soundManager.PlaySound(4);
         if (WorldSoundFXManager.instance == null) return;
-        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogWhineSFX, AudioListener.volume, 1f);
+        float randomPitch = Random.Range(0.8f, 1.2f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogWhineSFX, Enums.SoundType.SFX, randomPitch);
     }
 }

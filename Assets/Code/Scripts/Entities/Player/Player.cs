@@ -102,17 +102,17 @@ public class Player : MonoBehaviour
         _soundManager = GetComponent<SoundManager>();
     }
 
-    public void PlayPlayerSFXSingle(AudioClip audioClip)
+    public void PlayPlayerSFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)
     {
         if (WorldSoundFXManager.instance == null) return;
         float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
-        WorldSoundFXManager.instance.PlaySoundFX(audioClip, AudioListener.volume, randomPitch);
+        WorldSoundFXManager.instance.PlaySoundFX(audioClip, soundType, randomPitch * pitchMultiplier);
     }
-    public void PlayPlayerSFXArray(AudioClip[] audioArray)
+    public void PlayPlayerSFXArray(AudioClip[] audioArray, Enums.SoundType soundType, float pitchMultiplier = 1f)
     {
         if (WorldSoundFXManager.instance == null) return;
         float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
-        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, AudioListener.volume, randomPitch);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, soundType, randomPitch * pitchMultiplier);
     }
 
     private void Update()
@@ -228,7 +228,7 @@ public class Player : MonoBehaviour
             //_soundManager.PlaySound(0);
             if (WorldSoundFXManager.instance == null) return;
             float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, AudioListener.volume, randomPitch);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX);
             Jump();
         }
 
@@ -307,6 +307,10 @@ public class Player : MonoBehaviour
              */
             if (Input.GetKey(InputManager.BlockKey) || Input.GetKey(InputManager.PadButtonBlock))
             {
+                if (WorldSoundFXManager.instance != null)
+                    if (!isBlocking)
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerBlockSFX, Enums.SoundType.SFX, 2f);
+
                 isBlocking = true;
                 canBlock = false;
                 StartCoroutine(EnableBlockingAfterDuration(cooldownBetweenBlocks));
@@ -444,6 +448,11 @@ public class Player : MonoBehaviour
     // NOWA WERSJA WYŁĄCZANIA COLLIDERÓW, PRZEZ KTÓRE MOŻNA SPAŚĆ
     private void DisableCollisionForDuration(float duration)
     {
+        // Z tego co widzę, to inventory nie jest nigdzie podpięte, więc narazie to zostaje zakomentowane.
+        // Po dodaniu inventory do gracza, można to odkomentować.
+        //if (playerEq.isPickingItem)
+        //    return;
+
         if (FloorDetector.collidingObject == null)
             return;
 
@@ -497,7 +506,10 @@ public class Player : MonoBehaviour
         attackState = 1;
         movePlayerOnAttack(3.0f);
         animator.Play("Attack_1");
-        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
+
+        if (WorldSoundFXManager.instance != null)
+            PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
+
         DealDamage(playerStatus.GetAttackDamageCount());
     }
 
@@ -521,7 +533,8 @@ public class Player : MonoBehaviour
                 attackState = 1;
                 animator.Play("Attack_1");
 
-                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
+                if (WorldSoundFXManager.instance != null)
+                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
 
                 DealDamage(playerStatus.GetAttackDamageCount());
             }
@@ -534,7 +547,7 @@ public class Player : MonoBehaviour
 
                 if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 
-                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
+                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
 
                 DealDamage(playerStatus.GetAttackDamageCount());
             }
@@ -600,6 +613,8 @@ public class Player : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(startPosition, dashDirection, dashDistance, obstacleLayer);
         Vector2 targetPosition = (hit.collider != null) ? hit.point - dashDirection * 0.1f : startPosition + (dashDirection * dashDistance);
+
+        WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.Dialogue);
 
         transform.position = targetPosition;
         _lastDashTime = Time.time;

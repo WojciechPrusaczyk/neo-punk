@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+    public static MusicManager instance;
+
     [Header("Music tracks list")]
     public List<AudioClip> musicList;
 
@@ -14,12 +17,29 @@ public class MusicManager : MonoBehaviour
     [Range(0.0f, 0.1f)]
     public float audioChangeForce;
 
+    [Header("Low Pass Filter Settings")]
+    [SerializeField] private float normalCutoffFrequency = 22000f;
+    [SerializeField] private float filteredCutoffFrequency = 700f;
+    [SerializeField] private float filterTransitionDuration = 0.3f;
+    private AudioLowPassFilter _lowPassFilter;
+    private Coroutine _filterCoroutine;
+
     private bool isChangingSong = false;
     private List<AudioClip> songsQueue;
     private AudioSource _audioSourceComponent;
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         DontDestroyOnLoad(gameObject);
 
         _audioSourceComponent = GetComponent<AudioSource>();
@@ -29,21 +49,35 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            _audioSourceComponent.volume = AudioListener.volume;
+            _audioSourceComponent.volume = WorldSoundFXManager.instance == null ? AudioListener.volume : Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
         }
+
+        _lowPassFilter = GetComponent<AudioLowPassFilter>();
+        if (_lowPassFilter == null)
+        {
+            _lowPassFilter = gameObject.AddComponent<AudioLowPassFilter>();
+        }
+        _lowPassFilter.cutoffFrequency = normalCutoffFrequency;
 
         songsQueue = new List<AudioClip>();
     }
 
     private void Update()
     {
-        if (_audioSourceComponent && !isChangingSong)
+        if (_audioSourceComponent != null && !isChangingSong)
         {
-            _audioSourceComponent.volume = AudioListener.volume;
+            if (WorldSoundFXManager.instance != null)
+            {
+                float masterSetting = WorldSoundFXManager.instance.masterVolume;
+                float musicSetting = WorldSoundFXManager.instance.musicVolume;
+                float targetVolume = Mathf.Clamp01(masterSetting * musicSetting);
+                _audioSourceComponent.volume = targetVolume;
+            }
 
-            float endThreshold = Mathf.Lerp(2.0f, 0.1f, audioChangeForce / 0.1f);
-            
-            if (_audioSourceComponent.clip != null && _audioSourceComponent.time >= _audioSourceComponent.clip.length - endThreshold)
+            float endThreshold = 0.1f;
+            if (_audioSourceComponent.clip != null &&
+                _audioSourceComponent.isPlaying &&
+                _audioSourceComponent.time >= _audioSourceComponent.clip.length - endThreshold)
             {
                 PlayNextSongFromQueue();
             }
@@ -56,7 +90,7 @@ public class MusicManager : MonoBehaviour
         {
             if (id >= 0 && id < musicList.Count)
             {
-                StartCoroutine(ChangeSong(musicList[id]));
+                StartCoroutine(ChangeSong(musicList[id], true));
             }
             else
             {
@@ -94,27 +128,61 @@ public class MusicManager : MonoBehaviour
     private IEnumerator ChangeSong(AudioClip nextSong, bool startImmediately = false)
     {
         isChangingSong = true;
-        var initialVolume = AudioListener.volume;
+        float fadeDuration = 0.75f;
+        float startingSourceVolume = _audioSourceComponent.volume;
+        float targetVolume = 0f;
 
-        if ( !startImmediately )
+        if (WorldSoundFXManager.instance != null)
         {
-            while (AudioListener.volume > 0)
-            {
-                yield return new WaitForSeconds(0.1f);
-                AudioListener.volume -= audioChangeForce;
-            }
+            targetVolume = Mathf.Clamp01(WorldSoundFXManager.instance.masterVolume * WorldSoundFXManager.instance.musicVolume);
         }
-        
+        else
+        {
+            targetVolume = Mathf.Clamp01(_audioSourceComponent.volume);
+            Debug.LogWarning("WorldSoundFXManager instance missing, using current AudioSource volume as target.");
+        }
+
+        if (!startImmediately && _audioSourceComponent.isPlaying)
+        {
+            float timer = 0f;
+            while (timer < fadeDuration)
+            {
+                _audioSourceComponent.volume = Mathf.Lerp(startingSourceVolume, 0f, timer / fadeDuration);
+                timer += Time.unscaledDeltaTime;
+                yield return null;
+            }
+            _audioSourceComponent.volume = 0f;
+            _audioSourceComponent.Stop();
+        }
+        else if (!startImmediately)
+        {
+            _audioSourceComponent.Stop();
+            _audioSourceComponent.volume = 0f;
+        }
         _audioSourceComponent.clip = nextSong;
+        _audioSourceComponent.volume = 0f;
         _audioSourceComponent.Play();
 
-        while (AudioListener.volume < initialVolume)
+        float fadeInStartVolume = 0f;
+        float timerFadeIn = 0f;
+        if (WorldSoundFXManager.instance != null)
         {
-            yield return new WaitForSeconds(0.1f);
-            AudioListener.volume += audioChangeForce;
+            targetVolume = Mathf.Clamp01(WorldSoundFXManager.instance.masterVolume * WorldSoundFXManager.instance.musicVolume);
+        }
+        else
+        {
+            targetVolume = 1.0f;
         }
 
-        AudioListener.volume = initialVolume;
+        while (timerFadeIn < fadeDuration)
+        {
+            _audioSourceComponent.volume = Mathf.Lerp(fadeInStartVolume, targetVolume, timerFadeIn / fadeDuration);
+            timerFadeIn += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        _audioSourceComponent.volume = targetVolume;
+
         isChangingSong = false;
     }
 
@@ -130,5 +198,48 @@ public class MusicManager : MonoBehaviour
         {
             Debug.Log("No more songs in the queue.");
         }
+    }
+
+    public void PauseCurrentSong(bool applyFilter) // Changed parameter name for clarity
+    {
+        if (_lowPassFilter == null)
+        {
+            Debug.LogError("AudioLowPassFilter component is missing, cannot change filter state.");
+            return;
+        }
+
+        float targetFrequency = applyFilter ? filteredCutoffFrequency : normalCutoffFrequency;
+
+        if (_filterCoroutine != null)
+        {
+            StopCoroutine(_filterCoroutine);
+        }
+
+        if (filterTransitionDuration <= 0f || _lowPassFilter.cutoffFrequency == targetFrequency)
+        {
+            _lowPassFilter.cutoffFrequency = targetFrequency;
+            _filterCoroutine = null;
+        }
+        else
+        {
+            _filterCoroutine = StartCoroutine(TransitionFilter(targetFrequency));
+        }
+    }
+
+    private IEnumerator TransitionFilter(float targetFrequency)
+    {
+        float startFrequency = _lowPassFilter.cutoffFrequency;
+        float timer = 0f;
+
+        while (timer < filterTransitionDuration)
+        {
+            timer += Time.unscaledDeltaTime;
+            float progress = Mathf.Clamp01(timer / filterTransitionDuration);
+            _lowPassFilter.cutoffFrequency = Mathf.Lerp(startFrequency, targetFrequency, progress);
+            yield return null;
+        }
+
+        _lowPassFilter.cutoffFrequency = targetFrequency;
+        _filterCoroutine = null;
     }
 }

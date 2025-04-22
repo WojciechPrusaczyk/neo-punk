@@ -522,8 +522,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicList:
   - {fileID: 8300000, guid: 9ea0ba94d37e8ab4db21e69e9b622a67, type: 3}
-  - {fileID: 8300000, guid: e082466aa820a254791946942d013a9e, type: 3}
+  - {fileID: 8300000, guid: cac22c031491c594bbe5041fdef62e11, type: 3}
   audioChangeForce: 0.0179
+  normalCutoffFrequency: 22000
+  filteredCutoffFrequency: 600
+  filterTransitionDuration: 0.5
 --- !u!1 &1201617106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,9 +1271,49 @@ PrefabInstance:
       value: WorldSoundFXManager
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: dashSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 9fbb5014d2b902d4a878a20da07c7407, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: sfxVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: musicVolume
+      value: 0.364
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: masterVolume
+      value: 0.534
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: dialogueVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: playerParrySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d06b996c40f6d1409fd7d5c5d22fcbc, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: playerBlockSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: playerParrySFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: playerAttackSFX.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'playerBlockSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 566654f40c181f644ba1b55b27766cea, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'playerParrySFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d06b996c40f6d1409fd7d5c5d22fcbc, type: 3}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: 'playerAttackSFX.Array.data[0]'
       value: 

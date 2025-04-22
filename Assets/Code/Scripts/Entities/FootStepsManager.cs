@@ -93,7 +93,16 @@ public class FootStepsManager : MonoBehaviour
             {
                 int randomIndex = UnityEngine.Random.Range(0, effects.Count);
                 AudioClip stepSound = effects[randomIndex];
-                AudioSource.PlayClipAtPoint(stepSound, transform.position);
+                if (stepSound != null)
+                {
+                    float volumeScale = 1.0f;
+                    if (WorldSoundFXManager.instance != null)
+                    {
+                        volumeScale = WorldSoundFXManager.instance.sfxVolume * WorldSoundFXManager.instance.masterVolume;
+                    }
+                    volumeScale = Mathf.Clamp01(volumeScale);
+                    _footstepsAudioSource.PlayOneShot(stepSound, volumeScale);
+                }
             }
 
             yield return new WaitForSeconds(pauseBetweenSteps);
