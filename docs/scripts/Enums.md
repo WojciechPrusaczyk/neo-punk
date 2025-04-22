@@ -1,4 +1,4 @@
-[Go back to code contents](../../codeContents.md)
+[Go back to code contents](../codeContents.md)
 
 Klasa `Enums` znajduje się w [`Assets/Code/Scripts/Enums.cs`](../../../Assets/Code/Scripts/Enums.cs)
 
