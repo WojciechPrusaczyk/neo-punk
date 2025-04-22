@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class EntityStatus : MonoBehaviour
@@ -36,7 +38,9 @@ public class EntityStatus : MonoBehaviour
     private float BaseAttackDamage = 0;
     private LootTable lootTable;
     //private MissionTracker missionTracker;
-    
+    private Volume postProcessVolume;
+
+
 
     // Wartość wyrażona w procentach, która odpowiada za % otrzymywanych obrażeń
     public float incomingDamagePercent = 1.0f;
@@ -261,8 +265,7 @@ public class EntityStatus : MonoBehaviour
 
         if (!isPlayer) return;
 
-        if (damage >= ( GetHp() / 2 ) ) StartCoroutine(SygnalizeGettingDamage());
-        else StartCoroutine(SygnalizeGettingDamage());
+        StartCoroutine(SygnalizeGettingDamage());
     }
 
     private IEnumerator SygnalizeGettingDamage()
@@ -287,7 +290,7 @@ public class EntityStatus : MonoBehaviour
         MoveHpBar(0, -6);
         yield return new WaitForSeconds(0.05f);
         MoveHpBar(0, 3);
-        
+
         healthBarImage.color = currentColor;
     }
     
