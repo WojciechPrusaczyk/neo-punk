@@ -82,6 +82,8 @@ Build.zip
 Debug/
 Release/
 CodeAnalyst/
+Assembly-CSharp.csproj
+neo-punk.sln
 
 # 2010
 ipch/
