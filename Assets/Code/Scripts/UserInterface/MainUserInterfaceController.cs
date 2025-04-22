@@ -30,6 +30,6 @@ public class MainUserInterfaceController : MonoBehaviour
 
     private void Update()
     {
-        hpLabel.text = $"HP {playerStatus.entityMaxHelath}/{playerStatus.entityHealthPoints}";
+        hpLabel.text = $"{playerStatus.entityHealthPoints} / {playerStatus.entityMaxHelath}";
     }
 }
