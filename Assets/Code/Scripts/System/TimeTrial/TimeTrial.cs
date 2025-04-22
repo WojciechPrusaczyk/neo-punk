@@ -86,6 +86,7 @@ public class TimeTrial : MonoBehaviour
     
     public void ExitTrial()
     {
+        if (!trialStarted) return;
 
         timeTrialInterface.gameObject.SetActive(false);
         Debug.Log("ExitTrial");

@@ -16,19 +16,24 @@ public class ShivernAudioController : MonoBehaviour
 
     public void PlayAttackSound()
     {
-        int randomIndex = Random.Range(0, 1);
-        
-        soundManager.PlaySound(randomIndex);
+        //int randomIndex = Random.Range(0, 1);
+        //soundManager.PlaySound(randomIndex);
+        if (WorldSoundFXManager.instance == null) return;
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogAttackSFX, AudioListener.volume, 1f);
     }
 
     public void PlayDeathSound()
     {
-        int randomIndex = Random.Range(2, 3);
-        soundManager.PlaySound(randomIndex);
+        //int randomIndex = Random.Range(2, 3);
+        //soundManager.PlaySound(randomIndex);
+        if (WorldSoundFXManager.instance == null) return;
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogDeathSFX, AudioListener.volume, 1f);
     }
 
     public void PlayDamageTakenSound()
     {
-        soundManager.PlaySound(4);
+        //soundManager.PlaySound(4);
+        if (WorldSoundFXManager.instance == null) return;
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.ShDogWhineSFX, AudioListener.volume, 1f);
     }
 }

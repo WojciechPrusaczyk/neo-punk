@@ -102,6 +102,19 @@ public class Player : MonoBehaviour
         _soundManager = GetComponent<SoundManager>();
     }
 
+    public void PlayPlayerSFXSingle(AudioClip audioClip)
+    {
+        if (WorldSoundFXManager.instance == null) return;
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.PlaySoundFX(audioClip, AudioListener.volume, randomPitch);
+    }
+    public void PlayPlayerSFXArray(AudioClip[] audioArray)
+    {
+        if (WorldSoundFXManager.instance == null) return;
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, AudioListener.volume, randomPitch);
+    }
+
     private void Update()
     {
         isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f; //@Wojtek oby to nie bylo wazne
@@ -212,7 +225,10 @@ public class Player : MonoBehaviour
         if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
             !isAttacking && !isBlocking && isGrounded)
         {
-            _soundManager.PlaySound(0);
+            //_soundManager.PlaySound(0);
+            if (WorldSoundFXManager.instance == null) return;
+            float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, AudioListener.volume, randomPitch);
             Jump();
         }
 
@@ -405,22 +421,56 @@ public class Player : MonoBehaviour
         }
     }
 
+    // STARA WERSJA JEŚLI NOWA BY SIĘ BUGOWAŁA
+
+    //private void DisableCollisionForDuration(float duration)
+    //{
+    //    // if (!playerEq.isPickingItem)
+    //    // {
+    //    ignoredObject = FloorDetector.collidingObject.GetComponent<Collider2D>();
+
+    //    Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ignoredObject, true);
+    //    Invoke("EnableCollision", duration);
+    //    // }
+    //}
+
+    //// Włączenie kolizji ponownie.
+    //private void EnableCollision()
+    //{
+    //    Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ignoredObject, false);
+    //    ignoredObject = null;
+    //}
+
+    // NOWA WERSJA WYŁĄCZANIA COLLIDERÓW, PRZEZ KTÓRE MOŻNA SPAŚĆ
     private void DisableCollisionForDuration(float duration)
     {
-        // if (!playerEq.isPickingItem)
-        // {
-            ignoredObject = FloorDetector.collidingObject.GetComponent<Collider2D>();
+        if (FloorDetector.collidingObject == null)
+            return;
 
-            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ignoredObject, true);
-            Invoke("EnableCollision", duration);
-        // }
+        Collider2D colliderToIgnore = FloorDetector.collidingObject.GetComponent<Collider2D>();
+        if (colliderToIgnore == null)
+            return;
+
+        Collider2D playerCollider = gameObject.GetComponent<Collider2D>();
+        if (playerCollider == null)
+        {
+            Debug.LogWarning("Dodaj Collider2D do gracza!");
+            return;
+        }
+
+        Physics2D.IgnoreCollision(playerCollider, colliderToIgnore, true);
+
+        StartCoroutine(EnableCollisionAfterDelay(playerCollider, colliderToIgnore, duration));
     }
 
-    // Włączenie kolizji ponownie.
-    private void EnableCollision()
+    private IEnumerator EnableCollisionAfterDelay(Collider2D playerCollider, Collider2D colliderToEnable, float delay)
     {
-        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), ignoredObject, false);
-        ignoredObject = null;
+        yield return new WaitForSeconds(delay);
+
+        if (playerCollider != null && colliderToEnable != null)
+        {
+            Physics2D.IgnoreCollision(playerCollider, colliderToEnable, false);
+        }
     }
 
     private void DealDamage(float damageToDeal)
@@ -447,6 +497,7 @@ public class Player : MonoBehaviour
         attackState = 1;
         movePlayerOnAttack(3.0f);
         animator.Play("Attack_1");
+        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
         DealDamage(playerStatus.GetAttackDamageCount());
     }
 
@@ -469,6 +520,9 @@ public class Player : MonoBehaviour
                 // Gracz zaczyna nową sekwencję ataku
                 attackState = 1;
                 animator.Play("Attack_1");
+
+                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
+
                 DealDamage(playerStatus.GetAttackDamageCount());
             }
             else
@@ -479,6 +533,8 @@ public class Player : MonoBehaviour
                 movePlayerOnAttack(3.0f);
 
                 if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
+
+                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX);
 
                 DealDamage(playerStatus.GetAttackDamageCount());
             }
