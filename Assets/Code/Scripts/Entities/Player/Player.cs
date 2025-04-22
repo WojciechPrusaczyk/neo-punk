@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
         animator.SetFloat("PlayerVelocity", playerBody.velocity.y);
         // animator.SetInteger("PlayerAttackState", attackState);
         animator.SetBool("IsPlayerAttacking", isAttacking);
+        animator.SetBool("IsOnStairs", onStairs);
         // animator.SetBool("IsGrounded", isGrounded);
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
@@ -225,11 +226,11 @@ public class Player : MonoBehaviour
         if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
             !isAttacking && !isBlocking && isGrounded)
         {
+            Jump();
             //_soundManager.PlaySound(0);
             if (WorldSoundFXManager.instance == null) return;
             float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX);
-            Jump();
         }
 
         /*

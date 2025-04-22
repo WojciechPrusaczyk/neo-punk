@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3196496781066106103}
   - component: {fileID: 2003166830280569305}
   - component: {fileID: 7077660783316475836}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: FloorDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4872572168833040712}
   - component: {fileID: 9030158813499328490}
   - component: {fileID: 2223494101314510815}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: PlayerAppearance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,10 +461,12 @@ MonoBehaviour:
   parryWindow: 1
   stairLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   onStairs: 0
   stairAngle: 0
   stairMovementMultiplier: {x: 1, y: 1}
+  canJump: 1
+  isJumping: 0
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,8 +483,8 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints: 40
+  entityMaxHelath: 40
   droppedXp: 0
   gold: 0
   AttackDamage: 0
@@ -492,9 +494,9 @@ MonoBehaviour:
   deathAnimationLength: 1
   detectedTargets: []
   attackRange: 0
-  lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
-  heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
-  deathColor: {r: 0, g: 0, b: 0, a: 0}
+  lightDamageColor: {r: 1, g: 0.39056602, b: 0.3726415, a: 1}
+  heavyDamageColor: {r: 1, g: 0.033018887, b: 0.033018887, a: 1}
+  deathColor: {r: 0.7169812, g: 0.02367392, b: 0.02367392, a: 1}
   healthBar: {fileID: 0}
   isAlerted: 0
   incomingDamagePercent: 1
@@ -510,10 +512,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 2.8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.5
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -648,7 +650,7 @@ GameObject:
   - component: {fileID: 4951977807318945459}
   - component: {fileID: 1151884988469273626}
   - component: {fileID: 7725505690995258429}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: SwordHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

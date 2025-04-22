@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 6478718938135106728}
   - component: {fileID: 425173950019707438}
   m_Layer: 0
-  m_Name: Square
+  m_Name: PlayerHpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,8 +227,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -690, y: -430}
-  m_SizeDelta: {x: 400, y: 80}
+  m_AnchoredPosition: {x: -710, y: -449}
+  m_SizeDelta: {x: 330, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6478718938135106728
 CanvasRenderer:
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.566
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

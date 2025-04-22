@@ -259,8 +259,8 @@ public class EntityStatus : MonoBehaviour
         // Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);
             
-        if (damage >= ( GetHp() / 2 ) ) StartCoroutine(ChangeColorForInterval(heavyDamageColor, 0.05f));
-        else StartCoroutine(ChangeColorForInterval(lightDamageColor, 0.12f));
+        if (damage >= ( GetHp() / 2 ) ) StartCoroutine(SygnalizeGettingDamage());
+        else StartCoroutine(SygnalizeGettingDamage());
     }
 
     private IEnumerator SygnalizeGettingDamage()
@@ -268,9 +268,13 @@ public class EntityStatus : MonoBehaviour
         // w tym momencie gameObject musi być graczem
         Image healthBarImage = healthBar.GetComponent<Image>();
         Color currentColor = healthBarImage.color;
+
+        // Ustawienie fill %
+        var fillPercentage = player.GetComponent<EntityStatus>().GetHp() / player.GetComponent<EntityStatus>().GetMaxHp();
+        healthBarImage.fillAmount = fillPercentage;
         
         // animacja otrzymania obrażeń
-        healthBarImage.color = Color.red;
+        healthBarImage.color = heavyDamageColor;
 
         MoveHpBar(0, 3);
         yield return new WaitForSeconds(0.05f);
