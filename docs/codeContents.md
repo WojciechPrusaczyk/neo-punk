@@ -41,6 +41,7 @@
 - **System**
     - [InputManager](scripts/System/InputManager.md)
     - [LootTable](scripts/System/LootTable.md)
+    - [WorldSoundFXManager](scripts/System/WorldSoundFXManager.md)
     - Tooltips
         - [TooltipsController](scripts/System/Tooltips/TooltipsController.md)
         - [TooltipsTrigger](scripts/System/Tooltips/TooltipsTrigger.md)
