@@ -171,7 +171,7 @@ public class EntityStatus : MonoBehaviour
                 } else if (damage * parryingDamageReduction * incomingDamagePercent < GetHp())
                 {
                     // gracz otrzymuje obrażenia
-                    GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent);
+                    GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent, true);
                     
                     // odgrywanie animacji po sparowaniu
                     playerAppearance.GetComponent<Animator>().Play("parryAttack");
@@ -195,7 +195,7 @@ public class EntityStatus : MonoBehaviour
                     // gracz otrzymuje obrażenia
                     
                     //if (null != missionTracker) missionTracker.AddDamageTaken(damage * blockingDamageReduction * incomingDamagePercent);
-                    GettingDamageEvent(damage * blockingDamageReduction * incomingDamagePercent);
+                    GettingDamageEvent(damage * blockingDamageReduction * incomingDamagePercent, true);
                 }
             }
             else
@@ -213,7 +213,7 @@ public class EntityStatus : MonoBehaviour
                 {
                     // gracz otrzymuje obrażenia
                     //if (null != missionTracker) missionTracker.AddDamageTaken(damage * incomingDamagePercent);
-                    GettingDamageEvent(damage * incomingDamagePercent);
+                    GettingDamageEvent(damage * incomingDamagePercent, true);
                     
                     // animacja paska hp sygnalizująca otrzymanie obrażeń
                 }
@@ -230,7 +230,7 @@ public class EntityStatus : MonoBehaviour
             } else if (damage * incomingDamagePercent < GetHp())
             {
                 // encja otrzymuje obrażenia
-                GettingDamageEvent(damage);
+                GettingDamageEvent(damage, false);
             }
         }
     }
@@ -254,11 +254,13 @@ public class EntityStatus : MonoBehaviour
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
     }
     
-    void GettingDamageEvent( float damage)
+    void GettingDamageEvent( float damage, bool isPlayer = false )
     {
         // Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);
-            
+
+        if (!isPlayer) return;
+
         if (damage >= ( GetHp() / 2 ) ) StartCoroutine(SygnalizeGettingDamage());
         else StartCoroutine(SygnalizeGettingDamage());
     }
