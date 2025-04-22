@@ -74,6 +74,8 @@ public class UserInterfaceController : MonoBehaviour
 
                 Cursor.visible = interfaceObject.ShowCursor;
                 Time.timeScale = interfaceObject.FreezeGame?0:1;
+                if (MusicManager.instance != null)
+                    MusicManager.instance.PauseCurrentSong(interfaceObject.FreezeGame);
             }
         }
         interfaceToActivate.SetActive(!interfaceToActivate.activeSelf);

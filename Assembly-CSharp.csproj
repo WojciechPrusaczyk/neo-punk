@@ -52,6 +52,7 @@
     <Compile Include="Assets\Code\Scripts\System\Timer.cs" />
     <Compile Include="Assets\Code\Scripts\System\TimeTrial\Indicator.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Player\HitboxBehaviour.cs" />
+    <Compile Include="Assets\Code\Scripts\Enums.cs" />
     <Compile Include="Assets\Code\Scripts\System\EnemyAI.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\HomelessMan\HomelessManAi.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\ExplosionCollisionHandler.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Code\Scripts\Entities\SoundManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\AnimationEventDragonFly.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\OptionsMenuBehaviour.cs" />
+    <Compile Include="Assets\Code\Scripts\System\WorldSoundFXManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\PlayerDetector.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\VerticalDoorController.cs" />

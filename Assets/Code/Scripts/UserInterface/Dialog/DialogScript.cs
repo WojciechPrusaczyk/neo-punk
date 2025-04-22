@@ -9,7 +9,7 @@ public class DialogScript : MonoBehaviour
     public List<DialogData> dialogs = new List<DialogData>();
     [SerializeField] private DialogData dialogData = null;
 
-    private VisualElement root;
+    [SerializeField] private VisualElement root;
     private VisualElement characterOnePictureElement;
     private VisualElement characterTwoPictureElement;
     private Label dialogTextElement;
@@ -30,7 +30,7 @@ public class DialogScript : MonoBehaviour
 
     private void OnEnable()
     {
-        gameObject.active = true;
+        gameObject.SetActive(true);
         var uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null)
         {
@@ -71,19 +71,30 @@ public class DialogScript : MonoBehaviour
         characterTwoNameElement = root.Q<Label>("CharacterName2");
         dialogTextElement = root.Q<Label>("DialogText");
 
-
-        characterOneNameElement.text = dialogData.characterOneName.ToString();
-        characterTwoNameElement.text = dialogData.characterTwoName.ToString();
-
-        characterOnePictureElement.style.backgroundImage = new StyleBackground(dialogData.characterOnePicture);
-        characterTwoPictureElement.style.backgroundImage = new StyleBackground(dialogData.characterTwoPicture);
-
-        //Check
-        if (characterOnePictureElement == null || characterTwoPictureElement == null ||
-            characterOneNameElement == null || characterTwoNameElement == null || dialogTextElement == null)
+        if (characterOnePictureElement == null ||
+            characterTwoPictureElement == null ||
+            characterOneNameElement == null ||
+            characterTwoNameElement == null ||
+            dialogTextElement == null)
         {
-            Debug.LogError("ERROR DIALOG! NIE MA ELEMENTOW UI");
+            Debug.LogError("Error, brakuje ktoregos z elementow UI Dialogow.");
+            this.enabled = false;
             return;
+        }
+
+        if (dialogData == null)
+        {
+            characterOneNameElement.text = "";
+            characterTwoNameElement.text = "";
+            characterOnePictureElement.style.backgroundImage = null;
+            characterTwoPictureElement.style.backgroundImage = null;
+        } else
+        {
+            characterOneNameElement.text = dialogData.characterOneName.ToString();
+            characterTwoNameElement.text = dialogData.characterTwoName.ToString();
+
+            characterOnePictureElement.style.backgroundImage = new StyleBackground(dialogData.characterOnePicture);
+            characterTwoPictureElement.style.backgroundImage = new StyleBackground(dialogData.characterTwoPicture);
         }
     }
 

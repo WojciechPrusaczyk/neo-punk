@@ -22,10 +22,10 @@
             </engine:VisualElement>
             <engine:VisualElement name="TabSound" class="tabStyle" style="display: none;">
                 <engine:Label text="Sound" class="tabLabelStyle" />
-                <engine:Slider label="Main Sound Volume" value="90" high-value="100" show-input-field="false" name="Slider" class="sliderStyle" />
-                <engine:Slider label="Dialogs Volume" value="90" high-value="100" show-input-field="false" name="Slider" class="sliderStyle" />
-                <engine:Slider label="Music Volume" value="90" high-value="100" show-input-field="false" name="Slider" class="sliderStyle" />
-                <engine:Slider label="Effects Volume" value="90" high-value="100" show-input-field="false" name="Slider" class="sliderStyle" />
+                <engine:Slider label="Master Volume" value="90" high-value="1" show-input-field="false" name="MasterSlider" class="sliderStyle" />
+                <engine:Slider label="Dialogues Volume" value="90" high-value="1" show-input-field="false" name="DialoguesSlider" class="sliderStyle" />
+                <engine:Slider label="Music Volume" value="90" high-value="1" show-input-field="false" name="MusicSlider" class="sliderStyle" />
+                <engine:Slider label="Effects Volume" value="90" high-value="1" show-input-field="false" name="EffectsSlider" class="sliderStyle" />
             </engine:VisualElement>
             <engine:VisualElement name="TabControls" class="tabStyle" style="flex-grow: 1; display: none;">
                 <engine:Label text="Controls" />

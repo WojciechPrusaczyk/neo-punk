@@ -35,7 +35,45 @@ public class OptionsMenuBehaviour : MonoBehaviour
         var displayOptionButton = InterfaceRoot.Q<Button>("displayOptionButton");
         var exitButton = InterfaceRoot.Q<Button>("exitButton");
 
-        deactivateAllTabs();
+        // Slidery w zakładce sound tab
+        var masterVolumeSlider = InterfaceRoot.Q<Slider>("MasterSlider");
+        var sfxVolumeSlider = InterfaceRoot.Q<Slider>("EffectsSlider");
+        var musicVolumeSlider = InterfaceRoot.Q<Slider>("MusicSlider");
+        var dialogueVolumeSlider = InterfaceRoot.Q<Slider>("DialoguesSlider");
+
+        // slidery defaultowo otrzymują wartość z WorldSoundFXManager.instance.<>
+        if (WorldSoundFXManager.instance != null)
+        {
+            masterVolumeSlider.value = WorldSoundFXManager.instance.masterVolume;
+            sfxVolumeSlider.value = WorldSoundFXManager.instance.sfxVolume;
+            musicVolumeSlider.value = WorldSoundFXManager.instance.musicVolume;
+            dialogueVolumeSlider.value = WorldSoundFXManager.instance.dialogueVolume;
+
+            // Dodajemy listenera do sliderów, upewniamy się, że wartość jest w zakresie 0-1
+            masterVolumeSlider.RegisterValueChangedCallback(evt =>
+            {
+                WorldSoundFXManager.instance.masterVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+            });
+            sfxVolumeSlider.RegisterValueChangedCallback(evt =>
+            {
+                WorldSoundFXManager.instance.sfxVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+            });
+            musicVolumeSlider.RegisterValueChangedCallback(evt =>
+            {
+                WorldSoundFXManager.instance.musicVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+            });
+            dialogueVolumeSlider.RegisterValueChangedCallback(evt =>
+            {
+                WorldSoundFXManager.instance.dialogueVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+            });
+        }
+        else
+        {
+            Debug.LogError("Nie znaleziono instancji WorldSoundFXManager. Dźwięki nie będą odtwarzane!");
+        }
+
+
+            deactivateAllTabs();
 
         /*
          * Zakładki
