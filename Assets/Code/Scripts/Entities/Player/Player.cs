@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -100,6 +101,29 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _soundManager = GetComponent<SoundManager>();
+    }
+
+    public void SaveGameDataToCurrentCharacterData(ref CharacterSaveData currentCharacterData)
+    { 
+        // Zapisanie danych postaci do pliku
+        currentCharacterData.currentHealth = playerStatus.GetHp();
+
+        currentCharacterData.xPosition = transform.position.x;
+        currentCharacterData.yPosition = transform.position.y;
+        currentCharacterData.zPosition = transform.position.z;
+
+        currentCharacterData.characterName = playerStatus.entityName;
+        currentCharacterData.sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void LoadGameDataFromCurrentCharacterData(ref CharacterSaveData currentCharacterData)
+    {
+        // Załadowanie danych postaci z pliku
+        playerStatus.SetHp(currentCharacterData.currentHealth);
+        Vector3 newPosition = new Vector3(currentCharacterData.xPosition, currentCharacterData.yPosition,
+            currentCharacterData.zPosition);
+        transform.position = newPosition;
+        playerStatus.entityName = currentCharacterData.characterName;
     }
 
     public void PlayPlayerSFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)

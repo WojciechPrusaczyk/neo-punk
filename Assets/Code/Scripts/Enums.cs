@@ -11,4 +11,11 @@ public class Enums : MonoBehaviour
         Music,
         Dialogue
     }
+
+    public enum CharacterSlots
+    {
+        CharacterSlot1,
+        CharacterSlot2,
+        CharacterSlot3
+    }
 }
