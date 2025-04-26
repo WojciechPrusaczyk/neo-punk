@@ -23,8 +23,8 @@ TagManager:
   - PostProcessing
   - NoLight
   - Stairs
-  - 
-  - 
+  - FlyingEnemy
+  - Platform
   - 
   - 
   - 

@@ -151,6 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2f2604da0c4d94e9fff5f14857aeb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaskSprite:
+  - {fileID: 7273241179895633239, guid: f7c3ec905b1d484438f0b2afbef1325b, type: 3}
+  - {fileID: -3459616361935369511, guid: f7c3ec905b1d484438f0b2afbef1325b, type: 3}
+  - {fileID: -1957762584660598641, guid: f7c3ec905b1d484438f0b2afbef1325b, type: 3}
+  - {fileID: 3691113992749271786, guid: f7c3ec905b1d484438f0b2afbef1325b, type: 3}
   timeTrial: {fileID: 4753244925039302774}
 --- !u!1 &5003301844870044381
 GameObject:
@@ -217,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe5d3d0b355b144c84eb24959d633d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTrial: {fileID: 0}
+  timeTrial: {fileID: 4753244925039302774}
 --- !u!1 &5724347424659354169
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +415,8 @@ MonoBehaviour:
   indicators: []
   finishCollider: {fileID: 1615910138336959692}
   player: {fileID: 0}
-  timeTrialInterface: {fileID: 0}
-  timeTrialEndScreenInterface: {fileID: 0}
+  timeTrialInterface: {fileID: 4374190496128033099}
+  timeTrialEndScreenInterface: {fileID: 5966307386373590850}
 --- !u!1 &7255304106302959427
 GameObject:
   m_ObjectHideFlags: 0

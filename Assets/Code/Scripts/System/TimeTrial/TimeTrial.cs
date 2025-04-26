@@ -48,7 +48,7 @@ public class TimeTrial : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ExitTrial();
         }
@@ -72,6 +72,8 @@ public class TimeTrial : MonoBehaviour
         timeTrialInterface.gameObject.SetActive(false);
         
         timeTrialEndScreenInterface.gameObject.SetActive(true);
+        timeTrialEndScreenInterface.mask.style.backgroundImage = timeTrialEndScreenInterface.DecideMaskSprite().texture;
+
         timeTrialEndScreenInterface.timerLabel.text = FormatTime(trialTime);
         
         foreach (GameObject indicator in indicators)
@@ -89,11 +91,9 @@ public class TimeTrial : MonoBehaviour
         if (!trialStarted) return;
 
         timeTrialInterface.gameObject.SetActive(false);
-        Debug.Log("ExitTrial");
 
         timeTrialEndScreenInterface.gameObject.SetActive(true);
-        Debug.Log("ExitTrial2");
-
+        timeTrialEndScreenInterface.mask.style.backgroundImage = timeTrialEndScreenInterface.MaskSprite[3].texture;
         timeTrialEndScreenInterface.timerLabel.text = FormatTime(trialTime);
         
         trialStarted = false;

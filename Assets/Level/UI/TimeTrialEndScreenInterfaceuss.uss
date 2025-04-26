@@ -4,6 +4,7 @@
 
 .buttonStyle {
     background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=1086331387851373080&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1_0");
+    position: absolute;
 }
 
 .buttonStyle:hover {
@@ -12,4 +13,12 @@
 
 .buttonStyle:active {
     background-image: url("project://database/Assets/Art/UserInterface/Buttons/button2.png?fileID=8871750365745515610&guid=3a064b7a50dbfe74e9dda5859c98de85&type=3#button2_0");
+}
+
+.labelStyle {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    -unity-text-outline-color: rgba(147, 197, 204, 0);
+    color: rgb(147, 197, 204);
+    font-size: 80px;
+    -unity-text-align: upper-center;
 }

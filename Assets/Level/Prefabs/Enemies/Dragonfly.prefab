@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5208658026229679533}
   - component: {fileID: 1139799258521107825}
   - component: {fileID: 7554672013920220350}
-  m_Layer: 6
+  m_Layer: 15
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -123,13 +123,13 @@ MonoBehaviour:
   entityMaxHelath: 100
   droppedXp: 0
   gold: 0
-  AttackDamage: 0
-  MovementSpeed: 100
+  AttackDamage: 1
+  MovementSpeed: 200
   isFacedRight: 0
   isEnemy: 1
   deathAnimationLength: 1
   detectedTargets: []
-  attackRange: 2
+  attackRange: 6
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 721097789503219684}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

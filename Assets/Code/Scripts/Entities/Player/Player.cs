@@ -517,6 +517,7 @@ public class Player : MonoBehaviour
             foreach (var entity in collidingObjects)
             {
                 // zadawanie obrażeń
+                Debug.Log(damageToDeal);
                 entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
                 // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
             }

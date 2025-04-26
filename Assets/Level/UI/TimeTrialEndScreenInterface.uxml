@@ -2,8 +2,9 @@
     <Style src="project://database/Assets/Level/UI/TimeTrialEndScreenInterfaceuss.uss?fileID=7433441132597879392&amp;guid=2666270e64baa8a4ab1c3d343489883f&amp;type=3#TimeTrialEndScreenInterfaceuss" />
     <engine:VisualElement name="Panel" class="panel" style="flex-grow: 1; background-image: none;">
         <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/TimeTrial/endscreen.aseprite?fileID=-5659406091552305720&amp;guid=20d9937645a4b164e8bbc11b7de69a1c&amp;type=3#endscreen&quot;); margin-top: 0; position: absolute; height: 40%; width: 100%; top: 0;" />
-        <engine:Label text="Label" style="position: absolute; top: 18px; left: 108px; width: 95px;" />
-        <engine:Label text="Label" style="position: absolute; top: 12px; left: 302px; width: 65px;" />
-        <engine:Label text="Label" style="position: absolute; top: 15px; left: 510px; width: 109px;" />
+        <engine:Label text="Label" name="Time" class="labelStyle" style="position: absolute; top: 315px; left: 782px; width: 229px; height: 95px;" />
+        <engine:Label text="Label" name="Result" class="labelStyle" style="position: absolute; top: 320px; left: 316px; width: 178px;" />
+        <engine:Button name="ExitButton" class="buttonStyle" style="height: 96px; width: 96px; top: 30px; left: auto; background-color: rgba(188, 188, 188, 0); background-image: url(&quot;project://database/Assets/Art/UserInterface/TimeTrial/Buttons.aseprite?fileID=-1216901451901030798&amp;guid=391db3aabe21f9043a747906961a99d1&amp;type=3#Buttons_1&quot;); right: 30px;" />
+        <engine:VisualElement name="Mask" style="flex-grow: 1; position: absolute; height: 99px; width: 74px; top: 306px; left: 1517px; background-image: none;" />
     </engine:VisualElement>
 </engine:UXML>
