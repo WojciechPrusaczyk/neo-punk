@@ -1,0 +1,2382 @@
+fileFormatVersion: 2
+guid: 5e5cc560101b889419fa7a1f9265be68
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Breath_idle(done)
+    second: {fileID: 7400000, guid: 2f500a7842ec3714a98bada3f74c81d8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: fae21ff51a457ce4ab6a4c1ac18048bc, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Eating
+    second: {fileID: 7400000, guid: cfc404337664f63459bb5653fc0171c2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack1_bite(done)
+    second: {fileID: 7400000, guid: 42f64b66ed1ee464e99333859ca7a552, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack2_swipe
+    second: {fileID: 7400000, guid: a8173ade448e42047b12e145856632f3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: base
+    second: {fileID: 7400000, guid: afb7b315de5593544a648eafd60cc10d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: run(done)
+    second: {fileID: 7400000, guid: 97c2bc3059fd10048adc2c478056091b, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638715997510658199
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: dogtest_Frame_0
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 461
+      width: 51
+      height: 42
+    spriteID: 3bd53442ea73f2f4fb831424f85d2397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 461}
+  - name: dogtest_Frame_1
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 511
+      width: 51
+      height: 42
+    spriteID: 0d770eb3732ea574aaecd90dcb3a39cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 511}
+  - name: dogtest_Frame_2
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 561
+      width: 51
+      height: 42
+    spriteID: 5d5343e38841899478f5aa97e748f14a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 561}
+  - name: dogtest_Frame_3
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 204
+      width: 51
+      height: 43
+    spriteID: 9b0179b9d4a6c2247a90642e34a5c291
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 204}
+  - name: dogtest_Frame_4
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 255
+      width: 51
+      height: 43
+    spriteID: cd3fcfee60263d044a5afcc64d4f2a5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 255}
+  - name: dogtest_Frame_5
+    originalName: 
+    pivot: {x: 0.48, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 179
+      width: 50
+      height: 42
+    spriteID: 7f3a188e2d5ba91499c5d401bb215948
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 179}
+  - name: dogtest_Frame_6
+    originalName: 
+    pivot: {x: 0.48, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 229
+      width: 50
+      height: 42
+    spriteID: c22f2979546cf6c4d99a604b71975014
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 229}
+  - name: dogtest_Frame_7
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 49
+      height: 41
+    spriteID: 23c5b68adc730734cbf88c564139ccc0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+  - name: dogtest_Frame_8
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 677
+      width: 49
+      height: 41
+    spriteID: 6f7ebc734ec8d8341ada0463e683609d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 677}
+  - name: dogtest_Frame_9
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 475
+      width: 49
+      height: 40
+    spriteID: b6a77ce9cd5f0cb4d990e804dcb645a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 475}
+  - name: dogtest_Frame_10
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 523
+      width: 49
+      height: 40
+    spriteID: 379cf52859384934ba1e386583cd5fb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 523}
+  - name: dogtest_Frame_11
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 571
+      width: 49
+      height: 40
+    spriteID: e1245307bb8743541a241febb5099e28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 571}
+  - name: dogtest_Frame_12
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 619
+      width: 49
+      height: 40
+    spriteID: f1e908e412ed1f54296af9714a09ebfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 619}
+  - name: dogtest_Frame_13
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 667
+      width: 49
+      height: 40
+    spriteID: 931cbd23a6df1464b9b5119b737748e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 667}
+  - name: dogtest_Frame_14
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 715
+      width: 49
+      height: 40
+    spriteID: cb5cbab6e36e2ee4fa6931de8d25069c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 715}
+  - name: dogtest_Frame_15
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 726
+      width: 49
+      height: 41
+    spriteID: 162b9c989b6a55e4884c411dd2e876bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 726}
+  - name: dogtest_Frame_16
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 775
+      width: 49
+      height: 41
+    spriteID: ad63ec4572d697c45af6f4ffc77cbfa2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 775}
+  - name: dogtest_Frame_17
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 824
+      width: 49
+      height: 41
+    spriteID: 086fed122ca01f44ca8dcabf9d24e2a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 824}
+  - name: dogtest_Frame_18
+    originalName: 
+    pivot: {x: 0.48979592, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 873
+      width: 49
+      height: 41
+    spriteID: 0f1e05dbbfef4d24a946c58ba972f3f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 873}
+  - name: dogtest_Frame_19
+    originalName: 
+    pivot: {x: 0.48, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 279
+      width: 50
+      height: 42
+    spriteID: d2779c7f770b3d4429ee7decc6e249b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 279}
+  - name: dogtest_Frame_20
+    originalName: 
+    pivot: {x: 0.48, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 329
+      width: 50
+      height: 42
+    spriteID: cbad649c5875a5349b88afefff555e26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 329}
+  - name: dogtest_Frame_21
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 306
+      width: 51
+      height: 43
+    spriteID: 2450dbc0008fc6d4dbad16004c0a58cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 306}
+  - name: dogtest_Frame_22
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 357
+      width: 51
+      height: 43
+    spriteID: bc520a648b1c9c2419f06e6ed69e795e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 357}
+  - name: dogtest_Frame_23
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 611
+      width: 51
+      height: 42
+    spriteID: 7ad82f93e92b0054384e776489a2de3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 611}
+  - name: dogtest_Frame_24
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 661
+      width: 51
+      height: 42
+    spriteID: bf8aaf01be5f44f4aa0f4049ac3722a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 661}
+  - name: dogtest_Frame_25
+    originalName: 
+    pivot: {x: 0.44444448, y: -0.21212122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 177
+      width: 63
+      height: 33
+    spriteID: db4206d7fdba9904ead973296fd4156d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 177}
+  - name: dogtest_Frame_26
+    originalName: 
+    pivot: {x: 0.44262296, y: -0.2580645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 912
+      width: 61
+      height: 31
+    spriteID: 27359671b5ae54142a883ffb68a22adc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 912}
+  - name: dogtest_Frame_27
+    originalName: 
+    pivot: {x: 0.46153846, y: -0.27272728}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 51
+      width: 65
+      height: 33
+    spriteID: fcf27cd700c27e448b55ec41751ff580
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 51}
+  - name: dogtest_Frame_28
+    originalName: 
+    pivot: {x: 0.44615382, y: -0.12820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 4
+      width: 65
+      height: 39
+    spriteID: 92f0f5dbc0399894cac909ea3758ec8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 4}
+  - name: dogtest_Frame_29
+    originalName: 
+    pivot: {x: 0.44615382, y: -0.34375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 137
+      width: 65
+      height: 32
+    spriteID: caeada6f3dbda38438683fa915380bed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 137}
+  - name: dogtest_Frame_30
+    originalName: 
+    pivot: {x: 0.44444448, y: -0.17647061}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 711
+      width: 63
+      height: 34
+    spriteID: d44c28a20eea65b42bcea9f02d6934d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 711}
+  - name: dogtest_Frame_31
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 753
+      width: 51
+      height: 42
+    spriteID: 9288b9414a0402d469f17ca6fe97b100
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 753}
+  - name: dogtest_Frame_32
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 803
+      width: 51
+      height: 42
+    spriteID: bf38c258fd0a6f54486163c5770977d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 803}
+  - name: dogtest_Frame_33
+    originalName: 
+    pivot: {x: 0.4791667, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 379
+      width: 48
+      height: 43
+    spriteID: 3fc9c8da20fafaf499d36436db01981d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 379}
+  - name: dogtest_Frame_34
+    originalName: 
+    pivot: {x: 0.4791667, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 430
+      width: 48
+      height: 43
+    spriteID: bfbfd546d99979d4ebbd8aa191ba2336
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 430}
+  - name: dogtest_Frame_35
+    originalName: 
+    pivot: {x: 0.4545455, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 267
+      width: 44
+      height: 45
+    spriteID: 4c1a8b00362757b4cbcf29e5d8c4045f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 267}
+  - name: dogtest_Frame_36
+    originalName: 
+    pivot: {x: 0.4545455, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 320
+      width: 44
+      height: 45
+    spriteID: b56e9f89f13586d4686c9adb5961b1c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 320}
+  - name: dogtest_Frame_37
+    originalName: 
+    pivot: {x: 0.4888889, y: -0.11363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 373
+      width: 45
+      height: 44
+    spriteID: a487b286923d5b8429de6f323b680f6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 373}
+  - name: dogtest_Frame_38
+    originalName: 
+    pivot: {x: 0.53968257, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 4
+      width: 63
+      height: 42
+    spriteID: aada272db3e244742a759c1ca8510f33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 4}
+  - name: dogtest_Frame_39
+    originalName: 
+    pivot: {x: 0.53225803, y: -0.13157895}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 102
+      width: 62
+      height: 38
+    spriteID: 0c4753f5e03f4784fa089de5bb52c771
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 102}
+  - name: dogtest_Frame_40
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.13513513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 92
+      width: 57
+      height: 37
+    spriteID: f2fbad7baa8be6b42bef131d867cb807
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 92}
+  - name: dogtest_Frame_41
+    originalName: 
+    pivot: {x: 0.5084746, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 54
+      width: 59
+      height: 40
+    spriteID: 692e082e6cd495944b606b5ed06002ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 54}
+  - name: dogtest_Frame_42
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 853
+      width: 51
+      height: 42
+    spriteID: ba9f5d364860e0745a081e252d5cd4a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 853}
+  - name: dogtest_Frame_43
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 903
+      width: 51
+      height: 42
+    spriteID: 2196f4f0cdb57674aa43599dd2f8eadb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 903}
+  - name: dogtest_Frame_44
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 763
+      width: 49
+      height: 40
+    spriteID: 4581c0a880f26664f99629557f10d9b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 763}
+  - name: dogtest_Frame_45
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 922
+      width: 49
+      height: 41
+    spriteID: 026033235b1f8c64e9b0fc5a1c7e4980
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 922}
+  - name: dogtest_Frame_46
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 481
+      width: 50
+      height: 41
+    spriteID: ad8dee2d22d30404a8c4a6406a65ecda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 481}
+  - name: dogtest_Frame_47
+    originalName: 
+    pivot: {x: 0.46808508, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 811
+      width: 47
+      height: 41
+    spriteID: 0aa65e799c3e18841a61f49067f1024b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 811}
+  - name: dogtest_Frame_48
+    originalName: 
+    pivot: {x: 0.46511632, y: -0.11363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 860
+      width: 43
+      height: 44
+    spriteID: 9dff1bf3645e6664d8f2ec5816106484
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 860}
+  - name: dogtest_Frame_49
+    originalName: 
+    pivot: {x: 0.4761905, y: -0.11363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 951
+      width: 42
+      height: 44
+    spriteID: a8fcfb04e8b83ec42a2eb78937656848
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 951}
+  - name: dogtest_Frame_50
+    originalName: 
+    pivot: {x: 0.509434, y: -0.11764707}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 62
+      width: 53
+      height: 34
+    spriteID: 1fbc0bd298b43a24c9f476f5afa623e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 62}
+  - name: dogtest_Frame_51
+    originalName: 
+    pivot: {x: 0.45098042, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 104
+      width: 51
+      height: 30
+    spriteID: 0a68049604d16964c8371546958a60e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 104}
+  - name: dogtest_Frame_52
+    originalName: 
+    pivot: {x: 0.4375, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 180
+      width: 48
+      height: 30
+    spriteID: fbf74c29d976d7c4b8a871326160263a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 180}
+  - name: dogtest_Frame_53
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 142
+      width: 49
+      height: 30
+    spriteID: 6de7f32b59253204e80745be48dfab4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 142}
+  - name: dogtest_Frame_54
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 953
+      width: 51
+      height: 42
+    spriteID: b2b8b92d118797745be18ecb6c2362b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 953}
+  - name: dogtest_Frame_55
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 218
+      width: 46
+      height: 27
+    spriteID: ccedd5c4efbb8514198d20dc04fbcfe9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 218}
+  - name: dogtest_Frame_56
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 253
+      width: 46
+      height: 27
+    spriteID: 6e13be2183134934e90478aa09aa1180
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 253}
+  - name: dogtest_Frame_57
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 358
+      width: 45
+      height: 27
+    spriteID: 70c31d58f83ecb64bb0ea6de2f261fd0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 358}
+  - name: dogtest_Frame_58
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 393
+      width: 45
+      height: 27
+    spriteID: 095a1e0ff97ca6844bbe54461945b83c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 393}
+  - name: dogtest_Frame_59
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 428
+      width: 45
+      height: 27
+    spriteID: 2e4d93cb7fa9eea40b620ecc3e0aae45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 428}
+  - name: dogtest_Frame_60
+    originalName: 
+    pivot: {x: 0.6222223, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 463
+      width: 45
+      height: 27
+    spriteID: 87cfc1756edac684c85166b9b0045e8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 463}
+  - name: dogtest_Frame_61
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 288
+      width: 46
+      height: 27
+    spriteID: 079f951283ec8bd4581ab282836bd227
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 288}
+  - name: dogtest_Frame_62
+    originalName: 
+    pivot: {x: 0.63043475, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 323
+      width: 46
+      height: 27
+    spriteID: f65ef609c0010754ea48583578b52dfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 323}
+  - name: dogtest_Frame_63
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 129
+      width: 51
+      height: 42
+    spriteID: 7a57488682343794baf54b2cdc87b36c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 129}
+  - name: dogtest_Frame_64
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 530
+      width: 50
+      height: 41
+    spriteID: a7f4bc3f9a4d5554da269b8e4af6854f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 530}
+  - name: dogtest_Frame_65
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 971
+      width: 49
+      height: 41
+    spriteID: 08f94a0c95b988d4186b40517ba90784
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 971}
+  - name: dogtest_Frame_66
+    originalName: 
+    pivot: {x: 0.43999997, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 579
+      width: 50
+      height: 41
+    spriteID: 93f111460faa25d4481a358336f0c0a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 579}
+  - name: dogtest_Frame_67
+    originalName: 
+    pivot: {x: 0.46938777, y: -0.12195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 218
+      width: 49
+      height: 41
+    spriteID: 0a735521e6a246448bbab777a1b6ece2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 218}
+  - name: dogtest_Frame_68
+    originalName: 
+    pivot: {x: 0.44680852, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 425
+      width: 47
+      height: 42
+    spriteID: f998a44bf8fe19845b38a0a39fae9d2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 425}
+  - name: dogtest_Frame_69
+    originalName: 
+    pivot: {x: 0.375, y: -0.13333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 408
+      width: 48
+      height: 45
+    spriteID: 0582427e1038cca4f84853a3f6acb76a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 408}
+  - name: dogtest_Frame_70
+    originalName: 
+    pivot: {x: 0.2857143, y: -0.14583333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 148
+      width: 49
+      height: 48
+    spriteID: e71fb33032c8fb548b65404f5fe3b38c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 148}
+  - name: dogtest_Frame_71
+    originalName: 
+    pivot: {x: 0.1964286, y: -0.16000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 4
+      width: 56
+      height: 50
+    spriteID: c3f03327b6b603548ba5fe42cf2b0b50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 4}
+  - name: dogtest_Frame_72
+    originalName: 
+    pivot: {x: 0.12962961, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 54
+      height: 56
+    spriteID: 66b4734e3e198d74283e834f5016a357
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: dogtest_Frame_73
+    originalName: 
+    pivot: {x: 0.09433964, y: -0.16981132}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 53
+      height: 53
+    spriteID: 9a7f184e0a0c48440bfa2c0a239c682a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 68}
+  - name: dogtest_Frame_74
+    originalName: 
+    pivot: {x: -0.8461539, y: -0.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 498
+      width: 26
+      height: 33
+    spriteID: 51affe1efcd7d194da99b402a2bf89b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 498}
+  - name: dogtest_Frame_75
+    originalName: 
+    pivot: {x: -3.3000002, y: -1.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 811
+      width: 10
+      height: 18
+    spriteID: 61603d46aad876d42b8e01cad0dc5574
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 256, y: 811}
+  - name: dogtest_Frame_76
+    originalName: 
+    pivot: {x: -7, y: -1.3846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 258
+      y: 475
+      width: 6
+      height: 26
+    spriteID: e3e7b01fca63c75468facb9733266e57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 258, y: 475}
+  - name: dogtest_Frame_77
+    originalName: 
+    pivot: {x: -15, y: -4.8888893}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 837
+      width: 3
+      height: 9
+    spriteID: 043f6dba22569bf4c89db199272fed57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 256, y: 837}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 284612472
+    name: dogtest
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: dogtest_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 3bd53442ea73f2f4fb831424f85d2397
+    - name: dogtest_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 0d770eb3732ea574aaecd90dcb3a39cc
+    - name: dogtest_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 5d5343e38841899478f5aa97e748f14a
+    - name: dogtest_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 43
+      spriteId: 9b0179b9d4a6c2247a90642e34a5c291
+    - name: dogtest_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 43
+      spriteId: cd3fcfee60263d044a5afcc64d4f2a5d
+    - name: dogtest_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 24
+        y: 5
+        width: 50
+        height: 42
+      spriteId: 7f3a188e2d5ba91499c5d401bb215948
+    - name: dogtest_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 24
+        y: 5
+        width: 50
+        height: 42
+      spriteId: c22f2979546cf6c4d99a604b71975014
+    - name: dogtest_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 23c5b68adc730734cbf88c564139ccc0
+    - name: dogtest_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 6f7ebc734ec8d8341ada0463e683609d
+    - name: dogtest_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: b6a77ce9cd5f0cb4d990e804dcb645a4
+    - name: dogtest_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: 379cf52859384934ba1e386583cd5fb8
+    - name: dogtest_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: e1245307bb8743541a241febb5099e28
+    - name: dogtest_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: f1e908e412ed1f54296af9714a09ebfd
+    - name: dogtest_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: 931cbd23a6df1464b9b5119b737748e5
+    - name: dogtest_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 40
+      spriteId: cb5cbab6e36e2ee4fa6931de8d25069c
+    - name: dogtest_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 162b9c989b6a55e4884c411dd2e876bd
+    - name: dogtest_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: ad63ec4572d697c45af6f4ffc77cbfa2
+    - name: dogtest_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 086fed122ca01f44ca8dcabf9d24e2a0
+    - name: dogtest_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 24
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 0f1e05dbbfef4d24a946c58ba972f3f0
+    - name: dogtest_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 24
+        y: 5
+        width: 50
+        height: 42
+      spriteId: d2779c7f770b3d4429ee7decc6e249b8
+    - name: dogtest_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 24
+        y: 5
+        width: 50
+        height: 42
+      spriteId: cbad649c5875a5349b88afefff555e26
+    - name: dogtest_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 43
+      spriteId: 2450dbc0008fc6d4dbad16004c0a58cf
+    - name: dogtest_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 43
+      spriteId: bc520a648b1c9c2419f06e6ed69e795e
+    - name: dogtest_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 7ad82f93e92b0054384e776489a2de3a
+    - name: dogtest_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: bf8aaf01be5f44f4aa0f4049ac3722a2
+    - name: dogtest_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 20
+        y: 7
+        width: 63
+        height: 33
+      spriteId: db4206d7fdba9904ead973296fd4156d
+    - name: dogtest_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 21
+        y: 8
+        width: 61
+        height: 31
+      spriteId: 27359671b5ae54142a883ffb68a22adc
+    - name: dogtest_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 18
+        y: 9
+        width: 65
+        height: 33
+      spriteId: fcf27cd700c27e448b55ec41751ff580
+    - name: dogtest_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 19
+        y: 5
+        width: 65
+        height: 39
+      spriteId: 92f0f5dbc0399894cac909ea3758ec8d
+    - name: dogtest_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 19
+        y: 11
+        width: 65
+        height: 32
+      spriteId: caeada6f3dbda38438683fa915380bed
+    - name: dogtest_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 20
+        y: 6
+        width: 63
+        height: 34
+      spriteId: d44c28a20eea65b42bcea9f02d6934d6
+    - name: dogtest_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 9288b9414a0402d469f17ca6fe97b100
+    - name: dogtest_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: bf38c258fd0a6f54486163c5770977d3
+    - name: dogtest_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 25
+        y: 5
+        width: 48
+        height: 43
+      spriteId: 3fc9c8da20fafaf499d36436db01981d
+    - name: dogtest_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 25
+        y: 5
+        width: 48
+        height: 43
+      spriteId: bfbfd546d99979d4ebbd8aa191ba2336
+    - name: dogtest_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 28
+        y: 5
+        width: 44
+        height: 45
+      spriteId: 4c1a8b00362757b4cbcf29e5d8c4045f
+    - name: dogtest_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 28
+        y: 5
+        width: 44
+        height: 45
+      spriteId: b56e9f89f13586d4686c9adb5961b1c3
+    - name: dogtest_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 26
+        y: 5
+        width: 45
+        height: 44
+      spriteId: a487b286923d5b8429de6f323b680f6c
+    - name: dogtest_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 14
+        y: 5
+        width: 63
+        height: 42
+      spriteId: aada272db3e244742a759c1ca8510f33
+    - name: dogtest_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 15
+        y: 5
+        width: 62
+        height: 38
+      spriteId: 0c4753f5e03f4784fa089de5bb52c771
+    - name: dogtest_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 18
+        y: 5
+        width: 57
+        height: 37
+      spriteId: f2fbad7baa8be6b42bef131d867cb807
+    - name: dogtest_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 18
+        y: 5
+        width: 59
+        height: 40
+      spriteId: 692e082e6cd495944b606b5ed06002ee
+    - name: dogtest_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: ba9f5d364860e0745a081e252d5cd4a6
+    - name: dogtest_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 2196f4f0cdb57674aa43599dd2f8eadb
+    - name: dogtest_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 27
+        y: 5
+        width: 49
+        height: 40
+      spriteId: 4581c0a880f26664f99629557f10d9b7
+    - name: dogtest_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 27
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 026033235b1f8c64e9b0fc5a1c7e4980
+    - name: dogtest_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 26
+        y: 5
+        width: 50
+        height: 41
+      spriteId: ad8dee2d22d30404a8c4a6406a65ecda
+    - name: dogtest_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 26
+        y: 5
+        width: 47
+        height: 41
+      spriteId: 0aa65e799c3e18841a61f49067f1024b
+    - name: dogtest_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 28
+        y: 5
+        width: 43
+        height: 44
+      spriteId: 9dff1bf3645e6664d8f2ec5816106484
+    - name: dogtest_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 28
+        y: 5
+        width: 42
+        height: 44
+      spriteId: a8fcfb04e8b83ec42a2eb78937656848
+    - name: dogtest_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 21
+        y: 4
+        width: 53
+        height: 34
+      spriteId: 1fbc0bd298b43a24c9f476f5afa623e5
+    - name: dogtest_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 25
+        y: 2
+        width: 51
+        height: 30
+      spriteId: 0a68049604d16964c8371546958a60e9
+    - name: dogtest_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 27
+        y: 2
+        width: 48
+        height: 30
+      spriteId: fbf74c29d976d7c4b8a871326160263a
+    - name: dogtest_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 27
+        y: 2
+        width: 49
+        height: 30
+      spriteId: 6de7f32b59253204e80745be48dfab4f
+    - name: dogtest_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: b2b8b92d118797745be18ecb6c2362b2
+    - name: dogtest_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 19
+        y: 3
+        width: 46
+        height: 27
+      spriteId: ccedd5c4efbb8514198d20dc04fbcfe9
+    - name: dogtest_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 19
+        y: 3
+        width: 46
+        height: 27
+      spriteId: 6e13be2183134934e90478aa09aa1180
+    - name: dogtest_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 20
+        y: 3
+        width: 45
+        height: 27
+      spriteId: 70c31d58f83ecb64bb0ea6de2f261fd0
+    - name: dogtest_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 20
+        y: 3
+        width: 45
+        height: 27
+      spriteId: 095a1e0ff97ca6844bbe54461945b83c
+    - name: dogtest_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 20
+        y: 3
+        width: 45
+        height: 27
+      spriteId: 2e4d93cb7fa9eea40b620ecc3e0aae45
+    - name: dogtest_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 20
+        y: 3
+        width: 45
+        height: 27
+      spriteId: 87cfc1756edac684c85166b9b0045e8d
+    - name: dogtest_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 19
+        y: 3
+        width: 46
+        height: 27
+      spriteId: 079f951283ec8bd4581ab282836bd227
+    - name: dogtest_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 19
+        y: 3
+        width: 46
+        height: 27
+      spriteId: f65ef609c0010754ea48583578b52dfd
+    - name: dogtest_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 24
+        y: 5
+        width: 51
+        height: 42
+      spriteId: 7a57488682343794baf54b2cdc87b36c
+    - name: dogtest_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 26
+        y: 5
+        width: 50
+        height: 41
+      spriteId: a7f4bc3f9a4d5554da269b8e4af6854f
+    - name: dogtest_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 27
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 08f94a0c95b988d4186b40517ba90784
+    - name: dogtest_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 26
+        y: 5
+        width: 50
+        height: 41
+      spriteId: 93f111460faa25d4481a358336f0c0a1
+    - name: dogtest_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 25
+        y: 5
+        width: 49
+        height: 41
+      spriteId: 0a735521e6a246448bbab777a1b6ece2
+    - name: dogtest_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 27
+        y: 5
+        width: 47
+        height: 42
+      spriteId: f998a44bf8fe19845b38a0a39fae9d2c
+    - name: dogtest_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 30
+        y: 6
+        width: 48
+        height: 45
+      spriteId: 0582427e1038cca4f84853a3f6acb76a
+    - name: dogtest_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 34
+        y: 7
+        width: 49
+        height: 48
+      spriteId: e71fb33032c8fb548b65404f5fe3b38c
+    - name: dogtest_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 37
+        y: 8
+        width: 56
+        height: 50
+      spriteId: c3f03327b6b603548ba5fe42cf2b0b50
+    - name: dogtest_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 41
+        y: 8
+        width: 54
+        height: 56
+      spriteId: 66b4734e3e198d74283e834f5016a357
+    - name: dogtest_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 43
+        y: 9
+        width: 53
+        height: 53
+      spriteId: 9a7f184e0a0c48440bfa2c0a239c682a
+    - name: dogtest_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 70
+        y: 22
+        width: 26
+        height: 33
+      spriteId: 51affe1efcd7d194da99b402a2bf89b8
+    - name: dogtest_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 81
+        y: 30
+        width: 10
+        height: 18
+      spriteId: 61603d46aad876d42b8e01cad0dc5574
+    - name: dogtest_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 90
+        y: 36
+        width: 6
+        height: 26
+      spriteId: e3e7b01fca63c75468facb9733266e57
+    - name: dogtest_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 93
+        y: 44
+        width: 3
+        height: 9
+      spriteId: 043f6dba22569bf4c89db199272fed57
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 1
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 96, y: 80}

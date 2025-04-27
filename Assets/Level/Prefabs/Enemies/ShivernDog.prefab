@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 1572551299509783112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.23, y: -1.73, z: -0.02498167}
+  m_LocalPosition: {x: 0, y: 0, z: -0.02498167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -476,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 6851569378807637484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16, y: -1.57, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -571,7 +571,7 @@ MonoBehaviour:
   entityMaxHelath: 100
   droppedXp: 0
   gold: 0
-  AttackDamage: 2
+  AttackDamage: 1
   MovementSpeed: 1000
   isFacedRight: 1
   isEnemy: 0

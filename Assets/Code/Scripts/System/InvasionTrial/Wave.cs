@@ -8,7 +8,10 @@ public class Wave : MonoBehaviour
 {
     public bool waveStarted;
     public bool waveEnded;
+    public GameObject flame;
+
     public List<GameObject> enemies;
+    
 
 
     public void SpawnEnemies(List<Transform> spawnPoints)
@@ -21,12 +24,23 @@ public class Wave : MonoBehaviour
         waveStarted = true;
         foreach (GameObject enemy in enemies)
         {
-            GameObject newEnemy = Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
+            Vector2 position = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
+            GameObject flameOBJ = Instantiate(flame, position, Quaternion.identity);
+            
+            position.y += 2f;
+            GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
             newEnemy.transform.parent = transform;
-            newEnemy.SetActive(true);
+            newEnemy.GetComponentInChildren<EnemyAI>().enabled = false;
             newEnemy.GetComponentInChildren<EnemyAI>().state = EnemyAI.EnemyState.Chasing;
 
-            yield return new WaitForSeconds(0.2f); // Delay of 0.1 seconds
+            newEnemy.SetActive(true);
+
+            yield return new WaitUntil(() => flameOBJ.GetComponentInChildren<Flame>().ended);
+
+            Destroy(flameOBJ);
+            newEnemy.GetComponentInChildren<EnemyAI>().enabled = true;
+
+            yield return new WaitForSeconds(0.1f); // Delay of 0.1 seconds
         }
     }
 

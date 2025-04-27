@@ -8,6 +8,7 @@ public class InvasionTrial : MonoBehaviour
     public bool trialStarted = false;
     public bool trialFinished = false;
 
+
     public List<Transform> SpawnPoints;
     [SerializeField]
     public List<Wave> waves;

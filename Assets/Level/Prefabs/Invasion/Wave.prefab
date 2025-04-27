@@ -46,4 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveStarted: 0
   waveEnded: 0
+  flame: {fileID: 5138890262102275240, guid: 3cd2906b3c552d7488c90e1b599f846e, type: 3}
   enemies: []
