@@ -1341,7 +1341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: masterVolume
-      value: 0.534
+      value: 0.319
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: dialogueVolume

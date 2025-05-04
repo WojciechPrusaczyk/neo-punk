@@ -53,18 +53,25 @@ public class OptionsMenuBehaviour : MonoBehaviour
             masterVolumeSlider.RegisterValueChangedCallback(evt =>
             {
                 WorldSoundFXManager.instance.masterVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+                WorldSaveGameManager.instance.SaveSettings();
             });
+
             sfxVolumeSlider.RegisterValueChangedCallback(evt =>
             {
                 WorldSoundFXManager.instance.sfxVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+                WorldSaveGameManager.instance.SaveSettings();
             });
+
             musicVolumeSlider.RegisterValueChangedCallback(evt =>
             {
                 WorldSoundFXManager.instance.musicVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+                WorldSaveGameManager.instance.SaveSettings();
             });
+
             dialogueVolumeSlider.RegisterValueChangedCallback(evt =>
             {
                 WorldSoundFXManager.instance.dialogueVolume = Mathf.Clamp(evt.newValue, 0f, 1f);
+                WorldSaveGameManager.instance.SaveSettings();
             });
         }
         else

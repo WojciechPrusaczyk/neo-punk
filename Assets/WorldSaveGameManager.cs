@@ -22,6 +22,7 @@ public class WorldSaveGameManager : MonoBehaviour
     public CharacterSlots currentCharacterSlotBeingUsed;
     public CharacterSaveData currentCharacterData;
     private string saveFileName;
+    private string settingsFileName;
 
     [Header("Character Slots")]
     public CharacterSaveData characterSlot01;
@@ -157,7 +158,28 @@ public class WorldSaveGameManager : MonoBehaviour
     {
         StartCoroutine(LoadGameCoroutine());
     }
+    public void SaveGame()
+    {
+        player = FindFirstObjectByType<Player>();
+        if (player == null)
+        {
+            Debug.LogError("Nie znaleziono gracza w bie¿¹cej scenie, nie mo¿na zapisaæ gry!");
+            return;
+        }
 
+        saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(currentCharacterSlotBeingUsed);
+
+        saveFileDataWriter = new SaveFileDataWriter();
+        saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
+        saveFileDataWriter.saveFileName = saveFileName;
+
+        player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
+
+        currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
+
+        saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
+        Debug.Log($"Zapisano grê do slota: {currentCharacterSlotBeingUsed} (Plik: {saveFileName})");
+    }
     private IEnumerator LoadGameCoroutine()
     {
         Debug.Log("Loading Game Data...");
@@ -201,28 +223,59 @@ public class WorldSaveGameManager : MonoBehaviour
         player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
     }
 
-    public void SaveGame()
+    public void AttemptToCreateNewSettingsFile()
     {
-        player = FindFirstObjectByType<Player>();
-        if (player == null)
-        {
-            Debug.LogError("Nie znaleziono gracza w bie¿¹cej scenie, nie mo¿na zapisaæ gry!");
+        if (WorldSoundFXManager.instance == null)
             return;
-        }
-
-        saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(currentCharacterSlotBeingUsed);
 
         saveFileDataWriter = new SaveFileDataWriter();
         saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
-        saveFileDataWriter.saveFileName = saveFileName;
-
-        player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
-
-        currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
-
-        saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
-        Debug.Log($"Zapisano grê do slota: {currentCharacterSlotBeingUsed} (Plik: {saveFileName})");
+        settingsFileName = "Settings";
+        saveFileDataWriter.saveFileName = settingsFileName;
+        
+        if (saveFileDataWriter.CheckToSeeIfFileExists())
+            return;
+        else
+            SaveSettings();
     }
+    
+    public void SaveSettings()
+    {
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        saveFileDataWriter = new SaveFileDataWriter();
+        saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
+        settingsFileName = "Settings";
+        saveFileDataWriter.saveFileName = settingsFileName;
+
+        SettingsSaveData worldSoundFXManager = new SettingsSaveData();
+        worldSoundFXManager.masterVolume = WorldSoundFXManager.instance.masterVolume;
+        worldSoundFXManager.sfxVolume = WorldSoundFXManager.instance.sfxVolume;
+        worldSoundFXManager.musicVolume = WorldSoundFXManager.instance.musicVolume;
+        worldSoundFXManager.dialogueVolume = WorldSoundFXManager.instance.dialogueVolume;
+        saveFileDataWriter.CreateNewSettingsSaveFile(worldSoundFXManager);
+    }
+
+    public void LoadSettingsFile()
+    {
+        saveFileDataWriter = new SaveFileDataWriter();
+        saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
+        settingsFileName = "Settings";
+        saveFileDataWriter.saveFileName = settingsFileName;
+        SettingsSaveData worldSoundFXManager = saveFileDataWriter.LoadSettingsSaveFile();
+        if (worldSoundFXManager == null)
+        {
+            Debug.LogError("Nie mo¿na za³adowaæ pliku ustawieñ.");
+            return;
+        }
+        WorldSoundFXManager.instance.masterVolume = worldSoundFXManager.masterVolume;
+        WorldSoundFXManager.instance.sfxVolume = worldSoundFXManager.sfxVolume;
+        WorldSoundFXManager.instance.musicVolume = worldSoundFXManager.musicVolume;
+        WorldSoundFXManager.instance.dialogueVolume = worldSoundFXManager.dialogueVolume;
+        Debug.Log("Za³adowano ustawienia dŸwiêku.");
+    }
+
 
     private void LoadAllCharacterProfiles()
     {

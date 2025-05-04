@@ -47,6 +47,9 @@ public class WorldSoundFXManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+
+        WorldSaveGameManager.instance.AttemptToCreateNewSettingsFile();
+        WorldSaveGameManager.instance.LoadSettingsFile();
     }
 
     private void Update()

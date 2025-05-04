@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Text;
+using UnityEditor.U2D.Animation;
 
 public class SaveFileDataWriter
 {
@@ -151,4 +152,74 @@ public class SaveFileDataWriter
         }
         return characterData;
     }
+
+    public void CreateNewSettingsSaveFile(SettingsSaveData worldSoundFXManager)
+    {
+        string savePath = Path.Combine(saveDataDirectoryPath, saveFileName);
+
+        try
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(savePath));
+
+            string dataToStore = JsonUtility.ToJson(worldSoundFXManager, true);
+
+            string finalDataToWrite = dataToStore;
+
+            using (FileStream stream = new FileStream(savePath, FileMode.Create))
+            {
+                using (StreamWriter fileWriter = new StreamWriter(stream))
+                {
+                    fileWriter.Write(finalDataToWrite);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"ERROR WHILST TRYING TO SAVE SETTINGS DATA, GAME NOT SAVED {savePath}\n{ex}");
+        }
+    }
+
+    public SettingsSaveData LoadSettingsSaveFile()
+    {
+        SettingsSaveData loadedSettingsData = null;
+        string loadPath = Path.Combine(saveDataDirectoryPath, saveFileName);
+
+        if (File.Exists(loadPath))
+        {
+            try
+            {
+                string rawData = "";
+                using (FileStream stream = new FileStream(loadPath, FileMode.Open))
+                {
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        rawData = reader.ReadToEnd();
+                    }
+                }
+
+                string dataToLoad = rawData;
+
+                if (!string.IsNullOrWhiteSpace(dataToLoad))
+                {
+                    loadedSettingsData = JsonUtility.FromJson<SettingsSaveData>(dataToLoad);
+                }
+                else
+                {
+                    Debug.LogWarning($"Settings file {loadPath} contained empty or invalid data.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"ERROR WHILST TRYING TO LOAD SETTINGS DATA, GAME NOT LOADED {loadPath}\n{ex}");
+                loadedSettingsData = null;
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"Settings file {loadPath} does not exist.");
+        }
+
+        return loadedSettingsData;
+    }
+
 }
