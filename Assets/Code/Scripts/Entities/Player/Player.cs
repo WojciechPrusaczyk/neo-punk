@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
      * Zmienne lokalne
      */
     private Rigidbody2D playerBody;
-    private PlayerInventory playerEq;
+    private PlayerInventoryInterface playerEq;
     private Collider2D ignoredObject;
     private CapsuleCollider2D boxCollider;
     private GameObject swordHitbox;
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     {
         // pobieranie rigidbody
         playerBody = GetComponent<Rigidbody2D>();
-        playerEq = gameObject.GetComponent<PlayerInventory>();
+        playerEq = gameObject.GetComponent<PlayerInventoryInterface>();
         FloorDetector = transform.Find("FloorDetector").gameObject.GetComponent<FloorDetector>();
         boxCollider = GetComponent<CapsuleCollider2D>();
         playerStatus = GetComponent<EntityStatus>();

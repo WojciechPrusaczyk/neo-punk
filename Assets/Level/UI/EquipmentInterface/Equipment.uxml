@@ -1,3 +1,32 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.84);" />
+    <Style src="project://database/Assets/Level/UI/EquipmentInterface/eq.uss?fileID=7433441132597879392&amp;guid=f534fa6b373051e46b0ad6454cb5a7aa&amp;type=3#eq" />
+    <engine:VisualElement name="Root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.84); flex-direction: row;">
+        <engine:VisualElement name="InfosTab" style="flex-grow: 1; width: 80%;">
+            <engine:VisualElement name="Elemental" style="flex-grow: 1; position: absolute; right: 0; height: 200px; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/StylesIcons.png?fileID=-1608555847&amp;guid=2491355e02ca6a44d971af47f7f71cff&amp;type=3#StylesIcons_3&quot;); width: 200px; margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            <engine:VisualElement name="Stats" style="flex-grow: 1; height: 30%;" />
+            <engine:VisualElement name="Gold" style="flex-grow: 1; width: 100%; height: 15%; flex-direction: row; padding-top: 40px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px;">
+                <engine:VisualElement name="GoldIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/GoldIcon.png?fileID=1926298015179057345&amp;guid=1a35b340979d4af468000006bdae5679&amp;type=3#GoldIcon_0&quot;); width: 80px; height: 80px; position: absolute;" />
+                <engine:Label text="393G" name="GoldTitle" style="width: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 150px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; color: rgb(251, 255, 191); -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 64px; -unity-text-align: middle-left;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="MissionInfo" style="flex-grow: 1; height: 55%;">
+                <engine:VisualElement name="MissionInfoHeader" style="flex-grow: 1; width: 100%; height: 30%; flex-direction: row; padding-top: 40px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px;">
+                    <engine:VisualElement name="MissionInfoHeaderIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/InfoIcon.aseprite?fileID=2829440121379423748&amp;guid=8343cc9f84c059d4e8efb1ff35eb90f7&amp;type=3#InfoIcon&quot;); width: 100px; height: 100px; position: absolute;" />
+                    <engine:Label text="Placeholder title" name="MissionInfoHeaderTitle" style="width: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 150px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; color: rgb(215, 253, 255); -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 100px;" />
+                </engine:VisualElement>
+                <engine:Label text="Placeholder description" name="MissionInfoDescription" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; height: 70%; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); color: rgb(223, 247, 255); font-size: 48px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="ItemsTab" style="flex-grow: 1; width: 20%; padding-top: 64px; padding-right: 64px; padding-bottom: 64px; padding-left: 64px;">
+            <engine:VisualElement name="item1" class="itemFrame" style="flex-grow: 1;" />
+            <engine:VisualElement name="item2" class="itemFrame" style="flex-grow: 1;">
+                <engine:VisualElement name="LockIcon4" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="item3" class="itemFrame" style="flex-grow: 1;">
+                <engine:VisualElement name="LockIcon4" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="item4" class="itemFrame" style="flex-grow: 1;">
+                <engine:VisualElement name="LockIcon4" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
 </engine:UXML>

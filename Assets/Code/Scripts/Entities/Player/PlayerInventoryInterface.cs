@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInventory : MonoBehaviour
+public class PlayerInventoryInterface : MonoBehaviour
 {
     public bool isEquipmentShown = false;
     public bool isPlayerPickingItem = false;

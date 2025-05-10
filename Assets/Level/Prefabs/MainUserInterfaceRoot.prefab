@@ -546,7 +546,7 @@ MonoBehaviour:
     ShowsOnTopOfMainUi: 0
     ShowCursor: 1
   - interfaceRoot: {fileID: 172582124041883943}
-    KeyboardTrigger: 9
+    KeyboardTrigger: 0
     ControlerTrigger: 12
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0

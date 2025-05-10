@@ -9,7 +9,7 @@ public class VoodooDollAbilities : ItemData.IItemAbility
     private float effectDuration;
     private float needleStacks;
     private EntityStatus playerStatus;
-    private PlayerInventory playerInventory;
+    private PlayerInventoryInterface playerInventory;
     private float lastNoticedPlayerHp;
 
     public void Initialize(float damageIncreasePercentage, float effectDuration)
@@ -48,7 +48,7 @@ public class VoodooDollAbilities : ItemData.IItemAbility
 
         if (playerInventory == null)
         {
-            playerInventory = GameObject.FindWithTag("Player").gameObject.GetComponent<PlayerInventory>();
+            playerInventory = GameObject.FindWithTag("Player").gameObject.GetComponent<PlayerInventoryInterface>();
         }
 
         if (lastNoticedPlayerHp == 0 && playerStatus != null)

@@ -44,7 +44,6 @@ public class WanderingEnemy : MonoBehaviour
 
     
     private LayerMask obstacleLayer;
-    private float jumpCooldown = 1f;
     private float lastJumpTime;
     
     private GameObject player;

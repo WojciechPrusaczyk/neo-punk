@@ -11,7 +11,6 @@ public class HomelessManAi : MonoBehaviour
     private Transform appearanceTransform;
     private bool isWaving = false;
     private bool isAbleToTalk = false;
-    private bool isTalking = false;
     public GameObject tooltip;
 
     private DialogScript dialogInterface;
@@ -64,11 +63,11 @@ public class HomelessManAi : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         isAbleToTalk = Vector3.Distance(transform.position, player.transform.position) <= interactionRange;
 
-        tooltip.active = isAbleToTalk;
+        tooltip.SetActive(isAbleToTalk);
 
         if (isAbleToTalk && Input.GetKeyDown(InputManager.InteractKey))
         {
-            tooltip.active = false;
+            tooltip.SetActive(false);
 
             EnterDialog();
         }
@@ -90,7 +89,7 @@ public class HomelessManAi : MonoBehaviour
 
     private void EnterDialog()
     {
-        tooltip.active = false;
+        tooltip.SetActive(false);
         animator.SetTrigger("stopWaving");
 
         if (!_EventsFlagsSystem.IsEventDone("homelessManFirstInteraction"))

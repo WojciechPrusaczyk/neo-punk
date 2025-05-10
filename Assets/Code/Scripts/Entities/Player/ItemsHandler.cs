@@ -10,7 +10,7 @@ public class ItemsHandler : MonoBehaviour
     public List<ItemData> items = new List<ItemData>();
     private GameObject MainUi;
     private List<TextMeshProUGUI> itemsCooldowns = new List<TextMeshProUGUI>();
-    private PlayerInventory playerInventory;
+    private PlayerInventoryInterface playerInventory;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class ItemsHandler : MonoBehaviour
             items.Add(null); // Puste sloty na przedmioty
         }
 
-        MainUi = GameObject.Find("Main User Interface");
+        MainUi = GameObject.Find("MainUserInterfaceRoot");
         GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
 
         for (int i = 0; i < 4; i++)
@@ -31,7 +31,7 @@ public class ItemsHandler : MonoBehaviour
             itemsCooldowns.Add(itemCooldownTextComponent);
         }
 
-        playerInventory = GetComponent<PlayerInventory>();
+        playerInventory = GetComponent<PlayerInventoryInterface>();
     }
 
     private void Update()
