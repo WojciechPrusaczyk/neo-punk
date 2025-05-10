@@ -1336,6 +1336,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: attackSerie
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f50e8ced0971084fae8f69e3ccbbeab, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: musicVolume
       value: 0.364
       objectReference: {fileID: 0}
@@ -1364,6 +1368,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: dragonflyDeathSFX.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: 'playerBlockSFX.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 566654f40c181f644ba1b55b27766cea, type: 3}
@@ -1371,6 +1379,10 @@ PrefabInstance:
       propertyPath: 'playerParrySFX.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: 5d06b996c40f6d1409fd7d5c5d22fcbc, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: dragonflyAttackSFX.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: 'playerAttackSFX.Array.data[0]'
       value: 
@@ -1383,6 +1395,26 @@ PrefabInstance:
       propertyPath: 'playerAttackSFX.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: 566654f40c181f644ba1b55b27766cea, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'dragonflyDeathSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e5c9d5520feb4d143bb7bc4284bceb67, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'dragonflyDeathSFX.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: af4a2e3b02685fc47ba56bad4e89159e, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'dragonflyAttackSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cb9df755c2f92ce49aa7cc9713a9919b, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'dragonflyAttackSFX.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bda94d6c4b7afd4085aa8fac3064a18, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: 'dragonflyAttackSFX.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d3e2393d2c58993448532e9d32045067, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using static Enums;
 
 public class UserInterfaceController : MonoBehaviour
 {
@@ -74,8 +75,9 @@ public class UserInterfaceController : MonoBehaviour
 
                 Cursor.visible = interfaceObject.ShowCursor;
                 Time.timeScale = interfaceObject.FreezeGame?0:1;
+                WorldSoundFXManager.instance.gameState = interfaceObject.FreezeGame ? GameState.Paused : GameState.Unpaused;
                 if (MusicManager.instance != null)
-                    MusicManager.instance.PauseCurrentSong(interfaceObject.FreezeGame);
+                    MusicManager.instance.ApplyLowPassFilter(interfaceObject.FreezeGame);
             }
         }
         interfaceToActivate.SetActive(!interfaceToActivate.activeSelf);

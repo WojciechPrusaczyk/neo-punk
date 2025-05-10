@@ -65,7 +65,30 @@ public class Dragonfly : MonoBehaviour
             _entityBody.transform.Rotate(new Vector3(0f, 180f, 0f));
         }
     }
-    
+
+    public void PlayDragonflySFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)
+    {
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.PlaySoundFX(audioClip, soundType, randomPitch * pitchMultiplier);
+    }
+    public void PlayDragonflySFXArray(AudioClip[] audioArray, Enums.SoundType soundType, float pitchMultiplier = 1f)
+    {
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, soundType, randomPitch * pitchMultiplier);
+    }
+
     public void Attack()
     {
         if (_enemyAI.canAttack && !isAttacking)
@@ -79,6 +102,9 @@ public class Dragonfly : MonoBehaviour
     public void PerformShoot()
     {
         // Oblicz wektor kierunku od punktu strzału do pozycji gracza
+        if (_entityStatus.detectedTargets.Count == 0)
+            return;
+
         Vector3 shootDirection = (_entityStatus.detectedTargets[0].transform.position - bulletSpawn.position).normalized;
 
         // Utwórz nowy pocisk z prefabrykatu, oraz wprowadź do niego dane o strzelcu
@@ -88,6 +114,9 @@ public class Dragonfly : MonoBehaviour
         {
             bulletBehaviour.SetShooter(gameObject); // Przekazanie referencji na obiekt, który wystrzelił kulę
         }
+
+        // Odtwórz dźwięk strzału
+        PlayDragonflySFXArray(WorldSoundFXManager.instance.dragonflyAttackSFX, Enums.SoundType.SFX);
 
         // Ustaw prędkość pocisku w kierunku gracza
         Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();

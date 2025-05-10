@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Enums;
 
 public class WorldSoundFXManager : MonoBehaviour
 {
     [HideInInspector] public static WorldSoundFXManager instance;
+    [HideInInspector] public GameState gameState = GameState.Unpaused;
 
     [Header("Game SFX Volume Settings")]
     [Range(0.0f, 1.0f)]
@@ -15,7 +17,6 @@ public class WorldSoundFXManager : MonoBehaviour
     public float musicVolume = .5f;
     [Range(0.0f, 1.0f)]
     public float dialogueVolume = .5f;
-
 
     [Header("Player Sounds")]
     public AudioClip playerJumpSFX;
@@ -28,6 +29,11 @@ public class WorldSoundFXManager : MonoBehaviour
     public AudioClip[] ShDogAttackSFX;
     public AudioClip[] ShDogDeathSFX;
     public AudioClip[] ShDogWhineSFX;
+
+    [Header("Dragonfly")]
+    public AudioClip[] dragonflyAttackSFX;
+    public AudioClip attackSerie;
+    public AudioClip[] dragonflyDeathSFX;
 
 
     private void Awake()

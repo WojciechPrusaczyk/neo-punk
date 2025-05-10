@@ -200,7 +200,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void PauseCurrentSong(bool applyFilter) // Changed parameter name for clarity
+    public void ApplyLowPassFilter(bool applyFilter) // Changed parameter name for clarity
     {
         if (_lowPassFilter == null)
         {

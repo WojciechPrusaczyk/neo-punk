@@ -128,13 +128,23 @@ public class Player : MonoBehaviour
 
     public void PlayPlayerSFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)
     {
-        if (WorldSoundFXManager.instance == null) return;
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
         float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
         WorldSoundFXManager.instance.PlaySoundFX(audioClip, soundType, randomPitch * pitchMultiplier);
     }
     public void PlayPlayerSFXArray(AudioClip[] audioArray, Enums.SoundType soundType, float pitchMultiplier = 1f)
     {
-        if (WorldSoundFXManager.instance == null) return;
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
         float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
         WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, soundType, randomPitch * pitchMultiplier);
     }

@@ -18,4 +18,10 @@ public class Enums : MonoBehaviour
         CharacterSlot2,
         CharacterSlot3
     }
+
+    public enum GameState
+    {
+        Paused,
+        Unpaused
+    }
 }
