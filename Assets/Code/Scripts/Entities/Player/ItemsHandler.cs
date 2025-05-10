@@ -15,54 +15,54 @@ public class ItemsHandler : MonoBehaviour
     private void Start()
     {
         // Ustawianie pustych przedmiotów na starcie gry
-        for (int i = 0; i < 4; i++)
-        {
-            items.Add(null); // Puste sloty na przedmioty
-        }
-
-        MainUi = GameObject.Find("MainUserInterfaceRoot");
-        GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
-
-        for (int i = 0; i < 4; i++)
-        {
-            GameObject itemCooldownObject = itemsCooldownsParent.transform.GetChild(i).gameObject;
-            TextMeshProUGUI itemCooldownTextComponent = itemCooldownObject.GetComponent<TextMeshProUGUI>();
-
-            itemsCooldowns.Add(itemCooldownTextComponent);
-        }
-
-        playerInventory = GetComponent<PlayerInventoryInterface>();
+        // for (int i = 0; i < 4; i++)
+        // {
+        //     items.Add(null); // Puste sloty na przedmioty
+        // }
+        //
+        // MainUi = GameObject.Find("MainUserInterfaceRoot");
+        // GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
+        //
+        // for (int i = 0; i < 4; i++)
+        // {
+        //     GameObject itemCooldownObject = itemsCooldownsParent.transform.GetChild(i).gameObject;
+        //     TextMeshProUGUI itemCooldownTextComponent = itemCooldownObject.GetComponent<TextMeshProUGUI>();
+        //
+        //     itemsCooldowns.Add(itemCooldownTextComponent);
+        // }
+        //
+        // playerInventory = GetComponent<PlayerInventoryInterface>();
     }
 
     private void Update()
     {
-        if (null != items[0])
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) UseItem(0);
-            UsePassive(0);
-            UpdateCooldownTimer(0);
-        }
-
-        if (null != items[1])
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha2)) UseItem(1);
-            UsePassive(1);
-            UpdateCooldownTimer(1);
-        }
-
-        if (null != items[2])
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha3)) UseItem(2);
-            UsePassive(2);
-            UpdateCooldownTimer(2);
-        }
-
-        if (null != items[3])
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha4)) UseItem(3);
-            UsePassive(3);
-            UpdateCooldownTimer(3);
-        }
+        // if (null != items[0])
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Alpha1)) UseItem(0);
+        //     UsePassive(0);
+        //     UpdateCooldownTimer(0);
+        // }
+        //
+        // if (null != items[1])
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Alpha2)) UseItem(1);
+        //     UsePassive(1);
+        //     UpdateCooldownTimer(1);
+        // }
+        //
+        // if (null != items[2])
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Alpha3)) UseItem(2);
+        //     UsePassive(2);
+        //     UpdateCooldownTimer(2);
+        // }
+        //
+        // if (null != items[3])
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Alpha4)) UseItem(3);
+        //     UsePassive(3);
+        //     UpdateCooldownTimer(3);
+        // }
     }
 
     public void AddItem(ItemData itemData, GameObject objectToDelete)

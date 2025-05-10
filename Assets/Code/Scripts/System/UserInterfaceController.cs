@@ -59,29 +59,43 @@ public class UserInterfaceController : MonoBehaviour
             Debug.LogError("Provided argument to UserInterfaceController.ActivateInterface is null.");
             return;
         }
+
+        // Najpierw wyłącz wszystkie inne
         foreach (var interfaceObject in Interfaces)
         {
-            if (interfaceObject.interfaceRoot.activeSelf)
+            if (interfaceObject.interfaceRoot == null)
             {
-                interfaceObject.interfaceRoot.SetActive(false);
+                Debug.LogError("interfaceRoot is null in Interfaces list.");
+                continue;
             }
 
+            if (interfaceObject.interfaceRoot != interfaceToActivate)
+                interfaceObject.interfaceRoot.SetActive(false);
+        }
+
+        // Znajdź konfigurację interfejsu, który aktywujemy
+        foreach (var interfaceObject in Interfaces)
+        {
             if (interfaceObject.interfaceRoot == interfaceToActivate)
             {
-                if (Interfaces.Count > 0 && interfaceObject.ShowsOnTopOfMainUi)
-                {
+                if (interfaceObject.ShowsOnTopOfMainUi && Interfaces.Count > 0 && Interfaces[0].interfaceRoot != null)
                     Interfaces[0].interfaceRoot.SetActive(true);
-                }
 
                 Cursor.visible = interfaceObject.ShowCursor;
-                Time.timeScale = interfaceObject.FreezeGame?0:1;
-                WorldSoundFXManager.instance.gameState = interfaceObject.FreezeGame ? GameState.Paused : GameState.Unpaused;
+                Time.timeScale = interfaceObject.FreezeGame ? 0 : 1;
+
+                if (WorldSoundFXManager.instance != null)
+                    WorldSoundFXManager.instance.gameState = interfaceObject.FreezeGame ? GameState.Paused : GameState.Unpaused;
+
                 if (MusicManager.instance != null)
                     MusicManager.instance.ApplyLowPassFilter(interfaceObject.FreezeGame);
+
+                interfaceObject.interfaceRoot.SetActive(true);
+                break;
             }
         }
-        interfaceToActivate.SetActive(!interfaceToActivate.activeSelf);
     }
+
 
     public void ActivateInterface(int interfaceToActivateIndex)
     {

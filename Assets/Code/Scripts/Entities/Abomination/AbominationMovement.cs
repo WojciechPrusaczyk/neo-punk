@@ -16,6 +16,13 @@ public class AbominationMovement : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        /*
+         * For debugging only
+         */
+        var abominationStatus = gameObject.transform.parent.GetComponent<EntityStatus>();
+        var mainUi = GameObject.Find("MainUserInterface").GetComponent<MainUserInterfaceController>();
+        mainUi.ShowBossBar(abominationStatus);
     }
 
     private void OnEnable()
