@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a07b76eaa60eb4284f73d21d6b7969, type: 3}
+  m_Name: VoodooDoll
+  m_EditorClassIdentifier: 
+  itemName: Voodoo Doll
+  passiveDescription: Increases player attack by 40% for 10 seconds.
+  activeDescription: Gives 40% more damage on use, but if you get hit, doll gets
+    a needle stack. If you get hit when Doll have 3 stacks you will die.
+  cooldown: 30
+  currentCooldown: 0
+  rarity: Quantum
+  minPlayerLvl: 0
+  itemIcon: {fileID: -1157526811490653065, guid: e5007a88337b908459f28f21a9fd8454, type: 3}
+  defenceIncreasePercentage: 0.4
+  effectDuration: 10
+  itemIconOneStack: {fileID: 7091464446651120133, guid: e5007a88337b908459f28f21a9fd8454, type: 3}
+  itemIconTwoStacks: {fileID: 2098398847577043079, guid: e5007a88337b908459f28f21a9fd8454, type: 3}
+  itemIconThreeStacks: {fileID: 7224004626849732519, guid: e5007a88337b908459f28f21a9fd8454, type: 3}

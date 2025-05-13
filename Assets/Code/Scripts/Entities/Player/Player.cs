@@ -650,7 +650,8 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(startPosition, dashDirection, dashDistance, obstacleLayer);
         Vector2 targetPosition = (hit.collider != null) ? hit.point - dashDirection * 0.1f : startPosition + (dashDirection * dashDistance);
 
-        WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.Dialogue);
+        if (WorldSoundFXManager.instance)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.Dialogue);
 
         transform.position = targetPosition;
         _lastDashTime = Time.time;

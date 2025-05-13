@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Scripts\UserInterface\MainUserInterfaceController.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\FootStepsManager.cs" />
+    <Compile Include="Assets\Code\Scripts\Items\PlayerInventoryInterface.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\MenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\Save Game\SaveFileDataWriter.cs" />
     <Compile Include="Assets\Code\Scripts\System\Timer.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Assets\Code\Scripts\System\MusicManager.cs" />
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDoll.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Player\HealthBarController.cs" />
+    <Compile Include="Assets\Code\Scripts\Items\ItemsHandler.cs" />
     <Compile Include="Assets\Code\Scripts\System\CustomTags.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Abomination\ArenaCollider.cs" />
     <Compile Include="Assets\Code\Scripts\System\InvasionTrial\Flame.cs" />
@@ -73,7 +75,6 @@
     <Compile Include="Assets\Code\Scripts\Objects\ComputerController.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\ComputerInterfaceController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\SettingsMenuController.cs" />
-    <Compile Include="Assets\Code\Scripts\Entities\Player\ItemsHandler.cs" />
     <Compile Include="Assets\Code\Scripts\System\Enemy.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\AnimationEventShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Save Game\SettingsSaveData.cs" />
@@ -103,7 +104,6 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\OptionsMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\System\WorldSoundFXManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\PlayerDetector.cs" />
-    <Compile Include="Assets\Code\Scripts\Entities\Player\PlayerInventoryInterface.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\VerticalDoorController.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiringAbilities.cs" />

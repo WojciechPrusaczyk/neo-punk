@@ -7,17 +7,23 @@ public class VoodooDollAbilities : ItemData.IItemAbility
 {
     private float damageIncreasePercentage;
     private float effectDuration;
-    private float needleStacks;
+    private int needleStacks;
     private EntityStatus playerStatus;
     private PlayerInventoryInterface playerInventory;
     private float lastNoticedPlayerHp;
+    public Sprite itemIconOneStack;
+    public Sprite itemIconTwoStacks;
+    public Sprite itemIconThreeStacks;
 
-    public void Initialize(float damageIncreasePercentage, float effectDuration)
+    public void Initialize(float damageIncreasePercentage, float effectDuration, Sprite _itemIconOneStack, Sprite _itemIconTwoStacks, Sprite _itemIconThreeStacks)
     {
         this.damageIncreasePercentage = damageIncreasePercentage;
         this.effectDuration = effectDuration;
         this.needleStacks = 0;
         this.lastNoticedPlayerHp = 0;
+        itemIconOneStack = _itemIconOneStack;
+        itemIconTwoStacks = _itemIconTwoStacks;
+        itemIconThreeStacks = _itemIconThreeStacks;
     }
 
     public void Use()
@@ -61,7 +67,14 @@ public class VoodooDollAbilities : ItemData.IItemAbility
             needleStacks += 1;
             lastNoticedPlayerHp = playerStatus.GetHp();
 
-            playerInventory.SetImageAtSlotByIndex("Items/VoodooDoll/VoodooDoll_" + needleStacks.ToString(), "Voodoo Doll");
+            if (needleStacks == 1)
+                playerInventory.SetImageAtSlotByIndex(itemIconOneStack, "Voodoo Doll");
+
+            else if (needleStacks == 2)
+                playerInventory.SetImageAtSlotByIndex(itemIconTwoStacks, "Voodoo Doll");
+
+            else if (needleStacks == 3)
+                playerInventory.SetImageAtSlotByIndex(itemIconThreeStacks, "Voodoo Doll");
 
             if (needleStacks > 3)
             {

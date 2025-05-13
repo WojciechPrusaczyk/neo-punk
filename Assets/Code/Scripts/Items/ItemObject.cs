@@ -35,15 +35,16 @@ public class ItemObject : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Light2D light2D;
     private ParticleSystem itemParticles;
-    private ParticleSystem dropAnimation;
+    private GameObject tooltip;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         light2D = GetComponentInParent<Light2D>();
-        itemParticles = gameObject.transform.parent.Find("Particles").GetComponentInChildren<ParticleSystem>();
-        dropAnimation = gameObject.transform.parent.Find("DropAnimation").GetComponentInChildren<ParticleSystem>();
+        itemParticles = GetComponentInChildren<ParticleSystem>();
+        ScriptableObjectManager = GameObject.Find("ScriptableObjectManager");
         itemData = ScriptableObjectManager.GetComponent<ScriptableObjectManager>().GetItemData(ItemId);
+        tooltip = gameObject.transform.parent.transform.Find("Tooltip").gameObject;
 
         if (itemData != null)
         {
@@ -54,46 +55,56 @@ public class ItemObject : MonoBehaviour
         {
             Debug.LogError("ItemData is not assigned!");
         }
+
+        if (tooltip) tooltip.gameObject.SetActive(false);
     }
 
     private void UpdateItemLightColor()
     {
         var main = itemParticles.main;
-        var dropAnimMain = dropAnimation.main;
         switch (itemData.rarity)
         {
             case "Common":
                 light2D.color = CommonColor;
                 main.startColor = CommonColor;
-                dropAnimMain.startColor = CommonColor;
                 break;
             case "Rare":
                 light2D.color = RareColor;
                 main.startColor = RareColor;
-                dropAnimMain.startColor = RareColor;
                 break;
             case "Quantum":
                 light2D.color = QuantumColor;
                 main.startColor = QuantumColor;
-                dropAnimMain.startColor = QuantumColor;
                 break;
             default:
                 light2D.color = CommonColor;
                 main.startColor = CommonColor;
-                dropAnimMain.startColor = CommonColor;
                 break;
         }
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && Input.GetKey(InputManager.InteractKey))
+        if (col.CompareTag("Player"))
         {
-            ItemsHandler itemsHandler = col.GetComponent<ItemsHandler>();
-            if (itemsHandler != null && itemData != null)
+            tooltip.gameObject.SetActive(true);
+
+            if (Input.GetKey(InputManager.InteractKey))
             {
-                StartCoroutine(WaitForFrameThenAddItem(itemsHandler));
+                ItemsHandler itemsHandler = col.GetComponent<ItemsHandler>();
+                if (itemsHandler != null && itemData != null)
+                {
+                    StartCoroutine(WaitForFrameThenAddItem(itemsHandler));
+                }
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            tooltip.gameObject.SetActive(false);
         }
     }
 

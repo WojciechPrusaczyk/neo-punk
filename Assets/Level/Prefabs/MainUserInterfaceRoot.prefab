@@ -108,8 +108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 45, y: -449}
-  m_SizeDelta: {x: 330, y: 78}
+  m_AnchoredPosition: {x: 45, y: -435}
+  m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &623856892992380721
 CanvasRenderer:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 758880031902828907, guid: 5e2dd236118146b4692317881c75e0a2, type: 3}
+  m_Sprite: {fileID: 5611916012022775882, guid: c670414e1b7cd5442a51daa5a3327c2e, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -159,6 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2363052195175013140}
   - component: {fileID: 8920302305571918976}
+  - component: {fileID: 1830489117826519402}
   m_Layer: 0
   m_Name: EquipmentInterface
   m_TagString: Untagged
@@ -201,6 +202,30 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: b542bb1d1379946478a8501f8e6f27f6, type: 3}
   m_SortingOrder: 0
+--- !u!114 &1830489117826519402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3790645692831317544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103b97972ecf71540917d511b8e3495c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEquipmentShown: 0
+  isPlayerPickingItem: 0
+  isInspectingItems: 0
+  selectedItemIndex: 0
+  unlockedSlots: 1
+  fieldImage: {fileID: 0}
+  selectedFieldImage: {fileID: 0}
+  secondaryEqColor: {r: 0, g: 0, b: 0, a: 0}
+  secondaryItemsListColor: {r: 0, g: 0, b: 0, a: 0}
+  selectedItemDesc: {fileID: 0}
+  incomingItemInfo: {fileID: 0}
+  isPickingItem: 0
 --- !u!1 &4092045863778714653
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -710, y: -449}
+  m_AnchoredPosition: {x: -710, y: -319}
   m_SizeDelta: {x: 330, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6478718938135106728

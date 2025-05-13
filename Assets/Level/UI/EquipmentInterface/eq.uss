@@ -5,7 +5,7 @@
     background-image: url("project://database/Assets/Art/UserInterface/Icons/Frame.png?fileID=2800000&guid=00c3f7df4a182b44db69abea2d3f8906&type=3#Frame");
 }
 
-.lockIcon {
+.lockedSlot .lockIcon {
     width: 100%;
     height: 100%;
     background-image: url("project://database/Assets/Art/UserInterface/Icons/LockIcon.png?fileID=2800000&guid=42c4f0716b90dae428bf8236c1667de2&type=3#LockIcon");

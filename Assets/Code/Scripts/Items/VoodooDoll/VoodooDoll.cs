@@ -7,6 +7,9 @@ public class VoodooDoll : ItemData
 {
     public float defenceIncreasePercentage = 0.4f;
     public float effectDuration = 10.0f;
+    public Sprite itemIconOneStack;
+    public Sprite itemIconTwoStacks;
+    public Sprite itemIconThreeStacks;
     private void OnEnable()
     {
         currentCooldown = 0;
@@ -17,7 +20,7 @@ public class VoodooDoll : ItemData
     {
         currentCooldown = 0;
         VoodooDollAbilities abilities = new VoodooDollAbilities();
-        abilities.Initialize(defenceIncreasePercentage, effectDuration);
+        abilities.Initialize(defenceIncreasePercentage, effectDuration, itemIconOneStack, itemIconTwoStacks, itemIconThreeStacks);
         itemAbility = abilities;
 
         itemName = "Voodoo Doll";

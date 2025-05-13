@@ -445,7 +445,7 @@ MonoBehaviour:
   ElementalTypes: []
   UsedElementalTypeId: 0
   UsedElementalName: Normal
-  jumpForce: 9
+  jumpForce: 8
   animator: {fileID: 0}
   attackState: 0
   isAttacking: 0
