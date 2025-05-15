@@ -10,3 +10,26 @@
     height: 100%;
     background-image: url("project://database/Assets/Art/UserInterface/Icons/LockIcon.png?fileID=2800000&guid=42c4f0716b90dae428bf8236c1667de2&type=3#LockIcon");
 }
+
+.inspectorShown #InfosTab {
+    display: none;
+}
+
+#ItemsInfo {
+    display: none;
+}
+
+.inspectorShown #ItemsInfo {
+    display: flex;
+    width: 73%
+}
+
+#ItemsTab {
+    width: 20%;
+    padding: 64px;
+}
+
+.inspectorShown #ItemsTab {
+    width: 27%;
+    padding: 64px 64px 64px 198px;
+}

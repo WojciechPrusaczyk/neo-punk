@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,19 +13,22 @@ public class PlayerInventoryInterface : MonoBehaviour
     public bool isPlayerPickingItem = false;
     public bool isInspectingItems = false;
     public int selectedItemIndex = 0;
-    [Range(0, 3)] public int unlockedSlots = 1;
+
+    [Header("Index of equipment inventory in mainUi")]
+    public int interfaceIndex = 3;
+
+    [Range(1, 4)] public int unlockedSlots = 2;
     public Sprite fieldImage;
     public Sprite selectedFieldImage;
     public Color secondaryEqColor;
     public Color secondaryItemsListColor;
 
     private GameObject MainUi;
-    private GameObject InventoryUi;
+    private UserInterfaceController userInterfaceController;
+    private VisualElement rootVisualElement;
     private GameObject fields;
-    public GameObject selectedItemDesc;
     public GameObject incomingItemInfo;
     private GameObject arrowTooltip;
-    private GameObject buttonTooltip;
     private ItemsHandler itemsHandler;
     private EntityStatus playerStatus;
     private float ItemsListInitialWidth;
@@ -43,12 +47,11 @@ public class PlayerInventoryInterface : MonoBehaviour
 
     public void Start()
     {
-        // MainUi = GameObject.Find("Main User Interface");
-        // InventoryUi = GameObject.Find("Equipment Interface");
+        MainUi = GameObject.Find("MainUserInterfaceRoot");
+        userInterfaceController = MainUi.GetComponent<UserInterfaceController>();
         // selectedItemDesc = InventoryUi.transform.Find("SelectedItemInfo").gameObject;
         // incomingItemInfo = InventoryUi.transform.Find("IncomingItemInfo").gameObject;
         // arrowTooltip = InventoryUi.transform.Find("ArrowTooltip").gameObject;
-        // buttonTooltip = InventoryUi.transform.Find("ButtonTooltip").gameObject;
         // fields = InventoryUi.transform.Find("ItemsFields").gameObject;
         // itemsHandler = gameObject.GetComponent<ItemsHandler>();
         // playerStatus = gameObject.GetComponent<EntityStatus>();
@@ -77,6 +80,7 @@ public class PlayerInventoryInterface : MonoBehaviour
         }
 
         // Zbieramy sloty itemów item1–item4
+        _itemSlots = new List<VisualElement>();
         for (int i = 1; i <= 4; i++)
         {
             var itemSlot = root.Q<VisualElement>($"item{i}");
@@ -85,39 +89,24 @@ public class PlayerInventoryInterface : MonoBehaviour
                 _itemSlots.Add(itemSlot);
             }
         }
-
         /*
-         * Przyciski menu
+         * Elementy UI
          */
-        // hpLabel = root.Q<Label>("HpText");
-        // bossBarRoot = root.Q<VisualElement>("BossBarRoot");
-        // bossBar = root.Q<Label>("BossBarLabel");
-        // bossName = root.Q<Label>("BossBarName");
+        rootVisualElement = root.Q<VisualElement>("Root");
+
+        SetUnlockedSlotsCount(unlockedSlots);
+
+        if (isPlayerPickingItem) ShowItemInspector();
     }
 
     void Update()
     {
-        for (int i = 0; i < _itemSlots.Count; i++)
+
+        if (Input.GetKeyDown(KeyCode.Escape) && isEquipmentShown)
         {
-            if (i <= unlockedSlots)
-            {
-                _itemSlots[i].RemoveFromClassList("lockedSlot");
-            }
-            else
-            {
-                _itemSlots[i].AddToClassList("lockedSlot");
-            }
+            HideEquipment();
         }
 
-        // if (Input.GetKeyDown(InputManager.InventoryMenuKey) && !isEquipmentShown)
-        // {
-        //     ShowEquipment();
-        // }
-        // else if ((Input.GetKeyDown(InputManager.InventoryMenuKey) || Input.GetKeyDown(KeyCode.Escape)) &&
-        //          isEquipmentShown)
-        // {
-        //     HideEquipment();
-        // }
         //
         // if (isEquipmentShown)
         // {
@@ -160,34 +149,47 @@ public class PlayerInventoryInterface : MonoBehaviour
         // }
     }
 
+    private void SetUnlockedSlotsCount(int unlockedSlotsCount)
+    {
+        foreach (var item in _itemSlots.Select((slot, i) => new { i, slot }))
+        {
+            if (item.i < unlockedSlotsCount)
+                item.slot.RemoveFromClassList("lockedSlot");
+            else
+                item.slot.AddToClassList("lockedSlot");
+        }
+    }
+
     /*
      * Metoda pokazująca ekwipunek
      */
     public void ShowEquipment()
     {
-        InventoryUi.transform.Find("Gold").gameObject.SetActive(true);
-        InventoryUi.transform.Find("Health").gameObject.SetActive(true);
-        InventoryUi.transform.Find("Experience").gameObject.SetActive(true);
-        InventoryUi.transform.Find("ArrowTooltip").gameObject.SetActive(false);
-        InventoryUi.transform.Find("ButtonTooltip").gameObject.SetActive(true);
+        userInterfaceController.ActivateInterface(interfaceIndex);
+        gameObject.SetActive(true);
 
         isEquipmentShown = true;
         isInspectingItems = false;
         isPlayerPickingItem = false;
-        Time.timeScale = 0;
         selectedItemIndex = 0;
-        //UpdateEquipmentFrames();
-        MainUi.SetActive(false);
-        InventoryUi.SetActive(true);
-        selectedItemDesc.SetActive(false);
-        incomingItemInfo.SetActive(false);
-        arrowTooltip.SetActive(false);
-        buttonTooltip.SetActive(true);
+    }
 
-        UpdateHp();
-        UpdateGold();
-        UpdateElemental();
-        UpdateExperience();
+    /*
+     * Metoda ukrywająca ekwipunek
+     */
+    public void HideEquipment()
+    {
+        ResetItemsFields();
+        HideItemInspector();
+
+        userInterfaceController.ActivateInterface(0);
+        gameObject.active = false;
+        rootVisualElement.RemoveFromClassList("inspectorShown");
+
+        isEquipmentShown = false;
+        isInspectingItems = false;
+        isPlayerPickingItem = false;
+        selectedItemIndex = 0;
     }
 
     /*
@@ -195,200 +197,102 @@ public class PlayerInventoryInterface : MonoBehaviour
      */
     public void PickupItem(ItemData itemData)
     {
-        InventoryUi.transform.Find("Gold").gameObject.SetActive(false);
-        InventoryUi.transform.Find("Health").gameObject.SetActive(false);
-        InventoryUi.transform.Find("Experience").gameObject.SetActive(false);
-        InventoryUi.transform.Find("ArrowTooltip").gameObject.SetActive(true);
-        InventoryUi.transform.Find("ButtonTooltip").gameObject.SetActive(false);
-
-        ShowItemInspector();
+        isPickingItem = true;
         SetItemInfo(itemData, incomingItemInfo);
         incomingItemInfo.SetActive(true);
-        isPickingItem = true;
     }
 
     public void EndPickingItem()
     {
-        InventoryUi.transform.Find("Experience").gameObject.SetActive(false);
+        // InventoryUi.transform.Find("Experience").gameObject.SetActive(false);
         HideItemInspector();
         incomingItemInfo.SetActive(false);
         isPickingItem = false;
     }
 
-    /*
-     * Metoda pokazująca ekwipunek
-     */
-    public void HideEquipment()
-    {
-        ResetItemsFields();
-        HideItemInspector();
-
-        isEquipmentShown = false;
-        Time.timeScale = 1;
-        MainUi.SetActive(true);
-        InventoryUi.SetActive(false);
-    }
-
     private void ShowItemInspector()
     {
         isInspectingItems = true;
-        buttonTooltip.SetActive(false);
 
-        // zmiana stanu menu z Inventory na InspectingItem
-        selectedItemDesc.SetActive(false);
-        InventoryUi.transform.Find("MissionInfo").gameObject.SetActive(false);
-        InventoryUi.transform.Find("Elemental").gameObject.SetActive(false);
+        // Przełączanie trybu UI
+        rootVisualElement.AddToClassList("inspectorShown");
+
+        // InventoryUi.transform.Find("MissionInfo").gameObject.SetActive(false);
+        // InventoryUi.transform.Find("Elemental").gameObject.SetActive(false);
 
         // wydłużenie width pasku itemów
-        RectTransform rectTransform = InventoryUi.transform.Find("ItemsFields").GetComponent<RectTransform>();
-        Vector2 offsetMin = rectTransform.offsetMin;
-        offsetMin.x = ItemsListInitialWidth - 300.0f; // Ustawienie wartości 'left' na 50
-        rectTransform.offsetMin = offsetMin;
+        // RectTransform rectTransform = InventoryUi.transform.Find("ItemsFields").GetComponent<RectTransform>();
+        // Vector2 offsetMin = rectTransform.offsetMin;
+        // offsetMin.x = ItemsListInitialWidth - 300.0f; // Ustawienie wartości 'left' na 50
+        // rectTransform.offsetMin = offsetMin;
 
         // zamiana tła menu z listą itemów
-        InventoryUi.GetComponent<RawImage>().texture = rawImage2;
-        InventoryUi.GetComponent<RawImage>().color = secondaryEqColor;
+        // InventoryUi.GetComponent<RawImage>().texture = rawImage2;
+        // InventoryUi.GetComponent<RawImage>().color = secondaryEqColor;
 
-        InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().texture = rawImage1;
-        InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color = secondaryItemsListColor;
+        // InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().texture = rawImage1;
+        // InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color = secondaryItemsListColor;
 
-        UpdateEquipmentFrames();
+        // UpdateEquipmentFrames();
     }
 
     private void HideItemInspector()
     {
         isInspectingItems = false;
-        buttonTooltip.SetActive(true);
 
-        // zmiana stanu menu z InspectingItem na Inventory
-        selectedItemDesc.SetActive(false);
-        InventoryUi.transform.Find("MissionInfo").gameObject.SetActive(true);
-        InventoryUi.transform.Find("Elemental").gameObject.SetActive(true);
+        // Przełączanie trybu UI
+        rootVisualElement.RemoveFromClassList("inspectorShown");
+
+        // InventoryUi.transform.Find("MissionInfo").gameObject.SetActive(true);
+        // InventoryUi.transform.Find("Elemental").gameObject.SetActive(true);
 
         // skrócenie width pasku itemów
-        RectTransform rectTransform = InventoryUi.transform.Find("ItemsFields").GetComponent<RectTransform>();
-        Vector2 offsetMin = rectTransform.offsetMin;
-        offsetMin.x = ItemsListInitialWidth; // Ustawienie wartości 'left' na 50
-        rectTransform.offsetMin = offsetMin;
+        // RectTransform rectTransform = InventoryUi.transform.Find("ItemsFields").GetComponent<RectTransform>();
+        // Vector2 offsetMin = rectTransform.offsetMin;
+        // offsetMin.x = ItemsListInitialWidth; // Ustawienie wartości 'left' na 50
+        // rectTransform.offsetMin = offsetMin;
 
         // zamiana tła menu z listą itemów
-        InventoryUi.GetComponent<RawImage>().texture = rawImage1;
-        InventoryUi.GetComponent<RawImage>().color = primaryEqColor;
+        // InventoryUi.GetComponent<RawImage>().texture = rawImage1;
+        // InventoryUi.GetComponent<RawImage>().color = primaryEqColor;
 
-        InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().texture = rawImage2;
-        InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color = primaryItemsListColor;
+        // InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().texture = rawImage2;
+        // InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color = primaryItemsListColor;
 
         // Reset pól wyświetlających itemy
         ResetItemsFields();
         selectedItemIndex = 0;
     }
 
-    public void UpdateHp()
-    {
-        try
-        {
-            GameObject healthObject = InventoryUi.transform.Find("Health").gameObject;
-
-            if (healthObject)
-            {
-                GameObject healthPoints = healthObject.transform.Find("HP").gameObject;
-                GameObject maxHealth = healthObject.transform.Find("MaxHP").gameObject;
-
-                if (healthPoints && maxHealth)
-                {
-                    healthPoints.GetComponent<TextMeshProUGUI>().text = playerStatus.GetHp().ToString();
-                    maxHealth.GetComponent<TextMeshProUGUI>().text = " / " + playerStatus.GetMaxHp().ToString() + "HP";
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-
-    public void UpdateGold()
-    {
-        try
-        {
-            TextMeshProUGUI goldCount = InventoryUi.transform.Find("Gold").transform.Find("Count").gameObject
-                .GetComponent<TextMeshProUGUI>();
-
-            if (goldCount)
-            {
-                goldCount.text = playerStatus.GetGold().ToString() + " g";
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-
-    public void UpdateExperience()
-    {
-        try
-        {
-            GameObject experienceObject = InventoryUi.transform.Find("Experience").gameObject;
-
-            if (experienceObject)
-            {
-                GameObject level = experienceObject.transform.Find("Level").gameObject;
-                GameObject currentXp = experienceObject.transform.Find("Xp").transform.Find("CurrentXp").gameObject;
-                GameObject maxXp = experienceObject.transform.Find("Xp").transform.Find("MaxXp").gameObject;
-
-                if (level && currentXp && maxXp)
-                {
-                    level.GetComponent<TextMeshProUGUI>().text = playerStatus.GetLevel().ToString() + " lvl";
-                    currentXp.GetComponent<TextMeshProUGUI>().text = playerStatus.GetXp().ToString();
-                    maxXp.GetComponent<TextMeshProUGUI>().text =
-                        " / " + playerStatus.GetExpToNextLVl().ToString() + "xp";
-                }
-                else
-                {
-                    Debug.Log("Nie znaleziono elementu dziecka w Experience");
-                }
-            }
-            else
-            {
-                Debug.Log("Nie znaleziono Experience");
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-
     public void UpdateElemental()
     {
-        try
-        {
-            GameObject elementalParent = InventoryUi.transform.Find("Elemental").gameObject;
-
-            // szukanie elementu gracza
-            List<Player.ElementalType> elementals = gameObject.GetComponent<Player>().ElementalTypes;
-            int UsedElementalTypeId = gameObject.GetComponent<Player>().UsedElementalTypeId;
-
-            Player.ElementalType usedElemental = elementals[UsedElementalTypeId];
-
-            if (elementalParent && null != usedElemental)
-            {
-                GameObject ElementalImage = elementalParent.transform.Find("ElementalImage").gameObject;
-                GameObject ElementalName = elementalParent.transform.Find("ElementalName").gameObject;
-
-                if (ElementalImage && ElementalName)
-                {
-                    ElementalImage.GetComponent<Image>().sprite = usedElemental.icon;
-                    ElementalName.GetComponent<TextMeshProUGUI>().text = usedElemental.name;
-                    ElementalName.GetComponent<TextMeshProUGUI>().color = usedElemental.elementalColor;
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
+        // try
+        // {
+        //     GameObject elementalParent = InventoryUi.transform.Find("Elemental").gameObject;
+        //
+        //     // szukanie elementu gracza
+        //     List<Player.ElementalType> elementals = gameObject.GetComponent<Player>().ElementalTypes;
+        //     int UsedElementalTypeId = gameObject.GetComponent<Player>().UsedElementalTypeId;
+        //
+        //     Player.ElementalType usedElemental = elementals[UsedElementalTypeId];
+        //
+        //     if (elementalParent && null != usedElemental)
+        //     {
+        //         GameObject ElementalImage = elementalParent.transform.Find("ElementalImage").gameObject;
+        //         GameObject ElementalName = elementalParent.transform.Find("ElementalName").gameObject;
+        //
+        //         if (ElementalImage && ElementalName)
+        //         {
+        //             ElementalImage.GetComponent<Image>().sprite = usedElemental.icon;
+        //             ElementalName.GetComponent<TextMeshProUGUI>().text = usedElemental.name;
+        //             ElementalName.GetComponent<TextMeshProUGUI>().color = usedElemental.elementalColor;
+        //         }
+        //     }
+        // }
+        // catch (Exception e)
+        // {
+        //     Console.WriteLine(e);
+        // }
     }
 
     /*
@@ -473,12 +377,12 @@ public class PlayerInventoryInterface : MonoBehaviour
             ItemData selectedItem = itemsHandler.items[selectedItemIndex];
             if (null != selectedItem)
             {
-                SetItemInfo(itemsHandler.items[selectedItemIndex], selectedItemDesc);
-                selectedItemDesc.SetActive(true);
+                // SetItemInfo(itemsHandler.items[selectedItemIndex], selectedItemDesc);
+                // selectedItemDesc.SetActive(true);
             }
             else
             {
-                selectedItemDesc.SetActive(false);
+                // selectedItemDesc.SetActive(false);
             }
         }
     }
