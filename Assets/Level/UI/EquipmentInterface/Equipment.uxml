@@ -1,6 +1,9 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Level/UI/EquipmentInterface/eq.uss?fileID=7433441132597879392&amp;guid=f534fa6b373051e46b0ad6454cb5a7aa&amp;type=3#eq" />
     <engine:VisualElement name="Root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.84); flex-direction: row;">
+        <engine:VisualElement name="ItemsInfo" style="flex-grow: 1;">
+            <engine:Label text="Działa!" style="background-color: rgb(255, 255, 255);" />
+        </engine:VisualElement>
         <engine:VisualElement name="InfosTab" style="flex-grow: 1; width: 80%;">
             <engine:VisualElement name="Elemental" style="flex-grow: 1; position: absolute; right: 0; height: 200px; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/StylesIcons.png?fileID=-1608555847&amp;guid=2491355e02ca6a44d971af47f7f71cff&amp;type=3#StylesIcons_3&quot;); width: 200px; margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
             <engine:VisualElement name="Stats" style="flex-grow: 1; height: 30%;" />
@@ -16,7 +19,7 @@
                 <engine:Label text="Placeholder description" name="MissionInfoDescription" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; height: 70%; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); color: rgb(223, 247, 255); font-size: 48px;" />
             </engine:VisualElement>
         </engine:VisualElement>
-        <engine:VisualElement name="ItemsTab" style="flex-grow: 1; width: 20%; padding-top: 64px; padding-right: 64px; padding-bottom: 64px; padding-left: 64px;">
+        <engine:VisualElement name="ItemsTab" style="flex-grow: 1;">
             <engine:VisualElement name="item1" class="itemFrame" style="flex-grow: 1;">
                 <engine:VisualElement name="LockIcon" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
             </engine:VisualElement>

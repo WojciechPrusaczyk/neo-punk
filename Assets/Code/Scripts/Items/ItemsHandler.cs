@@ -32,7 +32,6 @@ public class ItemsHandler : MonoBehaviour
         }
 
         playerInventory = GameObject.Find("MainUserInterfaceRoot").transform.Find("EquipmentInterface").GetComponent<PlayerInventoryInterface>();
-        Debug.Log(playerInventory);
     }
 
     private void Update()

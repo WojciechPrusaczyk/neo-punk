@@ -218,7 +218,7 @@ MonoBehaviour:
   isPlayerPickingItem: 0
   isInspectingItems: 0
   selectedItemIndex: 0
-  unlockedSlots: 1
+  unlockedSlots: 2
   fieldImage: {fileID: 0}
   selectedFieldImage: {fileID: 0}
   secondaryEqColor: {r: 0, g: 0, b: 0, a: 0}
