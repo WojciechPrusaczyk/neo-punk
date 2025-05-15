@@ -657,6 +657,11 @@ MonoBehaviour:
   attackAnimations:
   - attack1_bite(done)
   - attack2_swipe
+  attackTriggers:
+  - Attack1
+  - Attack2
+  minExtraDelay: 1
+  maxExtraDelay: 2
 --- !u!82 &793352980080626264
 AudioSource:
   m_ObjectHideFlags: 0

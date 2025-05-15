@@ -14,7 +14,10 @@ public class ShivernDog : MonoBehaviour
     private GameObject _player;
 
     public List<string> attackAnimations;
-
+    [SerializeField] private string[] attackTriggers = { "Attack1", "Attack2" };
+    [SerializeField] private float minExtraDelay = 0.3f;
+    [SerializeField] private float maxExtraDelay = 1.2f;
+    
     public void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -70,10 +73,25 @@ public class ShivernDog : MonoBehaviour
             isAttacking = true;
             LookAtPlayer();
 
-            string animToPlay = attackAnimations[Random.Range(0, attackAnimations.Count)];
-        
-            _animator.Play(animToPlay);
+            // Fire a random trigger instead of Play()
+            string trig = attackTriggers[Random.Range(0, attackTriggers.Length)];
+            _animator.SetTrigger(trig);
+
+            StartCoroutine(AttackCooldownRoutine());
         }
+    }
+
+    private IEnumerator AttackCooldownRoutine()
+    {
+        // Wait until the animator is NOT in any 'Attack' state
+        // (avoids hard-coding clip lengths)
+        while (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+            yield return null;
+
+        // Then wait extra random time
+        yield return new WaitForSeconds(Random.Range(minExtraDelay, maxExtraDelay));
+
+        isAttacking = false;
     }
     
     public void DealDamage()

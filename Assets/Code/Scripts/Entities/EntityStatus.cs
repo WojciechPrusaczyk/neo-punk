@@ -156,7 +156,7 @@ public class EntityStatus : MonoBehaviour
                 EntityStatus enemyStatus = attackingEntity.GetComponent<EntityStatus>();
                 isPlayerFacedToEnemy = (playerStatus.isFacedRight && !enemyStatus.isFacedRight) ||
                                        (!playerStatus.isFacedRight && enemyStatus.isFacedRight);
-                Debug.Log("isPlayerFacedToEnemy: "+ isPlayerFacedToEnemy);
+                //Debug.Log("isPlayerFacedToEnemy: "+ isPlayerFacedToEnemy);
             }
             // Debug.Log(isParrying);
 

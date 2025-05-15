@@ -13,7 +13,7 @@ public class BulletBehaviour : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && null != shooter)
+        if (collision.gameObject.CompareTag("Player"))
         {
             EntityStatus playerStatus = collision.gameObject.GetComponent<EntityStatus>();
             EntityStatus shooterStatus = shooter.gameObject.GetComponent<EntityStatus>();
@@ -21,10 +21,6 @@ public class BulletBehaviour : MonoBehaviour
             // zadanie obrażeń graczowi
             playerStatus.DealDamage(shooterStatus.GetAttackDamageCount(), shooter);
             
-            Destroy(gameObject);
-        }
-        else
-        {
             Destroy(gameObject);
         }
     }

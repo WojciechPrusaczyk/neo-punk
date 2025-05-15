@@ -116,7 +116,8 @@ public class Dragonfly : MonoBehaviour
         }
 
         // Odtwórz dźwięk strzału
-        PlayDragonflySFXArray(WorldSoundFXManager.instance.dragonflyAttackSFX, Enums.SoundType.SFX);
+        if(WorldSoundFXManager.instance)    
+            PlayDragonflySFXArray(WorldSoundFXManager.instance.dragonflyAttackSFX, Enums.SoundType.SFX);
 
         // Ustaw prędkość pocisku w kierunku gracza
         Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
