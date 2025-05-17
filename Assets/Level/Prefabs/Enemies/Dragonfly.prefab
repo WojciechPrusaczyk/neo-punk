@@ -161,10 +161,10 @@ MonoBehaviour:
   hitBox: {fileID: 0}
   obstacleDetectionDistance: 1
   chaseSpeedMultiplier: 1.2
-  idleAreaOffset: {x: 5, y: -2}
-  idleAreaSize: {x: 20, y: 15}
-  alertedAreaOffset: {x: 11, y: 0}
-  alertedAreaSize: {x: 30, y: 25}
+  idleAreaOffset: {x: 7, y: 0}
+  idleAreaSize: {x: 15, y: 15}
+  alertedAreaOffset: {x: 8, y: 0}
+  alertedAreaSize: {x: 20, y: 15}
   randomMoveTime: {x: 2, y: 3}
   randomMoveInterval: {x: 0.6, y: 1}
   state: 0

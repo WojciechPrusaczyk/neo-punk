@@ -572,7 +572,7 @@ MonoBehaviour:
   droppedXp: 0
   gold: 0
   AttackDamage: 1
-  MovementSpeed: 1000
+  MovementSpeed: 1250
   isFacedRight: 1
   isEnemy: 0
   deathAnimationLength: 1
