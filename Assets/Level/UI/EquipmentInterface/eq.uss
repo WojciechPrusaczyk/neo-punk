@@ -146,6 +146,6 @@
 }
 
 .selectedValidItem #NoItemsInfo {
-    display: none;
+    display: none;gtit
 }
 
