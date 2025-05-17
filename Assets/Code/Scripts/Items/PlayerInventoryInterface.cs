@@ -27,7 +27,6 @@ public class PlayerInventoryInterface : MonoBehaviour
     private UserInterfaceController userInterfaceController;
     private VisualElement rootVisualElement;
     private GameObject fields;
-    public GameObject incomingItemInfo;
     private GameObject arrowTooltip;
     private ItemsHandler itemsHandler;
     private EntityStatus playerStatus;
@@ -37,32 +36,26 @@ public class PlayerInventoryInterface : MonoBehaviour
     private Color primaryEqColor;
     private Color primaryItemsListColor;
     private bool isButtonDown = false;
-    public bool isPickingItem = false;
 
     /*
      * Ui document
      */
     [SerializeField] private VisualElement root;
     private List<VisualElement> _itemSlots = new List<VisualElement>();
+    private Label IncomingItemName;
+    private VisualElement IncomingItemImage;
+    private Label IncomingItemPassive;
+    private Label IncomingItemActive;
+    private Label SelectedItemName;
+    private VisualElement SelectedItemImage;
+    private Label SelectedItemPassive;
+    private Label SelectedItemActive;
 
-    public void Start()
+    public void Awake()
     {
         MainUi = GameObject.Find("MainUserInterfaceRoot");
         userInterfaceController = MainUi.GetComponent<UserInterfaceController>();
-        // selectedItemDesc = InventoryUi.transform.Find("SelectedItemInfo").gameObject;
-        // incomingItemInfo = InventoryUi.transform.Find("IncomingItemInfo").gameObject;
-        // arrowTooltip = InventoryUi.transform.Find("ArrowTooltip").gameObject;
-        // fields = InventoryUi.transform.Find("ItemsFields").gameObject;
-        // itemsHandler = gameObject.GetComponent<ItemsHandler>();
-        // playerStatus = gameObject.GetComponent<EntityStatus>();
-        // ItemsListInitialWidth = InventoryUi.transform.Find("ItemsFields").GetComponent<RectTransform>().offsetMin.x;
-        //
-        // rawImage1 = InventoryUi.GetComponent<RawImage>().texture;
-        // rawImage2 = InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().texture;
-        // primaryEqColor = InventoryUi.GetComponent<RawImage>().color;
-        // primaryItemsListColor = InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color;
-
-        // HideEquipment();
+        itemsHandler = GameObject.FindWithTag("Player").GetComponent<ItemsHandler>();
     }
 
     void OnEnable()
@@ -93,10 +86,33 @@ public class PlayerInventoryInterface : MonoBehaviour
          * Elementy UI
          */
         rootVisualElement = root.Q<VisualElement>("Root");
+        IncomingItemName = root.Q<Label>("IncomingItemName");
+        IncomingItemImage = root.Q<VisualElement>("IncomingItemImage");
+        IncomingItemPassive = root.Q<Label>("IncomingItemPassive");
+        IncomingItemActive = root.Q<Label>("IncomingItemActive");
+        SelectedItemName = root.Q<Label>("SelectedItemName");
+        SelectedItemImage = root.Q<VisualElement>("SelectedItemImage");
+        SelectedItemPassive = root.Q<Label>("SelectedItemPassive");
+        SelectedItemActive = root.Q<Label>("SelectedItemActive");
 
-        SetUnlockedSlotsCount(unlockedSlots);
+        SetUnlockedSlotsCount();
 
         if (isPlayerPickingItem) ShowItemInspector();
+
+        isEquipmentShown = true;
+        selectedItemIndex = 0;
+    }
+
+    private void OnDisable()
+    {
+        HideItemInspector();
+
+        rootVisualElement.RemoveFromClassList("inspectorShown");
+
+        isEquipmentShown = false;
+        isInspectingItems = false;
+        isPlayerPickingItem = false;
+        selectedItemIndex = 0;
     }
 
     void Update()
@@ -107,53 +123,55 @@ public class PlayerInventoryInterface : MonoBehaviour
             HideEquipment();
         }
 
-        //
-        // if (isEquipmentShown)
-        // {
-        //     if (isInspectingItems || isPlayerPickingItem)
-        //     {
-        //         float verticalInput = Input.GetAxisRaw("Vertical");
-        //
-        //         if (verticalInput > 0 && !isButtonDown)
-        //         {
-        //             isButtonDown = true;
-        //             selectedItemIndex = (selectedItemIndex == 0) ? 3 : selectedItemIndex - 1;
-        //             UpdateEquipmentFrames();
-        //         }
-        //         else if (verticalInput < 0 && !isButtonDown)
-        //         {
-        //             isButtonDown = true;
-        //             selectedItemIndex = (selectedItemIndex == 3) ? 0 : selectedItemIndex + 1;
-        //             UpdateEquipmentFrames();
-        //         }
-        //
-        //         if (verticalInput == 0)
-        //         {
-        //             isButtonDown = false;
-        //         }
-        //     }
-        //
-        //     if (!isPlayerPickingItem)
-        //     {
-        //         // Zmiana rodzaju menu eq przeglądanie przedmiotów / wszystko
-        //         float horizontalInput = Input.GetAxisRaw("Horizontal");
-        //         if (horizontalInput > 0)
-        //         {
-        //             ShowItemInspector();
-        //         }
-        //         else if (horizontalInput < 0)
-        //         {
-        //             HideItemInspector();
-        //         }
-        //     }
-        // }
+        if (isEquipmentShown)
+        {
+
+            if (!isPlayerPickingItem)
+            {
+                // Zmiana rodzaju menu eq przeglądanie przedmiotów / wszystko
+
+                if (Input.GetKeyDown(InputManager.MoveRightKey))
+                {
+                    isInspectingItems = true;
+                    rootVisualElement.AddToClassList("inspectorShown");
+                }
+                else if (Input.GetKeyDown(InputManager.MoveLeftKey))
+                {
+                    isInspectingItems = false;
+                    rootVisualElement.RemoveFromClassList("inspectorShown");
+                }
+            }
+            if (isInspectingItems || isPlayerPickingItem)
+            {
+                float verticalInput = Input.GetAxisRaw("Vertical");
+
+                if (verticalInput > 0 && !isButtonDown)
+                {
+                    isButtonDown = true;
+                    selectedItemIndex = (selectedItemIndex == 0) ? unlockedSlots - 1 : selectedItemIndex - 1;
+                }
+                else if (verticalInput < 0 && !isButtonDown)
+                {
+                    isButtonDown = true;
+                    selectedItemIndex = (selectedItemIndex == unlockedSlots - 1) ? 0 : selectedItemIndex + 1;
+                }
+
+                if (verticalInput == 0)
+                {
+                    isButtonDown = false;
+                }
+
+                ShowSelectedItemFrame();
+                UpdateSelectedItemInfo();
+            }
+        }
     }
 
-    private void SetUnlockedSlotsCount(int unlockedSlotsCount)
+    private void SetUnlockedSlotsCount()
     {
         foreach (var item in _itemSlots.Select((slot, i) => new { i, slot }))
         {
-            if (item.i < unlockedSlotsCount)
+            if (item.i < unlockedSlots)
                 item.slot.RemoveFromClassList("lockedSlot");
             else
                 item.slot.AddToClassList("lockedSlot");
@@ -179,7 +197,6 @@ public class PlayerInventoryInterface : MonoBehaviour
      */
     public void HideEquipment()
     {
-        ResetItemsFields();
         HideItemInspector();
 
         userInterfaceController.ActivateInterface(0);
@@ -197,17 +214,17 @@ public class PlayerInventoryInterface : MonoBehaviour
      */
     public void PickupItem(ItemData itemData)
     {
-        isPickingItem = true;
-        SetItemInfo(itemData, incomingItemInfo);
-        incomingItemInfo.SetActive(true);
+        isPlayerPickingItem = true;
+        rootVisualElement.AddToClassList("pickingItem");
+        SetItemInfo(itemData);
     }
 
     public void EndPickingItem()
     {
         // InventoryUi.transform.Find("Experience").gameObject.SetActive(false);
         HideItemInspector();
-        incomingItemInfo.SetActive(false);
-        isPickingItem = false;
+        rootVisualElement.RemoveFromClassList("pickingItem");
+        isPlayerPickingItem = false;
     }
 
     private void ShowItemInspector()
@@ -260,7 +277,6 @@ public class PlayerInventoryInterface : MonoBehaviour
         // InventoryUi.transform.Find("ItemsFields").GetComponent<RawImage>().color = primaryItemsListColor;
 
         // Reset pól wyświetlających itemy
-        ResetItemsFields();
         selectedItemIndex = 0;
     }
 
@@ -359,82 +375,68 @@ public class PlayerInventoryInterface : MonoBehaviour
         }
     }
 
-    private void UpdateEquipmentFrames()
+    private void ShowSelectedItemFrame()
     {
-        // zwaracnie wszystkich pól eq do podstawowego stanu
-        ResetItemsFields();
-
-        // odpowiednie ustawienie pola wybranego
-        GameObject selectedField = fields.transform.GetChild(selectedItemIndex).gameObject;
-        if (selectedFieldImage != null && selectedField != null)
+        foreach (var item in _itemSlots.Select((slot, i) => new { i, slot }))
         {
-            // ustawienie obramowania dla wybranego pola
-            selectedField.transform.Find("Frame").GetComponent<Image>().sprite = selectedFieldImage;
-
-            // Pokazanie strzałki
-            selectedField.transform.Find("Arrow").gameObject.SetActive(true);
-
-            ItemData selectedItem = itemsHandler.items[selectedItemIndex];
-            if (null != selectedItem)
-            {
-                // SetItemInfo(itemsHandler.items[selectedItemIndex], selectedItemDesc);
-                // selectedItemDesc.SetActive(true);
-            }
-            else
-            {
-                // selectedItemDesc.SetActive(false);
-            }
+            if (item.i < unlockedSlots)
+                item.slot.RemoveFromClassList("choosenSlot");
         }
+
+        _itemSlots[selectedItemIndex].AddToClassList("choosenSlot");
     }
 
-    private void ResetItemsFields()
+    private void UpdateSelectedItemInfo()
     {
-        foreach (Transform child in fields.transform)
+        // Czyszczenie itemu, jeśli nie wybrano żadnego
+        var selectedItem = itemsHandler.items[selectedItemIndex];
+        if (null == selectedItem || !selectedItem )
         {
-            // resetowanie obramowania pola
-            Image image = child.transform.Find("Frame").GetComponent<Image>();
-            if (image != null)
-            {
-                image.sprite = fieldImage;
-            }
+            SelectedItemName.text = "";
+            SelectedItemActive.style.backgroundImage = null;
+            SelectedItemPassive.text = "";
+            SelectedItemActive.text = "";
 
-            // ukrywanie strzałki przedmiotu
-            GameObject arrow = child.transform.Find("Arrow").gameObject;
-            if (arrow != null)
-            {
-                arrow.SetActive(false);
-            }
+            rootVisualElement.RemoveFromClassList("selectedValidItem");
+
+            return;
         }
+
+        rootVisualElement.AddToClassList("selectedValidItem");
+
+        // Tytuł przedmiotu
+        if (null != SelectedItemName)
+            SelectedItemName.text = selectedItem.itemName;
+
+        // Zdolność aktywna przedmiotu
+        if (null != SelectedItemImage)
+            SelectedItemImage.style.backgroundImage = new StyleBackground(selectedItem.itemIcon);
+
+        // Pasywka przedmiotu
+        if (null != SelectedItemPassive)
+            SelectedItemPassive.text = selectedItem.passiveDescription;
+
+        // Zdolność aktywna przedmiotu
+        if (null != SelectedItemActive)
+            SelectedItemActive.text = selectedItem.activeDescription;
     }
 
-    public void SetItemInfo(ItemData itemData, GameObject UiParent)
+    public void SetItemInfo(ItemData itemData)
     {
-        //Ustawianie opisu przedmiotu
-        GameObject header = UiParent.transform.Find("Header").gameObject;
-        GameObject passive = UiParent.transform.Find("Passive").gameObject;
-        GameObject active = UiParent.transform.Find("Active").gameObject;
+        // Tytuł przedmiotu
+        if (null != IncomingItemName)
+            IncomingItemName.text = itemData.itemName;
 
-        if (header)
-        {
-            // Tytuł przedmiotu
-            header.transform.Find("ItemName").gameObject.GetComponent<TextMeshProUGUI>().text = itemData.itemName;
+        // Zdolność aktywna przedmiotu
+        if (null != IncomingItemImage)
+            IncomingItemImage.style.backgroundImage = new StyleBackground(itemData.itemIcon);
 
-            // Ikona przedmiotu
-            header.transform.Find("ItemIcon").gameObject.GetComponent<Image>().sprite = itemData.itemIcon;
-        }
+        // Pasywka przedmiotu
+        if (null != IncomingItemPassive)
+            IncomingItemPassive.text = itemData.passiveDescription;
 
-        if (passive)
-        {
-            // Pasywka przedmiotu
-            passive.transform.Find("PassiveDescription").gameObject.GetComponent<TextMeshProUGUI>().text =
-                itemData.passiveDescription;
-        }
-
-        if (active)
-        {
-            // Zdolność aktywna przedmiotu
-            active.transform.Find("ActiveDescription").gameObject.GetComponent<TextMeshProUGUI>().text =
-                itemData.activeDescription;
-        }
+        // Zdolność aktywna przedmiotu
+        if (null != IncomingItemActive)
+            IncomingItemActive.text = itemData.activeDescription;
     }
 }

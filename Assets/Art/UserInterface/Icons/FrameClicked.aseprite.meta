@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: FrameClicked
     originalName: 
-    pivot: {x: 0.4827586, y: -0.03448276}
+    pivot: {x: 0.516129, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 29
+      width: 31
       height: 29
     spriteID: 643744ee80fc9744c8d084e4cf33fc26
     spriteBone: []
@@ -153,9 +153,9 @@ ScriptedImporter:
     - name: FrameClicked
       frameIndex: 0
       cellRect:
-        x: 2
+        x: 0
         y: 1
-        width: 29
+        width: 31
         height: 29
       spriteId: 643744ee80fc9744c8d084e4cf33fc26
     linkedCells: []

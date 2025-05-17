@@ -21,7 +21,7 @@
 
 .inspectorShown #ItemsInfo {
     display: flex;
-    width: 73%
+    width: 73%;
 }
 
 #ItemsTab {
@@ -33,3 +33,119 @@
     width: 27%;
     padding: 64px 64px 64px 198px;
 }
+
+.abilityHeader {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: rgb(194, 255, 251);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    font-size: 48px;
+    -unity-text-align: upper-center;
+    letter-spacing: 10px;
+}
+
+.abilityDesc {
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    white-space: normal;
+    text-overflow: clip;
+}
+
+.itemNameFrame {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=1086331387851373080&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1_0");
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 30%;
+    left: 30%;
+    top: 0;
+    bottom: 0;
+}
+
+.itemName {
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    color: rgb(201, 253, 247);
+    -unity-text-align: middle-center;
+    height: 80%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.itemMiniature {
+    background-image: url("project://database/Assets/Art/UserInterface/Controls/checkbox.png?fileID=1071215165001224775&guid=2ba2e025f9cf1de408ae6b098977c3d3&type=3#checkbox1_0");
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: -10px;
+    padding-top: 21px;
+    padding-right: 32px;
+    padding-bottom: 21px;
+    padding-left: 11px;
+}
+
+.itemminiatureImage {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.inspectorShown .choosenSlot {
+    background-image: url("project://database/Assets/Art/UserInterface/Icons/FrameClicked.png?fileID=5013763789506415217&guid=16d77f7ddc7d96e4ebe6ad891fd6278e&type=3#FrameClicked_0");
+}
+
+#Item #Header,
+#Item #Description {
+    display: none;
+}
+
+.selectedValidItem #Item #Header,
+.selectedValidItem #Item #Description {
+    display: flex;
+}
+
+#incomingItem #Header,
+#incomingItem #Description {
+    display: none;
+}
+
+.pickingItem #incomingItem #Header,
+.pickingItem #incomingItem #Description {
+    display: flex;
+}
+
+#NoItemsInfo {
+    display: none;
+}
+
+.inspectorShown #NoItemsInfo {
+    display: flex;
+}
+
+.selectedValidItem #NoItemsInfo {
+    display: none;
+}
+
