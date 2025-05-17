@@ -8,7 +8,8 @@ public class InvasionTrial : MonoBehaviour
     public bool trialStarted = false;
     public bool trialFinished = false;
 
-
+    public float damageTaken = 0;
+    
     public List<Transform> SpawnPoints;
     [SerializeField]
     public List<Wave> waves;
@@ -50,10 +51,10 @@ public class InvasionTrial : MonoBehaviour
         if (!trialStarted)
         {
             invasionInterface.gameObject.SetActive(true);
-            UpdateWaveState();
-            
-            trialStarted = true;
             currentWave = 1;
+            trialStarted = true;
+            
+            UpdateWaveState();
             StartCoroutine(HandleWaves());
         }
     }
