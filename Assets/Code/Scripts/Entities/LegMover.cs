@@ -46,6 +46,7 @@ public class LegMover : MonoBehaviour
 
     IEnumerator MoveLeg(Vector3 newTargetPosition)
     {
+        
         isMoving = true;
         lastMovedLeg = this;
 
@@ -54,9 +55,11 @@ public class LegMover : MonoBehaviour
         halfWayPoint = (targetPoint + legTarget.position) / 2;
         halfWayPoint.y += liftDistance;
 
+        
         float elapsedTime = 0f;
         while (elapsedTime < 1f)
         {
+            
             legTarget.position = Vector3.Lerp(oldPos, halfWayPoint, elapsedTime);
             elapsedTime += Time.deltaTime * legMovementSpeed;
             yield return null;
@@ -65,6 +68,11 @@ public class LegMover : MonoBehaviour
         elapsedTime = 0f;
         while (elapsedTime < 1f)
         {
+            if (gameObject.name == "FrontFront")
+            {
+                Debug.Log("second" + legTarget.position);
+            
+            }
             legTarget.position = Vector3.Lerp(halfWayPoint, targetPoint, elapsedTime);
             elapsedTime += Time.deltaTime * legMovementSpeed;
             yield return null;

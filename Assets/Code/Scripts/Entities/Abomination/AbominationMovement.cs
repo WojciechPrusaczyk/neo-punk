@@ -22,9 +22,6 @@ public class AbominationMovement : MonoBehaviour
         /*
          * For debugging only
          */
-        var abominationStatus = gameObject.transform.parent.GetComponent<EntityStatus>();
-        var mainUi = GameObject.Find("MainUserInterface").GetComponent<MainUserInterfaceController>();
-        mainUi.ShowBossBar(abominationStatus);
     }
 
     private void OnEnable()
@@ -51,6 +48,10 @@ public class AbominationMovement : MonoBehaviour
     public void ActivateBoss(bool b)
     {
         active = b;
+        
+        var abominationStatus = gameObject.transform.parent.GetComponent<EntityStatus>();
+        var mainUi = GameObject.Find("MainUserInterface").GetComponent<MainUserInterfaceController>();
+        mainUi.ShowBossBar(abominationStatus);
     }
     
     public void DeactivateBoss(bool b)
