@@ -26,12 +26,18 @@ public class AbominationMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        if (arenaCollider == null)
+            return;
+
         arenaCollider.onArenaEnter += ActivateBoss;
         arenaCollider.onArenaExit += DeactivateBoss;
     }
 
     private void OnDisable()
     {
+        if (arenaCollider == null)
+            return;
+
         arenaCollider.onArenaEnter -= ActivateBoss;
         arenaCollider.onArenaExit -= DeactivateBoss;
     }

@@ -18,6 +18,11 @@ public class WorldSoundFXManager : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float dialogueVolume = .5f;
 
+    [Header("UI")]
+    public AudioClip buttonHoverSFX;
+    public AudioClip buttonClickSFX;
+    public AudioClip buttonBackSFX;
+
     [Header("Player Sounds")]
     public AudioClip playerJumpSFX;
     public AudioClip playerParrySFX;

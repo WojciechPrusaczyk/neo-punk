@@ -49,6 +49,13 @@ public class OptionsMenuBehaviour : MonoBehaviour
             musicVolumeSlider.value = WorldSoundFXManager.instance.musicVolume;
             dialogueVolumeSlider.value = WorldSoundFXManager.instance.dialogueVolume;
 
+            // Play sound on hover
+            gameplayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            soundOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            controlsOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            displayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            exitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+
             // Dodajemy listenera do sliderów, upewniamy się, że wartość jest w zakresie 0-1
             masterVolumeSlider.RegisterValueChangedCallback(evt =>
             {
@@ -97,6 +104,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _controlsTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.None;
             _gameplayTab.style.display = DisplayStyle.Flex;
+            if (WorldSoundFXManager.instance != null)
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
         };
         soundOptionButton.clicked += () =>
         {
@@ -105,6 +114,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _controlsTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.None;
             _soundTab.style.display = DisplayStyle.Flex;
+            if (WorldSoundFXManager.instance != null)
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
         };
         controlsOptionButton.clicked += () =>
         {
@@ -113,6 +124,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _controlsTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.None;
             _controlsTab.style.display = DisplayStyle.Flex;
+            if (WorldSoundFXManager.instance != null)
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
         };
         displayOptionButton.clicked += () =>
         {
@@ -121,6 +134,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _controlsTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.Flex;
+            if (WorldSoundFXManager.instance != null)
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
         };
         exitButton.clicked += () =>
         {
@@ -129,6 +144,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _controlsTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.None;
             _userInterfaceController.ActivateInterface(pauseMenu);
+            if (WorldSoundFXManager.instance != null)
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX);
         };
     }
 
