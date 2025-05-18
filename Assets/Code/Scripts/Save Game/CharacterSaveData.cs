@@ -22,6 +22,10 @@ public class CharacterSaveData
     [Header("Resources")]
     public float currentHealth;
 
+    [Header("Campfires")]
+    public SerializableDictionary<int, bool> activeCampfires;
+    public int lastVisitedCampfireIndex = -1;
+
     public CharacterSaveData()
     {
         // Tu zapisane bêd¹ typy zaawansowane (np. Lista, SerializableDictionary)

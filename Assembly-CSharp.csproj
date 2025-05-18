@@ -74,6 +74,7 @@
     <Compile Include="Assets\Code\Scripts\Entities\HomelessMan\HomelessManAi.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\ExplosionCollisionHandler.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\EntityStatus.cs" />
+    <Compile Include="Assets\WorldObjectManager.cs" />
     <Compile Include="Assets\Code\Scripts\System\MusicManager.cs" />
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDoll.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Player\HealthBarController.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\ComputerInterfaceController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\SettingsMenuController.cs" />
     <Compile Include="Assets\Code\Scripts\System\Enemy.cs" />
+    <Compile Include="Assets\Code\Scripts\Save Game\SerializableDictionary.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\AnimationEventShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Save Game\SettingsSaveData.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Player\Player.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\PauseMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\Save Game\CharacterSaveData.cs" />
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDollAbilities.cs" />
+    <Compile Include="Assets\Code\Scripts\Interactable\Interactable.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\Dragonfly.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernAudioController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\PauseMenuInterface.cs" />
@@ -136,6 +139,7 @@
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiring.cs" />
     <Compile Include="Assets\Code\Scripts\System\EnemyAINew.cs" />
     <Compile Include="Assets\Code\Scripts\Quests\HomelessMan.cs" />
+    <Compile Include="Assets\Code\Scripts\Interactable\InteractableCampfire.cs" />
     <Compile Include="Assets\Code\Scripts\System\TimeTrial\TimeTrialActivator.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\Dialog\DialogData.cs" />
   </ItemGroup>
