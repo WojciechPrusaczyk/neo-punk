@@ -6,6 +6,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public Collider2D interactableCollider;
+    public float colliderDisableTimer = 5f;
+
     [SerializeField] GameObject InteractIcon;
     [SerializeField] GameObject instantiatedIcon;
 
@@ -42,6 +44,20 @@ public class Interactable : MonoBehaviour
     // To jest klasa bazowa, wiêc nie ma tu ¿adnej implementacji.
     protected virtual void Interact()
     {
+        if (interactableCollider != null)
+        {
+            interactableCollider.enabled = false;
+            StartCoroutine(RestoreColliderAfterDelay(colliderDisableTimer));
+        }
+    }
+
+    private IEnumerator RestoreColliderAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (interactableCollider != null)
+        {
+            interactableCollider.enabled = true;
+        }
     }
 
     // Przygotowanie obiektu podczas ³adowania pliku zapisu.
