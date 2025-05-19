@@ -116,6 +116,7 @@
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsTrigger.cs" />
     <Compile Include="Assets\WorldSaveGameManager.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\AirVentBehaviour.cs" />
+    <Compile Include="Assets\BossAnimationController.cs" />
     <Compile Include="Assets\Code\Scripts\Items\DemonBell\DemonBell.cs" />
     <Compile Include="Assets\Code\Scripts\Items\ScriptableObjectManager.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\HandsWiring.cs" />
