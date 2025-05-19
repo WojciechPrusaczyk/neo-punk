@@ -37,25 +37,46 @@ public class PauseMenuBehaviour : MonoBehaviour
         settingsButton.clicked += buttonOptions;
         quitMenuButton.clicked += buttonQuitToMenu;
         quitButton.clicked += buttonQuitGame;
+
+        // Sound on hover
+        if (WorldSoundFXManager.instance != null)
+        {
+            resumeButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            settingsButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            quitMenuButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            quitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+        }
     }
 
     public void buttonResume()
     {
         _userInterfaceController.ActivateInterface(0);
+
+        if (WorldSoundFXManager.instance != null)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX);
     }
 
     public void buttonOptions()
     {
         _userInterfaceController.ActivateInterface(optionsMenu);
+
+        if (WorldSoundFXManager.instance != null)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
     }
 
     public void buttonQuitToMenu()
     {
+        if (WorldSoundFXManager.instance != null)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+
         SceneManager.LoadScene("MainMenu");
     }
 
     public void buttonQuitGame()
     {
+        if (WorldSoundFXManager.instance != null)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+
         Application.Quit();
     }
 }

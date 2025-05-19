@@ -1348,6 +1348,18 @@ PrefabInstance:
       value: 0.319
       objectReference: {fileID: 0}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: buttonBackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 60c1bf9b899600b43a2a05d82e031621, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: buttonClickSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c49f74021a9ffa24ba7760509da6a03e, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: buttonHoverSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fd09094ea675f64aa5cdb90e03e8982, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: dialogueVolume
       value: 0.5
       objectReference: {fileID: 0}
