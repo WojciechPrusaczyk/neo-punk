@@ -1,4 +1,5 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/MainUserInterface.uss?fileID=7433441132597879392&amp;guid=4a40ec3d039408c4c86e620093c71eed&amp;type=3#MainUserInterface" />
     <engine:VisualElement name="BossBarRoot" style="flex-grow: 1; position: absolute; bottom: 0; left: 25%; right: 25%; width: 50%; padding-top: 20px; padding-right: 20px; padding-bottom: 0; padding-left: 20px;">
         <engine:VisualElement name="BossBarBackground" style="flex-grow: 1; height: 100px; background-image: url(&quot;project://database/Assets/Art/UserInterface/bossHpBarFrame.png?fileID=-701579401748890163&amp;guid=ed3f05c1902fd434ba12d933264dcec4&amp;type=3#bossHpBarFrame_0&quot;);" />
         <engine:Label text="100/100" name="BossBarLabel" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 50%; position: absolute; bottom: 75px; left: 25%; right: 25%; font-size: 24px; -unity-text-align: upper-center; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); color: rgb(255, 16, 74); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(255, 16, 74);" />
@@ -10,6 +11,23 @@
         </engine:VisualElement>
         <engine:Label text="100/100" name="HpText" style="width: 400px; position: absolute; top: -10px; height: 20px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); font-size: 24px; color: rgb(189, 255, 255); text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-align: lower-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
         <engine:VisualElement name="Elemental" style="width: 60px; height: 60px; background-image: url(&quot;project://database/Assets/Art/UserInterface/Icons/StylesIcons.png?fileID=-1608555847&amp;guid=2491355e02ca6a44d971af47f7f71cff&amp;type=3#StylesIcons_3&quot;); margin-bottom: 0;" />
-        <engine:VisualElement name="ItemsRoot" style="flex-grow: 1; width: 360px; position: absolute; top: auto; height: 120px; bottom: -120px; background-image: url(&quot;project://database/Assets/Art/UserInterface/ItemSlots.aseprite?fileID=-3002200162819539792&amp;guid=e7666b4a60ca4c64baf86138874bebfe&amp;type=3#ItemSlots&quot;); left: 10px;" />
+        <engine:VisualElement name="ItemsRoot" style="flex-grow: 1; position: absolute; top: auto; height: 120px; bottom: -120px; background-image: url(&quot;project://database/Assets/Art/UserInterface/ItemSlots.aseprite?fileID=-3002200162819539792&amp;guid=e7666b4a60ca4c64baf86138874bebfe&amp;type=3#ItemSlots&quot;); left: 10px; flex-direction: row; padding-right: 0; margin-right: 3px;">
+            <engine:VisualElement name="Item" class="item" style="flex-grow: 1;">
+                <engine:VisualElement name="ItemImage1" class="itemImage" style="flex-grow: 1; height: 70%;" />
+                <engine:Label name="ItemCooldown1" class="itemCooldown" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Item" class="item" style="flex-grow: 1;">
+                <engine:VisualElement name="ItemImage2" class="itemImage" style="flex-grow: 1; height: 70%;" />
+                <engine:Label name="ItemCooldown2" class="itemCooldown" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Item" class="item" style="flex-grow: 1;">
+                <engine:VisualElement name="ItemImage3" class="itemImage" style="flex-grow: 1; height: 70%;" />
+                <engine:Label name="ItemCooldown3" class="itemCooldown" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Item" class="item" style="flex-grow: 1;">
+                <engine:VisualElement name="ItemImage4" class="itemImage" style="flex-grow: 1; height: 70%;" />
+                <engine:Label name="ItemCooldown4" class="itemCooldown" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

@@ -117,22 +117,34 @@
     background-image: url("project://database/Assets/Art/UserInterface/Icons/FrameClicked.png?fileID=5013763789506415217&guid=16d77f7ddc7d96e4ebe6ad891fd6278e&type=3#FrameClicked_0");
 }
 
-#Item #Header,
+#Item #Header {
+    display: none;
+}
+
 #Item #Description {
     display: none;
 }
 
-.selectedValidItem #Item #Header,
+.selectedValidItem #Item #Header {
+    display: flex;
+}
+
 .selectedValidItem #Item #Description {
     display: flex;
 }
 
-#incomingItem #Header,
+#incomingItem #Header {
+    display: none;
+}
+
 #incomingItem #Description {
     display: none;
 }
 
-.pickingItem #incomingItem #Header,
+.pickingItem #incomingItem #Header {
+    display: flex;
+}
+
 .pickingItem #incomingItem #Description {
     display: flex;
 }
@@ -149,3 +161,14 @@
     display: none;
 }
 
+.itemImage {
+    background-image: none;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}

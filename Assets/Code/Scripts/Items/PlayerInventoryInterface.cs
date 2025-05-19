@@ -24,6 +24,7 @@ public class PlayerInventoryInterface : MonoBehaviour
     public Color secondaryItemsListColor;
 
     private GameObject MainUi;
+    private MainUserInterfaceController MainUiController;
     private UserInterfaceController userInterfaceController;
     private VisualElement rootVisualElement;
     private GameObject fields;
@@ -54,6 +55,7 @@ public class PlayerInventoryInterface : MonoBehaviour
     public void Awake()
     {
         MainUi = GameObject.Find("MainUserInterfaceRoot");
+        MainUiController = MainUi.GetComponentInChildren<MainUserInterfaceController>();
         userInterfaceController = MainUi.GetComponent<UserInterfaceController>();
         itemsHandler = GameObject.FindWithTag("Player").GetComponent<ItemsHandler>();
     }
@@ -318,42 +320,18 @@ public class PlayerInventoryInterface : MonoBehaviour
     {
         if (null != itemData.itemIcon)
         {
-            GameObject selectedSlot = fields.transform.GetChild(selectedItemIndex).Find("ItemImage").gameObject;
+            var selectedSlot = _itemSlots[selectedItemIndex];
+            var selectedSlotImage = selectedSlot.Q<VisualElement>("Image");
 
-            if (null != itemData.itemIcon && selectedSlot)
+            if (null != itemData.itemIcon && (null != selectedSlotImage ))
             {
-                selectedSlot.GetComponent<Image>().sprite = itemData.itemIcon;
+                selectedSlotImage.style.backgroundImage = new StyleBackground(itemData.itemIcon);
 
-                MainUi.transform.Find("Items").GetChild(selectedItemIndex).GetComponent<Image>().sprite =
-                    itemData.itemIcon;
-                MainUi.transform.Find("Items").GetChild(selectedItemIndex).GetComponent<Image>().color = Color.white;
+                MainUiController.SetItemImageAtSlot(selectedItemIndex, itemData.itemIcon);
             }
             else
             {
                 Debug.LogError("Wystąpił problem przy ładowaniu ikony przedmiotu");
-            }
-        }
-    }
-
-    /*
-     * Metoda do dynamicznej aktualizacji obrazka
-     */
-    public void SetImageAtSlotByIndex(String imagePath, String itemName)
-    {
-        int itemIndex = itemsHandler.items.FindIndex(obj =>
-            string.Equals(obj.itemName, itemName, StringComparison.OrdinalIgnoreCase));
-
-        if (imagePath != "" || itemIndex == -1)
-        {
-            GameObject selectedSlot = fields.transform.GetChild(itemIndex).Find("ItemImage").gameObject;
-
-            Texture2D texture2D = Resources.Load<Texture2D>(imagePath);
-            if (texture2D != null)
-            {
-                selectedSlot.GetComponent<Image>().sprite = Sprite.Create(texture2D,
-                    new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
-                MainUi.transform.Find("Items").GetChild(itemIndex).GetComponent<Image>().sprite =
-                    Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
             }
         }
     }
@@ -368,10 +346,12 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         if (sprite != null && itemIndex != -1)
         {
-            GameObject selectedSlot = fields.transform.GetChild(itemIndex).Find("ItemImage").gameObject;
+            var selectedSlot = _itemSlots[selectedItemIndex];
+            var selectedSlotImage = selectedSlot.Q<VisualElement>("Image");
 
-            selectedSlot.GetComponent<Image>().sprite = sprite;
-            MainUi.transform.Find("Items").GetChild(itemIndex).GetComponent<Image>().sprite = sprite;
+            selectedSlotImage.style.backgroundImage = new StyleBackground(sprite);
+
+            MainUiController.SetItemImageAtSlot(selectedItemIndex, sprite);
         }
     }
 

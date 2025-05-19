@@ -62,15 +62,19 @@
         <engine:VisualElement name="ItemsTab" style="flex-grow: 1; transition-duration: 0.5s;">
             <engine:VisualElement name="item1" class="itemFrame choosenSlot" style="flex-grow: 1;">
                 <engine:VisualElement name="LockIcon" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+                <engine:VisualElement name="Image" class="itemImage" style="flex-grow: 1;" />
             </engine:VisualElement>
             <engine:VisualElement name="item2" class="itemFrame" style="flex-grow: 1;">
                 <engine:VisualElement name="LockIcon" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+                <engine:VisualElement name="Image" class="itemImage" style="flex-grow: 1;" />
             </engine:VisualElement>
             <engine:VisualElement name="item3" class="itemFrame" style="flex-grow: 1;">
                 <engine:VisualElement name="LockIcon" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+                <engine:VisualElement name="Image" class="itemImage" style="flex-grow: 1;" />
             </engine:VisualElement>
             <engine:VisualElement name="item4" class="itemFrame" style="flex-grow: 1;">
                 <engine:VisualElement name="LockIcon" class="lockIcon" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;" />
+                <engine:VisualElement name="Image" class="itemImage" style="flex-grow: 1;" />
             </engine:VisualElement>
         </engine:VisualElement>
         <engine:VisualElement name="NoItemsInfo" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">

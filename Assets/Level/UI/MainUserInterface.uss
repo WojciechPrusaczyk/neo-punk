@@ -1,0 +1,16 @@
+.item {
+    width: 90px;
+    margin-right: 3px;
+}
+
+.itemImage {
+    height: 60%;
+}
+
+.itemCooldown {
+    height: 30%;
+    color: rgb(208, 255, 253);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    -unity-text-align: middle-center;
+    font-size: 24px;
+}
