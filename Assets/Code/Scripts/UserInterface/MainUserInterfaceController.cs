@@ -18,6 +18,8 @@ public class MainUserInterfaceController : MonoBehaviour
     private Boolean isBossBarShown = false;
     private GameObject bossHpBarObject;
     private UnityEngine.UI.Image bossHpBarImage;
+    private List<VisualElement> _itemImages = new List<VisualElement>();
+    private List<Label> _itemCooldowns = new List<Label>();
     [SerializeField] private VisualElement root;
 
     private void Awake()
@@ -51,6 +53,21 @@ public class MainUserInterfaceController : MonoBehaviour
         bossBarRoot = root.Q<VisualElement>("BossBarRoot");
         bossBar = root.Q<Label>("BossBarLabel");
         bossName = root.Q<Label>("BossBarName");
+
+
+        _itemImages = new List<VisualElement>();
+        _itemCooldowns = new List<Label>();
+        for (int i = 1; i <= 4; i++)
+        {
+            var itemImage = root.Q<VisualElement>($"ItemImage{i}");
+            var itemCooldown = root.Q<Label>($"ItemCooldown{i}");
+
+            if (itemImage != null)
+                _itemImages.Add(itemImage);
+
+            if (itemCooldown != null)
+                _itemCooldowns.Add(itemCooldown);
+        }
 
         bossBarRoot.SetEnabled(false);
     }
@@ -87,5 +104,17 @@ public class MainUserInterfaceController : MonoBehaviour
         bossBarRoot.SetEnabled(false);
         bossHpBarObject.SetActive(false);
         BossStatus = null;
+    }
+
+    public void SetItemCooldownAtSlot(int itemIndex, string itemCooldown = "")
+    {
+        _itemCooldowns[itemIndex].text = (itemCooldown == "") ? itemCooldown : "";
+    }
+
+    public void SetItemImageAtSlot(int itemIndex, Sprite itemImage = null)
+    {
+        var backgroundImage = ( null != itemImage ) ? new StyleBackground(itemImage) : null;
+
+        _itemImages[itemIndex].style.backgroundImage = backgroundImage;
     }
 }

@@ -54,7 +54,7 @@ public class VoodooDollAbilities : ItemData.IItemAbility
 
         if (playerInventory == null)
         {
-            playerInventory = GameObject.FindWithTag("Player").gameObject.GetComponent<PlayerInventoryInterface>();
+            playerInventory = GameObject.Find("MainUserInterfaceRoot").transform.Find("EquipmentInterface").gameObject.GetComponent<PlayerInventoryInterface>();
         }
 
         if (lastNoticedPlayerHp == 0 && playerStatus != null)

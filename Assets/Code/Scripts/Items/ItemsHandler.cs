@@ -9,6 +9,7 @@ public class ItemsHandler : MonoBehaviour
 {
     public List<ItemData> items = new List<ItemData>();
     private GameObject MainUi;
+    private MainUserInterfaceController MainUiController;
     private List<TextMeshProUGUI> itemsCooldowns = new List<TextMeshProUGUI>();
     private PlayerInventoryInterface playerInventory;
 
@@ -20,15 +21,16 @@ public class ItemsHandler : MonoBehaviour
             items.Add(null); // Puste sloty na przedmioty
         }
 
-        MainUi = GameObject.Find("MainUserInterfaceRoot");
-        // GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
+        MainUi = GameObject.Find("MainUserInterfaceRoot").transform.Find("MainUserInterface").gameObject;
+        MainUiController = MainUi.GetComponent<MainUserInterfaceController>();
+        GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
 
         for (int i = 0; i < 4; i++)
         {
-            // GameObject itemCooldownObject = itemsCooldownsParent.transform.GetChild(i).gameObject;
-            // TextMeshProUGUI itemCooldownTextComponent = itemCooldownObject.GetComponent<TextMeshProUGUI>();
+            GameObject itemCooldownObject = itemsCooldownsParent.transform.GetChild(i).gameObject;
+            TextMeshProUGUI itemCooldownTextComponent = itemCooldownObject.GetComponent<TextMeshProUGUI>();
 
-            // itemsCooldowns.Add(itemCooldownTextComponent);
+            itemsCooldowns.Add(itemCooldownTextComponent);
         }
 
         playerInventory = GameObject.Find("MainUserInterfaceRoot").transform.Find("EquipmentInterface").GetComponent<PlayerInventoryInterface>();
@@ -42,6 +44,8 @@ public class ItemsHandler : MonoBehaviour
             UsePassive(0);
             UpdateCooldownTimer(0);
         }
+        else
+            MainUiController.SetItemCooldownAtSlot(0);
 
         if (null != items[1])
         {
@@ -49,6 +53,8 @@ public class ItemsHandler : MonoBehaviour
             UsePassive(1);
             UpdateCooldownTimer(1);
         }
+        else
+            MainUiController.SetItemCooldownAtSlot(1);
 
         if (null != items[2])
         {
@@ -56,6 +62,8 @@ public class ItemsHandler : MonoBehaviour
             UsePassive(2);
             UpdateCooldownTimer(2);
         }
+        else
+            MainUiController.SetItemCooldownAtSlot(2);
 
         if (null != items[3])
         {
@@ -63,6 +71,8 @@ public class ItemsHandler : MonoBehaviour
             UsePassive(3);
             UpdateCooldownTimer(3);
         }
+        else
+            MainUiController.SetItemCooldownAtSlot(3);
     }
 
     public void AddItem(ItemData itemData, GameObject objectToDelete)
@@ -172,11 +182,11 @@ public class ItemsHandler : MonoBehaviour
         ItemData item = items[itemPos];
         if (item != null && item.currentCooldown > 0)
         {
-            itemsCooldowns[itemPos].text = item.currentCooldown.ToString();
+            MainUiController.SetItemCooldownAtSlot(itemPos, item.currentCooldown.ToString());
         }
         else
         {
-            itemsCooldowns[itemPos].text = "";
+            MainUiController.SetItemCooldownAtSlot(itemPos, "READY");
         }
     }
 }
