@@ -332,7 +332,7 @@ public class EntityStatus : MonoBehaviour
             SetHp(0);
             entityAnimator.SetTrigger("HasDied");
             yield return new WaitForSeconds(deathAnimationLength);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     

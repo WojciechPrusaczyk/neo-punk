@@ -23,16 +23,6 @@ public class ItemsHandler : MonoBehaviour
 
         MainUi = GameObject.Find("MainUserInterfaceRoot").transform.Find("MainUserInterface").gameObject;
         MainUiController = MainUi.GetComponent<MainUserInterfaceController>();
-        GameObject itemsCooldownsParent = MainUi.transform.Find("ItemsCooldowns").gameObject;
-
-        for (int i = 0; i < 4; i++)
-        {
-            GameObject itemCooldownObject = itemsCooldownsParent.transform.GetChild(i).gameObject;
-            TextMeshProUGUI itemCooldownTextComponent = itemCooldownObject.GetComponent<TextMeshProUGUI>();
-
-            itemsCooldowns.Add(itemCooldownTextComponent);
-        }
-
         playerInventory = GameObject.Find("MainUserInterfaceRoot").transform.Find("EquipmentInterface").GetComponent<PlayerInventoryInterface>();
     }
 
@@ -42,37 +32,30 @@ public class ItemsHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1)) UseItem(0);
             UsePassive(0);
-            UpdateCooldownTimer(0);
-        }
-        else
             MainUiController.SetItemCooldownAtSlot(0);
+        }
+
 
         if (null != items[1])
         {
             if (Input.GetKeyDown(KeyCode.Alpha2)) UseItem(1);
             UsePassive(1);
-            UpdateCooldownTimer(1);
-        }
-        else
             MainUiController.SetItemCooldownAtSlot(1);
+        }
 
         if (null != items[2])
         {
             if (Input.GetKeyDown(KeyCode.Alpha3)) UseItem(2);
             UsePassive(2);
-            UpdateCooldownTimer(2);
-        }
-        else
             MainUiController.SetItemCooldownAtSlot(2);
+        }
 
         if (null != items[3])
         {
             if (Input.GetKeyDown(KeyCode.Alpha4)) UseItem(3);
             UsePassive(3);
-            UpdateCooldownTimer(3);
-        }
-        else
             MainUiController.SetItemCooldownAtSlot(3);
+        }
     }
 
     public void AddItem(ItemData itemData, GameObject objectToDelete)
@@ -97,27 +80,39 @@ public class ItemsHandler : MonoBehaviour
 
             if (Input.GetKeyDown(InputManager.InteractKey))
             {
-                ItemData currentItem = items[playerInventory.selectedItemIndex];
 
-                if (currentItem != null && currentItem.itemName == itemData.itemName)
+                bool duplicateInEq = false;
+                for (int i = 0; i <= 3; i++)
                 {
-                    Debug.Log("Istnieje już taki item w ekwipunku");
-                }
-                else
-                {
-                    items[playerInventory.selectedItemIndex] = null;
-                    items[playerInventory.selectedItemIndex] = itemData;
-                    playerInventory.SetImageAtSlot(itemData);
+                    ItemData currentItem = items[i];
 
-                    playerInventory.EndPickingItem();
-                    Destroy(pickedObject.gameObject.transform.parent.gameObject);
-                    playerInventory.HideEquipment();
-                    playerInventory.isPlayerPickingItem = false;
+                    if (currentItem != null && currentItem.itemName == itemData.itemName)
+                    {
+                        Debug.LogError("Istnieje już taki item w ekwipunku");
+
+                        duplicateInEq = true;
+                        playerInventory.HideEquipment();
+                        break;
+                    }
                 }
+
+                if (duplicateInEq) break;
+
+                items[playerInventory.selectedItemIndex] = null;
+                items[playerInventory.selectedItemIndex] = itemData;
+                playerInventory.SetImageAtSlot(itemData);
+
+                playerInventory.EndPickingItem();
+                Destroy(pickedObject.gameObject.transform.parent.gameObject);
+                playerInventory.HideEquipment();
+                playerInventory.isPlayerPickingItem = false;
             }
 
             yield return null;
         }
+
+        playerInventory.EndPickingItem();
+        playerInventory.HideEquipment();
     }
 
     public void UseItem(int itemPos)
@@ -128,16 +123,6 @@ public class ItemsHandler : MonoBehaviour
             usedItem.itemAbility.Use();
             usedItem.currentCooldown = usedItem.cooldown;
             StartCoroutine(CooldownTimer(usedItem, itemPos));
-
-            // Wyczernienie przedmiotu
-            try
-            {
-                Image itemImage = MainUi.transform.Find("Items").transform.GetChild(itemPos).GetComponent<Image>();
-                itemImage.color = new Color32(55, 55, 55, 255);
-            }
-            catch (Exception)
-            {
-            }
         }
     }
 
@@ -150,15 +135,6 @@ public class ItemsHandler : MonoBehaviour
         }
 
         item.currentCooldown = 0;
-
-        try
-        {
-            Image itemImage = MainUi.transform.Find("Items").transform.GetChild(itemPos).GetComponent<Image>();
-            itemImage.color = Color.white;
-        }
-        catch (Exception)
-        {
-        }
     }
 
     public void UsePassive(int itemPos)
@@ -174,19 +150,5 @@ public class ItemsHandler : MonoBehaviour
     {
         ItemData usedItem = items[itemPos];
         usedItem.itemAbility.Remove();
-    }
-
-    // Metoda aktualizująca timer na UI
-    private void UpdateCooldownTimer(int itemPos)
-    {
-        ItemData item = items[itemPos];
-        if (item != null && item.currentCooldown > 0)
-        {
-            MainUiController.SetItemCooldownAtSlot(itemPos, item.currentCooldown.ToString());
-        }
-        else
-        {
-            MainUiController.SetItemCooldownAtSlot(itemPos, "READY");
-        }
     }
 }

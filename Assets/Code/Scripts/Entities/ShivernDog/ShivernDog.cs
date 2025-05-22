@@ -32,6 +32,7 @@ public class ShivernDog : MonoBehaviour
     {
         if(!isAttacking && Vector2.Distance(_player.transform.position, transform.position) > 0.1f)
             _enemyAI.RestoreMovement();
+
         float entityVelocity = GetComponent<Rigidbody2D>().velocity.x;
 
         Attack();

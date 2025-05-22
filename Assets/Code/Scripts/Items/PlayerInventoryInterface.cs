@@ -43,6 +43,7 @@ public class PlayerInventoryInterface : MonoBehaviour
      */
     [SerializeField] private VisualElement root;
     private List<VisualElement> _itemSlots = new List<VisualElement>();
+    private List<VisualElement> _itemImages = new List<VisualElement>();
     private Label IncomingItemName;
     private VisualElement IncomingItemImage;
     private Label IncomingItemPassive;
@@ -76,6 +77,7 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         // Zbieramy sloty itemów item1–item4
         _itemSlots = new List<VisualElement>();
+        _itemImages = new List<VisualElement>();
         for (int i = 1; i <= 4; i++)
         {
             var itemSlot = root.Q<VisualElement>($"item{i}");
@@ -83,7 +85,23 @@ public class PlayerInventoryInterface : MonoBehaviour
             {
                 _itemSlots.Add(itemSlot);
             }
+
+            var itemImage = itemSlot.Q<VisualElement>("Image");
+            if (itemImage != null)
+            {
+                _itemImages.Add(itemImage);
+
+                if ( itemsHandler.items.Count > 0  && (null != itemsHandler.items[i-1]) )
+                {
+                    itemImage.style.backgroundImage = new StyleBackground(itemsHandler.items[i-1].itemIcon);
+                }
+            }
+            else
+            {
+                Debug.LogError("Player inventory interface error! NIE MA ITEM IS NULL");
+            }
         }
+
         /*
          * Elementy UI
          */
@@ -223,7 +241,6 @@ public class PlayerInventoryInterface : MonoBehaviour
 
     public void EndPickingItem()
     {
-        // InventoryUi.transform.Find("Experience").gameObject.SetActive(false);
         HideItemInspector();
         rootVisualElement.RemoveFromClassList("pickingItem");
         isPlayerPickingItem = false;

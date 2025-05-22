@@ -14,6 +14,7 @@ public class MainUserInterfaceController : MonoBehaviour
     private Label bossName;
 
     private EntityStatus playerStatus;
+    private ItemsHandler playerItemsHandler;
     public EntityStatus BossStatus;
     private Boolean isBossBarShown = false;
     private GameObject bossHpBarObject;
@@ -26,6 +27,7 @@ public class MainUserInterfaceController : MonoBehaviour
     {
         var playerGameObject = GameObject.FindGameObjectWithTag("Player");
         playerStatus = playerGameObject.GetComponent<EntityStatus>();
+        playerItemsHandler = playerGameObject.GetComponent<ItemsHandler>();
         bossHpBarObject = gameObject.transform.Find("BossHpBar").gameObject;
 
         if (bossHpBarObject)
@@ -54,7 +56,6 @@ public class MainUserInterfaceController : MonoBehaviour
         bossBar = root.Q<Label>("BossBarLabel");
         bossName = root.Q<Label>("BossBarName");
 
-
         _itemImages = new List<VisualElement>();
         _itemCooldowns = new List<Label>();
         for (int i = 1; i <= 4; i++)
@@ -63,7 +64,12 @@ public class MainUserInterfaceController : MonoBehaviour
             var itemCooldown = root.Q<Label>($"ItemCooldown{i}");
 
             if (itemImage != null)
+            {
                 _itemImages.Add(itemImage);
+
+                if ( playerItemsHandler.items.Count > 0  && (null != playerItemsHandler.items[i-1]) )
+                    itemImage.style.backgroundImage = new StyleBackground(playerItemsHandler.items[i-1].itemIcon);
+            }
 
             if (itemCooldown != null)
                 _itemCooldowns.Add(itemCooldown);
@@ -86,7 +92,6 @@ public class MainUserInterfaceController : MonoBehaviour
             var fillPercentage = BossStatus.GetHp() / BossStatus.GetMaxHp();
             bossHpBarImage.fillAmount = fillPercentage;
         }
-
     }
 
     public void ShowBossBar(EntityStatus _BossStatus)
@@ -106,9 +111,22 @@ public class MainUserInterfaceController : MonoBehaviour
         BossStatus = null;
     }
 
-    public void SetItemCooldownAtSlot(int itemIndex, string itemCooldown = "")
+    public void SetItemCooldownAtSlot(int itemIndex)
     {
-        _itemCooldowns[itemIndex].text = (itemCooldown == "") ? itemCooldown : "";
+        var currentItem = playerItemsHandler.items[itemIndex];
+
+        if ( null != currentItem && currentItem.currentCooldown <= currentItem.cooldown && currentItem.currentCooldown > 0 )
+        {
+            _itemCooldowns[itemIndex].text = currentItem.currentCooldown.ToString();
+        }
+        else if ( null != currentItem )
+        {
+            _itemCooldowns[itemIndex].text = "READY";
+        }
+        else
+        {
+            _itemCooldowns[itemIndex].text = "";
+        }
     }
 
     public void SetItemImageAtSlot(int itemIndex, Sprite itemImage = null)

@@ -22,7 +22,6 @@ public class InvasionInterface : MonoBehaviour
             Debug.LogError("Brak komponentu UIDocument na obiekcie!");
             return;
         }
-        Debug.Log("UIDocument na obiekcie!");
         panel = uiDocument.rootVisualElement;
         
         // Pobieramy referencje do przycisków z UXML
