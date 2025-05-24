@@ -75,7 +75,7 @@ public class MainUserInterfaceController : MonoBehaviour
                 _itemCooldowns.Add(itemCooldown);
         }
 
-        bossBarRoot.SetEnabled(false);
+        HideBossBar();
     }
 
     private void Update()
@@ -97,7 +97,7 @@ public class MainUserInterfaceController : MonoBehaviour
     public void ShowBossBar(EntityStatus _BossStatus)
     {
         BossStatus = _BossStatus;
-        bossBarRoot.SetEnabled(true);
+        bossBarRoot.style.display = DisplayStyle.Flex;
         bossHpBarObject.SetActive(true);
         isBossBarShown = true;
     }
@@ -106,7 +106,7 @@ public class MainUserInterfaceController : MonoBehaviour
     {
         isBossBarShown = false;
         bossName.text = "";
-        bossBarRoot.SetEnabled(false);
+        bossBarRoot.style.display = DisplayStyle.None;
         bossHpBarObject.SetActive(false);
         BossStatus = null;
     }
