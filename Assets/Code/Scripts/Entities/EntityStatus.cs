@@ -162,7 +162,6 @@ public class EntityStatus : MonoBehaviour
 
             if (isParrying && isPlayerFacedToEnemy)
             {
-                Debug.Log("paruję cios");
                 // gracz sparował cios
                 float parryingDamageReduction = 0f; // 0 = 100% redukcji
                 if ( damage * parryingDamageReduction * incomingDamagePercent >= GetHp() )
@@ -174,6 +173,8 @@ public class EntityStatus : MonoBehaviour
                     PlayerDeathEvent();
                 } else if (damage * parryingDamageReduction * incomingDamagePercent < GetHp())
                 {
+                    PlayPlayerSFXSingle(WorldSoundFXManager.instance.playerParrySFX, Enums.SoundType.SFX, 2f);
+
                     // gracz otrzymuje obrażenia
                     GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent, true);
                     
@@ -413,5 +414,29 @@ public class EntityStatus : MonoBehaviour
     public bool GetIsAlerted()
     {
         return this.isAlerted;
+    }
+
+
+    public void PlayPlayerSFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)
+    {
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.PlaySoundFX(audioClip, soundType, randomPitch * pitchMultiplier);
+    }
+    public void PlayPlayerSFXArray(AudioClip[] audioArray, Enums.SoundType soundType, float pitchMultiplier = 1f)
+    {
+        if (WorldSoundFXManager.instance == null)
+            return;
+
+        if (WorldSoundFXManager.instance.gameState == Enums.GameState.Paused)
+            return;
+
+        float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+        WorldSoundFXManager.instance.ChooseRandomSFXFromArray(audioArray, soundType, randomPitch * pitchMultiplier);
     }
 }
