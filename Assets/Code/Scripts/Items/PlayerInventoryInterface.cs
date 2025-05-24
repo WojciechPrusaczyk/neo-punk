@@ -53,12 +53,18 @@ public class PlayerInventoryInterface : MonoBehaviour
     private Label SelectedItemPassive;
     private Label SelectedItemActive;
 
+    private Label healthTitle;
+    private Label movementSpeedTitle;
+    private Label attackTitle;
+    private Label goldTitle;
+
     public void Awake()
     {
         MainUi = GameObject.Find("MainUserInterfaceRoot");
         MainUiController = MainUi.GetComponentInChildren<MainUserInterfaceController>();
         userInterfaceController = MainUi.GetComponent<UserInterfaceController>();
         itemsHandler = GameObject.FindWithTag("Player").GetComponent<ItemsHandler>();
+        playerStatus = GameObject.FindWithTag("Player").GetComponent<EntityStatus>();
     }
 
     void OnEnable()
@@ -114,6 +120,11 @@ public class PlayerInventoryInterface : MonoBehaviour
         SelectedItemImage = root.Q<VisualElement>("SelectedItemImage");
         SelectedItemPassive = root.Q<Label>("SelectedItemPassive");
         SelectedItemActive = root.Q<Label>("SelectedItemActive");
+
+        healthTitle = root.Q<Label>("HealthTitle");
+        movementSpeedTitle = root.Q<Label>("MovementSpeedTitle");
+        attackTitle = root.Q<Label>("AttackTitle");
+        goldTitle = root.Q<Label>("GoldTitle");
 
         SetUnlockedSlotsCount();
 
@@ -185,6 +196,18 @@ public class PlayerInventoryInterface : MonoBehaviour
                 UpdateSelectedItemInfo();
             }
         }
+
+        if (healthTitle != null)
+            healthTitle.text = $"{playerStatus.entityHealthPoints:F1} / {playerStatus.entityMaxHelath:F1}";
+
+        if (movementSpeedTitle != null)
+            movementSpeedTitle.text = $"{playerStatus.MovementSpeed:F1} MS";
+
+        if (attackTitle != null)
+            attackTitle.text = $"{playerStatus.AttackDamage:F1} ATK";
+
+        if (goldTitle != null)
+            goldTitle.text = $"{playerStatus.gold:F1} G";
     }
 
     private void SetUnlockedSlotsCount()

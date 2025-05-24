@@ -186,7 +186,7 @@ public class EntityStatus : MonoBehaviour
                 
             } else if (isBLocking && isPlayerFacedToEnemy)
             {
-                Debug.Log("blokuję cios");
+                OnPlayerDamageTaken?.Invoke();
                 // gracz zablokował cios
                 float blockingDamageReduction = 0.6f; // 0.6 = 40% redukji
                 if ( damage * blockingDamageReduction * incomingDamagePercent >= GetHp() )
@@ -220,6 +220,7 @@ public class EntityStatus : MonoBehaviour
                     // gracz otrzymuje obrażenia
                     //if (null != missionTracker) missionTracker.AddDamageTaken(damage * incomingDamagePercent);
                     GettingDamageEvent(damage * incomingDamagePercent, true);
+                    OnPlayerDamageTaken?.Invoke();
                     
                     // animacja paska hp sygnalizująca otrzymanie obrażeń
                 }
@@ -262,7 +263,6 @@ public class EntityStatus : MonoBehaviour
     
     void GettingDamageEvent( float damage, bool isPlayer = false )
     {
-        OnPlayerDamageTaken?.Invoke();
 
         // Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);

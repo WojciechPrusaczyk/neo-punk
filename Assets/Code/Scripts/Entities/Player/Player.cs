@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
     private Vector3 lastSafePosition;
     private SoundManager _soundManager;
     private float _lastDashTime;
+    private bool wasDamagedRecently = false;
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -79,7 +80,7 @@ public class Player : MonoBehaviour
     public bool canJump = true;
     public bool isJumping = false;
 
-    private void Start()
+    private void Awake()
     {
         // pobieranie rigidbody
         playerBody = GetComponent<Rigidbody2D>();
@@ -98,11 +99,11 @@ public class Player : MonoBehaviour
         // {
         //     Debug.LogError("ElementalIconComponent nie został znaleziony w Start().");
         // }
-    }
-
-    private void Awake()
-    {
         _soundManager = GetComponent<SoundManager>();
+        if (playerStatus != null)
+        {
+            playerStatus.OnPlayerDamageTaken += OnPlayerDamaged;
+        }
     }
 
     public void SaveGameDataToCurrentCharacterData(ref CharacterSaveData currentCharacterData)
@@ -378,6 +379,15 @@ public class Player : MonoBehaviour
             {
                 Dash();
             }
+        }
+
+        /*
+         * Sygnalizacja otrzymania obrażeń
+         */
+        if (wasDamagedRecently)
+        {
+            wasDamagedRecently = false;
+            FindObjectOfType<CameraShaker>()?.DoScreenShake();
         }
     }
 
@@ -705,6 +715,11 @@ public class Player : MonoBehaviour
         }
 
         return direction;
+    }
+
+    private void OnPlayerDamaged()
+    {
+        wasDamagedRecently = true;
     }
 }
 #if UNITY_EDITOR

@@ -80,13 +80,13 @@ public class MainUserInterfaceController : MonoBehaviour
 
     private void Update()
     {
-        hpLabel.text = $"{playerStatus.entityMaxHelath} / {playerStatus.entityHealthPoints}";
+        hpLabel.text = $"{playerStatus.entityHealthPoints:F1} / {playerStatus.entityMaxHelath:F1}";
 
         bossHpBarObject.SetActive(isBossBarShown);
         if (isBossBarShown && BossStatus)
         {
             bossHpBarObject.SetActive(true);
-            bossBar.text = $"{BossStatus.entityMaxHelath} / {BossStatus.entityHealthPoints}";
+            bossBar.text = $"{BossStatus.entityHealthPoints:F1} / {BossStatus.entityMaxHelath:F1}";
             bossName.text = BossStatus.entityName;
 
             var fillPercentage = BossStatus.GetHp() / BossStatus.GetMaxHp();
