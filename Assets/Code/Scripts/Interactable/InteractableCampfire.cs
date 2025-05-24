@@ -61,7 +61,7 @@ public class InteractableCampfire : Interactable
         {
             if (campfireController != null)
             {
-                campfireController.ActivateCampfireInterface();
+                campfireController.ActivateCampfireInterface(ID);
             }
         }
 
@@ -81,8 +81,8 @@ public class InteractableCampfire : Interactable
 
         if (instantiatedIcon == null && InteractIcon != null && isPlayerInRange)
         {
-            Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-            InstantiateInteractionIcon(InteractIcon, positionAboveCampfire);
+            Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            InstantiateInteractionIcon(InteractIcon, positionAboveCampfire, interactableIconYOffset);
         }
     }
 
@@ -140,8 +140,8 @@ public class InteractableCampfire : Interactable
             // Wyœwietl ikonê interakcji
             if (InteractIcon != null && !campfireController.isCampfireUIActive)
             {
-                Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-                InstantiateInteractionIcon(InteractIcon, positionAboveCampfire);
+                Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                InstantiateInteractionIcon(InteractIcon, positionAboveCampfire, interactableIconYOffset);
             }
         }
     }

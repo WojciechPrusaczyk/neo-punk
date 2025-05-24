@@ -8,7 +8,7 @@ using static Enums;
 public class WorldSaveGameManager : MonoBehaviour
 {
     public static WorldSaveGameManager instance;
-    
+
     public Player player;
 
     [SerializeField] bool saveGame = false;
@@ -221,6 +221,9 @@ public class WorldSaveGameManager : MonoBehaviour
         }
 
         player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
+        WorldObjectManager worldObjectManager = FindFirstObjectByType<WorldObjectManager>();
+        if (worldObjectManager != null)
+            worldObjectManager.ReCalculateLists();
     }
 
     public void AttemptToCreateNewSettingsFile()

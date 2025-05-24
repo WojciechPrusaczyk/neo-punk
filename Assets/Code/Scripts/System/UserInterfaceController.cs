@@ -14,8 +14,8 @@ public class UserInterfaceController : MonoBehaviour
         get
         {
             if (Interfaces.Count == 0)
-                return false;
-            return Interfaces[DefaultInterface].interfaceRoot.activeSelf;
+                return true;
+            return !Interfaces[DefaultInterface].interfaceRoot.activeSelf;
         }
     }
 
@@ -48,7 +48,6 @@ public class UserInterfaceController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

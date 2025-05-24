@@ -15,6 +15,8 @@ public class UI_CampfireInterface_Controller : MonoBehaviour
     private int interfaceIndex = 0;
     public bool isCampfireUIActive = false;
 
+    public List<Button> activeCampfiresButtons = new List<Button>();
+
     public void Awake()
     {
         MainUi = GameObject.Find("MainUserInterfaceRoot");
@@ -37,31 +39,59 @@ public class UI_CampfireInterface_Controller : MonoBehaviour
             return;
         }
 
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
         interfaceIndex = userInterfaceController.GetInterfaces().FindIndex(x => x.interfaceRoot == gameObject);
         rootVisualElement = root.Q<VisualElement>("Campfires");
 
-        // Add a new button to the root visual element
-        // Text in button: Campfire
-        // Button id: Campfire1
-        // Font size: 32
+        activeCampfiresButtons.Clear();
+
+        if (WorldSaveGameManager.instance == null)
+            return;
+
+        // Tworzenie przycisków dla aktywnych ognisk
         if (rootVisualElement != null)
         {
-            Button campfireButton = new Button(ActivateCampfireInterface)
+            if (WorldObjectManager.instace == null)
+                return;
+
+            foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
             {
-                text = "Campfire",
-                name = "Campfire1",
-                style =
+                if (campfire == null)
+                    continue;
+
+                if (!campfire.isActivated)
+                    continue;
+
+                if (rootVisualElement != null)
                 {
-                    fontSize = 32,
-                    width = 200,
-                    height = 50
+                    Button campfireButton = new Button()
+                    {
+                        text = $"Campfire {campfire.ID}",
+                        name = $"CampfireButton_{campfire.ID}",
+                        style =
+                        {
+                            fontSize = 32,
+                            width = 500,
+                            height = 100
+                        }
+                    };
+                    activeCampfiresButtons.Add(campfireButton);
+                    campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);
                 }
-            };
-            rootVisualElement.Add(campfireButton);
-        }
-        else
-        {
-            Debug.LogError("Campfire UI Error, root visual element not found.");
+                else
+                {
+                    Debug.LogError("Campfire UI Error, root visual element not found.");
+                }
+
+                rootVisualElement.Clear();
+
+                activeCampfiresButtons.Sort((x, y) => x.text.CompareTo(y.text));
+                foreach (Button button in activeCampfiresButtons)
+                {
+                    rootVisualElement.Add(button);
+                }
+            }
         }
     }
 
@@ -69,7 +99,7 @@ public class UI_CampfireInterface_Controller : MonoBehaviour
     {
     }
 
-    public void ActivateCampfireInterface()
+    public void ActivateCampfireInterface(int ID)
     {
         if (MainUiController == null || userInterfaceController == null)
         {

@@ -397,6 +397,27 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(duration);
         canBlock = true;
     }
+
+    public void TeleportPlayerToCampfire(int campfireID)
+    {
+        if (WorldObjectManager.instace == null)
+        {
+            Debug.LogError("WorldObjectManager is not initialized.");
+            return;
+        }
+        InteractableCampfire campfire = WorldObjectManager.instace.GetCampfireByID(campfireID);
+        if (campfire == null)
+        {
+            Debug.LogError($"Campfire with ID {campfireID} not found.");
+            return;
+        }
+        transform.position = new Vector3(campfire.transform.position.x, campfire.transform.position.y + 1.0f, transform.position.z);
+
+        playerBody.velocity = Vector2.zero;
+
+        if (WorldSoundFXManager.instance != null)
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.SFX);
+    }
     
     
     void DetectStairs()
@@ -554,6 +575,9 @@ public class Player : MonoBehaviour
 
     private void StartAttack()
     {
+        if (UserInterfaceController.instance.isUIMenuActive)
+            return;
+
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;

@@ -6,7 +6,9 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public Collider2D interactableCollider;
-    public float colliderDisableTimer = 5f;
+    public float colliderDisableTimer = 2f;
+    
+    [SerializeField] protected float interactableIconYOffset = 1.5f;
 
     [SerializeField] protected GameObject InteractIcon;
     [SerializeField] protected GameObject instantiatedIcon;
@@ -38,9 +40,9 @@ public class Interactable : MonoBehaviour
     }
 
     // Tworzenie ikony interakcji
-    protected void InstantiateInteractionIcon(GameObject iconPrefab, Vector3 position)
+    protected void InstantiateInteractionIcon(GameObject iconPrefab, Vector3 position, float yOffset = 1.5f)
     {
-        instantiatedIcon = Instantiate(iconPrefab, position, Quaternion.identity);
+        instantiatedIcon = Instantiate(iconPrefab, new Vector3(position.x, position.y + yOffset, position.z), Quaternion.identity);
         instantiatedIcon.transform.SetParent(transform);
     }
 
@@ -73,6 +75,8 @@ public class Interactable : MonoBehaviour
     // Podobnie jak w przypadku Interact(), ka¿dy obiekt bêdzie mia³ swoj¹ w³asn¹ logikê.
     protected virtual void PrepareInteractable()
     {
+        if (WorldSaveGameManager.instance == null)
+            return;
     }
 
     protected virtual void CloseUIOnExit()
