@@ -529,8 +529,15 @@ public class Player : MonoBehaviour
             foreach (var entity in collidingObjects)
             {
                 // zadawanie obrażeń
+
+                var enemyType = entity.GetComponent<EntityStatus>().entityType;
                 entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
                 // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
+
+                if (enemyType == Enums.EntityType.Cyber)
+                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackMetalSFX, Enums.SoundType.SFX, 2f);
+                else
+                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackFleshSFX, Enums.SoundType.SFX, 2f);
             }
         }
     }

@@ -29,6 +29,8 @@ public class WorldSoundFXManager : MonoBehaviour
     public AudioClip dashSFX;
     public AudioClip[] playerBlockSFX;
     public AudioClip[] playerAttackSFX;
+    public AudioClip[] playerAttackMetalSFX;
+    public AudioClip[] playerAttackFleshSFX;
 
     [Header("Shivern Dog Sounds")]
     public AudioClip[] ShDogAttackSFX;
