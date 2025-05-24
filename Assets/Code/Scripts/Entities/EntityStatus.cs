@@ -40,6 +40,7 @@ public class EntityStatus : MonoBehaviour
     private LootTable lootTable;
     //private MissionTracker missionTracker;
     private Volume postProcessVolume;
+    public event System.Action OnPlayerDamageTaken;
 
 
     // Wartość wyrażona w procentach, która odpowiada za % otrzymywanych obrażeń
@@ -261,6 +262,8 @@ public class EntityStatus : MonoBehaviour
     
     void GettingDamageEvent( float damage, bool isPlayer = false )
     {
+        OnPlayerDamageTaken?.Invoke();
+
         // Debug.Log("Zadaję obrażenia");
         SetHp(GetHp() - damage);
 

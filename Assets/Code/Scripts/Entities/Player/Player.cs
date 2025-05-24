@@ -44,7 +44,6 @@ public class Player : MonoBehaviour
     public LayerMask obstacleLayer; // Warstwa przeszkód
     public float playerVoidLevel; // Próg, poniżej którego dash nie działa
 
-
     /*
      * Zmienne lokalne
      */
