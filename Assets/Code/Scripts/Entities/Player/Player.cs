@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
         [SerializeField] public string name;
         public Sprite icon;
         public Color elementalColor;
+        public Enums.ElementalType elementalType;
     }
 
     [Header("Elemental Types")] public List<ElementalType> ElementalTypes = new List<ElementalType>();
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public int attackState = 0; // Aktualny stan ataku
     public bool isAttacking = false; // Czy trwa atak
+    public bool canWalkAfterAttack = false; // Czy właśnie jest animacja ataku
     public bool isGrounded = false; // Czy dotyka ziemii
     public bool isBlocking;
     public bool isParrying;
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
     private GameObject swordHitbox;
     private Vector3 previousPosition;
     private float attackTimeout = 1.0f; // Czas na zakończenie sekwencji ataku
+    private float attackBreakTimeout = 0.1f; // Czas trwania animacji po natychmiastowy przerwaniu chodzeniem
     private float lastAttackTime = 0; // aktualny pomiędzy atakami
     private float attackCooldown = 0.3f; // cooldown ponmiędzy atakami
     private Coroutine attackCoroutine;
@@ -202,11 +205,12 @@ public class Player : MonoBehaviour
         //      (horizontalInput > 0 && !playerStatus.isFacedRight)))
         // {
         // else if (isBlocking) horizontalInput = 0;
-        if (isAttacking)
-        {
+
+        if (canWalkAfterAttack)
             horizontalInput = 0;
-        }
-        else if (isBlocking) horizontalInput = 0;
+
+        if (isBlocking)
+            horizontalInput = 0;
 
         /*
          * przemieszczanie w osi x, prędkość poruszania się zależna od tego czy gracz atakuje
@@ -225,17 +229,15 @@ public class Player : MonoBehaviour
             playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
         }
 
-        /*
-         * if (!isAttacking)
-            {
-                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
-            }
-            else
-            {
-                playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
-                    playerBody.velocity.y);
-            }
-         */
+        if (isAttacking && playerStatus.detectedTargets.Count <= 0)
+        {
+            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.2f, playerBody.velocity.y);
+        }
+        // else
+        // {
+        //     playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.6f,
+        //         playerBody.velocity.y);
+        // }
         
         /*
          * Nieznaczne wydłużanie hitboxa ataków podczas biegu
@@ -365,7 +367,7 @@ public class Player : MonoBehaviour
             (Input.GetKeyDown(InputManager.MoveDownKey) ||
              Input.GetAxis("Vertical") < 0 ) )
         {
-            DisableCollisionForDuration(0.3f);
+            DisableCollisionForDuration(0.4f);
         }
 
         /*
@@ -527,7 +529,6 @@ public class Player : MonoBehaviour
             foreach (var entity in collidingObjects)
             {
                 // zadawanie obrażeń
-                Debug.Log(damageToDeal);
                 entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
                 // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
             }
@@ -540,7 +541,12 @@ public class Player : MonoBehaviour
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;
-        movePlayerOnAttack(3.0f);
+
+        if ( playerStatus.detectedTargets.Count <= 0 )
+            movePlayerOnAttack(3.0f);
+        else
+            movePlayerOnAttack(-0.5f);
+
         animator.Play("Attack_1");
 
         if (WorldSoundFXManager.instance != null)
@@ -562,7 +568,11 @@ public class Player : MonoBehaviour
         // Sprawdź, czy minęło wystarczająco dużo czasu między atakami
         if (Time.time - lastAttackTime >= attackCooldown)
         {
-            movePlayerOnAttack(3.0f);
+            if ( playerStatus.detectedTargets.Count <= 0 )
+                movePlayerOnAttack(3.0f);
+            else
+                movePlayerOnAttack(-0.5f);
+
             if (attackState == 4)
             {
                 // Gracz zaczyna nową sekwencję ataku
@@ -579,7 +589,10 @@ public class Player : MonoBehaviour
                 // Kontynuuj sekwencję ataku
                 attackState++;
 
-                movePlayerOnAttack(3.0f);
+                if ( playerStatus.detectedTargets.Count <= 0 )
+                    movePlayerOnAttack(3.0f);
+                else
+                    movePlayerOnAttack(-0.5f);
 
                 if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 

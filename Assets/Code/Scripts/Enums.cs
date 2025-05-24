@@ -24,4 +24,21 @@ public class Enums : MonoBehaviour
         Paused,
         Unpaused
     }
+
+    public enum ElementalType
+    {
+        Normal,
+        Bloody,
+        Storm,
+        Flame,
+        Air,
+        Water
+    }
+
+    public enum EntityType
+    {
+        Human,
+        Cyber,
+        Demon
+    }
 }

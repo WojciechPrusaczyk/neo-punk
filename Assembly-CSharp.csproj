@@ -104,6 +104,7 @@
     <Compile Include="Assets\Code\Scripts\System\LootTable.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\SoundManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\AnimationEventDragonFly.cs" />
+    <Compile Include="Assets\Code\Scripts\UserInterface\HpBarController.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\OptionsMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\System\WorldSoundFXManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\PlayerDetector.cs" />
@@ -161,6 +162,7 @@
     <None Include="Assets\Level\UI\MainUserInterface.uss" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Level\UI\DialogMenu\DialogMenu.uxml" />
+    <None Include="Assets\Code\Shaders\SpriteFill2D.shader" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uss" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

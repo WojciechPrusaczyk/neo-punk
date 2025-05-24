@@ -30,6 +30,7 @@ public class EntityStatus : MonoBehaviour
     public Color deathColor;
     public GameObject healthBar;
     public bool isAlerted;
+    public Enums.EntityType entityType = Enums.EntityType.Human;
 
     private GameObject mainUserInterface;
     private SpriteRenderer spriteRenderer;
@@ -39,7 +40,6 @@ public class EntityStatus : MonoBehaviour
     private LootTable lootTable;
     //private MissionTracker missionTracker;
     private Volume postProcessVolume;
-
 
 
     // Wartość wyrażona w procentach, która odpowiada za % otrzymywanych obrażeń
