@@ -135,7 +135,7 @@ MonoBehaviour:
   deathColor: {r: 0, g: 0, b: 0, a: 0}
   healthBar: {fileID: 0}
   isAlerted: 0
-  entityType: 0
+  entityType: 1
   incomingDamagePercent: 1
 --- !u!114 &5208658026229679533
 MonoBehaviour:

@@ -1,16 +1,27 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class HpBarController : MonoBehaviour
 {
     public EntityStatus entityStatus;
+
+    [Header("Normal type")]
     public Sprite normalTypeIcon;
+    public Color normalTypeColor;
+
+    [Header("Cyber type")]
     public Sprite cyberTypeIcon;
+    public Color cyberTypeColor;
+
+    [Header("Cemon type")]
     public Sprite demonTypeIcon;
+    public Color demonTypeColor;
 
     private Material material;
     private float lastHpRatio = -1f;
     private SpriteRenderer enemyIcon;
+    private Light2D enemyLight;
 
     void Start()
     {
@@ -24,18 +35,16 @@ public class HpBarController : MonoBehaviour
 
         material = renderer.material;
 
-        foreach (var sr in GetComponentsInChildren<SpriteRenderer>())
-        {
-            if (sr != renderer)
-            {
-                enemyIcon = sr;
-                break;
-            }
-        }
+        enemyIcon = gameObject.transform.Find("TypeIcon").GetComponent<SpriteRenderer>();
+        enemyLight = gameObject.transform.Find("TypeIcon").GetComponent<Light2D>();
 
         if (enemyIcon == null)
         {
             Debug.LogWarning("HpBarController: Nie znaleziono ikony w dzieciach.");
+        }
+        if (enemyLight == null)
+        {
+            Debug.LogWarning("HpBarController: Nie znaleziono światła w dzieciach.");
         }
     }
 
@@ -54,13 +63,16 @@ public class HpBarController : MonoBehaviour
         switch (entityStatus.entityType)
         {
             case Enums.EntityType.Human:
-                enemyIcon.sprite = cyberTypeIcon;
+                enemyIcon.sprite = normalTypeIcon;
+                enemyLight.color = normalTypeColor;
                 break;
             case Enums.EntityType.Cyber:
                 enemyIcon.sprite = cyberTypeIcon;
+                enemyLight.color = cyberTypeColor;
                 break;
             case Enums.EntityType.Demon:
-                enemyIcon.sprite = cyberTypeIcon;
+                enemyIcon.sprite = demonTypeIcon;
+                enemyLight.color = demonTypeColor;
                 break;
         }
     }

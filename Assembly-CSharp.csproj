@@ -161,6 +161,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Level\UI\MainUserInterface.uss" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Level\UI\Campfire\Campfire.uxml" />
     <None Include="Assets\Level\UI\DialogMenu\DialogMenu.uxml" />
     <None Include="Assets\Code\Shaders\SpriteFill2D.shader" />
     <None Include="Assets\Level\UI\PauseMenuInterface.uss" />
