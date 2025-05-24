@@ -36,6 +36,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
         {
             objectiveList.Add(mission);
             currentMission = mission;
+            mainUserInterfaceController.SetCurrentObjective(mission);
             playerInventoryInterface.SetCurrentObjective(mission);
 
             Debug.Log($"Dodano nową misję: {mission.MissionName}");

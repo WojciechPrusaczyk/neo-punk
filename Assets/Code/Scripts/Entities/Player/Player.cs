@@ -579,10 +579,13 @@ public class Player : MonoBehaviour
                 entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
                 // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
 
-                if (enemyType == Enums.EntityType.Cyber)
-                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackMetalSFX, Enums.SoundType.SFX, 2f);
-                else
-                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackFleshSFX, Enums.SoundType.SFX, 2f);
+                if (WorldSoundFXManager.instance)
+                {
+                    if (enemyType == Enums.EntityType.Cyber)
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackMetalSFX, Enums.SoundType.SFX, 2f);
+                    else
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackFleshSFX, Enums.SoundType.SFX, 2f);
+                }
             }
         }
     }
@@ -604,10 +607,10 @@ public class Player : MonoBehaviour
 
         animator.Play("Attack_1");
 
-        if (WorldSoundFXManager.instance != null)
-            PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
-
         DealDamage(playerStatus.GetAttackDamageCount());
+
+        if (WorldSoundFXManager.instance)
+            PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
     }
 
     private void ContinueAttack()
@@ -634,10 +637,10 @@ public class Player : MonoBehaviour
                 attackState = 1;
                 animator.Play("Attack_1");
 
-                if (WorldSoundFXManager.instance != null)
-                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
-
                 DealDamage(playerStatus.GetAttackDamageCount());
+
+                if (WorldSoundFXManager.instance)
+                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
             }
             else
             {

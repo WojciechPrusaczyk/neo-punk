@@ -7,18 +7,22 @@ using Image = UnityEngine.UI.Image;
 
 public class MainUserInterfaceController : MonoBehaviour
 {
+    public float missionPopupTimeout;
 
     private Label hpLabel;
     private VisualElement bossBarRoot;
     private Label bossBar;
     private Label bossName;
+    private VisualElement missionPopup;
+    private Label missionTitle;
+    private Label missionDescription;
 
     private VisualElement elementalIcon;
     private Label elementalLabel;
 
     private EntityStatus playerStatus;
     private ItemsHandler playerItemsHandler;
-    public EntityStatus BossStatus;
+    private EntityStatus BossStatus;
     private Boolean isBossBarShown = false;
     private GameObject bossHpBarObject;
     private UnityEngine.UI.Image bossHpBarImage;
@@ -64,6 +68,13 @@ public class MainUserInterfaceController : MonoBehaviour
          */
         elementalIcon = root.Q<VisualElement>("ElementalIcon");
         elementalLabel = root.Q<Label>("ElementalLabel");
+
+        /*
+         * Misje
+         */
+        missionPopup = root.Q<VisualElement>("MissionPopup");
+        missionTitle = root.Q<Label>("MissionTitle");
+        missionDescription = root.Q<Label>("MissionDescription");
 
         _itemImages = new List<VisualElement>();
         _itemCooldowns = new List<Label>();
@@ -151,5 +162,30 @@ public class MainUserInterfaceController : MonoBehaviour
 
         elementalLabel.text = elementalName;
         elementalLabel.style.color = elementalColor;
+    }
+
+    public void SetCurrentObjective(MissionInfo _mission)
+    {
+        if (_mission == null)
+            return;
+
+        StopAllCoroutines(); // na wypadek, gdyby wcześniejsze jeszcze trwały
+
+        missionTitle.text = _mission.MissionName;
+        missionDescription.text = _mission.MissionDescription;
+
+        missionPopup.style.display = DisplayStyle.Flex;
+
+        missionPopup.AddToClassList("showPopup");
+
+        StartCoroutine(HideMissionPopupAfterDelay());
+    }
+
+    private IEnumerator HideMissionPopupAfterDelay()
+    {
+        yield return new WaitForSeconds(missionPopupTimeout);
+
+        missionPopup.RemoveFromClassList("showPopup");
+        missionPopup.style.display = DisplayStyle.None;
     }
 }
