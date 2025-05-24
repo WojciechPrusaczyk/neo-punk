@@ -53,6 +53,9 @@ public class PlayerInventoryInterface : MonoBehaviour
     private Label SelectedItemPassive;
     private Label SelectedItemActive;
 
+    private VisualElement elementalIcon;
+    private Label elementalLabel;
+
     private Label healthTitle;
     private Label movementSpeedTitle;
     private Label attackTitle;
@@ -125,6 +128,12 @@ public class PlayerInventoryInterface : MonoBehaviour
         movementSpeedTitle = root.Q<Label>("MovementSpeedTitle");
         attackTitle = root.Q<Label>("AttackTitle");
         goldTitle = root.Q<Label>("GoldTitle");
+
+        /*
+         * Elemental
+         */
+        elementalIcon = root.Q<VisualElement>("ElementalIcon");
+        elementalLabel = root.Q<Label>("ElementalLabel");
 
         SetUnlockedSlotsCount();
 
@@ -458,5 +467,13 @@ public class PlayerInventoryInterface : MonoBehaviour
         // Zdolność aktywna przedmiotu
         if (null != IncomingItemActive)
             IncomingItemActive.text = itemData.activeDescription;
+    }
+
+    public void ChangeElementalType(Sprite elementalSprite, string elementalName, Color elementalColor)
+    {
+        elementalIcon.style.backgroundImage = new StyleBackground(elementalSprite);
+
+        elementalLabel.text = elementalName;
+        elementalLabel.style.color = elementalColor;
     }
 }

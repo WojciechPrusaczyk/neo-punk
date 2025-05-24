@@ -13,6 +13,9 @@ public class MainUserInterfaceController : MonoBehaviour
     private Label bossBar;
     private Label bossName;
 
+    private VisualElement elementalIcon;
+    private Label elementalLabel;
+
     private EntityStatus playerStatus;
     private ItemsHandler playerItemsHandler;
     public EntityStatus BossStatus;
@@ -55,6 +58,12 @@ public class MainUserInterfaceController : MonoBehaviour
         bossBarRoot = root.Q<VisualElement>("BossBarRoot");
         bossBar = root.Q<Label>("BossBarLabel");
         bossName = root.Q<Label>("BossBarName");
+
+        /*
+         * Elemental
+         */
+        elementalIcon = root.Q<VisualElement>("ElementalIcon");
+        elementalLabel = root.Q<Label>("ElementalLabel");
 
         _itemImages = new List<VisualElement>();
         _itemCooldowns = new List<Label>();
@@ -134,5 +143,13 @@ public class MainUserInterfaceController : MonoBehaviour
         var backgroundImage = ( null != itemImage ) ? new StyleBackground(itemImage) : null;
 
         _itemImages[itemIndex].style.backgroundImage = backgroundImage;
+    }
+
+    public void ChangeElementalType(Sprite elementalSprite, string elementalName, Color elementalColor)
+    {
+        elementalIcon.style.backgroundImage = new StyleBackground(elementalSprite);
+
+        elementalLabel.text = elementalName;
+        elementalLabel.style.color = elementalColor;
     }
 }

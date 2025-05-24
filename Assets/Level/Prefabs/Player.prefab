@@ -446,15 +446,27 @@ MonoBehaviour:
   ElementalTypes:
   - name: Normal
     icon: {fileID: -370212139, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
-    elementalColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+    elementalColor: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
     elementalType: 0
   - name: Storm
     icon: {fileID: 153353745, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
-    elementalColor: {r: 0.7451851, g: 0.112362035, b: 0.9528302, a: 1}
+    elementalColor: {r: 0.7372549, g: 0.52156866, b: 0.9647059, a: 1}
     elementalType: 2
+  - name: Aquatic
+    icon: {fileID: -1207695560, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
+    elementalColor: {r: 0.4, g: 0.44313726, b: 1, a: 1}
+    elementalType: 5
+  - name: Fiery
+    icon: {fileID: -1608555847, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
+    elementalColor: {r: 0.92941177, g: 0.21960784, b: 0.16078432, a: 1}
+    elementalType: 3
+  - name: Air
+    icon: {fileID: -2077861660, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
+    elementalColor: {r: 0.8352941, g: 0.9490196, b: 0.9529412, a: 1}
+    elementalType: 4
   - name: Bloody
     icon: {fileID: 1941431724, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
-    elementalColor: {r: 1, g: 0.00969137, b: 0, a: 1}
+    elementalColor: {r: 0.7137255, g: 0.007843138, b: 0, a: 1}
     elementalType: 1
   UsedElementalTypeId: 0
   UsedElementalName: Normal
@@ -502,7 +514,7 @@ MonoBehaviour:
   entityMaxHelath: 40
   droppedXp: 0
   gold: 0
-  AttackDamage: 0
+  AttackDamage: 30
   MovementSpeed: 10
   isFacedRight: 1
   isEnemy: 0

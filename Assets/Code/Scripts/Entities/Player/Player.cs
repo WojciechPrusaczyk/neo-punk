@@ -71,6 +71,8 @@ public class Player : MonoBehaviour
     private SoundManager _soundManager;
     private float _lastDashTime;
     private bool wasDamagedRecently = false;
+    private MainUserInterfaceController mainUserInterfaceController;
+    private PlayerInventoryInterface playerInventoryInterface;
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -90,6 +92,11 @@ public class Player : MonoBehaviour
         playerStatus = GetComponent<EntityStatus>();
         swordHitbox = transform.Find("SwordHitbox").gameObject;
         animator = GetComponentInChildren<Animator>();
+
+        var mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
+
+        mainUserInterfaceController = mainUserInterfaceRoot.GetComponentInChildren<MainUserInterfaceController>();
+        playerInventoryInterface = mainUserInterfaceRoot.GetComponentInChildren<PlayerInventoryInterface>();
 
         // pauseMenu = GameObject.Find("Pause Menu Interface").GetComponent<PauseMenuBehaviour>();
 
@@ -389,6 +396,14 @@ public class Player : MonoBehaviour
             wasDamagedRecently = false;
             FindObjectOfType<CameraShaker>()?.DoScreenShake();
         }
+
+        var selectedElemental = ElementalTypes[UsedElementalTypeId];
+        if (mainUserInterfaceController != null && playerInventoryInterface != null)
+        {
+            mainUserInterfaceController.ChangeElementalType(selectedElemental.icon, selectedElemental.name, selectedElemental.elementalColor);
+            playerInventoryInterface.ChangeElementalType(selectedElemental.icon, selectedElemental.name, selectedElemental.elementalColor);
+        } else
+            Debug.LogError("Nie znaleziono elementów interfejsu.");
     }
 
     private IEnumerator EnableBlockingAfterDuration(float duration)
@@ -674,24 +689,9 @@ public class Player : MonoBehaviour
     {
         if (TypeId >= 0 && TypeId < ElementalTypes.Count)
         {
-            String elementalName = ElementalTypes[TypeId].name;
+            var selectedElemental = ElementalTypes[TypeId];
             UsedElementalTypeId = TypeId;
-            UsedElementalName = elementalName;
-
-            if (elementalIconComponent == null)
-            {
-                Debug.LogWarning("ElementalIconComponent jest null, próbuję przypisać go ponownie.");
-                elementalIconComponent = GameObject.Find("UserInterface").transform.Find("Main User Interface")
-                    .transform.Find("Elemental").transform.Find("ElementalIcon").gameObject.GetComponent<Image>();
-
-                if (elementalIconComponent == null)
-                {
-                    Debug.LogError("Nie udało się przypisać elementalIconComponent w ChangeElementalType.");
-                    return;
-                }
-            }
-
-            elementalIconComponent.sprite = ElementalTypes[TypeId].icon;
+            UsedElementalName = selectedElemental.name;
         }
     }
 
