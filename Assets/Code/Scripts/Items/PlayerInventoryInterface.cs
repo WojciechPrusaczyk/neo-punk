@@ -37,6 +37,7 @@ public class PlayerInventoryInterface : MonoBehaviour
     private Color primaryEqColor;
     private Color primaryItemsListColor;
     private bool isButtonDown = false;
+    private MissionInfo mission;
 
     /*
      * Ui document
@@ -60,6 +61,8 @@ public class PlayerInventoryInterface : MonoBehaviour
     private Label movementSpeedTitle;
     private Label attackTitle;
     private Label goldTitle;
+    private Label missionInfoHeaderTitle;
+    private Label missionInfoDescription;
 
     public void Awake()
     {
@@ -134,6 +137,12 @@ public class PlayerInventoryInterface : MonoBehaviour
          */
         elementalIcon = root.Q<VisualElement>("ElementalIcon");
         elementalLabel = root.Q<Label>("ElementalLabel");
+
+        /*
+         * Misje
+         */
+        missionInfoHeaderTitle = root.Q<Label>("MissionInfoHeaderTitle");
+        missionInfoDescription = root.Q<Label>("MissionInfoDescription");
 
         SetUnlockedSlotsCount();
 
@@ -217,6 +226,12 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         if (goldTitle != null)
             goldTitle.text = $"{playerStatus.gold:F1} G";
+
+        /*
+         * Current mission
+         */
+        missionInfoHeaderTitle.text = mission.MissionName;
+        missionInfoDescription.text = mission.MissionDescription;
     }
 
     private void SetUnlockedSlotsCount()
@@ -475,5 +490,10 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         elementalLabel.text = elementalName;
         elementalLabel.style.color = elementalColor;
+    }
+
+    public void SetCurrentObjective(MissionInfo _mission)
+    {
+        mission = _mission;
     }
 }

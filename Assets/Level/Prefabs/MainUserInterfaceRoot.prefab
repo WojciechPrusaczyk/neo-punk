@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df03f3a7329294942a9046db16ea0dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCampfireUIActive: 0
 --- !u!1 &3790645692831317544
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +580,7 @@ GameObject:
   - component: {fileID: 8957480508913914751}
   - component: {fileID: 5521721904183125955}
   - component: {fileID: 1997679756470280447}
+  - component: {fileID: 2420656263913210624}
   m_Layer: 0
   m_Name: MainUserInterfaceRoot
   m_TagString: Untagged
@@ -724,3 +726,15 @@ MonoBehaviour:
     ShowsOnTopOfMainUi: 0
     ShowCursor: 1
   DefaultInterface: 0
+--- !u!114 &2420656263913210624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9043579207754872659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a357ae971961743a00bea660b72db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
