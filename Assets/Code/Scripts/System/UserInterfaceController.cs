@@ -7,8 +7,20 @@ using static Enums;
 
 public class UserInterfaceController : MonoBehaviour
 {
+    public static UserInterfaceController instance;
+
+    public bool isUIMenuActive
+    {
+        get
+        {
+            if (Interfaces.Count == 0)
+                return false;
+            return Interfaces[DefaultInterface].interfaceRoot.activeSelf;
+        }
+    }
+
     [Serializable]
-    private class Interface
+    public class Interface
     {
         public GameObject interfaceRoot;
         public KeyCode KeyboardTrigger;
@@ -22,9 +34,38 @@ public class UserInterfaceController : MonoBehaviour
     [SerializeField]
     private List<Interface> Interfaces = new List<Interface>();
 
+    public List<Interface> GetInterfaces()
+    {
+        return Interfaces;
+    }
+
     [SerializeField]
     private int DefaultInterface = 0;
     private bool CanPlayerQuitToDefault = true;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        if (Interfaces.Count == 0)
+        {
+            Debug.LogError("No interfaces defined in UserInterfaceController.");
+            return;
+        }
+        if (DefaultInterface < 0 || DefaultInterface >= Interfaces.Count)
+        {
+            Debug.LogError("Default interface index is out of range.");
+            DefaultInterface = 0;
+        }
+    }
 
     private void Start()
     {
@@ -95,7 +136,6 @@ public class UserInterfaceController : MonoBehaviour
             }
         }
     }
-
 
     public void ActivateInterface(int interfaceToActivateIndex)
     {

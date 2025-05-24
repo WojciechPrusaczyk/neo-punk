@@ -15,10 +15,33 @@ public class InteractableCampfire : Interactable
     private float endLightIntensity = 1f;
     private float duration = 1f;
 
+    private UI_CampfireInterface_Controller campfireController;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        campfireController = UserInterfaceController.instance.GetInterfaces()[UserInterfaceController.instance.GetInterfaces().FindIndex(x => x.interfaceRoot.name == "CampfireInterface")].interfaceRoot.GetComponent<UI_CampfireInterface_Controller>();
+        if (campfireController == null)
+        {
+            Debug.LogError("Campfire UI Controller not found.");
+        }
+    }
 
     protected override void Interact()
     {
-        base.Interact();
+        if (campfireController.isCampfireUIActive)
+            return;
+
+        if (interactableCollider != null)
+        {
+            interactableCollider.enabled = false;
+
+            if (!isActivated)
+                StartCoroutine(RestoreColliderAfterDelay(colliderDisableTimer));
+            else
+                StartCoroutine(RestoreColliderAfterDelay(0.1f));
+        }
 
         if (WorldSaveGameManager.instance == null)
             return;
@@ -34,6 +57,13 @@ public class InteractableCampfire : Interactable
             WorldSaveGameManager.instance.currentCharacterData.activeCampfires.Add(ID, true);
             isActivated = true;
         }
+        else
+        {
+            if (campfireController != null)
+            {
+                campfireController.ActivateCampfireInterface();
+            }
+        }
 
         // Stworzenie efektu œwietlnego
         CreateActivatedFX();
@@ -43,6 +73,17 @@ public class InteractableCampfire : Interactable
 
         // Zapisanie stanu gry
         WorldSaveGameManager.instance.SaveGame();
+    }
+
+    protected override void CloseUI()
+    {
+        campfireController.DeactivateCampfireInterface();
+
+        if (instantiatedIcon == null && InteractIcon != null && isPlayerInRange)
+        {
+            Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+            InstantiateInteractionIcon(InteractIcon, positionAboveCampfire);
+        }
     }
 
     protected override void PrepareInteractable()
@@ -83,5 +124,25 @@ public class InteractableCampfire : Interactable
             yield return null;
         }
         campfireLight.intensity = endLightIntensity;
+    }
+
+    protected override void CloseUIOnExit()
+    {
+        campfireController.DeactivateCampfireInterface();
+    }
+
+    protected override void PrepareTriggerEnterPlayer(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+
+            // Wyœwietl ikonê interakcji
+            if (InteractIcon != null && !campfireController.isCampfireUIActive)
+            {
+                Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+                InstantiateInteractionIcon(InteractIcon, positionAboveCampfire);
+            }
+        }
     }
 }

@@ -8,12 +8,12 @@ public class Interactable : MonoBehaviour
     public Collider2D interactableCollider;
     public float colliderDisableTimer = 5f;
 
-    [SerializeField] GameObject InteractIcon;
-    [SerializeField] GameObject instantiatedIcon;
+    [SerializeField] protected GameObject InteractIcon;
+    [SerializeField] protected GameObject instantiatedIcon;
 
     protected bool isPlayerInRange = false;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         interactableCollider = GetComponent<Collider2D>();
         if (interactableCollider == null)
@@ -31,6 +31,10 @@ public class Interactable : MonoBehaviour
         {
             Interact();
         }
+        else if (Input.GetKeyDown(InputManager.PauseMenuKey) || Input.GetKeyDown(InputManager.PadButtonPauseMenu))
+        {
+            CloseUI();
+        }
     }
 
     // Tworzenie ikony interakcji
@@ -38,6 +42,11 @@ public class Interactable : MonoBehaviour
     {
         instantiatedIcon = Instantiate(iconPrefab, position, Quaternion.identity);
         instantiatedIcon.transform.SetParent(transform);
+    }
+
+    protected virtual void CloseUI()
+    {
+        Debug.Log("Closing Interactable UI");
     }
 
     // Tutaj logika jest pusta, poniewa¿ ka¿dy obiekt bêdzie mia³ swoj¹ w³asn¹ logikê.
@@ -51,7 +60,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private IEnumerator RestoreColliderAfterDelay(float delay)
+    protected IEnumerator RestoreColliderAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         if (interactableCollider != null)
@@ -66,7 +75,23 @@ public class Interactable : MonoBehaviour
     {
     }
 
+    protected virtual void CloseUIOnExit()
+    {
+        // Domyœlna implementacja nie robi nic, ale mo¿e byæ nadpisana w klasach dziedzicz¹cych
+        Debug.Log("Left the Interactable area, closing UI");
+    }
+
     protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        PrepareTriggerEnterPlayer(collision);
+    }
+
+    protected void OnTriggerExit2D(Collider2D collision)
+    {
+        PrepareTriggerExitPlayer(collision);
+    }
+
+    protected virtual void PrepareTriggerEnterPlayer(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -81,11 +106,12 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    protected void OnTriggerExit2D(Collider2D collision)
+    protected virtual void PrepareTriggerExitPlayer(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            CloseUIOnExit();
 
             // Ukryj ikonê interakcji
             if (instantiatedIcon != null)
