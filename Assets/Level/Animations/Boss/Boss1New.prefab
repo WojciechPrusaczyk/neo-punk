@@ -363,8 +363,8 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints: 1000
+  entityMaxHelath: 1000
   droppedXp: 0
   gold: 0
   AttackDamage: 5
@@ -1957,6 +1957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aac384432978864a9e18181b2075c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barriers: []
+  abominationStatus: {fileID: 0}
 --- !u!1 &8112606088960948066
 GameObject:
   m_ObjectHideFlags: 0
