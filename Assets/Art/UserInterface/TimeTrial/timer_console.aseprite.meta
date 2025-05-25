@@ -1,0 +1,1647 @@
+fileFormatVersion: 2
+guid: 8bad5af8a6fa34a44af18f1918afd9c2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 1
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638837877100322625
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: timer_console_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 234
+      width: 20
+      height: 38
+    spriteID: 51eb8e37dd339b943aa605d56001fde0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 234}
+  - name: timer_console_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 464
+      width: 20
+      height: 40
+    spriteID: d16801beb1bac704784438026d87e952
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 464}
+  - name: timer_console_Frame_2
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.41463414}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 142
+      width: 22
+      height: 41
+    spriteID: d22940e91a6454947a780598f9c1d858
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 142}
+  - name: timer_console_Frame_3
+    originalName: 
+    pivot: {x: 0.47826087, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 191
+      width: 23
+      height: 38
+    spriteID: ab67a20568dc70a4abdf425568cd3ed2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 191}
+  - name: timer_console_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 328
+      width: 24
+      height: 34
+    spriteID: cb11af3b3b0e2ce409693f9559863aff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 328}
+  - name: timer_console_Frame_5
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.45945948}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 237
+      width: 23
+      height: 37
+    spriteID: c9afce410b0dc6148a7a4f01c28ad20b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 237}
+  - name: timer_console_Frame_6
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.45945948}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 188
+      width: 21
+      height: 37
+    spriteID: c40761b43e4369644b50ba56e28f3259
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 188}
+  - name: timer_console_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 370
+      width: 20
+      height: 40
+    spriteID: 24439cfb82e48b249b56b7ebe9dbe618
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 370}
+  - name: timer_console_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 280
+      width: 20
+      height: 38
+    spriteID: 5598e4138d6e03a4baf188b1314e5f2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 280}
+  - name: timer_console_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 326
+      width: 20
+      height: 38
+    spriteID: 3fc99ce0bc3b164448b99918bb270a87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 326}
+  - name: timer_console_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 372
+      width: 20
+      height: 38
+    spriteID: 9af69645df542cc4ebf698194d35bd47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 372}
+  - name: timer_console_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 418
+      width: 20
+      height: 38
+    spriteID: 795dc9750ca143f4989fc6ec9fd51e77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 418}
+  - name: timer_console_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 418
+      width: 20
+      height: 38
+    spriteID: f78fcc5ff20d85d41a1a73e7b9c4a6a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 418}
+  - name: timer_console_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 464
+      width: 20
+      height: 38
+    spriteID: d7337db14f42d1f45865429af4e6dde2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 464}
+  - name: timer_console_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 4
+      width: 20
+      height: 38
+    spriteID: 15cf6b6820d95b24ca43c9e42d9d418b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 4}
+  - name: timer_console_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 50
+      width: 20
+      height: 38
+    spriteID: 90afd098dcf05864d8c87c1f09a5fb9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 50}
+  - name: timer_console_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 96
+      width: 20
+      height: 38
+    spriteID: 237e9408fe7619e408c1a2e5588178a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 96}
+  - name: timer_console_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 142
+      width: 20
+      height: 38
+    spriteID: 752d50044cf3b724ebe0086c03120bca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 142}
+  - name: timer_console_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 188
+      width: 20
+      height: 38
+    spriteID: d3a876e6f35566b4fb63618538a87d78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 188}
+  - name: timer_console_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 234
+      width: 20
+      height: 38
+    spriteID: ec2f2a419e069df42b644b5097d76976
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 234}
+  - name: timer_console_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 280
+      width: 20
+      height: 38
+    spriteID: 48da0fd35a0bd4b4ab9ff3746c095740
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 280}
+  - name: timer_console_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 326
+      width: 20
+      height: 38
+    spriteID: 61a01a1056a0e5240b7f2c9c8a9811d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 326}
+  - name: timer_console_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 372
+      width: 20
+      height: 38
+    spriteID: d8e409edacad67d4aa37995c0301fd0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 372}
+  - name: timer_console_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 418
+      width: 20
+      height: 38
+    spriteID: d35753d84b7f6d445be12d2b8963574a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 418}
+  - name: timer_console_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 464
+      width: 20
+      height: 38
+    spriteID: 6ac2b4e0fed2e094ab815da77b3d3b9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 464}
+  - name: timer_console_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 4
+      width: 20
+      height: 38
+    spriteID: 43b0d2fe548eb8f4887ad8ef703e5c29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 4}
+  - name: timer_console_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 50
+      width: 20
+      height: 38
+    spriteID: 1e7da4f741781fe40928a7fe1a03440c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 50}
+  - name: timer_console_Frame_27
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 282
+      width: 22
+      height: 38
+    spriteID: 4cfd708a38eb11b4683114ea805e1eda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 282}
+  - name: timer_console_Frame_28
+    originalName: 
+    pivot: {x: 0.3846154, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 96
+      width: 26
+      height: 38
+    spriteID: 61fca5de3373e8744af333a837b73041
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 96}
+  - name: timer_console_Frame_29
+    originalName: 
+    pivot: {x: 0.3448276, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 50
+      width: 29
+      height: 38
+    spriteID: 5f73bd775377e17478621666f518b5d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 50}
+  - name: timer_console_Frame_30
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 188
+      width: 33
+      height: 38
+    spriteID: 9fe8f58f4dd442149925cd9682373064
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 188}
+  - name: timer_console_Frame_31
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 234
+      width: 33
+      height: 38
+    spriteID: 5b97461b1dd8ae540a070a2d74a76582
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 234}
+  - name: timer_console_Frame_32
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 280
+      width: 33
+      height: 38
+    spriteID: 4c7c9abb848bf16419e4dacde3b80dde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 280}
+  - name: timer_console_Frame_33
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 326
+      width: 33
+      height: 38
+    spriteID: 8b51390227cba7a4a9c121ba9fc24f20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 326}
+  - name: timer_console_Frame_34
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 372
+      width: 33
+      height: 38
+    spriteID: cd6bb2415d8e4064b8c276c4974c526b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 372}
+  - name: timer_console_Frame_35
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 418
+      width: 33
+      height: 38
+    spriteID: 9ec474fda16100e4b88a8d62d5f83ea0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 418}
+  - name: timer_console_Frame_36
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 464
+      width: 33
+      height: 38
+    spriteID: 2eb54465c904ae642b05c051a01c5132
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 464}
+  - name: timer_console_Frame_37
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 33
+      height: 38
+    spriteID: adc6881589b3a4f43b7772889d0fced4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: timer_console_Frame_38
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 50
+      width: 33
+      height: 38
+    spriteID: 26568c8e3f9e8a04f82b6763e549bfbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 50}
+  - name: timer_console_Frame_39
+    originalName: 
+    pivot: {x: 0.3030303, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 96
+      width: 33
+      height: 38
+    spriteID: 09c6d91b7e1d91f458bf9cb98096fb38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 96}
+  - name: timer_console_Frame_41
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 142
+      width: 31
+      height: 38
+    spriteID: 67ae961b2c9cce64f8a7de5938d7e125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 142}
+  - name: timer_console_Frame_42
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 188
+      width: 31
+      height: 38
+    spriteID: 5b51192038f30a648aefcb82b24579d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 188}
+  - name: timer_console_Frame_43
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 234
+      width: 31
+      height: 38
+    spriteID: f60ed9a64919a3c458943e91a87f3c7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 234}
+  - name: timer_console_Frame_44
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 280
+      width: 31
+      height: 38
+    spriteID: 05bc7703157249e459f6ae88c510d917
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 280}
+  - name: timer_console_Frame_45
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 326
+      width: 31
+      height: 38
+    spriteID: 4248d4c2fbb65bc4aa393397117e49bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 326}
+  - name: timer_console_Frame_46
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 372
+      width: 31
+      height: 38
+    spriteID: e1f0aaeeb5c971c4cab5e8209611343e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 372}
+  - name: timer_console_Frame_47
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 418
+      width: 31
+      height: 38
+    spriteID: 3105fdafac3c0b34e82434c4cb4e23dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 418}
+  - name: timer_console_Frame_48
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 464
+      width: 31
+      height: 38
+    spriteID: 66a4c03301c135e4684786c51bef32a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 464}
+  - name: timer_console_Frame_40
+    originalName: 
+    pivot: {x: 0.2580645, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 4
+      width: 31
+      height: 38
+    spriteID: 02064277dc187564e85e27a6c4c15e09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 4}
+  - name: timer_console_Frame_49
+    originalName: 
+    pivot: {x: 0.3611111, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 36
+      height: 38
+    spriteID: 8cfb780014b35f943b6ccb3f2037ca0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+  - name: timer_console_Frame_50
+    originalName: 
+    pivot: {x: 0.39473686, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 96
+      width: 38
+      height: 38
+    spriteID: 174cde96a30e6154d98971fa7b2106dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 96}
+  - name: timer_console_Frame_51
+    originalName: 
+    pivot: {x: 0.41025642, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 39
+      height: 38
+    spriteID: 625fb39168a646b40ac449484bf6ee44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: timer_console_Frame_52
+    originalName: 
+    pivot: {x: 0.516129, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 62
+      height: 38
+    spriteID: deb46e7a6743e934887fd8cd4ae9670f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -226687205
+    name: timer_console
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: timer_console_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 51eb8e37dd339b943aa605d56001fde0
+    - name: timer_console_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 40
+      spriteId: d16801beb1bac704784438026d87e952
+    - name: timer_console_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 22
+        y: 17
+        width: 22
+        height: 41
+      spriteId: d22940e91a6454947a780598f9c1d858
+    - name: timer_console_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 21
+        y: 17
+        width: 23
+        height: 38
+      spriteId: ab67a20568dc70a4abdf425568cd3ed2
+    - name: timer_console_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 20
+        y: 17
+        width: 24
+        height: 34
+      spriteId: cb11af3b3b0e2ce409693f9559863aff
+    - name: timer_console_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 20
+        y: 17
+        width: 23
+        height: 37
+      spriteId: c9afce410b0dc6148a7a4f01c28ad20b
+    - name: timer_console_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 22
+        y: 17
+        width: 21
+        height: 37
+      spriteId: c40761b43e4369644b50ba56e28f3259
+    - name: timer_console_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 40
+      spriteId: 24439cfb82e48b249b56b7ebe9dbe618
+    - name: timer_console_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 5598e4138d6e03a4baf188b1314e5f2f
+    - name: timer_console_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 3fc99ce0bc3b164448b99918bb270a87
+    - name: timer_console_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 9af69645df542cc4ebf698194d35bd47
+    - name: timer_console_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 795dc9750ca143f4989fc6ec9fd51e77
+    - name: timer_console_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: f78fcc5ff20d85d41a1a73e7b9c4a6a3
+    - name: timer_console_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: d7337db14f42d1f45865429af4e6dde2
+    - name: timer_console_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 15cf6b6820d95b24ca43c9e42d9d418b
+    - name: timer_console_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 90afd098dcf05864d8c87c1f09a5fb9a
+    - name: timer_console_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 237e9408fe7619e408c1a2e5588178a1
+    - name: timer_console_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 752d50044cf3b724ebe0086c03120bca
+    - name: timer_console_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: d3a876e6f35566b4fb63618538a87d78
+    - name: timer_console_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: ec2f2a419e069df42b644b5097d76976
+    - name: timer_console_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 48da0fd35a0bd4b4ab9ff3746c095740
+    - name: timer_console_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 61a01a1056a0e5240b7f2c9c8a9811d2
+    - name: timer_console_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: d8e409edacad67d4aa37995c0301fd0c
+    - name: timer_console_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: d35753d84b7f6d445be12d2b8963574a
+    - name: timer_console_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 6ac2b4e0fed2e094ab815da77b3d3b9d
+    - name: timer_console_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 43b0d2fe548eb8f4887ad8ef703e5c29
+    - name: timer_console_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 22
+        y: 17
+        width: 20
+        height: 38
+      spriteId: 1e7da4f741781fe40928a7fe1a03440c
+    - name: timer_console_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 22
+        y: 17
+        width: 22
+        height: 38
+      spriteId: 4cfd708a38eb11b4683114ea805e1eda
+    - name: timer_console_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 22
+        y: 17
+        width: 26
+        height: 38
+      spriteId: 61fca5de3373e8744af333a837b73041
+    - name: timer_console_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 22
+        y: 17
+        width: 29
+        height: 38
+      spriteId: 5f73bd775377e17478621666f518b5d9
+    - name: timer_console_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 9fe8f58f4dd442149925cd9682373064
+    - name: timer_console_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 5b97461b1dd8ae540a070a2d74a76582
+    - name: timer_console_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 4c7c9abb848bf16419e4dacde3b80dde
+    - name: timer_console_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 8b51390227cba7a4a9c121ba9fc24f20
+    - name: timer_console_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: cd6bb2415d8e4064b8c276c4974c526b
+    - name: timer_console_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 9ec474fda16100e4b88a8d62d5f83ea0
+    - name: timer_console_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 2eb54465c904ae642b05c051a01c5132
+    - name: timer_console_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: adc6881589b3a4f43b7772889d0fced4
+    - name: timer_console_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 26568c8e3f9e8a04f82b6763e549bfbe
+    - name: timer_console_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 22
+        y: 17
+        width: 33
+        height: 38
+      spriteId: 09c6d91b7e1d91f458bf9cb98096fb38
+    - name: timer_console_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 67ae961b2c9cce64f8a7de5938d7e125
+    - name: timer_console_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 5b51192038f30a648aefcb82b24579d9
+    - name: timer_console_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: f60ed9a64919a3c458943e91a87f3c7e
+    - name: timer_console_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 05bc7703157249e459f6ae88c510d917
+    - name: timer_console_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 4248d4c2fbb65bc4aa393397117e49bb
+    - name: timer_console_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: e1f0aaeeb5c971c4cab5e8209611343e
+    - name: timer_console_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 3105fdafac3c0b34e82434c4cb4e23dc
+    - name: timer_console_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 66a4c03301c135e4684786c51bef32a9
+    - name: timer_console_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 24
+        y: 17
+        width: 31
+        height: 38
+      spriteId: 02064277dc187564e85e27a6c4c15e09
+    - name: timer_console_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 19
+        y: 17
+        width: 36
+        height: 38
+      spriteId: 8cfb780014b35f943b6ccb3f2037ca0d
+    - name: timer_console_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 17
+        y: 17
+        width: 38
+        height: 38
+      spriteId: 174cde96a30e6154d98971fa7b2106dd
+    - name: timer_console_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 16
+        y: 17
+        width: 39
+        height: 38
+      spriteId: 625fb39168a646b40ac449484bf6ee44
+    - name: timer_console_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 0
+        y: 17
+        width: 62
+        height: 38
+      spriteId: deb46e7a6743e934887fd8cd4ae9670f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

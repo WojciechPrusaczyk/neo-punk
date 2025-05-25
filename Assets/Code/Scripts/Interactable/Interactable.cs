@@ -20,7 +20,7 @@ public class Interactable : MonoBehaviour
         interactableCollider = GetComponent<Collider2D>();
         if (interactableCollider == null)
         {
-            Debug.LogError("Do dzia³ania systemu interakcji wymagany jest Collider2D.");
+            Debug.LogError("Do dziaÅ‚ania systemu interakcji wymagany jest Collider2D.");
         }
 
         PrepareInteractable();
@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        // Sprawdzanie, czy gracz jest w zasiêgu interakcji i czy naciœniêto klawisz interakcji
+        // Sprawdzanie, czy gracz jest w zasiÄ™gu interakcji i czy naciÅ›niÄ™to klawisz interakcji
         if (isPlayerInRange && (Input.GetKeyDown(InputManager.InteractKey) || Input.GetKeyDown(InputManager.PadButtonInteract)))
         {
             Interact();
@@ -51,8 +51,8 @@ public class Interactable : MonoBehaviour
         Debug.Log("Closing Interactable UI");
     }
 
-    // Tutaj logika jest pusta, poniewa¿ ka¿dy obiekt bêdzie mia³ swoj¹ w³asn¹ logikê.
-    // To jest klasa bazowa, wiêc nie ma tu ¿adnej implementacji.
+    // Tutaj logika jest pusta, poniewaÅ¼ kaÅ¼dy obiekt bÄ™dzie miaÅ‚ swojÄ… wÅ‚asnÄ… logikÄ™.
+    // To jest klasa bazowa, wiÄ™c nie ma tu Å¼adnej implementacji.
     protected virtual void Interact()
     {
         if (interactableCollider != null)
@@ -71,8 +71,8 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    // Przygotowanie obiektu podczas ³adowania pliku zapisu.
-    // Podobnie jak w przypadku Interact(), ka¿dy obiekt bêdzie mia³ swoj¹ w³asn¹ logikê.
+    // Przygotowanie obiektu podczas Å‚adowania pliku zapisu.
+    // Podobnie jak w przypadku Interact(), kaÅ¼dy obiekt bÄ™dzie miaÅ‚ swojÄ… wÅ‚asnÄ… logikÄ™.
     protected virtual void PrepareInteractable()
     {
         if (WorldSaveGameManager.instance == null)
@@ -81,7 +81,7 @@ public class Interactable : MonoBehaviour
 
     protected virtual void CloseUIOnExit()
     {
-        // Domyœlna implementacja nie robi nic, ale mo¿e byæ nadpisana w klasach dziedzicz¹cych
+        // DomyÅ›lna implementacja nie robi nic, ale moÅ¼e byÄ‡ nadpisana w klasach dziedziczÄ…cych
         Debug.Log("Left the Interactable area, closing UI");
     }
 
@@ -101,7 +101,7 @@ public class Interactable : MonoBehaviour
         {
             isPlayerInRange = true;
 
-            // Wyœwietl ikonê interakcji
+            // WyÅ›wietl ikonÄ™ interakcji
             if (InteractIcon != null)
             {
                 Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
@@ -117,7 +117,7 @@ public class Interactable : MonoBehaviour
             isPlayerInRange = false;
             CloseUIOnExit();
 
-            // Ukryj ikonê interakcji
+            // Ukryj ikonÄ™ interakcji
             if (instantiatedIcon != null)
             {
                 Destroy(instantiatedIcon);

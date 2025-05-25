@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,13 @@ public class TimeTrialActivator : MonoBehaviour
 {
     public TimeTrial timeTrial;
     public GameObject player;
+    public GameObject IconParent;
     public float activationDistance = 2f;
     public Sprite activatedSprite;
-
-    
+    public Sprite InteractIcon;
+    public bool IsPlayerNear;
+    public Animator animator;
+    public TimeTrialDeactivator timeTrialDeactivator;
 
     
     public void Start()
@@ -28,6 +32,8 @@ public class TimeTrialActivator : MonoBehaviour
             return;
         }
         spriteRenderer.sprite = activatedSprite;
+        animator.SetTrigger("Flip");
+        timeTrialDeactivator.animator.SetTrigger("Flip");
     }
     
     
@@ -35,10 +41,29 @@ public class TimeTrialActivator : MonoBehaviour
     {
         if (Input.GetKeyDown(InputManager.InteractKey))
         {
-            if (Vector2.Distance(player.transform.position, transform.position) < activationDistance)
+            if (IsPlayerNear)
             {
                 StartTrial();
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = true;
+            IsPlayerNear = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
+            IsPlayerNear = false;
         }
     }
 }

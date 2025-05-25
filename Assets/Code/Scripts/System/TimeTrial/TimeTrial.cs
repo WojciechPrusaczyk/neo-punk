@@ -19,6 +19,8 @@ public class TimeTrial : MonoBehaviour
     
     public TimeTrialInterface timeTrialInterface;
     public TimeTrialEndScreenInterface timeTrialEndScreenInterface;
+    public TimeTrialActivator timeTrialActivator;
+    public TimeTrialDeactivator timeTrialDeactivator;
 
 
     /*
@@ -84,6 +86,10 @@ public class TimeTrial : MonoBehaviour
 
         if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
             _EventsFlagsSystem.FinishEvent("doneFirstTimeTrial");
+        //Animacje 
+        timeTrialActivator.animator.SetTrigger("Breaking");
+        Debug.Log("Triggering TimeTrialDeactivator animation: Breaking");
+        timeTrialDeactivator.animator.SetTrigger("Opening");
     }
     
     public void ExitTrial()
@@ -105,6 +111,9 @@ public class TimeTrial : MonoBehaviour
             indicator.SetActive(false);
             
         }
+        timeTrialActivator.animator.SetTrigger("Breaking");
+        timeTrialDeactivator.animator.SetTrigger("Breaking");
+
     }
     public string FormatTime(float seconds)
     {
