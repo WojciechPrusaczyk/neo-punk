@@ -64,15 +64,15 @@ public class ItemObject : MonoBehaviour
         var main = itemParticles.main;
         switch (itemData.rarity)
         {
-            case "Common":
+            case Enums.ItemRarity.Common:
                 light2D.color = CommonColor;
                 main.startColor = CommonColor;
                 break;
-            case "Rare":
+            case Enums.ItemRarity.Rare:
                 light2D.color = RareColor;
                 main.startColor = RareColor;
                 break;
-            case "Quantum":
+            case Enums.ItemRarity.Quantum:
                 light2D.color = QuantumColor;
                 main.startColor = QuantumColor;
                 break;

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9083d5efce979b741a23d7b206ad95ac, type: 3}
+  m_Name: HandsWiring
+  m_EditorClassIdentifier: 
+  itemName: Hands Wiring
+  passiveDescription: Changes basic type of damage to electric.
+  activeDescription: Produces electric discharge, which deals damage equal 20% of
+    player AD and disables cybernetic enemies for 2 seconds.
+  cooldown: 11
+  currentCooldown: 0
+  rarity: 0
+  minPlayerLvl: 0
+  itemIcon: {fileID: 917028039714840844, guid: 10a1b5404d749ab4aafa30dd4d0c39e4, type: 3}
+  explosionEffectPrefab: {fileID: 6612373273658748354, guid: 95c175a4f820ce44698ecbb54abf6934, type: 3}
+  explosionForce: 5
+  explosionRange: 1
+  damageDealt: 10

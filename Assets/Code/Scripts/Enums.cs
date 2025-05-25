@@ -41,4 +41,11 @@ public class Enums : MonoBehaviour
         Cyber,
         Demon
     }
+
+    public enum ItemRarity
+    {
+        Common,
+        Rare,
+        Quantum
+    }
 }

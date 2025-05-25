@@ -26,7 +26,7 @@ public class VoodooDoll : ItemData
         itemName = "Voodoo Doll";
         passiveDescription = "Increases player attack by 40% for 10 seconds.";
         activeDescription = "Gives 40% more damage on use, but if you get hit, doll gets a needle stack. If you get hit when Doll have 3 stacks you will die.";
-        rarity = "Quantum";
+        rarity = Enums.ItemRarity.Quantum;
         cooldown = 30.0f;
     }
 }

@@ -25,7 +25,7 @@ public class DemonBell : ItemData
         itemName = "Demon Bell";
         passiveDescription = "Player takes 35% more damage, but also deals 25% more.";
         activeDescription = "Overrides damage type to Bloody for 10 seconds.";
-        rarity = "Rare";
+        rarity = Enums.ItemRarity.Rare;
         cooldown = 40.0f;
     }
 }

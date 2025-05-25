@@ -22,7 +22,7 @@ public class HandsWiring : ItemData
     {
         currentCooldown = 0;
 
-        explosionEffectPrefab = Resources.Load<GameObject>("Items/HandsWiring/HandsWiringExplosion");
+        // explosionEffectPrefab = Resources.Load<GameObject>("Items/HandsWiring/HandsWiringExplosion");
         HandsWiringAbilities abilities = ScriptableObject.CreateInstance<HandsWiringAbilities>();
         abilities.Initialize(explosionEffectPrefab, explosionForce, explosionRange, damageDealt);
         itemAbility = abilities;
@@ -30,7 +30,7 @@ public class HandsWiring : ItemData
         itemName = "Hands Wiring";
         passiveDescription = "Changes basic type of damage to electric.";
         activeDescription = "Produces electric discharge, which deals damage equal 20% of player AD and disables cybernetic enemies for 2 seconds.";
-        rarity = "Common";
+        rarity = Enums.ItemRarity.Common;
         cooldown = 11.0f;
     }
 }

@@ -28,6 +28,7 @@ public class HandsWiringAbilities : ScriptableObject, ItemData.IItemAbility
 
     public void Initialize(GameObject _explosionEffectPrefab, float _explosionForce, float _explosionRange, float _damageDealt)
     {
+        Debug.Log(_explosionEffectPrefab);
         this.explosionEffectPrefab = _explosionEffectPrefab;
         this.explosionForce = _explosionForce;
         this.explosionRange = _explosionRange;

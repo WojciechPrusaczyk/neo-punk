@@ -230,8 +230,11 @@ public class PlayerInventoryInterface : MonoBehaviour
         /*
          * Current mission
          */
-        missionInfoHeaderTitle.text = mission.MissionName;
-        missionInfoDescription.text = mission.MissionDescription;
+        if (mission)
+        {
+            missionInfoHeaderTitle.text = mission.MissionName;
+            missionInfoDescription.text = mission.MissionDescription;
+        }
     }
 
     private void SetUnlockedSlotsCount()

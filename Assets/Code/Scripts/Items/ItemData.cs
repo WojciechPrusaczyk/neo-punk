@@ -8,7 +8,7 @@ public class ItemData : ScriptableObject
     public string activeDescription;
     public float cooldown;
     public float currentCooldown;
-    public string rarity;
+    public Enums.ItemRarity rarity;
     public float minPlayerLvl;
     public Sprite itemIcon;
     public IItemAbility itemAbility;

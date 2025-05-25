@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a83b4ff08a792246973e8496197a8ca
+guid: 78b96e49938ae554eb3ee116ce2d29a1
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,20 +120,48 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData: []
+  animatedSpriteImportData:
+  - name: HandsWiringOld
+    originalName: 
+    pivot: {x: 0.5555556, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 9
+      height: 14
+    spriteID: 950392bfa2599e346aa0400132476794
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1210828362
-    name: handsWiring
+    guid: 1975020831
+    name: HandsWiringOld
     layerFlags: 0
     layerType: 0
     blendMode: 0
-    cells: []
+    cells:
+    - name: HandsWiringOld
+      frameIndex: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 9
+        height: 14
+      spriteId: 950392bfa2599e346aa0400132476794
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 16, y: 16}
