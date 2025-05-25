@@ -44,6 +44,8 @@ public class EntityStatus : MonoBehaviour
     //private MissionTracker missionTracker;
     private Volume postProcessVolume;
     public event System.Action OnPlayerDamageTaken;
+    public event System.Action OnPlayerDeath;
+    public event System.Action OnEntityDeath;
 
 
     // Wartość wyrażona w procentach, która odpowiada za % otrzymywanych obrażeń
@@ -253,7 +255,8 @@ public class EntityStatus : MonoBehaviour
             {
                 // Encja ginie
                 DeathEvent();
-                
+                OnEntityDeath?.Invoke();
+
             } else if (damage * incomingDamagePercent < GetHp())
             {
                 // encja otrzymuje obrażenia
@@ -281,7 +284,7 @@ public class EntityStatus : MonoBehaviour
         isDead = true;
 
         EntityStatus playerStatus = player.GetComponent<EntityStatus>();
-        Debug.Log("Starting player death event");
+        OnPlayerDeath?.Invoke();
         WorldSaveGameManager.instance.LoadGame(4f);
         youDiedPopUpController.ActivateInterface(6);
 

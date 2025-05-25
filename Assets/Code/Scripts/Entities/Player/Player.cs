@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
         if (playerStatus != null)
         {
             playerStatus.OnPlayerDamageTaken += OnPlayerDamaged;
+            playerStatus.OnPlayerDeath += OnPlayerDeath;
         }
     }
 
@@ -751,6 +752,11 @@ public class Player : MonoBehaviour
     private void OnPlayerDamaged()
     {
         wasDamagedRecently = true;
+    }
+
+    private void OnPlayerDeath()
+    {
+        throw new NotImplementedException();
     }
 }
 #if UNITY_EDITOR
