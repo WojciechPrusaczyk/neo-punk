@@ -38,7 +38,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                 {
                     Button campfireButton = new Button()
                     {
-                        text = $"Campfire {campfire.ID}",
+                        text = $"{campfire.campfireName}",
                         name = $"CampfireButton_{campfire.ID}",
                         style =
                         {

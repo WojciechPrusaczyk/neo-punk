@@ -83,7 +83,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Nie znaleziono instancji WorldSoundFXManager. Dźwięki nie będą odtwarzane!");
+            Debug.Log("Nie znaleziono instancji WorldSoundFXManager. Dźwięki nie będą odtwarzane!");
         }
 
 

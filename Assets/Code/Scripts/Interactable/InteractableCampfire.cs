@@ -6,6 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class InteractableCampfire : Interactable
 {
     public int ID;
+    public string campfireName;
     public bool isActivated = false;
     public GameObject activatedCampfireFX;
     public GameObject instantiatedActiveCampfireFX;
@@ -90,7 +91,8 @@ public class InteractableCampfire : Interactable
     {
         base.PrepareInteractable();
 
-        WorldSaveGameManager.instance.currentCharacterData.activeCampfires.TryGetValue(ID, out isActivated);
+        if (WorldSaveGameManager.instance != null)
+            WorldSaveGameManager.instance.currentCharacterData.activeCampfires.TryGetValue(ID, out isActivated);
 
         CreateActivatedFX();
     }

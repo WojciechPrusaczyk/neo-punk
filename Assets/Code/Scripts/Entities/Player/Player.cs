@@ -434,6 +434,12 @@ public class Player : MonoBehaviour
 
         playerBody.velocity = Vector2.zero;
 
+        if (WorldSaveGameManager.instance != null)
+        {
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedCampfireIndex = campfireID;
+            WorldSaveGameManager.instance.SaveGame();
+        }
+
         if (WorldSoundFXManager.instance != null)
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.SFX);
     }
@@ -659,7 +665,8 @@ public class Player : MonoBehaviour
 
                 if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
 
-                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
+                if (WorldSoundFXManager.instance)
+                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
 
                 DealDamage(playerStatus.GetAttackDamageCount());
             }
@@ -756,7 +763,7 @@ public class Player : MonoBehaviour
 
     private void OnPlayerDeath()
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 }
 #if UNITY_EDITOR
