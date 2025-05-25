@@ -573,7 +573,7 @@ MonoBehaviour:
   droppedXp: 0
   gold: 0
   AttackDamage: 1
-  MovementSpeed: 1250
+  MovementSpeed: 800
   isFacedRight: 1
   isEnemy: 0
   deathAnimationLength: 1
@@ -585,6 +585,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 2
+  isDead: 0
   incomingDamagePercent: 1
 --- !u!114 &8777689375351150661
 MonoBehaviour:
@@ -622,6 +623,7 @@ MonoBehaviour:
   state: 0
   canMove: 1
   canAttack: 0
+  playerPosition: {fileID: 0}
 --- !u!114 &6912230288945919038
 MonoBehaviour:
   m_ObjectHideFlags: 0

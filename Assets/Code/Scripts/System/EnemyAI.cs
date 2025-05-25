@@ -48,7 +48,7 @@ public class EnemyAI : MonoBehaviour
     public bool canMove = true;
     public bool canAttack = false;
 
-    private Transform playerPosition;
+    public Transform playerPosition;
     private Rigidbody2D rb;
     private Vector2 direction;
     private int currentTargetIndex = 0;

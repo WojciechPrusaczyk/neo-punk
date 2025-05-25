@@ -48,3 +48,6 @@ MonoBehaviour:
   waveEnded: 0
   flame: {fileID: 5138890262102275240, guid: 3cd2906b3c552d7488c90e1b599f846e, type: 3}
   enemies: []
+  aliveCount: 0
+  spawnInterval: 0.2
+  invasionTrial: {fileID: 0}

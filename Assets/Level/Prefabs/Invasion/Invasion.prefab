@@ -153,11 +153,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trialStarted: 0
   trialFinished: 0
-  SpawnPoints: []
-  waves: []
-  currentWave: 0
+  damageTaken: 0
+  spawnPoints:
+  - {fileID: 8663275365232028338}
+  - {fileID: 0}
+  waves:
+  - {fileID: 2066425971724130561}
+  - {fileID: 0}
   durationBetweenWaves: 1
   invasionInterface: {fileID: 6007084962513136444}
+  currentWave: {fileID: 0}
 --- !u!1 &3673989875644973021
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1346469563719308377}
     m_Modifications:
+    - target: {fileID: 4294353372160845623, guid: 3661c7797491a92499e860c7aaa6680f, type: 3}
+      propertyPath: invasionTrial
+      value: 
+      objectReference: {fileID: 4276347696078808519}
     - target: {fileID: 4440575827723465405, guid: 3661c7797491a92499e860c7aaa6680f, type: 3}
       propertyPath: m_Name
       value: Wave
@@ -339,6 +348,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3661c7797491a92499e860c7aaa6680f, type: 3}
+--- !u!114 &2066425971724130561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4294353372160845623, guid: 3661c7797491a92499e860c7aaa6680f, type: 3}
+  m_PrefabInstance: {fileID: 2825429163440602678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a0ba260cead2246a2d81df511b5642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8599352517880683765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5792466222914495171, guid: 3661c7797491a92499e860c7aaa6680f, type: 3}
