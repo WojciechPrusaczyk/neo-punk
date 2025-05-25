@@ -32,6 +32,9 @@ public class EntityStatus : MonoBehaviour
     public bool isAlerted;
     public Enums.EntityType entityType = Enums.EntityType.Human;
 
+    public bool isDead = false;
+    UI_YouDiedPopUp_Controller youDiedPopUpController;
+
     private GameObject mainUserInterface;
     private SpriteRenderer spriteRenderer;
     private GameObject player;
@@ -55,10 +58,22 @@ public class EntityStatus : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         lootTable = GetComponent<LootTable>();
         //missionTracker = player.GetComponent<MissionTracker>();
+        if (gameObject.CompareTag("Player"))
+        {
+            if (youDiedPopUpController != null)
+                return;
+
+            youDiedPopUpController = FindFirstObjectByType<UserInterfaceController>().GetComponentInChildren<UI_YouDiedPopUp_Controller>();
+        }
 
         BaseAttackDamage = AttackDamage;
     }
-    
+
+    private void OnEnable()
+    {
+        isDead = false;
+    }
+
     /*
      * Nazwa
      */
@@ -142,6 +157,9 @@ public class EntityStatus : MonoBehaviour
 
     public void DealDamage(float damage, GameObject attackingEntity = null)
     {
+        if (isDead)
+            return;
+
         // zawsze podawać attackingEntity, gdy przeciwnik atakuje gracza
         // każde attackingEntity MUSI przy ataku mieć obliczane "isFacedRight"
         if (gameObject.CompareTag("Player"))
@@ -244,6 +262,10 @@ public class EntityStatus : MonoBehaviour
 
     void DeathEvent()
     {
+        if (isDead)
+            return;
+        isDead = true;
+
         //if (null != missionTracker) missionTracker.AddTakedown();
         // lootTable.DropLoot();
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
@@ -252,15 +274,22 @@ public class EntityStatus : MonoBehaviour
 
     public void PlayerDeathEvent()
     {
+        if (isDead)
+            return;
+        isDead = true;
+
         EntityStatus playerStatus = player.GetComponent<EntityStatus>();
-        
+        Debug.Log("Starting player death event");
+        WorldSaveGameManager.instance.LoadGame(4f);
+        youDiedPopUpController.ActivateInterface(6);
+
         // przelanie expa z gracza na przeciwnika
         AddXp(playerStatus.GetXp());
         playerStatus.SetXp( 0 );
         
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
     }
-    
+
     void GettingDamageEvent( float damage, bool isPlayer = false )
     {
 

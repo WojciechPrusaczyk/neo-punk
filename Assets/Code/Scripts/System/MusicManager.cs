@@ -125,6 +125,19 @@ public class MusicManager : MonoBehaviour
         _audioSourceComponent.clip = null;
     }
 
+    public void RestartSong()
+    {
+        if (_audioSourceComponent.clip != null)
+        {
+            _audioSourceComponent.Stop();
+            _audioSourceComponent.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No song is currently playing to restart.");
+        }
+    }
+
     private IEnumerator ChangeSong(AudioClip nextSong, bool startImmediately = false)
     {
         isChangingSong = true;

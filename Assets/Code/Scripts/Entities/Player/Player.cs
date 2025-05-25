@@ -161,6 +161,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (playerStatus != null && playerStatus.isDead)
+            return;
+
         isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f; //@Wojtek oby to nie bylo wazne
 
         if (playerBody.velocity.y <= 0.0f)

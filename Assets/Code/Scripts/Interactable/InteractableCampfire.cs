@@ -61,7 +61,7 @@ public class InteractableCampfire : Interactable
         {
             if (campfireController != null)
             {
-                campfireController.ActivateCampfireInterface(ID);
+                campfireController.ActivateInterface(ID);
             }
         }
 
@@ -77,7 +77,7 @@ public class InteractableCampfire : Interactable
 
     protected override void CloseUI()
     {
-        campfireController.DeactivateCampfireInterface();
+        campfireController.DeactivateInterface();
 
         if (instantiatedIcon == null && InteractIcon != null && isPlayerInRange)
         {
@@ -128,7 +128,7 @@ public class InteractableCampfire : Interactable
 
     protected override void CloseUIOnExit()
     {
-        campfireController.DeactivateCampfireInterface();
+        campfireController.DeactivateInterface();
     }
 
     protected override void PrepareTriggerEnterPlayer(Collider2D collision)

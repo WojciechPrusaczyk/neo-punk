@@ -11,6 +11,9 @@ public class MenuBehaviour : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
     private Animator animator;
 
+    [SerializeField] Menu_StartGameUI_Controller menuStartGameUIController;
+    public bool isMenuActive = false;
+
     void Awake()
     {
         // if (null != cursorTexture)
@@ -35,9 +38,23 @@ public class MenuBehaviour : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("InitialLevel");
-        var musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
-        musicManager.PlaySong(1);
+        if (isMenuActive)
+            return;
+
+        if (menuStartGameUIController != null)
+        {
+            menuStartGameUIController.ShowSelectionMenu(true);
+            ChangeMenuActiveState(true);
+        }
+        else
+        {
+            Debug.LogError("Menu_StartGameUI_Controller not found in MenuBehaviour.");
+        }
+    }
+
+    public void ChangeMenuActiveState(bool state)
+    {
+        isMenuActive = state;
     }
 
     public void QuitGame()
