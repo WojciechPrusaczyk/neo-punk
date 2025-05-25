@@ -196,10 +196,12 @@ public class EntityStatus : MonoBehaviour
                     PlayerDeathEvent();
                 } else if (damage * parryingDamageReduction * incomingDamagePercent < GetHp())
                 {
-                    PlayPlayerSFXSingle(WorldSoundFXManager.instance.playerParrySFX, Enums.SoundType.SFX, 2f);
+                    if (WorldSoundFXManager.instance)
+                        PlayPlayerSFXSingle(WorldSoundFXManager.instance.playerParrySFX, Enums.SoundType.SFX, 2f);
 
+                    if(WorldSoundFXManager.instance)
                     // gracz otrzymuje obrażenia
-                    GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent, true);
+                        GettingDamageEvent(damage * parryingDamageReduction * incomingDamagePercent, true);
                     
                     // odgrywanie animacji po sparowaniu
                     playerAppearance.GetComponent<Animator>().Play("parryAttack");

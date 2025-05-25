@@ -33,14 +33,21 @@ public class AbominationMovement : MonoBehaviour
     public Collider2D headCollider;
     public Collider2D clawCollider;
     public Collider2D tailCollider;
+
+    private GameObject mainUi;
+    private EntityStatus abominationStatus;
     
-    private void Start()
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         animator.enabled = false;
-        /*
-         * For debugging only
-         */
+        mainUi = GameObject.Find("MainUserInterface");
+        abominationStatus = gameObject.transform.parent.GetComponent<EntityStatus>();
+
+        if (abominationStatus != null)
+        {
+            abominationStatus.OnEntityDeath += OnDeath;
+        }
     }
 
     private void Update()
@@ -116,7 +123,6 @@ public class AbominationMovement : MonoBehaviour
         active = b;
         
         var abominationStatus = gameObject.transform.parent.GetComponent<EntityStatus>();
-        var mainUi = GameObject.Find("MainUserInterface");
         if (mainUi != null)
         {
             mainUi.GetComponent<MainUserInterfaceController>().ShowBossBar(abominationStatus);
@@ -204,4 +210,11 @@ public class AbominationMovement : MonoBehaviour
 
     }
 
+    private void OnDeath()
+    {
+        if (mainUi != null)
+        {
+            mainUi.GetComponent<MainUserInterfaceController>().HideBossBar();
+        }
+    }
 }

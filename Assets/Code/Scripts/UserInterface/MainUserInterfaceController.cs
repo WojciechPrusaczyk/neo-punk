@@ -95,7 +95,8 @@ public class MainUserInterfaceController : MonoBehaviour
                 _itemCooldowns.Add(itemCooldown);
         }
 
-        HideBossBar();
+        if (BossStatus == null || BossStatus.GetHp() <= 0)
+            HideBossBar();
     }
 
     private void Update()
