@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class InteractableCampfire : Interactable
 {
     public int ID;
     public string campfireName;
+    public Sprite backgroundImage;
+
     public bool isActivated = false;
     public GameObject activatedCampfireFX;
     public GameObject instantiatedActiveCampfireFX;
