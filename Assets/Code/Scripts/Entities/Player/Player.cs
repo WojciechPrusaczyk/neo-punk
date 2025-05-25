@@ -579,6 +579,7 @@ public class Player : MonoBehaviour
                 // zadawanie obrażeń
 
                 var enemyType = entity.GetComponent<EntityStatus>().entityType;
+                
                 entity.GetComponent<EntityStatus>().DealDamage(damageToDeal);
                 // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
 

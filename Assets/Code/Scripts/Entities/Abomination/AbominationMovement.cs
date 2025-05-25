@@ -29,6 +29,10 @@ public class AbominationMovement : MonoBehaviour
     public float attackRange    = 2.5f;   // metres
     public float globalCooldown = 1.2f;   // seconds
     public float nextAllowedTime = 0f;
+
+    public Collider2D headCollider;
+    public Collider2D clawCollider;
+    public Collider2D tailCollider;
     
     private void Start()
     {
@@ -49,8 +53,24 @@ public class AbominationMovement : MonoBehaviour
             return;
 
         // 3. pick a random attack and fire it
-        int i = Random.Range(0, triggers.Count);
-        StartCoroutine(PlayAnimation(triggers[i]));
+        float dist = Vector2.Distance(transform.position, player.transform.position);
+
+        int index;
+        if (dist < 2f)
+        {
+            // choose either 1 or 2 (inclusive)
+            index = Random.Range(1, 3);   // Random.Range(int,int) upper bound is exclusive
+        }
+        else if (dist < 10f)
+        {
+            index = 0;
+        }
+        else
+        {
+            index = 1;
+        }
+
+        StartCoroutine(PlayAnimation(triggers[index]));
 
         // 4. reset global cooldown
         nextAllowedTime = Time.time + globalCooldown;
@@ -143,17 +163,14 @@ public class AbominationMovement : MonoBehaviour
 
         animator.SetTrigger(trigger);
 
-        // 1️⃣ Wait one frame so the Animator can react to the trigger
         yield return null;
 
-        // 2️⃣ Then wait until the transition has finished
         yield return new WaitUntil(() =>
         {
             var info = animator.GetCurrentAnimatorStateInfo(0);
             return info.IsTag("Attack") && !animator.IsInTransition(0);
         });
 
-        // 3️⃣ Now we’re SAFELY in the attack; grab its length
         var state = animator.GetCurrentAnimatorStateInfo(0);
         float clipLength = state.length / animator.speed;   // adjust for speed
 

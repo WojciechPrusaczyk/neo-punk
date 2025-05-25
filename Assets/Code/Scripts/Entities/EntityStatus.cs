@@ -173,6 +173,8 @@ public class EntityStatus : MonoBehaviour
             {
                 EntityStatus playerStatus = gameObject.GetComponent<EntityStatus>();
                 EntityStatus enemyStatus = attackingEntity.GetComponent<EntityStatus>();
+                Debug.Log(playerStatus);
+                Debug.Log(enemyStatus);
                 isPlayerFacedToEnemy = (playerStatus.isFacedRight && !enemyStatus.isFacedRight) ||
                                        (!playerStatus.isFacedRight && enemyStatus.isFacedRight);
                 //Debug.Log("isPlayerFacedToEnemy: "+ isPlayerFacedToEnemy);
