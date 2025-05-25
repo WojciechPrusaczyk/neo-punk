@@ -110,6 +110,7 @@
     <Compile Include="Assets\Level\UI\Białkowe\TimeTrialInterface.cs" />
     <Compile Include="Assets\Code\Scripts\Items\ItemData.cs" />
     <Compile Include="Assets\Code\Scripts\System\LootTable.cs" />
+    <Compile Include="Assets\BarrierController.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\SoundManager.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\AnimationEventDragonFly.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\HpBarController.cs" />
