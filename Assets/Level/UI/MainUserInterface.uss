@@ -17,7 +17,7 @@
 
 #MissionPopup {
     display: flex;
-    right: -400px;
+    right: -550px;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-out;

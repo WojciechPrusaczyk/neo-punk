@@ -172,3 +172,18 @@
     margin-bottom: 25px;
     margin-left: 25px;
 }
+
+.KeyButton {
+    position: absolute;
+    width: 50px;
+    background-image: url("project://database/Assets/Art/UserInterface/Keys/Keycaps.png?fileID=-3101123505817536551&guid=7c36c9005e306a042b8869fbb5c65185&type=3#Keycaps_19");
+    background-color: rgba(255, 255, 255, 0);
+    height: 50px;
+    align-self: auto;
+    left: 0;
+}
+
+.inspectorShown .KeyButton {
+    background-image: url("project://database/Assets/Art/UserInterface/Keys/Keycaps.png?fileID=-4797924570782899106&guid=7c36c9005e306a042b8869fbb5c65185&type=3#Keycaps_16");
+    left: 90px;
+}
