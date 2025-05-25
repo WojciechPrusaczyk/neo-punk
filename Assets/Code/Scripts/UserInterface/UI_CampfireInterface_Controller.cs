@@ -38,17 +38,40 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                 {
                     Button campfireButton = new Button()
                     {
-                        text = $"{campfire.campfireName}",
+                        text = $"",
                         name = $"CampfireButton_{campfire.ID}",
                         style =
                         {
-                            fontSize = 32,
                             width = 500,
-                            height = 100
+                            height = 250,
+                            backgroundImage = campfire.backgroundImage.texture,
+                            justifyContent = Justify.FlexEnd,
+                            alignItems = Align.FlexEnd,
+                            flexDirection = FlexDirection.Column,
                         }
                     };
                     activeCampfiresButtons.Add(campfireButton);
                     campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);
+
+                    Label campfireNameLabel = new Label(campfire.campfireName)
+                    {
+                        style =
+                        {
+                            fontSize = 24,
+                            color = Color.white,
+                            unityTextAlign = TextAnchor.MiddleCenter,
+                            backgroundColor = new Color(0, 0, 0, 0.5f),
+                            borderBottomLeftRadius = 5,
+                            borderBottomRightRadius = 5,
+                            borderTopLeftRadius = 5,
+                            borderTopRightRadius = 5,
+                            paddingLeft = 20,
+                            paddingRight = 20,
+                            paddingTop = 8,
+                            paddingBottom = 8,
+                        }
+                    };
+                    campfireButton.Add(campfireNameLabel);
                 }
                 else
                 {
