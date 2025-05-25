@@ -1,87 +1,78 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class InvasionTrial : MonoBehaviour
 {
-    public bool trialStarted = false;
-    public bool trialFinished = false;
+    [Header("Status Flags")]
+    public bool trialStarted;
+    public bool trialFinished;
 
-    public float damageTaken = 0;
-    
-    public List<Transform> SpawnPoints;
-    [SerializeField]
-    public List<Wave> waves;
-    public int currentWave = 0;
-    
-    public float durationBetweenWaves = 1f;
-    
+    [Header("Stats")]
+    public float damageTaken;                // not used here but kept for designers
+
+    [Header("Setup References")]
+    public List<Transform> spawnPoints = new();
+    public List<Wave> waves             = new();
+    public float durationBetweenWaves   = 1f;
     public InvasionInterface invasionInterface;
 
-    /*
-     * Event system
-     */
-    private GameObject EventsPage;
-    private EventFlagsSystem _EventsFlagsSystem;
+    private int _currentWaveIndex = -1;      // −1 until StartTrial()
+
+    private EventFlagsSystem _eventFlags;
+
+    public Wave currentWave;
 
     private void Awake()
     {
-        EventsPage = GameObject.Find("EventsFlags");
-        _EventsFlagsSystem = EventsPage.GetComponent<EventFlagsSystem>();
+        GameObject eventsPage = GameObject.Find("EventsFlags");
+        if (eventsPage == null)
+            Debug.LogError("EventsFlags GameObject missing in scene! (needed by InvasionTrial)");
+        else
+            _eventFlags = eventsPage.GetComponent<EventFlagsSystem>();
     }
 
-    private void Update()
-    {
-        if (trialStarted)
-        {
-            int index = currentWave - 1;
-
-            if (index >= 0 && index < waves.Count)
-            {
-                int s = waves[index].gameObject.transform.childCount;
-                string enemiesText = $"Enemies left: {s} / {waves[index].enemies.Count}";
-                invasionInterface.EnemiesState.text = enemiesText;
-            }
-        }
-    }
-
+    #region Public API
     public void StartTrial()
     {
-        if (!trialStarted)
-        {
-            invasionInterface.gameObject.SetActive(true);
-            currentWave = 1;
-            trialStarted = true;
-            
-            UpdateWaveState();
-            StartCoroutine(HandleWaves());
-        }
-    }
+        if (trialStarted) return;
 
-    private IEnumerator HandleWaves()
+        trialStarted = true;
+        invasionInterface.gameObject.SetActive(true);
+        StartCoroutine(RunTrial());
+    }
+    #endregion
+
+    private IEnumerator RunTrial()
     {
-        foreach (Wave wave in waves)
+        for (_currentWaveIndex = 0; _currentWaveIndex < waves.Count; _currentWaveIndex++)
         {
-            wave.SpawnEnemies(spawnPoints: SpawnPoints);
-            while (!wave.waveEnded)
-            {
-                yield return null;
-            }
-            currentWave++;
-            UpdateWaveState();
+            Wave wave = waves[_currentWaveIndex];
+            currentWave = wave;
+            UpdateWaveStateUI();
+
+            wave.SpawnEnemies(spawnPoints);
+            
+            invasionInterface.EnemiesState.text = $"Enemies left: {currentWave.aliveCount} / {currentWave.enemies.Count}";
+
+            yield return new WaitUntil(() => wave.aliveCount == 0);
+
             yield return new WaitForSeconds(durationBetweenWaves);
         }
+
         trialFinished = true;
         invasionInterface.gameObject.SetActive(false);
 
-        if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
-            _EventsFlagsSystem.FinishEvent("doneFirstArena");
+        if (_eventFlags && !_eventFlags.IsEventDone("doneFirstArena"))
+            _eventFlags.FinishEvent("doneFirstArena");
     }
-    
-    public void UpdateWaveState()
+
+    public void UpdateWaveStateUI()
     {
-        string waveText =  $"Wave {currentWave}/{waves.Count}";
-        invasionInterface.WaveState.text = waveText;
+        invasionInterface.WaveState.text = $"Wave {_currentWaveIndex + 1}/{waves.Count}";
+        invasionInterface.EnemiesState.text = $"Enemies left: {currentWave.aliveCount} / {currentWave.enemies.Count}";
+        Debug.Log(invasionInterface.EnemiesState.text);
+
     }
 }

@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 
 public class Flame : MonoBehaviour
 {
-    public bool ended;
-    public void Yep()
+    public Action Finished;      // subscribers get a ping
+
+    // ← Animation Event calls this
+    private void FxFinished()          // must match event name exactly
     {
-        ended = true;
+        Finished?.Invoke();
+        Destroy(gameObject);           // auto-clean
     }
 }
