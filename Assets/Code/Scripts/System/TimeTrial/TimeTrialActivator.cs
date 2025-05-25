@@ -14,6 +14,7 @@ public class TimeTrialActivator : MonoBehaviour
     public bool IsPlayerNear;
     public Animator animator;
     public TimeTrialDeactivator timeTrialDeactivator;
+    
 
     
     public void Start()
@@ -49,21 +50,27 @@ public class TimeTrialActivator : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (timeTrial.bestRewardReached == false)
         {
-            SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
-            spriteRenderer.enabled = true;
-            IsPlayerNear = true;
+            if (collision.CompareTag("Player"))
+            {
+                SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = true;
+                IsPlayerNear = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (timeTrial.bestRewardReached == false)
         {
-            SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
-            spriteRenderer.enabled = false;
-            IsPlayerNear = false;
+            if (collision.CompareTag("Player"))
+            {
+                SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = false;
+                IsPlayerNear = false;
+            }
         }
     }
 }

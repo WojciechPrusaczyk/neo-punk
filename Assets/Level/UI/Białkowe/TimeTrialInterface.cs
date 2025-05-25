@@ -8,6 +8,7 @@ public class TimeTrialInterface : MonoBehaviour
 {
     private VisualElement panel;
     private Button exitButton;
+    private Button leaveButton;
     private Label timerLabel;
 
     public Label goldTimeLabel;
@@ -31,7 +32,8 @@ public class TimeTrialInterface : MonoBehaviour
         panel = uiDocument.rootVisualElement;
         
         // Pobieramy referencje do przycisków z UXML
-        exitButton = panel.Q<Button>("exitButton");
+        exitButton = panel.Q<Button>("RestartButton");
+        leaveButton = panel.Q<Button>("LeaveButton");
         timerLabel = panel.Q<Label>("timerLabel");
         
         goldTimeLabel = panel.Q<Label>("GoldTime");
@@ -41,6 +43,7 @@ public class TimeTrialInterface : MonoBehaviour
         
         // Przypisujemy funkcje do przycisków
         if (exitButton != null) exitButton.clicked += () => timeTrial.ExitTrial();
+        if (leaveButton != null) leaveButton.clicked += () => timeTrial.ExitTrial();
     }
     
     private void OnDisable()
