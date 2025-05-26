@@ -13,7 +13,6 @@ public class InteractableCampfire : Interactable
 
     [Header("Campfire Activation Data")]
     public bool isActivated = false;
-    public Animator campfireAnimator;
 
     public GameObject activatedCampfireFX;
     public GameObject instantiatedActiveCampfireFX;
@@ -22,7 +21,7 @@ public class InteractableCampfire : Interactable
     private float startLightIntensity = 0f;
     private float endLightIntensity = 1f;
     private float duration = 1f;
-    private float activatedYOffset = 0.4f;
+    private float activatedYOffset = 0.3f;
     private float activatedLightIntensity = 7f;
     private float activatedLightRadiusOuter = 7f;
 
@@ -49,7 +48,6 @@ public class InteractableCampfire : Interactable
             return;
 
         campfireLight = GetComponentInChildren<Light2D>();
-        campfireAnimator = GetComponent<Animator>();
 
         var campfireInterfaceEntry = allInterfaces[interfaceIndex];
 
@@ -57,17 +55,18 @@ public class InteractableCampfire : Interactable
         if (campfireController == null)
             return;
 
-        campfireLight.transform.position += new Vector3(0, activatedYOffset, 0);
+        if (isActivated)
+            campfireLight.transform.position += new Vector3(0, activatedYOffset, 0);
     }
 
     private void OnEnable()
     {
-        if (campfireAnimator == null)
+        if (animator == null)
             return;
 
         if (isActivated)
         {
-            campfireAnimator.CrossFade("Campfire_Active", 0.1f, 0, 0f);
+            animator.CrossFade("Campfire_Active", 0.1f, 0, 0f);
             campfireLight.intensity = activatedLightIntensity;
             campfireLight.pointLightOuterRadius = activatedLightRadiusOuter;
         }
@@ -94,11 +93,10 @@ public class InteractableCampfire : Interactable
         // Jeœli ognisko nie jest aktywowane to dodajemy je do s³ownika activeCampfires i ustawiamy isActivated na true
         if (!isActivated)
         {
-            if (campfireAnimator != null)
+            if (animator != null)
             {
                 Debug.Log("Activating campfire with ID: " + ID);
-                campfireAnimator.SetBool("IsActivated", true);
-                StartCoroutine(MoveLightUp(activatedYOffset, 1.5f, .5f));
+                animator.SetBool("IsActivated", true);
             }
             WorldSaveGameManager.instance.currentCharacterData.activeCampfires.Add(ID, true);
             isActivated = true;
@@ -165,6 +163,7 @@ public class InteractableCampfire : Interactable
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            animator.SetBool("IsPlayerNearby", true);
 
             // Wyœwietl ikonê interakcji
             if (InteractIcon != null && !campfireController.isCampfireUIActive)
@@ -191,7 +190,12 @@ public class InteractableCampfire : Interactable
         campfireLight.pointLightOuterRadius = radius;
     }
 
-    protected IEnumerator MoveLightUp(float yAmount, float time, float delay)
+    public void MoveLightUp()
+    {
+        StartCoroutine(MoveLightUpCoroutine(activatedYOffset, .7f, 0f));
+    }
+
+    protected IEnumerator MoveLightUpCoroutine(float yAmount, float time, float delay)
     {
         yield return new WaitForSeconds(delay);
         // Przesuniêcie œwiat³a w górê
@@ -203,7 +207,8 @@ public class InteractableCampfire : Interactable
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / time);
             campfireLight.transform.position = Vector3.Lerp(startPosition, endPosition, t);
+            yield return null;
         }
-        yield return null;
+        campfireLight.transform.position = endPosition;
     }
 }
