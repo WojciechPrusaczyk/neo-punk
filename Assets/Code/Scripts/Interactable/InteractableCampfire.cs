@@ -80,6 +80,10 @@ public class InteractableCampfire : Interactable
             }
         }
 
+#if UNITY_EDITOR
+        
+#endif
+
         // Stworzenie efektu œwietlnego
         CreateActivatedFX();
 

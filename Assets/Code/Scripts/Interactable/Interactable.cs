@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -124,5 +125,9 @@ public class Interactable : MonoBehaviour
                 instantiatedIcon = null;
             }
         }
+    }
+
+    protected virtual void OnDestroy()
+    {
     }
 }
