@@ -84,6 +84,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                             flexDirection = FlexDirection.Column,
                         }
                 };
+                campfireButton.focusable = false;
                 activeCampfiresButtons.Add(campfireButton);
 
                 campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);

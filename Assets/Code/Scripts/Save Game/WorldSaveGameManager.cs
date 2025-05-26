@@ -131,6 +131,25 @@ public class WorldSaveGameManager : MonoBehaviour
             Debug.LogWarning("currentCharacterData was null during SaveGame. Initializing new CharacterSaveData.");
         }
 
+        if (EventFlagsSystem.instance != null)
+        {
+            List<EventFlagsSystem.EventFlag> allDoneFlags = new List<EventFlagsSystem.EventFlag>();
+            foreach (var flag in EventFlagsSystem.instance.eventFlags)
+            {
+                if (flag.isDone)
+                {
+                    allDoneFlags.Add(flag);
+                }
+            }
+            currentCharacterData.completedEventFlags = allDoneFlags.ToArray();
+        }
+        else
+        {
+            if (currentCharacterData.completedEventFlags == null)
+            {
+                currentCharacterData.completedEventFlags = new EventFlagsSystem.EventFlag[0];
+            }
+        }
         player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
@@ -191,6 +210,18 @@ public class WorldSaveGameManager : MonoBehaviour
         }
 
         player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
+
+        if (currentCharacterData.completedEventFlags != null)
+        {
+            foreach (var savedFlag in currentCharacterData.completedEventFlags)
+            {
+                if (savedFlag.isDone)
+                {
+                    EventFlagsSystem.instance.FinishEvent(savedFlag.name);
+                }
+            }
+        }
+        
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartSong();

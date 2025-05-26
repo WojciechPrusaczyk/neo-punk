@@ -260,6 +260,10 @@ public class EntityStatus : MonoBehaviour
             // Kod dla wszystkich encji poza graczem
             if ( damage * incomingDamagePercent >= GetHp() )
             {
+                if (isBoss)
+                {
+
+                }
                 // Encja ginie
                 DeathEvent();
                 OnEntityDeath?.Invoke();

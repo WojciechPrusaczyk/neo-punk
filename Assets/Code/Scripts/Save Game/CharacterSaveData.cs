@@ -26,8 +26,12 @@ public class CharacterSaveData
     public SerializableDictionary<int, bool> activeCampfires;
     public int lastVisitedCampfireIndex = -1;
 
+    [Header("Events")]
+    public EventFlagsSystem.EventFlag[] completedEventFlags;
+
     public CharacterSaveData()
     {
-        // Tu zapisane bêd¹ typy zaawansowane (np. Lista, SerializableDictionary)
+        activeCampfires = new SerializableDictionary<int, bool>();
+        completedEventFlags = new EventFlagsSystem.EventFlag[0];
     }
 }

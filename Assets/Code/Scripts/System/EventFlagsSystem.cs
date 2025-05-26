@@ -5,6 +5,18 @@ using UnityEngine;
 
 public class EventFlagsSystem : MonoBehaviour
 {
+    public static EventFlagsSystem instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     /*
      * Zmienna listowa przechowująca aktualne typy obrażeń
      */

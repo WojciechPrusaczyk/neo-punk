@@ -3714,6 +3714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4541325699892935555, guid: a90919894cfc20f4c884492e3778b299, type: 3}
+      propertyPath: currentCharacterData.defeatedBosses.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6745181327967190351, guid: a90919894cfc20f4c884492e3778b299, type: 3}
       propertyPath: m_Name
       value: WorldSaveGameManager
