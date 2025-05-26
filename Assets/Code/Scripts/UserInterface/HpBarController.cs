@@ -74,6 +74,10 @@ public class HpBarController : MonoBehaviour
                 enemyIcon.sprite = demonTypeIcon;
                 enemyLight.color = demonTypeColor;
                 break;
+            default:
+                enemyIcon.sprite = normalTypeIcon;
+                enemyLight.color = normalTypeColor;
+                break;
         }
     }
 

@@ -21,7 +21,12 @@ public class EntityStatus : MonoBehaviour
     public float AttackDamage = 10.0f;
     public float MovementSpeed = 5.0f;
     public bool isFacedRight = true;
+
+
     public bool isEnemy = false;
+    public bool isBoss = false;
+
+
     public float deathAnimationLength = 1.0f;
     public List<GameObject> detectedTargets;
     public float attackRange;

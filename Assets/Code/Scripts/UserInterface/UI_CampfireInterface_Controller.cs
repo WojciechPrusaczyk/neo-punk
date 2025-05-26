@@ -26,7 +26,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
         // Tworzenie przycisków dla aktywnych ognisk
         if (rootVisualElement != null)
         {
-            if (WorldObjectManager.instace == null)
+            if (WorldObjectManager.instance == null)
                 return;
 
             CreateCampfireInterfaceUI();
@@ -41,7 +41,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
     {
         int activeCampfireAmount = 0;
 
-        foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
+        foreach (InteractableCampfire campfire in WorldObjectManager.instance.interactableCampfires)
         {
             if (campfire == null || !campfire.isActivated)
                 continue;
@@ -61,7 +61,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                 break;
         }
 
-        foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
+        foreach (InteractableCampfire campfire in WorldObjectManager.instance.interactableCampfires)
         {
             if (campfire == null)
                 continue;

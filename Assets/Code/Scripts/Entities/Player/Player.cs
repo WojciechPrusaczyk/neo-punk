@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     /*
      * Zmienne lokalne
      */
+    [HideInInspector] public EntityStatus playerStatus;
+
     private Rigidbody2D playerBody;
     private PlayerInventoryInterface playerEq;
     private Collider2D ignoredObject;
@@ -62,7 +64,6 @@ public class Player : MonoBehaviour
     private bool isChargingAttack = false;
     private float keyHoldTime = 0.0f;
     float holdTimeThreshold = 1.7f;
-    private EntityStatus playerStatus;
     [SerializeField] private float parryWindow;
     private bool canBlock = true;
     private PauseMenuBehaviour pauseMenu;
@@ -419,12 +420,12 @@ public class Player : MonoBehaviour
 
     public void TeleportPlayerToCampfire(int campfireID)
     {
-        if (WorldObjectManager.instace == null)
+        if (WorldObjectManager.instance == null)
         {
             Debug.LogError("WorldObjectManager is not initialized.");
             return;
         }
-        InteractableCampfire campfire = WorldObjectManager.instace.GetCampfireByID(campfireID);
+        InteractableCampfire campfire = WorldObjectManager.instance.GetCampfireByID(campfireID);
         if (campfire == null)
         {
             Debug.LogError($"Campfire with ID {campfireID} not found.");

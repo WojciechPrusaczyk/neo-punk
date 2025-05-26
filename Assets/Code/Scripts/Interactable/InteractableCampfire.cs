@@ -81,7 +81,12 @@ public class InteractableCampfire : Interactable
         }
 
 #if UNITY_EDITOR
-        
+        var playerHealth = WorldGameManager.instance.player.playerStatus;
+        playerHealth.entityHealthPoints += 10;
+        if (playerHealth.entityHealthPoints > playerHealth.entityMaxHelath)
+        {
+            playerHealth.entityHealthPoints = playerHealth.entityMaxHelath;
+        }
 #endif
 
         // Stworzenie efektu œwietlnego

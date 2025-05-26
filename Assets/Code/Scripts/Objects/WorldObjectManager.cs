@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WorldObjectManager : MonoBehaviour
 {
-    public static WorldObjectManager instace;
+    public static WorldObjectManager instance;
 
     // Klasa nadrzêdna dla wszystkich obiektów z którymi mo¿na wchodziæ w interakcjê
     public List<Interactable> worldObjects;
@@ -15,9 +15,9 @@ public class WorldObjectManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instace == null)
+        if (instance == null)
         {
-            instace = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
             // Aktualizacja listy obiektów przy zmianie sceny
             SceneManager.sceneLoaded += OnSceneLoaded;
@@ -31,7 +31,7 @@ public class WorldObjectManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (instace == this)
+        if (instance == this)
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
@@ -43,7 +43,7 @@ public class WorldObjectManager : MonoBehaviour
         Debug.Log($"OnSceneLoaded: {scene.name} - Mode: {mode}");
         if (scene.name != "MainMenu")
         {
-            StartCoroutine(RecalculateListsAfterSceneLoadRoutine(scene));
+            StartCoroutine(RecalculateListsAfterSceneLoadRoutine());
             Debug.Log("Recalculating lists after scene load...");
         }
         else
@@ -53,7 +53,7 @@ public class WorldObjectManager : MonoBehaviour
         }
     }
 
-    private IEnumerator RecalculateListsAfterSceneLoadRoutine(Scene scene)
+    private IEnumerator RecalculateListsAfterSceneLoadRoutine()
     {
         yield return new WaitForEndOfFrame();
         ReCalculateLists();
