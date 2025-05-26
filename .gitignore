@@ -89,3 +89,4 @@ neo-punk.sln
 ipch/
 *.sdf
 *.opensdf
+Assembly-CSharp.csproj

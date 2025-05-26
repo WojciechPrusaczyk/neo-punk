@@ -191,9 +191,6 @@ public class WorldSaveGameManager : MonoBehaviour
         }
 
         player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
-        WorldObjectManager worldObjectManager = FindFirstObjectByType<WorldObjectManager>();
-        if (worldObjectManager != null)
-            worldObjectManager.ReCalculateLists();
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartSong();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldObjectManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class WorldObjectManager : MonoBehaviour
         {
             instace = this;
             DontDestroyOnLoad(gameObject);
+            // Aktualizacja listy obiektów przy zmianie sceny
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -26,22 +29,50 @@ public class WorldObjectManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (instace == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"OnSceneLoaded: {scene.name} - Mode: {mode}");
+        if (scene.name != "MainMenu")
+        {
+            StartCoroutine(RecalculateListsAfterSceneLoadRoutine(scene));
+            Debug.Log("Recalculating lists after scene load...");
+        }
+        else
+        {
+            interactableCampfires.Clear();
+            worldObjects.Clear();
+        }
+    }
+
+    private IEnumerator RecalculateListsAfterSceneLoadRoutine(Scene scene)
+    {
+        yield return new WaitForEndOfFrame();
+        ReCalculateLists();
+    }
+
     private void Start()
     {
+    }
+
+    public void ReCalculateLists()
+    {
         interactableCampfires = new List<InteractableCampfire>(FindObjectsByType<InteractableCampfire>(FindObjectsSortMode.None));
+
+        worldObjects.Clear();
 
         foreach (InteractableCampfire campfire in interactableCampfires)
         {
             worldObjects.Add(campfire);
         }
-    }
-
-    public void ReCalculateLists()
-    {   
-        interactableCampfires.Clear();
-        interactableCampfires = new List<InteractableCampfire>(FindObjectsByType<InteractableCampfire>(FindObjectsSortMode.None));
-        worldObjects.Clear();
-        worldObjects.AddRange(interactableCampfires);
     }
 
     public InteractableCampfire GetCampfireByID(int id)

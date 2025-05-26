@@ -25,11 +25,22 @@ public class InteractableCampfire : Interactable
     {
         base.Awake();
 
-        campfireController = UserInterfaceController.instance.GetInterfaces()[UserInterfaceController.instance.GetInterfaces().FindIndex(x => x.interfaceRoot.name == "CampfireInterface")].interfaceRoot.GetComponent<UI_CampfireInterface_Controller>();
+        if (UserInterfaceController.instance == null)
+            return;
+
+        var allInterfaces = UserInterfaceController.instance.GetInterfaces();
+        if (allInterfaces == null)
+            return;
+
+        int interfaceIndex = allInterfaces.FindIndex(x => x != null && x.interfaceRoot != null && x.interfaceRoot.name == "CampfireInterface");
+        if (interfaceIndex == -1)
+            return;
+
+        var campfireInterfaceEntry = allInterfaces[interfaceIndex];
+
+        campfireController = campfireInterfaceEntry.interfaceRoot.GetComponent<UI_CampfireInterface_Controller>();
         if (campfireController == null)
-        {
-            Debug.LogError("Campfire UI Controller not found.");
-        }
+            return;
     }
 
     protected override void Interact()

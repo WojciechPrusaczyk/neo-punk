@@ -9,6 +9,9 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
 
     public List<Button> activeCampfiresButtons = new List<Button>();
 
+    private float width = 500f;
+    private float height = 250f;
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -26,36 +29,68 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
             if (WorldObjectManager.instace == null)
                 return;
 
-            foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
+            CreateCampfireInterfaceUI();
+        }
+    }
+
+    protected override void Update()
+    {
+    }
+
+    private void CreateCampfireInterfaceUI()
+    {
+        int activeCampfireAmount = 0;
+
+        foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
+        {
+            if (campfire == null || !campfire.isActivated)
+                continue;
+            activeCampfireAmount++;
+        }
+
+        // Zmiana wielkoœci przycisków w zale¿noœci od iloœci aktywnych ognisk
+        switch (activeCampfireAmount)
+        {
+            case > 16:
+                width = 300f;
+                height = 150f;
+                break;
+            case > 9:
+                width = 400f;
+                height = 200f;
+                break;
+        }
+
+        foreach (InteractableCampfire campfire in WorldObjectManager.instace.interactableCampfires)
+        {
+            if (campfire == null)
+                continue;
+
+            if (!campfire.isActivated)
+                continue;
+            if (rootVisualElement != null)
             {
-                if (campfire == null)
-                    continue;
-
-                if (!campfire.isActivated)
-                    continue;
-
-                if (rootVisualElement != null)
+                Button campfireButton = new Button()
                 {
-                    Button campfireButton = new Button()
-                    {
-                        text = $"",
-                        name = $"CampfireButton_{campfire.ID}",
-                        style =
+                    text = $"",
+                    name = $"CampfireButton_{campfire.ID}",
+                    style =
                         {
-                            width = 500,
-                            height = 250,
+                            width = width,
+                            height = height,
                             backgroundImage = campfire.backgroundImage.texture,
                             justifyContent = Justify.FlexEnd,
                             alignItems = Align.FlexEnd,
                             flexDirection = FlexDirection.Column,
                         }
-                    };
-                    activeCampfiresButtons.Add(campfireButton);
-                    campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);
+                };
+                activeCampfiresButtons.Add(campfireButton);
 
-                    Label campfireNameLabel = new Label(campfire.campfireName)
-                    {
-                        style =
+                campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);
+
+                Label campfireNameLabel = new Label(campfire.campfireName)
+                {
+                    style =
                         {
                             fontSize = 24,
                             color = Color.white,
@@ -70,27 +105,38 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                             paddingTop = 8,
                             paddingBottom = 8,
                         }
-                    };
-                    campfireButton.Add(campfireNameLabel);
-                }
-                else
-                {
-                    Debug.LogError("Campfire UI Error, root visual element not found.");
-                }
+                };
+                campfireButton.Add(campfireNameLabel);
 
-                rootVisualElement.Clear();
-
-                activeCampfiresButtons.Sort((x, y) => x.text.CompareTo(y.text));
-                foreach (Button button in activeCampfiresButtons)
+                campfireButton.RegisterCallback<MouseEnterEvent>(evt =>
                 {
-                    rootVisualElement.Add(button);
-                }
+                    campfireButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
+                });
+
+                campfireButton.RegisterCallback<MouseLeaveEvent>(evt =>
+                {
+                    campfireButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
+                });
+            }
+            else
+            {
+                Debug.LogError("Campfire UI Error, root visual element not found.");
+            }
+
+            rootVisualElement.Clear();
+
+            activeCampfiresButtons.Sort((a, b) =>
+            {
+                int idA = int.Parse(a.name.Split('_')[1]);
+                int idB = int.Parse(b.name.Split('_')[1]);
+                return idA.CompareTo(idB);
+            });
+
+            foreach (Button button in activeCampfiresButtons)
+            {
+                rootVisualElement.Add(button);
             }
         }
-    }
-
-    protected override void Update()
-    {
     }
 
     public override void ActivateInterface(int ID)
