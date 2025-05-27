@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Campfire_Off_PlayerLeaving
+  m_Name: Drone_Off_PlayerLeaving
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0

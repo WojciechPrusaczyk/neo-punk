@@ -11,7 +11,7 @@ public class WorldObjectManager : MonoBehaviour
     public List<Interactable> worldObjects;
 
     // Pozosta³e obiekty z interakcj¹
-    public List<InteractableCampfire> interactableCampfires;
+    public List<InteractableDrone> interactableDrones;
 
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class WorldObjectManager : MonoBehaviour
         }
         else
         {
-            interactableCampfires.Clear();
+            interactableDrones.Clear();
             worldObjects.Clear();
         }
     }
@@ -65,19 +65,19 @@ public class WorldObjectManager : MonoBehaviour
 
     public void ReCalculateLists()
     {
-        interactableCampfires = new List<InteractableCampfire>(FindObjectsByType<InteractableCampfire>(FindObjectsSortMode.None));
+        interactableDrones = new List<InteractableDrone>(FindObjectsByType<InteractableDrone>(FindObjectsSortMode.None));
 
         worldObjects.Clear();
 
-        foreach (InteractableCampfire campfire in interactableCampfires)
+        foreach (InteractableDrone campfire in interactableDrones)
         {
             worldObjects.Add(campfire);
         }
     }
 
-    public InteractableCampfire GetCampfireByID(int id)
+    public InteractableDrone GetCampfireByID(int id)
     {
-        foreach (InteractableCampfire campfire in interactableCampfires)
+        foreach (InteractableDrone campfire in interactableDrones)
         {
             if (campfire.ID == id)
             {

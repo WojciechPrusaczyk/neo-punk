@@ -18,33 +18,33 @@ MonoBehaviour:
   characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
   - speakerName: 1
-    text: ok ok, good buissness on your part listen now
+    text: Nice work back there. Now listen carefully.
   - speakerName: 1
-    text: there is broken down part of the road two alleys south from here
+    text: Don't go down there if you value your life.
   - speakerName: 1
-    text: dont go there if you value your life
+    text: Something terrible lurks in those ruins.
   - speakerName: 1
-    text: cuz something awfull happened round there
+    text: People disappear, strange sounds echo at night - even the cops won't patrol
+      there.
   - speakerName: 1
-    text: dissapearing people, barking dogs gangs dont go there, cops dont go there
+    text: I wouldn't venture into those depths for all the money in the world.
   - speakerName: 1
-    text: 'i wouldn''t go there even for big money '
-  - speakerName: 1
-    text: road openig goes to sewers and those decrepit tunels havent seen touch
-      of help in ages
+    text: The main road connects to the old sewer system - those abandoned tunnels
+      have never been fully explored.
   - speakerName: 1
     text: bad things and bad people live there monsters all of them
   - speakerName: 1
-    text: but if you wont listen keep this
+    text: 'But if you won''t listen, keep this:'
   - speakerName: 1
-    text: '"gives trinket that improves visibility and increase money gain"'
+    text: '"I''ve got gear that''ll boost your reflexes and help you earn some quick
+      cash."'
   - speakerName: 0
-    text: Thanks
+    text: Noted.
   - speakerName: 1
-    text: keep it and close at that
+    text: Keep this between us, friend.
   - speakerName: 1
-    text: and... you know
+    text: And remember...
   - speakerName: 1
-    text: come back to chat and trade
+    text: Come back when you need supplies or information.
   repeatable: 0
   hasBeenAlreadySeen: 0

@@ -4,33 +4,28 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
-public class InteractableCampfire : Interactable
+public class InteractableDrone : Interactable
 {
-    [Header("Campfire Settings")]
+    [Header("Drone Settings")]
     public int ID;
-    public string campfireName;
+    public string droneName;
     public Sprite backgroundImage;
 
-    [Header("Campfire Activation Data")]
+    [Header("Drone Activation Data")]
     public bool isActivated = false;
 
-    public GameObject activatedCampfireFX;
-    public GameObject instantiatedActiveCampfireFX;
-
-    // Œwiat³o ogniska
-    private float startLightIntensity = 0f;
-    private float endLightIntensity = 1f;
-    private float duration = 1f;
     private float activatedYOffset = 0.3f;
     private float activatedLightIntensity = 7f;
     private float activatedLightRadiusOuter = 7f;
 
-    private Light2D campfireLight;
+    // Drone light
+    private Light2D droneLight;
 
+    // Drone Interation
     private bool isInteractionOnCooldown = false;
     private float interactionCooldownDuration = .5f;
 
-    private UI_CampfireInterface_Controller campfireController;
+    private UI_DroneInterface_Controller droneController;
 
     protected override void Awake()
     {
@@ -43,20 +38,20 @@ public class InteractableCampfire : Interactable
         if (allInterfaces == null)
             return;
 
-        int interfaceIndex = allInterfaces.FindIndex(x => x != null && x.interfaceRoot != null && x.interfaceRoot.name == "CampfireInterface");
+        int interfaceIndex = allInterfaces.FindIndex(x => x != null && x.interfaceRoot != null && x.interfaceRoot.name == "DroneInterface");
         if (interfaceIndex == -1)
             return;
 
-        campfireLight = GetComponentInChildren<Light2D>();
+        droneLight = GetComponentInChildren<Light2D>();
 
-        var campfireInterfaceEntry = allInterfaces[interfaceIndex];
+        var droneInterface = allInterfaces[interfaceIndex];
 
-        campfireController = campfireInterfaceEntry.interfaceRoot.GetComponent<UI_CampfireInterface_Controller>();
-        if (campfireController == null)
+        droneController = droneInterface.interfaceRoot.GetComponent<UI_DroneInterface_Controller>();
+        if (droneController == null)
             return;
 
         if (isActivated)
-            campfireLight.transform.position += new Vector3(0, activatedYOffset, 0);
+            droneLight.transform.position += new Vector3(0, activatedYOffset, 0);
     }
 
     private void OnEnable()
@@ -66,15 +61,15 @@ public class InteractableCampfire : Interactable
 
         if (isActivated)
         {
-            animator.CrossFade("Campfire_Active", 0.1f, 0, 0f);
-            campfireLight.intensity = activatedLightIntensity;
-            campfireLight.pointLightOuterRadius = activatedLightRadiusOuter;
+            animator.CrossFade("Drone_Active", 0.1f, 0, 0f);
+            droneLight.intensity = activatedLightIntensity;
+            droneLight.pointLightOuterRadius = activatedLightRadiusOuter;
         }
     }
 
     protected override void Interact()
     {
-        if (campfireController.isCampfireUIActive)
+        if (droneController.isDroneUIActive)
             return;
 
         if (isInteractionOnCooldown)
@@ -88,24 +83,24 @@ public class InteractableCampfire : Interactable
         // Próba odczytania stanu ogniska z pliku zapisu
         // Jeœli nie ma w pliku lub jest false to isActivated zostanie ustawione na false (TryGetValue to bezpieczna metoda, która próbuje odczytaæ wartoœæ z s³ownika SerializeDictionary)
         // Jeœli jest w pliku zapisu i jest true to isActivated zostanie ustawione na true
-        WorldSaveGameManager.instance.currentCharacterData.activeCampfires.TryGetValue(ID, out isActivated);
+        WorldSaveGameManager.instance.currentCharacterData.activeDrones.TryGetValue(ID, out isActivated);
 
         // Jeœli ognisko nie jest aktywowane to dodajemy je do s³ownika activeCampfires i ustawiamy isActivated na true
         if (!isActivated)
         {
             if (animator != null)
             {
-                Debug.Log("Activating campfire with ID: " + ID);
+                Debug.Log("Activating drone with ID: " + ID);
                 animator.SetBool("IsActivated", true);
             }
-            WorldSaveGameManager.instance.currentCharacterData.activeCampfires.Add(ID, true);
+            WorldSaveGameManager.instance.currentCharacterData.activeDrones.Add(ID, true);
             isActivated = true;
         }
         else
         {
-            if (campfireController != null)
+            if (droneController != null)
             {
-                campfireController.ActivateInterface(ID);
+                droneController.ActivateInterface(ID);
             }
         }
 
@@ -119,7 +114,7 @@ public class InteractableCampfire : Interactable
 #endif
 
         // Zmiana ID ostatnio odwiedzonego ogniska
-        WorldSaveGameManager.instance.currentCharacterData.lastVisitedCampfireIndex = ID;
+        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = ID;
 
         // Zapisanie stanu gry
         WorldSaveGameManager.instance.SaveGame();
@@ -134,13 +129,13 @@ public class InteractableCampfire : Interactable
 
     protected override void CloseUI()
     {
-        if (campfireController.isCampfireUIActive)
-            campfireController.DeactivateInterface();
+        if (droneController.isDroneUIActive)
+            droneController.DeactivateInterface();
 
         if (instantiatedIcon == null && InteractIcon != null && isPlayerInRange)
         {
-            Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + interactableIconYOffset, transform.position.z);
-            InstantiateInteractionIcon(InteractIcon, positionAboveCampfire, 0);
+            Vector3 positionAboveDrone = new Vector3(transform.position.x, transform.position.y + interactableIconYOffset, transform.position.z);
+            InstantiateInteractionIcon(InteractIcon, positionAboveDrone, 0);
         }
     }
 
@@ -149,13 +144,13 @@ public class InteractableCampfire : Interactable
         base.PrepareInteractable();
 
         if (WorldSaveGameManager.instance != null)
-            WorldSaveGameManager.instance.currentCharacterData.activeCampfires.TryGetValue(ID, out isActivated);
+            WorldSaveGameManager.instance.currentCharacterData.activeDrones.TryGetValue(ID, out isActivated);
     }
 
     protected override void CloseUIOnExit()
     {
-        if (campfireController.isCampfireUIActive)
-            campfireController.DeactivateInterface();
+        if (droneController.isDroneUIActive)
+            droneController.DeactivateInterface();
     }
 
     protected override void PrepareTriggerEnterPlayer(Collider2D collision)
@@ -166,28 +161,28 @@ public class InteractableCampfire : Interactable
             animator.SetBool("IsPlayerNearby", true);
 
             // Wyœwietl ikonê interakcji
-            if (InteractIcon != null && !campfireController.isCampfireUIActive)
+            if (InteractIcon != null && !droneController.isDroneUIActive)
             {
-                Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                InstantiateInteractionIcon(InteractIcon, positionAboveCampfire, interactableIconYOffset);
+                Vector3 positionAboveDrone = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                InstantiateInteractionIcon(InteractIcon, positionAboveDrone, interactableIconYOffset);
             }
         }
     }
 
     protected void ChangeLightIntensity(float lightIntensity)
     {
-        if (campfireLight == null)
+        if (droneLight == null)
             return;
 
-        campfireLight.intensity = lightIntensity;
+        droneLight.intensity = lightIntensity;
     }
 
     protected void ChangeLightRadiusOuter(float radius)
     {
-        if (campfireLight == null)
+        if (droneLight == null)
             return;
 
-        campfireLight.pointLightOuterRadius = radius;
+        droneLight.pointLightOuterRadius = radius;
     }
 
     public void MoveLightUp()
@@ -199,16 +194,16 @@ public class InteractableCampfire : Interactable
     {
         yield return new WaitForSeconds(delay);
         // Przesuniêcie œwiat³a w górê
-        Vector3 startPosition = campfireLight.transform.position;
+        Vector3 startPosition = droneLight.transform.position;
         Vector3 endPosition = startPosition + new Vector3(0, yAmount, 0);
         float elapsedTime = 0f;
         while (elapsedTime < time)
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / time);
-            campfireLight.transform.position = Vector3.Lerp(startPosition, endPosition, t);
+            droneLight.transform.position = Vector3.Lerp(startPosition, endPosition, t);
             yield return null;
         }
-        campfireLight.transform.position = endPosition;
+        droneLight.transform.position = endPosition;
     }
 }

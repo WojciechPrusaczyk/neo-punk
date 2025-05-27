@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
      */
     [HideInInspector] public EntityStatus playerStatus;
 
+    public bool isInDialogue = false;
+
     private Rigidbody2D playerBody;
     private PlayerInventoryInterface playerEq;
     private Collider2D ignoredObject;
@@ -418,14 +420,14 @@ public class Player : MonoBehaviour
         canBlock = true;
     }
 
-    public void TeleportPlayerToCampfire(int campfireID)
+    public void TeleportPlayerToDrone(int campfireID)
     {
         if (WorldObjectManager.instance == null)
         {
             Debug.LogError("WorldObjectManager is not initialized.");
             return;
         }
-        InteractableCampfire campfire = WorldObjectManager.instance.GetCampfireByID(campfireID);
+        InteractableDrone campfire = WorldObjectManager.instance.GetCampfireByID(campfireID);
         if (campfire == null)
         {
             Debug.LogError($"Campfire with ID {campfireID} not found.");
@@ -437,7 +439,7 @@ public class Player : MonoBehaviour
 
         if (WorldSaveGameManager.instance != null)
         {
-            WorldSaveGameManager.instance.currentCharacterData.lastVisitedCampfireIndex = campfireID;
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = campfireID;
             WorldSaveGameManager.instance.SaveGame();
         }
 
@@ -484,6 +486,9 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        if (isInDialogue)
+            return;
+
         if (canJump)
         {
             canJump = false;

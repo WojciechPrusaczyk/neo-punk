@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2919050514907930322}
   - component: {fileID: 486877615717560512}
   m_Layer: 0
-  m_Name: Campfire
+  m_Name: Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

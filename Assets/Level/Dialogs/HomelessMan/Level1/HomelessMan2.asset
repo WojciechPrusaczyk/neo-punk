@@ -18,20 +18,20 @@ MonoBehaviour:
   characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
   - speakerName: 0
-    text: Fine, hit me with it
+    text: Understood. Continue.
   - speakerName: 1
-    text: First and formoast we are on the turf of "Big Dilon"
+    text: First things first - we're deep in Big Dilon's turf now.
   - speakerName: 1
-    text: Disputet territory but his men stand on street corners. Watch out for him
-      and his men
+    text: Contested territory, but his men control the street corners. Keep your
+      eyes open.
   - speakerName: 1
-    text: 'they shoot for fun and beat up good people but keep some goodies in magazines
-      and.... '
+    text: They shoot first, ask questions later - but they keep the innocent folk
+      safe.
   - speakerName: 1
-    text: tyou coullld "free" those supplies For good of the people of course
+    text: Could probably score some 'free' supplies if you know what I mean.
   - speakerName: 1
-    text: In fact one magazin is just down this road.
+    text: Matter of fact, one of their stash houses is just down this road.
   - speakerName: 0
-    text: Interesting, i will look into it
+    text: Interesting, i will look into it.
   repeatable: 1
   hasBeenAlreadySeen: 1

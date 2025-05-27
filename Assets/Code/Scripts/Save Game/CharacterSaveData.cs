@@ -23,15 +23,15 @@ public class CharacterSaveData
     public float currentHealth;
 
     [Header("Campfires")]
-    public SerializableDictionary<int, bool> activeCampfires;
-    public int lastVisitedCampfireIndex = -1;
+    public SerializableDictionary<int, bool> activeDrones;
+    public int lastVisitedDroneIndex = -1;
 
     [Header("Events")]
     public EventFlagsSystem.EventFlag[] completedEventFlags;
 
     public CharacterSaveData()
     {
-        activeCampfires = new SerializableDictionary<int, bool>();
+        activeDrones = new SerializableDictionary<int, bool>();
         completedEventFlags = new EventFlagsSystem.EventFlag[0];
     }
 }

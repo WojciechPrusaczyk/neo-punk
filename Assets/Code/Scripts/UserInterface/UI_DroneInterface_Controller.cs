@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class UI_CampfireInterface_Controller : UI_InterfaceController
+public class UI_DroneInterface_Controller : UI_InterfaceController
 {
-    public bool isCampfireUIActive = false;
+    public bool isDroneUIActive = false;
 
-    public List<Button> activeCampfiresButtons = new List<Button>();
+    public List<Button> activeDroneUIButtons = new List<Button>();
 
     private float width = 500f;
     private float height = 250f;
@@ -16,9 +16,9 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
     {
         base.OnEnable();
 
-        rootVisualElement = root.Q<VisualElement>("Campfires");
+        rootVisualElement = root.Q<VisualElement>("Drones");
 
-        activeCampfiresButtons.Clear();
+        activeDroneUIButtons.Clear();
 
         if (WorldSaveGameManager.instance == null)
             return;
@@ -29,7 +29,7 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
             if (WorldObjectManager.instance == null)
                 return;
 
-            CreateCampfireInterfaceUI();
+            CreateDroneInterfaceUI();
         }
     }
 
@@ -37,19 +37,19 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
     {
     }
 
-    private void CreateCampfireInterfaceUI()
+    private void CreateDroneInterfaceUI()
     {
-        int activeCampfireAmount = 0;
+        int activeDroneAmount = 0;
 
-        foreach (InteractableCampfire campfire in WorldObjectManager.instance.interactableCampfires)
+        foreach (InteractableDrone drone in WorldObjectManager.instance.interactableDrones)
         {
-            if (campfire == null || !campfire.isActivated)
+            if (drone == null || !drone.isActivated)
                 continue;
-            activeCampfireAmount++;
+            activeDroneAmount++;
         }
 
         // Zmiana wielkoœci przycisków w zale¿noœci od iloœci aktywnych ognisk
-        switch (activeCampfireAmount)
+        switch (activeDroneAmount)
         {
             case > 16:
                 width = 300f;
@@ -61,35 +61,35 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                 break;
         }
 
-        foreach (InteractableCampfire campfire in WorldObjectManager.instance.interactableCampfires)
+        foreach (InteractableDrone drone in WorldObjectManager.instance.interactableDrones)
         {
-            if (campfire == null)
+            if (drone == null)
                 continue;
 
-            if (!campfire.isActivated)
+            if (!drone.isActivated)
                 continue;
             if (rootVisualElement != null)
             {
-                Button campfireButton = new Button()
+                Button droneButton = new Button()
                 {
                     text = $"",
-                    name = $"CampfireButton_{campfire.ID}",
+                    name = $"DroneButton_{drone.ID}",
                     style =
                         {
                             width = width,
                             height = height,
-                            backgroundImage = campfire.backgroundImage.texture,
+                            backgroundImage = drone.backgroundImage.texture,
                             justifyContent = Justify.FlexEnd,
                             alignItems = Align.FlexEnd,
                             flexDirection = FlexDirection.Column,
                         }
                 };
-                campfireButton.focusable = false;
-                activeCampfiresButtons.Add(campfireButton);
+                droneButton.focusable = false;
+                activeDroneUIButtons.Add(droneButton);
 
-                campfireButton.clicked += () => player.TeleportPlayerToCampfire(campfire.ID);
+                droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID);
 
-                Label campfireNameLabel = new Label(campfire.campfireName)
+                Label droneNameLabel = new Label(drone.droneName)
                 {
                     style =
                         {
@@ -107,33 +107,33 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
                             paddingBottom = 8,
                         }
                 };
-                campfireButton.Add(campfireNameLabel);
+                droneButton.Add(droneNameLabel);
 
-                campfireButton.RegisterCallback<MouseEnterEvent>(evt =>
+                droneButton.RegisterCallback<MouseEnterEvent>(evt =>
                 {
-                    campfireButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
+                    droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
                 });
 
-                campfireButton.RegisterCallback<MouseLeaveEvent>(evt =>
+                droneButton.RegisterCallback<MouseLeaveEvent>(evt =>
                 {
-                    campfireButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
+                    droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
                 });
             }
             else
             {
-                Debug.LogError("Campfire UI Error, root visual element not found.");
+                Debug.LogError("Drone UI Error, root visual element not found.");
             }
 
             rootVisualElement.Clear();
 
-            activeCampfiresButtons.Sort((a, b) =>
+            activeDroneUIButtons.Sort((a, b) =>
             {
                 int idA = int.Parse(a.name.Split('_')[1]);
                 int idB = int.Parse(b.name.Split('_')[1]);
                 return idA.CompareTo(idB);
             });
 
-            foreach (Button button in activeCampfiresButtons)
+            foreach (Button button in activeDroneUIButtons)
             {
                 rootVisualElement.Add(button);
             }
@@ -144,34 +144,34 @@ public class UI_CampfireInterface_Controller : UI_InterfaceController
     {
         if (MainUiController == null || userInterfaceController == null)
         {
-            Debug.LogError("Campfire UI Error, MainUiController or UserInterfaceController is null.");
+            Debug.LogError("Drone UI Error, MainUiController or UserInterfaceController is null.");
             return;
         }
         if (interfaceIndex < 0 || interfaceIndex >= userInterfaceController.GetInterfaces().Count)
         {
-            Debug.LogError("Campfire UI Error, invalid interface index.");
+            Debug.LogError("Drone UI Error, invalid interface index.");
             return;
         }
-        isCampfireUIActive = true;
+        isDroneUIActive = true;
         userInterfaceController.ActivateInterface(userInterfaceController.GetInterfaces()[interfaceIndex].interfaceRoot);
     }
 
     public override void DeactivateInterface()
     {
-        if (!isCampfireUIActive)
+        if (!isDroneUIActive)
             return;
 
         if (MainUiController == null || userInterfaceController == null)
         {
-            Debug.LogError("Campfire UI Error, MainUiController or UserInterfaceController is null.");
+            Debug.LogError("Drone UI Error, MainUiController or UserInterfaceController is null.");
             return;
         }
         if (interfaceIndex < 0 || interfaceIndex >= userInterfaceController.GetInterfaces().Count)
         {
-            Debug.LogError("Campfire UI Error, invalid interface index.");
+            Debug.LogError("Drone UI Error, invalid interface index.");
             return;
         }
-        isCampfireUIActive = false;
+        isDroneUIActive = false;
         userInterfaceController.ActivateInterface(userInterfaceController.GetInterfaces()[0].interfaceRoot);
     }
 }
