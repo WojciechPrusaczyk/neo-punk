@@ -33,6 +33,14 @@ public class PauseMenuBehaviour : MonoBehaviour
         var quitMenuButton = InterfaceRoot.Q<Button>("quitMenuButton");
         var quitButton = InterfaceRoot.Q<Button>("quitButton");
 
+        List<Button> buttons = new List<Button>
+        {
+            resumeButton,
+            settingsButton,
+            quitMenuButton,
+            quitButton
+        };
+
         resumeButton.clicked += buttonResume;
         settingsButton.clicked += buttonOptions;
         quitMenuButton.clicked += buttonQuitToMenu;
@@ -41,10 +49,10 @@ public class PauseMenuBehaviour : MonoBehaviour
         // Sound on hover
         if (WorldSoundFXManager.instance != null)
         {
-            resumeButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            settingsButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            quitMenuButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            quitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            foreach (var button in buttons)
+            {
+                button.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            }
         }
     }
 

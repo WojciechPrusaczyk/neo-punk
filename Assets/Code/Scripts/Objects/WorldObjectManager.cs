@@ -69,19 +69,19 @@ public class WorldObjectManager : MonoBehaviour
 
         worldObjects.Clear();
 
-        foreach (InteractableDrone campfire in interactableDrones)
+        foreach (InteractableDrone drone in interactableDrones)
         {
-            worldObjects.Add(campfire);
+            worldObjects.Add(drone);
         }
     }
 
-    public InteractableDrone GetCampfireByID(int id)
+    public InteractableDrone GetDroneByID(int id)
     {
-        foreach (InteractableDrone campfire in interactableDrones)
+        foreach (InteractableDrone drone in interactableDrones)
         {
-            if (campfire.ID == id)
+            if (drone.ID == id)
             {
-                return campfire;
+                return drone;
             }
         }
         return null;

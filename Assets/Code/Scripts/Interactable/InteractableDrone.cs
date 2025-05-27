@@ -85,6 +85,9 @@ public class InteractableDrone : Interactable
         // Jeœli jest w pliku zapisu i jest true to isActivated zostanie ustawione na true
         WorldSaveGameManager.instance.currentCharacterData.activeDrones.TryGetValue(ID, out isActivated);
 
+        // Zmiana ID ostatnio odwiedzonego ogniska
+        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = ID;
+
         // Jeœli ognisko nie jest aktywowane to dodajemy je do s³ownika activeCampfires i ustawiamy isActivated na true
         if (!isActivated)
         {
@@ -112,9 +115,6 @@ public class InteractableDrone : Interactable
             playerHealth.entityHealthPoints = playerHealth.entityMaxHelath;
         }
 #endif
-
-        // Zmiana ID ostatnio odwiedzonego ogniska
-        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = ID;
 
         // Zapisanie stanu gry
         WorldSaveGameManager.instance.SaveGame();

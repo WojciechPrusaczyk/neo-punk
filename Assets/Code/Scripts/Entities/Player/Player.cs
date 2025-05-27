@@ -420,26 +420,26 @@ public class Player : MonoBehaviour
         canBlock = true;
     }
 
-    public void TeleportPlayerToDrone(int campfireID)
+    public void TeleportPlayerToDrone(int droneID)
     {
         if (WorldObjectManager.instance == null)
         {
             Debug.LogError("WorldObjectManager is not initialized.");
             return;
         }
-        InteractableDrone campfire = WorldObjectManager.instance.GetCampfireByID(campfireID);
-        if (campfire == null)
+        InteractableDrone drone = WorldObjectManager.instance.GetDroneByID(droneID);
+        if (drone == null)
         {
-            Debug.LogError($"Campfire with ID {campfireID} not found.");
+            Debug.LogError($"Drone with ID {droneID} not found.");
             return;
         }
-        transform.position = new Vector3(campfire.transform.position.x, campfire.transform.position.y + 1.0f, transform.position.z);
+        transform.position = new Vector3(drone.transform.position.x, drone.transform.position.y + 1.0f, transform.position.z);
 
         playerBody.velocity = Vector2.zero;
 
         if (WorldSaveGameManager.instance != null)
         {
-            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = campfireID;
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = droneID;
             WorldSaveGameManager.instance.SaveGame();
         }
 

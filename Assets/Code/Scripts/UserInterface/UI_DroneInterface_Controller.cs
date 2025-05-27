@@ -39,6 +39,10 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
 
     private void CreateDroneInterfaceUI()
     {
+        if (rootVisualElement != null)
+            rootVisualElement.Clear();
+        activeDroneUIButtons.Clear();
+
         int activeDroneAmount = 0;
 
         foreach (InteractableDrone drone in WorldObjectManager.instance.interactableDrones)
@@ -84,10 +88,32 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                             flexDirection = FlexDirection.Column,
                         }
                 };
-                droneButton.focusable = false;
-                activeDroneUIButtons.Add(droneButton);
 
-                droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID);
+                droneButton.focusable = false;
+                droneButton.AddToClassList("drone-button");
+
+                if (drone.ID != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex)
+                {
+                    droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID);
+                    droneButton.RegisterCallback<MouseEnterEvent>(evt =>
+                    {
+                        droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
+                    });
+
+                    droneButton.RegisterCallback<MouseLeaveEvent>(evt =>
+                    {
+                        droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
+                    });
+
+                    droneButton.AddToClassList("drone-button-enabled");
+
+                }
+                else
+                {
+                    droneButton.AddToClassList("drone-button-disabled");
+                }
+
+                    activeDroneUIButtons.Add(droneButton);
 
                 Label droneNameLabel = new Label(drone.droneName)
                 {
@@ -108,23 +134,11 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                         }
                 };
                 droneButton.Add(droneNameLabel);
-
-                droneButton.RegisterCallback<MouseEnterEvent>(evt =>
-                {
-                    droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
-                });
-
-                droneButton.RegisterCallback<MouseLeaveEvent>(evt =>
-                {
-                    droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
-                });
             }
             else
             {
                 Debug.LogError("Drone UI Error, root visual element not found.");
             }
-
-            rootVisualElement.Clear();
 
             activeDroneUIButtons.Sort((a, b) =>
             {
