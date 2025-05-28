@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -13,6 +14,8 @@ public class Interactable : MonoBehaviour
     [SerializeField] protected GameObject InteractIcon;
     [SerializeField] protected GameObject instantiatedIcon;
 
+    protected Animator animator;
+
     protected bool isPlayerInRange = false;
 
     protected virtual void Awake()
@@ -22,6 +25,7 @@ public class Interactable : MonoBehaviour
         {
             Debug.LogError("Do działania systemu interakcji wymagany jest Collider2D.");
         }
+        animator = GetComponent<Animator>();
 
         PrepareInteractable();
     }
@@ -100,6 +104,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            animator.SetBool("IsPlayerNearby", true);
 
             // Wyświetl ikonę interakcji
             if (InteractIcon != null)
@@ -115,6 +120,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            animator.SetBool("IsPlayerNearby", false);
             CloseUIOnExit();
 
             // Ukryj ikonę interakcji
@@ -124,5 +130,9 @@ public class Interactable : MonoBehaviour
                 instantiatedIcon = null;
             }
         }
+    }
+
+    protected virtual void OnDestroy()
+    {
     }
 }

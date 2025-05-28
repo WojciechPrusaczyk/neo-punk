@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldObjectManager : MonoBehaviour
 {
-    public static WorldObjectManager instace;
+    public static WorldObjectManager instance;
 
     // Klasa nadrzêdna dla wszystkich obiektów z którymi mo¿na wchodziæ w interakcjê
     public List<Interactable> worldObjects;
 
     // Pozosta³e obiekty z interakcj¹
-    public List<InteractableCampfire> interactableCampfires;
+    public List<InteractableDrone> interactableDrones;
 
     private void Awake()
     {
-        if (instace == null)
+        if (instance == null)
         {
-            instace = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
+            // Aktualizacja listy obiektów przy zmianie sceny
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -26,31 +29,59 @@ public class WorldObjectManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnDestroy()
     {
-        interactableCampfires = new List<InteractableCampfire>(FindObjectsByType<InteractableCampfire>(FindObjectsSortMode.None));
-
-        foreach (InteractableCampfire campfire in interactableCampfires)
+        if (instance == this)
         {
-            worldObjects.Add(campfire);
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
 
-    public void ReCalculateLists()
-    {   
-        interactableCampfires.Clear();
-        interactableCampfires = new List<InteractableCampfire>(FindObjectsByType<InteractableCampfire>(FindObjectsSortMode.None));
-        worldObjects.Clear();
-        worldObjects.AddRange(interactableCampfires);
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"OnSceneLoaded: {scene.name} - Mode: {mode}");
+        if (scene.name != "MainMenu")
+        {
+            StartCoroutine(RecalculateListsAfterSceneLoadRoutine());
+            Debug.Log("Recalculating lists after scene load...");
+        }
+        else
+        {
+            interactableDrones.Clear();
+            worldObjects.Clear();
+        }
     }
 
-    public InteractableCampfire GetCampfireByID(int id)
+    private IEnumerator RecalculateListsAfterSceneLoadRoutine()
     {
-        foreach (InteractableCampfire campfire in interactableCampfires)
+        yield return new WaitForEndOfFrame();
+        ReCalculateLists();
+    }
+
+    private void Start()
+    {
+    }
+
+    public void ReCalculateLists()
+    {
+        interactableDrones = new List<InteractableDrone>(FindObjectsByType<InteractableDrone>(FindObjectsSortMode.None));
+
+        worldObjects.Clear();
+
+        foreach (InteractableDrone drone in interactableDrones)
         {
-            if (campfire.ID == id)
+            worldObjects.Add(drone);
+        }
+    }
+
+    public InteractableDrone GetDroneByID(int id)
+    {
+        foreach (InteractableDrone drone in interactableDrones)
+        {
+            if (drone.ID == id)
             {
-                return campfire;
+                return drone;
             }
         }
         return null;

@@ -9,6 +9,8 @@ public class DialogScript : MonoBehaviour
     public List<DialogData> dialogs = new List<DialogData>();
     [SerializeField] private DialogData dialogData = null;
 
+    private Player player;
+
     [SerializeField] private VisualElement root;
     private VisualElement characterOnePictureElement;
     private VisualElement characterTwoPictureElement;
@@ -26,6 +28,8 @@ public class DialogScript : MonoBehaviour
     {
         mainUserInterfaceControllerObject = GameObject.Find("MainUserInterfaceRoot").gameObject;
         userInterfaceController = mainUserInterfaceControllerObject.GetComponent<UserInterfaceController>();
+
+        player = FindFirstObjectByType<Player>();
     }
 
     private void OnEnable()
@@ -134,6 +138,16 @@ public class DialogScript : MonoBehaviour
     //Włączenie dialogu
     public void StartDialog(int dialogIndex)
     {
+
+        if (player == null)
+        {
+            Debug.LogError("Player was not found, cannot proceed with dialogues.");
+            return;
+        }
+
+        if (player.isInDialogue)
+            return;
+
         if (dialogs[dialogIndex] && dialogs[dialogIndex].lines == null || dialogs[dialogIndex].lines.Count == 0)
         {
             Debug.LogWarning("ERROR DIALOG! NIE MA TEKSTU");
@@ -154,6 +168,8 @@ public class DialogScript : MonoBehaviour
         {
             return;
         }
+
+        player.isInDialogue = true;
 
         currentLineIndex = 0;
 
@@ -216,20 +232,27 @@ public class DialogScript : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.05f); //Tutaj zwieksza sie predkosc wyswietlanego tekstu
         }
     }
-    
+
     //Funkcja zamykania UI
     private void EndDialog()
     {
+        StartCoroutine(WaitForEndOfFrameThenEndDialogue());
+    }
+
+    private IEnumerator WaitForEndOfFrameThenEndDialogue()
+    {
+        yield return new WaitForEndOfFrame();
+        if (player == null)
+        {
+            Debug.LogError("Player was not found, cannot proceed with ending dialogues.");
+            yield break;
+        }
+
+        player.isInDialogue = false;
+
         userInterfaceController.ActivateInterface(0);
 
         dialogData.hasBeenAlreadySeen = true;
         dialogData = null;
-        // var uiDocument = GetComponent<UIDocument>();
-        
-        // if (uiDocument != null)
-        // {
-        //     uiDocument.enabled = false; // Wyłączenie UIDocument
-        // }
-        // Debug.Log("Koniec dialogu");
     }
 }

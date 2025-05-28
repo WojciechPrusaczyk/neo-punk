@@ -27,13 +27,13 @@ public class UI_InterfaceController : MonoBehaviour
         var uiDocument = GetComponent<UIDocument>();
         if (uiDocument == null)
         {
-            Debug.LogError("Campfire UI Error, no ui document element found.");
+            Debug.LogError("Interface UI Error, no ui document element found.");
             return;
         }
         root = uiDocument.rootVisualElement;
         if (root == null)
         {
-            Debug.LogError("Campfire UI Error, no root visual element found.");
+            Debug.LogError("InterfaceUI Error, no root visual element found.");
             return;
         }
 

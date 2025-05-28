@@ -98,6 +98,9 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleEnemyBehavior()
     {
+        if (enemyStatus.isDead)
+            return;
+
         switch (enemyType)
         {
             case EnemyType.FlyingEnemy:

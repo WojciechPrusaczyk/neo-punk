@@ -18,16 +18,17 @@ MonoBehaviour:
   characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
   - speakerName: 1
-    text: Hi there fellow you look... capeble sort
+    text: Well, well... another blade-runner looking to make their mark.
   - speakerName: 0
-    text: Sure...
+    text: Perhaps.
   - speakerName: 1
-    text: and rich one at that
+    text: Easy money flows through this district.
   - speakerName: 0
-    text: Not really but go on
+    text: I'm not here for profit.
   - speakerName: 1
-    text: Buuuut you dont know your way around these parts
+    text: Smart. You don't want to mess with the local gangs around here.
   - speakerName: 1
-    text: No offence but you might need advice from this old fellow.
+    text: 'Word of advice, wanderer: this old street rat''s got more experience than
+      you think.'
   repeatable: 1
   hasBeenAlreadySeen: 1

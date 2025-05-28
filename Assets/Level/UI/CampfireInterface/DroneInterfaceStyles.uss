@@ -1,0 +1,33 @@
+.drone-button {
+
+}
+
+.drone-button-enabled{
+	border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+}
+
+.drone-button-disabled{
+    -unity-background-image-tint-color: #888;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-left-color: #555;
+    border-right-color: #555;
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+
+.drone-button:enabled:hover {
+
+}
+
+.drone-button:disabled {
+
+}
+.drone-button:disabled:hover {
+
+}

@@ -6,7 +6,8 @@ public class HomelessManAi : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float interactionRange = 4f;
 
-    private GameObject player;
+    private Player player;
+
     private Animator animator;
     private Transform appearanceTransform;
     private bool isWaving = false;
@@ -23,7 +24,7 @@ public class HomelessManAi : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = FindFirstObjectByType<Player>();
         dialogInterface = dialogInterfaceObject.GetComponent<DialogScript>();
         userInterfaceController = mainUserInterfaceControllerObject.GetComponent<UserInterfaceController>();
         EventsPage = GameObject.Find("EventsFlags");
