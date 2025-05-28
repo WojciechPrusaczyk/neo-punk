@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Enums;
+using static SerializableMission;
 
 public class WorldSaveGameManager : MonoBehaviour
 {
@@ -150,6 +151,46 @@ public class WorldSaveGameManager : MonoBehaviour
                 currentCharacterData.completedEventFlags = new EventFlagsSystem.EventFlag[0];
             }
         }
+
+        List<SerializableMission> sMissions = new List<SerializableMission>();
+        foreach (MissionInfo liveMission in PlayerObjectiveTracker.instance.objectiveList)
+        {
+            SerializableMission sm = new SerializableMission();
+            sm.missionName = liveMission.MissionName;
+            sm.ifFinished = liveMission.isFinished;
+            sm.objectiveStates = new List<SerializableObjectiveState>();
+            foreach (MissionInfo.MissionObjective obj in liveMission.objectives)
+            {
+                sm.objectiveStates.Add(new SerializableObjectiveState {
+                    ObjectiveID = obj.ObjectiveID,
+                    isCompleted = obj.isCompleted
+                });
+            }
+            sMissions.Add(sm);
+        }
+        currentCharacterData.serializableMission = sMissions.ToArray();
+
+        if (PlayerObjectiveTracker.instance.currentMission != null)
+        {
+            MissionInfo liveCurrentMission = PlayerObjectiveTracker.instance.currentMission;
+            SerializableMission scm = new SerializableMission();
+            scm.missionName = liveCurrentMission.MissionName;
+            scm.ifFinished = liveCurrentMission.isFinished;
+            scm.objectiveStates = new List<SerializableObjectiveState>();
+            foreach (MissionInfo.MissionObjective obj in liveCurrentMission.objectives)
+            {
+                scm.objectiveStates.Add(new SerializableObjectiveState {
+                    ObjectiveID = obj.ObjectiveID,
+                    isCompleted = obj.isCompleted
+                });
+            }
+            currentCharacterData.currentMission = scm;
+        }
+        else
+        {
+            currentCharacterData.currentMission = null;
+        }
+
         player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
@@ -382,5 +423,20 @@ public class WorldSaveGameManager : MonoBehaviour
 
         saveFileDataWriter.saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(CharacterSlots.CharacterSlot3);
         characterSlot03 = saveFileDataWriter.LoadSaveFile();
+    }
+
+    public SerializableMission GetSerializableMissionFromMissionInfo(MissionInfo mission)
+    {
+        SerializableMission serializedMission = new SerializableMission();
+
+        if (mission == null)
+        {
+            serializedMission.missionName = "";
+            return serializedMission;
+        }
+
+        serializedMission.missionName = mission.MissionName;
+
+        return serializedMission;
     }
 }

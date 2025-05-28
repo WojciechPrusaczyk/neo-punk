@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d399bd5943ee89468b6f10f7392faa4, type: 3}
   m_Name: FirstObjective
   m_EditorClassIdentifier: 
-  MissionName: Kill shivern
+  MissionName: Shivern Mayhem
   isFinished: 0
   MissionDescription: Lately every dark lane is swarmed with unnatural beings called
     Shiverns. No one know where they came from.
+  objectives:
+  - ObjectiveID: 0
+    ObjectiveName: Kill 5 shiverns
+    isCompleted: 0
+  - ObjectiveID: 1
+    ObjectiveName: Kill 10 shiverns
+    isCompleted: 0

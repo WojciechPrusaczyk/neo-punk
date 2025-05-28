@@ -29,6 +29,10 @@ public class CharacterSaveData
     [Header("Events")]
     public EventFlagsSystem.EventFlag[] completedEventFlags;
 
+    [Header("Objectives")]
+    public SerializableMission[] serializableMission;
+    public SerializableMission currentMission;
+
     public CharacterSaveData()
     {
         activeDrones = new SerializableDictionary<int, bool>();

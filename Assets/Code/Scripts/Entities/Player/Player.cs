@@ -165,6 +165,39 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (PlayerObjectiveTracker.instance?.currentMission != null)
+                PlayerObjectiveTracker.instance.currentMission.isFinished = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 0)
+                mission.objectives[0].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 1)
+                mission.objectives[1].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 2)
+                mission.objectives[2].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 3)
+                mission.objectives[3].isCompleted = true;
+        }
+#endif
+
         if (playerStatus != null && playerStatus.isDead)
             return;
 

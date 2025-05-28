@@ -165,7 +165,7 @@ public class MainUserInterfaceController : MonoBehaviour
         elementalLabel.style.color = elementalColor;
     }
 
-    public void SetCurrentObjective(MissionInfo _mission)
+    public void SetCurrentMission(MissionInfo _mission)
     {
         if (_mission == null)
             return;

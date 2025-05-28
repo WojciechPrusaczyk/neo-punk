@@ -2474,6 +2474,69 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1574238195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574238196}
+  - component: {fileID: 1574238197}
+  - component: {fileID: 1574238198}
+  m_Layer: 0
+  m_Name: PlayerObjectiveTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1574238196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574238195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.342333, y: 21.706837, z: 0.7386057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574238197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574238195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a357ae971961743a00bea660b72db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDatabase: {fileID: 0}
+  objectiveList: []
+  currentMission: {fileID: 0}
+--- !u!114 &1574238198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574238195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec897dd386d7e5478b93a300d2b0410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionList:
+  - {fileID: 11400000, guid: 2865ebc42290bc94d88fde36bdc8d474, type: 2}
+  - {fileID: 11400000, guid: a9cf8a8245033d14e92d5e124eab03a8, type: 2}
 --- !u!1 &1612453413
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,6 +3781,22 @@ PrefabInstance:
       propertyPath: currentCharacterData.defeatedBosses.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4541325699892935555, guid: a90919894cfc20f4c884492e3778b299, type: 3}
+      propertyPath: currentCharacterData.completedEventFlags.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541325699892935555, guid: a90919894cfc20f4c884492e3778b299, type: 3}
+      propertyPath: currentCharacterData.serializableMission.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541325699892935555, guid: a90919894cfc20f4c884492e3778b299, type: 3}
+      propertyPath: currentCharacterData.currentMission.objectiveStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541325699892935555, guid: a90919894cfc20f4c884492e3778b299, type: 3}
+      propertyPath: currentCharacterData.serializableMission.Array.data[0].objectiveStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6745181327967190351, guid: a90919894cfc20f4c884492e3778b299, type: 3}
       propertyPath: m_Name
       value: WorldSaveGameManager
@@ -3989,6 +4068,7 @@ SceneRoots:
   - {fileID: 2057400046}
   - {fileID: 1101151317}
   - {fileID: 1201617109}
+  - {fileID: 1574238196}
   - {fileID: 1434457243574345471}
   - {fileID: 1243741931166002540}
   - {fileID: 7642230663635177095}
