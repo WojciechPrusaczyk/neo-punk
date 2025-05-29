@@ -10,6 +10,10 @@ public class WorldGameManager : MonoBehaviour
     [Header("Entities")]
     public Player player;
 
+    [Header("Important objects")]
+    public GameObject mainCamera;
+    public GameObject camera;
+
     string prefix = "WORLD GAME MANAGER || ";
 
     private void Awake()
@@ -41,9 +45,16 @@ public class WorldGameManager : MonoBehaviour
 
     private void FindDataInScene()
     {
+        mainCamera = GameObject.Find("Main Camera");
+        if (mainCamera == null)
+        {
+            Debug.LogError($"{prefix} Main Camera not found in the scene!");
+        }
+
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             player = null;
+            camera = null;
             return;
         }
 
@@ -51,6 +62,12 @@ public class WorldGameManager : MonoBehaviour
         if (player == null)
         {
             Debug.LogError($"{prefix} Player not found in the scene!");
+        }
+
+        camera = GameObject.Find("Camera");
+        if (camera == null)
+        {
+            Debug.LogError($"{prefix} Camera not found in the scene!");
         }
     }
     private IEnumerator FindData()
