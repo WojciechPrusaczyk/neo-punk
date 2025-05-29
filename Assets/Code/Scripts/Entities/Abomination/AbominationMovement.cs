@@ -55,27 +55,25 @@ public class AbominationMovement : MonoBehaviour
         if (Time.time < nextAllowedTime)
             return;
 
-        // 2. is player close enough?
         if (Vector2.Distance(player.transform.position, transform.position) > attackRange)
             return;
 
-        // 3. pick a random attack and fire it
         float dist = Vector2.Distance(transform.position, player.transform.position);
-
+        Debug.Log(dist);
         int index;
-        if (dist < 2f)
-        {
-            // choose either 1 or 2 (inclusive)
-            index = Random.Range(1, 3);   // Random.Range(int,int) upper bound is exclusive
-        }
-        else if (dist < 10f)
+        if (dist < 1f)
         {
             index = 0;
         }
-        else
+        else if (dist < 4f)
         {
             index = 1;
         }
+        else
+        {
+            index = 2;
+        }
+        
 
         StartCoroutine(PlayAnimation(triggers[index]));
 
@@ -107,7 +105,7 @@ public class AbominationMovement : MonoBehaviour
         if (active)
         {
             if (Vector2.Distance(player.transform.position, transform.position) > attackRange ||
-                Vector2.Distance(player.transform.position, transform.position) < 2)
+                Vector2.Distance(player.transform.position, transform.position) < 5)
             {
                 MoveHorizontallyToPlayer();
                 if (!isAttacking)
