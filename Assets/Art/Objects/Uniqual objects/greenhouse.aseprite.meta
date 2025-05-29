@@ -1,0 +1,1875 @@
+fileFormatVersion: 2
+guid: 9cde303bbf8563144b239fef91ebd697
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: greenhouse_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 137
+      width: 110
+      height: 125
+    spriteID: 8dea5da7e0aed744d8f49f7231b5ea88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 137}
+  - name: greenhouse_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 270
+      width: 110
+      height: 125
+    spriteID: 8fecb266d54fc2f4bac7621b03486c43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 270}
+  - name: greenhouse_Frame_2
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 403
+      width: 110
+      height: 125
+    spriteID: 5bded9e1661fe6d4eb70dd8bfcabec69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 403}
+  - name: greenhouse_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 536
+      width: 110
+      height: 125
+    spriteID: 92757f4a49fe22c4c955d5876040d266
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 536}
+  - name: greenhouse_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 669
+      width: 110
+      height: 125
+    spriteID: 53153f4d443ca7d49836b594715514a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 669}
+  - name: greenhouse_Frame_5
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 802
+      width: 110
+      height: 125
+    spriteID: c7cbb7bd6649ad64c9c9def3f2da5a4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 802}
+  - name: greenhouse_Frame_6
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 111
+      height: 125
+    spriteID: 927ccb9e6aea0da4a902c7c4e3e54c0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: greenhouse_Frame_7
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 137
+      width: 111
+      height: 125
+    spriteID: d81b5883a7ce8fc4da7cad43258d3e3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 137}
+  - name: greenhouse_Frame_8
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 270
+      width: 111
+      height: 125
+    spriteID: c51f122466db24b4491b854beea2916e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 270}
+  - name: greenhouse_Frame_9
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 403
+      width: 111
+      height: 125
+    spriteID: 2db2b2046be4f824785c19a3a4b71f3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 403}
+  - name: greenhouse_Frame_10
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 536
+      width: 111
+      height: 125
+    spriteID: 917681962bf831f4a96d027e548977dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 536}
+  - name: greenhouse_Frame_11
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 935
+      width: 110
+      height: 125
+    spriteID: b4b782762abe0a94681404458314785d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 935}
+  - name: greenhouse_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1068
+      width: 110
+      height: 125
+    spriteID: a9d160db2c6b9904cb0dbbf3133fd561
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1068}
+  - name: greenhouse_Frame_13
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1201
+      width: 110
+      height: 125
+    spriteID: 7d9d34f47289a7241b419b717f8cd699
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1201}
+  - name: greenhouse_Frame_14
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1334
+      width: 110
+      height: 125
+    spriteID: 7e1a95353cdf7b347af334946b7202fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1334}
+  - name: greenhouse_Frame_15
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1467
+      width: 110
+      height: 125
+    spriteID: ee52b45983c8f284e825c2a52c43f413
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1467}
+  - name: greenhouse_Frame_16
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 669
+      width: 111
+      height: 125
+    spriteID: ecd997536d58e9d46ae3b9b328eff822
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 669}
+  - name: greenhouse_Frame_17
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 802
+      width: 111
+      height: 125
+    spriteID: 13535c16293a38f4bbc9c920724ea459
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 802}
+  - name: greenhouse_Frame_18
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 935
+      width: 111
+      height: 125
+    spriteID: 363d97e766612174dba194ca6d273e41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 935}
+  - name: greenhouse_Frame_19
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1068
+      width: 111
+      height: 125
+    spriteID: c96ad148937b2d1448c802583f3d3f66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1068}
+  - name: greenhouse_Frame_20
+    originalName: 
+    pivot: {x: 0.4954955, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1201
+      width: 111
+      height: 125
+    spriteID: 5bdfa6ecc8dcee9489b75f3ddc4039b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1201}
+  - name: greenhouse_Frame_21
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1600
+      width: 110
+      height: 125
+    spriteID: fe9230f1f7f1705489b4d5b5a5d1b5f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1600}
+  - name: greenhouse_Frame_22
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1733
+      width: 110
+      height: 125
+    spriteID: 350de46686109e944986a060047a4410
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1733}
+  - name: greenhouse_Frame_23
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 1866
+      width: 110
+      height: 125
+    spriteID: 3734cccf65a0e62489726267848adbe1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 1866}
+  - name: greenhouse_Frame_24
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 4
+      width: 110
+      height: 125
+    spriteID: 11c925e5fd15e8f469e5efabacf9d573
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 4}
+  - name: greenhouse_Frame_25
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 137
+      width: 110
+      height: 125
+    spriteID: f450374d9a4ddcf44a68a6988783ceae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 137}
+  - name: greenhouse_Frame_26
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 270
+      width: 110
+      height: 125
+    spriteID: 473ba9eeb57e2cd44ac0523d17340320
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 270}
+  - name: greenhouse_Frame_27
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 403
+      width: 110
+      height: 125
+    spriteID: a2ae77794ceabb34a9e32e07b9afa745
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 403}
+  - name: greenhouse_Frame_28
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 536
+      width: 110
+      height: 125
+    spriteID: e390b132cc22a2b408d3b2452df4b862
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 536}
+  - name: greenhouse_Frame_29
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 669
+      width: 110
+      height: 125
+    spriteID: 7b7c4d4635d84a5408659eac83e2f821
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 669}
+  - name: greenhouse_Frame_30
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 802
+      width: 110
+      height: 125
+    spriteID: 81a15bc9fea5f3e4d8b01cdb21fa6b4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 802}
+  - name: greenhouse_Frame_31
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 935
+      width: 110
+      height: 125
+    spriteID: 933093a5687ff7a48ad8c46fd4b1ccc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 935}
+  - name: greenhouse_Frame_32
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1068
+      width: 110
+      height: 125
+    spriteID: 84350b77ffe41c340ab7eeddcaf55b90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1068}
+  - name: greenhouse_Frame_33
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1201
+      width: 110
+      height: 125
+    spriteID: 829651dec77fb62468dd9953d09a39a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1201}
+  - name: greenhouse_Frame_34
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1334
+      width: 110
+      height: 125
+    spriteID: 9d2cda62c0b3b404ba7edfff5ec50b39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1334}
+  - name: greenhouse_Frame_35
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1467
+      width: 110
+      height: 125
+    spriteID: 8320611e49d6ee94fb4a7683f4d7aab2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1467}
+  - name: greenhouse_Frame_36
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1600
+      width: 110
+      height: 125
+    spriteID: f7d72a287661c974ea414b1250636472
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1600}
+  - name: greenhouse_Frame_37
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1733
+      width: 110
+      height: 125
+    spriteID: 16a9b82fa6f52b1428ee94d48bb1d26a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1733}
+  - name: greenhouse_Frame_38
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1866
+      width: 110
+      height: 125
+    spriteID: ceb07f1c2e126a54f93a0f10b6a4b9d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1866}
+  - name: greenhouse_Frame_39
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 4
+      width: 110
+      height: 125
+    spriteID: d2cdc3e6efc177c42875058074aafca8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 4}
+  - name: greenhouse_Frame_40
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 137
+      width: 110
+      height: 125
+    spriteID: bc699f024f8b0ff4d82bcb4357bf0e34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 137}
+  - name: greenhouse_Frame_41
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 270
+      width: 110
+      height: 125
+    spriteID: 843620d1a1ea255478965038fa76b4bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 270}
+  - name: greenhouse_Frame_42
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1334
+      width: 111
+      height: 125
+    spriteID: 3d2b4655f27c7ac4fb0e7ab5132a5b35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1334}
+  - name: greenhouse_Frame_43
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1467
+      width: 111
+      height: 125
+    spriteID: feb1f3497ea29d24e84b69b3f70749b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1467}
+  - name: greenhouse_Frame_44
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1600
+      width: 111
+      height: 125
+    spriteID: 7d987b445347e1d438c8a4a7f904017c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1600}
+  - name: greenhouse_Frame_45
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1733
+      width: 111
+      height: 125
+    spriteID: 61169580858c52e4d85f07c60607adc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1733}
+  - name: greenhouse_Frame_46
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1866
+      width: 111
+      height: 125
+    spriteID: d6bdd48d025ad1f40aab579163e5b9e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1866}
+  - name: greenhouse_Frame_47
+    originalName: 
+    pivot: {x: 0.5045045, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 4
+      width: 111
+      height: 125
+    spriteID: cb5ecd549a4e5b94eaf646a66c668a48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 4}
+  - name: greenhouse_Frame_48
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 403
+      width: 110
+      height: 125
+    spriteID: bd0548a5ab5d56f4d82a86dfdea9038c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 403}
+  - name: greenhouse_Frame_49
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 536
+      width: 110
+      height: 125
+    spriteID: 96c6870ba0569a44bb11809dd7e96209
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 536}
+  - name: greenhouse_Frame_50
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 669
+      width: 110
+      height: 125
+    spriteID: cf3377c1eb18b444bbe3c8bd6124ff91
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 669}
+  - name: greenhouse_Frame_51
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 802
+      width: 110
+      height: 125
+    spriteID: 169457423f06a2f41835ed837f50afa8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 802}
+  - name: greenhouse_Frame_52
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 935
+      width: 110
+      height: 125
+    spriteID: 6ccaa93e62accb84193f8a60c2571e57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 935}
+  - name: greenhouse_Frame_53
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1068
+      width: 110
+      height: 125
+    spriteID: f1a10352ee1d12741b17c8afd8039c31
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1068}
+  - name: greenhouse_Frame_54
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1201
+      width: 110
+      height: 125
+    spriteID: 2ea2c5b25dd5f774b929420a09145f9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1201}
+  - name: greenhouse_Frame_55
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1334
+      width: 110
+      height: 125
+    spriteID: b0cb2ec685f5d5c4aa5f21d0ad44cb79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1334}
+  - name: greenhouse_Frame_56
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1467
+      width: 110
+      height: 125
+    spriteID: f4c01fc705b3a4840a0c84d9e5008c34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1467}
+  - name: greenhouse_Frame_57
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1600
+      width: 110
+      height: 125
+    spriteID: b8734f4e0e0680348bbf0be33677eb3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1600}
+  - name: greenhouse_Frame_58
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1733
+      width: 110
+      height: 125
+    spriteID: 5d56cc0d7cd121c49b74827acc67fd0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1733}
+  - name: greenhouse_Frame_59
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 360
+      y: 1866
+      width: 110
+      height: 125
+    spriteID: 3044aa15a1d44cb4492b2939de9b6a60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 360, y: 1866}
+  - name: greenhouse_Frame_60
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 478
+      y: 4
+      width: 110
+      height: 125
+    spriteID: b6dacf53f0228714c92bc040e62a99c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 478, y: 4}
+  - name: greenhouse_Frame_61
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.008}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 478
+      y: 137
+      width: 110
+      height: 125
+    spriteID: 6865ddd16d3731b46861d62659bcea35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 478, y: 137}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1568963611
+    name: greenhouse
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: greenhouse_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 8dea5da7e0aed744d8f49f7231b5ea88
+    - name: greenhouse_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 8fecb266d54fc2f4bac7621b03486c43
+    - name: greenhouse_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 5bded9e1661fe6d4eb70dd8bfcabec69
+    - name: greenhouse_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 92757f4a49fe22c4c955d5876040d266
+    - name: greenhouse_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 53153f4d443ca7d49836b594715514a1
+    - name: greenhouse_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: c7cbb7bd6649ad64c9c9def3f2da5a4f
+    - name: greenhouse_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 927ccb9e6aea0da4a902c7c4e3e54c0f
+    - name: greenhouse_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: d81b5883a7ce8fc4da7cad43258d3e3b
+    - name: greenhouse_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: c51f122466db24b4491b854beea2916e
+    - name: greenhouse_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 2db2b2046be4f824785c19a3a4b71f3d
+    - name: greenhouse_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 917681962bf831f4a96d027e548977dc
+    - name: greenhouse_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: b4b782762abe0a94681404458314785d
+    - name: greenhouse_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: a9d160db2c6b9904cb0dbbf3133fd561
+    - name: greenhouse_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 7d9d34f47289a7241b419b717f8cd699
+    - name: greenhouse_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 7e1a95353cdf7b347af334946b7202fe
+    - name: greenhouse_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: ee52b45983c8f284e825c2a52c43f413
+    - name: greenhouse_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: ecd997536d58e9d46ae3b9b328eff822
+    - name: greenhouse_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 13535c16293a38f4bbc9c920724ea459
+    - name: greenhouse_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 363d97e766612174dba194ca6d273e41
+    - name: greenhouse_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: c96ad148937b2d1448c802583f3d3f66
+    - name: greenhouse_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 9
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 5bdfa6ecc8dcee9489b75f3ddc4039b7
+    - name: greenhouse_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: fe9230f1f7f1705489b4d5b5a5d1b5f8
+    - name: greenhouse_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 350de46686109e944986a060047a4410
+    - name: greenhouse_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 3734cccf65a0e62489726267848adbe1
+    - name: greenhouse_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 11c925e5fd15e8f469e5efabacf9d573
+    - name: greenhouse_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: f450374d9a4ddcf44a68a6988783ceae
+    - name: greenhouse_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 473ba9eeb57e2cd44ac0523d17340320
+    - name: greenhouse_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: a2ae77794ceabb34a9e32e07b9afa745
+    - name: greenhouse_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: e390b132cc22a2b408d3b2452df4b862
+    - name: greenhouse_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 7b7c4d4635d84a5408659eac83e2f821
+    - name: greenhouse_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 81a15bc9fea5f3e4d8b01cdb21fa6b4d
+    - name: greenhouse_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 933093a5687ff7a48ad8c46fd4b1ccc9
+    - name: greenhouse_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 84350b77ffe41c340ab7eeddcaf55b90
+    - name: greenhouse_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 829651dec77fb62468dd9953d09a39a7
+    - name: greenhouse_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 9d2cda62c0b3b404ba7edfff5ec50b39
+    - name: greenhouse_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 8320611e49d6ee94fb4a7683f4d7aab2
+    - name: greenhouse_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: f7d72a287661c974ea414b1250636472
+    - name: greenhouse_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 16a9b82fa6f52b1428ee94d48bb1d26a
+    - name: greenhouse_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: ceb07f1c2e126a54f93a0f10b6a4b9d1
+    - name: greenhouse_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: d2cdc3e6efc177c42875058074aafca8
+    - name: greenhouse_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: bc699f024f8b0ff4d82bcb4357bf0e34
+    - name: greenhouse_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 843620d1a1ea255478965038fa76b4bb
+    - name: greenhouse_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 3d2b4655f27c7ac4fb0e7ab5132a5b35
+    - name: greenhouse_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: feb1f3497ea29d24e84b69b3f70749b9
+    - name: greenhouse_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 7d987b445347e1d438c8a4a7f904017c
+    - name: greenhouse_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: 61169580858c52e4d85f07c60607adc8
+    - name: greenhouse_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: d6bdd48d025ad1f40aab579163e5b9e4
+    - name: greenhouse_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 8
+        y: 1
+        width: 111
+        height: 125
+      spriteId: cb5ecd549a4e5b94eaf646a66c668a48
+    - name: greenhouse_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: bd0548a5ab5d56f4d82a86dfdea9038c
+    - name: greenhouse_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 96c6870ba0569a44bb11809dd7e96209
+    - name: greenhouse_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: cf3377c1eb18b444bbe3c8bd6124ff91
+    - name: greenhouse_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 169457423f06a2f41835ed837f50afa8
+    - name: greenhouse_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 6ccaa93e62accb84193f8a60c2571e57
+    - name: greenhouse_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: f1a10352ee1d12741b17c8afd8039c31
+    - name: greenhouse_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 2ea2c5b25dd5f774b929420a09145f9d
+    - name: greenhouse_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: b0cb2ec685f5d5c4aa5f21d0ad44cb79
+    - name: greenhouse_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: f4c01fc705b3a4840a0c84d9e5008c34
+    - name: greenhouse_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: b8734f4e0e0680348bbf0be33677eb3f
+    - name: greenhouse_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 5d56cc0d7cd121c49b74827acc67fd0d
+    - name: greenhouse_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 3044aa15a1d44cb4492b2939de9b6a60
+    - name: greenhouse_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: b6dacf53f0228714c92bc040e62a99c3
+    - name: greenhouse_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 9
+        y: 1
+        width: 110
+        height: 125
+      spriteId: 6865ddd16d3731b46861d62659bcea35
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

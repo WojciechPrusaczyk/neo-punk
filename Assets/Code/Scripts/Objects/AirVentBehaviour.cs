@@ -11,17 +11,13 @@ public class AirVentBehaviour : MonoBehaviour
         player = GameObject.Find("Player").gameObject;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
-            Player playerComponent = player.GetComponent<Player>();
 
-            if (null != playerBody && null != playerComponent)
-            {
-                playerBody.AddForce(Vector2.up * pushForce , ForceMode2D.Impulse);
-            }
+            playerBody.AddForce(Vector2.up * pushForce , ForceMode2D.Impulse);
         }
     }
 }

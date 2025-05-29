@@ -18,20 +18,18 @@ MonoBehaviour:
   characterTwoPicture: {fileID: 8343824519714167230, guid: 422ccf9411a16f5439ceffbfc73eb395, type: 3}
   lines:
   - speakerName: 1
-    text: "You shouldn\u2019t be here\u2026                             It\u2019s
-      still inside."
+    text: You shouldn't be here... something's still prowling around.
   - speakerName: 0
     text: What?
   - speakerName: 1
-    text: "That thing\u2026 tall and thin            it moves like a shadow"
+    text: That thing... tall and gaunt, moves like a shadow.
   - speakerName: 1
-    text: "Grey, pale\u2026        like something half-rotten"
+    text: Sickly pale... like something diseased and rotting.
   - speakerName: 0
     text: Where is it?
   - speakerName: 1
-    text: Back there, I've seen it grab someone            I'm getting out of there,
-      you better do to
+    text: Back in the depths. I saw it take someone... I'm getting out of here.
   - speakerName: 1
-    text: ' If you stay and hear it close, dont cry i didnt warn you'
+    text: If you go near that creature, don't say I didn't warn you.
   repeatable: 0
   hasBeenAlreadySeen: 0

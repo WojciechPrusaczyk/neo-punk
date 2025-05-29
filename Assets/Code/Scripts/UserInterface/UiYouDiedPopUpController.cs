@@ -10,7 +10,7 @@ public class UI_YouDiedPopUp_Controller : UI_InterfaceController
     {
         base.OnEnable();
 
-        rootVisualElement = root.Q<VisualElement>("Campfires");
+        rootVisualElement = root.Q<VisualElement>("Drones");
         youDiedText = root.Q<Label>("YouDiedText");
     }
 }

@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
     /*
      * Zmienne lokalne
      */
+    [HideInInspector] public EntityStatus playerStatus;
+
+    public bool isInDialogue = false;
+
     private Rigidbody2D playerBody;
     private PlayerInventoryInterface playerEq;
     private Collider2D ignoredObject;
@@ -62,7 +66,6 @@ public class Player : MonoBehaviour
     private bool isChargingAttack = false;
     private float keyHoldTime = 0.0f;
     float holdTimeThreshold = 1.7f;
-    private EntityStatus playerStatus;
     [SerializeField] private float parryWindow;
     private bool canBlock = true;
     private PauseMenuBehaviour pauseMenu;
@@ -162,6 +165,39 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (PlayerObjectiveTracker.instance?.currentMission != null)
+                PlayerObjectiveTracker.instance.currentMission.isFinished = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 0)
+                mission.objectives[0].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 1)
+                mission.objectives[1].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 2)
+                mission.objectives[2].isCompleted = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            var mission = PlayerObjectiveTracker.instance?.currentMission;
+            if (mission != null && mission.objectives != null && mission.objectives.Count > 3)
+                mission.objectives[3].isCompleted = true;
+        }
+#endif
+
         if (playerStatus != null && playerStatus.isDead)
             return;
 
@@ -417,26 +453,26 @@ public class Player : MonoBehaviour
         canBlock = true;
     }
 
-    public void TeleportPlayerToCampfire(int campfireID)
+    public void TeleportPlayerToDrone(int droneID)
     {
-        if (WorldObjectManager.instace == null)
+        if (WorldObjectManager.instance == null)
         {
             Debug.LogError("WorldObjectManager is not initialized.");
             return;
         }
-        InteractableCampfire campfire = WorldObjectManager.instace.GetCampfireByID(campfireID);
-        if (campfire == null)
+        InteractableDrone drone = WorldObjectManager.instance.GetDroneByID(droneID);
+        if (drone == null)
         {
-            Debug.LogError($"Campfire with ID {campfireID} not found.");
+            Debug.LogError($"Drone with ID {droneID} not found.");
             return;
         }
-        transform.position = new Vector3(campfire.transform.position.x, campfire.transform.position.y + 1.0f, transform.position.z);
+        transform.position = new Vector3(drone.transform.position.x, drone.transform.position.y + 1.0f, transform.position.z);
 
         playerBody.velocity = Vector2.zero;
 
         if (WorldSaveGameManager.instance != null)
         {
-            WorldSaveGameManager.instance.currentCharacterData.lastVisitedCampfireIndex = campfireID;
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = droneID;
             WorldSaveGameManager.instance.SaveGame();
         }
 
@@ -483,6 +519,9 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        if (isInDialogue)
+            return;
+
         if (canJump)
         {
             canJump = false;

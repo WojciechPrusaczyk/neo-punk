@@ -73,7 +73,6 @@
     <Compile Include="Assets\Code\Scripts\Enums.cs" />
     <Compile Include="Assets\Code\Scripts\System\EnemyAI.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\HomelessMan\HomelessManAi.cs" />
-    <Compile Include="Assets\Code\Scripts\UserInterface\UI_CampfireInterface_Controller.cs" />
     <Compile Include="Assets\Code\Scripts\Items\HandsWiring\ExplosionCollisionHandler.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\EntityStatus.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Abomination\AbominationHitbox.cs" />
@@ -110,6 +109,7 @@
     <Compile Include="Assets\Code\Scripts\Items\VoodooDoll\VoodooDollAbilities.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\UI_YouDiedPopUp_Controller.cs" />
     <Compile Include="Assets\Code\Scripts\Interactable\Interactable.cs" />
+    <Compile Include="Assets\Code\Scripts\UserInterface\UI_DroneInterface_Controller.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\Dragonfly.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernAudioController.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\PauseMenuInterface.cs" />
@@ -118,6 +118,7 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\Main Menu\Menu_StartGameUI_Controller.cs" />
     <Compile Include="Assets\Code\Scripts\System\CameraShaker.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Dragonfly\DragonflyBehaviour.cs" />
+    <Compile Include="Assets\WorldGameManager.cs" />
     <Compile Include="Assets\Code\Scripts\System\InvasionTrial\InvasionTrial.cs" />
     <Compile Include="Assets\Code\Scripts\System\WanderingEnemy.cs" />
     <Compile Include="Assets\Code\Scripts\System\TimeTrial\TimeTrial.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets\Code\Scripts\UserInterface\HpBarController.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\OptionsMenuBehaviour.cs" />
     <Compile Include="Assets\Code\Scripts\System\WorldSoundFXManager.cs" />
+    <Compile Include="Assets\Code\Scripts\System\TimeTrial\TimeTrialDeactivator.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\PlayerDetector.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\ShivernDog\ShivernDog.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\VerticalDoorController.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="Assets\Code\Scripts\System\Tooltips\TooltipsController.cs" />
     <Compile Include="Assets\Code\Scripts\Entities\Abomination\AbominationMovement.cs" />
     <Compile Include="Assets\Code\Scripts\Objects\WorldObjectManager.cs" />
+    <Compile Include="Assets\Code\Scripts\Interactable\InteractableDrone.cs" />
     <Compile Include="Assets\Level\UI\Białkowe\InvasionInterface.cs" />
     <Compile Include="Assets\Code\Scripts\System\EventFlagsSystem.cs" />
     <Compile Include="Assets\Code\Scripts\System\InputManager.cs" />
@@ -153,7 +156,6 @@
     <Compile Include="Assets\Code\Scripts\System\EnemyAINew.cs" />
     <Compile Include="Assets\Code\Scripts\System\Missions\PlayerObjectiveTracker.cs" />
     <Compile Include="Assets\Code\Scripts\Quests\HomelessMan.cs" />
-    <Compile Include="Assets\Code\Scripts\Interactable\InteractableCampfire.cs" />
     <Compile Include="Assets\Code\Scripts\System\TimeTrial\TimeTrialActivator.cs" />
     <Compile Include="Assets\Code\Scripts\UserInterface\Dialog\DialogData.cs" />
   </ItemGroup>
@@ -179,7 +181,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Level\UI\MainUserInterface.uxml" />
     <None Include="Assets\Level\UI\OptionsInterface.uss" />
-    <None Include="Assets\Level\UI\CampfireInterface\CampfireInterface.uxml" />
+    <None Include="Assets\Level\UI\CampfireInterface\DroneInterface.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Level\UI\Białkowe\OptionsMenu.uxml" />
@@ -196,6 +198,7 @@
     <None Include="Assets\Level\UI\PauseMenuInterface.uss" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Level\UI\CampfireInterface\DroneInterfaceStyles.uss" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Level\UI\YouDiedPopUp\YouDiedPopUp.uxml" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

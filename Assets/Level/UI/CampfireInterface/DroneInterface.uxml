@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/CampfireInterface/DroneInterfaceStyles.uss?fileID=7433441132597879392&amp;guid=fd1d428a96715d047b480064b97f75d0&amp;type=3#DroneInterfaceStyles" />
+    <engine:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.6); align-items: auto; position: relative; flex-basis: auto; flex-direction: column;">
+        <engine:VisualElement name="Title" style="flex-grow: 0; align-self: flex-start; justify-content: flex-start; align-items: auto; padding-top: 35px; padding-right: 35px; padding-bottom: 35px; padding-left: 35px; height: auto; flex-wrap: nowrap;">
+            <engine:Label text="Teleport Menu" enable-rich-text="true" name="Title-Label" style="font-size: 64px; -unity-font-definition: url(&quot;project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&amp;guid=b9ffa119164ffe246929f4a4f1c9fe49&amp;type=3#edit-undo.brk&quot;); -unity-text-align: upper-left; color: rgb(221, 221, 221);" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Drones" style="flex-grow: 1; align-self: flex-start; justify-content: flex-start; flex-direction: column; align-items: center; padding-right: 30px; padding-left: 30px; padding-bottom: 30px; padding-top: 30px; flex-shrink: 1; position: relative; white-space: normal; text-overflow: ellipsis; -unity-background-scale-mode: stretch-to-fill; flex-wrap: wrap;" />
+    </engine:VisualElement>
+</engine:UXML>

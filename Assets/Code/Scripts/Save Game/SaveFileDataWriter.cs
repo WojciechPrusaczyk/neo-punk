@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Text;
-using UnityEditor.U2D.Animation;
 
 public class SaveFileDataWriter
 {
@@ -77,7 +76,7 @@ public class SaveFileDataWriter
             Directory.CreateDirectory(Path.GetDirectoryName(savePath));
             string dataToStore = JsonUtility.ToJson(characterData, true);
 
-            // Czy to trzeba wyjaœniaæ?
+            // Czy to trzeba wyjaï¿½niaï¿½?
             if (encrypt)
             {
                 string encryptedData = EncryptDecrypt(dataToStore);
@@ -103,7 +102,7 @@ public class SaveFileDataWriter
         }
     }
 
-    // Metoda do ³adowania pliku zapisu
+    // Metoda do ï¿½adowania pliku zapisu
     public CharacterSaveData LoadSaveFile()
     {
         CharacterSaveData characterData = null;
@@ -133,7 +132,7 @@ public class SaveFileDataWriter
                     dataToLoad = rawData;
                 }
 
-                // Jeœli dane nie s¹ puste, deserializujemy je
+                // Jeï¿½li dane nie sï¿½ puste, deserializujemy je
                 if (!string.IsNullOrWhiteSpace(dataToLoad))
                 {
                     characterData = JsonUtility.FromJson<CharacterSaveData>(dataToLoad);

@@ -6,18 +6,18 @@ using UnityEngine;
 public class ObjectiveHitbosTrigger : MonoBehaviour
 {
     public MissionInfo missionInfo;
-    private PlayerObjectiveTracker playerObjectiveTracker;
-
-    private void Awake()
-    {
-        playerObjectiveTracker = GameObject.Find("MainUserInterfaceRoot").GetComponentInChildren<PlayerObjectiveTracker>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerObjectiveTracker.SetCurrentObjective(missionInfo);
+            if (PlayerObjectiveTracker.instance == null)
+            {
+                Debug.Log("PlayerObjectiveTracker instance is null!");
+                return;
+            }
+
+            PlayerObjectiveTracker.instance.SetCurrentMission(missionInfo);
             gameObject.SetActive(false);
         }
     }

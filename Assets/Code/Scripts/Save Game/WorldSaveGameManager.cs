@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Enums;
+using static SerializableMission;
 
 public class WorldSaveGameManager : MonoBehaviour
 {
@@ -131,6 +132,65 @@ public class WorldSaveGameManager : MonoBehaviour
             Debug.LogWarning("currentCharacterData was null during SaveGame. Initializing new CharacterSaveData.");
         }
 
+        if (EventFlagsSystem.instance != null)
+        {
+            List<EventFlagsSystem.EventFlag> allDoneFlags = new List<EventFlagsSystem.EventFlag>();
+            foreach (var flag in EventFlagsSystem.instance.eventFlags)
+            {
+                if (flag.isDone)
+                {
+                    allDoneFlags.Add(flag);
+                }
+            }
+            currentCharacterData.completedEventFlags = allDoneFlags.ToArray();
+        }
+        else
+        {
+            if (currentCharacterData.completedEventFlags == null)
+            {
+                currentCharacterData.completedEventFlags = new EventFlagsSystem.EventFlag[0];
+            }
+        }
+
+        List<SerializableMission> sMissions = new List<SerializableMission>();
+        foreach (MissionInfo liveMission in PlayerObjectiveTracker.instance.objectiveList)
+        {
+            SerializableMission sm = new SerializableMission();
+            sm.missionName = liveMission.MissionName;
+            sm.ifFinished = liveMission.isFinished;
+            sm.objectiveStates = new List<SerializableObjectiveState>();
+            foreach (MissionInfo.MissionObjective obj in liveMission.objectives)
+            {
+                sm.objectiveStates.Add(new SerializableObjectiveState {
+                    ObjectiveID = obj.ObjectiveID,
+                    isCompleted = obj.isCompleted
+                });
+            }
+            sMissions.Add(sm);
+        }
+        currentCharacterData.serializableMission = sMissions.ToArray();
+
+        if (PlayerObjectiveTracker.instance.currentMission != null)
+        {
+            MissionInfo liveCurrentMission = PlayerObjectiveTracker.instance.currentMission;
+            SerializableMission scm = new SerializableMission();
+            scm.missionName = liveCurrentMission.MissionName;
+            scm.ifFinished = liveCurrentMission.isFinished;
+            scm.objectiveStates = new List<SerializableObjectiveState>();
+            foreach (MissionInfo.MissionObjective obj in liveCurrentMission.objectives)
+            {
+                scm.objectiveStates.Add(new SerializableObjectiveState {
+                    ObjectiveID = obj.ObjectiveID,
+                    isCompleted = obj.isCompleted
+                });
+            }
+            currentCharacterData.currentMission = scm;
+        }
+        else
+        {
+            currentCharacterData.currentMission = null;
+        }
+
         player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
@@ -191,9 +251,18 @@ public class WorldSaveGameManager : MonoBehaviour
         }
 
         player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
-        WorldObjectManager worldObjectManager = FindFirstObjectByType<WorldObjectManager>();
-        if (worldObjectManager != null)
-            worldObjectManager.ReCalculateLists();
+
+        if (currentCharacterData.completedEventFlags != null)
+        {
+            foreach (var savedFlag in currentCharacterData.completedEventFlags)
+            {
+                if (savedFlag.isDone)
+                {
+                    EventFlagsSystem.instance.FinishEvent(savedFlag.name);
+                }
+            }
+        }
+        
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartSong();
@@ -354,5 +423,20 @@ public class WorldSaveGameManager : MonoBehaviour
 
         saveFileDataWriter.saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(CharacterSlots.CharacterSlot3);
         characterSlot03 = saveFileDataWriter.LoadSaveFile();
+    }
+
+    public SerializableMission GetSerializableMissionFromMissionInfo(MissionInfo mission)
+    {
+        SerializableMission serializedMission = new SerializableMission();
+
+        if (mission == null)
+        {
+            serializedMission.missionName = "";
+            return serializedMission;
+        }
+
+        serializedMission.missionName = mission.MissionName;
+
+        return serializedMission;
     }
 }
