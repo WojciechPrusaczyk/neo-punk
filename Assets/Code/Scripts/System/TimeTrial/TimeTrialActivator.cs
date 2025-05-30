@@ -50,7 +50,7 @@ public class TimeTrialActivator : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (timeTrial.bestRewardReached == false)
+        if (timeTrial.bestRewardReached == false && timeTrial.trialStarted == false)
         {
             if (collision.CompareTag("Player"))
             {
