@@ -57,7 +57,6 @@ public class WorldSaveGameManager : MonoBehaviour
 
     private void Start()
     {
-        LoadAllCharacterProfiles();
         AttemptToCreateNewSettingsFile();
     }
 
@@ -88,6 +87,9 @@ public class WorldSaveGameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "MainMenu")
+            LoadAllCharacterProfiles();
+
         if (_pendingSaveAfterSceneLoad && scene.name == _targetSceneForSave)
         {
             _pendingSaveAfterSceneLoad = false;
@@ -209,6 +211,15 @@ public class WorldSaveGameManager : MonoBehaviour
     public void LoadGame(float delay = 0f)
     {
         StartCoroutine(LoadGameCoroutine(delay));
+    }
+
+    public void DeleteGame(int id)
+    {
+        saveFileDataWriter = new SaveFileDataWriter();
+        saveFileDataWriter.saveDataDirectoryPath = Application.persistentDataPath;
+        saveFileDataWriter.saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed((CharacterSlots)id);
+
+        saveFileDataWriter.DeleteSaveFile();
     }
 
     private IEnumerator LoadGameCoroutine(float delay)

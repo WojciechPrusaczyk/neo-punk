@@ -77,6 +77,8 @@ public class PauseMenuBehaviour : MonoBehaviour
         if (WorldSoundFXManager.instance != null)
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
 
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene("MainMenu");
     }
 

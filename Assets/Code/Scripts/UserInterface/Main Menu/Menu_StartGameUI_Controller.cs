@@ -11,11 +11,19 @@ public class Menu_StartGameUI_Controller : MonoBehaviour
     [SerializeField] private Button loadGame;
     [SerializeField] private Menu_PickSaveUI_Controller pickSaveUIController;
 
+    MenuBehaviour menuBehaviour;
+
+    private void Awake()
+    {
+        menuBehaviour = GetComponent<MenuBehaviour>();
+    }
+
     public void ShowSelectionMenu(bool show)
     {
         if (menu != null)
         {
             menu.gameObject.SetActive(show);
+            newGame.Select();
         }
     }
 

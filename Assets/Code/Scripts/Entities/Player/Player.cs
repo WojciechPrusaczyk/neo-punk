@@ -453,7 +453,7 @@ public class Player : MonoBehaviour
         canBlock = true;
     }
 
-    public void TeleportPlayerToDrone(int droneID)
+    public void TeleportPlayerToDrone(int droneID, string droneName)
     {
         if (WorldObjectManager.instance == null)
         {
@@ -473,6 +473,7 @@ public class Player : MonoBehaviour
         if (WorldSaveGameManager.instance != null)
         {
             WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = droneID;
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneName = string.IsNullOrEmpty(droneName) ? "Unknown" : droneName;
             WorldSaveGameManager.instance.SaveGame();
         }
 

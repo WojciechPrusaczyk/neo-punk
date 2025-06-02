@@ -25,6 +25,7 @@ public class CharacterSaveData
     [Header("Campfires")]
     public SerializableDictionary<int, bool> activeDrones;
     public int lastVisitedDroneIndex = -1;
+    public string lastVisitedDroneName = "No drones visited";
 
     [Header("Events")]
     public EventFlagsSystem.EventFlag[] completedEventFlags;

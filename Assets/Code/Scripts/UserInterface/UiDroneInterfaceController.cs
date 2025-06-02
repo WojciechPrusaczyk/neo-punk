@@ -52,7 +52,7 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
             activeDroneAmount++;
         }
 
-        // Zmiana wielko�ci przycisk�w w zale�no�ci od ilo�ci aktywnych ognisk
+        // Zmiana wielkości przycisk�w w zale�no�ci od ilo�ci aktywnych ognisk
         switch (activeDroneAmount)
         {
             case > 16:
@@ -91,7 +91,7 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
 
                 if (drone.ID != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex)
                 {
-                    droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID);
+                    droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID, drone.droneName);
                     droneButton.RegisterCallback<MouseEnterEvent>(evt =>
                     {
                         droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));

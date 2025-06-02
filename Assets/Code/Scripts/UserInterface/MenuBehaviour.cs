@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuBehaviour : MonoBehaviour
 {
-    
+
+    public Button playButton;
+    public Button exitButton;
+
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
@@ -108,5 +112,14 @@ public class MenuBehaviour : MonoBehaviour
         {
             Debug.LogError("Not found animator component in MenuBehaviour.");
         }
+    }
+
+    public void ToggleButtons(bool status)
+    {
+        if (playButton == null || exitButton == null)
+            return;
+
+        playButton.interactable = status;
+        exitButton.interactable = status;
     }
 }

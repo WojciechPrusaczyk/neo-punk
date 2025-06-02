@@ -91,6 +91,7 @@ public class InteractableDrone : Interactable
 
         // Zmiana ID ostatnio odwiedzonego ogniska
         WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = ID;
+        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneName = string.IsNullOrEmpty(droneName) ? "Unknown" : droneName;
 
         // Jeœli ognisko nie jest aktywowane to dodajemy je do s³ownika activeCampfires i ustawiamy isActivated na true
         if (!isActivated)
