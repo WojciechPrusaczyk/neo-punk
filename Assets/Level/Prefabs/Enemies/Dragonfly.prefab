@@ -126,7 +126,9 @@ MonoBehaviour:
   AttackDamage: 1
   MovementSpeed: 200
   isFacedRight: 0
+  isDead: 0
   isEnemy: 1
+  isBoss: 0
   deathAnimationLength: 1
   detectedTargets: []
   attackRange: 6
@@ -136,6 +138,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 1
+  healFX: {fileID: 0}
+  healFXParent: {fileID: 0}
   incomingDamagePercent: 1
 --- !u!114 &5208658026229679533
 MonoBehaviour:
@@ -171,6 +175,7 @@ MonoBehaviour:
   state: 0
   canMove: 1
   canAttack: 0
+  playerPosition: {fileID: 0}
 --- !u!114 &1139799258521107825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070689306775196949}
+  - component: {fileID: 6102123462382994508}
   m_Layer: 0
   m_Name: Dragonfly
   m_TagString: Untagged
@@ -841,6 +847,20 @@ Transform:
   - {fileID: 4268707162037696991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6102123462382994508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395396408715519714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f9f16c14ff3ff4c8e34a1603739004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 0}
+  entityStatus: {fileID: 0}
 --- !u!1 &8118878904411697847
 GameObject:
   m_ObjectHideFlags: 0

@@ -115,6 +115,15 @@ public class InteractableDrone : Interactable
                     if (WorldGameManager.instance != null)
                         WorldGameManager.instance.player.playerStatus.PlayHealFX();
 
+#if UNITY_EDITOR
+                    var playerHealth = WorldGameManager.instance.player.playerStatus;
+                    playerHealth.entityHealthPoints += 10;
+                    if (playerHealth.entityHealthPoints > playerHealth.entityMaxHelath)
+                    {
+                        playerHealth.entityHealthPoints = playerHealth.entityMaxHelath;
+                    }
+#endif
+
                     if (interactionHealCoroutine != null)
                         StopCoroutine(interactionHealCoroutine);
 
@@ -122,15 +131,6 @@ public class InteractableDrone : Interactable
                 }
             }
         }
-
-#if UNITY_EDITOR
-        var playerHealth = WorldGameManager.instance.player.playerStatus;
-        playerHealth.entityHealthPoints += 10;
-        if (playerHealth.entityHealthPoints > playerHealth.entityMaxHelath)
-        {
-            playerHealth.entityHealthPoints = playerHealth.entityMaxHelath;
-        }
-#endif
 
         // Zapisanie stanu gry
         WorldSaveGameManager.instance.SaveGame();
