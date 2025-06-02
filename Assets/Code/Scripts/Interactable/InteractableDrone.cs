@@ -109,6 +109,9 @@ public class InteractableDrone : Interactable
             {
                 droneController.ActivateInterface(ID);
 
+                if (WorldAIManager.instance != null)
+                    WorldAIManager.instance.RespawnAllEnemies();
+
                 // Leczenie gracza
                 if (interactionTextCanvas != null)
                 {

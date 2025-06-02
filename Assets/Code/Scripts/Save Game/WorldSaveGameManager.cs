@@ -266,6 +266,10 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartSong();
+
+        if (WorldAIManager.instance != null)
+            WorldAIManager.instance.RecalculateLists(true, true);
+
         Debug.Log("Game loaded successfully.");
     }
 

@@ -15,6 +15,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (shooter == null)
+                return;
+
             EntityStatus playerStatus = collision.gameObject.GetComponent<EntityStatus>();
             EntityStatus shooterStatus = shooter.gameObject.GetComponent<EntityStatus>();
             

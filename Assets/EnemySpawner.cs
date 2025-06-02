@@ -5,23 +5,27 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public GameObject instantiatedEnemy;
+
     private void Awake()
     {
-        // Ensure the spawner is inactive at the start
-        gameObject.SetActive(false);
-
-        SpawnEnemy();
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public void SpawnEnemy()
     {
-        if (gameObject.activeInHierarchy == false)
-            gameObject.SetActive(true);
-
         if (enemyPrefab != null)
         {
+            if (instantiatedEnemy != null)
+            {
+                Destroy(instantiatedEnemy);
+            }
+
             GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
+            instantiatedEnemy = enemy;
+
+            if (WorldAIManager.instance != null)
+                WorldAIManager.instance.AddEnemyToEnemiesList(enemy);
         }
         else
         {
