@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
@@ -14,16 +15,17 @@ public class InteractableDrone : Interactable
     [Header("Drone Activation Data")]
     public bool isActivated = false;
 
+    [Header("Interaction floating text")]
+    public CanvasGroup interactionTextCanvas;
+
+    private Coroutine interactionHealCoroutine;
+
     private float activatedYOffset = 0.3f;
     private float activatedLightIntensity = 7f;
     private float activatedLightRadiusOuter = 7f;
 
     // Drone light
     private Light2D droneLight;
-
-    // Drone Interation
-    private bool isInteractionOnCooldown = false;
-    private float interactionCooldownDuration = .5f;
 
     private UI_DroneInterface_Controller droneController;
 
@@ -75,6 +77,8 @@ public class InteractableDrone : Interactable
         if (isInteractionOnCooldown)
             return;
 
+        RemoveIcon();
+
         StartCoroutine(InteractionCooldown());
 
         if (WorldSaveGameManager.instance == null)
@@ -104,6 +108,18 @@ public class InteractableDrone : Interactable
             if (droneController != null)
             {
                 droneController.ActivateInterface(ID);
+
+                // Leczenie gracza
+                if (interactionTextCanvas != null)
+                {
+                    if (WorldGameManager.instance != null)
+                        WorldGameManager.instance.player.playerStatus.PlayHealFX();
+
+                    if (interactionHealCoroutine != null)
+                        StopCoroutine(interactionHealCoroutine);
+
+                    interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
+                }
             }
         }
 
@@ -120,11 +136,20 @@ public class InteractableDrone : Interactable
         WorldSaveGameManager.instance.SaveGame();
     }
 
-    private IEnumerator InteractionCooldown()
+    private IEnumerator HealInteractionTask(float duration)
     {
-        isInteractionOnCooldown = true;
-        yield return new WaitForSeconds(interactionCooldownDuration);
-        isInteractionOnCooldown = false;
+        
+        interactionTextCanvas.alpha = 1f;
+        yield return new WaitForSeconds(duration);
+
+        float fadeDuration = 0.5f;
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            interactionTextCanvas.alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            yield return null;
+        }
     }
 
     protected override void CloseUI()
@@ -132,10 +157,9 @@ public class InteractableDrone : Interactable
         if (droneController.isDroneUIActive)
             droneController.DeactivateInterface();
 
-        if (instantiatedIcon == null && InteractIcon != null && isPlayerInRange)
+        if (instantiatedIcon == null && isPlayerInRange)
         {
-            Vector3 positionAboveDrone = new Vector3(transform.position.x, transform.position.y + interactableIconYOffset, transform.position.z);
-            InstantiateInteractionIcon(InteractIcon, positionAboveDrone, 0);
+            CreateIcon(transform);
         }
     }
 
@@ -161,10 +185,9 @@ public class InteractableDrone : Interactable
             animator.SetBool("IsPlayerNearby", true);
 
             // Wyœwietl ikonê interakcji
-            if (InteractIcon != null && !droneController.isDroneUIActive)
+            if (!droneController.isDroneUIActive)
             {
-                Vector3 positionAboveDrone = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                InstantiateInteractionIcon(InteractIcon, positionAboveDrone, interactableIconYOffset);
+                CreateIcon(transform);
             }
         }
     }

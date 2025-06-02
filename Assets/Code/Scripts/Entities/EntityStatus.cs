@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class EntityStatus : MonoBehaviour
 {
+    [Header("Entity Status")]
     public string entityName = "";
     public int entityLevel = 1;
     public int entityExperiencePoints = 0;
@@ -21,12 +22,13 @@ public class EntityStatus : MonoBehaviour
     public float AttackDamage = 10.0f;
     public float MovementSpeed = 5.0f;
     public bool isFacedRight = true;
+    public bool isDead = false;
 
-
+    [Header("Boss Settings")]
     public bool isEnemy = false;
     public bool isBoss = false;
 
-
+    [Header("Entity Settings")]
     public float deathAnimationLength = 1.0f;
     public List<GameObject> detectedTargets;
     public float attackRange;
@@ -37,7 +39,11 @@ public class EntityStatus : MonoBehaviour
     public bool isAlerted;
     public Enums.EntityType entityType = Enums.EntityType.Human;
 
-    public bool isDead = false;
+    [Header("Entity FX")]
+    [SerializeField] private GameObject healFX;
+    [SerializeField] private Transform healFXParent;
+    private Coroutine entityHealFXCoroutine;
+
     UI_YouDiedPopUp_Controller youDiedPopUpController;
 
     private GameObject mainUserInterface;
@@ -52,7 +58,7 @@ public class EntityStatus : MonoBehaviour
     public event System.Action OnPlayerDeath;
     public event System.Action OnEntityDeath;
 
-
+    [Header("Incoming Damage Settings")]
     // Wartość wyrażona w procentach, która odpowiada za % otrzymywanych obrażeń
     public float incomingDamagePercent = 1.0f;
     /*
@@ -304,6 +310,29 @@ public class EntityStatus : MonoBehaviour
         playerStatus.SetXp( 0 );
         
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
+    }
+
+    public void PlayHealFX()
+    {
+        if (entityHealFXCoroutine != null)
+            StopCoroutine(entityHealFXCoroutine);
+
+        entityHealFXCoroutine = StartCoroutine(PlayHealFXCoroutine());
+    }
+
+    private IEnumerator PlayHealFXCoroutine()
+    {
+        if (healFX == null || healFXParent == null)
+        {
+            Debug.LogWarning("Heal FX or Heal FX Parent is not assigned.");
+            yield return null;
+        }
+
+        GameObject healEffect = Instantiate(healFX, healFXParent.position, Quaternion.identity, healFXParent);
+        float healEffectDuration = healEffect.GetComponent<ParticleSystem>().main.duration;
+
+        yield return new WaitForSeconds(healEffectDuration > 0?healEffectDuration:2f);
+        Destroy(healEffect);
     }
 
     void GettingDamageEvent( float damage, bool isPlayer = false )

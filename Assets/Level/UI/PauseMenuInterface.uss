@@ -8,7 +8,7 @@
     padding-right: 0;
     padding-bottom: 35px;
     padding-left: 0;
-    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
     opacity: 0.9;
     align-items: auto;
     justify-content: flex-start;

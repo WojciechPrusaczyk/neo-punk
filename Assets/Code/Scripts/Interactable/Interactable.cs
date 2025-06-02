@@ -7,8 +7,11 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public Collider2D interactableCollider;
-    public float colliderDisableTimer = 2f;
-    
+
+    // Interaction
+    protected bool isInteractionOnCooldown = false;
+    protected float interactionCooldownDuration = .5f;
+
     [SerializeField] protected float interactableIconYOffset = 1.5f;
 
     [SerializeField] protected GameObject InteractIcon;
@@ -44,9 +47,9 @@ public class Interactable : MonoBehaviour
     }
 
     // Tworzenie ikony interakcji
-    protected void InstantiateInteractionIcon(GameObject iconPrefab, Vector3 position, float yOffset = 1.5f)
+    protected void InstantiateInteractionIcon(GameObject iconPrefab, Vector3 position)
     {
-        instantiatedIcon = Instantiate(iconPrefab, new Vector3(position.x, position.y + yOffset, position.z), Quaternion.identity);
+        instantiatedIcon = Instantiate(iconPrefab, new Vector3(position.x, position.y, position.z), Quaternion.identity);
         instantiatedIcon.transform.SetParent(transform);
     }
 
@@ -59,11 +62,18 @@ public class Interactable : MonoBehaviour
     // To jest klasa bazowa, więc nie ma tu żadnej implementacji.
     protected virtual void Interact()
     {
-        if (interactableCollider != null)
-        {
-            interactableCollider.enabled = false;
-            StartCoroutine(RestoreColliderAfterDelay(colliderDisableTimer));
-        }
+        if (isInteractionOnCooldown)
+            return;
+
+        RemoveIcon();
+
+        StartCoroutine(InteractionCooldown());
+    }
+    protected IEnumerator InteractionCooldown()
+    {
+        isInteractionOnCooldown = true;
+        yield return new WaitForSeconds(interactionCooldownDuration);
+        isInteractionOnCooldown = false;
     }
 
     protected IEnumerator RestoreColliderAfterDelay(float delay)
@@ -85,8 +95,25 @@ public class Interactable : MonoBehaviour
 
     protected virtual void CloseUIOnExit()
     {
-        // Domyślna implementacja nie robi nic, ale może być nadpisana w klasach dziedziczących
-        Debug.Log("Left the Interactable area, closing UI");
+        CreateIcon(transform);
+    }
+
+    protected virtual void RemoveIcon()
+    {
+        if (instantiatedIcon != null)
+        {
+            Destroy(instantiatedIcon);
+            instantiatedIcon = null;
+        }
+    }
+
+    protected virtual void CreateIcon(Transform _transform)
+    {
+        if (InteractIcon != null)
+        {
+            Vector3 positionAbove = new Vector3(_transform.position.x, _transform.position.y + interactableIconYOffset, _transform.position.z);
+            InstantiateInteractionIcon(InteractIcon, positionAbove);
+        }
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -106,12 +133,7 @@ public class Interactable : MonoBehaviour
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
 
-            // Wyświetl ikonę interakcji
-            if (InteractIcon != null)
-            {
-                Vector3 positionAboveCampfire = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-                InstantiateInteractionIcon(InteractIcon, positionAboveCampfire);
-            }
+            CreateIcon(transform);
         }
     }
 

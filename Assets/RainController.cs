@@ -24,10 +24,7 @@ public class RainController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (WorldGameManager.instance != null)
-            player = WorldGameManager.instance.player?.gameObject;
-        else
-            player = GameObject.FindWithTag("Player");
+        player = FindFirstObjectByType<Player>().gameObject;
     }
 
     private void Update()
