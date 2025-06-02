@@ -12,7 +12,37 @@ public class WorldGameManager : MonoBehaviour
 
     [Header("Important objects")]
     public GameObject mainCamera;
-    public GameObject camera;
+    public GameObject _camera;
+
+    [Header("Controls")]
+    /// <summary>
+    /// false = using keyboard and mouse, true = using gamepad
+    /// </summary>
+    public bool isUsingGamePad = false;
+
+    private List<KeyCode> GamePadKeyCodes = new List<KeyCode>
+    {
+        KeyCode.JoystickButton0,
+        KeyCode.JoystickButton1,
+        KeyCode.JoystickButton2,
+        KeyCode.JoystickButton3,
+        KeyCode.JoystickButton4,
+        KeyCode.JoystickButton5,
+        KeyCode.JoystickButton6,
+        KeyCode.JoystickButton7,
+        KeyCode.JoystickButton8,
+        KeyCode.JoystickButton9,
+        KeyCode.JoystickButton10,
+        KeyCode.JoystickButton11,
+        KeyCode.JoystickButton12,
+        KeyCode.JoystickButton13,
+        KeyCode.JoystickButton14,
+        KeyCode.JoystickButton15,
+        KeyCode.JoystickButton16,
+        KeyCode.JoystickButton17,
+        KeyCode.JoystickButton18,
+        KeyCode.JoystickButton19
+    };
 
     string prefix = "WORLD GAME MANAGER || ";
 
@@ -27,6 +57,25 @@ public class WorldGameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            foreach (KeyCode keyCode in GamePadKeyCodes)
+            {
+                if (Input.GetKeyDown(keyCode))
+                {
+                    isUsingGamePad = true;
+                    return;
+                }
+                else
+                {
+                    isUsingGamePad = false;
+                }
+            }
         }
     }
 
@@ -54,7 +103,7 @@ public class WorldGameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             player = null;
-            camera = null;
+            _camera = null;
             return;
         }
 
@@ -64,8 +113,8 @@ public class WorldGameManager : MonoBehaviour
             Debug.LogError($"{prefix} Player not found in the scene!");
         }
 
-        camera = GameObject.Find("Camera");
-        if (camera == null)
+        _camera = GameObject.Find("Camera");
+        if (_camera == null)
         {
             Debug.LogError($"{prefix} Camera not found in the scene!");
         }
