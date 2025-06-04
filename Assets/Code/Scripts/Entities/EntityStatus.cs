@@ -20,6 +20,7 @@ public class EntityStatus : MonoBehaviour
     public int droppedXp = 0;
     public int gold = 0;
     public float AttackDamage = 10.0f;
+    public List<AttackType> AttackTypes;
     public float MovementSpeed = 5.0f;
     public bool isFacedRight = true;
     public bool isDead = false;

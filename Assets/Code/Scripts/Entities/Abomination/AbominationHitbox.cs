@@ -6,6 +6,7 @@ using UnityEngine;
 public class AbominationHitbox : MonoBehaviour
 {
     public EntityStatus entityStatus;
+    public string AttackName;
 
     private GameObject _player;
 
@@ -18,7 +19,16 @@ public class AbominationHitbox : MonoBehaviour
     {
         if (other.tag.Contains("Player"))
         {
-            _player.GetComponent<EntityStatus>().DealDamage(entityStatus.AttackDamage, entityStatus.gameObject);
+            var attack = entityStatus.AttackTypes
+                .Find(a => a.AttackName == AttackName);
+
+            int damage = attack?.AttackDamage ?? -1;
+            if (damage == -1)
+            {
+                Debug.Log(AttackName + " Not found");
+                return;
+            }
+            _player.GetComponent<EntityStatus>().DealDamage(damage, entityStatus.gameObject);
         }
     }
 }

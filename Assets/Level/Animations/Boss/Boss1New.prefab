@@ -368,6 +368,11 @@ MonoBehaviour:
   droppedXp: 0
   gold: 0
   AttackDamage: 5
+  AttackTypes:
+  - {fileID: 11400000, guid: 996bd1186e92c584bb1c4c396310fa7e, type: 2}
+  - {fileID: 11400000, guid: 4c7d44236559cf34b8dc51d0dbe5e351, type: 2}
+  - {fileID: 11400000, guid: a77088d3ea5ea0b40850b1e750735e81, type: 2}
+  - {fileID: 11400000, guid: 269d234a4a0ce5a4f9728ab796e64912, type: 2}
   MovementSpeed: 5
   isFacedRight: 0
   isEnemy: 1
@@ -607,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
+  AttackName: StingAttack
 --- !u!1 &2588575693833048911
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
+  AttackName: ClawAttack
 --- !u!1 &3266632399335555944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
+  AttackName: SpikeAreaDamage
   tickInterval: 0.5
 --- !u!1 &4438814284327704509
 GameObject:
@@ -1380,6 +1388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
+  AttackName: 
 --- !u!1 &5910096894041230671
 GameObject:
   m_ObjectHideFlags: 0

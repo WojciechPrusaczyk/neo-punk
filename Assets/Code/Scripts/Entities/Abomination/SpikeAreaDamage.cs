@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpikeAreaDamage : MonoBehaviour
 {
     [SerializeField] private EntityStatus entityStatus;
+    public string AttackName;
 
     [SerializeField] private float tickInterval = 0.5f;
 
@@ -38,7 +39,15 @@ public class SpikeAreaDamage : MonoBehaviour
 
     private void ApplyDamage(GameObject player)
     {
-        player.GetComponent<EntityStatus>()
-            .DealDamage(entityStatus.AttackDamage, entityStatus.gameObject);
+        var attack = entityStatus.AttackTypes
+            .Find(a => a.AttackName == AttackName);
+
+        int damage = attack?.AttackDamage ?? -1;
+        if (damage == -1)
+        {
+            Debug.Log(AttackName + " Not found");
+            return;
+        }
+        player.GetComponent<EntityStatus>().DealDamage(damage, entityStatus.gameObject);
     }
 }
