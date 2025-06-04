@@ -59,7 +59,6 @@ public class AbominationMovement : MonoBehaviour
             return;
 
         float dist = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(dist);
         int index;
         if (dist < 1f)
         {

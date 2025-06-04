@@ -77,7 +77,7 @@ public class FlyingEnemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, enemyStatus.MovementSpeed * Time.deltaTime);
 
         // Check if the enemy has reached the current target
-        if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
+        if (Vector3.Distance(transform.position, targetPoint.position) < 0.3f)
         {
             // Switch to the other target
             targetPoint = (targetPoint == targetA) ? targetB : targetA;

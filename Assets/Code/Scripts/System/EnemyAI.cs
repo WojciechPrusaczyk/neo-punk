@@ -353,6 +353,10 @@ public class EnemyAI : MonoBehaviour
     
     public bool HasLineOfSight()
     {
+        if (playerPosition == null)
+        {
+            return false;
+        }
         Vector2 rayDirection = (playerPosition.position - eyes.position).normalized;
         float distance = Vector2.Distance(eyes.position, playerPosition.position);
         int layerMask = (1 << LayerMask.NameToLayer("Player")) | (1 << LayerMask.NameToLayer("ImpassableWall"));
