@@ -81,8 +81,6 @@ public class WorldSaveGameManager : MonoBehaviour
         _targetSceneForSave = "InitialLevel";
 
         SceneManager.LoadScene(_targetSceneForSave);
-        if (MusicManager.instance != null)
-            MusicManager.instance.PlaySong(1);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

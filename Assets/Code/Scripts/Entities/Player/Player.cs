@@ -434,7 +434,7 @@ public class Player : MonoBehaviour
         if (wasDamagedRecently)
         {
             wasDamagedRecently = false;
-            FindObjectOfType<CameraShaker>()?.DoScreenShake();
+            FindAnyObjectByType<CameraShaker>()?.DoScreenShake();
         }
 
         var selectedElemental = ElementalTypes[UsedElementalTypeId];
@@ -478,7 +478,7 @@ public class Player : MonoBehaviour
         }
 
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.SFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.droneTeleport, Enums.SoundType.SFX);
     }
     
     
@@ -624,6 +624,9 @@ public class Player : MonoBehaviour
             foreach (var entity in collidingObjects)
             {
                 // zadawanie obrażeń
+
+                if (entity == null)
+                    continue;
 
                 var enemyType = entity.GetComponent<EntityStatus>().entityType;
                 

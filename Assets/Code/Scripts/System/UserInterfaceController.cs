@@ -80,6 +80,9 @@ public class UserInterfaceController : MonoBehaviour
         if ( !Interfaces[DefaultInterface].interfaceRoot.activeSelf && CanPlayerQuitToDefault && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)))
         {
             ActivateInterface(DefaultInterface);
+            if (WorldGameManager.instance.player.isInDialogue)
+                WorldGameManager.instance.player.isInDialogue = false;
+
         }
         else
         {
