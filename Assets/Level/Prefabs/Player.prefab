@@ -503,16 +503,16 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 82944
-  wallSlideSpeed: 1.5
-  wallJumpHorizontalForce: 20
-  wallJumpVerticalForce: 40
+  wallSlideSpeed: 5
+  wallJumpHorizontalForce: 30
+  wallJumpVerticalForce: 60
   wallCheckDistance: 1
   groundCheckDistance: 0.1
   wallCheckOffset: {x: 0, y: 0.1}
   isTouchingWall: 0
   isWallSliding: 0
   isWallJumping: 0
-  wallJumpLockTime: 1
+  wallJumpLockTime: 0.2
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0

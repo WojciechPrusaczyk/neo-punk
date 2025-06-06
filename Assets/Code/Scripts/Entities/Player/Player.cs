@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
     public bool isWallSliding = false;
     public bool isWallJumping = false;
     public float wallJumpLockTime = 0.2f;
-    private int wallDirection = 0; // +1 if wall is on the right, –1 if wall is on the left
+    public int wallDirection = 0; // +1 if wall is on the right, –1 if wall is on the left
 
     private void Awake()
     {
@@ -358,12 +358,12 @@ public class Player : MonoBehaviour
         if (!isGrounded && isTouchingWall && Mathf.Approximately(Input.GetAxisRaw("Horizontal"), wallDirection))
         {
             isWallSliding = true;
-            if (playerBody.velocity.y < -wallSlideSpeed)
-                playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
+            playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
         }
         else
         {
             isWallSliding = false;
+            
         }
 
         if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
@@ -544,7 +544,9 @@ public class Player : MonoBehaviour
         }
 
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.SFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.droneTeleport, Enums.SoundType.SFX);
+        
+        UserInterfaceController.instance.ActivateInterface(0);
     }
     
     
@@ -910,7 +912,6 @@ public class Player : MonoBehaviour
     
     private void WallJump()
     {
-        playerBody.velocity = Vector2.zero;
 
         Vector2 jumpVec = new Vector2(
             -wallDirection * wallJumpHorizontalForce,

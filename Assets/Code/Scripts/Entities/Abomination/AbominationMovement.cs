@@ -1,11 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Serialization;
 using UnityEngine.U2D.IK;
-using Random = UnityEngine.Random;
 
 public class AbominationMovement : MonoBehaviour
 {
@@ -216,5 +212,12 @@ public class AbominationMovement : MonoBehaviour
             mainUi.GetComponent<MainUserInterfaceController>().HideBossBar();
         }
         MusicManager.instance.PlaySong(MusicManager.instance.Level1Track, Enums.SoundType.Music);
+        EventFlagsSystem _EventsFlagsSystem = EventFlagsSystem.instance;
+        
+        if (!_EventsFlagsSystem.IsEventDone("boss1Defeat"))
+        {
+            _EventsFlagsSystem.FinishEvent("boss1Defeat");
+        }
+
     }
 }
