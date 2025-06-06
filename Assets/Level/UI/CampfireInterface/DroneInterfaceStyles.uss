@@ -2,17 +2,32 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    width: 400px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
 }
 
 .drone-button-label {
     font-size: 24px;
     color: white;
-    -unity-text-align: middle-center;
+    -unity-text-align: middle-right;
     border-radius: 4px;
-    padding-left: 20;
-    padding-right: 20;
-    padding-top: 8;
-    padding-bottom: 8;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    background-color: rgba(0, 0, 0, 0);
+    align-self: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .drone-frame {
@@ -21,32 +36,45 @@
     height: 100%;
 }
 
-.drone-button-enabled{
-	border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-top-width: 2px;
+.drone-button-enabled {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
 }
 
-.drone-button-disabled{
-    -unity-background-image-tint-color: #888;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-top-width: 2px;
-    border-left-color: #555;
-    border-right-color: #555;
-    border-top-color: #555;
-    border-bottom-color: #555;
+.drone-button-disabled {
+    -unity-background-image-tint-color: rgb(136, 136, 136);
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
 }
 
 .drone-button:enabled:hover {
-
 }
 
 .drone-button:disabled {
-
 }
-.drone-button:disabled:hover {
 
+.drone-button:disabled:hover {
+}
+
+.drone-button-border {
+    background-image: url("project://database/Assets/Art/UserInterface/BigFrame.aseprite?fileID=5828488246470146798&guid=7b1be0475c076b944bdb0ea3445587ab&type=3#BigFrame");
+    position: absolute;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.drone-button:hover .drone-button-border {
+    background-image: url("project://database/Assets/Art/UserInterface/BigFrame.png?fileID=-6836962377839270370&guid=97c1ab80e08f0d94089f70bd3f46f871&type=3#BigFrame_1");
+}
+
+.drone-button:focus .drone-button-border{
+    background-image: url("project://database/Assets/Art/UserInterface/BigFrame.png?fileID=-6836962377839270370&guid=97c1ab80e08f0d94089f70bd3f46f871&type=3#BigFrame_1");
+}
+
+.drone-button-border-this {
+    background-image: url("project://database/Assets/Art/UserInterface/BigFrame.aseprite?fileID=5828488246470146798&guid=7b1be0475c076b944bdb0ea3445587ab&type=3#BigFrame");
+    position: absolute;
 }

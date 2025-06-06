@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5208658026229679533}
   - component: {fileID: 1139799258521107825}
   - component: {fileID: 7554672013920220350}
+  - component: {fileID: 9125771492184052907}
   m_Layer: 15
   m_Name: Enemy
   m_TagString: Enemy
@@ -119,8 +120,10 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints:
+    _value: 50
+  entityMaxHealth:
+    _value: 50
   droppedXp: 0
   gold: 0
   AttackDamage: 1
@@ -214,6 +217,24 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3574922348067596441, guid: 4a15eab532008f84dac044122f5fa237, type: 3}
   bulletSpawn: {fileID: 4209835047449094207}
   bulletSpeed: 10
+--- !u!114 &9125771492184052907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15735642140565428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9aa95d66c2d2fd4e8752f86e79c1991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 96d7d56d5b97ff34c9f60694e81e7c7e, type: 3}
+  - {fileID: 8300000, guid: ce7bc4fb8ab000f4cb5108bac9642dc5, type: 3}
+  minSoundDistance: 1
+  maxSoundDistance: 15
 --- !u!1 &394498498997932825
 GameObject:
   m_ObjectHideFlags: 0

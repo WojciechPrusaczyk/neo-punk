@@ -72,6 +72,7 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
 
             if (!drone.isActivated)
                 continue;
+
             if (rootVisualElement != null)
             {
                 Button droneButton = new Button()
@@ -86,39 +87,54 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                         }
                 };
 
-                droneButton.focusable = false;
                 droneButton.AddToClassList("drone-button");
 
                 if (drone.ID != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex)
                 {
                     droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID, drone.droneName);
+
+                    // Dodanie dźwięków do przycisków (enter, click)
                     droneButton.RegisterCallback<MouseEnterEvent>(evt =>
                     {
-                        droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, .99f));
-                    });
-
-                    droneButton.RegisterCallback<MouseLeaveEvent>(evt =>
-                    {
-                        droneButton.style.unityBackgroundImageTintColor = new StyleColor(new Color(1f, 1f, 1f, 1f));
+                        if (WorldSoundFXManager.instance != null && WorldSoundFXManager.instance.gameState != Enums.GameState.Paused)
+                        {
+                            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX);
+                        }
                     });
 
                     droneButton.AddToClassList("drone-button-enabled");
 
+                    // Dodanie frame'a do przycisku, który nie jest aktualnie używanym dronem
+                    VisualElement droneFrame = new VisualElement();
+                    droneFrame.AddToClassList("drone-button-border");
+                    droneFrame.style.width = width;
+                    droneFrame.style.height = height;
+                    droneButton.Add(droneFrame);
+
+                    Label droneNameLabel = new Label(drone.droneName);
+                    droneNameLabel.AddToClassList("drone-button-label");
+                    droneButton.Add(droneNameLabel);
                 }
                 else
                 {
                     droneButton.AddToClassList("drone-button-disabled");
+
+                    // Wyłączamy możliwość focusu, aby klawiatura nie mogła nawigować do tego przycisku
+                    droneButton.focusable = false;
+
+                    // Dodanie frame'a do przycisku, który jest aktualnie używanym dronem
+                    VisualElement droneFrame = new VisualElement();
+                    droneFrame.AddToClassList("drone-button-border-this");
+                    droneFrame.style.width = width;
+                    droneFrame.style.height = height;
+                    droneButton.Add(droneFrame);
+
+                    Label droneNameLabel = new Label($"{drone.droneName} - CURRENT");
+                    droneNameLabel.AddToClassList("drone-button-label");
+                    droneButton.Add(droneNameLabel);
                 }
 
                 activeDroneUIButtons.Add(droneButton);
-
-                Label droneNameLabel = new Label(drone.droneName);
-                droneNameLabel.AddToClassList("drone-button-label");
-                droneButton.Add(droneNameLabel);
-
-                VisualElement droneFrame = new VisualElement();
-                droneFrame.AddToClassList("drone-frame");
-                droneButton.Add(droneFrame);
             }
             else
             {

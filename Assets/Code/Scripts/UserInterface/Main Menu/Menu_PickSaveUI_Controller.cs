@@ -56,7 +56,6 @@ public class Menu_PickSaveUI_Controller : MonoBehaviour
         WorldSaveGameManager.instance.currentCharacterSlotBeingUsed = characterSlot;
         pickSaveMenu.SetActive(false);
         SceneManager.LoadScene("InitialLevel");
-        MusicManager.instance.PlaySong(1);
         WorldSaveGameManager.instance.LoadGame();
     }
 

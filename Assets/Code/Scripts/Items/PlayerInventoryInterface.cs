@@ -216,7 +216,7 @@ public class PlayerInventoryInterface : MonoBehaviour
         }
 
         if (healthTitle != null)
-            healthTitle.text = $"{playerStatus.entityHealthPoints:F1} / {playerStatus.entityMaxHelath:F1}";
+            healthTitle.text = $"{playerStatus.entityHealthPoints:F1} / {playerStatus.entityMaxHealth:F1}";
 
         if (movementSpeedTitle != null)
             movementSpeedTitle.text = $"{playerStatus.MovementSpeed:F1} MS";

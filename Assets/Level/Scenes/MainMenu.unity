@@ -3080,6 +3080,7 @@ GameObject:
   - component: {fileID: 1101151317}
   - component: {fileID: 1101151316}
   - component: {fileID: 1101151318}
+  - component: {fileID: 1101151319}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -3211,13 +3212,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8443341b84953be4c8a1ea5140e7e50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicList:
-  - {fileID: 8300000, guid: 9ea0ba94d37e8ab4db21e69e9b622a67, type: 3}
-  - {fileID: 8300000, guid: cac22c031491c594bbe5041fdef62e11, type: 3}
-  audioChangeForce: 0.0179
+  MainMenuTrack: {fileID: 8300000, guid: 9ea0ba94d37e8ab4db21e69e9b622a67, type: 3}
+  Level1Track: {fileID: 8300000, guid: cac22c031491c594bbe5041fdef62e11, type: 3}
+  Boss1Track: {fileID: 8300000, guid: d9a278b6975b79e44b7e12995a7aef3e, type: 3}
   normalCutoffFrequency: 22000
   filteredCutoffFrequency: 600
   filterTransitionDuration: 0.5
+--- !u!169 &1101151319
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101151315}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.22727273
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1157255354
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +6610,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 60c1bf9b899600b43a2a05d82e031621, type: 3}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: droneTeleport
+      value: 
+      objectReference: {fileID: 8300000, guid: bce7b6c51ae45604a93ff3379065f1fd, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: buttonClickSFX
       value: 
       objectReference: {fileID: 8300000, guid: c49f74021a9ffa24ba7760509da6a03e, type: 3}
@@ -6600,6 +6629,10 @@ PrefabInstance:
       propertyPath: playerParrySFX
       value: 
       objectReference: {fileID: 8300000, guid: 5d06b996c40f6d1409fd7d5c5d22fcbc, type: 3}
+    - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
+      propertyPath: droneActivation
+      value: 
+      objectReference: {fileID: 8300000, guid: 384b16ae7a2f0a940922b98e6cf27863, type: 3}
     - target: {fileID: 8511387319756851722, guid: 02bd5f8be1d895d4892db3b2e425c88a, type: 3}
       propertyPath: playerBlockSFX.Array.size
       value: 1

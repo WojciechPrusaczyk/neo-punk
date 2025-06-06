@@ -77,8 +77,6 @@ public class InteractableDrone : Interactable
         if (isInteractionOnCooldown)
             return;
 
-        RemoveIcon();
-
         StartCoroutine(InteractionCooldown());
 
         if (WorldSaveGameManager.instance == null)
@@ -101,11 +99,18 @@ public class InteractableDrone : Interactable
                 Debug.Log("Activating drone with ID: " + ID);
                 animator.SetBool("IsActivated", true);
             }
+            // Dodaj drona do aktywnych dronów w zapisie gry
             WorldSaveGameManager.instance.currentCharacterData.activeDrones.Add(ID, true);
+
+            // Puœæ dŸwiêk aktywacji drona
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.droneActivation, Enums.SoundType.SFX);
+
             isActivated = true;
         }
         else
         {
+            RemoveIcon();
+
             if (droneController != null)
             {
                 droneController.ActivateInterface(ID);
@@ -113,26 +118,28 @@ public class InteractableDrone : Interactable
                 if (WorldAIManager.instance != null)
                     WorldAIManager.instance.RespawnAllEnemies();
 
+                WorldGameManager.instance.player.playerStatus.detectedTargets.Clear();
+
+#if UNITY_EDITOR
                 // Leczenie gracza
                 if (interactionTextCanvas != null)
                 {
                     if (WorldGameManager.instance != null)
                         WorldGameManager.instance.player.playerStatus.PlayHealFX();
 
-#if UNITY_EDITOR
                     var playerHealth = WorldGameManager.instance.player.playerStatus;
-                    playerHealth.entityHealthPoints += 10;
-                    if (playerHealth.entityHealthPoints > playerHealth.entityMaxHelath)
+                    playerHealth.entityHealthPoints.value += 10;
+                    if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
                     {
-                        playerHealth.entityHealthPoints = playerHealth.entityMaxHelath;
+                        playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
                     }
-#endif
 
                     if (interactionHealCoroutine != null)
                         StopCoroutine(interactionHealCoroutine);
 
                     interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
                 }
+#endif
             }
         }
 
