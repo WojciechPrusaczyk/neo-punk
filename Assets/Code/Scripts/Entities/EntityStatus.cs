@@ -90,6 +90,11 @@ public class EntityStatus : MonoBehaviour
         entityHealthPoints.OnChange += (oldVal, newVal) => OnEntityHealthPointsChange(oldVal, newVal);
     }
 
+    private void OnDestroy()
+    {
+        entityHealthPoints.OnChange -= (oldVal, newVal) => OnEntityHealthPointsChange(oldVal, newVal);
+    }
+
     private void OnEnable()
     {
         isDead = false;
