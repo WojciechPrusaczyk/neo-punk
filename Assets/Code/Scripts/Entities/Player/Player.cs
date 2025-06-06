@@ -311,9 +311,6 @@ public class Player : MonoBehaviour
         {
             Jump();
             //_soundManager.PlaySound(0);
-            if (WorldSoundFXManager.instance == null) return;
-            float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX);
         }
 
         /*
@@ -525,6 +522,9 @@ public class Player : MonoBehaviour
         if (isInDialogue)
             return;
 
+        if (UserInterfaceController.instance.isUIMenuActive)
+            return;
+
         if (canJump)
         {
             canJump = false;
@@ -535,6 +535,9 @@ public class Player : MonoBehaviour
             }
             playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
 
+            if (WorldSoundFXManager.instance == null) return;
+            float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX);
         }
     }
 

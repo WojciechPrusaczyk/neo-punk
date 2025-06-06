@@ -129,9 +129,9 @@ public class InteractableDrone : Interactable
 
                     var playerHealth = WorldGameManager.instance.player.playerStatus;
                     playerHealth.entityHealthPoints.value += 10;
-                    if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHelath.value)
+                    if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
                     {
-                        playerHealth.entityHealthPoints.value = playerHealth.entityMaxHelath;
+                        playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
                     }
 
                     if (interactionHealCoroutine != null)

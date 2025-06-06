@@ -17,7 +17,7 @@ public class EntityStatus : MonoBehaviour
     [ReadOnly] public int entityExperienceToNextLvl = 50;
 
     public Inactive.ObservableVariable<float> entityHealthPoints;
-    public Inactive.ObservableVariable<float> entityMaxHelath;
+    public Inactive.ObservableVariable<float> entityMaxHealth;
 
     public int droppedXp = 0;
     public int gold = 0;
@@ -88,11 +88,13 @@ public class EntityStatus : MonoBehaviour
     private void Start()
     {
         entityHealthPoints.OnChange += (oldVal, newVal) => OnEntityHealthPointsChange(oldVal, newVal);
+        entityMaxHealth.OnChange += (oldVal, newVal) => OnEntityMaxHealthPointsChange(oldVal, newVal);
     }
 
     private void OnDestroy()
     {
         entityHealthPoints.OnChange -= (oldVal, newVal) => OnEntityHealthPointsChange(oldVal, newVal);
+        entityMaxHealth.OnChange -= (oldVal, newVal) => OnEntityMaxHealthPointsChange(oldVal, newVal);
     }
 
     private void OnEnable()
@@ -174,11 +176,11 @@ public class EntityStatus : MonoBehaviour
      */
     public void SetMaxHp(float maxHp)
     {
-        this.entityMaxHelath.value = maxHp;
+        this.entityMaxHealth.value = maxHp;
     }
     public float GetMaxHp()
     {
-        return this.entityMaxHelath.value;
+        return this.entityMaxHealth.value;
     }
 
     public void DealDamage(float damage, GameObject attackingEntity = null)
@@ -397,6 +399,15 @@ public class EntityStatus : MonoBehaviour
             {
                 PlayerDeathEvent();
             }
+        }
+    }
+
+    void OnEntityMaxHealthPointsChange(float oldValue, float newValue)
+    {
+        if (gameObject.GetComponent<Player>())
+        {
+            var fillPercentage = entityHealthPoints / GetMaxHp();
+            healthBar.GetComponent<Image>().fillAmount = fillPercentage;
         }
     }
 
