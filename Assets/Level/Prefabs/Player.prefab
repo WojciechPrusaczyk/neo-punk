@@ -529,8 +529,10 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints:
+    _value: 100
+  entityMaxHealth:
+    _value: 100
   droppedXp: 0
   gold: 0
   AttackDamage: 30
