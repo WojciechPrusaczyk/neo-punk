@@ -497,6 +497,22 @@ MonoBehaviour:
   stairMovementMultiplier: {x: 1, y: 1}
   canJump: 1
   isJumping: 0
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 82944
+  wallSlideSpeed: 1.5
+  wallJumpHorizontalForce: 20
+  wallJumpVerticalForce: 40
+  wallCheckDistance: 1
+  groundCheckDistance: 0.1
+  wallCheckOffset: {x: 0, y: 0.1}
+  isTouchingWall: 0
+  isWallSliding: 0
+  isWallJumping: 0
+  wallJumpLockTime: 1
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,11 +529,12 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 40
-  entityMaxHelath: 40
+  entityHealthPoints: 100
+  entityMaxHelath: 100
   droppedXp: 0
   gold: 0
   AttackDamage: 30
+  AttackTypes: []
   MovementSpeed: 10
   isFacedRight: 1
   isDead: 0

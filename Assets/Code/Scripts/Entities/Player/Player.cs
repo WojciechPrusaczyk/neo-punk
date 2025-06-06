@@ -84,6 +84,25 @@ public class Player : MonoBehaviour
     public Vector2 stairMovementMultiplier = Vector2.one;
     public bool canJump = true;
     public bool isJumping = false;
+    
+    [Header("Wall jump stuff")]
+    public LayerMask wallLayer;
+    public LayerMask groundLayer;
+    public float wallSlideSpeed = 1.5f;
+    public float wallJumpHorizontalForce = 4f;
+    public float wallJumpVerticalForce = 6f;
+    public float wallCheckDistance = 0.1f;
+    public float groundCheckDistance = 0.1f;
+    
+    public Vector2 wallCheckOffset = new Vector2(0f, 0.1f);
+
+// ──────────────── LOCAL WALL STATE ────────────────
+
+    public bool isTouchingWall = false;
+    public bool isWallSliding = false;
+    public bool isWallJumping = false;
+    public float wallJumpLockTime = 0.2f;
+    private int wallDirection = 0; // +1 if wall is on the right, –1 if wall is on the left
 
     private void Awake()
     {
@@ -200,14 +219,27 @@ public class Player : MonoBehaviour
 
         if (playerStatus != null && playerStatus.isDead)
             return;
+        
+        Vector2 groundOrigin = new Vector2(
+            boxCollider.bounds.center.x,
+            boxCollider.bounds.center.y - boxCollider.bounds.extents.y
+        );
 
-        isGrounded = (boxCollider.GetContacts(new ContactPoint2D[16]) > 0); // && Mathf.Abs(playerBody.velocity.y) < 0.01f; //@Wojtek oby to nie bylo wazne
+        RaycastHit2D groundHit = Physics2D.Raycast(
+            groundOrigin,
+            Vector2.down,
+            groundCheckDistance,
+            groundLayer
+        );
+        isGrounded = (groundHit.collider != null);
 
+        Debug.DrawRay(groundOrigin, Vector2.down * groundCheckDistance, Color.green);
+        
         if (playerBody.velocity.y <= 0.0f)
         {
             isJumping = false;
         }
-        if (isGrounded && !isJumping)
+        if ((onStairs || isGrounded) && !isJumping)
         {
             canJump = true;
         }
@@ -265,15 +297,30 @@ public class Player : MonoBehaviour
         
         DetectStairs();
         
-        
-        if (isGrounded && onStairs && !isJumping)
+        if (!isWallJumping)
         {
-            playerBody.velocity = new Vector2(-horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
-                                                -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y);
-        }
-        else if(!onStairs)
-        {
-            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed(), playerBody.velocity.y);
+            if (onStairs && !isJumping)
+            {
+                playerBody.velocity = new Vector2(
+                    -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
+                    -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y
+                );
+            }
+            else if (!onStairs)
+            {
+                playerBody.velocity = new Vector2(
+                    horizontalInput * playerStatus.GetMovementSpeed(),
+                    playerBody.velocity.y
+                );
+            }
+
+            if (isAttacking && playerStatus.detectedTargets.Count <= 0)
+            {
+                playerBody.velocity = new Vector2(
+                    horizontalInput * playerStatus.GetMovementSpeed() * 0.2f,
+                    playerBody.velocity.y
+                );
+            }
         }
 
         if (isAttacking && playerStatus.detectedTargets.Count <= 0)
@@ -306,14 +353,33 @@ public class Player : MonoBehaviour
         /*
          * skakanie
          */
-        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
-            !isAttacking && !isBlocking && isGrounded)
+        CheckForWall();
+
+        if (!isGrounded && isTouchingWall && Mathf.Approximately(Input.GetAxisRaw("Horizontal"), wallDirection))
         {
-            Jump();
-            //_soundManager.PlaySound(0);
-            if (WorldSoundFXManager.instance == null) return;
-            float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX);
+            isWallSliding = true;
+            if (playerBody.velocity.y < -wallSlideSpeed)
+                playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+
+        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
+            !isAttacking && !isBlocking)
+        {
+            if (isGrounded || onStairs)
+            {
+                Jump();
+                Debug.Log("jump");
+
+            }
+            else if (isWallSliding)
+            {
+                WallJump();
+                Debug.Log("wall jump");
+            }
         }
 
         /*
@@ -365,7 +431,7 @@ public class Player : MonoBehaviour
                     StartAttack();
                 }
             }
-            else if (isGrounded && isAttacking)
+            else if ((isGrounded || onStairs) && isAttacking)
             {
                 // Gracz kontynuuje sekwencję ataku
                 ContinueAttack();
@@ -522,7 +588,9 @@ public class Player : MonoBehaviour
     {
         if (isInDialogue)
             return;
-
+        if (UserInterfaceController.instance.isUIMenuActive)
+            return;
+        
         if (canJump)
         {
             canJump = false;
@@ -532,7 +600,10 @@ public class Player : MonoBehaviour
                 onStairs = false; // Temporarily disable stairs effect
             }
             playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
-
+            
+            if (WorldSoundFXManager.instance == null) return;
+            float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX, randomPitch);
         }
     }
 
@@ -805,6 +876,63 @@ public class Player : MonoBehaviour
     {
         //throw new NotImplementedException();
     }
+    
+    private void CheckForWall()
+    {
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y) + wallCheckOffset;
+        float dirX = playerStatus.isFacedRight ? +1f : -1f;
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.right * dirX, wallCheckDistance, wallLayer);
+        Debug.DrawRay(origin, Vector2.right * dirX * wallCheckDistance, Color.yellow);
+
+        if (hit.collider != null)
+        {
+            isTouchingWall = true;
+            wallDirection = dirX > 0 ? +1 : -1;
+        }
+        else
+        {
+            // Also check the opposite side (in case player is facing away but still touching a wall)
+            RaycastHit2D hitOpposite = Physics2D.Raycast(origin, Vector2.right * -dirX, wallCheckDistance, wallLayer);
+            if (hitOpposite.collider != null)
+            {
+                isTouchingWall = true;
+                // If the first ray missed but we hit on the “other” side, invert direction
+                wallDirection = dirX > 0 ? -1 : +1;
+            }
+            else
+            {
+                isTouchingWall = false;
+                wallDirection = 0;
+            }
+        }
+    }
+    
+    private void WallJump()
+    {
+        playerBody.velocity = Vector2.zero;
+
+        Vector2 jumpVec = new Vector2(
+            -wallDirection * wallJumpHorizontalForce,
+            wallJumpVerticalForce
+        );
+        playerBody.AddForce(jumpVec, ForceMode2D.Impulse);
+
+        isWallJumping = true;
+        StartCoroutine(EndWallJumpLock());
+        StartCoroutine(EndStairJumpLock());
+    }
+    private IEnumerator EndWallJumpLock()
+    {
+        yield return new WaitForSeconds(wallJumpLockTime);
+        isWallJumping = false;
+    }
+    private IEnumerator EndStairJumpLock()
+    {
+        yield return new WaitForSeconds(.2f);
+        onStairs = false;
+    }
+    
 }
 #if UNITY_EDITOR
 

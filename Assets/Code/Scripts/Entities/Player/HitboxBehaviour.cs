@@ -21,7 +21,7 @@ public class HitboxBehaviour : MonoBehaviour
                                 collision.GetComponentInParent<EntityStatus>()  ??
                                 collision.GetComponentInChildren<EntityStatus>();
 
-            if (targetStatus)                 // null-check is important!
+            if (targetStatus)
                 playerEntityStatus.detectedTargets.Add(targetStatus.gameObject);
         }
     }
@@ -30,15 +30,12 @@ public class HitboxBehaviour : MonoBehaviour
     {
         if (playerEntityStatus && collision.CompareTag("Enemy"))
         {
-            if (playerEntityStatus && collision.CompareTag("Enemy"))
-            {
-                var targetStatus = collision.GetComponent<EntityStatus>() ??
-                                   collision.GetComponentInParent<EntityStatus>() ??
-                                   collision.GetComponentInChildren<EntityStatus>();
+            var targetStatus = collision.GetComponent<EntityStatus>() ??
+                               collision.GetComponentInParent<EntityStatus>() ??
+                               collision.GetComponentInChildren<EntityStatus>();
 
-                if (targetStatus) // null-check is important!
-                    playerEntityStatus.detectedTargets.Remove(targetStatus.gameObject);
-            }
+            if (targetStatus)
+                playerEntityStatus.detectedTargets.Remove(targetStatus.gameObject);
         }
     }
 }
