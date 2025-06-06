@@ -51,7 +51,7 @@ public class PauseMenuBehaviour : MonoBehaviour
         {
             foreach (var button in buttons)
             {
-                button.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+                button.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
             }
         }
     }
@@ -61,7 +61,7 @@ public class PauseMenuBehaviour : MonoBehaviour
         _userInterfaceController.ActivateInterface(0);
 
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX, Enums.SoundType.SFX);
     }
 
     public void buttonOptions()
@@ -69,13 +69,13 @@ public class PauseMenuBehaviour : MonoBehaviour
         _userInterfaceController.ActivateInterface(optionsMenu);
 
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
     }
 
     public void buttonQuitToMenu()
     {
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
 
         Time.timeScale = 1f;
 
@@ -85,7 +85,7 @@ public class PauseMenuBehaviour : MonoBehaviour
     public void buttonQuitGame()
     {
         if (WorldSoundFXManager.instance != null)
-            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
 
         Application.Quit();
     }

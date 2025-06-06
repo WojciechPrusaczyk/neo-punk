@@ -125,7 +125,7 @@ public class AbominationMovement : MonoBehaviour
             mainUi.GetComponent<MainUserInterfaceController>().ShowBossBar(abominationStatus);
         }
 
-        MusicManager.instance.PlaySong(MusicManager.instance.Boss1Track);
+        MusicManager.instance.PlaySong(MusicManager.instance.Boss1Track, Enums.SoundType.Music);
     }
     
     public void DeactivateBoss(bool b)
@@ -215,6 +215,6 @@ public class AbominationMovement : MonoBehaviour
         {
             mainUi.GetComponent<MainUserInterfaceController>().HideBossBar();
         }
-        MusicManager.instance.PlaySong(MusicManager.instance.Level1Track);
+        MusicManager.instance.PlaySong(MusicManager.instance.Level1Track, Enums.SoundType.Music);
     }
 }

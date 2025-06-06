@@ -48,7 +48,7 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            _audioSourceComponent.volume = WorldSoundFXManager.instance == null ? AudioListener.volume : Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
+            _audioSourceComponent.volume = Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
         }
 
         _lowPassFilter = GetComponent<AudioLowPassFilter>();
@@ -64,10 +64,17 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
+        if (_audioSourceComponent == null)
+            return;
 
+        if (!_audioSourceComponent.isPlaying)
+            return;
+
+        // Aktualizacja g³oœnoœci w zale¿noœci od ustawieñ
+        _audioSourceComponent.volume = Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
     }
 
-    public void PlaySong(AudioClip song)
+    public void PlaySong(AudioClip song, Enums.SoundType soundType)
     {
         if (_audioSourceComponent == null)
             return;
@@ -75,8 +82,28 @@ public class MusicManager : MonoBehaviour
         if (_audioSourceComponent.isPlaying)
             _audioSourceComponent.Stop();
 
+        WorldSoundFXManager worldSoundFXManager = WorldSoundFXManager.instance;
+
+        switch (soundType)
+        {
+            case Enums.SoundType.Master:
+                _audioSourceComponent.volume = worldSoundFXManager.masterVolume;
+                break;
+            case Enums.SoundType.SFX:
+                _audioSourceComponent.volume = worldSoundFXManager.masterVolume * worldSoundFXManager.sfxVolume;
+                break;
+            case Enums.SoundType.Music:
+                _audioSourceComponent.volume = worldSoundFXManager.masterVolume * worldSoundFXManager.musicVolume;
+                break;
+            case Enums.SoundType.Dialogue:
+                _audioSourceComponent.volume = worldSoundFXManager.masterVolume * worldSoundFXManager.dialogueVolume;
+                break;
+            default:
+                _audioSourceComponent.volume = worldSoundFXManager.masterVolume;
+                break;
+        }
+
         _audioSourceComponent.clip = song;
-        _audioSourceComponent.volume = WorldSoundFXManager.instance == null ? AudioListener.volume : Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
         _audioSourceComponent.loop = true;
 
         _audioSourceComponent.Play();
@@ -140,10 +167,10 @@ public class MusicManager : MonoBehaviour
         switch (scene.name)
         {
             case "MainMenu":
-                PlaySong(MainMenuTrack);
+                PlaySong(MainMenuTrack, Enums.SoundType.Music);
                 break;
             case "InitialLevel":
-                PlaySong(Level1Track);
+                PlaySong(Level1Track, Enums.SoundType.Music);
                 break;
             default:
                 Debug.LogWarning("No music track assigned for scene: " + scene.name);

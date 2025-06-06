@@ -87,7 +87,6 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                         }
                 };
 
-                droneButton.focusable = false;
                 droneButton.AddToClassList("drone-button");
 
                 if (drone.ID != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex)
@@ -111,10 +110,17 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                     droneFrame.style.width = width;
                     droneFrame.style.height = height;
                     droneButton.Add(droneFrame);
+
+                    Label droneNameLabel = new Label(drone.droneName);
+                    droneNameLabel.AddToClassList("drone-button-label");
+                    droneButton.Add(droneNameLabel);
                 }
                 else
                 {
                     droneButton.AddToClassList("drone-button-disabled");
+
+                    // Wyłączamy możliwość focusu, aby klawiatura nie mogła nawigować do tego przycisku
+                    droneButton.focusable = false;
 
                     // Dodanie frame'a do przycisku, który jest aktualnie używanym dronem
                     VisualElement droneFrame = new VisualElement();
@@ -122,13 +128,13 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                     droneFrame.style.width = width;
                     droneFrame.style.height = height;
                     droneButton.Add(droneFrame);
+
+                    Label droneNameLabel = new Label($"{drone.droneName} - CURRENT");
+                    droneNameLabel.AddToClassList("drone-button-label");
+                    droneButton.Add(droneNameLabel);
                 }
 
                 activeDroneUIButtons.Add(droneButton);
-
-                Label droneNameLabel = new Label(drone.droneName);
-                droneNameLabel.AddToClassList("drone-button-label");
-                droneButton.Add(droneNameLabel);
             }
             else
             {

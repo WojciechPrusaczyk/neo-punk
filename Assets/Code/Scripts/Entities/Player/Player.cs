@@ -479,6 +479,8 @@ public class Player : MonoBehaviour
 
         if (WorldSoundFXManager.instance != null)
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.droneTeleport, Enums.SoundType.SFX);
+
+        UserInterfaceController.instance?.ActivateInterface(0);
     }
     
     

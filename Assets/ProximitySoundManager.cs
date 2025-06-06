@@ -56,8 +56,13 @@ public class ProximitySoundManager : MonoBehaviour
             return;
         }
 
-        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+        if (audioSource.isPlaying)
+        {
+            float baseVolume = Mathf.Clamp01(WorldSoundFXManager.instance.sfxVolume * WorldSoundFXManager.instance.masterVolume);
+            audioSource.volume = baseVolume * 0.5f;
+        }
 
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         if (distanceToPlayer < audioSource.maxDistance)
         {
             if (!audioSource.isPlaying)
@@ -66,18 +71,6 @@ public class ProximitySoundManager : MonoBehaviour
                 // Wybierz losowy dŸwiêk z tablicy audioClips
                 AudioClip randomClip = audioClips[Random.Range(0, audioClips.Length)];
                 audioSource.clip = randomClip;
-
-                float baseVolume;
-                if (WorldSoundFXManager.instance != null)
-                {
-                    baseVolume = WorldSoundFXManager.instance.sfxVolume;
-                }
-                else
-                {
-                    baseVolume = 1f;
-                }
-
-                audioSource.volume = baseVolume * 0.5f;
 
                 audioSource.Play();
             }

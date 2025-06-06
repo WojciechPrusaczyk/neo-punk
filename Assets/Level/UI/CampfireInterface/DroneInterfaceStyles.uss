@@ -66,7 +66,11 @@
     -unity-background-scale-mode: scale-and-crop;
 }
 
-.drone-button-border:hover {
+.drone-button:hover .drone-button-border {
+    background-image: url("project://database/Assets/Art/UserInterface/BigFrame.png?fileID=-6836962377839270370&guid=97c1ab80e08f0d94089f70bd3f46f871&type=3#BigFrame_1");
+}
+
+.drone-button:focus .drone-button-border{
     background-image: url("project://database/Assets/Art/UserInterface/BigFrame.png?fileID=-6836962377839270370&guid=97c1ab80e08f0d94089f70bd3f46f871&type=3#BigFrame_1");
 }
 

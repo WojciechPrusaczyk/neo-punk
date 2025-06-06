@@ -50,11 +50,11 @@ public class OptionsMenuBehaviour : MonoBehaviour
             dialogueVolumeSlider.value = WorldSoundFXManager.instance.dialogueVolume;
 
             // Play sound on hover
-            gameplayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            soundOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            controlsOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            displayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
-            exitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX));
+            gameplayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
+            soundOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
+            controlsOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
+            displayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
+            exitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
 
             // Dodajemy listenera do sliderów, upewniamy się, że wartość jest w zakresie 0-1
             masterVolumeSlider.RegisterValueChangedCallback(evt =>
@@ -105,7 +105,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _displayTab.style.display = DisplayStyle.None;
             _gameplayTab.style.display = DisplayStyle.Flex;
             if (WorldSoundFXManager.instance != null)
-                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
         };
         soundOptionButton.clicked += () =>
         {
@@ -115,7 +115,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _displayTab.style.display = DisplayStyle.None;
             _soundTab.style.display = DisplayStyle.Flex;
             if (WorldSoundFXManager.instance != null)
-                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
         };
         controlsOptionButton.clicked += () =>
         {
@@ -125,7 +125,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _displayTab.style.display = DisplayStyle.None;
             _controlsTab.style.display = DisplayStyle.Flex;
             if (WorldSoundFXManager.instance != null)
-                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
         };
         displayOptionButton.clicked += () =>
         {
@@ -135,7 +135,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _displayTab.style.display = DisplayStyle.None;
             _displayTab.style.display = DisplayStyle.Flex;
             if (WorldSoundFXManager.instance != null)
-                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX);
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX);
         };
         exitButton.clicked += () =>
         {
@@ -145,7 +145,7 @@ public class OptionsMenuBehaviour : MonoBehaviour
             _displayTab.style.display = DisplayStyle.None;
             _userInterfaceController.ActivateInterface(pauseMenu);
             if (WorldSoundFXManager.instance != null)
-                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX);
+                WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX, Enums.SoundType.SFX);
         };
     }
 
