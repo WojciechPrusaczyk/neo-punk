@@ -27,6 +27,18 @@ public class MusicManager : MonoBehaviour
 
     private AudioSource _audioSourceComponent;
 
+
+    private void Start()
+    {
+        if (_audioSourceComponent != null && WorldSoundFXManager.instance != null)
+        {
+            _audioSourceComponent.volume = Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
+        }
+        else if (WorldSoundFXManager.instance == null)
+        {
+            Debug.LogError("MusicManager: WorldSoundFXManager.instance is null in Start. Cannot set initial volume.");
+        }
+    }
     void Awake()
     {
         if (instance == null)
@@ -44,11 +56,8 @@ public class MusicManager : MonoBehaviour
         _audioSourceComponent = GetComponent<AudioSource>();
         if (null == _audioSourceComponent)
         {
-            Debug.LogError("Audio source component is missing in music manager.");
-        }
-        else
-        {
-            _audioSourceComponent.volume = Mathf.Clamp01(WorldSoundFXManager.instance.musicVolume * WorldSoundFXManager.instance.masterVolume);
+            Debug.LogWarning("AudioSource component is missing in MusicManager. Adding one.");
+            _audioSourceComponent = gameObject.AddComponent<AudioSource>();
         }
 
         _lowPassFilter = GetComponent<AudioLowPassFilter>();
@@ -58,7 +67,6 @@ public class MusicManager : MonoBehaviour
         }
         _lowPassFilter.cutoffFrequency = normalCutoffFrequency;
 
-        // On scene load
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

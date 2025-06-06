@@ -15,8 +15,10 @@ public class EntityStatus : MonoBehaviour
     public int entityLevel = 1;
     public int entityExperiencePoints = 0;
     [ReadOnly] public int entityExperienceToNextLvl = 50;
-    public float entityHealthPoints = 100.0f;
-    public float entityMaxHelath = 100.0f;
+
+    public Inactive.ObservableVariable<float> entityHealthPoints;
+    public Inactive.ObservableVariable<float> entityMaxHelath;
+
     public int droppedXp = 0;
     public int gold = 0;
     public float AttackDamage = 10.0f;
@@ -81,6 +83,11 @@ public class EntityStatus : MonoBehaviour
         }
 
         BaseAttackDamage = AttackDamage;
+    }
+
+    private void Start()
+    {
+        entityHealthPoints.OnChange += (oldVal, newVal) => OnEntityHealthPointsChange(oldVal, newVal);
     }
 
     private void OnEnable()
@@ -150,11 +157,11 @@ public class EntityStatus : MonoBehaviour
      */
     public void SetHp(float hp)
     {
-        this.entityHealthPoints = hp;
+        this.entityHealthPoints.value = hp;
     }
     public float GetHp()
     {
-        return this.entityHealthPoints;
+        return this.entityHealthPoints.value;
     }
     
     /*
@@ -162,11 +169,11 @@ public class EntityStatus : MonoBehaviour
      */
     public void SetMaxHp(float maxHp)
     {
-        this.entityMaxHelath = maxHp;
+        this.entityMaxHelath.value = maxHp;
     }
     public float GetMaxHp()
     {
-        return this.entityMaxHelath;
+        return this.entityMaxHelath.value;
     }
 
     public void DealDamage(float damage, GameObject attackingEntity = null)
@@ -372,7 +379,22 @@ public class EntityStatus : MonoBehaviour
 
         healthBarImage.color = currentColor;
     }
-    
+
+    private void OnEntityHealthPointsChange(float oldValue, float newValue)
+    {
+        if (gameObject.GetComponent<Player>())
+        {
+            // Ustawienie fill % dla paska zdrowia gracza
+            var fillPercentage = newValue / GetMaxHp();
+            healthBar.GetComponent<Image>().fillAmount = fillPercentage;
+
+            if (entityHealthPoints.value <= 0)
+            {
+                PlayerDeathEvent();
+            }
+        }
+    }
+
     void MoveHpBar(float xOffset, float yOffset)
     {
         // Pobierz bieżące pozycje

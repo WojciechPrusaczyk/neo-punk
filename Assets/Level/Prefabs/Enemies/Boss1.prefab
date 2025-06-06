@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345124488490395927}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.8608614, w: 0.50883955}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8520438, w: 0.5234706}
   m_LocalPosition: {x: 0.32692224, y: 0.0000001964802, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361091259933414592}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.26607016, w: 0.96395373}
+  m_LocalRotation: {x: 0, y: 0, z: -0.26607004, w: 0.96395373}
   m_LocalPosition: {x: 0.13463272, y: 0.40418342, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -217,10 +217,10 @@ MonoBehaviour:
     - {x: 0, y: 0, z: 0.0028997466, w: 0.9999958}
     m_StoredLocalRotations:
     - {x: 0, y: 0, z: 0.88389623, w: 0.46768308}
-    - {x: 0, y: 0, z: 0.8634611, w: 0.50441545}
-    - {x: 0, y: 0, z: 0.20069166, w: 0.9796545}
-    - {x: 0, y: 0, z: 0.16199066, w: 0.9867923}
-    - {x: 0, y: 0, z: -0.1336152, w: 0.9910333}
+    - {x: 0, y: 0, z: 0.8520438, w: 0.5234706}
+    - {x: 0, y: 0, z: 0.24295296, w: 0.9700381}
+    - {x: 0, y: 0, z: -0.0033446327, w: 0.99999446}
+    - {x: 0, y: 0, z: 0.002899746, w: 0.9999958}
   m_Iterations: 10
   m_Tolerance: 0.0223
 --- !u!1 &854485188491304311
@@ -606,6 +606,18 @@ MonoBehaviour:
   movementSpeed: 0
   player: {fileID: 0}
   rb: {fileID: 0}
+  animator: {fileID: 0}
+  ikManager: {fileID: 0}
+  bodyTransform: {fileID: 0}
+  isAttacking: 0
+  triggers: []
+  facingLeft: 0
+  attackRange: 2.5
+  globalCooldown: 1.2
+  nextAllowedTime: 0
+  headCollider: {fileID: 0}
+  clawCollider: {fileID: 0}
+  tailCollider: {fileID: 0}
 --- !u!1 &3032816636188619806
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3188953287864916518}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.10225037, w: 0.9947587}
+  m_LocalRotation: {x: 0, y: 0, z: 0.002899746, w: 0.9999958}
   m_LocalPosition: {x: 0.0606, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -763,10 +775,10 @@ MonoBehaviour:
     - {x: 0, y: 0, z: -0.011421819, w: 0.9999348}
     - {x: -0, y: -0, z: 0.8324992, w: 0.55402637}
     m_StoredLocalRotations:
-    - {x: 0, y: 0, z: -0.26607016, w: 0.96395373}
+    - {x: 0, y: 0, z: -0.26607004, w: 0.96395373}
     - {x: 0, y: 0, z: -0.60748357, w: 0.79433227}
-    - {x: 0, y: 0, z: 0.5389871, w: 0.84231406}
-    - {x: 0, y: 0, z: 0.34568498, w: 0.9383507}
+    - {x: 0, y: 0, z: 0.53898674, w: 0.84231424}
+    - {x: 0, y: 0, z: 0.34568515, w: 0.9383506}
   m_Iterations: 10
   m_Tolerance: 0.0223
 --- !u!1 &3835618044418041951
@@ -1047,7 +1059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822868136107375143}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.21048915, w: 0.9775962}
+  m_LocalRotation: {x: 0, y: 0, z: 0.24295296, w: 0.9700381}
   m_LocalPosition: {x: 0.19976333, y: -0.0015178919, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1079,7 +1091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5943559283991462919}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.12410181, w: 0.9922695}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0033446327, w: 0.99999446}
   m_LocalPosition: {x: 0.4821365, y: -0.0017333049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1280,7 +1292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6166920679429192842}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.34568498, w: 0.9383507}
+  m_LocalRotation: {x: 0, y: 0, z: 0.34568515, w: 0.9383506}
   m_LocalPosition: {x: 0.052, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1311,7 +1323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6379355346899580528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.5389871, w: 0.84231406}
+  m_LocalRotation: {x: 0, y: 0, z: 0.53898674, w: 0.84231424}
   m_LocalPosition: {x: 0.25069153, y: 0.00019182265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1499,14 +1511,19 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints:
+    _value: 1000
+  entityMaxHelath:
+    _value: 1000
   droppedXp: 0
   gold: 0
   AttackDamage: 10
+  AttackTypes: []
   MovementSpeed: 5
   isFacedRight: 0
+  isDead: 0
   isEnemy: 1
+  isBoss: 0
   deathAnimationLength: 1
   detectedTargets: []
   attackRange: 0
@@ -1515,6 +1532,9 @@ MonoBehaviour:
   deathColor: {r: 0, g: 0, b: 0, a: 0}
   healthBar: {fileID: 0}
   isAlerted: 0
+  entityType: 0
+  healFX: {fileID: 0}
+  healFXParent: {fileID: 0}
   incomingDamagePercent: 1
 --- !u!50 &31795436171455379
 Rigidbody2D:
@@ -1656,6 +1676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aac384432978864a9e18181b2075c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barriers: []
+  abominationStatus: {fileID: 0}
 --- !u!1 &7732252916348038665
 GameObject:
   m_ObjectHideFlags: 0

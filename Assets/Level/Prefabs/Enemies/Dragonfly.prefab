@@ -120,8 +120,10 @@ MonoBehaviour:
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
-  entityHealthPoints: 100
-  entityMaxHelath: 100
+  entityHealthPoints:
+    _value: 50
+  entityMaxHelath:
+    _value: 50
   droppedXp: 0
   gold: 0
   AttackDamage: 1
@@ -231,6 +233,8 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 96d7d56d5b97ff34c9f60694e81e7c7e, type: 3}
   - {fileID: 8300000, guid: ce7bc4fb8ab000f4cb5108bac9642dc5, type: 3}
+  minSoundDistance: 1
+  maxSoundDistance: 15
 --- !u!1 &394498498997932825
 GameObject:
   m_ObjectHideFlags: 0
