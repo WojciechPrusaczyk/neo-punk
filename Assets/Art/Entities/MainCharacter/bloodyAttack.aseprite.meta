@@ -1,0 +1,1063 @@
+fileFormatVersion: 2
+guid: c7fb89367e7e52b42a95a4191f043ff0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: bloodyAttack_Frame_0
+    originalName: 
+    pivot: {x: 1.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 467
+      y: 391
+      width: 40
+      height: 60
+    spriteID: ff64b86bec9ed8b4dac2b639221fbe2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 467, y: 391}
+  - name: bloodyAttack_Frame_1
+    originalName: 
+    pivot: {x: 1.5609756, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 392
+      width: 41
+      height: 59
+    spriteID: 421cfa14e013b2b49996c5ad45507e43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 392}
+  - name: bloodyAttack_Frame_2
+    originalName: 
+    pivot: {x: 1.5609756, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 467
+      y: 324
+      width: 41
+      height: 59
+    spriteID: be30551063128824a902d5b2d6e78d1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 467, y: 324}
+  - name: bloodyAttack_Frame_3
+    originalName: 
+    pivot: {x: 0.65957445, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 296
+      width: 94
+      height: 59
+    spriteID: 7a4a793291b0d9e4badd8fbee7a61dfb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 296}
+  - name: bloodyAttack_Frame_4
+    originalName: 
+    pivot: {x: 0.7126437, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 202
+      width: 87
+      height: 90
+    spriteID: 6a0b006b0ce84784ebe60818b5eb5cc6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 202}
+  - name: bloodyAttack_Frame_5
+    originalName: 
+    pivot: {x: 0.7078652, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 89
+      height: 92
+    spriteID: ec8363fc1ac5b564b967efb6460c5c6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: bloodyAttack_Frame_6
+    originalName: 
+    pivot: {x: 0.9, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 300
+      width: 70
+      height: 89
+    spriteID: f869ae40d273f0a418c27585db2016dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 300}
+  - name: bloodyAttack_Frame_7
+    originalName: 
+    pivot: {x: 1.0862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 70
+      width: 58
+      height: 89
+    spriteID: a1ffd6ce8b2b56548b73ba3e04bb9c7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 207, y: 70}
+  - name: bloodyAttack_Frame_8
+    originalName: 
+    pivot: {x: 1.1454545, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 264
+      width: 55
+      height: 90
+    spriteID: 35d29dbe3df757f459204294ece21984
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 207, y: 264}
+  - name: bloodyAttack_Frame_9
+    originalName: 
+    pivot: {x: 1.1666666, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 362
+      width: 54
+      height: 91
+    spriteID: 0539ae3360539c549a01a5854aa08e6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 207, y: 362}
+  - name: bloodyAttack_Frame_10
+    originalName: 
+    pivot: {x: 1.0877193, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 167
+      width: 57
+      height: 89
+    spriteID: eeeda75f761ec2f47bd4c5cfe27d7118
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 207, y: 167}
+  - name: bloodyAttack_Frame_11
+    originalName: 
+    pivot: {x: 0.6741573, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 89
+      height: 90
+    spriteID: 1c0769538e35e6a45866b9064e493eea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: bloodyAttack_Frame_12
+    originalName: 
+    pivot: {x: 0.59183675, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 4
+      width: 98
+      height: 71
+    spriteID: a728cfb0947d91145a39b9245743bb6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 4}
+  - name: bloodyAttack_Frame_13
+    originalName: 
+    pivot: {x: 0.61290324, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 207
+      y: 4
+      width: 93
+      height: 58
+    spriteID: 3932f90f110f5764183cfb2a3b7202e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 207, y: 4}
+  - name: bloodyAttack_Frame_14
+    originalName: 
+    pivot: {x: 0.60638297, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 430
+      width: 94
+      height: 58
+    spriteID: c87a73b4e62c710459e7988c42e54e9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 430}
+  - name: bloodyAttack_Frame_15
+    originalName: 
+    pivot: {x: 0.60638297, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 363
+      width: 94
+      height: 59
+    spriteID: 4a1aebb0ddb3781468685b443c18e401
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 363}
+  - name: bloodyAttack_Frame_16
+    originalName: 
+    pivot: {x: 0.67857146, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 66
+      width: 84
+      height: 58
+    spriteID: 3afb3b0ad2075844384f07240748d5d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 66}
+  - name: bloodyAttack_Frame_17
+    originalName: 
+    pivot: {x: 0.8142857, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 278
+      width: 70
+      height: 58
+    spriteID: c36586d763b86cb4f957596f39cf315b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 278}
+  - name: bloodyAttack_Frame_18
+    originalName: 
+    pivot: {x: 0.8142857, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 344
+      width: 70
+      height: 58
+    spriteID: 8c559363f5bef764aa405bdd74dd94c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 344}
+  - name: bloodyAttack_Frame_19
+    originalName: 
+    pivot: {x: 0.826087, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 69
+      width: 69
+      height: 57
+    spriteID: 3f7d4132e2bb7154e84b73ebefced670
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 69}
+  - name: bloodyAttack_Frame_20
+    originalName: 
+    pivot: {x: 0.8169014, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 410
+      width: 71
+      height: 57
+    spriteID: dc022fb2f84e2fe40aee04c9583bb59f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 410}
+  - name: bloodyAttack_Frame_21
+    originalName: 
+    pivot: {x: 0.8169014, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 4
+      width: 71
+      height: 57
+    spriteID: d7396735f94e07b4fbba0b9536b056a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 4}
+  - name: bloodyAttack_Frame_22
+    originalName: 
+    pivot: {x: 0.82857144, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 134
+      width: 70
+      height: 53
+    spriteID: 955c923a3be28884ba6e74712be6f9b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 134}
+  - name: bloodyAttack_Frame_23
+    originalName: 
+    pivot: {x: 0.82857144, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 195
+      width: 70
+      height: 53
+    spriteID: 13cf63c29e3b1b84dad60cd6bf80bb0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 195}
+  - name: bloodyAttack_Frame_24
+    originalName: 
+    pivot: {x: 0.61702126, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 4
+      width: 94
+      height: 54
+    spriteID: 76760120711d581499c4ad044ef88d06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 4}
+  - name: bloodyAttack_Frame_25
+    originalName: 
+    pivot: {x: 0.6666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 155
+      width: 87
+      height: 65
+    spriteID: 7651c32ed09045347b194ca560b37633
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 155}
+  - name: bloodyAttack_Frame_26
+    originalName: 
+    pivot: {x: 0.6627907, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 397
+      width: 86
+      height: 67
+    spriteID: 60da21c022ba3d640b7b1cb56269fa84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 397}
+  - name: bloodyAttack_Frame_27
+    originalName: 
+    pivot: {x: 0.8, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 205
+      width: 70
+      height: 65
+    spriteID: a4c56f57f8f4a1747a1bf9709f76abec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 205}
+  - name: bloodyAttack_Frame_28
+    originalName: 
+    pivot: {x: 0.7837838, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 132
+      width: 74
+      height: 65
+    spriteID: 79cac1b07d7ad614fb08943a59400290
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 132}
+  - name: bloodyAttack_Frame_29
+    originalName: 
+    pivot: {x: 0.6210527, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 83
+      width: 95
+      height: 64
+    spriteID: 6cab5c92dd41fc741bc33c549fb058fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 83}
+  - name: bloodyAttack_Frame_30
+    originalName: 
+    pivot: {x: 0.62765956, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 228
+      width: 94
+      height: 60
+    spriteID: eece3491fcf6a404db56fc2f77f6122b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 228}
+  - name: bloodyAttack_Frame_31
+    originalName: 
+    pivot: {x: 1.0357144, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 256
+      width: 56
+      height: 60
+    spriteID: ea67a2b958374f84eb60c465b46824d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 256}
+  - name: bloodyAttack_Frame_32
+    originalName: 
+    pivot: {x: 1.1836735, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 324
+      width: 49
+      height: 60
+    spriteID: e6ae3f289a8aabb4dad015a6aa18a2a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 324}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -557360429
+    name: bloodyAttack
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: bloodyAttack_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 40
+        height: 60
+      spriteId: ff64b86bec9ed8b4dac2b639221fbe2d
+    - name: bloodyAttack_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 41
+        height: 59
+      spriteId: 421cfa14e013b2b49996c5ad45507e43
+    - name: bloodyAttack_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 41
+        height: 59
+      spriteId: be30551063128824a902d5b2d6e78d1c
+    - name: bloodyAttack_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 2
+        y: 0
+        width: 94
+        height: 59
+      spriteId: 7a4a793291b0d9e4badd8fbee7a61dfb
+    - name: bloodyAttack_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 2
+        y: 0
+        width: 87
+        height: 90
+      spriteId: 6a0b006b0ce84784ebe60818b5eb5cc6
+    - name: bloodyAttack_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 0
+        width: 89
+        height: 92
+      spriteId: ec8363fc1ac5b564b967efb6460c5c6c
+    - name: bloodyAttack_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 1
+        y: 0
+        width: 70
+        height: 89
+      spriteId: f869ae40d273f0a418c27585db2016dc
+    - name: bloodyAttack_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 1
+        y: 0
+        width: 58
+        height: 89
+      spriteId: a1ffd6ce8b2b56548b73ba3e04bb9c7b
+    - name: bloodyAttack_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 1
+        y: 0
+        width: 55
+        height: 90
+      spriteId: 35d29dbe3df757f459204294ece21984
+    - name: bloodyAttack_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 1
+        y: 0
+        width: 54
+        height: 91
+      spriteId: 0539ae3360539c549a01a5854aa08e6c
+    - name: bloodyAttack_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 2
+        y: 0
+        width: 57
+        height: 89
+      spriteId: eeeda75f761ec2f47bd4c5cfe27d7118
+    - name: bloodyAttack_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 4
+        y: 0
+        width: 89
+        height: 90
+      spriteId: 1c0769538e35e6a45866b9064e493eea
+    - name: bloodyAttack_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 6
+        y: 0
+        width: 98
+        height: 71
+      spriteId: a728cfb0947d91145a39b9245743bb6e
+    - name: bloodyAttack_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 7
+        y: 0
+        width: 93
+        height: 58
+      spriteId: 3932f90f110f5764183cfb2a3b7202e9
+    - name: bloodyAttack_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 7
+        y: 0
+        width: 94
+        height: 58
+      spriteId: c87a73b4e62c710459e7988c42e54e9c
+    - name: bloodyAttack_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 7
+        y: 0
+        width: 94
+        height: 59
+      spriteId: 4a1aebb0ddb3781468685b443c18e401
+    - name: bloodyAttack_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 7
+        y: 0
+        width: 84
+        height: 58
+      spriteId: 3afb3b0ad2075844384f07240748d5d5
+    - name: bloodyAttack_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 7
+        y: 0
+        width: 70
+        height: 58
+      spriteId: c36586d763b86cb4f957596f39cf315b
+    - name: bloodyAttack_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 7
+        y: 0
+        width: 70
+        height: 58
+      spriteId: 8c559363f5bef764aa405bdd74dd94c9
+    - name: bloodyAttack_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 7
+        y: 0
+        width: 69
+        height: 57
+      spriteId: 3f7d4132e2bb7154e84b73ebefced670
+    - name: bloodyAttack_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 6
+        y: 0
+        width: 71
+        height: 57
+      spriteId: dc022fb2f84e2fe40aee04c9583bb59f
+    - name: bloodyAttack_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 6
+        y: 0
+        width: 71
+        height: 57
+      spriteId: d7396735f94e07b4fbba0b9536b056a3
+    - name: bloodyAttack_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 6
+        y: 0
+        width: 70
+        height: 53
+      spriteId: 955c923a3be28884ba6e74712be6f9b7
+    - name: bloodyAttack_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 6
+        y: 0
+        width: 70
+        height: 53
+      spriteId: 13cf63c29e3b1b84dad60cd6bf80bb0e
+    - name: bloodyAttack_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 6
+        y: 0
+        width: 94
+        height: 54
+      spriteId: 76760120711d581499c4ad044ef88d06
+    - name: bloodyAttack_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 6
+        y: 0
+        width: 87
+        height: 65
+      spriteId: 7651c32ed09045347b194ca560b37633
+    - name: bloodyAttack_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 7
+        y: 0
+        width: 86
+        height: 67
+      spriteId: 60da21c022ba3d640b7b1cb56269fa84
+    - name: bloodyAttack_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 8
+        y: 0
+        width: 70
+        height: 65
+      spriteId: a4c56f57f8f4a1747a1bf9709f76abec
+    - name: bloodyAttack_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 6
+        y: 0
+        width: 74
+        height: 65
+      spriteId: 79cac1b07d7ad614fb08943a59400290
+    - name: bloodyAttack_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 5
+        y: 0
+        width: 95
+        height: 64
+      spriteId: 6cab5c92dd41fc741bc33c549fb058fc
+    - name: bloodyAttack_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 5
+        y: 0
+        width: 94
+        height: 60
+      spriteId: eece3491fcf6a404db56fc2f77f6122b
+    - name: bloodyAttack_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 6
+        y: 0
+        width: 56
+        height: 60
+      spriteId: ea67a2b958374f84eb60c465b46824d0
+    - name: bloodyAttack_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 6
+        y: 0
+        width: 49
+        height: 60
+      spriteId: e6ae3f289a8aabb4dad015a6aa18a2a1
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 96}

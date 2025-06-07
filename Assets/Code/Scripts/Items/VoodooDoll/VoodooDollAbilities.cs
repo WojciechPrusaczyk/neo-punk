@@ -9,6 +9,7 @@ public class VoodooDollAbilities : ItemData.IItemAbility
     private float effectDuration;
     private int needleStacks;
     private EntityStatus playerStatus;
+    private Player player;
     private PlayerInventoryInterface playerInventory;
     private float lastNoticedPlayerHp;
     public Sprite itemIconOneStack;
@@ -31,10 +32,18 @@ public class VoodooDollAbilities : ItemData.IItemAbility
         if (playerStatus == null)
         {
             playerStatus = GameObject.FindWithTag("Player").GetComponent<EntityStatus>();
+            player = playerStatus.gameObject.GetComponent<Player>();
+        }
+
+        if (player == null)
+        {
+            player = playerStatus.gameObject.GetComponent<Player>();
         }
 
         float baseDamage = playerStatus.GetBaseAttackDamage();
         playerStatus.SetAttackDamageCount(baseDamage * (1.0f + damageIncreasePercentage));
+
+        player.ChangeElementalType(5);
 
         CoroutineRunner.Instance.StartCoroutine(ResetDamageAfterDuration(playerStatus, baseDamage));
     }
@@ -42,6 +51,7 @@ public class VoodooDollAbilities : ItemData.IItemAbility
     private IEnumerator ResetDamageAfterDuration(EntityStatus playerStatus, float baseDamage)
     {
         yield return new WaitForSeconds(effectDuration);
+        player.ChangeElementalType(0);
         playerStatus.SetAttackDamageCount(baseDamage);
     }
 
