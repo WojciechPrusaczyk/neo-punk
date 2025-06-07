@@ -372,13 +372,13 @@ public class Player : MonoBehaviour
             if (isGrounded || onStairs)
             {
                 Jump();
-                Debug.Log("jump");
+                //Debug.Log("jump");
 
             }
             else if (isWallSliding)
             {
                 WallJump();
-                Debug.Log("wall jump");
+                //Debug.Log("wall jump");
             }
         }
 

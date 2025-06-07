@@ -16,7 +16,6 @@ public class WorldAIManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -35,7 +34,7 @@ public class WorldAIManager : MonoBehaviour
         InitializeAIForScene(scene);
     }
 
-    private void InitializeAIForScene(Scene scene)
+    public void InitializeAIForScene(Scene scene)
     {
         RecalculateLists(true, true);
         RespawnAllEnemies();
@@ -97,8 +96,4 @@ public class WorldAIManager : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
 }

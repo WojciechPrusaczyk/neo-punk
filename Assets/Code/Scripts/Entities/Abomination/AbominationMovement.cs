@@ -211,13 +211,5 @@ public class AbominationMovement : MonoBehaviour
         {
             mainUi.GetComponent<MainUserInterfaceController>().HideBossBar();
         }
-        MusicManager.instance.PlaySong(MusicManager.instance.Level1Track, Enums.SoundType.Music);
-        EventFlagsSystem _EventsFlagsSystem = EventFlagsSystem.instance;
-        
-        if (!_EventsFlagsSystem.IsEventDone("boss1Defeat"))
-        {
-            _EventsFlagsSystem.FinishEvent("boss1Defeat");
-        }
-
     }
 }

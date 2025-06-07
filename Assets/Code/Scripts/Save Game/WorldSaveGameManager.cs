@@ -116,7 +116,7 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (player == null)
         {
-            Debug.LogError("Nie znaleziono gracza w bie¿¹cej scenie '" + SceneManager.GetActiveScene().name + "', nie mo¿na zapisaæ gry!");
+            Debug.LogError("Nie znaleziono gracza w bieï¿½ï¿½cej scenie '" + SceneManager.GetActiveScene().name + "', nie moï¿½na zapisaï¿½ gry!");
             return;
         }
 
@@ -194,7 +194,7 @@ public class WorldSaveGameManager : MonoBehaviour
         player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
-        Debug.Log($"Zapisano grê do slota: {currentCharacterSlotBeingUsed} (Plik: {saveFileName}) w scenie {currentCharacterData.sceneName}");
+        Debug.Log($"Zapisano grï¿½ do slota: {currentCharacterSlotBeingUsed} (Plik: {saveFileName}) w scenie {currentCharacterData.sceneName}");
     }
 
     public bool CheckIfSaveFileExists(int id)
@@ -234,7 +234,7 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (currentCharacterData == null)
         {
-            Debug.LogError($"Nie mo¿na za³adowaæ pliku: {saveFileName}.");
+            Debug.LogError($"Nie moï¿½na zaï¿½adowaï¿½ pliku: {saveFileName}.");
             yield break;
         }
 
@@ -255,7 +255,7 @@ public class WorldSaveGameManager : MonoBehaviour
         player = FindFirstObjectByType<Player>();
         if (player == null)
         {
-            Debug.LogError("Brak gracza w za³adowanej scenie '" + sceneToLoad + "'!");
+            Debug.LogError("Brak gracza w zaï¿½adowanej scenie '" + sceneToLoad + "'!");
             yield break;
         }
 
@@ -277,7 +277,9 @@ public class WorldSaveGameManager : MonoBehaviour
             MusicManager.instance.RestartSong();
 
         if (WorldAIManager.instance != null)
-            WorldAIManager.instance.RecalculateLists(true, true);
+        {
+            WorldAIManager.instance.InitializeAIForScene(SceneManager.GetActiveScene());
+        }
 
         Debug.Log("Game loaded successfully.");
     }
@@ -346,7 +348,7 @@ public class WorldSaveGameManager : MonoBehaviour
             NewGame();
             return;
         }
-        Debug.Log("Nie ma wolnych slotów zapisu gry!");
+        Debug.Log("Nie ma wolnych slotï¿½w zapisu gry!");
     }
 
     public void AttemptToCreateNewSettingsFile()
@@ -413,7 +415,7 @@ public class WorldSaveGameManager : MonoBehaviour
         SettingsSaveData loadedSettings = saveFileDataWriter.LoadSettingsSaveFile();
         if (loadedSettings == null)
         {
-            Debug.LogError($"Nie mo¿na za³adowaæ pliku ustawieñ: {settingsFileName}. Creating new one.");
+            Debug.LogError($"Nie moï¿½na zaï¿½adowaï¿½ pliku ustawieï¿½: {settingsFileName}. Creating new one.");
             AttemptToCreateNewSettingsFile();
             return;
         }

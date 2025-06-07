@@ -307,6 +307,13 @@ public class EntityStatus : MonoBehaviour
         // lootTable.DropLoot();
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
+
+        
+        BossData bossData = gameObject.GetComponentInParent<BossData>();
+        if (bossData != null)
+        {
+            bossData.OnDeath();
+        }
     }
 
     public void PlayerDeathEvent()
