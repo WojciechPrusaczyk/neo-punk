@@ -25,11 +25,26 @@ public class AbominationMovement : MonoBehaviour
     public float attackRange    = 2.5f;   // metres
     public float globalCooldown = 1.2f;   // seconds
     public float nextAllowedTime = 0f;
+    
 
+    [Header("Attack colliders")]
     public Collider2D headCollider;
     public Collider2D clawCollider;
     public Collider2D tailCollider;
+    
+    [Header("Bite retreat")]
+    [SerializeField] private float biteRetreatDistance = 1.0f;
 
+    [SerializeField] private float biteRetreatTime = 0.20f;
+        
+    [Header("Test smooth turn")]
+    [SerializeField] private float turnDuration = 0.3f;
+    private Coroutine turnRoutine;
+    
+    [Header("Instant flip")]
+    [SerializeField] private float deadZone = 0.3f;
+   
+    [Header(" ")]
     private GameObject mainUi;
     private EntityStatus abominationStatus;
     
@@ -55,25 +70,24 @@ public class AbominationMovement : MonoBehaviour
             return;
 
         float dist = Vector2.Distance(transform.position, player.transform.position);
+        Debug.Log(dist);
         int index;
-        if (dist < 1f)
+
+        if (dist < 1.3f)
         {
-            index = 0;
+            StingAttack();
         }
-        else if (dist < 4f)
+        else if (dist < 3f)
         {
-            index = 1;
+            BiteAttack();
         }
         else
         {
-            index = 2;
+            ClawAttack();
         }
-        
 
-        StartCoroutine(PlayAnimation(triggers[index]));
-
-        // 4. reset global cooldown
-        nextAllowedTime = Time.time + globalCooldown;
+        float r = Random.Range(-.5f, .5f);
+        nextAllowedTime = Time.time + globalCooldown + r;
     }
 
     private void OnEnable()
@@ -102,14 +116,52 @@ public class AbominationMovement : MonoBehaviour
             if (Vector2.Distance(player.transform.position, transform.position) > attackRange ||
                 Vector2.Distance(player.transform.position, transform.position) < 5)
             {
-                MoveHorizontallyToPlayer();
                 if (!isAttacking)
                 {
+                    MoveHorizontallyToPlayer();
                     CheckForFlip();
-                }            
+                }
             }
         }
     }
+
+    public void StingAttack()
+    {
+        StartCoroutine(PlayAnimation(triggers[0]));
+    }
+
+    private IEnumerator BiteSequence()
+    {
+        isAttacking = true;
+        
+        Vector2 startPos = rb.position;
+        Vector2 awayDir = new Vector2(rb.position.x - player.transform.position.x, 0f).normalized;
+        Vector2 endPos   = startPos + awayDir * biteRetreatDistance;
+
+        float t = 0f;
+        while (t < biteRetreatTime)
+        {
+            t += Time.deltaTime;
+            rb.MovePosition(Vector2.Lerp(startPos, endPos, t / biteRetreatTime));
+            yield return null;
+        }
+        
+        StartCoroutine(PlayAnimation(triggers[1]));
+
+    }
+    
+    public void BiteAttack()
+    {
+        CheckForFlip();
+        StartCoroutine(BiteSequence());
+    }
+    
+    public void ClawAttack()
+    {
+        StartCoroutine(PlayAnimation(triggers[2]));
+    }
+
+    
 
     public void ActivateBoss(bool b)
     {
@@ -131,11 +183,7 @@ public class AbominationMovement : MonoBehaviour
     
     void MoveHorizontallyToPlayer()
     {
-        if (isAttacking)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            return;
-        }
+        rb.velocity = new Vector2(0, rb.velocity.y);
 
         Vector2 pos = rb.position;
         pos.x = Mathf.MoveTowards(pos.x,
@@ -184,12 +232,14 @@ public class AbominationMovement : MonoBehaviour
     public void CheckForFlip()
     {
         if (!player) return;
+
+        float dx = player.transform.position.x - transform.position.x;
+        if (Mathf.Abs(dx) <= deadZone)
+            return;
         
-        
-        bool wantLeft = player.transform.position.x > transform.position.x;
+        bool wantLeft = dx > 0f;
         if (wantLeft != facingLeft)
             Flip(wantLeft);
-        
     }
     
     void Flip(bool faceLeft)
@@ -197,12 +247,33 @@ public class AbominationMovement : MonoBehaviour
         facingLeft = faceLeft;
         ikManager.enabled = false;
 
-        // 1️⃣  Odbicie sprite’ów i kości
         Vector3 s = bodyTransform.localScale;
         s.x = Mathf.Abs(s.x) * (faceLeft ? -1 : 1);
         bodyTransform.localScale = s;
         ikManager.enabled = true;
 
+    }
+    
+    IEnumerator SmoothFlip(bool faceLeft)
+    {
+        facingLeft = faceLeft;
+        ikManager.enabled = false;
+
+        Vector3 start = bodyTransform.localScale;
+        Vector3 end   = new Vector3(Mathf.Abs(start.x) * (faceLeft ? -1 : 1),
+            start.y, start.z);
+
+        float t = 0f;
+        while (t < turnDuration)
+        {
+            t += Time.deltaTime;
+            bodyTransform.localScale = Vector3.Lerp(start, end, t / turnDuration);
+            yield return null;
+        }
+
+        bodyTransform.localScale = end;
+        ikManager.enabled = true;
+        turnRoutine = null;
     }
 
     private void OnDeath()

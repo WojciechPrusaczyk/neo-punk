@@ -80,8 +80,25 @@ public class WorldSaveGameManager : MonoBehaviour
         _pendingSaveAfterSceneLoad = true;
         _targetSceneForSave = "InitialLevel";
 
-        SceneManager.LoadScene(_targetSceneForSave);
+        StartCoroutine(NewGameCoroutine());
     }
+
+    private IEnumerator NewGameCoroutine()
+    {
+        
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("InitialLevel");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        yield return new WaitForEndOfFrame();
+        
+        if (WorldAIManager.instance != null)
+        {
+            WorldAIManager.instance.InitializeAIForScene(SceneManager.GetActiveScene());
+        }
+    }
+
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
