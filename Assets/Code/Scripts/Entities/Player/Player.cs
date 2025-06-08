@@ -79,6 +79,8 @@ public class Player : MonoBehaviour
     private bool wasDamagedRecently = false;
     private MainUserInterfaceController mainUserInterfaceController;
     private PlayerInventoryInterface playerInventoryInterface;
+    private HitboxBehaviour footHitbox;
+    private HitboxBehaviour swordHitboxComponent;
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -87,6 +89,7 @@ public class Player : MonoBehaviour
     public Vector2 stairMovementMultiplier = Vector2.one;
     public bool canJump = true;
     public bool isJumping = false;
+    public bool isJumpAttacking = false;
     
     [Header("Wall jump stuff")]
     public LayerMask wallLayer;
@@ -116,7 +119,9 @@ public class Player : MonoBehaviour
         boxCollider = GetComponent<CapsuleCollider2D>();
         playerStatus = GetComponent<EntityStatus>();
         swordHitbox = transform.Find("SwordHitbox").gameObject;
+        swordHitboxComponent = transform.Find("SwordHitbox").GetComponent<HitboxBehaviour>();
         animator = GetComponentInChildren<Animator>();
+        footHitbox = transform.Find("FloorDetector").gameObject.GetComponent<HitboxBehaviour>();
 
         var mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
 
@@ -238,7 +243,7 @@ public class Player : MonoBehaviour
 
         Debug.DrawRay(groundOrigin, Vector2.down * groundCheckDistance, Color.green);
         
-        if (playerBody.velocity.y <= 0.0f)
+        if (playerBody.velocity.y <= 0.1f)
         {
             isJumping = false;
         }
@@ -246,7 +251,24 @@ public class Player : MonoBehaviour
         {
             canJump = true;
         }
-        
+
+        /*
+         * Logika ataku z wyskoku
+         */
+        // Jeśli można użyć ataku z wyskoku
+        if (!isGrounded && UsedElemental == Enums.ElementalType.Storm)
+        {
+            // Jeśli gracz go ztriggeruje
+            if ((Input.GetKeyDown(InputManager.AttackKey) || Input.GetKeyDown(InputManager.PadButtonAttack)) && !isJumpAttacking)
+            {
+                isJumpAttacking = true;
+            }
+        }
+        else isJumpAttacking = false;
+
+        footHitbox.enabled = isJumpAttacking;
+        swordHitboxComponent.enabled = !isJumpAttacking;
+
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
          */
@@ -274,6 +296,7 @@ public class Player : MonoBehaviour
         // animator.SetInteger("PlayerAttackState", attackState);
         animator.SetBool("IsPlayerAttacking", isAttacking);
         animator.SetBool("IsOnStairs", onStairs);
+        animator.SetBool("IsJumpAttacking", isJumpAttacking);
         // animator.SetBool("IsGrounded", isGrounded);
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
@@ -407,7 +430,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(InputManager.AttackKey) || Input.GetKeyUp(InputManager.PadButtonAttack))
+        if ((Input.GetKeyUp(InputManager.AttackKey) || Input.GetKeyUp(InputManager.PadButtonAttack)) && !isJumpAttacking)
         {
             if (isChargingAttack)
             {
@@ -571,7 +594,7 @@ public class Player : MonoBehaviour
             return;
         if (UserInterfaceController.instance.isUIMenuActive)
             return;
-        
+
         if (canJump)
         {
             canJump = false;
@@ -581,7 +604,7 @@ public class Player : MonoBehaviour
                 onStairs = false;
             }
             playerBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            
+
             if (WorldSoundFXManager.instance == null) return;
             float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX, randomPitch);
@@ -969,18 +992,16 @@ public class PlayerEditor : Editor
     {
         serializedObject.Update();
 
-        // Sprawdzenie, czy edytowany obiekt jest jednym obiektem
+        // Czy edytowany obiekt jest jednym obiektem
         if (serializedObject.isEditingMultipleObjects)
         {
             EditorGUILayout.HelpBox("Multi-object editing not supported", MessageType.Error);
             return;
         }
 
-        // Wyświetlanie listy rozwijanej z numerami od 0 do 5
         selectedElementalTypeProp.intValue = EditorGUILayout.Popup("Choose elemental type",
             selectedElementalTypeProp.intValue, new string[] { "0", "1", "2", "3", "4", "5" });
 
-        // Przycisk do zmiany rodzaju elementu
         if (GUILayout.Button("Change elemental"))
         {
             Player script = (Player)target;
