@@ -479,7 +479,7 @@ MonoBehaviour:
   UsedElementalName: Normal
   UsedElemental: 0
   usedElementalSequences: 4
-  jumpForce: 8
+  jumpForce: 80
   animator: {fileID: 0}
   attackState: 0
   isAttacking: 0
@@ -512,16 +512,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 82944
   wallSlideSpeed: 5
-  wallJumpHorizontalForce: 30
-  wallJumpVerticalForce: 60
+  wallJumpHorizontalForce: 15
+  wallJumpVerticalForce: 30
   wallCheckDistance: 1
   groundCheckDistance: 0.1
   wallCheckOffset: {x: 0, y: 0.1}
   isTouchingWall: 0
   isWallSliding: 0
-  isWallJumping: 0
-  wallJumpLockTime: 0.2
   wallDirection: 0
+  wallJumpLockTime: 0.2
+  minWallUnstickSpeed: 0.1
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0

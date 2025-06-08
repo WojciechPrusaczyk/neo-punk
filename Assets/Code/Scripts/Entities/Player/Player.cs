@@ -99,14 +99,14 @@ public class Player : MonoBehaviour
     
     public Vector2 wallCheckOffset = new Vector2(0f, 0.1f);
 
-// ──────────────── LOCAL WALL STATE ────────────────
 
     public bool isTouchingWall = false;
     public bool isWallSliding = false;
-    public bool isWallJumping = false;
-    public float wallJumpLockTime = 0.2f;
-    public int wallDirection = 0; // +1 if wall is on the right, –1 if wall is on the left
-
+    public int wallDirection = 0;
+    private bool wallJumpLock;
+    [SerializeField] private float wallJumpLockTime;
+    [SerializeField] private float minWallUnstickSpeed;
+    
     private void Awake()
     {
         // pobieranie rigidbody
@@ -300,33 +300,22 @@ public class Player : MonoBehaviour
         
         DetectStairs();
         
-        if (!isWallJumping)
+        if (onStairs && !isJumping && !wallJumpLock)
         {
-            if (onStairs && !isJumping)
-            {
-                playerBody.velocity = new Vector2(
-                    -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
-                    -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y
-                );
-            }
-            else if (!onStairs)
-            {
-                playerBody.velocity = new Vector2(
-                    horizontalInput * playerStatus.GetMovementSpeed(),
-                    playerBody.velocity.y
-                );
-            }
-
-            if (isAttacking && playerStatus.detectedTargets.Count <= 0)
-            {
-                playerBody.velocity = new Vector2(
-                    horizontalInput * playerStatus.GetMovementSpeed() * 0.2f,
-                    playerBody.velocity.y
-                );
-            }
+            playerBody.velocity = new Vector2(
+                -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
+                -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y
+            );
+        }
+        else if (!onStairs && !wallJumpLock)
+        {
+            playerBody.velocity = new Vector2(
+                horizontalInput * playerStatus.GetMovementSpeed(),
+                playerBody.velocity.y
+            );
         }
 
-        if (isAttacking && playerStatus.detectedTargets.Count <= 0)
+        if (isAttacking && playerStatus.detectedTargets.Count <= 0 && !wallJumpLock)
         {
             playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.2f, playerBody.velocity.y);
         }
@@ -358,7 +347,7 @@ public class Player : MonoBehaviour
          */
         CheckForWall();
 
-        if (!isGrounded && isTouchingWall && Mathf.Approximately(Input.GetAxisRaw("Horizontal"), wallDirection))
+        if (!wallJumpLock && !isGrounded && isTouchingWall && playerBody.velocity.y < 0f)
         {
             isWallSliding = true;
             playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
@@ -366,22 +355,20 @@ public class Player : MonoBehaviour
         else
         {
             isWallSliding = false;
-            
         }
 
-        if ((Input.GetKeyDown(InputManager.JumpKey) || Input.GetKeyDown(InputManager.PadButtonJump)) &&
-            !isAttacking && !isBlocking)
+        bool jumpPressed = Input.GetKeyDown(InputManager.JumpKey) ||
+                           Input.GetKeyDown(InputManager.PadButtonJump);
+
+        if (jumpPressed && !isAttacking && !isBlocking)
         {
-            if (isGrounded || onStairs)
+            if ((isGrounded || onStairs) && !isJumping)
             {
                 Jump();
-                //Debug.Log("jump");
-
             }
             else if (isWallSliding)
             {
                 WallJump();
-                //Debug.Log("wall jump");
             }
         }
 
@@ -555,36 +542,25 @@ public class Player : MonoBehaviour
     
     void DetectStairs()
     {
-        // Array to store contact points
         ContactPoint2D[] contacts = new ContactPoint2D[16];
-        // Get the number of contact points
         int contactCount = boxCollider.GetContacts(contacts);
 
-        // Reset stair detection
         onStairs = false;
         stairMovementMultiplier = Vector2.one;
 
-        // Iterate through all contact points
         for (int i = 0; i < contactCount; i++)
         {
-            // Check if the contact point is on the "Stairs" layer
             if (stairLayer == (stairLayer | (1 << contacts[i].collider.gameObject.layer)))
             {
-                // The player is on stairs
                 onStairs = true;
 
-                // Calculate the slope's perpendicular direction for movement
                 Vector2 slopeNormalPerp = Vector2.Perpendicular(contacts[i].normal).normalized;
                 stairMovementMultiplier = slopeNormalPerp;
-
-                // Calculate the angle of the slope (optional, for debugging or advanced behavior)
                 stairAngle = Vector2.Angle(contacts[i].normal, Vector2.up);
 
-                // Debug visualization
-                Debug.DrawRay(contacts[i].point, contacts[i].normal, Color.green); // Draw contact normal
-                Debug.DrawRay(contacts[i].point, slopeNormalPerp, Color.red); // Draw slope perpendicular direction
-
-                break; // Exit the loop once stairs are detected
+                Debug.DrawRay(contacts[i].point, contacts[i].normal, Color.green);
+                Debug.DrawRay(contacts[i].point, slopeNormalPerp, Color.red);
+                break;
             }
         }
     }
@@ -602,9 +578,9 @@ public class Player : MonoBehaviour
             isJumping = true;
             if (onStairs)
             {
-                onStairs = false; // Temporarily disable stairs effect
+                onStairs = false;
             }
-            playerBody.AddForce(Vector2.up * jumpForce * 10, ForceMode2D.Impulse);
+            playerBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             
             if (WorldSoundFXManager.instance == null) return;
             float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
@@ -955,26 +931,25 @@ public class Player : MonoBehaviour
     
     private void WallJump()
     {
+        if (wallJumpLock) return;
 
-        Vector2 jumpVec = new Vector2(
-            -wallDirection * wallJumpHorizontalForce,
-            wallJumpVerticalForce
-        );
-        playerBody.AddForce(jumpVec, ForceMode2D.Impulse);
+        StartCoroutine(WallJumpLockRoutine());
+        float velX = -wallDirection * wallJumpHorizontalForce;
+        float velY =  wallJumpVerticalForce;
 
-        isWallJumping = true;
-        StartCoroutine(EndWallJumpLock());
-        StartCoroutine(EndStairJumpLock());
+        playerBody.velocity = new Vector2(velX, velY);
     }
-    private IEnumerator EndWallJumpLock()
+    
+    private IEnumerator WallJumpLockRoutine()
     {
+        wallJumpLock = true;
+
         yield return new WaitForSeconds(wallJumpLockTime);
-        isWallJumping = false;
-    }
-    private IEnumerator EndStairJumpLock()
-    {
-        yield return new WaitForSeconds(.2f);
-        onStairs = false;
+
+        while (isTouchingWall && Mathf.Abs(playerBody.velocity.x) < minWallUnstickSpeed)
+            yield return null;
+
+        wallJumpLock = false;
     }
     
 }
