@@ -449,28 +449,36 @@ MonoBehaviour:
     icon: {fileID: -370212139, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
     elementalType: 0
+    elementalAttacksSequences: 4
   - name: Storm
     icon: {fileID: 153353745, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.7372549, g: 0.52156866, b: 0.9647059, a: 1}
     elementalType: 2
+    elementalAttacksSequences: 3
   - name: Aquatic
     icon: {fileID: -1207695560, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.4, g: 0.44313726, b: 1, a: 1}
     elementalType: 5
+    elementalAttacksSequences: 4
   - name: Fiery
     icon: {fileID: -1608555847, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.92941177, g: 0.21960784, b: 0.16078432, a: 1}
     elementalType: 3
+    elementalAttacksSequences: 4
   - name: Air
     icon: {fileID: -2077861660, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.8352941, g: 0.9490196, b: 0.9529412, a: 1}
     elementalType: 4
+    elementalAttacksSequences: 4
   - name: Bloody
     icon: {fileID: 1941431724, guid: 2491355e02ca6a44d971af47f7f71cff, type: 3}
     elementalColor: {r: 0.7137255, g: 0.007843138, b: 0, a: 1}
     elementalType: 1
+    elementalAttacksSequences: 4
   UsedElementalTypeId: 0
   UsedElementalName: Normal
+  UsedElemental: 0
+  usedElementalSequences: 4
   jumpForce: 8
   animator: {fileID: 0}
   attackState: 0
@@ -513,6 +521,7 @@ MonoBehaviour:
   isWallSliding: 0
   isWallJumping: 0
   wallJumpLockTime: 0.2
+  wallDirection: 0
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,12 +19,15 @@ public class Player : MonoBehaviour
         public Sprite icon;
         public Color elementalColor;
         public Enums.ElementalType elementalType;
+        public int elementalAttacksSequences;
     }
 
     [Header("Elemental Types")] public List<ElementalType> ElementalTypes = new List<ElementalType>();
 
     public int UsedElementalTypeId = 0;
     [ReadOnly] public String UsedElementalName = "Normal";
+    [ReadOnly] public Enums.ElementalType UsedElemental = Enums.ElementalType.Normal;
+    [ReadOnly] public int usedElementalSequences = 4;
 
     /*
      * Zmienne dostępne w edytorze
@@ -729,7 +732,19 @@ public class Player : MonoBehaviour
         else
             movePlayerOnAttack(-0.5f);
 
-        animator.Play("Attack_1");
+        switch (UsedElemental)
+        {
+            case Enums.ElementalType.Normal:
+                animator.Play("Attack_1");
+                break;
+            case Enums.ElementalType.Storm:
+                animator.Play("StormAttack_1");
+                break;
+            case Enums.ElementalType.Bloody:
+                animator.Play("BloodyAttack_1");
+                break;
+        }
+
 
         DealDamage(playerStatus.GetAttackDamageCount());
 
@@ -755,11 +770,23 @@ public class Player : MonoBehaviour
             else
                 movePlayerOnAttack(-0.5f);
 
-            if (attackState == 4)
+            if (attackState == usedElementalSequences)
             {
                 // Gracz zaczyna nową sekwencję ataku
                 attackState = 1;
-                animator.Play("Attack_1");
+
+                switch (UsedElemental)
+                {
+                    case Enums.ElementalType.Normal:
+                        animator.Play("Attack_1");
+                        break;
+                    case Enums.ElementalType.Storm:
+                        animator.Play("StormAttack_1");
+                        break;
+                    case Enums.ElementalType.Bloody:
+                        animator.Play("BloodyAttack_1");
+                        break;
+                }
 
                 DealDamage(playerStatus.GetAttackDamageCount());
 
@@ -776,7 +803,21 @@ public class Player : MonoBehaviour
                 else
                     movePlayerOnAttack(-0.5f);
 
-                if (attackState != 0) animator.Play("Attack_" + attackState.ToString());
+                if (attackState != 0)
+                {
+                    switch (UsedElemental)
+                    {
+                        case Enums.ElementalType.Normal:
+                            animator.Play("Attack_" + attackState.ToString());
+                            break;
+                        case Enums.ElementalType.Storm:
+                            animator.Play("StormAttack_" + attackState.ToString());
+                            break;
+                        case Enums.ElementalType.Bloody:
+                            animator.Play("BloodyAttack_" + attackState.ToString());
+                            break;
+                    }
+                }
 
                 if (WorldSoundFXManager.instance)
                     PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
@@ -820,6 +861,8 @@ public class Player : MonoBehaviour
             var selectedElemental = ElementalTypes[TypeId];
             UsedElementalTypeId = TypeId;
             UsedElementalName = selectedElemental.name;
+            UsedElemental = selectedElemental.elementalType;
+            usedElementalSequences = selectedElemental.elementalAttacksSequences;
         }
     }
 
