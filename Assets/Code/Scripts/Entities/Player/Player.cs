@@ -729,7 +729,7 @@ public class Player : MonoBehaviour
         isAttacking = true;
         attackState = 1;
 
-        bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
+        bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.6f;
 
         if (playerStatus.detectedTargets.Count <= 0)
             movePlayerOnAttack(3.0f);
@@ -749,7 +749,7 @@ public class Player : MonoBehaviour
                 animationName = isRunning ? "RunAttackBloody_1" : "BloodyAttack_1";
                 break;
         }
-        Debug.Log(animationName);
+
         animator.Play(animationName);
         DealDamage(playerStatus.GetAttackDamageCount());
         if (WorldSoundFXManager.instance)
@@ -764,7 +764,7 @@ public class Player : MonoBehaviour
 
         if (Time.time - lastAttackTime >= attackCooldown)
         {
-            bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
+            bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.6f;
             int maxCombo = isRunning ? 2 : usedElementalSequences;
 
             attackState++;
@@ -793,7 +793,6 @@ public class Player : MonoBehaviour
                     break;
             }
 
-            Debug.Log(animationName);
             animator.Play(animationName);
             DealDamage(playerStatus.GetAttackDamageCount());
             if (WorldSoundFXManager.instance)
