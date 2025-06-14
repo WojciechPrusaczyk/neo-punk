@@ -368,7 +368,7 @@ public class Player : MonoBehaviour
         bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
         if (isAttacking && playerStatus.detectedTargets.Count <= 0 && !wallJumpLock && !isRunning)
         {
-            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.2f, playerBody.velocity.y);
+            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.01f, playerBody.velocity.y);
         }
         // else
         // {
