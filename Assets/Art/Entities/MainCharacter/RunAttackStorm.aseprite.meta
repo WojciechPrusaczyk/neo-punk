@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: ec8482f71e2e9754a90b4fe04a7d262e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: RunAttackStorm_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 128
+      height: 98
+    spriteID: 755c5993684905046a297aff4dd6e0d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: RunAttackStorm_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 128
+      height: 98
+    spriteID: ddda203641c79934c9d6f584564cd14f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+  - name: RunAttackStorm_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 216
+      width: 128
+      height: 98
+    spriteID: 6ceb793d18e30be4989c7671c92f58c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 216}
+  - name: RunAttackStorm_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 322
+      width: 128
+      height: 98
+    spriteID: 62cafb97f65c7794fb2df0d1776dc77d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 322}
+  - name: RunAttackStorm_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 428
+      width: 128
+      height: 98
+    spriteID: b2284531751972646bd80d664edcf36f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 428}
+  - name: RunAttackStorm_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 534
+      width: 128
+      height: 98
+    spriteID: e9b7a06ec340d0e43bd7590ddad11d56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 534}
+  - name: RunAttackStorm_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 640
+      width: 128
+      height: 98
+    spriteID: e76f44a72674d8248bcd74e5a163584b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 640}
+  - name: RunAttackStorm_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 746
+      width: 128
+      height: 98
+    spriteID: 09d18364a488bd5449f556564b4be32a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 746}
+  - name: RunAttackStorm_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 852
+      width: 128
+      height: 98
+    spriteID: c090eb5c18a668d4587960c41dd5eae8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 852}
+  - name: RunAttackStorm_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 4
+      width: 128
+      height: 98
+    spriteID: 49243b701a7ca5a4fbd9b8684cc95052
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 4}
+  - name: RunAttackStorm_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 110
+      width: 128
+      height: 98
+    spriteID: 1506d99ee185c5c4f8bbfbdd57c08337
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 110}
+  - name: RunAttackStorm_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 216
+      width: 128
+      height: 98
+    spriteID: d79a8d2445b2c2042aecf608091f1b71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 216}
+  - name: RunAttackStorm_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 322
+      width: 128
+      height: 98
+    spriteID: 4935f14b6f9e47b439f8c5b584c7cdb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 322}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -755726556
+    name: RunAttackStorm
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: RunAttackStorm_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 755c5993684905046a297aff4dd6e0d8
+    - name: RunAttackStorm_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: ddda203641c79934c9d6f584564cd14f
+    - name: RunAttackStorm_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 6ceb793d18e30be4989c7671c92f58c7
+    - name: RunAttackStorm_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 62cafb97f65c7794fb2df0d1776dc77d
+    - name: RunAttackStorm_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: b2284531751972646bd80d664edcf36f
+    - name: RunAttackStorm_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: e9b7a06ec340d0e43bd7590ddad11d56
+    - name: RunAttackStorm_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: e76f44a72674d8248bcd74e5a163584b
+    - name: RunAttackStorm_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 09d18364a488bd5449f556564b4be32a
+    - name: RunAttackStorm_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: c090eb5c18a668d4587960c41dd5eae8
+    - name: RunAttackStorm_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 49243b701a7ca5a4fbd9b8684cc95052
+    - name: RunAttackStorm_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 1506d99ee185c5c4f8bbfbdd57c08337
+    - name: RunAttackStorm_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: d79a8d2445b2c2042aecf608091f1b71
+    - name: RunAttackStorm_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: -2
+        width: 128
+        height: 98
+      spriteId: 4935f14b6f9e47b439f8c5b584c7cdb4
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 96}
