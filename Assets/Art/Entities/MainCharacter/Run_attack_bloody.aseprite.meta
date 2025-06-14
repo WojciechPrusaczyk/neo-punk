@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 98
-    spriteID: a34037461d7e95046a77728bb27f715d
+    spriteID: 4c870583b15a8b04c907e0a62088e64c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 110
       width: 128
       height: 98
-    spriteID: 0d6d99de3b449ad4499b7921bbfda2a8
+    spriteID: 1df8aa32e285ef943931ec5c65001a74
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 216
       width: 128
       height: 98
-    spriteID: e9e44f8f1ad5b1e469b630b797fe5bc8
+    spriteID: 1a7f1781aeaba1a4aa5125c2d36cae5f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 322
       width: 128
       height: 98
-    spriteID: 6b8800bbc9f06b7419acce82a730977c
+    spriteID: c370e3d1ef52cbf4fa7bc1697c31fc56
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 428
       width: 128
       height: 98
-    spriteID: b2e061acf9a65f8498b64b816cdcb2ac
+    spriteID: 828fd4578f840ab4988ac67d8a43a3ab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 534
       width: 128
       height: 98
-    spriteID: 73f2fa77e5fb7644bbc98469459e9ea8
+    spriteID: cfe3607a2a6206942a5987a4ac782255
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 640
       width: 128
       height: 98
-    spriteID: 00e231a2b9671f14a8d9916e3dbfbb8a
+    spriteID: 82ad9d5bd2031964c846d098a50648bf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 746
       width: 128
       height: 98
-    spriteID: cbb130f52652c49439796b13f0a49250
+    spriteID: 48002c17964e27c4ead734adc0d28346
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 852
       width: 128
       height: 98
-    spriteID: 41b7a2e9003e0374ea54a0815dff3f1c
+    spriteID: 071da179a4d3f464ea58270bec42ca54
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 4
       width: 128
       height: 98
-    spriteID: b4ee7f44676a2fc448b6e75a545d20e6
+    spriteID: dd8475edb02d9564d9e49c035f981310
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 110
       width: 128
       height: 98
-    spriteID: 20b595ef9a7979e409b2b200cc6a34fc
+    spriteID: 080c6b3b71156854187e568a4839466f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 216
       width: 128
       height: 98
-    spriteID: 92a7148103aae7642baaf17ab25c7cda
+    spriteID: c17c064d44b05d745a411d4c63b036c7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 322
       width: 128
       height: 98
-    spriteID: 3f99a4736fe926f488da7fef52e43490
+    spriteID: a3a81ea92e02ce34595625349e1b082b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -397,7 +397,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: a34037461d7e95046a77728bb27f715d
+      spriteId: 4c870583b15a8b04c907e0a62088e64c
     - name: Run_attack_bloody_Frame_1
       frameIndex: 1
       cellRect:
@@ -405,7 +405,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 0d6d99de3b449ad4499b7921bbfda2a8
+      spriteId: 1df8aa32e285ef943931ec5c65001a74
     - name: Run_attack_bloody_Frame_2
       frameIndex: 2
       cellRect:
@@ -413,7 +413,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: e9e44f8f1ad5b1e469b630b797fe5bc8
+      spriteId: 1a7f1781aeaba1a4aa5125c2d36cae5f
     - name: Run_attack_bloody_Frame_3
       frameIndex: 3
       cellRect:
@@ -421,7 +421,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 6b8800bbc9f06b7419acce82a730977c
+      spriteId: c370e3d1ef52cbf4fa7bc1697c31fc56
     - name: Run_attack_bloody_Frame_4
       frameIndex: 4
       cellRect:
@@ -429,7 +429,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: b2e061acf9a65f8498b64b816cdcb2ac
+      spriteId: 828fd4578f840ab4988ac67d8a43a3ab
     - name: Run_attack_bloody_Frame_5
       frameIndex: 5
       cellRect:
@@ -437,7 +437,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 73f2fa77e5fb7644bbc98469459e9ea8
+      spriteId: cfe3607a2a6206942a5987a4ac782255
     - name: Run_attack_bloody_Frame_6
       frameIndex: 6
       cellRect:
@@ -445,7 +445,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 00e231a2b9671f14a8d9916e3dbfbb8a
+      spriteId: 82ad9d5bd2031964c846d098a50648bf
     - name: Run_attack_bloody_Frame_7
       frameIndex: 7
       cellRect:
@@ -453,7 +453,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: cbb130f52652c49439796b13f0a49250
+      spriteId: 48002c17964e27c4ead734adc0d28346
     - name: Run_attack_bloody_Frame_8
       frameIndex: 8
       cellRect:
@@ -461,7 +461,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 41b7a2e9003e0374ea54a0815dff3f1c
+      spriteId: 071da179a4d3f464ea58270bec42ca54
     - name: Run_attack_bloody_Frame_9
       frameIndex: 9
       cellRect:
@@ -469,7 +469,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: b4ee7f44676a2fc448b6e75a545d20e6
+      spriteId: dd8475edb02d9564d9e49c035f981310
     - name: Run_attack_bloody_Frame_10
       frameIndex: 10
       cellRect:
@@ -477,7 +477,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 20b595ef9a7979e409b2b200cc6a34fc
+      spriteId: 080c6b3b71156854187e568a4839466f
     - name: Run_attack_bloody_Frame_11
       frameIndex: 11
       cellRect:
@@ -485,7 +485,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 92a7148103aae7642baaf17ab25c7cda
+      spriteId: c17c064d44b05d745a411d4c63b036c7
     - name: Run_attack_bloody_Frame_12
       frameIndex: 12
       cellRect:
@@ -493,7 +493,7 @@ ScriptedImporter:
         y: -2
         width: 128
         height: 98
-      spriteId: 3f99a4736fe926f488da7fef52e43490
+      spriteId: a3a81ea92e02ce34595625349e1b082b
     linkedCells: []
     parentIndex: -1
   platformSettings: []
