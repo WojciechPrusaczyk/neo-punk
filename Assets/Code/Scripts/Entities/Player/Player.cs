@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
     private PlayerInventoryInterface playerInventoryInterface;
     private HitboxBehaviour footHitbox;
     private HitboxBehaviour swordHitboxComponent;
+    private List<GameObject> collidingObjects = new List<GameObject>();
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -244,6 +245,9 @@ public class Player : MonoBehaviour
         isGrounded = (groundHit.collider != null);
 
         Debug.DrawRay(groundOrigin, Vector2.down * groundCheckDistance, Color.green);
+
+        // Tworzenie listy możliwych obiektów do ataku
+        collidingObjects = gameObject.GetComponent<EntityStatus>().detectedTargets;
         
         if (playerBody.velocity.y <= 0.1f)
         {
@@ -255,7 +259,7 @@ public class Player : MonoBehaviour
         }
 
         /*
-         * Logika ataku z wyskoku
+         * Logika animacji ataku z wyskoku
          */
         // Jeśli można użyć ataku z wyskoku
         if (!isGrounded && UsedElemental == Enums.ElementalType.Storm)
@@ -270,6 +274,29 @@ public class Player : MonoBehaviour
 
         footHitbox.enabled = isJumpAttacking;
         swordHitboxComponent.enabled = !isJumpAttacking;
+
+        /*
+         * Logika ataku z wyskoku
+         */
+        if (isJumpAttacking)
+        {
+            foreach (var entity in collidingObjects)
+            {
+                var enemyType = entity.GetComponent<EntityStatus>().entityType;
+
+                entity.GetComponent<EntityStatus>().DealDamage(playerStatus.GetAttackDamageCount() * 1.5f);
+                // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
+                collidingObjects.Remove(entity);
+
+                if (WorldSoundFXManager.instance)
+                {
+                    if (enemyType == Enums.EntityType.Cyber)
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackMetalSFX, Enums.SoundType.SFX, 2f);
+                    else
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackFleshSFX, Enums.SoundType.SFX, 2f);
+                }
+            }
+        }
 
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
@@ -697,8 +724,6 @@ public class Player : MonoBehaviour
     private void DealDamage(float damageToDeal)
     {
         // sprawdzanie czy gracz atakuje przeciwnika
-        List<GameObject> collidingObjects = gameObject.GetComponent<EntityStatus>().detectedTargets;
-        
         if (collidingObjects.Count > 0)
         {
             foreach (var entity in collidingObjects)
