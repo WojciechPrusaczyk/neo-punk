@@ -79,6 +79,9 @@ public class Player : MonoBehaviour
     private bool wasDamagedRecently = false;
     private MainUserInterfaceController mainUserInterfaceController;
     private PlayerInventoryInterface playerInventoryInterface;
+    private HitboxBehaviour footHitbox;
+    private HitboxBehaviour swordHitboxComponent;
+    private List<GameObject> collidingObjects = new List<GameObject>();
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -87,6 +90,7 @@ public class Player : MonoBehaviour
     public Vector2 stairMovementMultiplier = Vector2.one;
     public bool canJump = true;
     public bool isJumping = false;
+    public bool isJumpAttacking = false;
     
     [Header("Wall jump stuff")]
     public LayerMask wallLayer;
@@ -116,7 +120,9 @@ public class Player : MonoBehaviour
         boxCollider = GetComponent<CapsuleCollider2D>();
         playerStatus = GetComponent<EntityStatus>();
         swordHitbox = transform.Find("SwordHitbox").gameObject;
+        swordHitboxComponent = transform.Find("SwordHitbox").GetComponent<HitboxBehaviour>();
         animator = GetComponentInChildren<Animator>();
+        footHitbox = transform.Find("FloorDetector").gameObject.GetComponent<HitboxBehaviour>();
 
         var mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
 
@@ -220,6 +226,8 @@ public class Player : MonoBehaviour
         }
 #endif
 
+        float horizontalInput = Input.GetAxis("Horizontal");
+
         if (playerStatus != null && playerStatus.isDead)
             return;
         
@@ -237,8 +245,11 @@ public class Player : MonoBehaviour
         isGrounded = (groundHit.collider != null);
 
         Debug.DrawRay(groundOrigin, Vector2.down * groundCheckDistance, Color.green);
+
+        // Tworzenie listy możliwych obiektów do ataku
+        collidingObjects = gameObject.GetComponent<EntityStatus>().detectedTargets;
         
-        if (playerBody.velocity.y <= 0.0f)
+        if (playerBody.velocity.y <= 0.1f)
         {
             isJumping = false;
         }
@@ -246,7 +257,47 @@ public class Player : MonoBehaviour
         {
             canJump = true;
         }
-        
+
+        /*
+         * Logika animacji ataku z wyskoku
+         */
+        // Jeśli można użyć ataku z wyskoku
+        if (!isGrounded && UsedElemental == Enums.ElementalType.Storm)
+        {
+            // Jeśli gracz go ztriggeruje
+            if ((Input.GetKeyDown(InputManager.AttackKey) || Input.GetKeyDown(InputManager.PadButtonAttack)) && !isJumpAttacking)
+            {
+                isJumpAttacking = true;
+            }
+        }
+        else isJumpAttacking = false;
+
+        footHitbox.enabled = isJumpAttacking;
+        swordHitboxComponent.enabled = !isJumpAttacking;
+
+        /*
+         * Logika ataku z wyskoku
+         */
+        if (isJumpAttacking)
+        {
+            foreach (var entity in collidingObjects)
+            {
+                var enemyType = entity.GetComponent<EntityStatus>().entityType;
+
+                entity.GetComponent<EntityStatus>().DealDamage(playerStatus.GetAttackDamageCount() * 1.5f);
+                // swordHitbox.gameObject.GetComponent<ParticleSystem>().Play();
+                collidingObjects.Remove(entity);
+
+                if (WorldSoundFXManager.instance)
+                {
+                    if (enemyType == Enums.EntityType.Cyber)
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackMetalSFX, Enums.SoundType.SFX, 2f);
+                    else
+                        PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackFleshSFX, Enums.SoundType.SFX, 2f);
+                }
+            }
+        }
+
         /*
          * Zapisywanie bezpiecznej lokacji do skakania
          */
@@ -264,8 +315,6 @@ public class Player : MonoBehaviour
         //     }
         // }
 
-        float horizontalInput = Input.GetAxis("Horizontal");
-
         /*
          * Przesyłanie odpowiednich zmiennych do animatora
          */
@@ -274,6 +323,7 @@ public class Player : MonoBehaviour
         // animator.SetInteger("PlayerAttackState", attackState);
         animator.SetBool("IsPlayerAttacking", isAttacking);
         animator.SetBool("IsOnStairs", onStairs);
+        animator.SetBool("IsJumpAttacking", isJumpAttacking);
         // animator.SetBool("IsGrounded", isGrounded);
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
@@ -315,9 +365,10 @@ public class Player : MonoBehaviour
             );
         }
 
-        if (isAttacking && playerStatus.detectedTargets.Count <= 0 && !wallJumpLock)
+        bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f;
+        if (isAttacking && playerStatus.detectedTargets.Count <= 0 && !wallJumpLock && !isRunning)
         {
-            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.2f, playerBody.velocity.y);
+            playerBody.velocity = new Vector2(horizontalInput * playerStatus.GetMovementSpeed() * 0.01f, playerBody.velocity.y);
         }
         // else
         // {
@@ -375,15 +426,19 @@ public class Player : MonoBehaviour
         /*
          * Zmiana kierunku gracza
          */
-        if ((Input.GetKey(InputManager.MoveLeftKey) || Input.GetAxis("Horizontal") < 0) && playerStatus.isFacedRight && (Time.timeScale != 0) &&
-            !isAttacking && !isBlocking)
+        if ((Input.GetKey(InputManager.MoveLeftKey) || Input.GetAxis("Horizontal") < 0) &&
+            playerStatus.isFacedRight &&
+            (Time.timeScale != 0) &&
+            !isBlocking)
         {
             playerStatus.isFacedRight = false;
             transform.Rotate(new Vector3(0f, 180f, 0f));
         }
 
-        if ((Input.GetKey(InputManager.MoveRightKey) || Input.GetAxis("Horizontal") > 0) && !playerStatus.isFacedRight && (Time.timeScale != 0) &&
-            !isAttacking && !isBlocking)
+        if ((Input.GetKey(InputManager.MoveRightKey) || Input.GetAxis("Horizontal") > 0) &&
+            !playerStatus.isFacedRight &&
+            (Time.timeScale != 0) &&
+            !isBlocking )
         {
             playerStatus.isFacedRight = true;
             transform.Rotate(new Vector3(0f, 180f, 0f));
@@ -407,7 +462,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(InputManager.AttackKey) || Input.GetKeyUp(InputManager.PadButtonAttack))
+        if ((Input.GetKeyUp(InputManager.AttackKey) || Input.GetKeyUp(InputManager.PadButtonAttack)) && !isJumpAttacking)
         {
             if (isChargingAttack)
             {
@@ -571,7 +626,7 @@ public class Player : MonoBehaviour
             return;
         if (UserInterfaceController.instance.isUIMenuActive)
             return;
-        
+
         if (canJump)
         {
             canJump = false;
@@ -581,7 +636,7 @@ public class Player : MonoBehaviour
                 onStairs = false;
             }
             playerBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            
+
             if (WorldSoundFXManager.instance == null) return;
             float randomPitch = UnityEngine.Random.Range(0.85f, 1.14f);
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.playerJumpSFX, Enums.SoundType.SFX, randomPitch);
@@ -669,8 +724,6 @@ public class Player : MonoBehaviour
     private void DealDamage(float damageToDeal)
     {
         // sprawdzanie czy gracz atakuje przeciwnika
-        List<GameObject> collidingObjects = gameObject.GetComponent<EntityStatus>().detectedTargets;
-        
         if (collidingObjects.Count > 0)
         {
             foreach (var entity in collidingObjects)
@@ -696,112 +749,80 @@ public class Player : MonoBehaviour
 
     private void StartAttack()
     {
-        if (UserInterfaceController.instance.isUIMenuActive)
-            return;
-
+        if (UserInterfaceController.instance.isUIMenuActive) return;
         attackCoroutine = StartCoroutine(AttackTimeout());
         isAttacking = true;
         attackState = 1;
 
-        if ( playerStatus.detectedTargets.Count <= 0 )
+        bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.6f;
+
+        if (playerStatus.detectedTargets.Count <= 0)
             movePlayerOnAttack(3.0f);
         else
             movePlayerOnAttack(-0.5f);
 
+        string animationName = "";
         switch (UsedElemental)
         {
             case Enums.ElementalType.Normal:
-                animator.Play("Attack_1");
+                animationName = isRunning ? "RunAttack_1" : "Attack_1";
                 break;
             case Enums.ElementalType.Storm:
-                animator.Play("StormAttack_1");
+                animationName = isRunning ? "RunAttackStorm_1" : "StormAttack_1";
                 break;
             case Enums.ElementalType.Bloody:
-                animator.Play("BloodyAttack_1");
+                animationName = isRunning ? "RunAttackBloody_1" : "BloodyAttack_1";
                 break;
         }
 
-
+        animator.Play(animationName);
         DealDamage(playerStatus.GetAttackDamageCount());
-
         if (WorldSoundFXManager.instance)
             PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
     }
 
     private void ContinueAttack()
     {
-
         if (attackCoroutine != null)
-        {
             StopCoroutine(attackCoroutine);
-        }
-
         attackCoroutine = StartCoroutine(AttackTimeout());
 
-        // Sprawdź, czy minęło wystarczająco dużo czasu między atakami
         if (Time.time - lastAttackTime >= attackCooldown)
         {
-            if ( playerStatus.detectedTargets.Count <= 0 )
-                movePlayerOnAttack(3.0f);
-            else
-                movePlayerOnAttack(-0.5f);
+            bool isRunning = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.6f;
+            int maxCombo = isRunning ? 2 : usedElementalSequences;
 
-            if (attackState == usedElementalSequences)
-            {
-                // Gracz zaczyna nową sekwencję ataku
+            attackState++;
+            if (attackState > maxCombo)
                 attackState = 1;
 
-                switch (UsedElemental)
-                {
-                    case Enums.ElementalType.Normal:
-                        animator.Play("Attack_1");
-                        break;
-                    case Enums.ElementalType.Storm:
-                        animator.Play("StormAttack_1");
-                        break;
-                    case Enums.ElementalType.Bloody:
-                        animator.Play("BloodyAttack_1");
-                        break;
-                }
-
-                DealDamage(playerStatus.GetAttackDamageCount());
-
-                if (WorldSoundFXManager.instance)
-                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
-            }
-            else
+            if (!isRunning)
             {
-                // Kontynuuj sekwencję ataku
-                attackState++;
-
-                if ( playerStatus.detectedTargets.Count <= 0 )
+                if (playerStatus.detectedTargets.Count <= 0)
                     movePlayerOnAttack(3.0f);
                 else
                     movePlayerOnAttack(-0.5f);
-
-                if (attackState != 0)
-                {
-                    switch (UsedElemental)
-                    {
-                        case Enums.ElementalType.Normal:
-                            animator.Play("Attack_" + attackState.ToString());
-                            break;
-                        case Enums.ElementalType.Storm:
-                            animator.Play("StormAttack_" + attackState.ToString());
-                            break;
-                        case Enums.ElementalType.Bloody:
-                            animator.Play("BloodyAttack_" + attackState.ToString());
-                            break;
-                    }
-                }
-
-                if (WorldSoundFXManager.instance)
-                    PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
-
-                DealDamage(playerStatus.GetAttackDamageCount());
             }
 
-            // Aktualizuj czas ostatniego ataku
+            string animationName = "";
+            switch (UsedElemental)
+            {
+                case Enums.ElementalType.Normal:
+                    animationName = isRunning ? $"RunAttack_{attackState}" : $"Attack_{attackState}";
+                    break;
+                case Enums.ElementalType.Storm:
+                    animationName = isRunning ? $"RunAttackStorm_{attackState}" : $"StormAttack_{attackState}";
+                    break;
+                case Enums.ElementalType.Bloody:
+                    animationName = isRunning ? $"RunAttackBloody_{attackState}" : $"BloodyAttack_{attackState}";
+                    break;
+            }
+
+            animator.Play(animationName);
+            DealDamage(playerStatus.GetAttackDamageCount());
+            if (WorldSoundFXManager.instance)
+                PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
+
             lastAttackTime = Time.time;
         }
     }
@@ -969,18 +990,16 @@ public class PlayerEditor : Editor
     {
         serializedObject.Update();
 
-        // Sprawdzenie, czy edytowany obiekt jest jednym obiektem
+        // Czy edytowany obiekt jest jednym obiektem
         if (serializedObject.isEditingMultipleObjects)
         {
             EditorGUILayout.HelpBox("Multi-object editing not supported", MessageType.Error);
             return;
         }
 
-        // Wyświetlanie listy rozwijanej z numerami od 0 do 5
         selectedElementalTypeProp.intValue = EditorGUILayout.Popup("Choose elemental type",
             selectedElementalTypeProp.intValue, new string[] { "0", "1", "2", "3", "4", "5" });
 
-        // Przycisk do zmiany rodzaju elementu
         if (GUILayout.Button("Change elemental"))
         {
             Player script = (Player)target;
