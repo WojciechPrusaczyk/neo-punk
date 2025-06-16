@@ -93,6 +93,10 @@ public class HomelessManAi : MonoBehaviour
         tooltip.SetActive(false);
         animator.SetTrigger("stopWaving");
 
+        // Tymczasowo próbujemy zakończyć aktualną misję
+        // To będzie można przenieść do innego miejsca
+        PlayerObjectiveTracker.instance.FinishCurrentMission();
+
         if (!_EventsFlagsSystem.IsEventDone("homelessManFirstInteraction"))
         {
             dialogInterface.StartDialog(0);
