@@ -20,6 +20,8 @@ public static class InputManager
     public static KeyCode MoveRightKey { get; private set; } = KeyCode.D; // Klawisz poruszania się w prawo (domyślnie D)
     public static KeyCode MoveDownKey { get; private set; } = KeyCode.S; // Klawisz poruszania się w dół (domyślnie S)
     public static KeyCode DodgeKey { get; private set; } = KeyCode.LeftShift; // Klawisz uniku (domyślnie Shift)
+    public static KeyCode PrevQuest { get; private set; } = KeyCode.J; // Klawisz do przejścia do poprzedniego zadania (domyślnie J)
+    public static KeyCode NextQuest { get; private set; } = KeyCode.K; // Klawisz do przejścia do następnego zadania (domyślnie K)
 
     /*
      * kontrolki dla padów
@@ -59,7 +61,13 @@ public static class InputManager
 
     // Klawisz poruszania się w dół (Joystick Axis lub dodatkowy mapping, domyślnie Down na padzie)
     public static KeyCode PadMoveDownKey { get; private set; } = KeyCode.JoystickButton10; // Placeholder
-    
+
+    // Przycisk powrotu do poprzedniego zadania na padzie (domyślnie JoystickButton11 - L1)
+    public static KeyCode PadButtonPrevQuest { get; private set; } = KeyCode.JoystickButton11;
+
+    // Przycisk przejścia do następnego zadania na padzie (domyślnie JoystickButton12 - R1)
+    public static KeyCode PadButtonNextQuest { get; private set; } = KeyCode.JoystickButton12;
+
     /*
      * Metody do zmiany przycisków
      */

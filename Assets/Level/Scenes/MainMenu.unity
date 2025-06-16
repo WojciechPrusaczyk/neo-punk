@@ -4706,6 +4706,7 @@ MonoBehaviour:
   missionList:
   - {fileID: 11400000, guid: 2865ebc42290bc94d88fde36bdc8d474, type: 2}
   - {fileID: 11400000, guid: a9cf8a8245033d14e92d5e124eab03a8, type: 2}
+  - {fileID: 11400000, guid: fb3a7c6e247dce040914edbd414dfc21, type: 2}
 --- !u!1 &1603521659
 GameObject:
   m_ObjectHideFlags: 0

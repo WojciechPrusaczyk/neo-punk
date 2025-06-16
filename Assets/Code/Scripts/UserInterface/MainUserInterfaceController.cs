@@ -179,6 +179,12 @@ public class MainUserInterfaceController : MonoBehaviour
 
         missionPopup.AddToClassList("showPopup");
 
+        if (Time.timeScale == 0)
+        {
+            missionPopup.RemoveFromClassList("showPopup");
+            missionPopup.style.display = DisplayStyle.None;
+            return;
+        }
         StartCoroutine(HideMissionPopupAfterDelay());
     }
 

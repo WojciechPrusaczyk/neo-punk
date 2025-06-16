@@ -119,27 +119,6 @@ public class InteractableDrone : Interactable
                     WorldAIManager.instance.RespawnAllEnemies();
 
                 WorldGameManager.instance.player.playerStatus.detectedTargets.Clear();
-
-#if UNITY_EDITOR
-                // Leczenie gracza
-                if (interactionTextCanvas != null)
-                {
-                    if (WorldGameManager.instance != null)
-                        WorldGameManager.instance.player.playerStatus.PlayHealFX();
-
-                    var playerHealth = WorldGameManager.instance.player.playerStatus;
-                    playerHealth.entityHealthPoints.value += 10;
-                    if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
-                    {
-                        playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
-                    }
-
-                    if (interactionHealCoroutine != null)
-                        StopCoroutine(interactionHealCoroutine);
-
-                    interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
-                }
-#endif
             }
         }
 
@@ -194,6 +173,25 @@ public class InteractableDrone : Interactable
         {
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
+
+            // Leczenie gracza
+            if (interactionTextCanvas != null)
+            {
+                if (WorldGameManager.instance != null)
+                    WorldGameManager.instance.player.playerStatus.PlayHealFX();
+
+                var playerHealth = WorldGameManager.instance.player.playerStatus;
+                playerHealth.entityHealthPoints.value += 10;
+                if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
+                {
+                    playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
+                }
+
+                if (interactionHealCoroutine != null)
+                    StopCoroutine(interactionHealCoroutine);
+
+                interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
+            }
 
             // Wyœwietl ikonê interakcji
             if (!droneController.isDroneUIActive)

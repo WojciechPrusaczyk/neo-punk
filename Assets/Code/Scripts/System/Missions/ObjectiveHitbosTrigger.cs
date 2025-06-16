@@ -17,7 +17,7 @@ public class ObjectiveHitbosTrigger : MonoBehaviour
                 return;
             }
 
-            PlayerObjectiveTracker.instance.SetCurrentMission(missionInfo);
+            PlayerObjectiveTracker.instance.AddNewMission(missionInfo);
             gameObject.SetActive(false);
         }
     }

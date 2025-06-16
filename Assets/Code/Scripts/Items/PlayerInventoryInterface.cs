@@ -174,6 +174,19 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         if (isEquipmentShown)
         {
+            if (Input.GetKeyDown(InputManager.PrevQuest))
+            {
+                if (mission != null)
+                {
+                    PlayerObjectiveTracker.instance.ActivatePreviousMission();
+                }
+            }else if (Input.GetKeyDown(InputManager.NextQuest))
+            {
+                if (mission != null)
+                {
+                    PlayerObjectiveTracker.instance.ActivateNextMission();
+                }
+            }
 
             if (!isPlayerPickingItem)
             {

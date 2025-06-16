@@ -127,7 +127,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
 
                         if (missionAsset == currentMission)
                         {
-                            SetCurrentMission(missionAsset);
+                            AddNewMission(missionAsset);
                         }
                         else
                         {
@@ -179,7 +179,8 @@ public class PlayerObjectiveTracker : MonoBehaviour
         }
     }
 
-    public void SetCurrentMission(MissionInfo mission)
+    // Dodawanie nowej misji do listy celów
+    public void AddNewMission(MissionInfo mission)
     {
         if (mission == null)
         {
@@ -202,6 +203,105 @@ public class PlayerObjectiveTracker : MonoBehaviour
 
             Debug.Log($"Dodano nową misję: {mission.MissionName}");
         }
+    }
+
+    // Aktualizacja aktywnej misji i interfejsu użytkownika
+    private void UpdateActiveMission(MissionInfo newMission)
+    {
+        this.currentMission = newMission;
+        if (this.currentMission != null)
+        {
+            mainUserInterfaceController.SetCurrentMission(this.currentMission);
+            playerInventoryInterface.SetCurrentObjective(this.currentMission);
+        }
+    }
+
+    // funkcje wewnętrzne, zamiast tego użyj ActivateNextMission() lub ActivatePreviousMission()
+    private void SetPreviousMissionActive(MissionInfo missionToChangeFrom)
+    {
+        if (missionToChangeFrom == null)
+        {
+            if (objectiveList.Count > 0)
+            {
+                UpdateActiveMission(objectiveList[objectiveList.Count - 1]);
+            }
+            return;
+        }
+
+        if (objectiveList.Count == 0)
+            return;
+
+        int currentMissionIndex = objectiveList.IndexOf(missionToChangeFrom);
+
+        if (currentMissionIndex == -1)
+        {
+            if (objectiveList.Count > 0)
+            {
+                UpdateActiveMission(objectiveList[objectiveList.Count - 1]);
+            }
+            return;
+        }
+
+        if (objectiveList.Count == 1)
+        {
+            return;
+        }
+
+        int previousMissionIndex = (currentMissionIndex - 1 + objectiveList.Count) % objectiveList.Count;
+        UpdateActiveMission(objectiveList[previousMissionIndex]);
+    }
+    private void SetNextMissionActive(MissionInfo missionToChangeFrom)
+    {
+        if (missionToChangeFrom == null)
+        {
+            if (objectiveList.Count > 0)
+            {
+                UpdateActiveMission(objectiveList[0]);
+            }
+            return;
+        }
+
+        if (objectiveList.Count == 0)
+            return;
+
+        int currentMissionIndex = objectiveList.IndexOf(missionToChangeFrom);
+
+        if (currentMissionIndex == -1)
+        {
+            if (objectiveList.Count > 0)
+            {
+                UpdateActiveMission(objectiveList[0]);
+            }
+            return;
+        }
+
+        if (objectiveList.Count == 1)
+        {
+            return;
+        }
+
+        int nextMissionIndex = (currentMissionIndex + 1) % objectiveList.Count;
+        UpdateActiveMission(objectiveList[nextMissionIndex]);
+    }
+
+    // Używaj do zmiany aktywnej misji na następną lub poprzednią
+    public void ActivateNextMission()
+    {
+        if (this.currentMission == null && objectiveList.Count > 0)
+        {
+            UpdateActiveMission(objectiveList[0]);
+            return;
+        }
+        SetNextMissionActive(this.currentMission);
+    }
+    public void ActivatePreviousMission()
+    {
+        if (this.currentMission == null && objectiveList.Count > 0)
+        {
+            UpdateActiveMission(objectiveList[objectiveList.Count - 1]);
+            return;
+        }
+        SetPreviousMissionActive(this.currentMission);
     }
 
     public void AddMissionToMissionList(MissionInfo mission)
