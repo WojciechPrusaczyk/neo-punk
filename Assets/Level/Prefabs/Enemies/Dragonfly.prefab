@@ -142,6 +142,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 1
+  enemyType: 1
   healFX: {fileID: 0}
   healFXParent: {fileID: 0}
   incomingDamagePercent: 1

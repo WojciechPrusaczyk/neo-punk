@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Enums;
-using static SerializableMission;
 
 public class WorldSaveGameManager : MonoBehaviour
 {
@@ -85,14 +84,14 @@ public class WorldSaveGameManager : MonoBehaviour
 
     private IEnumerator NewGameCoroutine()
     {
-        
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("InitialLevel");
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
         yield return new WaitForEndOfFrame();
-        
+
         if (WorldAIManager.instance != null)
         {
             WorldAIManager.instance.InitializeAIForScene(SceneManager.GetActiveScene());
@@ -124,18 +123,19 @@ public class WorldSaveGameManager : MonoBehaviour
         SaveGame();
     }
 
+
     public void SaveGame()
     {
-        if (player == null)
+        if (player == null && SceneManager.GetActiveScene().name != "MainMenu") // Allow saving from main menu if needed, though player would be null
         {
             player = FindFirstObjectByType<Player>();
+            if (player == null && SceneManager.GetActiveScene().name != "MainMenu") // Re-check after find
+            {
+                Debug.LogError("Player not found in current scene '" + SceneManager.GetActiveScene().name + "', cannot save game!");
+                return;
+            }
         }
 
-        if (player == null)
-        {
-            Debug.LogError("Nie znaleziono gracza w bie��cej scenie '" + SceneManager.GetActiveScene().name + "', nie mo�na zapisa� gry!");
-            return;
-        }
 
         saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(currentCharacterSlotBeingUsed);
 
@@ -146,7 +146,6 @@ public class WorldSaveGameManager : MonoBehaviour
         if (currentCharacterData == null)
         {
             currentCharacterData = new CharacterSaveData();
-            Debug.LogWarning("currentCharacterData was null during SaveGame. Initializing new CharacterSaveData.");
         }
 
         if (EventFlagsSystem.instance != null)
@@ -170,48 +169,60 @@ public class WorldSaveGameManager : MonoBehaviour
         }
 
         List<SerializableMission> sMissions = new List<SerializableMission>();
-        foreach (MissionInfo liveMission in PlayerObjectiveTracker.instance.objectiveList)
+        if (PlayerObjectiveTracker.instance != null && PlayerObjectiveTracker.instance.objectiveList != null)
         {
-            SerializableMission sm = new SerializableMission();
-            sm.missionName = liveMission.MissionName;
-            sm.ifFinished = liveMission.isFinished;
-            sm.objectiveStates = new List<SerializableObjectiveState>();
-            foreach (MissionInfo.MissionObjective obj in liveMission.objectives)
+            foreach (MissionInfo liveMission in PlayerObjectiveTracker.instance.objectiveList)
             {
-                sm.objectiveStates.Add(new SerializableObjectiveState {
-                    ObjectiveID = obj.ObjectiveID,
-                    isCompleted = obj.isCompleted
-                });
+                if (liveMission == null) continue;
+                sMissions.Add(CreateSerializableMissionFromMissionInfo(liveMission));
             }
-            sMissions.Add(sm);
         }
         currentCharacterData.serializableMission = sMissions.ToArray();
 
-        if (PlayerObjectiveTracker.instance.currentMission != null)
+        if (PlayerObjectiveTracker.instance != null && PlayerObjectiveTracker.instance.currentMission != null)
         {
-            MissionInfo liveCurrentMission = PlayerObjectiveTracker.instance.currentMission;
-            SerializableMission scm = new SerializableMission();
-            scm.missionName = liveCurrentMission.MissionName;
-            scm.ifFinished = liveCurrentMission.isFinished;
-            scm.objectiveStates = new List<SerializableObjectiveState>();
-            foreach (MissionInfo.MissionObjective obj in liveCurrentMission.objectives)
-            {
-                scm.objectiveStates.Add(new SerializableObjectiveState {
-                    ObjectiveID = obj.ObjectiveID,
-                    isCompleted = obj.isCompleted
-                });
-            }
-            currentCharacterData.currentMission = scm;
+            currentCharacterData.currentMission = CreateSerializableMissionFromMissionInfo(PlayerObjectiveTracker.instance.currentMission);
         }
         else
         {
             currentCharacterData.currentMission = null;
         }
 
-        player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
+        if (player != null) // Only save player data if player exists
+        {
+            player.SaveGameDataToCurrentCharacterData(ref currentCharacterData);
+        }
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
-        Debug.Log($"Zapisano gr� do slota: {currentCharacterSlotBeingUsed} (Plik: {saveFileName}) w scenie {currentCharacterData.sceneName}");
+        Debug.Log($"Game saved to slot: {currentCharacterSlotBeingUsed} (File: {saveFileName}) in scene {currentCharacterData.sceneName}");
+    }
+
+    private SerializableMission CreateSerializableMissionFromMissionInfo(MissionInfo missionInfo)
+    {
+        SerializableMission sm = new SerializableMission();
+        sm.missionName = missionInfo.MissionName;
+        sm.ifFinished = missionInfo.isFinished;
+        sm.objectiveStates = new List<SerializableMission.SerializableObjectiveState>();
+
+        foreach (MissionInfo.MissionObjective obj in missionInfo.objectives)
+        {
+            var objectiveState = new SerializableMission.SerializableObjectiveState
+            {
+                ObjectiveID = obj.ObjectiveID,
+                isCompleted = obj.isCompleted,
+                requirementProgresses = new List<ObjectiveRequirementSaveData>()
+            };
+
+            if (obj.Requirements != null)
+            {
+                foreach (var req in obj.Requirements)
+                {
+                    objectiveState.requirementProgresses.Add(req.GetSaveData());
+                }
+            }
+            sm.objectiveStates.Add(objectiveState);
+        }
+        return sm;
     }
 
     public bool CheckIfSaveFileExists(int id)
@@ -237,10 +248,10 @@ public class WorldSaveGameManager : MonoBehaviour
         saveFileDataWriter.DeleteSaveFile();
     }
 
+
     private IEnumerator LoadGameCoroutine(float delay)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("Loading Game Data...");
 
         saveFileName = DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(currentCharacterSlotBeingUsed);
 
@@ -251,14 +262,14 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (currentCharacterData == null)
         {
-            Debug.LogError($"Nie mo�na za�adowa� pliku: {saveFileName}.");
+            Debug.LogError($"Could not load save file: {saveFileName}.");
             yield break;
         }
 
         string sceneToLoad = currentCharacterData.sceneName;
         if (string.IsNullOrEmpty(sceneToLoad))
         {
-            Debug.LogError("Brak nazwy sceny w pliku zapisu.");
+            Debug.LogError("No scene name in save file.");
             yield break;
         }
 
@@ -270,15 +281,17 @@ public class WorldSaveGameManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         player = FindFirstObjectByType<Player>();
-        if (player == null)
+        if (player != null)
         {
-            Debug.LogError("Brak gracza w za�adowanej scenie '" + sceneToLoad + "'!");
-            yield break;
+            player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
+        }
+        else if (sceneToLoad != "MainMenu")
+        {
+            Debug.LogError("Player not found in loaded scene '" + sceneToLoad + "'!");
         }
 
-        player.LoadGameDataFromCurrentCharacterData(ref currentCharacterData);
 
-        if (currentCharacterData.completedEventFlags != null)
+        if (currentCharacterData.completedEventFlags != null && EventFlagsSystem.instance != null)
         {
             foreach (var savedFlag in currentCharacterData.completedEventFlags)
             {
@@ -288,7 +301,7 @@ public class WorldSaveGameManager : MonoBehaviour
                 }
             }
         }
-        
+
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartSong();
@@ -298,7 +311,6 @@ public class WorldSaveGameManager : MonoBehaviour
             WorldAIManager.instance.InitializeAIForScene(SceneManager.GetActiveScene());
         }
 
-        Debug.Log("Game loaded successfully.");
     }
 
     public bool HasFreeCharacterSlot()
@@ -318,6 +330,7 @@ public class WorldSaveGameManager : MonoBehaviour
         return false;
     }
 
+
     public string DecideCharacterFileNameBasedOnCharacterSlotBeingUsed(CharacterSlots characterSlot)
     {
         string fileName = "";
@@ -327,7 +340,6 @@ public class WorldSaveGameManager : MonoBehaviour
             case CharacterSlots.CharacterSlot2: fileName = "CharacterSlot2"; break;
             case CharacterSlots.CharacterSlot3: fileName = "CharacterSlot3"; break;
             default:
-                Debug.LogWarning($"Unknown character slot: {characterSlot}");
                 fileName = "CharacterSlot_Unknown";
                 break;
         }
@@ -365,14 +377,12 @@ public class WorldSaveGameManager : MonoBehaviour
             NewGame();
             return;
         }
-        Debug.Log("Nie ma wolnych slot�w zapisu gry!");
     }
 
     public void AttemptToCreateNewSettingsFile()
     {
         if (WorldSoundFXManager.instance == null)
         {
-            Debug.LogWarning("WorldSoundFXManager instance not found. Cannot create/save settings.");
             return;
         }
 
@@ -383,7 +393,6 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (!saveFileDataWriter.CheckToSeeIfFileExists())
         {
-            Debug.Log("Settings file not found. Creating new one with default values.");
             SaveSettings();
         }
     }
@@ -392,7 +401,6 @@ public class WorldSaveGameManager : MonoBehaviour
     {
         if (WorldSoundFXManager.instance == null)
         {
-            Debug.LogWarning("WorldSoundFXManager instance not found. Cannot save settings.");
             return;
         }
 
@@ -413,7 +421,6 @@ public class WorldSaveGameManager : MonoBehaviour
     {
         if (WorldSoundFXManager.instance == null)
         {
-            Debug.LogWarning("WorldSoundFXManager instance not found. Cannot load settings.");
             return;
         }
 
@@ -424,7 +431,6 @@ public class WorldSaveGameManager : MonoBehaviour
 
         if (!saveFileDataWriter.CheckToSeeIfFileExists())
         {
-            Debug.LogWarning($"Settings file '{settingsFileName}' not found. Attempting to create one with defaults.");
             AttemptToCreateNewSettingsFile();
             return;
         }
@@ -432,7 +438,6 @@ public class WorldSaveGameManager : MonoBehaviour
         SettingsSaveData loadedSettings = saveFileDataWriter.LoadSettingsSaveFile();
         if (loadedSettings == null)
         {
-            Debug.LogError($"Nie mo�na za�adowa� pliku ustawie�: {settingsFileName}. Creating new one.");
             AttemptToCreateNewSettingsFile();
             return;
         }
@@ -441,6 +446,7 @@ public class WorldSaveGameManager : MonoBehaviour
         WorldSoundFXManager.instance.musicVolume = loadedSettings.musicVolume;
         WorldSoundFXManager.instance.dialogueVolume = loadedSettings.dialogueVolume;
     }
+
 
     private void LoadAllCharacterProfiles()
     {
@@ -459,16 +465,10 @@ public class WorldSaveGameManager : MonoBehaviour
 
     public SerializableMission GetSerializableMissionFromMissionInfo(MissionInfo mission)
     {
-        SerializableMission serializedMission = new SerializableMission();
-
         if (mission == null)
         {
-            serializedMission.missionName = "";
-            return serializedMission;
+            return new SerializableMission { missionName = "" };
         }
-
-        serializedMission.missionName = mission.MissionName;
-
-        return serializedMission;
+        return CreateSerializableMissionFromMissionInfo(mission);
     }
 }

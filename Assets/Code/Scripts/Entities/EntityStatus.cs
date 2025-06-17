@@ -40,7 +40,9 @@ public class EntityStatus : MonoBehaviour
     public Color deathColor;
     public GameObject healthBar;
     public bool isAlerted;
+    
     public Enums.EntityType entityType = Enums.EntityType.Human;
+    public Enums.EnemyType enemyType = Enums.EnemyType.ShivernDog;
 
     [Header("Entity FX")]
     [SerializeField] private GameObject healFX;
@@ -303,17 +305,30 @@ public class EntityStatus : MonoBehaviour
             return;
         isDead = true;
 
-        //if (null != missionTracker) missionTracker.AddTakedown();
-        // lootTable.DropLoot();
+        // Reportujemy śmierć encji, aby zaktualizować cele gracza
+        if (isEnemy)
+        {
+            if (PlayerObjectiveTracker.instance != null)
+            {
+                PlayerObjectiveTracker.instance.ReportEnemyKilled(this.enemyType);
+            }
+            else
+            {
+                Debug.LogWarning("PlayerObjectiveTracker.instance is null. Cannot report enemy kill.");
+            }
+        }
+
+
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
         StartCoroutine(DeathAnimation(deathColor, 0.1f));
 
-        
+
         BossData bossData = gameObject.GetComponentInParent<BossData>();
         if (bossData != null)
         {
             bossData.OnDeath();
         }
+        OnEntityDeath?.Invoke(); 
     }
 
     public void PlayerDeathEvent()

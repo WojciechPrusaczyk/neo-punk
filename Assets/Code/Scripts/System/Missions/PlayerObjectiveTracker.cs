@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -60,25 +61,16 @@ public class PlayerObjectiveTracker : MonoBehaviour
                 {
                     if (missionAsset != null)
                     {
-                        missionAsset.isFinished = false;
-                        if (missionAsset.objectives != null)
-                        {
-                            foreach (var objective in missionAsset.objectives)
-                            {
-                                if (objective != null) objective.isCompleted = false;
-                            }
-                        }
+                        missionAsset.InitializeAllObjectives();
                     }
                 }
             }
             return;
         }
 
-
         GameObject mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
         if (mainUserInterfaceRoot == null)
         {
-            Debug.LogError("Couldn't find MainUserInterfaceRoot in scene!");
             mainUserInterfaceController = null;
             playerInventoryInterface = null;
         }
@@ -88,7 +80,6 @@ public class PlayerObjectiveTracker : MonoBehaviour
             playerInventoryInterface = mainUserInterfaceRoot.GetComponentInChildren<PlayerInventoryInterface>();
         }
 
-
         if (objectiveDatabase == null)
         {
             Debug.LogError("ObjectiveDatabase is null in PlayerObjectiveTracker!");
@@ -96,7 +87,8 @@ public class PlayerObjectiveTracker : MonoBehaviour
         }
         if (WorldSaveGameManager.instance == null || WorldSaveGameManager.instance.currentCharacterData == null)
         {
-            Debug.LogWarning("WorldSaveGameManager or currentCharacterData is not available. Skipping mission load.");
+            Debug.LogWarning("WorldSaveGameManager or currentCharacterData is not available. Skipping mission load and initializing from defaults.");
+            InitializeMissionsFromDatabaseDefaults();
             return;
         }
 
@@ -135,12 +127,25 @@ public class PlayerObjectiveTracker : MonoBehaviour
                         bool alreadyInList = objectiveList.Exists(m => m != null && m.MissionName == missionAsset.MissionName);
                         if (!alreadyInList)
                         {
-                            AddMissionToMissionList(missionAsset);
+                            AddMissionToMissionList(missionAsset, false);
                         }
                     }
                 }
             }
         }
+
+        if (objectiveDatabase != null && objectiveDatabase.missionList != null)
+        {
+            foreach (var dbMission in objectiveDatabase.missionList)
+            {
+                if (dbMission != null && !objectiveList.Exists(m => m.MissionName == dbMission.MissionName) &&
+                    (currentMission == null || currentMission.MissionName != dbMission.MissionName))
+                {
+                    dbMission.InitializeAllObjectives();
+                }
+            }
+        }
+
         if (currentMission != null)
         {
             UpdateActiveMission(currentMission);
@@ -154,6 +159,24 @@ public class PlayerObjectiveTracker : MonoBehaviour
             UpdateActiveMission(null);
         }
     }
+
+    private void InitializeMissionsFromDatabaseDefaults()
+    {
+        if (objectiveDatabase != null && objectiveDatabase.missionList != null)
+        {
+            foreach (var missionAsset in objectiveDatabase.missionList)
+            {
+                if (missionAsset != null)
+                {
+                    missionAsset.InitializeAllObjectives();
+                }
+            }
+        }
+        objectiveList.Clear();
+        currentMission = null;
+        UpdateActiveMission(null);
+    }
+
     private void LoadObjectiveStates(MissionInfo missionAsset, SerializableMission serializedMissionData)
     {
         if (missionAsset == null || serializedMissionData == null || missionAsset.objectives == null || serializedMissionData.objectiveStates == null)
@@ -163,13 +186,10 @@ public class PlayerObjectiveTracker : MonoBehaviour
         foreach (var runtimeObj in missionAsset.objectives)
         {
             if (runtimeObj == null) continue;
+            runtimeObj.InitializeRequirements();
             if (!runtimeObjectivesMap.ContainsKey(runtimeObj.ObjectiveID))
             {
                 runtimeObjectivesMap.Add(runtimeObj.ObjectiveID, runtimeObj);
-            }
-            else
-            {
-                Debug.LogWarning($"Objective with ID {runtimeObj.ObjectiveID} already exists in the runtime map for mission '{missionAsset.MissionName}'. This may cause issues.");
             }
         }
 
@@ -178,12 +198,61 @@ public class PlayerObjectiveTracker : MonoBehaviour
             if (savedObjectiveState == null) continue;
             if (runtimeObjectivesMap.TryGetValue(savedObjectiveState.ObjectiveID, out MissionInfo.MissionObjective runtimeObjective))
             {
-                if (runtimeObjective != null) runtimeObjective.isCompleted = savedObjectiveState.isCompleted;
+                if (runtimeObjective != null)
+                {
+                    runtimeObjective.isCompleted = savedObjectiveState.isCompleted;
+                    if (runtimeObjective.Requirements != null && savedObjectiveState.requirementProgresses != null)
+                    {
+                        for (int i = 0; i < runtimeObjective.Requirements.Count && i < savedObjectiveState.requirementProgresses.Count; i++)
+                        {
+                            if (runtimeObjective.Requirements[i] != null && savedObjectiveState.requirementProgresses[i] != null)
+                            {
+                                runtimeObjective.Requirements[i].LoadProgress(savedObjectiveState.requirementProgresses[i]);
+                            }
+                        }
+                    }
+                }
             }
-            else
+        }
+    }
+
+    public void ReportEnemyKilled(Enums.EnemyType typeOfEnemyKilled)
+    {
+        if (currentMission == null || currentMission.isFinished) return;
+
+        EnemyKilledEvent killEvent = new EnemyKilledEvent(typeOfEnemyKilled);
+
+        foreach (var objective in currentMission.objectives)
+        {
+            if (!objective.isCompleted)
             {
-                Debug.LogWarning($"Objective with ID {savedObjectiveState.ObjectiveID} not found in runtime objectives for mission '{missionAsset.MissionName}'. This may cause issues.");
+                objective.ProcessEvent(killEvent, this);
             }
+        }
+    }
+
+    public void CheckObjectiveCompletion(MissionInfo.MissionObjective objective)
+    {
+        if (objective == null || objective.isCompleted) return;
+
+        if (objective.AreAllRequirementsMet())
+        {
+            objective.isCompleted = true;
+            Debug.Log($"Objective '{objective.ObjectiveName}' completed in mission '{currentMission?.MissionName}'.");
+            if (mainUserInterfaceController != null) mainUserInterfaceController.SetCurrentMission(currentMission);
+            if (playerInventoryInterface != null) playerInventoryInterface.SetCurrentObjective(currentMission);
+            CheckMissionCompletion(currentMission);
+        }
+    }
+
+    private void CheckMissionCompletion(MissionInfo mission)
+    {
+        if (mission == null || mission.isFinished) return;
+
+        bool allObjectivesCompleted = mission.objectives.All(obj => obj.isCompleted);
+        if (allObjectivesCompleted)
+        {
+            FinishCurrentMission();
         }
     }
 
@@ -191,24 +260,24 @@ public class PlayerObjectiveTracker : MonoBehaviour
     {
         if (mission == null)
         {
-            Debug.LogWarning("Próbowano dodać pustą misję!");
+            Debug.LogWarning("Tried to add a null mission!");
             return;
         }
 
         bool alreadyExists = objectiveList.Exists(obj => obj != null && obj.MissionName == mission.MissionName);
-
         if (alreadyExists)
         {
-            Debug.LogWarning($"Misja '{mission.MissionName}' jest już na liście celów.");
+            Debug.LogWarning($"Mission '{mission.MissionName}' is already in the objective list.");
         }
         else
         {
+            mission.InitializeAllObjectives();
             objectiveList.Add(mission);
-            currentMission = mission;
-            if (mainUserInterfaceController != null) mainUserInterfaceController.SetCurrentMission(mission);
-            if (playerInventoryInterface != null) playerInventoryInterface.SetCurrentObjective(mission);
-            Debug.Log($"Dodano nową misję: {mission.MissionName}");
         }
+
+        currentMission = mission;
+        UpdateActiveMission(currentMission);
+        Debug.Log($"Added/Set current mission: {mission.MissionName}");
     }
 
     private void UpdateActiveMission(MissionInfo newMission)
@@ -260,7 +329,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
         int baseIndex = -1;
         if (missionToChangeFrom != null)
         {
-            baseIndex = objectiveList.IndexOf(missionToChangeFrom);
+            baseIndex = objectiveList.FindIndex(m => m != null && m.MissionName == missionToChangeFrom.MissionName);
         }
 
         int effectiveStartIndexForSearch;
@@ -296,7 +365,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
         int baseIndex = -1;
         if (missionToChangeFrom != null)
         {
-            baseIndex = objectiveList.IndexOf(missionToChangeFrom);
+            baseIndex = objectiveList.FindIndex(m => m != null && m.MissionName == missionToChangeFrom.MissionName);
         }
 
         int effectiveStartIndexForSearch;
@@ -330,6 +399,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
         }
         SetNextMissionActive(this.currentMission);
     }
+
     public void ActivatePreviousMission()
     {
         if (this.currentMission == null && objectiveList.Count > 0)
@@ -353,8 +423,15 @@ public class PlayerObjectiveTracker : MonoBehaviour
                 if (objective == null) continue;
                 if (!objective.isCompleted)
                 {
-                    allObjectivesCompleted = false;
-                    break;
+                    if (!objective.AreAllRequirementsMet())
+                    {
+                        allObjectivesCompleted = false;
+                        break;
+                    }
+                    else
+                    {
+                        objective.isCompleted = true;
+                    }
                 }
             }
         }
@@ -362,28 +439,26 @@ public class PlayerObjectiveTracker : MonoBehaviour
         if (allObjectivesCompleted)
         {
             currentMission.isFinished = true;
-            Debug.Log($"Ukończono misję {currentMission.MissionName}");
+            Debug.Log($"Mission '{currentMission.MissionName}' completed.");
             ActivateNextMission();
         }
         else
         {
-            Debug.Log("Nie wszystkie cele misji zostały ukończone. Misja nie może zostać zakończona.");
+            Debug.Log("Not all objectives for the current mission are completed. Mission cannot be finished yet.");
         }
     }
 
-    public void AddMissionToMissionList(MissionInfo mission)
+    public void AddMissionToMissionList(MissionInfo mission, bool initialize = true)
     {
         if (mission == null)
         {
-            Debug.LogWarning("Próbowano dodać pustą misję!");
+            Debug.LogWarning("Tried to add a null mission to list!");
             return;
         }
         bool alreadyExists = objectiveList.Exists(obj => obj != null && obj.MissionName == mission.MissionName);
-        if (alreadyExists)
+        if (!alreadyExists)
         {
-        }
-        else
-        {
+            if (initialize) mission.InitializeAllObjectives();
             objectiveList.Add(mission);
         }
     }
@@ -392,12 +467,20 @@ public class PlayerObjectiveTracker : MonoBehaviour
     {
         if (currentMission == null)
         {
-            Debug.LogWarning("Nie ma aktywnej misji, nie można zmienić statusu celu.");
+            Debug.LogWarning("No active mission, cannot change objective status.");
             return;
         }
 
         MissionInfo.MissionObjective objective = currentMission.objectives.Find(obj => obj.ObjectiveID == objectiveID);
         if (objective != null)
+        {
             objective.isCompleted = status;
+            if (!status)
+            {
+                objective.InitializeRequirements();
+            }
+            if (mainUserInterfaceController != null) mainUserInterfaceController.SetCurrentMission(currentMission);
+            if (playerInventoryInterface != null) playerInventoryInterface.SetCurrentObjective(currentMission);
+        }
     }
 }

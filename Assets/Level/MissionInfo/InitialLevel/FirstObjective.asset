@@ -13,13 +13,32 @@ MonoBehaviour:
   m_Name: FirstObjective
   m_EditorClassIdentifier: 
   MissionName: Shivern Mayhem
-  isFinished: 1
+  isFinished: 0
   MissionDescription: Lately every dark lane is swarmed with unnatural beings called
     Shiverns. No one know where they came from.
   objectives:
   - ObjectiveID: 0
     ObjectiveName: Kill 5 shiverns
-    isCompleted: 1
+    isCompleted: 0
+    Requirements:
+    - rid: 9167673375139823682
   - ObjectiveID: 1
     ObjectiveName: Kill 10 shiverns
-    isCompleted: 1
+    isCompleted: 0
+    Requirements:
+    - rid: 9167673375139823697
+  references:
+    version: 2
+    RefIds:
+    - rid: 9167673375139823682
+      type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        TargetEnemyType: 0
+        RequiredAmount: 5
+        CurrentAmount: 0
+    - rid: 9167673375139823697
+      type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        TargetEnemyType: 0
+        RequiredAmount: 10
+        CurrentAmount: 0

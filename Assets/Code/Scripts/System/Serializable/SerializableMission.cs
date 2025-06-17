@@ -10,6 +10,8 @@ public class SerializableMission : ISerializationCallbackReceiver
     {
         public int ObjectiveID;
         public bool isCompleted;
+        [SerializeReference]
+        public List<ObjectiveRequirementSaveData> requirementProgresses = new List<ObjectiveRequirementSaveData>();
     }
 
     [SerializeField] public string missionName;
@@ -18,17 +20,18 @@ public class SerializableMission : ISerializationCallbackReceiver
 
     public MissionInfo GetMissionInfo()
     {
+        if (PlayerObjectiveTracker.instance == null || PlayerObjectiveTracker.instance.objectiveDatabase == null)
+            return null;
+
         MissionInfo missionInfo = PlayerObjectiveTracker.instance.objectiveDatabase.GetMissionFromSerializedData(this);
         return missionInfo;
     }
 
     public void OnAfterDeserialize()
     {
-
     }
 
     public void OnBeforeSerialize()
     {
-
     }
 }

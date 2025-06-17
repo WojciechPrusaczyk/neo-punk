@@ -36,6 +36,10 @@ public class MenuBehaviour : MonoBehaviour
         }
     }
 
+    private void Update()
+    { 
+    }
+
     public void LoadGame()
     {
         if (isMenuActive)

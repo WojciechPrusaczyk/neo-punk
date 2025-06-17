@@ -15,4 +15,18 @@ MonoBehaviour:
   MissionName: Test mission 3
   isFinished: 0
   MissionDescription: This is a test mission V3
-  objectives: []
+  objectives:
+  - ObjectiveID: 0
+    ObjectiveName: Kill 5 dragonflies
+    isCompleted: 0
+    Requirements:
+    - rid: 9167673375872516193
+  references:
+    version: 2
+    RefIds:
+    - rid: 9167673375872516193
+      type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        TargetEnemyType: 1
+        RequiredAmount: 5
+        CurrentAmount: 0

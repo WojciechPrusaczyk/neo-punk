@@ -42,6 +42,13 @@ public class Enums : MonoBehaviour
         Demon
     }
 
+    public enum EnemyType
+    {
+        ShivernDog,
+        DragonFly,
+        BossAbomination
+    }
+
     public enum ItemRarity
     {
         Common,

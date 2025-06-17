@@ -16,9 +16,6 @@ public class AbominationArenaCollider : ArenaCollider
 
     public override void OpenArena()
     {
-        if (EventFlagsSystem.instance.IsEventDone("AbominationDefeat"))
-            return;
-
         base.OpenArena();
     }
 }

@@ -694,7 +694,7 @@ MonoBehaviour:
   MovementSpeed: 600
   isFacedRight: 1
   isDead: 0
-  isEnemy: 0
+  isEnemy: 1
   isBoss: 0
   deathAnimationLength: 1
   detectedTargets: []
@@ -705,6 +705,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 2
+  enemyType: 0
   healFX: {fileID: 0}
   healFXParent: {fileID: 0}
   incomingDamagePercent: 1
