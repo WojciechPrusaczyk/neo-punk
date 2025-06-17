@@ -390,6 +390,11 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (isGrounded)
+        {
+            wallJumpLock = false;
+        }
+
         /*
          * Zmiana kierunku gracza
          */
@@ -924,7 +929,8 @@ public class Player : MonoBehaviour
         StartCoroutine(WallJumpLockRoutine());
         float velX = -wallDirection * wallJumpHorizontalForce;
         float velY =  wallJumpVerticalForce;
-
+        transform.Rotate(new Vector3(0f, 180f, 0f));
+        playerStatus.isFacedRight = !playerStatus.isFacedRight;
         playerBody.velocity = new Vector2(velX, velY);
     }
     

@@ -529,7 +529,7 @@ MonoBehaviour:
   wallSlideSpeed: 5
   wallJumpHorizontalForce: 15
   wallJumpVerticalForce: 30
-  wallCheckDistance: 1
+  wallCheckDistance: 0.7
   groundCheckDistance: 0.5
   wallCheckOffset: {x: 0, y: 0.1}
   isTouchingWall: 0
@@ -575,6 +575,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 0
+  enemyType: 0
   healFX: {fileID: 4161240108645859600, guid: 2a80c1067d6423e488b5e811b8552b20, type: 3}
   healFXParent: {fileID: 7391661367448708077}
   incomingDamagePercent: 1

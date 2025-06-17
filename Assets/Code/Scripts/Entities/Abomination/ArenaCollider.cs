@@ -24,8 +24,10 @@ public class ArenaCollider : MonoBehaviour
 
     protected virtual void OnDisable()
     {
-        bossSpawner.OnSpawn -= OnBossSpawn;
-        bossStatus.OnEntityDeath -= OpenArena;
+        if(bossSpawner != null)
+            bossSpawner.OnSpawn -= OnBossSpawn;
+        if(bossStatus != null)  
+            bossStatus.OnEntityDeath -= OpenArena;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
