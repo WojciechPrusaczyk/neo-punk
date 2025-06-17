@@ -387,4 +387,17 @@ public class PlayerObjectiveTracker : MonoBehaviour
             objectiveList.Add(mission);
         }
     }
+
+    public void ChangeMissionObjectiveStatus(int objectiveID, bool status)
+    {
+        if (currentMission == null)
+        {
+            Debug.LogWarning("Nie ma aktywnej misji, nie można zmienić statusu celu.");
+            return;
+        }
+
+        MissionInfo.MissionObjective objective = currentMission.objectives.Find(obj => obj.ObjectiveID == objectiveID);
+        if (objective != null)
+            objective.isCompleted = status;
+    }
 }
