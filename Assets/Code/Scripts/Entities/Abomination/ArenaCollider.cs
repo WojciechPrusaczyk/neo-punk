@@ -12,17 +12,17 @@ public class ArenaCollider : MonoBehaviour
 
     public EntityStatus abominationStatus;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         abominationStatus.OnEntityDeath += OpenArena;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         abominationStatus.OnEntityDeath -= OpenArena;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
@@ -30,8 +30,8 @@ public class ArenaCollider : MonoBehaviour
             CloseArena();
         }
     }
-    
-    private void OnTriggerExit2D(Collider2D other)
+
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         
         if(other.CompareTag("Player"))
@@ -40,7 +40,7 @@ public class ArenaCollider : MonoBehaviour
         }
     }
 
-    public void CloseArena()
+    public virtual void CloseArena()
     {
         foreach (var barrier in barriers)
         {
@@ -48,7 +48,7 @@ public class ArenaCollider : MonoBehaviour
         }
     }
 
-    public void OpenArena()
+    public virtual void OpenArena()
     {
         foreach (var barrier in barriers)
         {
