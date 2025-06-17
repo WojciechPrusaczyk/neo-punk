@@ -39,6 +39,8 @@ public class SpikeAreaDamage : MonoBehaviour
 
     private void ApplyDamage(GameObject player)
     {
+        if (entityStatus.isDead) return;
+        
         var attack = entityStatus.AttackTypes
             .Find(a => a.AttackName == AttackName);
 

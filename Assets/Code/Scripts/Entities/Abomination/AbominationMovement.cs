@@ -31,6 +31,7 @@ public class AbominationMovement : MonoBehaviour
     public Collider2D headCollider;
     public Collider2D clawCollider;
     public Collider2D tailCollider;
+    public Collider2D bodyCollider;
     
     [Header("Bite retreat")]
     [SerializeField] private float biteRetreatDistance = 1.0f;
@@ -47,6 +48,7 @@ public class AbominationMovement : MonoBehaviour
     [Header(" ")]
     private GameObject mainUi;
     private EntityStatus abominationStatus;
+    bool isDying = false;
     
     private void Awake()
     {
@@ -63,6 +65,10 @@ public class AbominationMovement : MonoBehaviour
 
     private void Update()
     {
+        if (isDying)
+        {
+            return;
+        }
         if (Time.time < nextAllowedTime)
             return;
 
@@ -70,8 +76,6 @@ public class AbominationMovement : MonoBehaviour
             return;
 
         float dist = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(dist);
-        int index;
 
         if (dist < 1.3f)
         {
@@ -92,11 +96,6 @@ public class AbominationMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        if (arenaCollider == null)
-            return;
-
-        arenaCollider.onArenaEnter += ActivateBoss;
-        arenaCollider.onArenaExit += DeactivateBoss;
     }
 
     private void OnDisable()
@@ -106,6 +105,18 @@ public class AbominationMovement : MonoBehaviour
 
         arenaCollider.onArenaEnter -= ActivateBoss;
         arenaCollider.onArenaExit -= DeactivateBoss;
+    }
+
+    public void SubscribeToArena()
+    {
+        if (arenaCollider == null)
+        {
+            Debug.LogError("arenaCollider not found");
+            return;
+        }
+
+        arenaCollider.onArenaEnter += ActivateBoss;
+        arenaCollider.onArenaExit += DeactivateBoss;
     }
 
     
@@ -172,6 +183,10 @@ public class AbominationMovement : MonoBehaviour
         {
             mainUi.GetComponent<MainUserInterfaceController>().ShowBossBar(abominationStatus);
         }
+        else
+        {
+            Debug.Log("Main UI not found");
+        }
 
         MusicManager.instance.PlaySong(MusicManager.instance.Boss1Track, Enums.SoundType.Music);
     }
@@ -224,8 +239,16 @@ public class AbominationMovement : MonoBehaviour
         float clipLength = state.length / animator.speed;   // adjust for speed
 
         yield return new WaitForSeconds(clipLength);
-
-        EndAnimation();
+        
+        if (trigger == "Death")
+        {
+            yield return new WaitForSeconds(3f);
+            abominationStatus.gameObject.SetActive(false);
+        }
+        else
+        {
+            EndAnimation();
+        }
     }
 
 
@@ -253,34 +276,23 @@ public class AbominationMovement : MonoBehaviour
         ikManager.enabled = true;
 
     }
-    
-    IEnumerator SmoothFlip(bool faceLeft)
-    {
-        facingLeft = faceLeft;
-        ikManager.enabled = false;
-
-        Vector3 start = bodyTransform.localScale;
-        Vector3 end   = new Vector3(Mathf.Abs(start.x) * (faceLeft ? -1 : 1),
-            start.y, start.z);
-
-        float t = 0f;
-        while (t < turnDuration)
-        {
-            t += Time.deltaTime;
-            bodyTransform.localScale = Vector3.Lerp(start, end, t / turnDuration);
-            yield return null;
-        }
-
-        bodyTransform.localScale = end;
-        ikManager.enabled = true;
-        turnRoutine = null;
-    }
 
     private void OnDeath()
     {
+        
         if (mainUi != null)
         {
+            isDying = true;
+            active = false;
+            StartCoroutine(PlayAnimation("Death"));
+
+            clawCollider.enabled = false;
+            bodyCollider.enabled = false;
+            tailCollider.enabled = false;
+            headCollider.enabled = false;
             mainUi.GetComponent<MainUserInterfaceController>().HideBossBar();
+
         }
     }
+    
 }

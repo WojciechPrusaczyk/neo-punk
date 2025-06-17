@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject instantiatedEnemy;
+
+    public Action<GameObject> OnSpawn;
 
     private void Awake()
     {
@@ -22,12 +25,15 @@ public class EnemySpawner : MonoBehaviour
             }
 
             if (SpawnCheckIfBoss())
+            {
+                
                 return;
+            }
             
             Debug.Log("spawning enemy" + enemyPrefab);
             GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             instantiatedEnemy = enemy;
-
+            OnSpawn?.Invoke(instantiatedEnemy);
             if (WorldAIManager.instance != null)
                 WorldAIManager.instance.AddEnemyToEnemiesList(enemy);
         }
@@ -39,14 +45,10 @@ public class EnemySpawner : MonoBehaviour
 
     private bool SpawnCheckIfBoss()
     {
-        Debug.Log("Check");
-        Debug.Log(EventFlagsSystem.instance.eventFlags.Count);
         if (enemyPrefab.TryGetComponent<BossData>(out BossData bossData))
         {
-            Debug.Log("Boss has BossData.");
             if (EventFlagsSystem.instance.IsEventDone(bossData.bossFlag))
             {
-                Debug.Log("Flag is true");
                 return true;
             }
             return false;

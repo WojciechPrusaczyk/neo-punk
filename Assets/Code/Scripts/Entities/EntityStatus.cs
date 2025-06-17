@@ -320,7 +320,6 @@ public class EntityStatus : MonoBehaviour
 
 
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
-        StartCoroutine(DeathAnimation(deathColor, 0.1f));
 
 
         BossData bossData = gameObject.GetComponentInParent<BossData>();
@@ -328,7 +327,12 @@ public class EntityStatus : MonoBehaviour
         {
             bossData.OnDeath();
         }
-        OnEntityDeath?.Invoke(); 
+        else
+        {
+            StartCoroutine(DeathAnimation(deathColor, 0.1f));
+            OnEntityDeath?.Invoke(); 
+
+        }
     }
 
     public void PlayerDeathEvent()

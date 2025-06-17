@@ -364,7 +364,7 @@ MonoBehaviour:
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
   entityHealthPoints:
-    _value: 500
+    _value: 200
   entityMaxHealth:
     _value: 1000
   droppedXp: 0
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cce6aa77ecc27d42a488a33ba806232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaCollider: {fileID: 5682352474508092738}
+  arenaCollider: {fileID: 0}
   active: 0
   movementSpeed: 3
   player: {fileID: 0}
@@ -1749,6 +1749,7 @@ MonoBehaviour:
   headCollider: {fileID: 1854719777387761789}
   clawCollider: {fileID: 2040438010328839412}
   tailCollider: {fileID: 2812049574596817076}
+  bodyCollider: {fileID: 9029402658288287001}
   biteRetreatDistance: 1
   biteRetreatTime: 0.2
   turnDuration: 0.3
@@ -2039,8 +2040,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2713706764119494412}
-  - component: {fileID: 7047490610475234500}
-  - component: {fileID: 5682352474508092738}
   - component: {fileID: 2812364984498277814}
   m_Layer: 0
   m_Name: Abomination
@@ -2066,67 +2065,6 @@ Transform:
   - {fileID: 4285819542104617787}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7047490610475234500
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110864372050378788}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 1.8852475, y: 1.0793815}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 6.1811776, y: 3.158763}
-  m_EdgeRadius: 0
---- !u!114 &5682352474508092738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110864372050378788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aac384432978864a9e18181b2075c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barriers:
-  - {fileID: 5027811648285145921}
-  abominationStatus: {fileID: 9152817864781677679}
 --- !u!114 &2812364984498277814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,17 +2318,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc412cc97a0040a45a3c4c014ad178e1, type: 3}
---- !u!114 &5027811648285145921 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8326563713621565276, guid: dc412cc97a0040a45a3c4c014ad178e1, type: 3}
-  m_PrefabInstance: {fileID: 3912367601590297629}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06770890fd10e94e8af7e75ed3ab6a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7420952350666461490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5816118829823718703, guid: dc412cc97a0040a45a3c4c014ad178e1, type: 3}

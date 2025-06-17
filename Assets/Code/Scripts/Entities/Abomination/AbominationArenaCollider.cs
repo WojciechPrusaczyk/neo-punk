@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class AbominationArenaCollider : ArenaCollider
 {
+    
     public override void CloseArena()
     {
         if (EventFlagsSystem.instance.IsEventDone("AbominationDefeat"))
