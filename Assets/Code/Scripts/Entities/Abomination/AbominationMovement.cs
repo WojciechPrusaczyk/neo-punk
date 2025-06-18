@@ -38,8 +38,6 @@ public class AbominationMovement : MonoBehaviour
 
     [SerializeField] private float biteRetreatTime = 0.20f;
         
-    [Header("Test smooth turn")]
-    [SerializeField] private float turnDuration = 0.3f;
     private Coroutine turnRoutine;
     
     [Header("Instant flip")]
@@ -274,6 +272,7 @@ public class AbominationMovement : MonoBehaviour
         s.x = Mathf.Abs(s.x) * (faceLeft ? -1 : 1);
         bodyTransform.localScale = s;
         ikManager.enabled = true;
+        abominationStatus.isFacedRight = facingLeft;
 
     }
 

@@ -8,6 +8,8 @@ public class AbominationHitbox : MonoBehaviour
     public EntityStatus entityStatus;
     public string AttackName;
 
+    public Vector2 pushForce;
+
     private GameObject _player;
 
     private void Awake()
@@ -29,6 +31,15 @@ public class AbominationHitbox : MonoBehaviour
                 return;
             }
             _player.GetComponent<EntityStatus>().DealDamage(damage, entityStatus.gameObject);
+            if (attack.AttackName == "StingAttack")
+            {
+                Player playerS = _player.GetComponent<Player>();
+                float facingSign = entityStatus.isFacedRight ? 1f : -1f;
+        
+                Vector2 dir = new Vector2(pushForce.x * facingSign, pushForce.y);
+                StartCoroutine(playerS.ApplyKnockback(dir, 0.2f));
+            }
         }
     }
+
 }

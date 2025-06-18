@@ -111,6 +111,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallJumpLockTime;
     [SerializeField] private float minWallUnstickSpeed;
     
+    public bool externalForce = false;
+    
     private void Awake()
     {
         // pobieranie rigidbody
@@ -317,14 +319,14 @@ public class Player : MonoBehaviour
         
         DetectStairs();
         
-        if (onStairs && !isJumping && !wallJumpLock)
+        if (onStairs && !isJumping && !wallJumpLock && !externalForce)
         {
             playerBody.velocity = new Vector2(
                 -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.x,
                 -horizontalInput * playerStatus.GetMovementSpeed() * stairMovementMultiplier.y
             );
         }
-        else if (!onStairs && !wallJumpLock)
+        else if (!onStairs && !wallJumpLock && !externalForce)
         {
             playerBody.velocity = new Vector2(
                 horizontalInput * playerStatus.GetMovementSpeed(),
@@ -945,6 +947,16 @@ public class Player : MonoBehaviour
 
         wallJumpLock = false;
     }
+    
+    
+    public IEnumerator ApplyKnockback(Vector2 knockback, float knockbackTime)
+    {
+        externalForce = true;
+        playerBody.AddForce(knockback, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(knockbackTime);
+        externalForce = false;
+    }
+
     
 }
 #if UNITY_EDITOR

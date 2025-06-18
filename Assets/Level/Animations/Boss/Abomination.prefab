@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
   AttackName: StingAttack
+  pushForce: {x: 100, y: 5}
 --- !u!1 &2588575693833048911
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
   AttackName: ClawAttack
+  pushForce: {x: 0, y: 0}
 --- !u!1 &3266632399335555944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
   AttackName: 
+  pushForce: {x: 0, y: 0}
 --- !u!1 &5910096894041230671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,7 +1755,6 @@ MonoBehaviour:
   bodyCollider: {fileID: 9029402658288287001}
   biteRetreatDistance: 1
   biteRetreatTime: 0.2
-  turnDuration: 0.3
   deadZone: 1.5
 --- !u!50 &3535948471496298719
 Rigidbody2D:
@@ -2219,8 +2221,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13980329, y: 0.01}
-  m_Size: {x: 0.38, y: 0.09}
+  m_Offset: {x: 0.13980228, y: 0.04060815}
+  m_Size: {x: 0.38, y: 0.028784748}
   m_Direction: 1
 --- !u!1 &9080262304071177273
 GameObject:
