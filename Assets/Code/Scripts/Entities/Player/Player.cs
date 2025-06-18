@@ -400,22 +400,25 @@ public class Player : MonoBehaviour
         /*
          * Zmiana kierunku gracza
          */
-        if ((Input.GetKey(InputManager.MoveLeftKey) || Input.GetAxis("Horizontal") < 0) &&
-            playerStatus.isFacedRight &&
-            (Time.timeScale != 0) &&
-            !isBlocking)
+        if (!wallJumpLock)
         {
-            playerStatus.isFacedRight = false;
-            transform.Rotate(new Vector3(0f, 180f, 0f));
-        }
+            if ((Input.GetKey(InputManager.MoveLeftKey) || Input.GetAxis("Horizontal") < 0) &&
+                playerStatus.isFacedRight &&
+                (Time.timeScale != 0) &&
+                !isBlocking)
+            {
+                playerStatus.isFacedRight = false;
+                transform.Rotate(new Vector3(0f, 180f, 0f));
+            }
 
-        if ((Input.GetKey(InputManager.MoveRightKey) || Input.GetAxis("Horizontal") > 0) &&
-            !playerStatus.isFacedRight &&
-            (Time.timeScale != 0) &&
-            !isBlocking )
-        {
-            playerStatus.isFacedRight = true;
-            transform.Rotate(new Vector3(0f, 180f, 0f));
+            if ((Input.GetKey(InputManager.MoveRightKey) || Input.GetAxis("Horizontal") > 0) &&
+                !playerStatus.isFacedRight &&
+                (Time.timeScale != 0) &&
+                !isBlocking )
+            {
+                playerStatus.isFacedRight = true;
+                transform.Rotate(new Vector3(0f, 180f, 0f));
+            }
         }
 
         /*
