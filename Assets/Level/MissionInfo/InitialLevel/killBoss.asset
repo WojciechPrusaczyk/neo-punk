@@ -16,3 +16,18 @@ MonoBehaviour:
   isFinished: 0
   MissionDescription: Shiverns need leader, they always need something to follow.
     FInd it and kill.
+  objectives:
+  - ObjectiveID: 0
+    ObjectiveName: Kill Abomination
+    isCompleted: 0
+    Requirements:
+    - rid: 9167673375872516292
+  references:
+    version: 2
+    RefIds:
+    - rid: 9167673375872516292
+      type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
+      data:
+        TargetEnemyType: 2
+        RequiredAmount: 1
+        CurrentAmount: 0

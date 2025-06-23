@@ -174,6 +174,15 @@ public class InteractableDrone : Interactable
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
 
+            // Wyœwietl ikonê interakcji
+            if (!droneController.isDroneUIActive)
+            {
+                CreateIcon(transform);
+            }
+
+            if (!isActivated)
+                return;
+
             // Leczenie gracza
             if (interactionTextCanvas != null)
             {
@@ -191,12 +200,6 @@ public class InteractableDrone : Interactable
                     StopCoroutine(interactionHealCoroutine);
 
                 interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
-            }
-
-            // Wyœwietl ikonê interakcji
-            if (!droneController.isDroneUIActive)
-            {
-                CreateIcon(transform);
             }
         }
     }

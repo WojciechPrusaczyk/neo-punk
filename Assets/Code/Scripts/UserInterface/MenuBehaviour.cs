@@ -36,6 +36,14 @@ public class MenuBehaviour : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (playButton != null)
+        {
+            SelectPlayButton();
+        }
+    }
+
     private void Update()
     { 
     }
@@ -64,6 +72,14 @@ public class MenuBehaviour : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void SelectPlayButton()
+    {
+        if (playButton != null)
+        {
+            playButton.Select();
+        }
     }
 
     public void ExitHover()
@@ -121,5 +137,17 @@ public class MenuBehaviour : MonoBehaviour
 
         playButton.interactable = status;
         exitButton.interactable = status;
+    }
+
+    public void ToggleButtonsIfFreeCharacterSlots()
+    {
+        if (WorldSaveGameManager.instance.HasFreeCharacterSlot())
+        {
+            ToggleButtons(true);
+        }
+        else
+        {
+            ToggleButtons(false);
+        }
     }
 }

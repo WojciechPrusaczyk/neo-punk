@@ -165,6 +165,16 @@ public class Menu_PickSaveUI_Controller : MonoBehaviour
             CharacterSlot3.interactable = false;
             DeleteSaveGame3.interactable = false;
         }
+
+        if (
+            !WorldSaveGameManager.instance.CheckIfSaveFileExists(0) &&
+            !WorldSaveGameManager.instance.CheckIfSaveFileExists(1) &&
+            !WorldSaveGameManager.instance.CheckIfSaveFileExists(2)
+            )
+        {
+            if (BackButton != null)
+                BackButton.Select();
+        }
     }
 
     public void GoBack()
