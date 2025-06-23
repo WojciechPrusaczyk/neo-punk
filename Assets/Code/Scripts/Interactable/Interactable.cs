@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
     public Collider2D interactableCollider;
 
     // Interaction
-    protected bool isInteractionOnCooldown = false;
+    [SerializeField] protected bool isInteractionOnCooldown = false;
     protected float interactionCooldownDuration = .5f;
 
     [SerializeField] protected float interactableIconYOffset = 1.5f;
@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
 
     protected Animator animator;
 
-    protected bool isPlayerInRange = false;
+    [SerializeField] protected bool isPlayerInRange = false;
 
     protected virtual void Awake()
     {
@@ -33,7 +33,12 @@ public class Interactable : MonoBehaviour
         PrepareInteractable();
     }
 
-    private void Update()
+    protected virtual void Start()
+    {
+        
+    }
+
+    protected virtual void Update()
     {
         // Sprawdzanie, czy gracz jest w zasięgu interakcji i czy naciśnięto klawisz interakcji
         if (isPlayerInRange && (Input.GetKeyDown(InputManager.InteractKey) || Input.GetKeyDown(InputManager.PadButtonInteract)))
@@ -95,7 +100,8 @@ public class Interactable : MonoBehaviour
 
     protected virtual void CloseUIOnExit()
     {
-        CreateIcon(transform);
+        if (instantiatedIcon == null)
+            CreateIcon(transform);
     }
 
     protected virtual void RemoveIcon()
@@ -133,7 +139,8 @@ public class Interactable : MonoBehaviour
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
 
-            CreateIcon(transform);
+            if (instantiatedIcon == null)
+                CreateIcon(transform);
         }
     }
 

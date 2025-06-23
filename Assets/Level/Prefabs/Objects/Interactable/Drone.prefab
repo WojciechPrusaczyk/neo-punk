@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +10 Health
+  m_text: Health restored
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6aef3f9811cbe0b4f8f1c7aeb7ecb472, type: 2}
   m_sharedMaterial: {fileID: 9162508436550613122, guid: 6aef3f9811cbe0b4f8f1c7aeb7ecb472, type: 2}
@@ -492,6 +492,8 @@ MonoBehaviour:
   droneName: 
   backgroundImage: {fileID: 0}
   isActivated: 0
+  isEnemyNearby:
+    _value: 0
   interactionTextCanvas: {fileID: 4834688418890229084}
 --- !u!95 &486877615717560512
 Animator:

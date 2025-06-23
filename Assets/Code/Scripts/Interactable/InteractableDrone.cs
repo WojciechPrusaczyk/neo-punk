@@ -14,11 +14,14 @@ public class InteractableDrone : Interactable
 
     [Header("Drone Activation Data")]
     public bool isActivated = false;
+    public Inactive.ObservableVariable<bool> isEnemyNearby;
+    private float searchRadius = 6.5f;
 
     [Header("Interaction floating text")]
     public CanvasGroup interactionTextCanvas;
 
     private Coroutine interactionHealCoroutine;
+    private Coroutine dimOutCoroutine;
 
     private float activatedYOffset = 0.3f;
     private float activatedLightIntensity = 7f;
@@ -69,12 +72,74 @@ public class InteractableDrone : Interactable
         }
     }
 
+    protected override void Start()
+    {
+        base.Start();
+
+        isEnemyNearby.OnChange += (oldVal, newVal) => OnIsEnemyNearbyChanged(oldVal, newVal);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        if (WorldGameManager.instance == null || WorldAIManager.instance == null)
+            return;
+
+        // Stwórz okr¹g wokó³ drona, aby sprawdziæ, czy w pobli¿u s¹ wrogowie
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, searchRadius);
+        isEnemyNearby.value = false;
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<EntityStatus>() != null && collider.GetComponent<EntityStatus>().isEnemy)
+            {
+                isEnemyNearby.value = true;
+                break;
+            }
+        }
+    }
+
+    private void OnIsEnemyNearbyChanged(bool oldVal, bool newVal)
+    {
+        if (newVal)
+        {
+            CloseUIOnExit();
+
+            // Ukryj ikonê interakcji
+            if (instantiatedIcon != null)
+            {
+                Destroy(instantiatedIcon);
+                instantiatedIcon = null;
+            }
+
+            if (isActivated)
+            {
+                if (dimOutCoroutine != null)
+                {
+                    StopCoroutine(dimOutCoroutine);
+                }
+                dimOutCoroutine = StartCoroutine(DimOutLight(.5f));
+            }
+        }
+        else
+        {
+            if (instantiatedIcon == null && isPlayerInRange)
+                CreateIcon(transform);
+
+            interactableCollider.enabled = false;
+            interactableCollider.enabled = true;
+        }
+    }
+
     protected override void Interact()
     {
         if (droneController.isDroneUIActive)
             return;
 
         if (isInteractionOnCooldown)
+            return;
+
+        if (isEnemyNearby)
             return;
 
         StartCoroutine(InteractionCooldown());
@@ -147,10 +212,8 @@ public class InteractableDrone : Interactable
         if (droneController.isDroneUIActive)
             droneController.DeactivateInterface();
 
-        if (instantiatedIcon == null && isPlayerInRange)
-        {
+        if (instantiatedIcon == null)
             CreateIcon(transform);
-        }
     }
 
     protected override void PrepareInteractable()
@@ -169,38 +232,47 @@ public class InteractableDrone : Interactable
 
     protected override void PrepareTriggerEnterPlayer(Collider2D collision)
     {
+        if (isEnemyNearby)
+            return;
+
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
 
             // Wyœwietl ikonê interakcji
-            if (!droneController.isDroneUIActive)
-            {
+            if (!droneController.isDroneUIActive && instantiatedIcon == null)
                 CreateIcon(transform);
-            }
 
             if (!isActivated)
                 return;
 
             // Leczenie gracza
-            if (interactionTextCanvas != null)
+            HealPlayer();
+        }
+    }
+
+    protected void HealPlayer()
+    {
+        if (interactionTextCanvas != null)
+        {
+            if (WorldGameManager.instance != null)
+                WorldGameManager.instance.player.playerStatus.PlayHealFX();
+
+            var playerHealth = WorldGameManager.instance.player.playerStatus;
+
+            // Ustawienie punktów zdrowia gracza na maksymalne zdrowie
+            playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth.value;
+
+            if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
             {
-                if (WorldGameManager.instance != null)
-                    WorldGameManager.instance.player.playerStatus.PlayHealFX();
-
-                var playerHealth = WorldGameManager.instance.player.playerStatus;
-                playerHealth.entityHealthPoints.value += 10;
-                if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
-                {
-                    playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
-                }
-
-                if (interactionHealCoroutine != null)
-                    StopCoroutine(interactionHealCoroutine);
-
-                interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
+                playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth;
             }
+
+            if (interactionHealCoroutine != null)
+                StopCoroutine(interactionHealCoroutine);
+
+            interactionHealCoroutine = StartCoroutine(HealInteractionTask(1.5f));
         }
     }
 
@@ -209,7 +281,25 @@ public class InteractableDrone : Interactable
         if (droneLight == null)
             return;
 
+        if (isEnemyNearby)
+            return;
+
         droneLight.intensity = lightIntensity;
+    }
+
+    private IEnumerator DimOutLight(float duration)
+    {
+        if (droneLight == null)
+            yield break;
+        float startIntensity = droneLight.intensity;
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            droneLight.intensity = Mathf.Lerp(startIntensity, 0f, elapsedTime / duration);
+            yield return null;
+        }
+        droneLight.intensity = 0f;
     }
 
     protected void ChangeLightRadiusOuter(float radius)
