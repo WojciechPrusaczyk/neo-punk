@@ -14,6 +14,7 @@ public class TimeTrialActivator : MonoBehaviour
     public bool IsPlayerNear;
     public Animator animator;
     public TimeTrialDeactivator timeTrialDeactivator;
+    public RewardUI rewardUI;
     
 
     
@@ -56,6 +57,7 @@ public class TimeTrialActivator : MonoBehaviour
             {
                 SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = true;
+                rewardUI.gameObject.SetActive(true);
                 IsPlayerNear = true;
             }
         }
@@ -69,6 +71,8 @@ public class TimeTrialActivator : MonoBehaviour
             {
                 SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
                 spriteRenderer.enabled = false;
+                rewardUI.gameObject.SetActive(false);
+
                 IsPlayerNear = false;
             }
         }
