@@ -29,11 +29,10 @@ public class TimeTrial : MonoBehaviour
     private float force = 6f;
 
     public Light2D lightAfterOpening;
-    /*
-     * Event system
-     */
     private GameObject EventsPage;
     private EventFlagsSystem _EventsFlagsSystem;
+    
+    public List<Reward> rewards = new List<Reward>();
 
     private void Awake()
     {
@@ -162,25 +161,32 @@ public class TimeTrial : MonoBehaviour
         {
             bestRewardReached = true;
             
-            StartCoroutine(PlayAnimation());
+            StartCoroutine(PlayAnimation(rewards[0]));
         }
         else if(medalTimes[1]>trialTime)
         {
-            entityStatus.AddGold(20);
+            StartCoroutine(PlayAnimation(rewards[1]));
         }
         else if(medalTimes[2]>trialTime)
         {
-            entityStatus.AddGold(10);
+            StartCoroutine(PlayAnimation(rewards[2]));
         }
     }
-    IEnumerator PlayAnimation()
+    IEnumerator PlayAnimation(Reward reward)
     {
         yield return new WaitForSeconds(1.5f);
         var verPostion = timeTrialDeactivator.transform.position;
         var newpos = new Vector3(verPostion.x, verPostion.y+1, verPostion.z);
-        GameObject itemGiven = Instantiate(itemReward, newpos, Quaternion.identity);
-        var rigidBody = itemGiven.GetComponent<Rigidbody2D>();
-        rigidBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+        if (reward.items.Count != 0)
+        {
+            foreach (var item in reward.items)
+            {
+                GameObject itemGiven = Instantiate(item, newpos, Quaternion.identity);
+                var rigidBody = itemGiven.GetComponent<Rigidbody2D>();
+                rigidBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+            }
+        }
+        entityStatus.AddGold(reward.goldAmount);
         lightAfterOpening.enabled = true;
     }
 }
