@@ -19,7 +19,7 @@ MonoBehaviour:
   m_DefaultVolumeProfile: {fileID: 11400000, guid: ca1763ea3dfa5b24ea7f1cdaea26f6dd, type: 2}
   m_RenderingLayerNames:
   - Default
-  m_ValidRenderingLayers: 0
+  m_ValidRenderingLayers: 1
   lightLayerName0: 
   lightLayerName1: 
   lightLayerName2: 

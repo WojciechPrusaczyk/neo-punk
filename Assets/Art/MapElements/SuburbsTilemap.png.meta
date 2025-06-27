@@ -1,0 +1,1362 @@
+fileFormatVersion: 2
+guid: 13eda090f4377bb4e873aadea5e17f89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2430259110097167413
+    second: SuburbsTilemap_0
+  - first:
+      213: 5686412539144993482
+    second: SuburbsTilemap_1
+  - first:
+      213: 8373630456192801507
+    second: SuburbsTilemap_2
+  - first:
+      213: 4111880119402678548
+    second: SuburbsTilemap_3
+  - first:
+      213: 4698712583120148202
+    second: SuburbsTilemap_4
+  - first:
+      213: -8739060976719970734
+    second: SuburbsTilemap_5
+  - first:
+      213: 7232697128623833177
+    second: SuburbsTilemap_6
+  - first:
+      213: 4209789320083738016
+    second: SuburbsTilemap_7
+  - first:
+      213: -7038141504264130960
+    second: SuburbsTilemap_8
+  - first:
+      213: -6346459251001942615
+    second: SuburbsTilemap_9
+  - first:
+      213: -5671603712190009655
+    second: SuburbsTilemap_10
+  - first:
+      213: -2531526305702686356
+    second: SuburbsTilemap_11
+  - first:
+      213: 3989373066076767215
+    second: SuburbsTilemap_12
+  - first:
+      213: 6470181650895135683
+    second: SuburbsTilemap_13
+  - first:
+      213: 7844848376818989312
+    second: SuburbsTilemap_14
+  - first:
+      213: -3193058118879199978
+    second: SuburbsTilemap_15
+  - first:
+      213: -5297018736009774702
+    second: SuburbsTilemap_16
+  - first:
+      213: 734378119860460595
+    second: SuburbsTilemap_17
+  - first:
+      213: -4611542113174957224
+    second: SuburbsTilemap_18
+  - first:
+      213: -6266547424841794542
+    second: SuburbsTilemap_19
+  - first:
+      213: 8730115969444651090
+    second: SuburbsTilemap_20
+  - first:
+      213: -9036079793529597899
+    second: SuburbsTilemap_21
+  - first:
+      213: 3694477538782969893
+    second: SuburbsTilemap_22
+  - first:
+      213: -525145519677465733
+    second: SuburbsTilemap_23
+  - first:
+      213: -3083530932295776876
+    second: SuburbsTilemap_24
+  - first:
+      213: 6704473327464660594
+    second: SuburbsTilemap_25
+  - first:
+      213: 8566419733752844691
+    second: SuburbsTilemap_26
+  - first:
+      213: -8944340327511877699
+    second: SuburbsTilemap_27
+  - first:
+      213: 7787051524264204980
+    second: SuburbsTilemap_28
+  - first:
+      213: 5396440736611370210
+    second: SuburbsTilemap_29
+  - first:
+      213: -306798530479965274
+    second: SuburbsTilemap_30
+  - first:
+      213: 138736366547766427
+    second: SuburbsTilemap_31
+  - first:
+      213: -5213820314262139345
+    second: SuburbsTilemap_32
+  - first:
+      213: -1749392849999903603
+    second: SuburbsTilemap_33
+  - first:
+      213: -3381101313617859544
+    second: SuburbsTilemap_34
+  - first:
+      213: -7897632542989925308
+    second: SuburbsTilemap_35
+  - first:
+      213: -4459775554954700790
+    second: SuburbsTilemap_36
+  - first:
+      213: -1257519793686089065
+    second: SuburbsTilemap_37
+  - first:
+      213: -1749262441741394858
+    second: SuburbsTilemap_38
+  - first:
+      213: 8360485020822008322
+    second: SuburbsTilemap_39
+  - first:
+      213: -6149268552721883958
+    second: SuburbsTilemap_40
+  - first:
+      213: -5967148882840478098
+    second: SuburbsTilemap_41
+  - first:
+      213: -166608289904905953
+    second: SuburbsTilemap_42
+  - first:
+      213: 4364097204696260793
+    second: SuburbsTilemap_43
+  - first:
+      213: 758959799171780999
+    second: SuburbsTilemap_44
+  - first:
+      213: -1076793292933283822
+    second: SuburbsTilemap_45
+  - first:
+      213: -6703029624048277080
+    second: SuburbsTilemap_46
+  - first:
+      213: -5731581314361586194
+    second: SuburbsTilemap_47
+  - first:
+      213: 3450552167132679549
+    second: SuburbsTilemap_48
+  - first:
+      213: 1886261862336228945
+    second: SuburbsTilemap_49
+  - first:
+      213: 268482392273065990
+    second: SuburbsTilemap_50
+  - first:
+      213: -5736189247683446582
+    second: SuburbsTilemap_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SuburbsTilemap_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 256
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534af79d8c30ab120800000000000000
+      internalID: 2430259110097167413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 287
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca701293123aee40800000000000000
+      internalID: 5686412539144993482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 256
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea93c5d88c153470800000000000000
+      internalID: 8373630456192801507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 256
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419ccf3de25501930800000000000000
+      internalID: 4111880119402678548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_4
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 287
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6d882133e253140800000000000000
+      internalID: 4698712583120148202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 256
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25eb02cd75e98b680800000000000000
+      internalID: -8739060976719970734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_6
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 287
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9508c9fc7b3bf5460800000000000000
+      internalID: 7232697128623833177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_7
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 287
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad03da051d2c6a30800000000000000
+      internalID: 4209789320083738016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_8
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 287
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e276f679f735e90800000000000000
+      internalID: -7038141504264130960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_9
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 287
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad998aafe8dce7a0800000000000000
+      internalID: -6346459251001942615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_10
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 287
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cea024297a6a41b0800000000000000
+      internalID: -5671603712190009655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_11
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 287
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61d801dc363edcd0800000000000000
+      internalID: -2531526305702686356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 159
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe34400caa91d5730800000000000000
+      internalID: 3989373066076767215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 218
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3ead55ee3bac950800000000000000
+      internalID: 6470181650895135683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_14
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 223
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0097811f8008edc60800000000000000
+      internalID: 7844848376818989312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_15
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 231
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d3705fe8affa3d0800000000000000
+      internalID: -3193058118879199978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 232
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2997c8f36853d76b0800000000000000
+      internalID: -5297018736009774702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_17
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 232
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c1a155209013a00800000000000000
+      internalID: 734378119860460595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 231
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853d37d81e28000c0800000000000000
+      internalID: -4611542113174957224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_19
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 226
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c7a269150c809a0800000000000000
+      internalID: -6266547424841794542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_20
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 226
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250a6b6583a972970800000000000000
+      internalID: 8730115969444651090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_21
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 226
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53055909d45699280800000000000000
+      internalID: -9036079793529597899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_22
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 226
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52081d15fbb654330800000000000000
+      internalID: 3694477538782969893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 159
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b9c34aeee46b8f0800000000000000
+      internalID: -525145519677465733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_24
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 185
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495c49e44f81535d0800000000000000
+      internalID: -3083530932295776876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_25
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 159
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ebc9138f21b0d50800000000000000
+      internalID: 6704473327464660594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_26
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 191
+        width: 121
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3911c3b6c5902e670800000000000000
+      internalID: 8566419733752844691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_27
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 191
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7147c7cd15fd380800000000000000
+      internalID: -8944340327511877699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_28
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 191
+        width: 158
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba9e6f8a1a211c60800000000000000
+      internalID: 7787051524264204980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_29
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 167
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e40b25224204ea40800000000000000
+      internalID: 5396440736611370210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_30
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 70
+        width: 121
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab312dac580ebbf0800000000000000
+      internalID: -306798530479965274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_31
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 159
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c02858df3ece100800000000000000
+      internalID: 138736366547766427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_32
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 152
+        width: 166
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e80b55c0ac4a7b0800000000000000
+      internalID: -5213820314262139345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 157
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84c52bb878e8b7e0800000000000000
+      internalID: -1749392849999903603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_34
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 131
+        width: 66
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c6334e44ae311d0800000000000000
+      internalID: -3381101313617859544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_35
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 131
+        width: 63
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444458cab09f56290800000000000000
+      internalID: -7897632542989925308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_36
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 135
+        width: 45
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0854fcf2c1bb12c0800000000000000
+      internalID: -4459775554954700790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_37
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 127
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792715709646c8ee0800000000000000
+      internalID: -1257519793686089065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 225
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c5215c31f59b7e0800000000000000
+      internalID: -1749262441741394858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_39
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 95
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202f118a4d8660470800000000000000
+      internalID: 8360485020822008322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_40
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 43
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc188ed4d869aaa0800000000000000
+      internalID: -6149268552721883958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_41
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 78
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e9c64d4bd603da0800000000000000
+      internalID: -5967148882840478098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_42
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 57
+        width: 98
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11359f94a610bdf0800000000000000
+      internalID: -166608289904905953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_43
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 14
+        width: 40
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b022332943609c30800000000000000
+      internalID: 4364097204696260793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_44
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 8
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7819f6c8aed588a00800000000000000
+      internalID: 758959799171780999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_45
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 2
+        width: 55
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210403684367e01f0800000000000000
+      internalID: -1076793292933283822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_46
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 55
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9aea3321e0af2a0800000000000000
+      internalID: -6703029624048277080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_47
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 48
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed063c69255570b0800000000000000
+      internalID: -5731581314361586194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_48
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 23
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7dc5e80ae2d2ef20800000000000000
+      internalID: 3450552167132679549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_49
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 16
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15eeae18b295d2a10800000000000000
+      internalID: 1886261862336228945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_50
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60812e33057d9b300800000000000000
+      internalID: 268482392273065990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuburbsTilemap_51
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 0
+        width: 160
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8b9675546f460b0800000000000000
+      internalID: -5736189247683446582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
