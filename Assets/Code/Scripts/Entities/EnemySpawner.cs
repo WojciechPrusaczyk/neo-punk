@@ -32,7 +32,11 @@ public class EnemySpawner : MonoBehaviour
             
             Debug.Log("spawning enemy" + enemyPrefab);
             GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            CircleCollider2D cc = enemy.GetComponent<CircleCollider2D>();
+            
+            if (cc != null) cc.enabled = true;
             instantiatedEnemy = enemy;
+            
             OnSpawn?.Invoke(instantiatedEnemy);
             if (WorldAIManager.instance != null)
                 WorldAIManager.instance.AddEnemyToEnemiesList(enemy);

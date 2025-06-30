@@ -330,8 +330,6 @@ public class EntityStatus : MonoBehaviour
         else
         {
             StartCoroutine(DeathAnimation(deathColor, 0.1f));
-            OnEntityDeath?.Invoke(); 
-
         }
     }
 

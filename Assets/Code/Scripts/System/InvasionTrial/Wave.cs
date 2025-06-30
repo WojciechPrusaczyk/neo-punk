@@ -45,24 +45,21 @@ public class Wave : MonoBehaviour
         GameObject fx = Instantiate(flame, pos, Quaternion.identity);
         
         float fxDuration = 0f;
-        Animator anim = fx.GetComponentInChildren<Animator>();
         
-        fxDuration = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
-
+        
         GameObject enemy = Instantiate(prefab, pos, Quaternion.identity, transform);
 
-        EnemyAI ai = enemy.GetComponentInChildren<EnemyAI>();
-        ai.enabled = false;
-        ai.state   = EnemyAI.EnemyState.Chasing;
-
-        if (fxDuration > 0f)
-            yield return new WaitForSeconds(fxDuration);
-
-        Destroy(fx);
-        ai.enabled = true;
+        
+        yield return new WaitForSeconds(2);
+        CircleCollider2D cc = enemy.GetComponent<CircleCollider2D>();
+        if (cc != null) cc.enabled = true;
+        
+        Debug.Log("enabled AI");
 
         var status = enemy.GetComponentInChildren<EntityStatus>();
         status.OnEntityDeath += DecreaseEnemyNumber;
+        
+        Destroy(fx);
     }
 
     private void DecreaseEnemyNumber()
@@ -72,11 +69,5 @@ public class Wave : MonoBehaviour
             waveEnded = true;
         invasionTrial.UpdateWaveStateUI();
 
-    }
-
-    private void Update()
-    {
-        if (waveStarted && !waveEnded && transform.childCount == 0)
-            waveEnded = true;
     }
 }

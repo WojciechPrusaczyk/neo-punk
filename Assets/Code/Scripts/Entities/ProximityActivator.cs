@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.AI;       // example component
+using UnityEngine.AI;
+using UnityEngine.Rendering.Universal; // example component
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class ProximityActivator : MonoBehaviour
@@ -17,7 +18,7 @@ public class ProximityActivator : MonoBehaviour
 
     private void Reset()
     {
-        var trigger = GetComponent<SphereCollider>();
+        var trigger = GetComponent<CircleCollider2D>();
         trigger.isTrigger = true;
         trigger.radius    = radius;
     }
@@ -25,10 +26,10 @@ public class ProximityActivator : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        SetActive(true);
+        SetActiv(true);
     }
 
-    private void SetActive(bool value)
+    private void SetActiv(bool value)
     {
         if (value == isActive) return;
         isActive = value;
@@ -36,5 +37,6 @@ public class ProximityActivator : MonoBehaviour
         foreach (var s in scripts)   if (s) s.enabled = value;
         foreach (var s in animators)   if (s) s.enabled = value;
         foreach (var s in colliders)   if (s) s.enabled = value;
+        Debug.Log("activating Enemy");
     }
 }

@@ -932,10 +932,17 @@ public class Player : MonoBehaviour
         if (wallJumpLock) return;
 
         StartCoroutine(WallJumpLockRoutine());
+
         float velX = -wallDirection * wallJumpHorizontalForce;
         float velY =  wallJumpVerticalForce;
-        transform.Rotate(new Vector3(0f, 180f, 0f));
-        playerStatus.isFacedRight = !playerStatus.isFacedRight;
+
+        if ((wallDirection < 0 && !playerStatus.isFacedRight) ||
+            (wallDirection > 0 && playerStatus.isFacedRight))
+        {
+            transform.Rotate(new Vector3(0f, 180f, 0f));
+            playerStatus.isFacedRight = !playerStatus.isFacedRight;
+        }
+
         playerBody.velocity = new Vector2(velX, velY);
     }
     
