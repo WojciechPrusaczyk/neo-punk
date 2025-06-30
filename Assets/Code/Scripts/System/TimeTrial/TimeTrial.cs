@@ -34,6 +34,8 @@ public class TimeTrial : MonoBehaviour
     
     public List<Reward> rewards = new List<Reward>();
 
+    public MissionObjectiveUpdater objectiveUpdater;
+
     private void Awake()
     {
         EventsPage = GameObject.Find("EventsFlags");
@@ -42,6 +44,8 @@ public class TimeTrial : MonoBehaviour
         InitializeIndicators();
         player = GameObject.FindGameObjectWithTag("Player");
         entityStatus = player.GetComponent<EntityStatus>();
+
+        objectiveUpdater = GetComponent<MissionObjectiveUpdater>();
     }
     
     private void Update()
@@ -105,6 +109,18 @@ public class TimeTrial : MonoBehaviour
         timeTrialDeactivator.animator.SetTrigger("Opening");
         //Rewardy za przejscie
         GiveRewards();
+
+        // Finish mission if active
+        if (PlayerObjectiveTracker.instance == null)
+            return;
+
+        if (PlayerObjectiveTracker.instance.currentMission == null)
+            return;
+
+        if (objectiveUpdater == null)
+            return;
+
+        objectiveUpdater.SendFinishObjectiveUpdate();
     }
     
     public void ExitTrial()

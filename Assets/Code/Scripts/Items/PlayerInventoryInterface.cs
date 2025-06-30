@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
+using static Enums;
 
 public class PlayerInventoryInterface : MonoBehaviour
 {
@@ -56,6 +57,8 @@ public class PlayerInventoryInterface : MonoBehaviour
 
     private VisualElement elementalIcon;
     private Label elementalLabel;
+
+    private UnityEngine.UIElements.Button OpenMissionsButton;
 
     private Label healthTitle;
     private Label movementSpeedTitle;
@@ -143,6 +146,7 @@ public class PlayerInventoryInterface : MonoBehaviour
          */
         missionInfoHeaderTitle = root.Q<Label>("MissionInfoHeaderTitle");
         missionInfoDescription = root.Q<Label>("MissionInfoDescription");
+        OpenMissionsButton = root.Q<UnityEngine.UIElements.Button>("ButtonOpenMissions");
 
         SetUnlockedSlotsCount();
 
@@ -150,6 +154,11 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         isEquipmentShown = true;
         selectedItemIndex = 0;
+
+        OpenMissionsButton.clicked += () =>
+        {
+            UserInterfaceController.instance.ActivateInterface(InterfaceType.MissionInterface);
+        };
     }
 
     private void OnDisable()
@@ -174,20 +183,6 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         if (isEquipmentShown)
         {
-            if (Input.GetKeyDown(InputManager.PrevQuest))
-            {
-                if (mission != null)
-                {
-                    PlayerObjectiveTracker.instance.ActivatePreviousMission();
-                }
-            }else if (Input.GetKeyDown(InputManager.NextQuest))
-            {
-                if (mission != null)
-                {
-                    PlayerObjectiveTracker.instance.ActivateNextMission();
-                }
-            }
-
             if (!isPlayerPickingItem)
             {
                 // Zmiana rodzaju menu eq przeglądanie przedmiotów / wszystko
@@ -239,15 +234,6 @@ public class PlayerInventoryInterface : MonoBehaviour
 
         if (goldTitle != null)
             goldTitle.text = $"{playerStatus.gold:F1} G";
-
-        /*
-         * Current mission
-         */
-        if (mission)
-        {
-            missionInfoHeaderTitle.text = mission.MissionName;
-            missionInfoDescription.text = mission.MissionDescription;
-        }
     }
 
     private void SetUnlockedSlotsCount()
@@ -282,8 +268,8 @@ public class PlayerInventoryInterface : MonoBehaviour
     {
         HideItemInspector();
 
-        userInterfaceController.ActivateInterface(0);
-        gameObject.active = false;
+        userInterfaceController.ActivateInterface(InterfaceType.MainUserInterface);
+        gameObject.SetActive(false);
         rootVisualElement.RemoveFromClassList("inspectorShown");
 
         isEquipmentShown = false;

@@ -1354,7 +1354,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SuburbsTilemap_0: 2430259110097167413
+      SuburbsTilemap_1: 5686412539144993482
+      SuburbsTilemap_10: -5671603712190009655
+      SuburbsTilemap_11: -2531526305702686356
+      SuburbsTilemap_12: 3989373066076767215
+      SuburbsTilemap_13: 6470181650895135683
+      SuburbsTilemap_14: 7844848376818989312
+      SuburbsTilemap_15: -3193058118879199978
+      SuburbsTilemap_16: -5297018736009774702
+      SuburbsTilemap_17: 734378119860460595
+      SuburbsTilemap_18: -4611542113174957224
+      SuburbsTilemap_19: -6266547424841794542
+      SuburbsTilemap_2: 8373630456192801507
+      SuburbsTilemap_20: 8730115969444651090
+      SuburbsTilemap_21: -9036079793529597899
+      SuburbsTilemap_22: 3694477538782969893
+      SuburbsTilemap_23: -525145519677465733
+      SuburbsTilemap_24: -3083530932295776876
+      SuburbsTilemap_25: 6704473327464660594
+      SuburbsTilemap_26: 8566419733752844691
+      SuburbsTilemap_27: -8944340327511877699
+      SuburbsTilemap_28: 7787051524264204980
+      SuburbsTilemap_29: 5396440736611370210
+      SuburbsTilemap_3: 4111880119402678548
+      SuburbsTilemap_30: -306798530479965274
+      SuburbsTilemap_31: 138736366547766427
+      SuburbsTilemap_32: -5213820314262139345
+      SuburbsTilemap_33: -1749392849999903603
+      SuburbsTilemap_34: -3381101313617859544
+      SuburbsTilemap_35: -7897632542989925308
+      SuburbsTilemap_36: -4459775554954700790
+      SuburbsTilemap_37: -1257519793686089065
+      SuburbsTilemap_38: -1749262441741394858
+      SuburbsTilemap_39: 8360485020822008322
+      SuburbsTilemap_4: 4698712583120148202
+      SuburbsTilemap_40: -6149268552721883958
+      SuburbsTilemap_41: -5967148882840478098
+      SuburbsTilemap_42: -166608289904905953
+      SuburbsTilemap_43: 4364097204696260793
+      SuburbsTilemap_44: 758959799171780999
+      SuburbsTilemap_45: -1076793292933283822
+      SuburbsTilemap_46: -6703029624048277080
+      SuburbsTilemap_47: -5731581314361586194
+      SuburbsTilemap_48: 3450552167132679549
+      SuburbsTilemap_49: 1886261862336228945
+      SuburbsTilemap_5: -8739060976719970734
+      SuburbsTilemap_50: 268482392273065990
+      SuburbsTilemap_51: -5736189247683446582
+      SuburbsTilemap_6: 7232697128623833177
+      SuburbsTilemap_7: 4209789320083738016
+      SuburbsTilemap_8: -7038141504264130960
+      SuburbsTilemap_9: -6346459251001942615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

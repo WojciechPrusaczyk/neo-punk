@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d399bd5943ee89468b6f10f7392faa4, type: 3}
+  m_Name: Corpse Cargo
+  m_EditorClassIdentifier: 
+  MissionName: Corpse Cargo
+  isFinished: 0
+  MissionDescription: "A crashed corpo transporter lies silent in the slums. Rumors
+    say it carried valuable gear. Find it before someone else does\u2026 or before
+    it draws too much attention."
+  objectives:
+  - ObjectiveID: 0
+    ObjectiveName: Find the corpo transporter
+    isCompleted: 0
+    Requirements: []
+  - ObjectiveID: 1
+    ObjectiveName: Locate nearby crashed drone
+    isCompleted: 1
+    Requirements: []
+  - ObjectiveID: 2
+    ObjectiveName: Clear the transporter zone (finish time trial)
+    isCompleted: 0
+    Requirements: []
+  requireObjectiveOrder: 1
+  references:
+    version: 2
+    RefIds: []

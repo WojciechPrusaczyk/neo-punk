@@ -72,14 +72,14 @@ public class UserInterfaceController : MonoBehaviour
         {
             interfaceObject.interfaceRoot.SetActive(false);
         }
-        ActivateInterface(DefaultInterface);
+        ActivateInterface(InterfaceType.MainUserInterface);
     }
 
     void Update()
     {
         if ( !Interfaces[DefaultInterface].interfaceRoot.activeSelf && CanPlayerQuitToDefault && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)))
         {
-            ActivateInterface(DefaultInterface);
+            ActivateInterface(InterfaceType.MainUserInterface);
             if (WorldGameManager.instance.player.isInDialogue)
                 WorldGameManager.instance.player.isInDialogue = false;
 
@@ -144,5 +144,12 @@ public class UserInterfaceController : MonoBehaviour
         if (interfaceToActivateIndex < Interfaces.Count)
             ActivateInterface(Interfaces[interfaceToActivateIndex].interfaceRoot);
         else Debug.Log("Invalid interface index.");
+    }
+
+    public void ActivateInterface(InterfaceType interfaceType)
+    {
+        if ((int)interfaceType < Interfaces.Count)
+            ActivateInterface(Interfaces[(int)interfaceType].interfaceRoot);
+        else Debug.Log("Invalid interface type.");
     }
 }

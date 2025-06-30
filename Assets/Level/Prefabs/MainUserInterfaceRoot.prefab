@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df03f3a7329294942a9046db16ea0dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCampfireUIActive: 0
+  isDroneUIActive: 0
 --- !u!1 &2483501945628518315
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +422,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInterfaceRoot: {fileID: 9043579207754872659}
   pauseMenu: {fileID: 8179797877404052738}
+--- !u!1 &5858212886235986131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3542498637249680292}
+  - component: {fileID: 8036538637244975308}
+  m_Layer: 0
+  m_Name: MissionInterface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3542498637249680292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858212886235986131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5583376193032550987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8036538637244975308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858212886235986131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 9e11d46c163d38742bcbab29071eacd5, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 77eafbc5785bb124b815c615c8c17be8, type: 3}
+  m_SortingOrder: 0
 --- !u!1 &6952751988382348014
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +724,7 @@ RectTransform:
   - {fileID: 8710505911294474839}
   - {fileID: 8109444600775906568}
   - {fileID: 8839543913415833825}
+  - {fileID: 3542498637249680292}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -797,6 +850,12 @@ MonoBehaviour:
     FreezeGame: 0
     ShowsOnTopOfMainUi: 0
     ShowCursor: 0
+  - interfaceRoot: {fileID: 5858212886235986131}
+    KeyboardTrigger: 0
+    ControlerTrigger: 0
+    FreezeGame: 1
+    ShowsOnTopOfMainUi: 0
+    ShowCursor: 0
   DefaultInterface: 0
 --- !u!114 &2420656263913210624
 MonoBehaviour:
@@ -810,5 +869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a357ae971961743a00bea660b72db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectiveDatabase: {fileID: 0}
   objectiveList: []
   currentMission: {fileID: 0}

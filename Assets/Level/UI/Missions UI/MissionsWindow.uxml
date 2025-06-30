@@ -1,0 +1,27 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/Missions%20UI/Missions.uss?fileID=7433441132597879392&amp;guid=ed0e0491ce12bfa4291960010314ac79&amp;type=3#Missions" />
+    <engine:VisualElement name="VisualElement" class="main-window" style="flex-grow: 1; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; background-color: rgba(0, 0, 0, 0.81);">
+        <engine:VisualElement name="MissionData" style="flex-grow: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <engine:VisualElement name="Title" style="flex-grow: 1;">
+                <engine:Label text="afwaafwawfwaafwwfafwafwafawawf" name="MissionTitle" class="mission-title" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Description" style="flex-grow: 1;">
+                <engine:Label text="This is a placeholder for mission description" name="MissionDescription" class="mission-description" style="color: rgb(255, 255, 255); white-space: normal; text-overflow: clip; -unity-text-align: upper-left; font-size: 64px;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="MissionObjectives" style="flex-grow: 1;">
+                <engine:Label text="The objectives required to finish the mission:" name="ObjectivesInfo" class="objectives-required" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="Filler" style="flex-grow: 1;" />
+        <engine:VisualElement name="Controls" style="flex-grow: 0; flex-direction: row; padding-left: 0; padding-bottom: 0;">
+            <engine:VisualElement name="PREV" style="flex-grow: 0; flex-direction: row; align-items: center; margin-right: 10px; margin-left: 0;">
+                <engine:Button focusable="false" style="background-image: url(&quot;project://database/Assets/Art/UserInterface/Keys/Keycaps.png?fileID=1238936440622097640&amp;guid=7c36c9005e306a042b8869fbb5c65185&amp;type=3#Keycaps_25&quot;); font-size: 32px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; background-color: rgba(188, 188, 188, 0);" />
+                <engine:Label text="Previous Quest" name="LabelPrevious" class="controls" style="font-size: 50px; margin-right: 10px; margin-left: 10px;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="NEXT" style="flex-grow: 0; flex-direction: row; align-items: center; margin-right: 0; margin-left: 10px;">
+                <engine:Button focusable="false" style="background-image: url(&quot;project://database/Assets/Art/UserInterface/Keys/Keycaps.png?fileID=-180389817524133309&amp;guid=7c36c9005e306a042b8869fbb5c65185&amp;type=3#Keycaps_26&quot;); font-size: 32px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; background-color: rgba(188, 188, 188, 0);" />
+                <engine:Label text="Next Quest" name="LabelNext" class="controls" style="font-size: 50px; margin-right: 10px; margin-left: 10px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

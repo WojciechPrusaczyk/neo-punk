@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Enums;
 
 public class DialogScript : MonoBehaviour
 {
@@ -173,7 +174,7 @@ public class DialogScript : MonoBehaviour
 
         currentLineIndex = 0;
 
-        userInterfaceController.ActivateInterface(4);
+        userInterfaceController.ActivateInterface(InterfaceType.DialogueInterface);
         ShowLine(0);
     }
     
@@ -250,7 +251,7 @@ public class DialogScript : MonoBehaviour
 
         player.isInDialogue = false;
 
-        userInterfaceController.ActivateInterface(0);
+        userInterfaceController.ActivateInterface(InterfaceType.MainUserInterface);
 
         dialogData.hasBeenAlreadySeen = true;
         dialogData = null;

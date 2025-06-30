@@ -1798,6 +1798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100838473461034165}
   - component: {fileID: 4753244925039302774}
+  - component: {fileID: 1958747241390504188}
   m_Layer: 0
   m_Name: TimeTrial
   m_TagString: Untagged
@@ -1855,6 +1856,20 @@ MonoBehaviour:
   itemReward: {fileID: 0}
   lightAfterOpening: {fileID: 4119971250074472308}
   rewards: []
+--- !u!114 &1958747241390504188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442070723534128885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22df77b58dca3cc42ac7fd54fbb2dec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionInfo: {fileID: 11400000, guid: fcfc1284396ba214aa05df06f7ba346b, type: 2}
+  objectiveId: 2
 --- !u!1 &7255304106302959427
 GameObject:
   m_ObjectHideFlags: 0

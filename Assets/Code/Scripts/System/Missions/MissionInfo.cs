@@ -62,6 +62,8 @@ public class MissionInfo : ScriptableObject
     [Header("Mission Objectives")]
     public List<MissionObjective> objectives = new List<MissionObjective>();
 
+    public bool requireObjectiveOrder = false;
+
     public void InitializeAllObjectives()
     {
         isFinished = false;

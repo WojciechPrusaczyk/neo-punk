@@ -55,4 +55,16 @@ public class Enums : MonoBehaviour
         Rare,
         Quantum
     }
+
+    public enum InterfaceType
+    {
+        MainUserInterface,
+        PauseMenuInterface,
+        OptionsInterface,
+        EquipmentInterface,
+        DialogueInterface,
+        CampfireInterface,
+        YouDiedPopUp,
+        MissionInterface
+    }
 }

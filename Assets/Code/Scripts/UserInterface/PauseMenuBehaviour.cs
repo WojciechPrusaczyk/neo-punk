@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using static Enums;
 using Cursor = UnityEngine.Cursor;
 
 public class PauseMenuBehaviour : MonoBehaviour
@@ -58,7 +59,7 @@ public class PauseMenuBehaviour : MonoBehaviour
 
     public void buttonResume()
     {
-        _userInterfaceController.ActivateInterface(0);
+        _userInterfaceController.ActivateInterface(InterfaceType.MainUserInterface);
 
         if (WorldSoundFXManager.instance != null)
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonBackSFX, Enums.SoundType.SFX);

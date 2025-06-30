@@ -1,0 +1,51 @@
+.mission-title {
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    font-size: 128px;
+    -unity-text-align: middle-left;
+    white-space: normal;
+}
+
+.main-window {
+}
+
+.mission-description {
+    font-size: 72px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+}
+
+.controls {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+}
+
+.objective {
+    font-size: 24px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+}
+
+.controls {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+}
+
+.objective-uncompleted {
+    color: rgb(255, 206, 206);
+}
+
+.objective-completed {
+    color: rgb(177, 255, 141);
+}
+
+.objectives-required {
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+    font-size: 48px;
+}
+
+.objective {
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/edit-undo.brk.ttf?fileID=12800000&guid=b9ffa119164ffe246929f4a4f1c9fe49&type=3#edit-undo.brk");
+}

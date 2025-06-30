@@ -22,6 +22,8 @@ public class HomelessManAi : MonoBehaviour
     private GameObject EventsPage;
     private EventFlagsSystem _EventsFlagsSystem;
 
+    private MissionInteraction_Controller corpseMissionController;
+
     private void Awake()
     {
         player = FindFirstObjectByType<Player>();
@@ -48,6 +50,8 @@ public class HomelessManAi : MonoBehaviour
                 Debug.LogError("Animator component missing on Appearance.");
             }
         }
+
+        corpseMissionController = GetComponent<MissionInteraction_Controller>();
     }
 
     private void Update()
@@ -93,22 +97,42 @@ public class HomelessManAi : MonoBehaviour
         tooltip.SetActive(false);
         animator.SetTrigger("stopWaving");
 
-        // Tymczasowo próbujemy zakończyć aktualną misję
-        // To będzie można przenieść do innego miejsca
-        PlayerObjectiveTracker.instance.FinishCurrentMission();
-
         if (!_EventsFlagsSystem.IsEventDone("homelessManFirstInteraction"))
         {
             dialogInterface.StartDialog(0);
             _EventsFlagsSystem.FinishEvent("homelessManFirstInteraction");
         }
+
         else if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+        {
             dialogInterface.StartDialog(1);
+            if (corpseMissionController != null)
+            {
+                corpseMissionController.AddMissionToObjectives();
+
+                if (corpseMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
+                {
+                    if (PlayerObjectiveTracker.instance.AreAllCurrentMissionObjectivesComplete())
+                    {
+                        PlayerObjectiveTracker.instance.FinishCurrentMission();
+                    }
+                }
+            }
+        }   
+
         else if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
+        {
             dialogInterface.StartDialog(2);
+        }
+
         else if (!_EventsFlagsSystem.IsEventDone("hasPaid"))
+        {
             dialogInterface.StartDialog(3);
+        }
+
         else
+        {
             dialogInterface.StartDialog(4);
+        }
     }
 }

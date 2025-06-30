@@ -146,6 +146,19 @@ public class PlayerObjectiveTracker : MonoBehaviour
             }
         }
 
+        foreach (MissionObjectiveUpdater objectiveUpdater in FindObjectsByType<MissionObjectiveUpdater>(FindObjectsSortMode.None))
+        {
+            if (objectiveDatabase != null && objectiveDatabase.GetMissionByName(objectiveUpdater.MissionInfo.MissionName) != null)
+            {
+                MissionInfo.MissionObjective objective = objectiveDatabase.GetMissionByName(objectiveUpdater.MissionInfo.MissionName)
+                    .objectives.FirstOrDefault(obj => obj.ObjectiveID == objectiveUpdater.ObjectiveId);
+                if (objective != null && objective.isCompleted)
+                {
+                    objectiveUpdater.gameObject.SetActive(false);
+                }
+            }
+        }
+
         if (currentMission != null)
         {
             UpdateActiveMission(currentMission);
@@ -222,11 +235,22 @@ public class PlayerObjectiveTracker : MonoBehaviour
 
         EnemyKilledEvent killEvent = new EnemyKilledEvent(typeOfEnemyKilled);
 
-        foreach (var objective in currentMission.objectives)
+        if (currentMission.requireObjectiveOrder)
         {
-            if (!objective.isCompleted)
+            var activeObjective = currentMission.objectives.FirstOrDefault(o => !o.isCompleted);
+            if (activeObjective != null)
             {
-                objective.ProcessEvent(killEvent, this);
+                activeObjective.ProcessEvent(killEvent, this);
+            }
+        }
+        else
+        {
+            foreach (var objective in currentMission.objectives)
+            {
+                if (!objective.isCompleted)
+                {
+                    objective.ProcessEvent(killEvent, this);
+                }
             }
         }
     }
@@ -235,24 +259,24 @@ public class PlayerObjectiveTracker : MonoBehaviour
     {
         if (objective == null || objective.isCompleted) return;
 
+        if (currentMission != null && currentMission.requireObjectiveOrder)
+        {
+            int objectiveIndex = currentMission.objectives.IndexOf(objective);
+            if (objectiveIndex > 0)
+            {
+                if (!currentMission.objectives[objectiveIndex - 1].isCompleted)
+                {
+                    return;
+                }
+            }
+        }
+
         if (objective.AreAllRequirementsMet())
         {
             objective.isCompleted = true;
             Debug.Log($"Objective '{objective.ObjectiveName}' completed in mission '{currentMission?.MissionName}'.");
             if (mainUserInterfaceController != null) mainUserInterfaceController.SetCurrentMission(currentMission);
             if (playerInventoryInterface != null) playerInventoryInterface.SetCurrentObjective(currentMission);
-            CheckMissionCompletion(currentMission);
-        }
-    }
-
-    private void CheckMissionCompletion(MissionInfo mission)
-    {
-        if (mission == null || mission.isFinished) return;
-
-        bool allObjectivesCompleted = mission.objectives.All(obj => obj.isCompleted);
-        if (allObjectivesCompleted)
-        {
-            FinishCurrentMission();
         }
     }
 
@@ -410,33 +434,27 @@ public class PlayerObjectiveTracker : MonoBehaviour
         SetPreviousMissionActive(this.currentMission);
     }
 
+    public bool AreAllCurrentMissionObjectivesComplete()
+    {
+        if (currentMission == null)
+        {
+            return false;
+        }
+
+        if (currentMission.objectives == null || currentMission.objectives.Count == 0)
+        {
+            return true;
+        }
+
+        return currentMission.objectives.All(obj => obj.isCompleted);
+    }
+
     public void FinishCurrentMission()
     {
         if (currentMission == null)
             return;
 
-        bool allObjectivesCompleted = true;
-        if (currentMission.objectives != null)
-        {
-            foreach (var objective in currentMission.objectives)
-            {
-                if (objective == null) continue;
-                if (!objective.isCompleted)
-                {
-                    if (!objective.AreAllRequirementsMet())
-                    {
-                        allObjectivesCompleted = false;
-                        break;
-                    }
-                    else
-                    {
-                        objective.isCompleted = true;
-                    }
-                }
-            }
-        }
-
-        if (allObjectivesCompleted)
+        if (AreAllCurrentMissionObjectivesComplete())
         {
             currentMission.isFinished = true;
             Debug.Log($"Mission '{currentMission.MissionName}' completed.");
@@ -469,6 +487,26 @@ public class PlayerObjectiveTracker : MonoBehaviour
         {
             Debug.LogWarning("No active mission, cannot change objective status.");
             return;
+        }
+
+        if (status && currentMission.requireObjectiveOrder)
+        {
+            int objectiveIndex = currentMission.objectives.FindIndex(obj => obj.ObjectiveID == objectiveID);
+
+            if (objectiveIndex == -1)
+            {
+                Debug.LogWarning($"Objective with ID {objectiveID} not found in current mission.");
+                return;
+            }
+
+            for (int i = 0; i < objectiveIndex; i++)
+            {
+                if (!currentMission.objectives[i].isCompleted)
+                {
+                    Debug.Log($"Cannot complete objective '{currentMission.objectives[objectiveIndex].ObjectiveName}' because a previous objective is not yet complete.");
+                    return;
+                }
+            }
         }
 
         MissionInfo.MissionObjective objective = currentMission.objectives.Find(obj => obj.ObjectiveID == objectiveID);
