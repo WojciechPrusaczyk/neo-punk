@@ -124,8 +124,8 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1166694122
-    name: HandsWiring
+    guid: -1210828362
+    name: handsWiring
     layerFlags: 0
     layerType: 0
     blendMode: 0
