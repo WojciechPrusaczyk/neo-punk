@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 3bc1c76d5f1eda64cafd60f09a9ebf43
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: gates_Frame_0
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 100
+      height: 126
+    spriteID: 0f78c0ed0bf48f84d9e6fd8e1905d51c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: gates_Frame_1
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 138
+      width: 100
+      height: 126
+    spriteID: a526f00d45a0188408c7b5c597f64ed4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 138}
+  - name: gates_Frame_2
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 272
+      width: 100
+      height: 126
+    spriteID: 3c76158db5be453468f28fdb2af9b2bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 272}
+  - name: gates_Frame_3
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 406
+      width: 100
+      height: 126
+    spriteID: ac1bfa4d6fb5ffa41ab7fac671ee85a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 406}
+  - name: gates_Frame_4
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 540
+      width: 100
+      height: 126
+    spriteID: bc68af0d0785cd041b0faeff36e637da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 540}
+  - name: gates_Frame_5
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 674
+      width: 100
+      height: 126
+    spriteID: 0d0783f3e39f6084abb81b9f25c9e1b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 674}
+  - name: gates_Frame_6
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 808
+      width: 100
+      height: 126
+    spriteID: e87991fddc4390b45b03b0a0e9104431
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 808}
+  - name: gates_Frame_7
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 4
+      width: 100
+      height: 126
+    spriteID: 1da93042f91acf0448706450e8ab01cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 4}
+  - name: gates_Frame_8
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 138
+      width: 100
+      height: 126
+    spriteID: 1261962a1a4f8af4cb855509c7ef42ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 138}
+  - name: gates_Frame_9
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 272
+      width: 100
+      height: 126
+    spriteID: 3006294fc7826ac4a8d8e2fa4b2e1c6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 272}
+  - name: gates_Frame_10
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 406
+      width: 100
+      height: 126
+    spriteID: 8bcb44adbc960194abb4320ebbcfba1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 406}
+  - name: gates_Frame_11
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 540
+      width: 100
+      height: 126
+    spriteID: 943d7eaecb6558547b32f3d31397c6c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 540}
+  - name: gates_Frame_12
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 674
+      width: 100
+      height: 126
+    spriteID: 920b4480c862b6d41abd69b3cabc39d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 674}
+  - name: gates_Frame_13
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 808
+      width: 100
+      height: 126
+    spriteID: 1bc5e3df25c07bf4cbeaf8819a7f3be0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 808}
+  - name: gates_Frame_14
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 4
+      width: 100
+      height: 126
+    spriteID: d7e8739d52bd1a549a229a67dd65092e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 4}
+  - name: gates_Frame_15
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 138
+      width: 100
+      height: 126
+    spriteID: 1100e657b4badea479eb780ff842a54b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 138}
+  - name: gates_Frame_16
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 272
+      width: 100
+      height: 126
+    spriteID: 615504779acea884ba7c60d79ff7ca8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 272}
+  - name: gates_Frame_17
+    originalName: 
+    pivot: {x: 0.35999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 406
+      width: 100
+      height: 126
+    spriteID: c1057029e2ec769499d6cbbaa720c364
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 406}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1966616126
+    name: gates
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gates_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 0f78c0ed0bf48f84d9e6fd8e1905d51c
+    - name: gates_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: a526f00d45a0188408c7b5c597f64ed4
+    - name: gates_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 3c76158db5be453468f28fdb2af9b2bd
+    - name: gates_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: ac1bfa4d6fb5ffa41ab7fac671ee85a8
+    - name: gates_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: bc68af0d0785cd041b0faeff36e637da
+    - name: gates_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 0d0783f3e39f6084abb81b9f25c9e1b3
+    - name: gates_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: e87991fddc4390b45b03b0a0e9104431
+    - name: gates_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 1da93042f91acf0448706450e8ab01cb
+    - name: gates_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 1261962a1a4f8af4cb855509c7ef42ea
+    - name: gates_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 3006294fc7826ac4a8d8e2fa4b2e1c6c
+    - name: gates_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 8bcb44adbc960194abb4320ebbcfba1d
+    - name: gates_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 943d7eaecb6558547b32f3d31397c6c3
+    - name: gates_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 920b4480c862b6d41abd69b3cabc39d5
+    - name: gates_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 1bc5e3df25c07bf4cbeaf8819a7f3be0
+    - name: gates_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: d7e8739d52bd1a549a229a67dd65092e
+    - name: gates_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 1100e657b4badea479eb780ff842a54b
+    - name: gates_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: 615504779acea884ba7c60d79ff7ca8d
+    - name: gates_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 28
+        y: 0
+        width: 100
+        height: 126
+      spriteId: c1057029e2ec769499d6cbbaa720c364
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

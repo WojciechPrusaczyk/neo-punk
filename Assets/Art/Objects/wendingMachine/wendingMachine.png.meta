@@ -1,0 +1,4789 @@
+fileFormatVersion: 2
+guid: 5202f65e23a75e84183372cf576baa8f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8017664725302574294
+    second: wendingMachinePink_0
+  - first:
+      213: 4855036250735427086
+    second: wendingMachinePink_1
+  - first:
+      213: 9072578336946502058
+    second: wendingMachinePink_2
+  - first:
+      213: -7914267789269307302
+    second: wendingMachinePink_3
+  - first:
+      213: 8101865073569039368
+    second: wendingMachinePink_4
+  - first:
+      213: 978759000016967084
+    second: wendingMachinePink_5
+  - first:
+      213: -6725533259661727994
+    second: wendingMachinePink_6
+  - first:
+      213: 785130879104359050
+    second: wendingMachinePink_7
+  - first:
+      213: 2579553839684003792
+    second: wendingMachinePink_8
+  - first:
+      213: -3310704206353612175
+    second: wendingMachinePink_9
+  - first:
+      213: 574536107535755889
+    second: wendingMachinePink_10
+  - first:
+      213: -1356352481289785418
+    second: wendingMachinePink_11
+  - first:
+      213: 4028925199838861591
+    second: wendingMachinePink_12
+  - first:
+      213: -9134402775441069901
+    second: wendingMachinePink_13
+  - first:
+      213: 21293125546091280
+    second: wendingMachinePink_14
+  - first:
+      213: 5172117635905259070
+    second: wendingMachinePink_15
+  - first:
+      213: 7936309930045310851
+    second: wendingMachinePink_16
+  - first:
+      213: 601103893300694693
+    second: wendingMachinePink_17
+  - first:
+      213: 1986380827613632968
+    second: wendingMachinePink_18
+  - first:
+      213: -5041746865683473966
+    second: wendingMachinePink_19
+  - first:
+      213: -2283867931121408793
+    second: wendingMachinePink_20
+  - first:
+      213: -7274737769474653566
+    second: wendingMachinePink_21
+  - first:
+      213: -2041868295871251630
+    second: wendingMachinePink_22
+  - first:
+      213: -27990876947571411
+    second: wendingMachinePink_23
+  - first:
+      213: 1462020362125064203
+    second: wendingMachinePink_24
+  - first:
+      213: 851570539038239065
+    second: wendingMachinePink_25
+  - first:
+      213: -6802155121906913381
+    second: wendingMachinePink_26
+  - first:
+      213: 8961781822042574621
+    second: wendingMachinePink_27
+  - first:
+      213: 7901923040395423706
+    second: wendingMachinePink_28
+  - first:
+      213: -4069338074824993138
+    second: wendingMachinePink_29
+  - first:
+      213: 873266778038072505
+    second: wendingMachinePink_30
+  - first:
+      213: -2601513272781536833
+    second: wendingMachinePink_31
+  - first:
+      213: -6075164786255331012
+    second: wendingMachinePink_32
+  - first:
+      213: 478297116765488449
+    second: wendingMachinePink_33
+  - first:
+      213: -7790618432327427100
+    second: wendingMachinePink_34
+  - first:
+      213: -5152025770399324992
+    second: wendingMachinePink_35
+  - first:
+      213: 8148835838880775934
+    second: wendingMachinePink_36
+  - first:
+      213: -8223975172807125360
+    second: wendingMachinePink_37
+  - first:
+      213: -3463689403310906619
+    second: wendingMachinePink_38
+  - first:
+      213: -8431735730668554137
+    second: wendingMachinePink_39
+  - first:
+      213: -3976443671650060839
+    second: wendingMachinePink_40
+  - first:
+      213: 1463590009677120590
+    second: wendingMachinePink_41
+  - first:
+      213: 8795781379130398564
+    second: wendingMachinePink_42
+  - first:
+      213: -2092467926609527903
+    second: wendingMachinePink_43
+  - first:
+      213: 8780172712863068707
+    second: wendingMachinePink_44
+  - first:
+      213: 6175435053251437498
+    second: wendingMachinePink_45
+  - first:
+      213: -5729292368325921599
+    second: wendingMachinePink_46
+  - first:
+      213: 3951898610317329772
+    second: wendingMachinePink_47
+  - first:
+      213: 9025453702848865750
+    second: wendingMachinePink_48
+  - first:
+      213: -5946058600600388351
+    second: wendingMachinePink_49
+  - first:
+      213: -2377800726665145217
+    second: wendingMachinePink_50
+  - first:
+      213: -6656861786136180572
+    second: wendingMachinePink_51
+  - first:
+      213: -168786711365268693
+    second: wendingMachinePink_52
+  - first:
+      213: 518944661010607951
+    second: wendingMachinePink_53
+  - first:
+      213: 7494301494649452503
+    second: wendingMachinePink_54
+  - first:
+      213: -8127062750162159980
+    second: wendingMachinePink_55
+  - first:
+      213: -6766227421641373162
+    second: wendingMachinePink_56
+  - first:
+      213: 4781839875175677032
+    second: wendingMachinePink_57
+  - first:
+      213: -8371058179511349455
+    second: wendingMachinePink_58
+  - first:
+      213: -7193736877647553100
+    second: wendingMachinePink_59
+  - first:
+      213: 8200210807533427055
+    second: wendingMachinePink_60
+  - first:
+      213: 8554087491299954931
+    second: wendingMachinePink_61
+  - first:
+      213: 5197017755792201321
+    second: wendingMachinePink_62
+  - first:
+      213: -3839095723442236753
+    second: wendingMachinePink_63
+  - first:
+      213: 4065882527883220576
+    second: wendingMachinePink_64
+  - first:
+      213: 6811639521021305325
+    second: wendingMachinePink_65
+  - first:
+      213: -3555187035101230696
+    second: wendingMachinePink_66
+  - first:
+      213: -3560699085679527791
+    second: wendingMachinePink_67
+  - first:
+      213: -5505804538943614699
+    second: wendingMachinePink_68
+  - first:
+      213: -278048738416569507
+    second: wendingMachinePink_69
+  - first:
+      213: -4158124531548514039
+    second: wendingMachinePink_70
+  - first:
+      213: 1967972873736522922
+    second: wendingMachinePink_71
+  - first:
+      213: -4194463334090172338
+    second: wendingMachinePink_72
+  - first:
+      213: -5097130104743688475
+    second: wendingMachinePink_73
+  - first:
+      213: -4030581196874013041
+    second: wendingMachinePink_74
+  - first:
+      213: 4708744137983620509
+    second: wendingMachinePink_75
+  - first:
+      213: -104859740161052360
+    second: wendingMachinePink_76
+  - first:
+      213: 1434883093797170668
+    second: wendingMachinePink_77
+  - first:
+      213: 4657705986211251763
+    second: wendingMachinePink_78
+  - first:
+      213: 8446406427654463090
+    second: wendingMachinePink_79
+  - first:
+      213: 2815234620052702013
+    second: wendingMachinePink_80
+  - first:
+      213: 977235265465216716
+    second: wendingMachinePink_81
+  - first:
+      213: 8686469174375919737
+    second: wendingMachinePink_82
+  - first:
+      213: -8994477174072440037
+    second: wendingMachinePink_83
+  - first:
+      213: 1289051406816759113
+    second: wendingMachinePink_84
+  - first:
+      213: -2549322877583401492
+    second: wendingMachinePink_85
+  - first:
+      213: -5428311022051774291
+    second: wendingMachinePink_86
+  - first:
+      213: 1818897583994607523
+    second: wendingMachinePink_87
+  - first:
+      213: -367569346037340341
+    second: wendingMachinePink_88
+  - first:
+      213: -237270384472549985
+    second: wendingMachinePink_89
+  - first:
+      213: 5678527363755028390
+    second: wendingMachinePink_90
+  - first:
+      213: 6520307315078021408
+    second: wendingMachinePink_91
+  - first:
+      213: -7823113660681549667
+    second: wendingMachinePink_92
+  - first:
+      213: 6943563546752073346
+    second: wendingMachinePink_93
+  - first:
+      213: 7682355288805156350
+    second: wendingMachinePink_94
+  - first:
+      213: -1196453768349168025
+    second: wendingMachinePink_95
+  - first:
+      213: -8181143914630456594
+    second: wendingMachinePink_96
+  - first:
+      213: -3991682750171467700
+    second: wendingMachinePink_97
+  - first:
+      213: 4539021177580295593
+    second: wendingMachinePink_98
+  - first:
+      213: -1435673296660050936
+    second: wendingMachinePink_99
+  - first:
+      213: -7369547317984216092
+    second: wendingMachinePink_100
+  - first:
+      213: 5556230108224545708
+    second: wendingMachinePink_101
+  - first:
+      213: -3496575579768072421
+    second: wendingMachinePink_102
+  - first:
+      213: 2296286484928500405
+    second: wendingMachinePink_103
+  - first:
+      213: -4902037549715712823
+    second: wendingMachinePink_104
+  - first:
+      213: -2225296402786060914
+    second: wendingMachinePink_105
+  - first:
+      213: -4815032632474908287
+    second: wendingMachinePink_106
+  - first:
+      213: 6620080077417213043
+    second: wendingMachinePink_107
+  - first:
+      213: 4377375177982562566
+    second: wendingMachinePink_108
+  - first:
+      213: 2868567300811530025
+    second: wendingMachinePink_109
+  - first:
+      213: -1154711186953878105
+    second: wendingMachinePink_110
+  - first:
+      213: -6185368421626153345
+    second: wendingMachinePink_111
+  - first:
+      213: -2109607592383269020
+    second: wendingMachinePink_112
+  - first:
+      213: 5569254740450050446
+    second: wendingMachinePink_113
+  - first:
+      213: -5924532094158149661
+    second: wendingMachinePink_114
+  - first:
+      213: -8477338947600322344
+    second: wendingMachinePink_115
+  - first:
+      213: -5781917337999399790
+    second: wendingMachinePink_116
+  - first:
+      213: 5935759914386184300
+    second: wendingMachinePink_117
+  - first:
+      213: 7567710628531782288
+    second: wendingMachinePink_118
+  - first:
+      213: -1308856320164259508
+    second: wendingMachinePink_119
+  - first:
+      213: 4761721437579819431
+    second: wendingMachinePink_120
+  - first:
+      213: 5229984237827278492
+    second: wendingMachinePink_121
+  - first:
+      213: -7652656543701555092
+    second: wendingMachinePink_122
+  - first:
+      213: 316588390567752746
+    second: wendingMachinePink_123
+  - first:
+      213: 4099302406463104455
+    second: wendingMachinePink_124
+  - first:
+      213: -7716035487159664237
+    second: wendingMachinePink_125
+  - first:
+      213: 9033409231920203044
+    second: wendingMachinePink_126
+  - first:
+      213: -8844645678512915638
+    second: wendingMachinePink_127
+  - first:
+      213: 3385552902386584011
+    second: wendingMachinePink_128
+  - first:
+      213: 1325394494735700980
+    second: wendingMachinePink_129
+  - first:
+      213: -8498217494384872189
+    second: wendingMachinePink_130
+  - first:
+      213: 5594321675581626099
+    second: wendingMachinePink_131
+  - first:
+      213: 1366595331925150656
+    second: wendingMachinePink_132
+  - first:
+      213: 8224188773364001648
+    second: wendingMachinePink_133
+  - first:
+      213: -1223334246333331240
+    second: wendingMachinePink_134
+  - first:
+      213: -6005052561469394256
+    second: wendingMachinePink_135
+  - first:
+      213: -6152687630675888183
+    second: wendingMachinePink_136
+  - first:
+      213: -4964328247085614467
+    second: wendingMachinePink_137
+  - first:
+      213: 2511065081836011905
+    second: wendingMachinePink_138
+  - first:
+      213: 4908248288512060488
+    second: wendingMachinePink_139
+  - first:
+      213: -5182232727157891005
+    second: wendingMachinePink_140
+  - first:
+      213: -8873869502577477164
+    second: wendingMachinePink_141
+  - first:
+      213: 1179232384721742348
+    second: wendingMachinePink_142
+  - first:
+      213: 5913212664251279291
+    second: wendingMachinePink_143
+  - first:
+      213: -7014484844413093920
+    second: wendingMachinePink_144
+  - first:
+      213: 8147788598666173011
+    second: wendingMachinePink_145
+  - first:
+      213: 5385617526710226475
+    second: wendingMachinePink_146
+  - first:
+      213: 8872299380082410525
+    second: wendingMachinePink_147
+  - first:
+      213: -8034554987576556581
+    second: wendingMachinePink_148
+  - first:
+      213: 5575824523046873420
+    second: wendingMachinePink_149
+  - first:
+      213: -3442946739192289249
+    second: wendingMachinePink_150
+  - first:
+      213: 3961340042558710212
+    second: wendingMachinePink_151
+  - first:
+      213: 5981441559413037743
+    second: wendingMachinePink_152
+  - first:
+      213: 155159704552643366
+    second: wendingMachinePink_153
+  - first:
+      213: 8034297220647969281
+    second: wendingMachinePink_154
+  - first:
+      213: -7872662716280318931
+    second: wendingMachinePink_155
+  - first:
+      213: 7833334838818439247
+    second: wendingMachinePink_156
+  - first:
+      213: 8862603940072514381
+    second: wendingMachinePink_157
+  - first:
+      213: -348477941785413078
+    second: wendingMachinePink_158
+  - first:
+      213: 7598300296376542671
+    second: wendingMachinePink_159
+  - first:
+      213: -8531608969174533820
+    second: wendingMachinePink_160
+  - first:
+      213: 6916055053999762950
+    second: wendingMachinePink_161
+  - first:
+      213: 7505092284754801070
+    second: wendingMachinePink_162
+  - first:
+      213: -2195551205567135316
+    second: wendingMachinePink_163
+  - first:
+      213: 7528143699236341923
+    second: wendingMachinePink_164
+  - first:
+      213: -1179419029682493123
+    second: wendingMachinePink_165
+  - first:
+      213: -6935798286124648217
+    second: wendingMachinePink_166
+  - first:
+      213: 3777922839561297211
+    second: wendingMachinePink_167
+  - first:
+      213: -2975285810585999213
+    second: wendingMachinePink_168
+  - first:
+      213: -1997719276385620469
+    second: wendingMachinePink_169
+  - first:
+      213: -3291240412460026431
+    second: wendingMachinePink_170
+  - first:
+      213: -1906978118175971856
+    second: wendingMachinePink_171
+  - first:
+      213: 7759194148279730453
+    second: wendingMachinePink_172
+  - first:
+      213: -7669705854067886742
+    second: wendingMachinePink_173
+  - first:
+      213: 1168014702788191261
+    second: wendingMachinePink_174
+  - first:
+      213: 8367105962009909380
+    second: wendingMachinePink_175
+  - first:
+      213: -1742452711316245884
+    second: wendingMachinePink_176
+  - first:
+      213: -7495945071030588597
+    second: wendingMachinePink_177
+  - first:
+      213: -5271093009511614329
+    second: wendingMachinePink_178
+  - first:
+      213: -9090109459987395657
+    second: wendingMachinePink_179
+  - first:
+      213: -9023537646034071454
+    second: wendingMachinePink_180
+  - first:
+      213: 1534822248804646009
+    second: wendingMachinePink_181
+  - first:
+      213: -975076676383916643
+    second: wendingMachinePink_182
+  - first:
+      213: -3438595728658582785
+    second: wendingMachinePink_183
+  - first:
+      213: 7220720427503397077
+    second: wendingMachinePink_184
+  - first:
+      213: -5767615792493968297
+    second: wendingMachinePink_185
+  - first:
+      213: -1072237359964754816
+    second: wendingMachinePink_186
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wendingMachinePink_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dcf6d79697744f60800000000000000
+      internalID: 8017664725302574294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ebab83fbd806340800000000000000
+      internalID: 4855036250735427086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9b99acde548ed70800000000000000
+      internalID: 9072578336946502058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_3
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a507943906fda2290800000000000000
+      internalID: -7914267789269307302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8040a30eb5b9f6070800000000000000
+      internalID: 8101865073569039368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_5
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca55ab4ff10459d00800000000000000
+      internalID: 978759000016967084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_6
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607a9cc322b1aa2a0800000000000000
+      internalID: -6725533259661727994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_7
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a943fef5855ea00800000000000000
+      internalID: 785130879104359050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_8
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d72c55dc8a6cc320800000000000000
+      internalID: 2579553839684003792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_9
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172c6efa0140e02d0800000000000000
+      internalID: -3310704206353612175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_10
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17aed48bb8929f700800000000000000
+      internalID: 574536107535755889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_11
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfa082ca944d2de0800000000000000
+      internalID: -1356352481289785418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_12
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719d3038f1e99e730800000000000000
+      internalID: 4028925199838861591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_13
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b82e7662151c3180800000000000000
+      internalID: -9134402775441069901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_14
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01325502cf5ab4000800000000000000
+      internalID: 21293125546091280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_15
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e368aa8369d07c740800000000000000
+      internalID: 5172117635905259070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_16
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38781cf35df632e60800000000000000
+      internalID: 7936309930045310851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_17
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aeca416ecc875800800000000000000
+      internalID: 601103893300694693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_18
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c99e82a6da019b10800000000000000
+      internalID: 1986380827613632968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_19
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d95f7f10fd180ab0800000000000000
+      internalID: -5041746865683473966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_20
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e42a9397321e40e0800000000000000
+      internalID: -2283867931121408793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_21
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2828858ba80fa0b90800000000000000
+      internalID: -7274737769474653566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_22
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b367a6a93d9a3e0800000000000000
+      internalID: -2041868295871251630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_23
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d969a127e8c9ff0800000000000000
+      internalID: -27990876947571411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_24
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b083ad2f5c32a4410800000000000000
+      internalID: 1462020362125064203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_25
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959ef88b4e261db00800000000000000
+      internalID: 851570539038239065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_26
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f62abb4f3e991a0800000000000000
+      internalID: -6802155121906913381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_27
+      rect:
+        serializedVersion: 2
+        x: 3495
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f8669e515ae5c70800000000000000
+      internalID: 8961781822042574621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_28
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf6e39932549ad60800000000000000
+      internalID: 7901923040395423706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_29
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86951bc49ec687c0800000000000000
+      internalID: -4069338074824993138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_30
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4fb1302877e1c00800000000000000
+      internalID: 873266778038072505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_31
+      rect:
+        serializedVersion: 2
+        x: 4007
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb18469367195ebd0800000000000000
+      internalID: -2601513272781536833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_32
+      rect:
+        serializedVersion: 2
+        x: 4135
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c310a4380dda0bba0800000000000000
+      internalID: -6075164786255331012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_33
+      rect:
+        serializedVersion: 2
+        x: 4263
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14586ed81b043a600800000000000000
+      internalID: 478297116765488449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_34
+      rect:
+        serializedVersion: 2
+        x: 4391
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb5380ffc922e390800000000000000
+      internalID: -7790618432327427100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_35
+      rect:
+        serializedVersion: 2
+        x: 4519
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4a0b1cbd35088b0800000000000000
+      internalID: -5152025770399324992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_36
+      rect:
+        serializedVersion: 2
+        x: 4647
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efef575650b761170800000000000000
+      internalID: 8148835838880775934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_37
+      rect:
+        serializedVersion: 2
+        x: 4775
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096133f17229edd80800000000000000
+      internalID: -8223975172807125360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_38
+      rect:
+        serializedVersion: 2
+        x: 4903
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5036e5fc6d08eefc0800000000000000
+      internalID: -3463689403310906619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_39
+      rect:
+        serializedVersion: 2
+        x: 5031
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7683885b6057cfa80800000000000000
+      internalID: -8431735730668554137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_40
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5b2f97c85d0d8c0800000000000000
+      internalID: -3976443671650060839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_41
+      rect:
+        serializedVersion: 2
+        x: 5287
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e448d9ffb57bf4410800000000000000
+      internalID: 1463590009677120590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_42
+      rect:
+        serializedVersion: 2
+        x: 5415
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4671011ff84e01a70800000000000000
+      internalID: 8795781379130398564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_43
+      rect:
+        serializedVersion: 2
+        x: 5543
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab7a82d18f06f2e0800000000000000
+      internalID: -2092467926609527903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_44
+      rect:
+        serializedVersion: 2
+        x: 5671
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322f7c0209079d970800000000000000
+      internalID: 8780172712863068707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_45
+      rect:
+        serializedVersion: 2
+        x: 5799
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab32c8a467d83b550800000000000000
+      internalID: 6175435053251437498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_46
+      rect:
+        serializedVersion: 2
+        x: 5927
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4b39332f67d70b0800000000000000
+      internalID: -5729292368325921599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_47
+      rect:
+        serializedVersion: 2
+        x: 6055
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65035819d6f7d630800000000000000
+      internalID: 3951898610317329772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_48
+      rect:
+        serializedVersion: 2
+        x: 6183
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d56a07e25ad04d70800000000000000
+      internalID: 9025453702848865750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_49
+      rect:
+        serializedVersion: 2
+        x: 6311
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dbe81d43b5b7da0800000000000000
+      internalID: -5946058600600388351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_50
+      rect:
+        serializedVersion: 2
+        x: 6439
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74557456da500fd0800000000000000
+      internalID: -2377800726665145217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_51
+      rect:
+        serializedVersion: 2
+        x: 6567
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a80b7e99731e93a0800000000000000
+      internalID: -6656861786136180572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_52
+      rect:
+        serializedVersion: 2
+        x: 6695
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b444a516958adf0800000000000000
+      internalID: -168786711365268693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_53
+      rect:
+        serializedVersion: 2
+        x: 6823
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f6f917b69a33700800000000000000
+      internalID: 518944661010607951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_54
+      rect:
+        serializedVersion: 2
+        x: 6951
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7724cb08b110860800000000000000
+      internalID: 7494301494649452503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_55
+      rect:
+        serializedVersion: 2
+        x: 7079
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496764ddc7fd63f80800000000000000
+      internalID: -8127062750162159980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_56
+      rect:
+        serializedVersion: 2
+        x: 7207
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a0f8f42088912a0800000000000000
+      internalID: -6766227421641373162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_57
+      rect:
+        serializedVersion: 2
+        x: 7335
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86cf4acf7028c5240800000000000000
+      internalID: 4781839875175677032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_58
+      rect:
+        serializedVersion: 2
+        x: 7463
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f091000f604db80800000000000000
+      internalID: -8371058179511349455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_59
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd90308c66ba2c90800000000000000
+      internalID: -7193736877647553100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_60
+      rect:
+        serializedVersion: 2
+        x: 7719
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69595a68400dc170800000000000000
+      internalID: 8200210807533427055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_61
+      rect:
+        serializedVersion: 2
+        x: 7847
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0db88704936b670800000000000000
+      internalID: 8554087491299954931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_62
+      rect:
+        serializedVersion: 2
+        x: 7975
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96654692d148f1840800000000000000
+      internalID: 5197017755792201321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_63
+      rect:
+        serializedVersion: 2
+        x: 8103
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa21189a7cac8bac0800000000000000
+      internalID: -3839095723442236753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_64
+      rect:
+        serializedVersion: 2
+        x: 8231
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06652fcfd9aec6830800000000000000
+      internalID: 4065882527883220576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_65
+      rect:
+        serializedVersion: 2
+        x: 8359
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1ac740e0ec78e50800000000000000
+      internalID: 6811639521021305325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_66
+      rect:
+        serializedVersion: 2
+        x: 8487
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89987be4a3079aec0800000000000000
+      internalID: -3555187035101230696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_67
+      rect:
+        serializedVersion: 2
+        x: 8615
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19873060c0bd59ec0800000000000000
+      internalID: -3560699085679527791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_68
+      rect:
+        serializedVersion: 2
+        x: 8743
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511588d51f37793b0800000000000000
+      internalID: -5505804538943614699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_69
+      rect:
+        serializedVersion: 2
+        x: 8871
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d535f64452c242cf0800000000000000
+      internalID: -278048738416569507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_70
+      rect:
+        serializedVersion: 2
+        x: 8999
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909963de4cf5b46c0800000000000000
+      internalID: -4158124531548514039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_71
+      rect:
+        serializedVersion: 2
+        x: 9127
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac8ba2e6e4af4b10800000000000000
+      internalID: 1967972873736522922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_72
+      rect:
+        serializedVersion: 2
+        x: 9255
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48972422d54ac5c0800000000000000
+      internalID: -4194463334090172338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_73
+      rect:
+        serializedVersion: 2
+        x: 9383
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e68dccec2b5349b0800000000000000
+      internalID: -5097130104743688475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_74
+      rect:
+        serializedVersion: 2
+        x: 9511
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86a4f1a1cf7018c0800000000000000
+      internalID: -4030581196874013041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_75
+      rect:
+        serializedVersion: 2
+        x: 9639
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9577b278d1d85140800000000000000
+      internalID: 4708744137983620509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_76
+      rect:
+        serializedVersion: 2
+        x: 9767
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831f5743f967b8ef0800000000000000
+      internalID: -104859740161052360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_77
+      rect:
+        serializedVersion: 2
+        x: 9895
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced6efb429ab9e310800000000000000
+      internalID: 1434883093797170668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_78
+      rect:
+        serializedVersion: 2
+        x: 10023
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3360558baee73a040800000000000000
+      internalID: 4657705986211251763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_79
+      rect:
+        serializedVersion: 2
+        x: 10151
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e9bec15e9a73570800000000000000
+      internalID: 8446406427654463090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_80
+      rect:
+        serializedVersion: 2
+        x: 10279
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d338f9f98f8b11720800000000000000
+      internalID: 2815234620052702013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_81
+      rect:
+        serializedVersion: 2
+        x: 10407
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccee90cdb46df8d00800000000000000
+      internalID: 977235265465216716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_82
+      rect:
+        serializedVersion: 2
+        x: 10535
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970be03f0b98c8870800000000000000
+      internalID: 8686469174375919737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_83
+      rect:
+        serializedVersion: 2
+        x: 10663
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b8d0b3aa23d2380800000000000000
+      internalID: -8994477174072440037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_84
+      rect:
+        serializedVersion: 2
+        x: 10791
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94dc780cc61a3e110800000000000000
+      internalID: 1289051406816759113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_85
+      rect:
+        serializedVersion: 2
+        x: 10919
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced5dd7895cfe9cd0800000000000000
+      internalID: -2549322877583401492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_86
+      rect:
+        serializedVersion: 2
+        x: 11047
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da03448c2e3caa4b0800000000000000
+      internalID: -5428311022051774291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_87
+      rect:
+        serializedVersion: 2
+        x: 11175
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a790d837b50e3910800000000000000
+      internalID: 1818897583994607523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_88
+      rect:
+        serializedVersion: 2
+        x: 11303
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b472f1390a126eaf0800000000000000
+      internalID: -367569346037340341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_89
+      rect:
+        serializedVersion: 2
+        x: 11431
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f951bc9a7db05bcf0800000000000000
+      internalID: -237270384472549985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_90
+      rect:
+        serializedVersion: 2
+        x: 11559
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af24fb1d8e2ece40800000000000000
+      internalID: 5678527363755028390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_91
+      rect:
+        serializedVersion: 2
+        x: 11687
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0214b9df4f8cc7a50800000000000000
+      internalID: 6520307315078021408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_92
+      rect:
+        serializedVersion: 2
+        x: 11815
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9802910397be6390800000000000000
+      internalID: -7823113660681549667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_93
+      rect:
+        serializedVersion: 2
+        x: 11943
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e3287d14e7c5060800000000000000
+      internalID: 6943563546752073346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_94
+      rect:
+        serializedVersion: 2
+        x: 12071
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5239bae653d9a60800000000000000
+      internalID: 7682355288805156350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_95
+      rect:
+        serializedVersion: 2
+        x: 12199
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ece5303a7556fe0800000000000000
+      internalID: -1196453768349168025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_96
+      rect:
+        serializedVersion: 2
+        x: 12327
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea5a1884fcb67e80800000000000000
+      internalID: -8181143914630456594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_97
+      rect:
+        serializedVersion: 2
+        x: 12455
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40b9f300b1ba98c0800000000000000
+      internalID: -3991682750171467700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_98
+      rect:
+        serializedVersion: 2
+        x: 12583
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a516a556b7ddfe30800000000000000
+      internalID: 4539021177580295593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_99
+      rect:
+        serializedVersion: 2
+        x: 12711
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c40134eb6731ce0800000000000000
+      internalID: -1435673296660050936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_100
+      rect:
+        serializedVersion: 2
+        x: 12839
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb3e1482cb1ab990800000000000000
+      internalID: -7369547317984216092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_101
+      rect:
+        serializedVersion: 2
+        x: 12967
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3ed0368d1bb1d40800000000000000
+      internalID: 5556230108224545708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_102
+      rect:
+        serializedVersion: 2
+        x: 13095
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b175e9d290ba97fc0800000000000000
+      internalID: -3496575579768072421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_103
+      rect:
+        serializedVersion: 2
+        x: 13223
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b291bc446c0edf10800000000000000
+      internalID: 2296286484928500405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_104
+      rect:
+        serializedVersion: 2
+        x: 13351
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4919512d678fbb0800000000000000
+      internalID: -4902037549715712823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_105
+      rect:
+        serializedVersion: 2
+        x: 13479
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e857bf736b82e11e0800000000000000
+      internalID: -2225296402786060914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_106
+      rect:
+        serializedVersion: 2
+        x: 13607
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1894b67f4519d2db0800000000000000
+      internalID: -4815032632474908287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_107
+      rect:
+        serializedVersion: 2
+        x: 13735
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ce71771cf3fdb50800000000000000
+      internalID: 6620080077417213043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_108
+      rect:
+        serializedVersion: 2
+        x: 13863
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6015344388f8fbc30800000000000000
+      internalID: 4377375177982562566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_109
+      rect:
+        serializedVersion: 2
+        x: 13991
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f1c2303c23fc720800000000000000
+      internalID: 2868567300811530025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_110
+      rect:
+        serializedVersion: 2
+        x: 14119
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5c17b1b44a9ffe0800000000000000
+      internalID: -1154711186953878105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_111
+      rect:
+        serializedVersion: 2
+        x: 14247
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76fd082138292aa0800000000000000
+      internalID: -6185368421626153345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_112
+      rect:
+        serializedVersion: 2
+        x: 14375
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4673788621b29b2e0800000000000000
+      internalID: -2109607592383269020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_113
+      rect:
+        serializedVersion: 2
+        x: 14503
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e818f24eda7f94d40800000000000000
+      internalID: 5569254740450050446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_114
+      rect:
+        serializedVersion: 2
+        x: 14631
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e76d4b2375d7cda0800000000000000
+      internalID: -5924532094158149661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_115
+      rect:
+        serializedVersion: 2
+        x: 14759
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0f2bb54217a5a80800000000000000
+      internalID: -8477338947600322344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_116
+      rect:
+        serializedVersion: 2
+        x: 14887
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294afd3a0d082cfa0800000000000000
+      internalID: -5781917337999399790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_117
+      rect:
+        serializedVersion: 2
+        x: 15015
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68ddf0713e006250800000000000000
+      internalID: 5935759914386184300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_118
+      rect:
+        serializedVersion: 2
+        x: 15143
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092c590a8b8e50960800000000000000
+      internalID: 7567710628531782288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_119
+      rect:
+        serializedVersion: 2
+        x: 15271
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4995968c1206dde0800000000000000
+      internalID: -1308856320164259508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_120
+      rect:
+        serializedVersion: 2
+        x: 15399
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9be463b68051240800000000000000
+      internalID: 4761721437579819431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_121
+      rect:
+        serializedVersion: 2
+        x: 15527
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96469464f2a49840800000000000000
+      internalID: 5229984237827278492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_122
+      rect:
+        serializedVersion: 2
+        x: 15655
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68a9944b6d4cc590800000000000000
+      internalID: -7652656543701555092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_123
+      rect:
+        serializedVersion: 2
+        x: 15783
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a24bdcfb67fb46400800000000000000
+      internalID: 316588390567752746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_124
+      rect:
+        serializedVersion: 2
+        x: 15911
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c52324d1d5a3e830800000000000000
+      internalID: 4099302406463104455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_125
+      rect:
+        serializedVersion: 2
+        x: 16039
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3914a811b922be490800000000000000
+      internalID: -7716035487159664237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_126
+      rect:
+        serializedVersion: 2
+        x: 16167
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425865bd5dd1d5d70800000000000000
+      internalID: 9033409231920203044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_127
+      rect:
+        serializedVersion: 2
+        x: 16295
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b3b08cd91814580800000000000000
+      internalID: -8844645678512915638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_128
+      rect:
+        serializedVersion: 2
+        x: 16423
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc98b036d66ebfe20800000000000000
+      internalID: 3385552902386584011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_129
+      rect:
+        serializedVersion: 2
+        x: 16551
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3dafd454fb46210800000000000000
+      internalID: 1325394494735700980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_130
+      rect:
+        serializedVersion: 2
+        x: 16679
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305fd2fd634401a80800000000000000
+      internalID: -8498217494384872189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_131
+      rect:
+        serializedVersion: 2
+        x: 16807
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f69f488ce503ad40800000000000000
+      internalID: 5594321675581626099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_132
+      rect:
+        serializedVersion: 2
+        x: 16935
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb0b1fb63f17f210800000000000000
+      internalID: 1366595331925150656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_133
+      rect:
+        serializedVersion: 2
+        x: 17063
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bed12ad10322270800000000000000
+      internalID: 8224188773364001648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_134
+      rect:
+        serializedVersion: 2
+        x: 17191
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d84bb50cf7d50fe0800000000000000
+      internalID: -1223334246333331240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_135
+      rect:
+        serializedVersion: 2
+        x: 17319
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b23110f284c9aca0800000000000000
+      internalID: -6005052561469394256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_136
+      rect:
+        serializedVersion: 2
+        x: 17447
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7bf9fb2334d9aa0800000000000000
+      internalID: -6152687630675888183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_137
+      rect:
+        serializedVersion: 2
+        x: 17575
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a360ce2c92b1bb0800000000000000
+      internalID: -4964328247085614467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_138
+      rect:
+        serializedVersion: 2
+        x: 17703
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18109b2436819d220800000000000000
+      internalID: 2511065081836011905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_139
+      rect:
+        serializedVersion: 2
+        x: 17831
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c2e2a30d99d1440800000000000000
+      internalID: 4908248288512060488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_140
+      rect:
+        serializedVersion: 2
+        x: 17959
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340a9529ac20518b0800000000000000
+      internalID: -5182232727157891005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_141
+      rect:
+        serializedVersion: 2
+        x: 18087
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d972b304bea9d480800000000000000
+      internalID: -8873869502577477164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_142
+      rect:
+        serializedVersion: 2
+        x: 18215
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ae9f62b997d5010800000000000000
+      internalID: 1179232384721742348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_143
+      rect:
+        serializedVersion: 2
+        x: 18343
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7e90ea693ff0250800000000000000
+      internalID: 5913212664251279291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_144
+      rect:
+        serializedVersion: 2
+        x: 18471
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e77566c23b87ae90800000000000000
+      internalID: -7014484844413093920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_145
+      rect:
+        serializedVersion: 2
+        x: 18599
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a9978cf82c21170800000000000000
+      internalID: 8147788598666173011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_146
+      rect:
+        serializedVersion: 2
+        x: 18727
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e4ea73b9e8dba40800000000000000
+      internalID: 5385617526710226475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_147
+      rect:
+        serializedVersion: 2
+        x: 18855
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d140bba574db02b70800000000000000
+      internalID: 8872299380082410525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_148
+      rect:
+        serializedVersion: 2
+        x: 18983
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd30825cec68f7090800000000000000
+      internalID: -8034554987576556581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_149
+      rect:
+        serializedVersion: 2
+        x: 19111
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49ee1a9cde416d40800000000000000
+      internalID: 5575824523046873420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_150
+      rect:
+        serializedVersion: 2
+        x: 19239
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18aad5ae223830d0800000000000000
+      internalID: -3442946739192289249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_151
+      rect:
+        serializedVersion: 2
+        x: 19367
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c12e37d7c189f630800000000000000
+      internalID: 3961340042558710212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_152
+      rect:
+        serializedVersion: 2
+        x: 19495
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa92914869520350800000000000000
+      internalID: 5981441559413037743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_153
+      rect:
+        serializedVersion: 2
+        x: 19623
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b9051edec372200800000000000000
+      internalID: 155159704552643366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_154
+      rect:
+        serializedVersion: 2
+        x: 19751
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10261a031ce8f7f60800000000000000
+      internalID: 8034297220647969281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_155
+      rect:
+        serializedVersion: 2
+        x: 19879
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2456af78feaeb290800000000000000
+      internalID: -7872662716280318931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_156
+      rect:
+        serializedVersion: 2
+        x: 20007
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40077a788895bc60800000000000000
+      internalID: 7833334838818439247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_157
+      rect:
+        serializedVersion: 2
+        x: 20135
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43eff0d35b4efa70800000000000000
+      internalID: 8862603940072514381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_158
+      rect:
+        serializedVersion: 2
+        x: 20263
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a32d38825f92bf0800000000000000
+      internalID: -348477941785413078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_159
+      rect:
+        serializedVersion: 2
+        x: 20391
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5e44eacd5927960800000000000000
+      internalID: 7598300296376542671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_160
+      rect:
+        serializedVersion: 2
+        x: 20519
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449b0dd48d2a99980800000000000000
+      internalID: -8531608969174533820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_161
+      rect:
+        serializedVersion: 2
+        x: 20647
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e63b4cd63caff50800000000000000
+      internalID: 6916055053999762950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_162
+      rect:
+        serializedVersion: 2
+        x: 20775
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1b5575ba1772860800000000000000
+      internalID: 7505092284754801070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_163
+      rect:
+        serializedVersion: 2
+        x: 20903
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca18df1afc5d781e0800000000000000
+      internalID: -2195551205567135316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_164
+      rect:
+        serializedVersion: 2
+        x: 21031
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8c3130fc6597860800000000000000
+      internalID: 7528143699236341923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_165
+      rect:
+        serializedVersion: 2
+        x: 21159
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39607e24acd1afe0800000000000000
+      internalID: -1179419029682493123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_166
+      rect:
+        serializedVersion: 2
+        x: 21287
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8f6c9c4381fbf90800000000000000
+      internalID: -6935798286124648217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_167
+      rect:
+        serializedVersion: 2
+        x: 21415
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3dd2e86ec0ed6430800000000000000
+      internalID: 3777922839561297211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_168
+      rect:
+        serializedVersion: 2
+        x: 21543
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398e2caa159a5b6d0800000000000000
+      internalID: -2975285810585999213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_169
+      rect:
+        serializedVersion: 2
+        x: 21671
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ea51a07eca644e0800000000000000
+      internalID: -1997719276385620469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_170
+      rect:
+        serializedVersion: 2
+        x: 21799
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5f8e8584a2352d0800000000000000
+      internalID: -3291240412460026431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_171
+      rect:
+        serializedVersion: 2
+        x: 21927
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5adaf418d0985e0800000000000000
+      internalID: -1906978118175971856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_172
+      rect:
+        serializedVersion: 2
+        x: 22055
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511c087c7f13eab60800000000000000
+      internalID: 7759194148279730453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_173
+      rect:
+        serializedVersion: 2
+        x: 22183
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65bc8c592bbf8590800000000000000
+      internalID: -7669705854067886742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_174
+      rect:
+        serializedVersion: 2
+        x: 22311
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14af1c0f2f953010800000000000000
+      internalID: 1168014702788191261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_175
+      rect:
+        serializedVersion: 2
+        x: 22439
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48857a7aa8eed1470800000000000000
+      internalID: 8367105962009909380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_176
+      rect:
+        serializedVersion: 2
+        x: 22567
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4823410bd7091d7e0800000000000000
+      internalID: -1742452711316245884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_177
+      rect:
+        serializedVersion: 2
+        x: 22695
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ba1615cad09f790800000000000000
+      internalID: -7495945071030588597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_178
+      rect:
+        serializedVersion: 2
+        x: 22823
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788f306d5d059d6b0800000000000000
+      internalID: -5271093009511614329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_179
+      rect:
+        serializedVersion: 2
+        x: 22951
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb880c8b9179d180800000000000000
+      internalID: -9090109459987395657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_180
+      rect:
+        serializedVersion: 2
+        x: 23079
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26056c6d154f5c280800000000000000
+      internalID: -9023537646034071454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_181
+      rect:
+        serializedVersion: 2
+        x: 23207
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cfd5514b8cc4510800000000000000
+      internalID: 1534822248804646009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_182
+      rect:
+        serializedVersion: 2
+        x: 23335
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d3e53dde4d772f0800000000000000
+      internalID: -975076676383916643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_183
+      rect:
+        serializedVersion: 2
+        x: 23463
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2312b3767a740d0800000000000000
+      internalID: -3438595728658582785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_184
+      rect:
+        serializedVersion: 2
+        x: 23591
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d82fb7c8f6253460800000000000000
+      internalID: 7220720427503397077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_185
+      rect:
+        serializedVersion: 2
+        x: 23719
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754c67faeff45ffa0800000000000000
+      internalID: -5767615792493968297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wendingMachinePink_186
+      rect:
+        serializedVersion: 2
+        x: 23847
+        y: 4
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ce5645dc5ae11f0800000000000000
+      internalID: -1072237359964754816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wendingMachinePink_0: 8017664725302574294
+      wendingMachinePink_1: 4855036250735427086
+      wendingMachinePink_10: 574536107535755889
+      wendingMachinePink_100: -7369547317984216092
+      wendingMachinePink_101: 5556230108224545708
+      wendingMachinePink_102: -3496575579768072421
+      wendingMachinePink_103: 2296286484928500405
+      wendingMachinePink_104: -4902037549715712823
+      wendingMachinePink_105: -2225296402786060914
+      wendingMachinePink_106: -4815032632474908287
+      wendingMachinePink_107: 6620080077417213043
+      wendingMachinePink_108: 4377375177982562566
+      wendingMachinePink_109: 2868567300811530025
+      wendingMachinePink_11: -1356352481289785418
+      wendingMachinePink_110: -1154711186953878105
+      wendingMachinePink_111: -6185368421626153345
+      wendingMachinePink_112: -2109607592383269020
+      wendingMachinePink_113: 5569254740450050446
+      wendingMachinePink_114: -5924532094158149661
+      wendingMachinePink_115: -8477338947600322344
+      wendingMachinePink_116: -5781917337999399790
+      wendingMachinePink_117: 5935759914386184300
+      wendingMachinePink_118: 7567710628531782288
+      wendingMachinePink_119: -1308856320164259508
+      wendingMachinePink_12: 4028925199838861591
+      wendingMachinePink_120: 4761721437579819431
+      wendingMachinePink_121: 5229984237827278492
+      wendingMachinePink_122: -7652656543701555092
+      wendingMachinePink_123: 316588390567752746
+      wendingMachinePink_124: 4099302406463104455
+      wendingMachinePink_125: -7716035487159664237
+      wendingMachinePink_126: 9033409231920203044
+      wendingMachinePink_127: -8844645678512915638
+      wendingMachinePink_128: 3385552902386584011
+      wendingMachinePink_129: 1325394494735700980
+      wendingMachinePink_13: -9134402775441069901
+      wendingMachinePink_130: -8498217494384872189
+      wendingMachinePink_131: 5594321675581626099
+      wendingMachinePink_132: 1366595331925150656
+      wendingMachinePink_133: 8224188773364001648
+      wendingMachinePink_134: -1223334246333331240
+      wendingMachinePink_135: -6005052561469394256
+      wendingMachinePink_136: -6152687630675888183
+      wendingMachinePink_137: -4964328247085614467
+      wendingMachinePink_138: 2511065081836011905
+      wendingMachinePink_139: 4908248288512060488
+      wendingMachinePink_14: 21293125546091280
+      wendingMachinePink_140: -5182232727157891005
+      wendingMachinePink_141: -8873869502577477164
+      wendingMachinePink_142: 1179232384721742348
+      wendingMachinePink_143: 5913212664251279291
+      wendingMachinePink_144: -7014484844413093920
+      wendingMachinePink_145: 8147788598666173011
+      wendingMachinePink_146: 5385617526710226475
+      wendingMachinePink_147: 8872299380082410525
+      wendingMachinePink_148: -8034554987576556581
+      wendingMachinePink_149: 5575824523046873420
+      wendingMachinePink_15: 5172117635905259070
+      wendingMachinePink_150: -3442946739192289249
+      wendingMachinePink_151: 3961340042558710212
+      wendingMachinePink_152: 5981441559413037743
+      wendingMachinePink_153: 155159704552643366
+      wendingMachinePink_154: 8034297220647969281
+      wendingMachinePink_155: -7872662716280318931
+      wendingMachinePink_156: 7833334838818439247
+      wendingMachinePink_157: 8862603940072514381
+      wendingMachinePink_158: -348477941785413078
+      wendingMachinePink_159: 7598300296376542671
+      wendingMachinePink_16: 7936309930045310851
+      wendingMachinePink_160: -8531608969174533820
+      wendingMachinePink_161: 6916055053999762950
+      wendingMachinePink_162: 7505092284754801070
+      wendingMachinePink_163: -2195551205567135316
+      wendingMachinePink_164: 7528143699236341923
+      wendingMachinePink_165: -1179419029682493123
+      wendingMachinePink_166: -6935798286124648217
+      wendingMachinePink_167: 3777922839561297211
+      wendingMachinePink_168: -2975285810585999213
+      wendingMachinePink_169: -1997719276385620469
+      wendingMachinePink_17: 601103893300694693
+      wendingMachinePink_170: -3291240412460026431
+      wendingMachinePink_171: -1906978118175971856
+      wendingMachinePink_172: 7759194148279730453
+      wendingMachinePink_173: -7669705854067886742
+      wendingMachinePink_174: 1168014702788191261
+      wendingMachinePink_175: 8367105962009909380
+      wendingMachinePink_176: -1742452711316245884
+      wendingMachinePink_177: -7495945071030588597
+      wendingMachinePink_178: -5271093009511614329
+      wendingMachinePink_179: -9090109459987395657
+      wendingMachinePink_18: 1986380827613632968
+      wendingMachinePink_180: -9023537646034071454
+      wendingMachinePink_181: 1534822248804646009
+      wendingMachinePink_182: -975076676383916643
+      wendingMachinePink_183: -3438595728658582785
+      wendingMachinePink_184: 7220720427503397077
+      wendingMachinePink_185: -5767615792493968297
+      wendingMachinePink_186: -1072237359964754816
+      wendingMachinePink_19: -5041746865683473966
+      wendingMachinePink_2: 9072578336946502058
+      wendingMachinePink_20: -2283867931121408793
+      wendingMachinePink_21: -7274737769474653566
+      wendingMachinePink_22: -2041868295871251630
+      wendingMachinePink_23: -27990876947571411
+      wendingMachinePink_24: 1462020362125064203
+      wendingMachinePink_25: 851570539038239065
+      wendingMachinePink_26: -6802155121906913381
+      wendingMachinePink_27: 8961781822042574621
+      wendingMachinePink_28: 7901923040395423706
+      wendingMachinePink_29: -4069338074824993138
+      wendingMachinePink_3: -7914267789269307302
+      wendingMachinePink_30: 873266778038072505
+      wendingMachinePink_31: -2601513272781536833
+      wendingMachinePink_32: -6075164786255331012
+      wendingMachinePink_33: 478297116765488449
+      wendingMachinePink_34: -7790618432327427100
+      wendingMachinePink_35: -5152025770399324992
+      wendingMachinePink_36: 8148835838880775934
+      wendingMachinePink_37: -8223975172807125360
+      wendingMachinePink_38: -3463689403310906619
+      wendingMachinePink_39: -8431735730668554137
+      wendingMachinePink_4: 8101865073569039368
+      wendingMachinePink_40: -3976443671650060839
+      wendingMachinePink_41: 1463590009677120590
+      wendingMachinePink_42: 8795781379130398564
+      wendingMachinePink_43: -2092467926609527903
+      wendingMachinePink_44: 8780172712863068707
+      wendingMachinePink_45: 6175435053251437498
+      wendingMachinePink_46: -5729292368325921599
+      wendingMachinePink_47: 3951898610317329772
+      wendingMachinePink_48: 9025453702848865750
+      wendingMachinePink_49: -5946058600600388351
+      wendingMachinePink_5: 978759000016967084
+      wendingMachinePink_50: -2377800726665145217
+      wendingMachinePink_51: -6656861786136180572
+      wendingMachinePink_52: -168786711365268693
+      wendingMachinePink_53: 518944661010607951
+      wendingMachinePink_54: 7494301494649452503
+      wendingMachinePink_55: -8127062750162159980
+      wendingMachinePink_56: -6766227421641373162
+      wendingMachinePink_57: 4781839875175677032
+      wendingMachinePink_58: -8371058179511349455
+      wendingMachinePink_59: -7193736877647553100
+      wendingMachinePink_6: -6725533259661727994
+      wendingMachinePink_60: 8200210807533427055
+      wendingMachinePink_61: 8554087491299954931
+      wendingMachinePink_62: 5197017755792201321
+      wendingMachinePink_63: -3839095723442236753
+      wendingMachinePink_64: 4065882527883220576
+      wendingMachinePink_65: 6811639521021305325
+      wendingMachinePink_66: -3555187035101230696
+      wendingMachinePink_67: -3560699085679527791
+      wendingMachinePink_68: -5505804538943614699
+      wendingMachinePink_69: -278048738416569507
+      wendingMachinePink_7: 785130879104359050
+      wendingMachinePink_70: -4158124531548514039
+      wendingMachinePink_71: 1967972873736522922
+      wendingMachinePink_72: -4194463334090172338
+      wendingMachinePink_73: -5097130104743688475
+      wendingMachinePink_74: -4030581196874013041
+      wendingMachinePink_75: 4708744137983620509
+      wendingMachinePink_76: -104859740161052360
+      wendingMachinePink_77: 1434883093797170668
+      wendingMachinePink_78: 4657705986211251763
+      wendingMachinePink_79: 8446406427654463090
+      wendingMachinePink_8: 2579553839684003792
+      wendingMachinePink_80: 2815234620052702013
+      wendingMachinePink_81: 977235265465216716
+      wendingMachinePink_82: 8686469174375919737
+      wendingMachinePink_83: -8994477174072440037
+      wendingMachinePink_84: 1289051406816759113
+      wendingMachinePink_85: -2549322877583401492
+      wendingMachinePink_86: -5428311022051774291
+      wendingMachinePink_87: 1818897583994607523
+      wendingMachinePink_88: -367569346037340341
+      wendingMachinePink_89: -237270384472549985
+      wendingMachinePink_9: -3310704206353612175
+      wendingMachinePink_90: 5678527363755028390
+      wendingMachinePink_91: 6520307315078021408
+      wendingMachinePink_92: -7823113660681549667
+      wendingMachinePink_93: 6943563546752073346
+      wendingMachinePink_94: 7682355288805156350
+      wendingMachinePink_95: -1196453768349168025
+      wendingMachinePink_96: -8181143914630456594
+      wendingMachinePink_97: -3991682750171467700
+      wendingMachinePink_98: 4539021177580295593
+      wendingMachinePink_99: -1435673296660050936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
