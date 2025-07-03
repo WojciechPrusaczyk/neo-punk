@@ -19,7 +19,7 @@ MonoBehaviour:
   objectives:
   - ObjectiveID: 0
     ObjectiveName: Kill 5 shiverns
-    isCompleted: 0
+    isCompleted: 1
     Requirements:
     - rid: 9167673375139823682
   - ObjectiveID: 1
@@ -36,10 +36,10 @@ MonoBehaviour:
       data:
         TargetEnemyType: 0
         RequiredAmount: 5
-        CurrentAmount: 0
+        CurrentAmount: 5
     - rid: 9167673375139823697
       type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
       data:
         TargetEnemyType: 0
-        RequiredAmount: 10
-        CurrentAmount: 0
+        RequiredAmount: 5
+        CurrentAmount: 1

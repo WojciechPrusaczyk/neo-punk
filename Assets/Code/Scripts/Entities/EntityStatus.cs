@@ -514,11 +514,12 @@ public class EntityStatus : MonoBehaviour
          */
         if ( gameObject.CompareTag("Player") )
         {
-            GameObject UiGoldCount = mainUserInterface.transform.Find("Gold/Count").gameObject;
-            if (UiGoldCount)
-            {
-                UiGoldCount.GetComponent<TextMeshProUGUI>().text = Convert.ToString( this.gold );
-            }
+            // NAPRAW KTOŚ TO BO CRASHUJE!
+            //GameObject UiGoldCount = mainUserInterface.transform.Find("Gold/Count").gameObject;
+            //if (UiGoldCount)
+            //{
+            //    UiGoldCount.GetComponent<TextMeshProUGUI>().text = Convert.ToString( this.gold );
+            //}
         }
     }
     

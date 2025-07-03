@@ -258,10 +258,7 @@ public class DialogScript : MonoBehaviour
         dialogData.hasBeenAlreadySeen = true;
         dialogData = null;
 
-        if (missionQueue != null && missionQueue.Count > 0)
-        {
-            AddAllQueuedMissionsToPlayer();
-        }
+        AddAllQueuedMissionsToPlayer();
     }
 
     public void AddMissionToQueue(MissionInfo mission)
