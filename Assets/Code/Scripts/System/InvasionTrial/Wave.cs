@@ -44,20 +44,16 @@ public class Wave : MonoBehaviour
         Vector3 pos = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
         GameObject fx = Instantiate(flame, pos, Quaternion.identity);
         
-        float fxDuration = 0f;
-        
         
         GameObject enemy = Instantiate(prefab, pos, Quaternion.identity, transform);
-
         
-        yield return new WaitForSeconds(2);
+        var status = enemy.GetComponentInChildren<EntityStatus>();
+        status.OnEntityDeath += DecreaseEnemyNumber;
+        
+        yield return new WaitForSeconds(1);
         CircleCollider2D cc = enemy.GetComponent<CircleCollider2D>();
         if (cc != null) cc.enabled = true;
         
-        Debug.Log("enabled AI");
-
-        var status = enemy.GetComponentInChildren<EntityStatus>();
-        status.OnEntityDeath += DecreaseEnemyNumber;
         
         Destroy(fx);
     }

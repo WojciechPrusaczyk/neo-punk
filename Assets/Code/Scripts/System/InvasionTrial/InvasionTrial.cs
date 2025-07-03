@@ -10,15 +10,15 @@ public class InvasionTrial : MonoBehaviour
     public bool trialFinished;
 
     [Header("Stats")]
-    public float damageTaken;                // not used here but kept for designers
+    public float damageTaken;
 
     [Header("Setup References")]
     public List<Transform> spawnPoints = new();
-    public List<Wave> waves             = new();
+    public List<Wave> waves = new();
     public float durationBetweenWaves   = 1f;
     public InvasionInterface invasionInterface;
 
-    private int _currentWaveIndex = -1;      // −1 until StartTrial()
+    private int _currentWaveIndex = -1;
 
     private EventFlagsSystem _eventFlags;
 
