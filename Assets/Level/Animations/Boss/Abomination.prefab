@@ -618,7 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
   AttackName: StingAttack
-  pushForce: {x: 100, y: 5}
+  pushForce: {x: 20, y: 5}
 --- !u!1 &2588575693833048911
 GameObject:
   m_ObjectHideFlags: 0

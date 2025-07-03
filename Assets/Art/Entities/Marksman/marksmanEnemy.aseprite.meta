@@ -123,8 +123,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: marksmanEnemy_Frame_0
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -143,8 +143,8 @@ ScriptedImporter:
     uvTransform: {x: 448, y: 4}
   - name: marksmanEnemy_Frame_9
     originalName: 
-    pivot: {x: -0.4827586, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -163,8 +163,8 @@ ScriptedImporter:
     uvTransform: {x: 335, y: 153}
   - name: marksmanEnemy_Frame_10
     originalName: 
-    pivot: {x: -0.3939394, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -183,8 +183,8 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 153}
   - name: marksmanEnemy_Frame_11
     originalName: 
-    pivot: {x: -0.3939394, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -203,8 +203,8 @@ ScriptedImporter:
     uvTransform: {x: 215, y: 153}
   - name: marksmanEnemy_Frame_12
     originalName: 
-    pivot: {x: -0.3611111, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -223,8 +223,8 @@ ScriptedImporter:
     uvTransform: {x: 67, y: 78}
   - name: marksmanEnemy_Frame_13
     originalName: 
-    pivot: {x: -0.23636363, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -243,8 +243,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 78}
   - name: marksmanEnemy_Frame_14
     originalName: 
-    pivot: {x: -0.3939394, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -263,8 +263,8 @@ ScriptedImporter:
     uvTransform: {x: 132, y: 153}
   - name: marksmanEnemy_Frame_15
     originalName: 
-    pivot: {x: -0.3939394, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -283,8 +283,8 @@ ScriptedImporter:
     uvTransform: {x: 256, y: 153}
   - name: marksmanEnemy_Frame_16
     originalName: 
-    pivot: {x: -0.4827586, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -303,8 +303,8 @@ ScriptedImporter:
     uvTransform: {x: 372, y: 153}
   - name: marksmanEnemy_Frame_17
     originalName: 
-    pivot: {x: -0.10810811, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -323,8 +323,8 @@ ScriptedImporter:
     uvTransform: {x: 403, y: 4}
   - name: marksmanEnemy_Frame_21
     originalName: 
-    pivot: {x: -0.76, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -343,8 +343,8 @@ ScriptedImporter:
     uvTransform: {x: 409, y: 153}
   - name: marksmanEnemy_Frame_24
     originalName: 
-    pivot: {x: 0.25862068, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -363,8 +363,8 @@ ScriptedImporter:
     uvTransform: {x: 75, y: 4}
   - name: marksmanEnemy_Frame_27
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -383,8 +383,8 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 78}
   - name: marksmanEnemy_Frame_28
     originalName: 
-    pivot: {x: -0.43333337, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -403,8 +403,8 @@ ScriptedImporter:
     uvTransform: {x: 297, y: 153}
   - name: marksmanEnemy_Frame_29
     originalName: 
-    pivot: {x: -0.22857143, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -423,8 +423,8 @@ ScriptedImporter:
     uvTransform: {x: 48, y: 153}
   - name: marksmanEnemy_Frame_30
     originalName: 
-    pivot: {x: -0.075, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -443,8 +443,8 @@ ScriptedImporter:
     uvTransform: {x: 355, y: 4}
   - name: marksmanEnemy_Frame_31
     originalName: 
-    pivot: {x: -0.19444445, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -463,8 +463,8 @@ ScriptedImporter:
     uvTransform: {x: 155, y: 78}
   - name: marksmanEnemy_Frame_1
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -483,8 +483,8 @@ ScriptedImporter:
     uvTransform: {x: 199, y: 78}
   - name: marksmanEnemy_Frame_2
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -503,8 +503,8 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 78}
   - name: marksmanEnemy_Frame_3
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -523,8 +523,8 @@ ScriptedImporter:
     uvTransform: {x: 375, y: 78}
   - name: marksmanEnemy_Frame_4
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -543,8 +543,8 @@ ScriptedImporter:
     uvTransform: {x: 419, y: 78}
   - name: marksmanEnemy_Frame_5
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -563,8 +563,8 @@ ScriptedImporter:
     uvTransform: {x: 463, y: 78}
   - name: marksmanEnemy_Frame_6
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -583,8 +583,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 153}
   - name: marksmanEnemy_Frame_7
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -603,8 +603,8 @@ ScriptedImporter:
     uvTransform: {x: 287, y: 78}
   - name: marksmanEnemy_Frame_8
     originalName: 
-    pivot: {x: -0.33333334, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -623,8 +623,8 @@ ScriptedImporter:
     uvTransform: {x: 331, y: 78}
   - name: marksmanEnemy_Frame_18
     originalName: 
-    pivot: {x: -0.024390243, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -643,8 +643,8 @@ ScriptedImporter:
     uvTransform: {x: 306, y: 4}
   - name: marksmanEnemy_Frame_19
     originalName: 
-    pivot: {x: 0.023255814, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -663,8 +663,8 @@ ScriptedImporter:
     uvTransform: {x: 255, y: 4}
   - name: marksmanEnemy_Frame_20
     originalName: 
-    pivot: {x: 0.06818182, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -683,8 +683,8 @@ ScriptedImporter:
     uvTransform: {x: 203, y: 4}
   - name: marksmanEnemy_Frame_22
     originalName: 
-    pivot: {x: -0.76, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -703,8 +703,8 @@ ScriptedImporter:
     uvTransform: {x: 442, y: 153}
   - name: marksmanEnemy_Frame_23
     originalName: 
-    pivot: {x: -0.2647059, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -721,30 +721,10 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 173, y: 153}
-  - name: marksmanEnemy_Frame_25
-    originalName: 
-    pivot: {x: 0.31746033, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 63
-      height: 66
-    spriteID: c266c4cbd0a2a5642ad87848361ffe87
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
   - name: marksmanEnemy_Frame_26
     originalName: 
-    pivot: {x: 0.2037037, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -761,6 +741,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 141, y: 4}
+  - name: marksmanEnemy_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 63
+      height: 66
+    spriteID: c266c4cbd0a2a5642ad87848361ffe87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0

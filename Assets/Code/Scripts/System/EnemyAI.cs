@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public class EnemyAI : MonoBehaviour
 {
     public enum EnemyState { Wandering, Chasing }
-    public enum EnemyType { FlyingEnemy, WalkingEnemy, JumpingEnemy }
+    public enum EnemyType { FlyingEnemy, WalkingEnemy, JumpingEnemy, Marksman }
 
     [Header("Enemy Type")]
     public EnemyType enemyType;

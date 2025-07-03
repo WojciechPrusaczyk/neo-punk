@@ -264,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 2551702427989744654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.306, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -362,6 +362,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8470020549494968934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3275144630668347874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496217846235372487}
+  m_Layer: 6
+  m_Name: BulletSpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &496217846235372487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3275144630668347874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.044, y: 0.628, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8470020549494968934}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4545054282435376605
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +437,7 @@ GameObject:
   - component: {fileID: 213839507433032239}
   - component: {fileID: 2789245160704931270}
   - component: {fileID: 7831788010612429982}
+  - component: {fileID: 3196141435349346639}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -422,7 +454,7 @@ Transform:
   m_GameObject: {fileID: 6731637166025212283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.95, y: -0.69, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -504,6 +536,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3196141435349346639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731637166025212283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4f0c722c749ef4599e1a258d25a587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marksman: {fileID: 2187775983921576491}
+  animator: {fileID: 7831788010612429982}
+  enemyAI: {fileID: 8777689375351150661}
+  entityStatus: {fileID: 8576199259621466786}
+  marksmanudioController: {fileID: 1671357552102544261}
+  pushForce: {x: 0, y: 0}
 --- !u!1 &6851569378807637484
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +599,7 @@ Transform:
   - {fileID: 8627576042331456537}
   - {fileID: 7494973037680594706}
   - {fileID: 7029325918103429054}
+  - {fileID: 496217846235372487}
   m_Father: {fileID: 6049717235488698575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4494473943123225759
@@ -677,14 +728,14 @@ MonoBehaviour:
   AttackTypes:
   - {fileID: 11400000, guid: ee4a2e4e6d0dd88439ecbf4431274c37, type: 2}
   - {fileID: 11400000, guid: 22df58e2918d0634787d765c8118f453, type: 2}
-  MovementSpeed: 600
+  MovementSpeed: 200
   isFacedRight: 1
   isDead: 0
   isEnemy: 1
   isBoss: 0
   deathAnimationLength: 1
   detectedTargets: []
-  attackRange: 2
+  attackRange: 15
   lightDamageColor: {r: 0, g: 0, b: 0, a: 0}
   heavyDamageColor: {r: 0, g: 0, b: 0, a: 0}
   deathColor: {r: 0, g: 0, b: 0, a: 0}
@@ -844,7 +895,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 0
-  grenadePrefab: {fileID: 0}
+  grenadePrefab: {fileID: 8388180044758447305, guid: e46ad9f8270357f44ae0497c29cdea44, type: 3}
+  bulletPrefab: {fileID: 3574922348067596441, guid: 4a15eab532008f84dac044122f5fa237, type: 3}
+  bulletSpawn: {fileID: 496217846235372487}
   attackTriggers:
   - Shoot
   - Push
@@ -875,10 +928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4f0c722c749ef4599e1a258d25a587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marksman: {fileID: 0}
-  animator: {fileID: 0}
-  enemyAI: {fileID: 0}
-  shivernAudioController: {fileID: 0}
+  marksman: {fileID: 2187775983921576491}
+  animator: {fileID: 7831788010612429982}
+  enemyAI: {fileID: 8777689375351150661}
+  entityStatus: {fileID: 8576199259621466786}
+  marksmanudioController: {fileID: 1671357552102544261}
+  pushForce: {x: 50, y: 5}
 --- !u!1 &7741740247566496919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3407559231691847844, guid: 6e00ead7930d2ab469c032bf2da2be8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.93
+      value: -1.23
       objectReference: {fileID: 0}
     - target: {fileID: 3407559231691847844, guid: 6e00ead7930d2ab469c032bf2da2be8d, type: 3}
       propertyPath: m_LocalPosition.z
