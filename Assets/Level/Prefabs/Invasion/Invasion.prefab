@@ -216,6 +216,7 @@ MonoBehaviour:
   trialStarted: 0
   trialFinished: 0
   damageTaken: 0
+  trialTime: 0
   spawnPoints:
   - {fileID: 8663275365232028338}
   - {fileID: 0}
@@ -225,6 +226,16 @@ MonoBehaviour:
   durationBetweenWaves: 1
   invasionInterface: {fileID: 6007084962513136444}
   currentWave: {fileID: 0}
+  rewards:
+  - items:
+    - {fileID: 7682412501597942323, guid: fef66bae460b2494386ec58138b7b729, type: 3}
+    goldAmount: 20
+  - items: []
+    goldAmount: 10
+  - items: []
+    goldAmount: 5
+  medalTimes: 140000001e00000028000000
+  lightAfterOpening: {fileID: 0}
 --- !u!1 &3673989875644973021
 GameObject:
   m_ObjectHideFlags: 0
