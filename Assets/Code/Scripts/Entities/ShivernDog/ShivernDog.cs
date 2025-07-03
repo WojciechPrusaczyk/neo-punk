@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 public class ShivernDog : MonoBehaviour
 {
-    [FormerlySerializedAs("IsEating")] public bool isEating = false;
+    public bool isEating = false;
     public bool isAttacking = false;
     private Animator _animator;
     private EntityStatus _entityStatus;
@@ -38,11 +38,10 @@ public class ShivernDog : MonoBehaviour
         Attack();
 
         _animator.SetBool("IsEating", isEating);
-        _animator.SetFloat("Velocity", Mathf.Abs(entityVelocity)); // Dodałem `Mathf.Abs` dla poprawnego ustawiania animacji
+        _animator.SetFloat("Velocity", Mathf.Abs(entityVelocity));
 
-        /*
-         * Obrót sprite'a jednostki
-         */
+
+        
         if (entityVelocity > 0 && !_entityStatus.isFacedRight && (Time.timeScale != 0))
         {
             _entityStatus.isFacedRight = true;

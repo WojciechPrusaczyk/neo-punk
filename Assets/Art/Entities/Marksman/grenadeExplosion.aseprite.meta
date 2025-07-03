@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: grenadeExplosion_Frame_4
     originalName: 
-    pivot: {x: 0.47368422, y: -1}
+    pivot: {x: 0.47368422, y: 0.36}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 86, y: 53}
   - name: grenadeExplosion_Frame_5
     originalName: 
-    pivot: {x: 0.48387095, y: -0.44}
+    pivot: {x: 0.48387095, y: 0.39}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 53}
   - name: grenadeExplosion_Frame_6
     originalName: 
-    pivot: {x: 0.51428574, y: -0.26666668}
+    pivot: {x: 0.51428574, y: 0.45}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 53}
   - name: grenadeExplosion_Frame_7
     originalName: 
-    pivot: {x: 0.52500004, y: -0.10526316}
+    pivot: {x: 0.52500004, y: 0.49}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 4}
   - name: grenadeExplosion_Frame_8
     originalName: 
-    pivot: {x: 0.5777778, y: -0.048780486}
+    pivot: {x: 0.5777778, y: 0.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,8 +223,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: grenadeExplosion_Frame_0
     originalName: 
-    pivot: {x: 0.42857146, y: -3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -243,8 +243,8 @@ ScriptedImporter:
     uvTransform: {x: 113, y: 53}
   - name: grenadeExplosion_Frame_1
     originalName: 
-    pivot: {x: 0.42857146, y: -3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -263,8 +263,8 @@ ScriptedImporter:
     uvTransform: {x: 86, y: 76}
   - name: grenadeExplosion_Frame_2
     originalName: 
-    pivot: {x: 0.42857146, y: -3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -283,8 +283,8 @@ ScriptedImporter:
     uvTransform: {x: 101, y: 76}
   - name: grenadeExplosion_Frame_3
     originalName: 
-    pivot: {x: 0.42857146, y: -3}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
