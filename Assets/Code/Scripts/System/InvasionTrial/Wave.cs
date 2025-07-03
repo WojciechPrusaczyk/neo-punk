@@ -49,7 +49,7 @@ public class Wave : MonoBehaviour
         
         var status = enemy.GetComponentInChildren<EntityStatus>();
         status.OnEntityDeath += DecreaseEnemyNumber;
-        
+        Debug.Log($"entity subscribed{prefab.name}");
         yield return new WaitForSeconds(1);
         CircleCollider2D cc = enemy.GetComponent<CircleCollider2D>();
         if (cc != null) cc.enabled = true;
