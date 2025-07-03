@@ -1,0 +1,1035 @@
+fileFormatVersion: 2
+guid: fb70a612cd3027c4985bc2995e9de4ae
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: marksmanEnemy_Frame_0
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 448
+      y: 4
+      width: 36
+      height: 66
+    spriteID: 9a365806c0fb0834c8fc4d0648058e1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 448, y: 4}
+  - name: marksmanEnemy_Frame_9
+    originalName: 
+    pivot: {x: -0.4827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 335
+      y: 153
+      width: 29
+      height: 67
+    spriteID: be1a6c63eb2edb746aacbb77d0a0591e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 153}
+  - name: marksmanEnemy_Frame_10
+    originalName: 
+    pivot: {x: -0.3939394, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 153
+      width: 33
+      height: 67
+    spriteID: c4d3dee421bf1f845833a41dcdf4103f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 153}
+  - name: marksmanEnemy_Frame_11
+    originalName: 
+    pivot: {x: -0.3939394, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 215
+      y: 153
+      width: 33
+      height: 66
+    spriteID: 9fab5416c2f97b548bcfd2cda5219611
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 215, y: 153}
+  - name: marksmanEnemy_Frame_12
+    originalName: 
+    pivot: {x: -0.3611111, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 78
+      width: 36
+      height: 66
+    spriteID: eb3cbcf48eaf44f45af65e0b2ef885f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 78}
+  - name: marksmanEnemy_Frame_13
+    originalName: 
+    pivot: {x: -0.23636363, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 78
+      width: 55
+      height: 67
+    spriteID: 1adf3a5ce52d1304cb7226f6e0b8a96f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 78}
+  - name: marksmanEnemy_Frame_14
+    originalName: 
+    pivot: {x: -0.3939394, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 153
+      width: 33
+      height: 67
+    spriteID: d5e8b7db32bb6894484e92914782b5b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 153}
+  - name: marksmanEnemy_Frame_15
+    originalName: 
+    pivot: {x: -0.3939394, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 153
+      width: 33
+      height: 66
+    spriteID: 3e1aa8c3102e26c43adc1f3c9f86f1f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 256, y: 153}
+  - name: marksmanEnemy_Frame_16
+    originalName: 
+    pivot: {x: -0.4827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 153
+      width: 29
+      height: 66
+    spriteID: 5b32a60127f959a4c83499a4d4fb5000
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 372, y: 153}
+  - name: marksmanEnemy_Frame_17
+    originalName: 
+    pivot: {x: -0.10810811, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 403
+      y: 4
+      width: 37
+      height: 65
+    spriteID: af2ef0f546ceb884a9981ccb2d29bb5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 403, y: 4}
+  - name: marksmanEnemy_Frame_21
+    originalName: 
+    pivot: {x: -0.76, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 409
+      y: 153
+      width: 25
+      height: 65
+    spriteID: 0c4a87eaa81574849845098126283e2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 409, y: 153}
+  - name: marksmanEnemy_Frame_24
+    originalName: 
+    pivot: {x: 0.25862068, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 4
+      width: 58
+      height: 66
+    spriteID: 0974c8b8542ce9c41bee68fa39b37ee6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 4}
+  - name: marksmanEnemy_Frame_27
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 78
+      width: 36
+      height: 66
+    spriteID: 1e3699de19ead6c47a50f125e0a96ee6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 78}
+  - name: marksmanEnemy_Frame_28
+    originalName: 
+    pivot: {x: -0.43333337, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 297
+      y: 153
+      width: 30
+      height: 66
+    spriteID: f7d19311f0db67245b1f6b2bb351fa97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 297, y: 153}
+  - name: marksmanEnemy_Frame_29
+    originalName: 
+    pivot: {x: -0.22857143, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 153
+      width: 35
+      height: 66
+    spriteID: d0ff33e4f59deb54d9a86d72a5fb1f0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 153}
+  - name: marksmanEnemy_Frame_30
+    originalName: 
+    pivot: {x: -0.075, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 355
+      y: 4
+      width: 40
+      height: 66
+    spriteID: ac35d56c69a2fbe45963c9ae1e0e4ae2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 355, y: 4}
+  - name: marksmanEnemy_Frame_31
+    originalName: 
+    pivot: {x: -0.19444445, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 78
+      width: 36
+      height: 66
+    spriteID: 8c8b28174c029764b9c99598dc1eccd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 78}
+  - name: marksmanEnemy_Frame_1
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 78
+      width: 36
+      height: 66
+    spriteID: d4d8cfd5450dcca45bdbd6d6414088a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 199, y: 78}
+  - name: marksmanEnemy_Frame_2
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 243
+      y: 78
+      width: 36
+      height: 66
+    spriteID: 75910625d927b1b42b20b716f6c1f07a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 243, y: 78}
+  - name: marksmanEnemy_Frame_3
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 375
+      y: 78
+      width: 36
+      height: 65
+    spriteID: 21fc69547cda1b44eb60ddc5a7553d3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 375, y: 78}
+  - name: marksmanEnemy_Frame_4
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 419
+      y: 78
+      width: 36
+      height: 65
+    spriteID: 554b2285920277b44912f716e56f0c8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 419, y: 78}
+  - name: marksmanEnemy_Frame_5
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 463
+      y: 78
+      width: 36
+      height: 65
+    spriteID: cb0b7061dc726f74e8ffec746a497743
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 463, y: 78}
+  - name: marksmanEnemy_Frame_6
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 153
+      width: 36
+      height: 65
+    spriteID: c181e4efb3d931544bb1174de58c5955
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 153}
+  - name: marksmanEnemy_Frame_7
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 287
+      y: 78
+      width: 36
+      height: 66
+    spriteID: 2f8b4af2af4e79845bf2b3f70ccbcb42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 287, y: 78}
+  - name: marksmanEnemy_Frame_8
+    originalName: 
+    pivot: {x: -0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 78
+      width: 36
+      height: 66
+    spriteID: 4517e0a03e8a4934584d20a2d2411a75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 78}
+  - name: marksmanEnemy_Frame_18
+    originalName: 
+    pivot: {x: -0.024390243, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 306
+      y: 4
+      width: 41
+      height: 65
+    spriteID: 17f31a5e301d4af49aa2fff826fa755d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 306, y: 4}
+  - name: marksmanEnemy_Frame_19
+    originalName: 
+    pivot: {x: 0.023255814, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 255
+      y: 4
+      width: 43
+      height: 65
+    spriteID: 0c84faf4e42768b47b0976efcc951836
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 255, y: 4}
+  - name: marksmanEnemy_Frame_20
+    originalName: 
+    pivot: {x: 0.06818182, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 4
+      width: 44
+      height: 65
+    spriteID: 115a19efb84e3fd4bb43449c84daae04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 4}
+  - name: marksmanEnemy_Frame_22
+    originalName: 
+    pivot: {x: -0.76, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 442
+      y: 153
+      width: 25
+      height: 65
+    spriteID: 232543670e104eb4ab825f650b7531c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 442, y: 153}
+  - name: marksmanEnemy_Frame_23
+    originalName: 
+    pivot: {x: -0.2647059, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 153
+      width: 34
+      height: 65
+    spriteID: 5dc9b55800d43ee419b977ff9fd159a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 153}
+  - name: marksmanEnemy_Frame_25
+    originalName: 
+    pivot: {x: 0.31746033, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 63
+      height: 66
+    spriteID: c266c4cbd0a2a5642ad87848361ffe87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: marksmanEnemy_Frame_26
+    originalName: 
+    pivot: {x: 0.2037037, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 4
+      width: 54
+      height: 66
+    spriteID: c69f599023916b643b35e752cc2182c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 832281196
+    name: marksmanEnemy
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: marksmanEnemy_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 9a365806c0fb0834c8fc4d0648058e1e
+    - name: marksmanEnemy_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 78
+        y: 0
+        width: 29
+        height: 67
+      spriteId: be1a6c63eb2edb746aacbb77d0a0591e
+    - name: marksmanEnemy_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 77
+        y: 0
+        width: 33
+        height: 67
+      spriteId: c4d3dee421bf1f845833a41dcdf4103f
+    - name: marksmanEnemy_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 77
+        y: 0
+        width: 33
+        height: 66
+      spriteId: 9fab5416c2f97b548bcfd2cda5219611
+    - name: marksmanEnemy_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 77
+        y: 0
+        width: 36
+        height: 66
+      spriteId: eb3cbcf48eaf44f45af65e0b2ef885f3
+    - name: marksmanEnemy_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 77
+        y: 0
+        width: 55
+        height: 67
+      spriteId: 1adf3a5ce52d1304cb7226f6e0b8a96f
+    - name: marksmanEnemy_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 77
+        y: 0
+        width: 33
+        height: 67
+      spriteId: d5e8b7db32bb6894484e92914782b5b6
+    - name: marksmanEnemy_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 77
+        y: 0
+        width: 33
+        height: 66
+      spriteId: 3e1aa8c3102e26c43adc1f3c9f86f1f0
+    - name: marksmanEnemy_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 78
+        y: 0
+        width: 29
+        height: 66
+      spriteId: 5b32a60127f959a4c83499a4d4fb5000
+    - name: marksmanEnemy_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 68
+        y: 0
+        width: 37
+        height: 65
+      spriteId: af2ef0f546ceb884a9981ccb2d29bb5f
+    - name: marksmanEnemy_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 83
+        y: 0
+        width: 25
+        height: 65
+      spriteId: 0c4a87eaa81574849845098126283e2b
+    - name: marksmanEnemy_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 49
+        y: 0
+        width: 58
+        height: 66
+      spriteId: 0974c8b8542ce9c41bee68fa39b37ee6
+    - name: marksmanEnemy_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 1e3699de19ead6c47a50f125e0a96ee6
+    - name: marksmanEnemy_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 77
+        y: 0
+        width: 30
+        height: 66
+      spriteId: f7d19311f0db67245b1f6b2bb351fa97
+    - name: marksmanEnemy_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 72
+        y: 0
+        width: 35
+        height: 66
+      spriteId: d0ff33e4f59deb54d9a86d72a5fb1f0e
+    - name: marksmanEnemy_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 67
+        y: 0
+        width: 40
+        height: 66
+      spriteId: ac35d56c69a2fbe45963c9ae1e0e4ae2
+    - name: marksmanEnemy_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 71
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 8c8b28174c029764b9c99598dc1eccd1
+    - name: marksmanEnemy_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: d4d8cfd5450dcca45bdbd6d6414088a4
+    - name: marksmanEnemy_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 75910625d927b1b42b20b716f6c1f07a
+    - name: marksmanEnemy_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 65
+      spriteId: 21fc69547cda1b44eb60ddc5a7553d3c
+    - name: marksmanEnemy_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 65
+      spriteId: 554b2285920277b44912f716e56f0c8b
+    - name: marksmanEnemy_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 65
+      spriteId: cb0b7061dc726f74e8ffec746a497743
+    - name: marksmanEnemy_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 65
+      spriteId: c181e4efb3d931544bb1174de58c5955
+    - name: marksmanEnemy_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 2f8b4af2af4e79845bf2b3f70ccbcb42
+    - name: marksmanEnemy_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 76
+        y: 0
+        width: 36
+        height: 66
+      spriteId: 4517e0a03e8a4934584d20a2d2411a75
+    - name: marksmanEnemy_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 65
+        y: 0
+        width: 41
+        height: 65
+      spriteId: 17f31a5e301d4af49aa2fff826fa755d
+    - name: marksmanEnemy_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 63
+        y: 0
+        width: 43
+        height: 65
+      spriteId: 0c84faf4e42768b47b0976efcc951836
+    - name: marksmanEnemy_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 61
+        y: 0
+        width: 44
+        height: 65
+      spriteId: 115a19efb84e3fd4bb43449c84daae04
+    - name: marksmanEnemy_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 83
+        y: 0
+        width: 25
+        height: 65
+      spriteId: 232543670e104eb4ab825f650b7531c9
+    - name: marksmanEnemy_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 73
+        y: 0
+        width: 34
+        height: 65
+      spriteId: 5dc9b55800d43ee419b977ff9fd159a3
+    - name: marksmanEnemy_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 44
+        y: 0
+        width: 63
+        height: 66
+      spriteId: c266c4cbd0a2a5642ad87848361ffe87
+    - name: marksmanEnemy_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 53
+        y: 0
+        width: 54
+        height: 66
+      spriteId: c69f599023916b643b35e752cc2182c3
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 96}

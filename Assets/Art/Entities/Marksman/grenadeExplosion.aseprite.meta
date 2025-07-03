@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 9b4166d8d7687874a8e38b330cf40252
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: grenadeExplosion_Frame_4
+    originalName: 
+    pivot: {x: 0.47368422, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 86
+      y: 53
+      width: 19
+      height: 15
+    spriteID: 412f8c1082e9d8a41979b3619d0f74de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 86, y: 53}
+  - name: grenadeExplosion_Frame_5
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.44}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 53
+      width: 31
+      height: 25
+    spriteID: f069e0c371e97a74f932264fa0e3be5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 53}
+  - name: grenadeExplosion_Frame_6
+    originalName: 
+    pivot: {x: 0.51428574, y: -0.26666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 53
+      width: 35
+      height: 30
+    spriteID: 9dba4667f40b1214a873a7908691d6d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 53}
+  - name: grenadeExplosion_Frame_7
+    originalName: 
+    pivot: {x: 0.52500004, y: -0.10526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 40
+      height: 38
+    spriteID: ee04c150b68cef94184360bde1f0dca3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+  - name: grenadeExplosion_Frame_8
+    originalName: 
+    pivot: {x: 0.5777778, y: -0.048780486}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 45
+      height: 41
+    spriteID: cbebf419d811a55428f543653146f184
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: grenadeExplosion_Frame_0
+    originalName: 
+    pivot: {x: 0.42857146, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 53
+      width: 7
+      height: 6
+    spriteID: ead4dcef63c648048894a434ab1bb1a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 53}
+  - name: grenadeExplosion_Frame_1
+    originalName: 
+    pivot: {x: 0.42857146, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 86
+      y: 76
+      width: 7
+      height: 6
+    spriteID: 77bae950b0d0f4747a57defbd9524b1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 86, y: 76}
+  - name: grenadeExplosion_Frame_2
+    originalName: 
+    pivot: {x: 0.42857146, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 76
+      width: 7
+      height: 6
+    spriteID: f5efafd991187de47b23e2e10c30b04e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 76}
+  - name: grenadeExplosion_Frame_3
+    originalName: 
+    pivot: {x: 0.42857146, y: -3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 76
+      width: 7
+      height: 6
+    spriteID: ffc4da559659e7f4b813e30758df428a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 76}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1228968209
+    name: grenadeExplosion
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: grenadeExplosion_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 23
+        y: 15
+        width: 19
+        height: 15
+      spriteId: 412f8c1082e9d8a41979b3619d0f74de
+    - name: grenadeExplosion_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 17
+        y: 11
+        width: 31
+        height: 25
+      spriteId: f069e0c371e97a74f932264fa0e3be5e
+    - name: grenadeExplosion_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 14
+        y: 8
+        width: 35
+        height: 30
+      spriteId: 9dba4667f40b1214a873a7908691d6d8
+    - name: grenadeExplosion_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 11
+        y: 4
+        width: 40
+        height: 38
+      spriteId: ee04c150b68cef94184360bde1f0dca3
+    - name: grenadeExplosion_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 6
+        y: 2
+        width: 45
+        height: 41
+      spriteId: cbebf419d811a55428f543653146f184
+    - name: grenadeExplosion_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 29
+        y: 18
+        width: 7
+        height: 6
+      spriteId: ead4dcef63c648048894a434ab1bb1a7
+    - name: grenadeExplosion_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 29
+        y: 18
+        width: 7
+        height: 6
+      spriteId: 77bae950b0d0f4747a57defbd9524b1a
+    - name: grenadeExplosion_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 29
+        y: 18
+        width: 7
+        height: 6
+      spriteId: f5efafd991187de47b23e2e10c30b04e
+    - name: grenadeExplosion_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 29
+        y: 18
+        width: 7
+        height: 6
+      spriteId: ffc4da559659e7f4b813e30758df428a
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
