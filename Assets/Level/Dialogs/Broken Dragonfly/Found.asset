@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96956ed541ac6d44a2ef67e5ddb934f, type: 3}
+  m_Name: Found
+  m_EditorClassIdentifier: 
+  characterOneName: Player
+  characterOnePicture: {fileID: 7485453407209300106, guid: 638941558cb038e4e8bc9d252740b76d, type: 3}
+  characterTwoName: 
+  characterTwoPicture: {fileID: 0}
+  lines:
+  - speakerName: 0
+    text: Huh? What's that?
+  - speakerName: 0
+    text: Seems to have been lying here for quite a while...
+  repeatable: 1
+  hasBeenAlreadySeen: 0

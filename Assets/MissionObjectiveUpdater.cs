@@ -7,6 +7,9 @@ public class MissionObjectiveUpdater : MonoBehaviour
     [Tooltip("The objective updater will only update task if the mission here is equal to current mission")]
     [SerializeField] private MissionInfo missionInfo;
     [SerializeField] private int objectiveId;
+
+    [Tooltip("If this is set, finishing objective will also update this eventFlag to true")]
+    [SerializeField] private string eventFlagToFinish;
     public MissionInfo MissionInfo => missionInfo;
     public int ObjectiveId => objectiveId;
 
@@ -31,6 +34,10 @@ public class MissionObjectiveUpdater : MonoBehaviour
 
         PlayerObjectiveTracker.instance.ChangeMissionObjectiveStatus(objectiveId, true);
 
+
+        if (!string.IsNullOrEmpty(eventFlagToFinish))
+            EventFlagsSystem.instance.FinishEvent(eventFlagToFinish);
+
         if (currentObjective.isCompleted)
             gameObject.SetActive(false);
     }
@@ -41,6 +48,7 @@ public class MissionObjectiveUpdater : MonoBehaviour
             return;
         if (PlayerObjectiveTracker.instance.currentMission != missionInfo)
             return;
+
         var currentObjective = PlayerObjectiveTracker.instance.currentMission.objectives[ObjectiveId];
         PlayerObjectiveTracker.instance.ChangeMissionObjectiveStatus(objectiveId, true);
         if (currentObjective.isCompleted && disableObject)

@@ -137,7 +137,8 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            animator.SetBool("IsPlayerNearby", true);
+            if (animator != null)
+                animator.SetBool("IsPlayerNearby", true);
 
             if (instantiatedIcon == null)
                 CreateIcon(transform);
@@ -149,7 +150,8 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            animator.SetBool("IsPlayerNearby", false);
+            if (animator != null)
+                animator.SetBool("IsPlayerNearby", false);
             CloseUIOnExit();
 
             // Ukryj ikonę interakcji
