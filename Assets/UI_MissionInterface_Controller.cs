@@ -55,10 +55,37 @@ public class UI_MissionInterface_Controller : UI_InterfaceController
             missionObjectives.Clear();
             if (PlayerObjectiveTracker.instance.currentMission != null)
             {
+                bool isObjectiveOrderRequired = PlayerObjectiveTracker.instance.currentMission.requireObjectiveOrder;
+                bool foundFirstUncompleted = false;
+
                 foreach (var objective in PlayerObjectiveTracker.instance.currentMission.objectives)
                 {
-                    // Create a label with classes "objective" and "objective-uncompleted" or "objective-completed" based on completion status
-                    Label objectiveLabel = new Label(objective.ObjectiveName);
+                    Label objectiveLabel = new Label();
+
+                    if (!isObjectiveOrderRequired)
+                    {
+                        objectiveLabel.text = objective.ObjectiveName;
+                    }
+                    else
+                    {
+                        if (objective.isCompleted)
+                        {
+                            objectiveLabel.text = $"[DONE] {objective.ObjectiveName}";
+                        }
+                        else
+                        {
+                            if (!foundFirstUncompleted)
+                            {
+                                objectiveLabel.text = objective.ObjectiveName;
+                                foundFirstUncompleted = true;
+                            }
+                            else
+                            {
+                                objectiveLabel.text = "???";
+                            }
+                        }
+                    }
+
                     objectiveLabel.AddToClassList("objective");
                     if (objective.isCompleted)
                     {

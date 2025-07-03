@@ -187,3 +187,18 @@
     background-image: url("project://database/Assets/Art/UserInterface/Keys/Keycaps.png?fileID=-4797924570782899106&guid=7c36c9005e306a042b8869fbb5c65185&type=3#Keycaps_16");
     left: 90px;
 }
+
+.mission-button {
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button2.png?fileID=2800000&guid=3a064b7a50dbfe74e9dda5859c98de85&type=3#button2");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mission-button:hover{
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=2800000&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1");
+   -unity-background-scale-mode: scale-to-fit;
+}
+
+.mission-button:focus{
+    background-image: url("project://database/Assets/Art/UserInterface/Buttons/button1.png?fileID=2800000&guid=15e9c0ff782d6224380ebe7bcd2242d7&type=3#button1");
+   -unity-background-scale-mode: scale-to-fit;
+}
