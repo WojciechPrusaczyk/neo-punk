@@ -65,7 +65,10 @@ public class InvasionTrial : MonoBehaviour
         invasionInterface.gameObject.SetActive(false);
 
         if (_eventFlags && !_eventFlags.IsEventDone("doneFirstArena"))
+        {
             _eventFlags.FinishEvent("doneFirstArena");
+            Debug.Log("Invasion Trial Done");
+        }
     }
 
     public void UpdateWaveStateUI()

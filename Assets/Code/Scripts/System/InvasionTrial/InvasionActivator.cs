@@ -9,6 +9,7 @@ public class InvasionActivator : MonoBehaviour
     public GameObject player;
     public float activationDistance = 2f;
     public Sprite activatedSprite;
+    public GameObject IconParent;
 
 
     public void Start()
@@ -35,6 +36,27 @@ public class InvasionActivator : MonoBehaviour
             {
                 StartTrial();
             }
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if(!invasion.trialStarted)
+            {
+                SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+                spriteRenderer.enabled = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SpriteRenderer spriteRenderer = IconParent.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
         }
     }
 }
