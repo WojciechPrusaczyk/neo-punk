@@ -25,6 +25,8 @@ public class DialogScript : MonoBehaviour
     private UserInterfaceController userInterfaceController;
     public GameObject mainUserInterfaceControllerObject;
 
+    public List<MissionInfo> missionQueue;
+
     private void Awake()
     {
         mainUserInterfaceControllerObject = GameObject.Find("MainUserInterfaceRoot").gameObject;
@@ -255,5 +257,46 @@ public class DialogScript : MonoBehaviour
 
         dialogData.hasBeenAlreadySeen = true;
         dialogData = null;
+
+        if (missionQueue != null && missionQueue.Count > 0)
+        {
+            AddAllQueuedMissionsToPlayer();
+        }
+    }
+
+    public void AddMissionToQueue(MissionInfo mission)
+    {
+        if (mission == null)
+            return;
+
+        if (missionQueue == null)
+            return;
+
+        if (missionQueue.Contains(mission))
+            return;
+
+        missionQueue.Add(mission);
+    }
+
+    public void ClearMissionQueue()
+    {
+        if (missionQueue == null)
+            return;
+
+        missionQueue.Clear();
+    }
+
+    public void AddAllQueuedMissionsToPlayer()
+    {
+        if (missionQueue == null || missionQueue.Count == 0)
+            return;
+
+        foreach (var mission in missionQueue)
+        {
+            if (mission == null)
+                continue;
+            PlayerObjectiveTracker.instance.AddNewMission(mission);
+        }
+        ClearMissionQueue();
     }
 }

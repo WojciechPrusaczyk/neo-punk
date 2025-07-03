@@ -292,6 +292,7 @@ public class PlayerObjectiveTracker : MonoBehaviour
         if (alreadyExists)
         {
             Debug.LogWarning($"Mission '{mission.MissionName}' is already in the objective list.");
+            return;
         }
         else
         {

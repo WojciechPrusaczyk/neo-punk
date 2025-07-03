@@ -108,7 +108,7 @@ public class HomelessManAi : MonoBehaviour
             dialogInterface.StartDialog(1);
             if (corpseMissionController != null)
             {
-                corpseMissionController.AddMissionToObjectives();
+                dialogInterface.AddMissionToQueue(corpseMissionController.mission);
 
                 if (corpseMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
                 {
