@@ -34,21 +34,6 @@ public class Marksman : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            _animator.SetTrigger("Grenade");
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            _animator.SetTrigger("Shoot");
-        }
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            _animator.SetTrigger("Push");
-        }
-        
         Attack();
         
         float entityVelocity = GetComponent<Rigidbody2D>().velocity.x;
@@ -68,22 +53,28 @@ public class Marksman : MonoBehaviour
     
     public void Attack()
     {
+        float distanceToPlayer = Vector2.Distance(_player.transform.position, transform.position);
+
+        if (distanceToPlayer <= 2f && !isAttacking)
+        {
+            isAttacking = true;
+            LookAtPlayer();
+            _animator.SetTrigger("Push");
+            StartCoroutine(AttackCooldownRoutine());
+            return;
+        }
+
         if (_enemyAI.canAttack && !isAttacking)
         {
-            float distanceToPlayer = Vector2.Distance(_player.transform.position, transform.position);
             string trig = "";
 
-            if (distanceToPlayer > 8f)
+            if (distanceToPlayer > 7f)
             {
                 trig = "Grenade";
             }
-            else if (distanceToPlayer > 2f)
-            {
-                trig = "Shoot";
-            }
             else
             {
-                trig = "Push";
+                trig = "Shoot";
             }
 
             isAttacking = true;

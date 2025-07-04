@@ -15,9 +15,11 @@ public class AnimationEventMarksman : MonoBehaviour
     public void Push()
     {
         GameObject player = WorldGameManager.instance.player.gameObject;
+        if (Vector2.Distance(player.transform.position, transform.position) < 0.2f) return;
+        
         Player playerScript = player.GetComponent<Player>();
         float facingSign = entityStatus.isFacedRight ? 1f : -1f;
-        Vector2 dir = new Vector2(70 * facingSign, 5);
+        Vector2 dir = new Vector2(90 * facingSign, 5);
         StartCoroutine(playerScript.ApplyKnockback(dir, 0.2f));
         Debug.Log(dir);
     }
@@ -34,6 +36,11 @@ public class AnimationEventMarksman : MonoBehaviour
         float throwForce = 8f;
         
         rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+        
+        MarksmanGrenade grenadeScript = grenade.GetComponent<MarksmanGrenade>();
+        var attack = entityStatus.AttackTypes
+            .Find(a => a.AttackName == "Grenade");
+        grenadeScript.damage = attack.AttackDamage;
     }
 
     public void Shoot()
