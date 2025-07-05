@@ -26,14 +26,14 @@ namespace Tooltips
         
         private bool IsTooltipMenuShown;
         private Tooltip shownTooltip = null;
-        private Image imageObject = null;
-        private TextMeshProUGUI textObject = null;
+        public Image imageObject = null;
+        public TextMeshProUGUI textObject = null;
+        private UserInterfaceController uiController = null;
 
         private void Awake()
         {
-            imageObject = gameObject.transform.Find("TooltipImage").GetComponent<Image>();
-            textObject = gameObject.transform.Find("TooltipText").GetComponent<TextMeshProUGUI>();
             gameObject.SetActive(false);
+            uiController = GetComponentInParent<UserInterfaceController>();
         }
 
         private void Update()
@@ -42,8 +42,9 @@ namespace Tooltips
             if (IsTooltipMenuShown && null != shownTooltip)
             {
                 Time.timeScale = 0;
+
                 // closing tooltip
-                if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Escape))
+                if (Input.GetKeyDown(InputManager.InteractKey) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(InputManager.PadButtonInteract))
                 {
                     CloseTooltip();
                     Time.timeScale = 1;
@@ -58,10 +59,11 @@ namespace Tooltips
                 if (tooltipNumber < tooltips.Count && !tooltips[tooltipNumber].wasTooltipShown)
                 {
                     shownTooltip = tooltips[tooltipNumber];
+                    Debug.Log(imageObject);
                     imageObject.sprite = shownTooltip.image;
                     textObject.text = shownTooltip.text;
                     IsTooltipMenuShown = true;
-                    gameObject.SetActive(true);
+                    uiController.ActivateInterface(gameObject);
                     shownTooltip.wasTooltipShown = true;
                 }
                 else
