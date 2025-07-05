@@ -21,7 +21,6 @@ public class AnimationEventMarksman : MonoBehaviour
         float facingSign = entityStatus.isFacedRight ? 1f : -1f;
         Vector2 dir = new Vector2(90 * facingSign, 5);
         StartCoroutine(playerScript.ApplyKnockback(dir, 0.2f));
-        Debug.Log(dir);
     }
 
     public void ThrowGrenade()

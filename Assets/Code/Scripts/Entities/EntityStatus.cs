@@ -18,7 +18,8 @@ public class EntityStatus : MonoBehaviour
 
     public Inactive.ObservableVariable<float> entityHealthPoints;
     public Inactive.ObservableVariable<float> entityMaxHealth;
-
+    public float BaseMaxHealth;
+    
     public int droppedXp = 0;
     public int gold = 0;
     public float AttackDamage = 10.0f;
@@ -85,6 +86,7 @@ public class EntityStatus : MonoBehaviour
         }
 
         BaseAttackDamage = AttackDamage;
+        BaseMaxHealth = entityMaxHealth.value;
     }
 
     private void Start()
@@ -171,6 +173,11 @@ public class EntityStatus : MonoBehaviour
     public float GetHp()
     {
         return this.entityHealthPoints.value;
+    }
+
+    public float GetBaseMaxHealth()
+    {
+        return BaseMaxHealth;
     }
     
     /*
