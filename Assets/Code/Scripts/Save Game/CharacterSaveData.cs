@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 [System.Serializable]
@@ -34,9 +35,13 @@ public class CharacterSaveData
     public SerializableMission[] serializableMission;
     public SerializableMission currentMission;
 
+    [Header("Tutorial")]
+    public SerializableDictionary<int, bool> tutorialTexts;
+
     public CharacterSaveData()
     {
         activeDrones = new SerializableDictionary<int, bool>();
+        tutorialTexts = new SerializableDictionary<int, bool>();
         completedEventFlags = new EventFlagsSystem.EventFlag[0];
     }
 }
