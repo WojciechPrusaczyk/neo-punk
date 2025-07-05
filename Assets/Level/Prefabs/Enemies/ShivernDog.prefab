@@ -684,14 +684,15 @@ MonoBehaviour:
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
   entityHealthPoints:
-    _value: 50
+    _value: 60
   entityMaxHealth:
-    _value: 50
+    _value: 60
+  BaseMaxHealth: 0
   droppedXp: 0
   gold: 0
   AttackDamage: 1
   AttackTypes: []
-  MovementSpeed: 600
+  MovementSpeed: 800
   isFacedRight: 1
   isDead: 0
   isEnemy: 1

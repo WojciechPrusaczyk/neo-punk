@@ -722,9 +722,10 @@ MonoBehaviour:
     _value: 200
   entityMaxHealth:
     _value: 200
+  BaseMaxHealth: 0
   droppedXp: 0
   gold: 0
-  AttackDamage: 1
+  AttackDamage: 6
   AttackTypes:
   - {fileID: 11400000, guid: ee4a2e4e6d0dd88439ecbf4431274c37, type: 2}
   - {fileID: 11400000, guid: 22df58e2918d0634787d765c8118f453, type: 2}

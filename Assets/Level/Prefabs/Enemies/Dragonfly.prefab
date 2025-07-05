@@ -124,11 +124,12 @@ MonoBehaviour:
     _value: 50
   entityMaxHealth:
     _value: 50
+  BaseMaxHealth: 0
   droppedXp: 0
   gold: 0
-  AttackDamage: 1
+  AttackDamage: 10
   AttackTypes: []
-  MovementSpeed: 200
+  MovementSpeed: 300
   isFacedRight: 0
   isDead: 0
   isEnemy: 1
