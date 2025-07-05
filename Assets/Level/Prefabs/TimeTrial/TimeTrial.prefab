@@ -1871,6 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionInfo: {fileID: 11400000, guid: fcfc1284396ba214aa05df06f7ba346b, type: 2}
   objectiveId: 2
+  eventFlagToFinish: 
 --- !u!1 &7255304106302959427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1978,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 5828488246470146798, guid: 7b1be0475c076b944bdb0ea3445587ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

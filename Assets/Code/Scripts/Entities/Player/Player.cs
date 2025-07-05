@@ -297,6 +297,7 @@ public class Player : MonoBehaviour
         // animator.SetBool("IsChargingAttack", isChargingAttack);
         // animator.SetFloat("ChargingTime", keyHoldTime);
         animator.SetBool("IsBlocking", isBlocking);
+        animator.SetBool("isSliding", isWallSliding);
 
         /*
          * Blokowanie chodzenia do tyłu, gdy gracz atakuje, lub blokuje
@@ -367,7 +368,7 @@ public class Player : MonoBehaviour
          */
         CheckForWall();
 
-        if (!wallJumpLock && !isGrounded && isTouchingWall && playerBody.velocity.y < 0f)
+        if (!wallJumpLock && !isGrounded && isTouchingWall)
         {
             isWallSliding = true;
             playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
