@@ -195,6 +195,8 @@ public class WorldSaveGameManager : MonoBehaviour
         currentCharacterData.sceneName = SceneManager.GetActiveScene().name;
         saveFileDataWriter.CreateNewCharacterSaveFile(currentCharacterData, !saveWithoutEncryption);
         Debug.Log($"Game saved to slot: {currentCharacterSlotBeingUsed} (File: {saveFileName}) in scene {currentCharacterData.sceneName}");
+
+
     }
 
     private SerializableMission CreateSerializableMissionFromMissionInfo(MissionInfo missionInfo)
