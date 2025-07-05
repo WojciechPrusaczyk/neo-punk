@@ -16,6 +16,16 @@ public class PlayerObjectiveTracker : MonoBehaviour
     private MainUserInterfaceController mainUserInterfaceController;
     private PlayerInventoryInterface playerInventoryInterface;
 
+    Coroutine _missionCompletePopUpCoroutine;
+
+    [Header("Mission References")]
+    [SerializeField] private MissionInfo bossMission;
+    [SerializeField] private MissionInfo invasionMission;
+    public MissionInfo BossMission => bossMission;
+    public MissionInfo InvasionMission => invasionMission;
+
+    Event_BloodTrailSpawner bloodTrailSpawner;
+
     private void Awake()
     {
         if (instance == null)
@@ -68,6 +78,8 @@ public class PlayerObjectiveTracker : MonoBehaviour
             return;
         }
 
+        bloodTrailSpawner = FindFirstObjectByType<Event_BloodTrailSpawner>();
+
         GameObject mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
         if (mainUserInterfaceRoot == null)
         {
@@ -109,6 +121,14 @@ public class PlayerObjectiveTracker : MonoBehaviour
             else
             {
                 Debug.LogWarning($"Could not load current mission: {saveData.currentMission.missionName}. It might be missing from the ObjectiveDatabase.");
+            }
+        }
+
+        if (bossMission != null && currentMission != null)
+        {
+            if (currentMission == bossMission)
+            {
+                bloodTrailSpawner?.EnableAllBloodTrails();
             }
         }
 
@@ -308,6 +328,26 @@ public class PlayerObjectiveTracker : MonoBehaviour
     private void UpdateActiveMission(MissionInfo newMission)
     {
         this.currentMission = newMission;
+        Debug.Log($"Updating active mission to: {newMission?.MissionName ?? "None"}");
+
+        if (currentMission != null)
+        {
+            if (currentMission == bossMission)
+            {
+                bloodTrailSpawner?.EnableAllBloodTrails();
+                Debug.Log("Boss mission is active, enabling blood trails.");
+            }
+            else
+            {
+                bloodTrailSpawner?.DisableAllBloodTrails();
+                Debug.Log("Non-boss mission is active, disabling blood trails.");
+            }
+        }
+        else
+        {
+            bloodTrailSpawner?.DisableAllBloodTrails();
+            Debug.Log("No active mission, disabling blood trails.");
+        }
 
         if (mainUserInterfaceController != null)
         {
@@ -457,7 +497,12 @@ public class PlayerObjectiveTracker : MonoBehaviour
 
         if (AreAllCurrentMissionObjectivesComplete())
         {
+            if (_missionCompletePopUpCoroutine != null)
+                StopCoroutine(_missionCompletePopUpCoroutine);
+            _missionCompletePopUpCoroutine = StartCoroutine(ShowAndHideMissionCompletePopUp(5f));
+
             currentMission.isFinished = true;
+
             Debug.Log($"Mission '{currentMission.MissionName}' completed.");
             ActivateNextMission();
         }
@@ -465,6 +510,13 @@ public class PlayerObjectiveTracker : MonoBehaviour
         {
             Debug.Log("Not all objectives for the current mission are completed. Mission cannot be finished yet.");
         }
+    }
+
+    private IEnumerator ShowAndHideMissionCompletePopUp(float delay)
+    {
+        UserInterfaceController.instance.ActivateInterface(Enums.InterfaceType.MissionCompletePopUp);
+        yield return new WaitForSeconds(delay);
+        UserInterfaceController.instance.ActivateInterface(Enums.InterfaceType.MainUserInterface);
     }
 
     public void AddMissionToMissionList(MissionInfo mission, bool initialize = true)

@@ -65,6 +65,7 @@ public class Enums : MonoBehaviour
         DialogueInterface,
         CampfireInterface,
         YouDiedPopUp,
-        MissionInterface
+        MissionInterface,
+        MissionCompletePopUp
     }
 }

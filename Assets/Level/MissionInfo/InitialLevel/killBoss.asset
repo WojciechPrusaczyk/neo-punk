@@ -12,20 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d399bd5943ee89468b6f10f7392faa4, type: 3}
   m_Name: killBoss
   m_EditorClassIdentifier: 
-  MissionName: Shivern leader
+  MissionName: Something Shivers
   isFinished: 0
-  MissionDescription: Shiverns need leader, they always need something to follow.
-    FInd it and kill.
+  MissionDescription: People go missing. Walls drip with blood. And something massive
+    prowls the lower tunnels. Face the monster or keep yourself safe and avoid it.
   objectives:
   - ObjectiveID: 0
-    ObjectiveName: Kill Abomination
+    ObjectiveName: Investigate blood trail
+    isCompleted: 0
+    Requirements: []
+  - ObjectiveID: 1
+    ObjectiveName: Discover boss arena
+    isCompleted: 0
+    Requirements: []
+  - ObjectiveID: 2
+    ObjectiveName: Defeat the creature (Abomination)
     isCompleted: 0
     Requirements:
-    - rid: 9167673375872516292
+    - rid: 5451924126047928405
+  requireObjectiveOrder: 1
   references:
     version: 2
     RefIds:
-    - rid: 9167673375872516292
+    - rid: 5451924126047928405
       type: {class: KillEnemyRequirement, ns: , asm: Assembly-CSharp}
       data:
         TargetEnemyType: 2

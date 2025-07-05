@@ -22,7 +22,9 @@ public class HomelessManAi : MonoBehaviour
     private GameObject EventsPage;
     private EventFlagsSystem _EventsFlagsSystem;
 
-    private MissionInteraction_Controller corpseMissionController;
+    [SerializeField] private MissionInteraction_Controller corpseMissionController;
+    [SerializeField] private MissionInteraction_Controller invasionMissionController;
+    [SerializeField] private MissionInteraction_Controller bossMissionController;
 
     private void Awake()
     {
@@ -50,8 +52,6 @@ public class HomelessManAi : MonoBehaviour
                 Debug.LogError("Animator component missing on Appearance.");
             }
         }
-
-        corpseMissionController = GetComponent<MissionInteraction_Controller>();
     }
 
     private void Update()
@@ -97,42 +97,82 @@ public class HomelessManAi : MonoBehaviour
         tooltip.SetActive(false);
         animator.SetTrigger("stopWaving");
 
+        // Gracz nie ukończył pierwszej interakcji z bezdomnym
         if (!_EventsFlagsSystem.IsEventDone("homelessManFirstInteraction"))
         {
             dialogInterface.StartDialog(0);
             _EventsFlagsSystem.FinishEvent("homelessManFirstInteraction");
+            return;
         }
 
-        else if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+        // Gracz ukończył time trial
+        if (_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
         {
-            dialogInterface.StartDialog(1);
+            if (corpseMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
+            {
+                if (PlayerObjectiveTracker.instance.AreAllCurrentMissionObjectivesComplete())
+                {
+                    PlayerObjectiveTracker.instance.FinishCurrentMission();
+                }
+                return;
+            }
+        }
+
+        // Gracz nie ukończył time triala
+        if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
+        {
+            dialogInterface.StartDialog(2);
+
             if (corpseMissionController != null)
             {
                 dialogInterface.AddMissionToQueue(corpseMissionController.mission);
-
-                if (corpseMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
-                {
-                    if (PlayerObjectiveTracker.instance.AreAllCurrentMissionObjectivesComplete())
-                    {
-                        PlayerObjectiveTracker.instance.FinishCurrentMission();
-                    }
-                }
             }
-        }   
-
-        else if (!_EventsFlagsSystem.IsEventDone("doneFirstTimeTrial"))
-        {
-            dialogInterface.StartDialog(2);
+            return;
         }
 
-        else if (!_EventsFlagsSystem.IsEventDone("hasPaid"))
+        // Gracz nie ukończył areny
+        if (!_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+        {
+            dialogInterface.StartDialog(1);
+
+            dialogInterface.AddMissionToQueue(invasionMissionController.mission);
+
+            return;
+        }
+
+        // Gracz ukończył arenę
+        if (_EventsFlagsSystem.IsEventDone("doneFirstArena"))
+        {
+            if (invasionMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
+            {
+                if (PlayerObjectiveTracker.instance.AreAllCurrentMissionObjectivesComplete())
+                {
+                    PlayerObjectiveTracker.instance.FinishCurrentMission();
+                }
+                return;
+            }
+        }
+
+        if (_EventsFlagsSystem.IsEventDone("AbominationDefeat"))
+        {
+            if (bossMissionController.mission == PlayerObjectiveTracker.instance.currentMission)
+            {
+                if (PlayerObjectiveTracker.instance.AreAllCurrentMissionObjectivesComplete())
+                {
+                    PlayerObjectiveTracker.instance.FinishCurrentMission();
+                }
+                return;
+            }
+        }
+
+        if (!_EventsFlagsSystem.IsEventDone("hasPaid") && !_EventsFlagsSystem.IsEventDone("AbominationDefeat"))
         {
             dialogInterface.StartDialog(3);
+
+            dialogInterface.AddMissionToQueue(bossMissionController.mission);
+            return;
         }
 
-        else
-        {
-            dialogInterface.StartDialog(4);
-        }
+        dialogInterface.StartDialog(4);
     }
 }

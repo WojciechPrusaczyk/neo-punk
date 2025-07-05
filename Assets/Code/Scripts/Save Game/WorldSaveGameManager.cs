@@ -310,7 +310,6 @@ public class WorldSaveGameManager : MonoBehaviour
         {
             WorldAIManager.instance.InitializeAIForScene(SceneManager.GetActiveScene());
         }
-
     }
 
     public bool HasFreeCharacterSlot()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractableBrokenFly : Interactable
 {
@@ -9,6 +10,11 @@ public class InteractableBrokenFly : Interactable
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        base.OnSceneLoaded(scene, mode);
 
         dialogInterface = FindFirstObjectByType<DialogScript>();
     }

@@ -87,6 +87,10 @@ public class InvasionTrial : MonoBehaviour
         if (_eventFlags && !_eventFlags.IsEventDone("doneFirstArena"))
         {
             _eventFlags.FinishEvent("doneFirstArena");
+            
+            if (PlayerObjectiveTracker.instance.currentMission == PlayerObjectiveTracker.instance.InvasionMission)
+                PlayerObjectiveTracker.instance.ChangeMissionObjectiveStatus(1, true);
+
             Debug.Log("Invasion Trial Done");
             GiveRewards();
         }
