@@ -32,6 +32,7 @@ public class InvasionTrial : MonoBehaviour
 
     public List<int> medalTimes;
     public Light2D lightAfterOpening;
+    public GameObject activator;
 
 
 
@@ -87,12 +88,12 @@ public class InvasionTrial : MonoBehaviour
         if (_eventFlags && !_eventFlags.IsEventDone("doneFirstArena"))
         {
             _eventFlags.FinishEvent("doneFirstArena");
-            
+            GiveRewards();
+
             if (PlayerObjectiveTracker.instance.currentMission == PlayerObjectiveTracker.instance.InvasionMission)
                 PlayerObjectiveTracker.instance.ChangeMissionObjectiveStatus(1, true);
 
             Debug.Log("Invasion Trial Done");
-            GiveRewards();
         }
     }
 
@@ -125,8 +126,8 @@ public class InvasionTrial : MonoBehaviour
     IEnumerator PlayAnimation(Reward reward)
     {
         yield return new WaitForSeconds(1.5f);
-        var verPostion = gameObject.transform.position;
-        var newpos = new Vector3(verPostion.x, verPostion.y+1, verPostion.z);
+        var verPostion = activator.transform.position;
+        var newpos = new Vector3(verPostion.x, verPostion.y + 2, verPostion.z);
         if (reward.items.Count != 0)
         {
             foreach (var item in reward.items)

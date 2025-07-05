@@ -192,7 +192,7 @@ public class TimeTrial : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         var verPostion = timeTrialDeactivator.transform.position;
-        var newpos = new Vector3(verPostion.x, verPostion.y+1, verPostion.z);
+        var newpos = new Vector3(verPostion.x, verPostion.y+2, verPostion.z);
         if (reward.items.Count != 0)
         {
             foreach (var item in reward.items)
