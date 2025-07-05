@@ -59,7 +59,6 @@ namespace Tooltips
                 if (tooltipNumber < tooltips.Count && !tooltips[tooltipNumber].wasTooltipShown)
                 {
                     shownTooltip = tooltips[tooltipNumber];
-                    Debug.Log(imageObject);
                     imageObject.sprite = shownTooltip.image;
                     textObject.text = shownTooltip.text;
                     IsTooltipMenuShown = true;
@@ -75,7 +74,7 @@ namespace Tooltips
 
         public void CloseTooltip()
         {
-            gameObject.SetActive(false);
+            uiController.ActivateInterface(uiController.defaultInterface);
             shownTooltip = null;
             imageObject.sprite = null;
             textObject.text = "";

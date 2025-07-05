@@ -506,7 +506,7 @@ MonoBehaviour:
   dashCooldown: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 17409
+    m_Bits: 1065984
   playerVoidLevel: 0
   playerStatus: {fileID: 0}
   isInDialogue: 0
@@ -537,6 +537,7 @@ MonoBehaviour:
   wallDirection: 0
   wallJumpLockTime: 0.2
   minWallUnstickSpeed: 0.1
+  externalForce: 0
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0

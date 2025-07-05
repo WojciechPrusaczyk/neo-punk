@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 6404096953119595012}
   - component: {fileID: 3085488713110546355}
   - component: {fileID: 8318160101005022155}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: VerticalDoors
   m_TagString: Untagged
   m_Icon: {fileID: 0}

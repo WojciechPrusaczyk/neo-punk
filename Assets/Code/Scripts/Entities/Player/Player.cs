@@ -843,10 +843,21 @@ public class Player : MonoBehaviour
     private void Dash()
     {
         Vector2 dashDirection = GetDashDirection();
-        Vector2 startPosition = transform.position;
+        Vector3 startPosition = transform.position; // Vector3, by zachować Z
 
         RaycastHit2D hit = Physics2D.Raycast(startPosition, dashDirection, dashDistance, obstacleLayer);
-        Vector2 targetPosition = (hit.collider != null) ? hit.point - dashDirection * 0.1f : startPosition + (dashDirection * dashDistance);
+        Vector3 targetPosition;
+
+        if (hit.collider != null)
+        {
+            targetPosition = hit.point - (Vector2)(dashDirection * 0.2f);
+            targetPosition.z = startPosition.z;
+        }
+        else
+        {
+            targetPosition = startPosition + (Vector3)(dashDirection * dashDistance);
+            targetPosition.z = startPosition.z;
+        }
 
         if (WorldSoundFXManager.instance)
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.dashSFX, Enums.SoundType.Dialogue);

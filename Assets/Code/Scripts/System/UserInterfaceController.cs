@@ -15,7 +15,7 @@ public class UserInterfaceController : MonoBehaviour
         {
             if (Interfaces.Count == 0)
                 return true;
-            return !Interfaces[DefaultInterface].interfaceRoot.activeSelf;
+            return !Interfaces[defaultInterface].interfaceRoot.activeSelf;
         }
     }
 
@@ -40,7 +40,7 @@ public class UserInterfaceController : MonoBehaviour
     }
 
     [SerializeField]
-    private int DefaultInterface = 0;
+    public int defaultInterface = 0;
     private bool CanPlayerQuitToDefault = true;
 
     private void Awake()
@@ -59,10 +59,10 @@ public class UserInterfaceController : MonoBehaviour
             Debug.LogError("No interfaces defined in UserInterfaceController.");
             return;
         }
-        if (DefaultInterface < 0 || DefaultInterface >= Interfaces.Count)
+        if (defaultInterface < 0 || defaultInterface >= Interfaces.Count)
         {
             Debug.LogError("Default interface index is out of range.");
-            DefaultInterface = 0;
+            defaultInterface = 0;
         }
     }
 
@@ -77,7 +77,7 @@ public class UserInterfaceController : MonoBehaviour
 
     void Update()
     {
-        if ( !Interfaces[DefaultInterface].interfaceRoot.activeSelf && CanPlayerQuitToDefault && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)))
+        if ( !Interfaces[defaultInterface].interfaceRoot.activeSelf && CanPlayerQuitToDefault && (Input.GetKeyDown(KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.Escape)))
         {
             ActivateInterface(InterfaceType.MainUserInterface);
             if (WorldGameManager.instance.player.isInDialogue)
