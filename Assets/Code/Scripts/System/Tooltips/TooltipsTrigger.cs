@@ -8,7 +8,7 @@ public class TooltipTrigger : MonoBehaviour
     private TooltipsController tooltipsController;
     private void Awake()
     {
-        tooltipsController = GameObject.Find("MainUserInterfaceRoot")?.GetComponentInChildren<TooltipsController>();
+        tooltipsController = GameObject.Find("MainUserInterfaceRoot").transform.Find("Tooltips").GetComponent<TooltipsController>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
