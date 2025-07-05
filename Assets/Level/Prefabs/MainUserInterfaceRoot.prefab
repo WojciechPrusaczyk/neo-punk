@@ -882,7 +882,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0.5, y: -0.325}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 1.15, y: 1.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6434859777355163928
 CanvasRenderer:
@@ -981,35 +981,35 @@ MonoBehaviour:
       Consider
       using dashes when nessesary, by clicking SHIFT button.'
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: 6937817954938267909, guid: 0d5defa567da8984bb250fd1eb515284, type: 3}
     text: 'Drones are place to rest. They heal you and allow to travel around quickly.
 
       You
       can interact with some surroundings using F button.'
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: 6937817954938267909, guid: 5cd43082a7c748f4cafdbce916e05f46, type: 3}
     text: There are various platforms in NeoPunk. You can descend them, by clicking
       S button.
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: -6470460504253458178, guid: ecee5497fa60de643910a182d71e39f7, type: 3}
     text: 'You can find some NPC''s in this world that can help you in your journey.
 
       Also
       look for some objects that can tell you a bit about this world.'
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: -4178046375966092550, guid: ebf46d7f345bf3c4e83a1a34a441a759, type: 3}
     text: 'This is time trial. It is test of your aglity.
 
       Get to the end to
       claim reward based on your time.'
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: 4130640169021434097, guid: fcdf5973ddcec3c43b0582675365d4d6, type: 3}
     text: 'This is fight trial. It is test of combat skills.
 
       Survive a few
       waves of enemies and claim reward based on your time.'
     wasTooltipShown: 0
-  - image: {fileID: -855298285791758126, guid: 41b0dd1d73564994381467bc2491e4c6, type: 3}
+  - image: {fileID: 3465286685962602723, guid: d7812225e91cabc43b3ffe6feffc06c9, type: 3}
     text: 'Items are key items to help you in your journey.
 
       Every single one
@@ -1415,7 +1415,7 @@ MonoBehaviour:
     FreezeGame: 1
     ShowsOnTopOfMainUi: 0
     ShowCursor: 0
-  DefaultInterface: 0
+  defaultInterface: 0
 --- !u!1 &9094268450389695141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,8 +1450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: -0.713}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.5, y: -0.74}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1504496626314800062
 CanvasRenderer:
