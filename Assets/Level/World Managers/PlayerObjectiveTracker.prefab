@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3791489946580770727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34230359628330485}
+  - component: {fileID: 7986054770888660122}
+  - component: {fileID: 4861180626107917824}
+  m_Layer: 0
+  m_Name: PlayerObjectiveTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &34230359628330485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791489946580770727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.342333, y: 21.706837, z: 0.7386057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7986054770888660122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791489946580770727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a357ae971961743a00bea660b72db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveDatabase: {fileID: 0}
+  objectiveList: []
+  currentMission: {fileID: 0}
+  bossMission: {fileID: 11400000, guid: a9cf8a8245033d14e92d5e124eab03a8, type: 2}
+  invasionMission: {fileID: 11400000, guid: 2865ebc42290bc94d88fde36bdc8d474, type: 2}
+--- !u!114 &4861180626107917824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791489946580770727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec897dd386d7e5478b93a300d2b0410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionList:
+  - {fileID: 11400000, guid: 2865ebc42290bc94d88fde36bdc8d474, type: 2}
+  - {fileID: 11400000, guid: a9cf8a8245033d14e92d5e124eab03a8, type: 2}
+  - {fileID: 11400000, guid: fcfc1284396ba214aa05df06f7ba346b, type: 2}

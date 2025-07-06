@@ -70,6 +70,32 @@ public class ItemsHandler : MonoBehaviour
         StartCoroutine(WaitForAction(itemData, objectToDelete));
     }
 
+    public void AddItemsToPlayerInventoryInstantly(string name, int slotIndex)
+    {
+        if (playerInventory == null) return;
+
+        ItemData itemData = ScriptableObjectManager.instance.GetItemData(name);
+        if (itemData == null)
+        {
+            Debug.LogError($"ItemData with name {name} not found.");
+            return;
+        }
+        bool duplicateInEq = false;
+        for (int i = 0; i <= 3; i++)
+        {
+            ItemData currentItem = items[i];
+            if (currentItem != null && currentItem.itemName == itemData.itemName)
+            {
+                Debug.LogError("Istnieje już taki item w ekwipunku");
+                duplicateInEq = true;
+                break;
+            }
+        }
+        if (duplicateInEq) return;
+        items[slotIndex] = itemData;
+        playerInventory.SetImageAtSlot(itemData, slotIndex);
+    }
+
     private IEnumerator WaitForAction(ItemData itemData, GameObject pickedObject)
     {
         playerInventory.ShowEquipment();

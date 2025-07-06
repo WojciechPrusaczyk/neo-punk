@@ -402,6 +402,24 @@ public class PlayerInventoryInterface : MonoBehaviour
         }
     }
 
+    public void SetImageAtSlot(ItemData itemData, int slotIndex)
+    {
+        if (null != itemData.itemIcon && slotIndex >= 0 && slotIndex < _itemSlots.Count)
+        {
+            var selectedSlot = _itemSlots[slotIndex];
+            var selectedSlotImage = selectedSlot.Q<VisualElement>("Image");
+            if (null != itemData.itemIcon && (null != selectedSlotImage))
+            {
+                selectedSlotImage.style.backgroundImage = new StyleBackground(itemData.itemIcon);
+                MainUiController.SetItemImageAtSlot(slotIndex, itemData.itemIcon);
+            }
+            else
+            {
+                Debug.LogError("Wystąpił problem przy ładowaniu ikony przedmiotu");
+            }
+        }
+    }
+
     /*
      * Metoda do dynamicznej aktualizacji obrazka
      */

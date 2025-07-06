@@ -22,6 +22,9 @@ public class CharacterSaveData
     [Header("Resources")]
     public float currentHealth;
 
+    [Header("Player Inventory (Items)")]
+    public SerializableDictionary<string, int> inventoryItems; // <name, slot [0-3]>
+
     [Header("Drones")]
     public SerializableDictionary<string, SerializableIntList> activatedDronesByScene;
     public DroneIdentifier lastVisitedDrone;
@@ -43,5 +46,6 @@ public class CharacterSaveData
         lastVisitedDrone = new DroneIdentifier { sceneName = "", droneID = -1 };
         tutorialTexts = new SerializableDictionary<int, bool>();
         completedEventFlags = new EventFlagsSystem.EventFlag[0];
+        inventoryItems = new SerializableDictionary<string, int>();
     }
 }

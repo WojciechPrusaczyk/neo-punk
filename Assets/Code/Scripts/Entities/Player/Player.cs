@@ -112,7 +112,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float minWallUnstickSpeed;
     
     public bool externalForce = false;
-    
+
+    [Header("References")]
+    [HideInInspector] public ItemsHandler playerItemsHandler;
+
     private void Awake()
     {
         // pobieranie rigidbody
@@ -125,6 +128,7 @@ public class Player : MonoBehaviour
         swordHitboxComponent = transform.Find("SwordHitbox").GetComponent<HitboxBehaviour>();
         animator = GetComponentInChildren<Animator>();
         footHitbox = transform.Find("FloorDetector").gameObject.GetComponent<HitboxBehaviour>();
+        playerItemsHandler = GetComponent<ItemsHandler>();
 
         var mainUserInterfaceRoot = GameObject.Find("MainUserInterfaceRoot");
 
@@ -156,6 +160,38 @@ public class Player : MonoBehaviour
         currentCharacterData.yPosition = transform.position.y;
         currentCharacterData.zPosition = transform.position.z;
 
+        if (playerItemsHandler.items[0] != null)
+        {
+            if (!currentCharacterData.inventoryItems.ContainsKey(playerItemsHandler.items[0].itemName))
+            {
+                currentCharacterData.inventoryItems.Add(playerItemsHandler.items[0].itemName, 0);
+            }
+        }
+
+        if (playerItemsHandler.items[1] != null)
+        {
+            if (!currentCharacterData.inventoryItems.ContainsKey(playerItemsHandler.items[1].itemName))
+            {
+                currentCharacterData.inventoryItems.Add(playerItemsHandler.items[1].itemName, 1);
+            }
+        }
+
+        if (playerItemsHandler.items[2] != null)
+        {
+            if (!currentCharacterData.inventoryItems.ContainsKey(playerItemsHandler.items[2].itemName))
+            {
+                currentCharacterData.inventoryItems.Add(playerItemsHandler.items[2].itemName, 2);
+            }
+        }
+
+        if (playerItemsHandler.items[3] != null)
+        {
+            if (!currentCharacterData.inventoryItems.ContainsKey(playerItemsHandler.items[3].itemName))
+            {
+                currentCharacterData.inventoryItems.Add(playerItemsHandler.items[3].itemName, 3);
+            }
+        }
+
         currentCharacterData.characterName = playerStatus.entityName;
         currentCharacterData.sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
@@ -168,6 +204,14 @@ public class Player : MonoBehaviour
             currentCharacterData.zPosition);
         transform.position = newPosition;
         playerStatus.entityName = currentCharacterData.characterName;
+
+        if (currentCharacterData.inventoryItems.Count > 0)
+        {
+            foreach (var item in currentCharacterData.inventoryItems)
+            {
+                playerItemsHandler.AddItemsToPlayerInventoryInstantly(item.Key, item.Value);
+            }
+        }
     }
 
     public void PlayPlayerSFXSingle(AudioClip audioClip, Enums.SoundType soundType, float pitchMultiplier = 1f)

@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class ScriptableObjectManager : MonoBehaviour
 {
-    public static ScriptableObjectManager Instance { get; private set; }
+    public static ScriptableObjectManager instance;
+
     public List<ItemData> itemDataList;
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -22,5 +23,18 @@ public class ScriptableObjectManager : MonoBehaviour
     public ItemData GetItemData(int id)
     {
         return itemDataList[id];
+    }
+
+    public ItemData GetItemData(string name)
+    {
+        foreach (var item in itemDataList)
+        {
+            if (item.itemName == name)
+            {
+                return item;
+            }
+        }
+        Debug.LogError($"Item with name {name} not found.");
+        return null;
     }
 }
