@@ -66,7 +66,8 @@ public class UserInterfaceController : MonoBehaviour
             defaultInterface = 0;
         }
 
-        tooltipsEnabled = WorldSaveGameManager.instance.settingsSaveData.tooltipsEnabled;
+        if (WorldSaveGameManager.instance)
+            tooltipsEnabled = WorldSaveGameManager.instance.settingsSaveData.tooltipsEnabled;
     }
 
     private void Start()
