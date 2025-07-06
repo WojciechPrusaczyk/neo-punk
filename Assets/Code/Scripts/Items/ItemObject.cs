@@ -26,7 +26,11 @@ public class CoroutineRunner : MonoBehaviour
 public class ItemObject : MonoBehaviour
 {
     public GameObject ScriptableObjectManager;
+    
+    
     public int ItemId;
+    public bool hasBeenPickedUp = false;
+
     public ItemData itemData;
     public Color CommonColor;
     public Color RareColor;
@@ -57,6 +61,19 @@ public class ItemObject : MonoBehaviour
         }
 
         if (tooltip) tooltip.gameObject.SetActive(false);
+
+        if (WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp.ContainsKey(ItemId))
+        {
+            hasBeenPickedUp = WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp[ItemId];
+            if (hasBeenPickedUp)
+            {
+                gameObject.transform.parent.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp.Add(ItemId, false);
+        }
     }
 
     private void UpdateItemLightColor()
