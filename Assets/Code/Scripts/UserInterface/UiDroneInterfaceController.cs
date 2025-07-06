@@ -89,7 +89,9 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
 
                 droneButton.AddToClassList("drone-button");
 
-                if (drone.ID != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex)
+                DroneIdentifier thisDroneIdentifier = new DroneIdentifier { sceneName = drone.gameObject.scene.name, droneID = drone.ID };
+
+                if (thisDroneIdentifier != WorldSaveGameManager.instance.currentCharacterData.lastVisitedDrone)
                 {
                     droneButton.clicked += () => player.TeleportPlayerToDrone(drone.ID, drone.droneName);
 
@@ -140,18 +142,18 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
             {
                 Debug.LogError("Drone UI Error, root visual element not found.");
             }
+        }
 
-            activeDroneUIButtons.Sort((a, b) =>
-            {
-                int idA = int.Parse(a.name.Split('_')[1]);
-                int idB = int.Parse(b.name.Split('_')[1]);
-                return idA.CompareTo(idB);
-            });
+        activeDroneUIButtons.Sort((a, b) =>
+        {
+            int idA = int.Parse(a.name.Split('_')[1]);
+            int idB = int.Parse(b.name.Split('_')[1]);
+            return idA.CompareTo(idB);
+        });
 
-            foreach (Button button in activeDroneUIButtons)
-            {
-                rootVisualElement.Add(button);
-            }
+        foreach (Button button in activeDroneUIButtons)
+        {
+            rootVisualElement.Add(button);
         }
     }
 
