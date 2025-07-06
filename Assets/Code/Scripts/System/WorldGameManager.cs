@@ -110,13 +110,13 @@ public class WorldGameManager : MonoBehaviour
         player = FindFirstObjectByType<Player>();
         if (player == null)
         {
-            Debug.LogError($"{prefix} Player not found in the scene!");
+            return;
         }
 
         _camera = GameObject.Find("Camera");
         if (_camera == null)
         {
-            Debug.LogError($"{prefix} Camera not found in the scene!");
+            return;
         }
     }
     private IEnumerator FindData()

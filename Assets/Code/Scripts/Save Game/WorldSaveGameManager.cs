@@ -79,7 +79,7 @@ public class WorldSaveGameManager : MonoBehaviour
     public void NewGame()
     {
         _pendingSaveAfterSceneLoad = true;
-        _targetSceneForSave = "StartScene";
+        _targetSceneForSave = "InitialLevel";
 
         StartCoroutine(NewGameCoroutine());
     }
@@ -87,7 +87,7 @@ public class WorldSaveGameManager : MonoBehaviour
     private IEnumerator NewGameCoroutine()
     {
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartScene");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("InitialLevel");
         while (!asyncLoad.isDone)
         {
             yield return null;
@@ -133,7 +133,7 @@ public class WorldSaveGameManager : MonoBehaviour
             player = FindFirstObjectByType<Player>();
             if (player == null && SceneManager.GetActiveScene().name != "MainMenu") // Re-check after find
             {
-                Debug.LogError("Player not found in current scene '" + SceneManager.GetActiveScene().name + "', cannot save game!");
+                //Debug.LogError("Player not found in current scene '" + SceneManager.GetActiveScene().name + "', cannot save game!");
                 return;
             }
         }

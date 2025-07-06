@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class ItemsHandler : MonoBehaviour
 {
@@ -130,6 +131,18 @@ public class ItemsHandler : MonoBehaviour
 
                 playerInventory.EndPickingItem();
                 Destroy(pickedObject.gameObject.transform.parent.gameObject);
+
+                ItemObject pickedItemObject = pickedObject.TryGetComponent<ItemObject>(out var itemObject) ? itemObject : null;
+
+                if (!WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp.ContainsKey(itemObject.ItemId))
+                {
+                    WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp.Add(itemObject.ItemId, true);
+                }
+                else
+                {
+                    WorldSaveGameManager.instance.currentCharacterData.itemsPickedUp[itemObject.ItemId] = true;
+                }
+
                 playerInventory.HideEquipment();
                 playerInventory.isPlayerPickingItem = false;
             }
