@@ -15,6 +15,8 @@ public class OptionsMenuBehaviour : MonoBehaviour
     public GameObject userInterfaceRoot;
     public GameObject pauseMenu;
 
+    public Toggle tooltipsToggle;
+
     private void Awake()
     {
         _userInterfaceController = userInterfaceRoot.gameObject.GetComponent<UserInterfaceController>();
@@ -25,6 +27,9 @@ public class OptionsMenuBehaviour : MonoBehaviour
         // Ładujemy UXML
         var uiDocument = GetComponent<UIDocument>();
         var InterfaceRoot = uiDocument.rootVisualElement;
+        tooltipsToggle = InterfaceRoot.Q<Toggle>("Toggle");
+
+        tooltipsToggle.value = UserInterfaceController.instance.tooltipsEnabled;
 
         /*
          * Przyciski
@@ -55,6 +60,12 @@ public class OptionsMenuBehaviour : MonoBehaviour
             controlsOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
             displayOptionButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
             exitButton.RegisterCallback<MouseEnterEvent>(e => WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonHoverSFX, Enums.SoundType.SFX));
+
+            tooltipsToggle.RegisterValueChangedCallback(evt =>
+            {
+                _userInterfaceController.tooltipsEnabled = evt.newValue;
+                WorldSaveGameManager.instance.SaveSettings();
+            });
 
             // Dodajemy listenera do sliderów, upewniamy się, że wartość jest w zakresie 0-1
             masterVolumeSlider.RegisterValueChangedCallback(evt =>

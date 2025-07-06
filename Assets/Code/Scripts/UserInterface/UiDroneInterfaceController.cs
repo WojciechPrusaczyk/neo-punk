@@ -83,7 +83,7 @@ public class UI_DroneInterface_Controller : UI_InterfaceController
                         {
                             width = width,
                             height = height,
-                            backgroundImage = drone.backgroundImage.texture,
+                            backgroundImage = drone.backgroundImage != null ? new StyleBackground(drone.backgroundImage) : new StyleBackground(Texture2D.whiteTexture),
                         }
                 };
 

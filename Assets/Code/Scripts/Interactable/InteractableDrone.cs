@@ -59,8 +59,10 @@ public class InteractableDrone : Interactable
             droneLight.transform.position += new Vector3(0, activatedYOffset, 0);
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         if (animator == null)
             return;
 
