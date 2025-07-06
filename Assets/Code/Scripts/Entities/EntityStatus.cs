@@ -60,7 +60,7 @@ public class EntityStatus : MonoBehaviour
     private LootTable lootTable;
     //private MissionTracker missionTracker;
     private Volume postProcessVolume;
-    public event System.Action OnPlayerDamageTaken;
+    public event System.Action<GameObject, float> OnPlayerDamageTaken;
     public event System.Action OnPlayerDeath;
     public event System.Action OnEntityDeath;
 
@@ -245,9 +245,10 @@ public class EntityStatus : MonoBehaviour
                 
             } else if (isBLocking && isPlayerFacedToEnemy)
             {
-                OnPlayerDamageTaken?.Invoke();
-                // gracz zablokował cios
                 float blockingDamageReduction = 0.6f; // 0.6 = 40% redukji
+
+                OnPlayerDamageTaken?.Invoke(attackingEntity, damage * blockingDamageReduction * incomingDamagePercent);
+                // gracz zablokował cios
                 if ( damage * blockingDamageReduction * incomingDamagePercent >= GetHp() )
                 {
                     /*
@@ -279,7 +280,7 @@ public class EntityStatus : MonoBehaviour
                     // gracz otrzymuje obrażenia
                     //if (null != missionTracker) missionTracker.AddDamageTaken(damage * incomingDamagePercent);
                     GettingDamageEvent(damage * incomingDamagePercent, true);
-                    OnPlayerDamageTaken?.Invoke();
+                    OnPlayerDamageTaken?.Invoke(attackingEntity, damage * incomingDamagePercent);
                     
                     // animacja paska hp sygnalizująca otrzymanie obrażeń
                 }

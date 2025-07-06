@@ -80,7 +80,6 @@ public class Marksman : MonoBehaviour
             isAttacking = true;
             LookAtPlayer();
             _animator.SetTrigger(trig);
-            Debug.Log(trig);
             StartCoroutine(AttackCooldownRoutine());
         }
     }

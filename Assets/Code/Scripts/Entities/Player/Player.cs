@@ -946,7 +946,7 @@ public class Player : MonoBehaviour
         return direction;
     }
 
-    private void OnPlayerDamaged()
+    private void OnPlayerDamaged(GameObject entity, float damage)
     {
         wasDamagedRecently = true;
     }
