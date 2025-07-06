@@ -59,8 +59,10 @@ public class InteractableDrone : Interactable
             droneLight.transform.position += new Vector3(0, activatedYOffset, 0);
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         if (animator == null)
             return;
 
@@ -144,32 +146,40 @@ public class InteractableDrone : Interactable
 
         StartCoroutine(InteractionCooldown());
 
-        if (WorldSaveGameManager.instance == null)
+        if (WorldSaveGameManager.instance == null || WorldSaveGameManager.instance.currentCharacterData == null)
             return;
 
-        // Próba odczytania stanu ogniska z pliku zapisu
-        // Jeœli nie ma w pliku lub jest false to isActivated zostanie ustawione na false (TryGetValue to bezpieczna metoda, która próbuje odczytaæ wartoœæ z s³ownika SerializeDictionary)
-        // Jeœli jest w pliku zapisu i jest true to isActivated zostanie ustawione na true
-        WorldSaveGameManager.instance.currentCharacterData.activeDrones.TryGetValue(ID, out isActivated);
+        string sceneName = gameObject.scene.name;
+        SerializableIntList activatedDronesWrapper;
 
-        // Zmiana ID ostatnio odwiedzonego ogniska
-        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = ID;
+        if (WorldSaveGameManager.instance.currentCharacterData.activatedDronesByScene.TryGetValue(sceneName, out activatedDronesWrapper))
+        {
+            isActivated = activatedDronesWrapper.list.Contains(ID);
+        }
+        else
+        {
+            isActivated = false;
+            activatedDronesWrapper = new SerializableIntList();
+            WorldSaveGameManager.instance.currentCharacterData.activatedDronesByScene.Add(sceneName, activatedDronesWrapper);
+        }
+
+        WorldSaveGameManager.instance.currentCharacterData.lastVisitedDrone = new DroneIdentifier { sceneName = sceneName, droneID = ID };
         WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneName = string.IsNullOrEmpty(droneName) ? "Unknown" : droneName;
 
-        // Jeœli ognisko nie jest aktywowane to dodajemy je do s³ownika activeCampfires i ustawiamy isActivated na true
         if (!isActivated)
         {
             if (animator != null)
             {
-                Debug.Log("Activating drone with ID: " + ID);
+                Debug.Log($"Activating drone with ID: {ID} in scene: {sceneName}");
                 animator.SetBool("IsActivated", true);
             }
-            // Dodaj drona do aktywnych dronów w zapisie gry
-            WorldSaveGameManager.instance.currentCharacterData.activeDrones.Add(ID, true);
 
-            // Puœæ dŸwiêk aktywacji drona
+            if (!activatedDronesWrapper.list.Contains(ID))
+            {
+                activatedDronesWrapper.list.Add(ID);
+            }
+
             WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.droneActivation, Enums.SoundType.SFX);
-
             isActivated = true;
         }
         else
@@ -187,13 +197,12 @@ public class InteractableDrone : Interactable
             }
         }
 
-        // Zapisanie stanu gry
         WorldSaveGameManager.instance.SaveGame();
     }
 
     private IEnumerator HealInteractionTask(float duration)
     {
-        
+
         interactionTextCanvas.alpha = 1f;
         yield return new WaitForSeconds(duration);
 
@@ -220,8 +229,17 @@ public class InteractableDrone : Interactable
     {
         base.PrepareInteractable();
 
-        if (WorldSaveGameManager.instance != null)
-            WorldSaveGameManager.instance.currentCharacterData.activeDrones.TryGetValue(ID, out isActivated);
+        if (WorldSaveGameManager.instance != null && WorldSaveGameManager.instance.currentCharacterData != null)
+        {
+            if (WorldSaveGameManager.instance.currentCharacterData.activatedDronesByScene.TryGetValue(gameObject.scene.name, out SerializableIntList activatedDronesWrapper))
+            {
+                isActivated = activatedDronesWrapper.list.Contains(ID);
+            }
+            else
+            {
+                isActivated = false;
+            }
+        }
     }
 
     protected override void CloseUIOnExit()
@@ -240,14 +258,12 @@ public class InteractableDrone : Interactable
             isPlayerInRange = true;
             animator.SetBool("IsPlayerNearby", true);
 
-            // Wyœwietl ikonê interakcji
             if (!droneController.isDroneUIActive && instantiatedIcon == null)
                 CreateIcon(transform);
 
             if (!isActivated)
                 return;
 
-            // Leczenie gracza
             HealPlayer();
         }
     }
@@ -261,7 +277,6 @@ public class InteractableDrone : Interactable
 
             var playerHealth = WorldGameManager.instance.player.playerStatus;
 
-            // Ustawienie punktów zdrowia gracza na maksymalne zdrowie
             playerHealth.entityHealthPoints.value = playerHealth.entityMaxHealth.value;
 
             if (playerHealth.entityHealthPoints.value > playerHealth.entityMaxHealth.value)
@@ -318,7 +333,6 @@ public class InteractableDrone : Interactable
     protected IEnumerator MoveLightUpCoroutine(float yAmount, float time, float delay)
     {
         yield return new WaitForSeconds(delay);
-        // Przesuniêcie œwiat³a w górê
         Vector3 startPosition = droneLight.transform.position;
         Vector3 endPosition = startPosition + new Vector3(0, yAmount, 0);
         float elapsedTime = 0f;

@@ -24,6 +24,8 @@ public class WorldSaveGameManager : MonoBehaviour
     private string saveFileName;
     private string settingsFileName;
 
+    public SettingsSaveData settingsSaveData;
+
     [Header("Character Slots")]
     public CharacterSaveData characterSlot01;
     public CharacterSaveData characterSlot02;
@@ -410,12 +412,13 @@ public class WorldSaveGameManager : MonoBehaviour
         settingsFileName = "Settings";
         saveFileDataWriter.saveFileName = settingsFileName;
 
-        SettingsSaveData settingsData = new SettingsSaveData();
-        settingsData.masterVolume = WorldSoundFXManager.instance.masterVolume;
-        settingsData.sfxVolume = WorldSoundFXManager.instance.sfxVolume;
-        settingsData.musicVolume = WorldSoundFXManager.instance.musicVolume;
-        settingsData.dialogueVolume = WorldSoundFXManager.instance.dialogueVolume;
-        saveFileDataWriter.CreateNewSettingsSaveFile(settingsData);
+        settingsSaveData = new SettingsSaveData();
+        settingsSaveData.masterVolume = WorldSoundFXManager.instance.masterVolume;
+        settingsSaveData.sfxVolume = WorldSoundFXManager.instance.sfxVolume;
+        settingsSaveData.musicVolume = WorldSoundFXManager.instance.musicVolume;
+        settingsSaveData.dialogueVolume = WorldSoundFXManager.instance.dialogueVolume;
+        settingsSaveData.tooltipsEnabled = UserInterfaceController.instance.tooltipsEnabled;
+        saveFileDataWriter.CreateNewSettingsSaveFile(settingsSaveData);
     }
 
     public void LoadSettingsFile()
@@ -436,16 +439,16 @@ public class WorldSaveGameManager : MonoBehaviour
             return;
         }
 
-        SettingsSaveData loadedSettings = saveFileDataWriter.LoadSettingsSaveFile();
-        if (loadedSettings == null)
+        settingsSaveData = saveFileDataWriter.LoadSettingsSaveFile();
+        if (settingsSaveData == null)
         {
             AttemptToCreateNewSettingsFile();
             return;
         }
-        WorldSoundFXManager.instance.masterVolume = loadedSettings.masterVolume;
-        WorldSoundFXManager.instance.sfxVolume = loadedSettings.sfxVolume;
-        WorldSoundFXManager.instance.musicVolume = loadedSettings.musicVolume;
-        WorldSoundFXManager.instance.dialogueVolume = loadedSettings.dialogueVolume;
+        WorldSoundFXManager.instance.masterVolume = settingsSaveData.masterVolume;
+        WorldSoundFXManager.instance.sfxVolume = settingsSaveData.sfxVolume;
+        WorldSoundFXManager.instance.musicVolume = settingsSaveData.musicVolume;
+        WorldSoundFXManager.instance.dialogueVolume = settingsSaveData.dialogueVolume;
     }
 
 

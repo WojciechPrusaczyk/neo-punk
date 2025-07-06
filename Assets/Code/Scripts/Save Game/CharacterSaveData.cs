@@ -22,9 +22,9 @@ public class CharacterSaveData
     [Header("Resources")]
     public float currentHealth;
 
-    [Header("Campfires")]
-    public SerializableDictionary<int, bool> activeDrones;
-    public int lastVisitedDroneIndex = -1;
+    [Header("Drones")]
+    public SerializableDictionary<string, SerializableIntList> activatedDronesByScene;
+    public DroneIdentifier lastVisitedDrone;
     public string lastVisitedDroneName = "No drones visited";
 
     [Header("Events")]
@@ -39,7 +39,8 @@ public class CharacterSaveData
 
     public CharacterSaveData()
     {
-        activeDrones = new SerializableDictionary<int, bool>();
+        activatedDronesByScene = new SerializableDictionary<string, SerializableIntList>();
+        lastVisitedDrone = new DroneIdentifier { sceneName = "", droneID = -1 };
         tutorialTexts = new SerializableDictionary<int, bool>();
         completedEventFlags = new EventFlagsSystem.EventFlag[0];
     }

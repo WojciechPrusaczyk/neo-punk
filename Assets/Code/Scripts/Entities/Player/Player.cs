@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     private GameObject swordHitbox;
     private Vector3 previousPosition;
     private float attackTimeout = 1.0f; // Czas na zakończenie sekwencji ataku
-    private float attackBreakTimeout = 0.1f; // Czas trwania animacji po natychmiastowy przerwaniu chodzeniem
+    //private float attackBreakTimeout = 0.1f; // Czas trwania animacji po natychmiastowy przerwaniu chodzeniem
     private float lastAttackTime = 0; // aktualny pomiędzy atakami
     private float attackCooldown = 0.3f; // cooldown ponmiędzy atakami
     private Coroutine attackCoroutine;
@@ -523,7 +523,7 @@ public class Player : MonoBehaviour
         if (wasDamagedRecently)
         {
             wasDamagedRecently = false;
-            FindObjectOfType<CameraShaker>()?.DoScreenShake();
+            FindFirstObjectByType<CameraShaker>()?.DoScreenShake();
         }
 
         var selectedElemental = ElementalTypes[UsedElementalTypeId];
@@ -561,7 +561,11 @@ public class Player : MonoBehaviour
 
         if (WorldSaveGameManager.instance != null)
         {
-            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneIndex = droneID;
+            WorldSaveGameManager.instance.currentCharacterData.lastVisitedDrone = new DroneIdentifier
+            {
+                sceneName = drone.gameObject.scene.name,
+                droneID = drone.ID
+            };
             WorldSaveGameManager.instance.currentCharacterData.lastVisitedDroneName = string.IsNullOrEmpty(droneName) ? "Unknown" : droneName;
             WorldSaveGameManager.instance.SaveGame();
         }

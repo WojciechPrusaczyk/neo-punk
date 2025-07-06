@@ -12,6 +12,8 @@ public class SettingsSaveData
     public float musicVolume = .5f;
     public float dialogueVolume = .5f;
 
+    public bool tooltipsEnabled = true;
+
     public SettingsSaveData()
     {
         // Tu zapisane bêd¹ typy zaawansowane (np. Lista, SerializableDictionary)
