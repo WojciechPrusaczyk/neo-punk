@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Grenade
   m_EditorClassIdentifier: 
   AttackName: Grenade
-  AttackDamage: 30
+  AttackDamage: 15

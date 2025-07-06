@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SpikeAreaDamage
   m_EditorClassIdentifier: 
   AttackName: SpikeAreaDamage
-  AttackDamage: 1
+  AttackDamage: 4

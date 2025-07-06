@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shoot
   m_EditorClassIdentifier: 
   AttackName: Shoot
-  AttackDamage: 5
+  AttackDamage: 7

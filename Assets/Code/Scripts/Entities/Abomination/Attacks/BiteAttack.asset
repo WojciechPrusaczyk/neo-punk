@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BiteAttack
   m_EditorClassIdentifier: 
   AttackName: BiteAttack
-  AttackDamage: 6
+  AttackDamage: 20

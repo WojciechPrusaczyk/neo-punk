@@ -25,7 +25,6 @@ public class TimeTrial : MonoBehaviour
     public TimeTrialDeactivator timeTrialDeactivator;
     private EntityStatus entityStatus;
     public bool bestRewardReached = false;
-    public GameObject itemReward;
     private float force = 6f;
 
     public Light2D lightAfterOpening;

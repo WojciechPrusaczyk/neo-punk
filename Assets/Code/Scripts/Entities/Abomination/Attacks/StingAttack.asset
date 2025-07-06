@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StingAttack
   m_EditorClassIdentifier: 
   AttackName: StingAttack
-  AttackDamage: 4
+  AttackDamage: 10

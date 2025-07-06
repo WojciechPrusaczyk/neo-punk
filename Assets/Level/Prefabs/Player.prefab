@@ -559,7 +559,7 @@ MonoBehaviour:
     _value: 80
   entityMaxHealth:
     _value: 80
-  BaseMaxHealth: 100
+  BaseMaxHealth: 80
   droppedXp: 0
   gold: 0
   AttackDamage: 30

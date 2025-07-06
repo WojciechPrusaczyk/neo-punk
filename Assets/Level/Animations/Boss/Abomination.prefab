@@ -364,9 +364,10 @@ MonoBehaviour:
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
   entityHealthPoints:
-    _value: 200
+    _value: 800
   entityMaxHealth:
-    _value: 1000
+    _value: 800
+  BaseMaxHealth: 0
   droppedXp: 0
   gold: 0
   AttackDamage: 5
@@ -618,7 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityStatus: {fileID: 9152817864781677679}
   AttackName: StingAttack
-  pushForce: {x: 20, y: 5}
+  pushForce: {x: 50, y: 5}
 --- !u!1 &2588575693833048911
 GameObject:
   m_ObjectHideFlags: 0

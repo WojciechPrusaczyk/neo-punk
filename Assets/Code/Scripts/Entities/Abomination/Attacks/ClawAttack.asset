@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ClawAttack
   m_EditorClassIdentifier: 
   AttackName: ClawAttack
-  AttackDamage: 8
+  AttackDamage: 15
