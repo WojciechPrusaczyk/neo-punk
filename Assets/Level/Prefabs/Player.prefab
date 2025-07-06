@@ -538,6 +538,7 @@ MonoBehaviour:
   wallJumpLockTime: 0.2
   minWallUnstickSpeed: 0.1
   externalForce: 0
+  playerItemsHandler: {fileID: 0}
 --- !u!114 &9133699553990914240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,9 +556,9 @@ MonoBehaviour:
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
   entityHealthPoints:
-    _value: 3000
+    _value: 80
   entityMaxHealth:
-    _value: 3000
+    _value: 80
   BaseMaxHealth: 100
   droppedXp: 0
   gold: 0
