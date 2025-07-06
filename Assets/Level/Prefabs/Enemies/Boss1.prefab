@@ -618,6 +618,10 @@ MonoBehaviour:
   headCollider: {fileID: 0}
   clawCollider: {fileID: 0}
   tailCollider: {fileID: 0}
+  bodyCollider: {fileID: 0}
+  biteRetreatDistance: 1
+  biteRetreatTime: 0.2
+  deadZone: 0.3
 --- !u!1 &3032816636188619806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,9 +1516,10 @@ MonoBehaviour:
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
   entityHealthPoints:
-    _value: 1000
+    _value: 400
   entityMaxHealth:
-    _value: 1000
+    _value: 400
+  BaseMaxHealth: 0
   droppedXp: 0
   gold: 0
   AttackDamage: 10
@@ -1533,6 +1538,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isAlerted: 0
   entityType: 0
+  enemyType: 0
   healFX: {fileID: 0}
   healFXParent: {fileID: 0}
   incomingDamagePercent: 1
@@ -1677,7 +1683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barriers: []
-  abominationStatus: {fileID: 0}
+  bossSpawner: {fileID: 0}
+  bossStatus: {fileID: 0}
+  abominationMovement: {fileID: 0}
 --- !u!1 &7732252916348038665
 GameObject:
   m_ObjectHideFlags: 0

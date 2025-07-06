@@ -40,6 +40,9 @@ public class MissionObjectiveUpdater : MonoBehaviour
 
         if (currentObjective.isCompleted)
             gameObject.SetActive(false);
+
+        float RandomPitch = Random.Range(0.9f, 1.15f);
+        WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.buttonClickSFX, Enums.SoundType.SFX, RandomPitch);
     }
 
     public void SendFinishObjectiveUpdate(bool disableObject = false)

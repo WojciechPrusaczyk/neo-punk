@@ -8,6 +8,7 @@ using static Enums;
 public class UserInterfaceController : MonoBehaviour
 {
     public static UserInterfaceController instance;
+    public bool tooltipsEnabled = true;
 
     public bool isUIMenuActive
     {
@@ -64,6 +65,8 @@ public class UserInterfaceController : MonoBehaviour
             Debug.LogError("Default interface index is out of range.");
             defaultInterface = 0;
         }
+
+        tooltipsEnabled = WorldSaveGameManager.instance.settingsSaveData.tooltipsEnabled;
     }
 
     private void Start()

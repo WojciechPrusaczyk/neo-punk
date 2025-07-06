@@ -5,7 +5,8 @@ public class MarksmanGrenade : MonoBehaviour
 {
     public Animator animator;
     public GameObject entityInArea;
-
+    public GameObject particles;
+    
     public float damage;
     public float lifeTime;
 
@@ -35,6 +36,8 @@ public class MarksmanGrenade : MonoBehaviour
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Static;
+        
+        particles.SetActive(true);
         
         yield return new WaitForSeconds(dur);
         Destroy(gameObject);

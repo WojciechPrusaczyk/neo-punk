@@ -44,7 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45aa07f86a0d9dd4bafe3f21a21560af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 1
+  masterVolume: 0.5
+  sfxVolume: 0.5
+  musicVolume: 0.5
+  dialogueVolume: 0.5
+  buttonHoverSFX: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  buttonBackSFX: {fileID: 0}
   playerJumpSFX: {fileID: 8300000, guid: 80b3235dc8129a64f85d4815f7992c29, type: 3}
+  playerParrySFX: {fileID: 0}
+  dashSFX: {fileID: 0}
+  playerBlockSFX: []
+  playerAttackSFX: []
+  playerAttackMetalSFX: []
+  playerAttackFleshSFX: []
+  droneTeleport: {fileID: 0}
+  droneActivation: {fileID: 0}
   ShDogAttackSFX:
   - {fileID: 8300000, guid: e04d98ff49899e4498b5f04735a9b205, type: 3}
   - {fileID: 8300000, guid: 4d984bcd9abc8d24981a348ed3ccd0e6, type: 3}
@@ -53,3 +69,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5c0f8fbb7dc39cb4eb1bde563cf9e00d, type: 3}
   ShDogWhineSFX:
   - {fileID: 8300000, guid: f2e2c8af7fa33f146be1b1c803a8b65c, type: 3}
+  dragonflyAttackSFX: []
+  attackSerie: {fileID: 0}
+  dragonflyDeathSFX: []
+  normalCutoffFrequency: 22000
+  filteredCutoffFrequency: 700
+  filterTransitionDuration: 0.3
