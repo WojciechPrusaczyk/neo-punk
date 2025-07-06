@@ -79,7 +79,7 @@ public class WorldSaveGameManager : MonoBehaviour
     public void NewGame()
     {
         _pendingSaveAfterSceneLoad = true;
-        _targetSceneForSave = "InitialLevel";
+        _targetSceneForSave = "StartScene";
 
         StartCoroutine(NewGameCoroutine());
     }
@@ -87,7 +87,7 @@ public class WorldSaveGameManager : MonoBehaviour
     private IEnumerator NewGameCoroutine()
     {
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("InitialLevel");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartScene");
         while (!asyncLoad.isDone)
         {
             yield return null;
