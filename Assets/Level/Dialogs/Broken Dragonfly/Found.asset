@@ -21,5 +21,7 @@ MonoBehaviour:
     text: Huh? What's that?
   - speakerName: 0
     text: Seems to have been lying here for quite a while...
+  - speakerName: 0
+    text: Well, seems like these corpo rats really hate me after all I did to them.
   repeatable: 1
   hasBeenAlreadySeen: 0

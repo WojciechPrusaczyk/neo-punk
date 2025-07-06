@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96956ed541ac6d44a2ef67e5ddb934f, type: 3}
+  m_Name: Shop
+  m_EditorClassIdentifier: 
+  characterOneName: Player
+  characterOnePicture: {fileID: 7485453407209300106, guid: 638941558cb038e4e8bc9d252740b76d, type: 3}
+  characterTwoName: 
+  characterTwoPicture: {fileID: 0}
+  lines:
+  - speakerName: 0
+    text: Placing a shop in a place like that is dumb.
+  - speakerName: 0
+    text: No wonder these people can't take care of themselfs in this city.
+  - speakerName: 0
+    text: Goverment forces are deporting everyone from suburbs.
+  - speakerName: 0
+    text: Goverment forces are deporting everyone from suburbs.
+  - speakerName: 0
+    text: Not to mention shiverns in canals under these buildings.
+  - speakerName: 0
+    text: Well that's their problem. I can help by clearing area, but nothing more.
+      I have my own things to do.
+  repeatable: 1
+  hasBeenAlreadySeen: 1
