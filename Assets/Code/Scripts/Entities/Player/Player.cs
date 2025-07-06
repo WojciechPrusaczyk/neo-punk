@@ -412,7 +412,7 @@ public class Player : MonoBehaviour
          */
         CheckForWall();
 
-        if (!wallJumpLock && !isGrounded && isTouchingWall)
+        if (!wallJumpLock && !isGrounded && isTouchingWall && playerBody.velocity.y < 0)
         {
             isWallSliding = true;
             playerBody.velocity = new Vector2(playerBody.velocity.x, -wallSlideSpeed);
@@ -425,7 +425,7 @@ public class Player : MonoBehaviour
         bool jumpPressed = Input.GetKeyDown(InputManager.JumpKey) ||
                            Input.GetKeyDown(InputManager.PadButtonJump);
 
-        if (jumpPressed && !isAttacking && !isBlocking)
+        if (jumpPressed  && !isBlocking)
         {
             if ((isGrounded || onStairs) && !isJumping)
             {

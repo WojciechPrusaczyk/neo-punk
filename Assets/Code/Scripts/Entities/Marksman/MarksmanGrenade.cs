@@ -27,15 +27,18 @@ public class MarksmanGrenade : MonoBehaviour
 
         float dur = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
 
+        yield return new WaitForSeconds(.2f);
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Static;
+        
+        yield return new WaitForSeconds(.1f);
         if (entityInArea != null)
         {
             EntityStatus entityStatus = entityInArea.GetComponentInChildren<EntityStatus>();
             entityStatus.DealDamage(damage);
         }
-        yield return new WaitForSeconds(.2f);
-
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Static;
+        
         
         particles.SetActive(true);
         
