@@ -8,6 +8,8 @@ public class FleshRose : ItemData
     public float thornsPercent = 0.2f;
     public float bloodBoltDamagePercent = 1.2f;
     public float selfDamagePercent = 0.1f;
+    
+    public GameObject bloodBoltPrefab;
 
     private void OnEnable()
     {
@@ -19,7 +21,7 @@ public class FleshRose : ItemData
     {
         currentCooldown = 0;
         var abilities = new FleshRoseAbilities();
-        abilities.Initialize(thornsPercent, bloodBoltDamagePercent, selfDamagePercent);
+        abilities.Initialize(thornsPercent, bloodBoltDamagePercent, selfDamagePercent, bloodBoltPrefab);
         itemAbility = abilities;
 
         itemName = "Flesh Rose";

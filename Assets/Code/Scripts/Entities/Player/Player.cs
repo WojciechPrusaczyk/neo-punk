@@ -82,6 +82,8 @@ public class Player : MonoBehaviour
     private HitboxBehaviour footHitbox;
     private HitboxBehaviour swordHitboxComponent;
     private List<GameObject> collidingObjects = new List<GameObject>();
+    public event System.Action OnPlayerAttack;
+
     
     [Header("Stair stuff")]
     public LayerMask stairLayer;
@@ -805,6 +807,8 @@ public class Player : MonoBehaviour
         DealDamage(playerStatus.GetAttackDamageCount());
         if (WorldSoundFXManager.instance)
             PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
+        
+        OnPlayerAttack?.Invoke();
     }
 
     private void ContinueAttack()
@@ -848,7 +852,8 @@ public class Player : MonoBehaviour
             DealDamage(playerStatus.GetAttackDamageCount());
             if (WorldSoundFXManager.instance)
                 PlayPlayerSFXArray(WorldSoundFXManager.instance.playerAttackSFX, Enums.SoundType.SFX);
-
+            
+            OnPlayerAttack?.Invoke();
             lastAttackTime = Time.time;
         }
     }

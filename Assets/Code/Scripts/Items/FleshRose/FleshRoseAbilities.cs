@@ -12,13 +12,17 @@ public class FleshRoseAbilities : ItemData.IItemAbility
     private float selfDamagePercent;
     
     private int activeBloodBolts = 0;
-    private bool isSubscribed;
+    private bool isSubscribedDelt;
+    private bool isSubscribedTaken;
+
+    public GameObject bloodBoltPrefab;
     
-    public void Initialize(float thornsPercent, float bloodBoltDamagePercent, float selfDamagePercent)
+    public void Initialize(float thornsPercent, float bloodBoltDamagePercent, float selfDamagePercent, GameObject bloodBolt)
     {
         this.thornsPercent = thornsPercent;
         this.bloodBoltDamagePercent = bloodBoltDamagePercent;
         this.selfDamagePercent = selfDamagePercent;
+        this.bloodBoltPrefab = bloodBolt;
 
     }
     
@@ -35,10 +39,16 @@ public class FleshRoseAbilities : ItemData.IItemAbility
         if (playerStatus == null)
             playerStatus = player.GetComponent<EntityStatus>();
 
-        if (!isSubscribed)
+        if (!isSubscribedDelt)
         {
             playerStatus.OnPlayerDamageTaken += OnPlayerDamagedBy;
-            isSubscribed = true;
+            isSubscribedDelt = true;
+        }
+
+        if (!isSubscribedTaken)
+        {
+            player.OnPlayerAttack += OnPlayerAttack;
+            isSubscribedTaken = true;
         }
     }
 
@@ -50,7 +60,23 @@ public class FleshRoseAbilities : ItemData.IItemAbility
         if (entityStatus == null) return;
         
         entityStatus.DealDamage(damageTaken * thornsPercent);
-        Debug.Log("damageDelt");
+    }
+
+    private void OnPlayerAttack()
+    {
+        if (activeBloodBolts > 0)
+        {
+            Vector2 direction = playerStatus.isFacedRight ? Vector2.right : Vector2.left;
+            float damage = playerStatus.AttackDamage + bloodBoltDamagePercent;
+        
+            GameObject bloodBolt = GameObject.Instantiate(bloodBoltPrefab, player.transform.position, Quaternion.identity);
+            BloodBolt bloodBoltScript = bloodBolt.GetComponent<BloodBolt>();
+            bloodBoltScript.Initialize(direction, damage);
+            float selfDamage = playerStatus.GetMaxHp() * selfDamagePercent;
+            playerStatus.DealDamage(selfDamage);
+            activeBloodBolts--;
+        }
+        
     }
 
     public void Remove()
@@ -61,10 +87,16 @@ public class FleshRoseAbilities : ItemData.IItemAbility
         if (playerStatus == null)
             playerStatus = player.GetComponent<EntityStatus>();
 
-        if (isSubscribed)
+        if (isSubscribedDelt)
         {
             playerStatus.OnPlayerDamageTaken -= OnPlayerDamagedBy;
-            isSubscribed = false;
+            isSubscribedDelt = false;
+        }
+
+        if (!isSubscribedTaken)
+        {
+            player.OnPlayerAttack -= OnPlayerAttack;
+            isSubscribedDelt = false;
         }
     }
 

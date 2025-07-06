@@ -24,3 +24,4 @@ MonoBehaviour:
   thornsPercent: 0.2
   bloodBoltDamagePercent: 1.2
   selfDamagePercent: 0.1
+  bloodBoltPrefab: {fileID: 3847350809929889231, guid: 9a245860b2883cd46b91f34859dc35d1, type: 3}
