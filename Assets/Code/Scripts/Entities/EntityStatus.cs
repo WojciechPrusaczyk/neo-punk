@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class EntityStatus : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class EntityStatus : MonoBehaviour
     
     public int droppedXp = 0;
     public int gold = 0;
+    public GameObject goldPrefab;
+    public float maxGoldSpawnForce = 10.0f;
+    [SerializeField] private float minGoldSpawnForce = 0.2f;
+    [SerializeField] private float maxGoldSpawnSpin  = 8f;
     public float AttackDamage = 10.0f;
     public List<AttackType> AttackTypes;
     public float MovementSpeed = 5.0f;
@@ -328,6 +333,30 @@ public class EntityStatus : MonoBehaviour
 
 
         player.GetComponent<EntityStatus>().AddXp(droppedXp);
+        var entityParent   = gameObject.transform.parent.parent;
+        Vector2 origin2D = gameObject.transform.position;
+
+        for (int i = 0; i < gold; i++)
+        {
+            float randomZRot = Random.Range(0f, 360f);
+            Quaternion rot = Quaternion.Euler(0f, 0f, randomZRot);
+
+            GameObject goldObject = Instantiate(goldPrefab, origin2D, rot, entityParent);
+
+            Vector2 dir = Random.insideUnitCircle.normalized;
+            float minForce = (minGoldSpawnForce > 0f) ? minGoldSpawnForce : 0.3f * maxGoldSpawnForce;
+            float impulseMag = Random.Range(minForce, maxGoldSpawnForce);
+            Vector2 impulse = dir * impulseMag;
+
+            var rb2d = goldObject.GetComponent<Rigidbody2D>();
+            if (rb2d != null)
+            {
+                rb2d.AddForce(impulse, ForceMode2D.Impulse);
+
+                float torque = Random.Range(-maxGoldSpawnSpin, maxGoldSpawnSpin);
+                rb2d.AddTorque(torque, ForceMode2D.Impulse);
+            }
+        }
 
 
         BossData bossData = gameObject.GetComponentInParent<BossData>();
@@ -516,19 +545,6 @@ public class EntityStatus : MonoBehaviour
     public void AddGold(int gold)
     {
         this.gold += gold;
-
-        /*
-         * Jeśli encja jest graczem, to wyświetlamy złoto w UI
-         */
-        if ( gameObject.CompareTag("Player") )
-        {
-            // NAPRAW KTOŚ TO BO CRASHUJE!
-            //GameObject UiGoldCount = mainUserInterface.transform.Find("Gold/Count").gameObject;
-            //if (UiGoldCount)
-            //{
-            //    UiGoldCount.GetComponent<TextMeshProUGUI>().text = Convert.ToString( this.gold );
-            //}
-        }
     }
     
     /*

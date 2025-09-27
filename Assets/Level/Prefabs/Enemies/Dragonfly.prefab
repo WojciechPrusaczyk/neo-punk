@@ -125,8 +125,9 @@ MonoBehaviour:
   entityMaxHealth:
     _value: 50
   BaseMaxHealth: 0
-  droppedXp: 0
-  gold: 0
+  droppedXp: 10
+  gold: 4
+  goldPrefab: {fileID: 2768292857032245222, guid: ef7aa6d3dd6ddab4aaf30fb307d49d4b, type: 3}
   AttackDamage: 10
   AttackTypes: []
   MovementSpeed: 300

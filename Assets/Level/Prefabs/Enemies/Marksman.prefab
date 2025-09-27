@@ -714,7 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8a85fa32ef9944b3b97327b4291f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityName: 
+  entityName: Goverment marksman
   entityLevel: 1
   entityExperiencePoints: 0
   entityExperienceToNextLvl: 50
@@ -723,8 +723,9 @@ MonoBehaviour:
   entityMaxHealth:
     _value: 200
   BaseMaxHealth: 0
-  droppedXp: 0
-  gold: 0
+  droppedXp: 20
+  gold: 8
+  goldPrefab: {fileID: 2768292857032245222, guid: ef7aa6d3dd6ddab4aaf30fb307d49d4b, type: 3}
   AttackDamage: 6
   AttackTypes:
   - {fileID: 11400000, guid: ee4a2e4e6d0dd88439ecbf4431274c37, type: 2}
